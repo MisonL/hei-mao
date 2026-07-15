@@ -9,7 +9,7 @@ $ErrorActionPreference = "Stop"
 
 $PetId = "hei-mao"
 $DefaultBaseUrl = "https://raw.githubusercontent.com/MisonL/hei-mao/main"
-$PetJsonSha256 = "228b9dd884631453bd8d8bf61296a9420201f3023e526f9d0141d4c3b19f058d"
+$PetJsonSha256 = "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
 $SpritesheetSha256 = "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c"
 $InstallerScriptRoot = $PSScriptRoot
 $script:StepIndex = 0
