@@ -10,6 +10,21 @@
 
 ## 安装
 
+### Petdex 安装
+
+Petdex 审核上线后，可在已安装 Node.js 20 或更高版本的 macOS、Linux 或 Windows 上运行：
+
+```bash
+npx -y petdex@latest install hei-mao
+```
+
+Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
+
+```text
+~/.petdex/pets/hei-mao
+~/.codex/pets/hei-mao
+```
+
 ### 一键安装
 
 macOS / Linux:
