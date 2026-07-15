@@ -1,0 +1,166 @@
+{
+  "ok": true,
+  "reviewRequired": true,
+  "directions": [
+    {
+      "direction": "000",
+      "verdict": "pass",
+      "expected": "up",
+      "observed": {
+        "horizontal": "snout centered",
+        "vertical": "snout above head center; clear up cardinal"
+      },
+      "reason": "snout centered; snout above head center; clear up cardinal"
+    },
+    {
+      "direction": "022.5",
+      "verdict": "warning",
+      "expected": "up-right",
+      "observed": {
+        "horizontal": "snout shifts slightly screen-right",
+        "vertical": "snout remains high; up cue dominates"
+      },
+      "reason": "snout shifts slightly screen-right; snout remains high; up cue dominates"
+    },
+    {
+      "direction": "045",
+      "verdict": "warning",
+      "expected": "up-right",
+      "observed": {
+        "horizontal": "snout is visibly screen-right",
+        "vertical": "snout remains above center but the up cue is secondary"
+      },
+      "reason": "snout is visibly screen-right; snout remains above center but the up cue is secondary"
+    },
+    {
+      "direction": "067.5",
+      "verdict": "warning",
+      "expected": "up-right",
+      "observed": {
+        "horizontal": "right-facing head and snout are clear",
+        "vertical": "snout is slightly high; up cue is subtle"
+      },
+      "reason": "right-facing head and snout are clear; snout is slightly high; up cue is subtle"
+    },
+    {
+      "direction": "090",
+      "verdict": "pass",
+      "expected": "right",
+      "observed": {
+        "horizontal": "snout crosses to the screen-right head edge",
+        "vertical": "snout is vertically centered; clear right cardinal"
+      },
+      "reason": "snout crosses to the screen-right head edge; snout is vertically centered; clear right cardinal"
+    },
+    {
+      "direction": "112.5",
+      "verdict": "warning",
+      "expected": "down-right",
+      "observed": {
+        "horizontal": "right-facing head remains clear",
+        "vertical": "snout begins moving below center; down cue is subtle"
+      },
+      "reason": "right-facing head remains clear; snout begins moving below center; down cue is subtle"
+    },
+    {
+      "direction": "135",
+      "verdict": "warning",
+      "expected": "down-right",
+      "observed": {
+        "horizontal": "snout remains screen-right",
+        "vertical": "head and snout move lower; down cue is secondary"
+      },
+      "reason": "snout remains screen-right; head and snout move lower; down cue is secondary"
+    },
+    {
+      "direction": "157.5",
+      "verdict": "warning",
+      "expected": "down-right",
+      "observed": {
+        "horizontal": "rightward yaw remains visible",
+        "vertical": "low snout gives a clear down component"
+      },
+      "reason": "rightward yaw remains visible; low snout gives a clear down component"
+    },
+    {
+      "direction": "180",
+      "verdict": "pass",
+      "expected": "down",
+      "observed": {
+        "horizontal": "snout centered",
+        "vertical": "snout below head center; clear down cardinal"
+      },
+      "reason": "snout centered; snout below head center; clear down cardinal"
+    },
+    {
+      "direction": "202.5",
+      "verdict": "warning",
+      "expected": "down-left",
+      "observed": {
+        "horizontal": "snout begins moving screen-left",
+        "vertical": "snout remains low; down cue is clear"
+      },
+      "reason": "snout begins moving screen-left; snout remains low; down cue is clear"
+    },
+    {
+      "direction": "225",
+      "verdict": "warning",
+      "expected": "down-left",
+      "observed": {
+        "horizontal": "head and snout turn screen-left",
+        "vertical": "snout remains below center; down cue is secondary"
+      },
+      "reason": "head and snout turn screen-left; snout remains below center; down cue is secondary"
+    },
+    {
+      "direction": "247.5",
+      "verdict": "warning",
+      "expected": "down-left",
+      "observed": {
+        "horizontal": "left-facing head is clear",
+        "vertical": "snout remains slightly low; down cue is subtle"
+      },
+      "reason": "left-facing head is clear; snout remains slightly low; down cue is subtle"
+    },
+    {
+      "direction": "270",
+      "verdict": "pass",
+      "expected": "left",
+      "observed": {
+        "horizontal": "snout crosses to the screen-left head edge",
+        "vertical": "snout is vertically centered; clear left cardinal"
+      },
+      "reason": "snout crosses to the screen-left head edge; snout is vertically centered; clear left cardinal"
+    },
+    {
+      "direction": "292.5",
+      "verdict": "warning",
+      "expected": "up-left",
+      "observed": {
+        "horizontal": "left-facing head remains clear",
+        "vertical": "snout begins moving above center; up cue is subtle"
+      },
+      "reason": "left-facing head remains clear; snout begins moving above center; up cue is subtle"
+    },
+    {
+      "direction": "315",
+      "verdict": "warning",
+      "expected": "up-left",
+      "observed": {
+        "horizontal": "snout remains screen-left",
+        "vertical": "head and snout rise; up cue is secondary"
+      },
+      "reason": "snout remains screen-left; head and snout rise; up cue is secondary"
+    },
+    {
+      "direction": "337.5",
+      "verdict": "warning",
+      "expected": "up-left",
+      "observed": {
+        "horizontal": "leftward yaw remains visible",
+        "vertical": "high snout gives a clear up component"
+      },
+      "reason": "leftward yaw remains visible; high snout gives a clear up component"
+    }
+  ]
+}

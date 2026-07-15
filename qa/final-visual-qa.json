@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "hard_failures": [],
+  "warnings": [],
+  "evidence": [
+    "The corrected contact and direction sheets match the approved reference dimensions.",
+    "Alpha comparison reports zero differing pixels; transparent edges have no new color halo, green spill, background leak, or edge loss.",
+    "No visible compression blocks, ringing, banding, or increased edge aliasing were found.",
+    "Normalized RMSE versus the approved reference is 0.00222261 for the action sheet and 0.00356048 for the direction sheet.",
+    "Character identity, clothing, action frames, cardinal directions, and all 16 direction semantics remain consistent."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "candidate": "spritesheet.webp",
+  "sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+  "layout": {
+    "width": 1536,
+    "height": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208,
+    "spriteVersionNumber": 2
+  },
+  "optimizedRows": [
+    "waiting",
+    "running",
+    "review",
+    "look-row-9",
+    "look-row-10"
+  ],
+  "encoding": {
+    "container": "WEBP",
+    "codec": "VP8L",
+    "nearLosslessRgbPreprocess": 40,
+    "psnrDb": 48.3798,
+    "alphaPixelDifference": 0,
+    "transparentRgbResiduePixels": 0
+  },
+  "validation": {
+    "atlas": "pass",
+    "chromaDespill": "pass",
+    "standardRows": "pass",
+    "directionCardinals": "pass",
+    "directionBlindHardGates": "pass",
+    "directionContinuity": "pass-with-reviewed-warnings",
+    "finalVisualQa": "pass"
+  }
+}
