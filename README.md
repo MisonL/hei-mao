@@ -127,6 +127,7 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 
 ## 许可
 
-- 功能代码采用 [Apache License 2.0](LICENSE)。
+- 本仓库采用分离许可，详见[许可说明](LICENSE)。
+- `install.sh`、`install.ps1` 及其独立功能性代码采用 [Apache License 2.0](LICENSES/Apache-2.0.txt)。
 - 钱大妈、黑毛及相关角色图集、图片、视频、品牌描述和生成提示词不属于 Apache-2.0 授权范围，适用[品牌资产使用条款](ASSETS-LICENSE.md)。
 - Apache-2.0 和品牌资产使用条款均不授予钱大妈或黑毛相关商标权。

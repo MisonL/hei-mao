@@ -1,3 +1,11 @@
 .DS_Store
 *.tmp
 *.log
+
+# Local Codex and planning artifacts. These may contain machine-specific paths.
+.codex/
+.superpowers/
+custom-avatars-query-DlwCy40F.js
+pet-install-modal-host-D9AoDoZw.js
+pet-install-state-DTwzRCEJ.js
+pets-settings-DeeACRQr.js

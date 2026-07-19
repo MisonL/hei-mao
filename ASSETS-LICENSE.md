@@ -7,6 +7,7 @@
 本条款适用于仓库中包含或复现钱大妈“黑毛”品牌形象、名称或创意表达的内容，包括：
 
 - `spritesheet.webp`
+- `pets/**/spritesheet.webp` 及 `pets/**/pet.json`
 - `qa/` 中的图片和视频
 - `prompts/` 中的品牌角色描述和生成提示词
 - `pet_request.json`
@@ -42,7 +43,7 @@
 
 ## 与代码许可证的关系
 
-根目录 `LICENSE` 中的 Apache License 2.0 仅适用于功能代码，不适用于本条款列明的品牌资产。Apache License 2.0 不授予任何钱大妈或黑毛相关商标权。
+根目录 `LICENSE` 说明本仓库采用分离许可。`LICENSES/Apache-2.0.txt` 中的 Apache License 2.0 仅适用于 `install.sh`、`install.ps1` 及其独立功能性代码，不适用于本条款列明的品牌资产。Apache License 2.0 不授予任何钱大妈或黑毛相关商标权。
 
 ## 免责声明
 
