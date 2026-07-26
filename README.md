@@ -25,6 +25,21 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 ~/.codex/pets/hei-mao
 ```
 
+### 品控官角色
+
+品控官角色会作为独立包提交至 Petdex；审核上线后可运行：
+
+```bash
+npx -y petdex@latest install hei-mao-quality
+```
+
+本地手动安装时，使用角色包目录：
+
+```bash
+mkdir -p ~/.codex/pets/hei-mao-quality
+cp pets/hei-mao-quality/pet.json pets/hei-mao-quality/spritesheet.webp ~/.codex/pets/hei-mao-quality/
+```
+
 ### 一键安装
 
 macOS / Linux:
