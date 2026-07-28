@@ -27,7 +27,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 ### 品控官角色
 
-品控官角色会作为独立包提交至 Petdex；审核上线后可运行：
+品控官角色已作为独立包发布至 Petdex；可运行：
 
 ```bash
 npx -y petdex@latest install hei-mao-quality
