@@ -27,13 +27,13 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 ### 品控官角色
 
-品控官角色已作为独立包发布至 Petdex；可运行：
+品控官角色已在 Petdex 建立独立条目。当前仓库图集为最新版本；Petdex 线上资源待其编辑链路修复后同步。同步完成后可运行：
 
 ```bash
 npx -y petdex@latest install hei-mao-quality
 ```
 
-本地手动安装时，使用角色包目录：
+在同步前，本地安装请使用仓库中的角色包目录：
 
 ```bash
 mkdir -p ~/.codex/pets/hei-mao-quality
