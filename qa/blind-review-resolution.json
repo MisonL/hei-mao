@@ -1,29 +1,14 @@
 {
-  "ok": true,
-  "resolutions": [
-    {
-      "source": "look-continuity-scale90.json",
-      "warning": "090 transparent interior hole rows",
-      "resolution": "accepted false positive",
-      "evidence": "high-contrast and alpha-mask inspection shows the natural concave gap between the ears and head, not a hole through the body"
-    },
-    {
-      "source": "look-continuity-scale90.json",
-      "warning": "225->247.5 local diff outlier",
-      "resolution": "accepted reviewed transition",
-      "evidence": "labeled normal-size review shows a continuous down-left to near-left turn with no scale, baseline, identity, or attachment jump"
-    },
-    {
-      "source": "look-continuity-scale90.json",
-      "warning": "337.5->000 local diff outlier",
-      "resolution": "accepted reviewed transition",
-      "evidence": "center shift is 1px and area ratio is 1.081; labeled review shows a continuous up-left to up boundary without reversal"
-    },
-    {
-      "source": "direction-blind-validation-scale90.json",
-      "warning": "intermediate secondary axes are not always identifiable without labels",
-      "resolution": "accepted review warnings",
-      "evidence": "all hard cardinal pairs pass; labeled normal-size review confirms intended quadrants and the ordered loop has no wrong-quadrant pose or reversal"
-    }
-  ]
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "parent",
+  "evidence": [
+    "Cardinal horizontal pair 090 versus 270 passed the strict majority hard gate.",
+    "Cardinal vertical pair 000 versus 180 passed the strict majority hard gate.",
+    "The only consensus mismatch is intermediate vertical-3 A for source direction 045; it is a review-gate warning, not a cardinal failure.",
+    "Labeled normal-size direction review marks 045 as up-right and the ordered loop remains monotonic without a visible reversal or snap.",
+    "The atlas validator, despill report, and continuity review remain successful."
+  ],
+  "failed_checks": ["direction-blind-validation vertical-3 A mismatch"],
+  "resolution": "Keep the generated row and record the isolated intermediate blind ambiguity as a warning; do not regenerate a coherent row for this non-cardinal blind disagreement."
 }

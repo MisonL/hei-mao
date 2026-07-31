@@ -1,12 +1,18 @@
 {
   "ok": true,
+  "scope": "complete v2 extended atlas",
+  "visual_qa": "pass_with_warnings",
+  "independent_review": "WARN",
   "hard_failures": [],
-  "warnings": [],
   "evidence": [
-    "The corrected contact and direction sheets match the approved reference dimensions.",
-    "Alpha comparison reports zero differing pixels; transparent edges have no new color halo, green spill, background leak, or edge loss.",
-    "No visible compression blocks, ringing, banding, or increased edge aliasing were found.",
-    "Normalized RMSE versus the approved reference is 0.00222261 for the action sheet and 0.00356048 for the direction sheet.",
-    "Character identity, clothing, action frames, cardinal directions, and all 16 direction semantics remain consistent."
+    "The rebuilt contact sheet and direction sheet contain the complete 11-row 1536x2288 atlas.",
+    "All row-10 poses remain inside 192x208 cells with stable practical scale, shoe baseline, and no visible edge clipping.",
+    "Cardinal direction hard gates pass and the labeled 16-direction review finds no semantic reversal.",
+    "The atlas validator reports RGBA, spriteVersionNumber 2, and zero transparent RGB residue pixels."
+  ],
+  "warnings": [
+    "247.5 -> 270 and 337.5 -> 000 are larger but visually coherent transitions.",
+    "The 000 direction has a y=12 transparent-row candidate recorded by qa/look-continuity.json; alpha review did not classify it as a filled-silhouette hole.",
+    "The independent retry reviewed the contact sheet only; it did not replay GIFs or rerun per-pixel calculations."
   ]
 }

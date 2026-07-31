@@ -123,6 +123,7 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 - `direction-blind-validation.json`: `ok: true`
 - 错误: 0
 - 图集透明 RGB 残留: 0
+- 独立最终视觉复核: WARN（无 BLOCK）；247.5 -> 270、337.5 -> 000 为较大但可接受的方向过渡，000 的 y=12 透明行保留在连续性报告中
 
 ## 动画状态
 

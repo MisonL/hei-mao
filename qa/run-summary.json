@@ -1,7 +1,7 @@
 {
   "ok": true,
   "candidate": "spritesheet.webp",
-  "sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+  "sha256": "80dd09225249c23fbeae4ecd51f28109115a5aa9e6ca175f3c62aae565120b2e",
   "layout": {
     "width": 1536,
     "height": 2288,
@@ -33,6 +33,6 @@
     "directionCardinals": "pass",
     "directionBlindHardGates": "pass",
     "directionContinuity": "pass-with-reviewed-warnings",
-    "finalVisualQa": "pass"
+  "finalVisualQa": "pass-with-reviewed-warnings"
   }
 }
