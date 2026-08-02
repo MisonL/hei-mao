@@ -1,14 +1,14 @@
 {
   "decision": "accept",
   "severity": "minor",
-  "reviewed_by": "parent",
+  "reviewed_by": "independent_visual_worker_r10; parent",
   "evidence": [
     "Cardinal horizontal pair 090 versus 270 passed the strict majority hard gate.",
     "Cardinal vertical pair 000 versus 180 passed the strict majority hard gate.",
-    "The only consensus mismatch is intermediate vertical-3 A for source direction 045; it is a review-gate warning, not a cardinal failure.",
-    "Labeled normal-size direction review marks 045 as up-right and the ordered loop remains monotonic without a visible reversal or snap.",
+    "Intermediate blind reviewers disagreed on several non-cardinal axis cues; all are review-gate warnings, not cardinal failures.",
+    "Labeled normal-size direction review marks every direction as the intended quadrant and the ordered loop remains monotonic without a visible reversal or snap.",
     "The atlas validator, despill report, and continuity review remain successful."
   ],
-  "failed_checks": ["direction-blind-validation vertical-3 A mismatch"],
-  "resolution": "Keep the generated row and record the isolated intermediate blind ambiguity as a warning; do not regenerate a coherent row for this non-cardinal blind disagreement."
+  "failed_checks": ["intermediate blind axis disagreements"],
+  "resolution": "Keep the generated rows and record the isolated intermediate blind disagreements as warnings; do not regenerate coherent rows because both cardinal hard gates and labeled semantic review pass."
 }

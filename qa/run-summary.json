@@ -1,7 +1,7 @@
 {
   "ok": true,
   "candidate": "spritesheet.webp",
-  "sha256": "80dd09225249c23fbeae4ecd51f28109115a5aa9e6ca175f3c62aae565120b2e",
+  "sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
   "layout": {
     "width": 1536,
     "height": 2288,
@@ -21,8 +21,7 @@
   "encoding": {
     "container": "WEBP",
     "codec": "VP8L",
-    "nearLosslessRgbPreprocess": 40,
-    "psnrDb": 48.3798,
+    "lossless": true,
     "alphaPixelDifference": 0,
     "transparentRgbResiduePixels": 0
   },
@@ -33,6 +32,6 @@
     "directionCardinals": "pass",
     "directionBlindHardGates": "pass",
     "directionContinuity": "pass-with-reviewed-warnings",
-  "finalVisualQa": "pass-with-reviewed-warnings"
+    "finalVisualQa": "pass-with-reviewed-warnings"
   }
 }

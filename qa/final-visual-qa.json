@@ -1,8 +1,8 @@
 {
   "ok": true,
   "scope": "complete v2 extended atlas",
-  "visual_qa": "pass_with_warnings",
-  "independent_review": "WARN",
+  "visual_qa": "pass_with_reviewed_warnings",
+  "independent_review": "PASS",
   "hard_failures": [],
   "evidence": [
     "The rebuilt contact sheet and direction sheet contain the complete 11-row 1536x2288 atlas.",
@@ -13,6 +13,6 @@
   "warnings": [
     "247.5 -> 270 and 337.5 -> 000 are larger but visually coherent transitions.",
     "The 000 direction has a y=12 transparent-row candidate recorded by qa/look-continuity.json; alpha review did not classify it as a filled-silhouette hole.",
-    "The independent retry reviewed the contact sheet only; it did not replay GIFs or rerun per-pixel calculations."
+    "Independent review covered the labeled 16-direction sheet and both row-boundary transitions; deterministic validators covered pixels and dimensions."
   ]
 }

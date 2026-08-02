@@ -1,6 +1,6 @@
 {
   "atlas": "spritesheet.webp",
-  "reviewed_by": "independent_visual_worker_r43; parent_normal_size_review",
+  "reviewed_by": "independent_visual_worker_r10; parent_alpha_review",
   "verdict": "pass_with_continuity_warnings",
   "directions": [
     {"direction": "000", "expected": "up", "verdict": "pass", "horizontal": "centered snout; no horizontal cue required", "vertical": "snout sits above the two eye arcs and reads as an up-pitch", "reason": "Approved cardinal and row-9 anchor; identity and scale remain stable."},
@@ -11,21 +11,21 @@
     {"direction": "112.5", "expected": "down-right", "verdict": "pass", "horizontal": "snout remains screen-right", "vertical": "face and snout move below the level profile", "reason": "Down-right transition is visible and continuous."},
     {"direction": "135", "expected": "down-right", "verdict": "pass", "horizontal": "snout remains screen-right", "vertical": "downward pitch is stronger", "reason": "Independent row-9 review accepted the quadrant and progression."},
     {"direction": "157.5", "expected": "down-right", "verdict": "pass", "horizontal": "snout remains screen-right", "vertical": "approaches the down cardinal", "reason": "Last row-9 pose approaches 180 without a back-view reversal."},
-    {"direction": "180", "expected": "down", "verdict": "pass", "horizontal": "centered down-facing snout", "vertical": "snout sits below the eye arcs in a visible down-pitch", "reason": "Retry-2 row-10 cardinal boundary is visually continuous."},
+    {"direction": "180", "expected": "down", "verdict": "pass", "horizontal": "centered down-facing snout", "vertical": "snout sits below the eye arcs in a visible down-pitch", "reason": "Independent review confirms a clear down-facing cardinal, not a back view."},
     {"direction": "202.5", "expected": "down-left", "verdict": "pass", "horizontal": "snout begins moving screen-left", "vertical": "downward pitch remains clear", "reason": "First row-10 diagonal continues from 180 toward screen-left."},
     {"direction": "225", "expected": "down-left", "verdict": "pass", "horizontal": "snout and head project screen-left", "vertical": "face remains down-pitched", "reason": "Coherent diagonal with stable costume and baseline."},
     {"direction": "247.5", "expected": "down-left", "verdict": "pass", "horizontal": "snout remains screen-left", "vertical": "downward pitch relaxes toward the left cardinal", "reason": "Metric area warning is present but no visible semantic break."},
     {"direction": "270", "expected": "left", "verdict": "pass", "horizontal": "unmistakable screen-left profile", "vertical": "near-level side profile", "reason": "Approved screen-left cardinal; final-cell edge gate passes."},
     {"direction": "292.5", "expected": "up-left", "verdict": "pass", "horizontal": "snout remains screen-left", "vertical": "head begins rising toward the up-left arc", "reason": "Continuous return from the left cardinal."},
     {"direction": "315", "expected": "up-left", "verdict": "pass", "horizontal": "snout and face remain screen-left", "vertical": "upward pitch is visible", "reason": "Stable scale, identity, and baseline."},
-    {"direction": "337.5", "expected": "up-left", "verdict": "pass", "horizontal": "snout remains screen-left one step before 000", "vertical": "up-pitch approaches the approved 000 pose", "reason": "Loop boundary is visually coherent despite the recorded metric warning."}
+    {"direction": "337.5", "expected": "up-left", "verdict": "pass", "horizontal": "snout remains screen-left one step before 000", "vertical": "up-pitch approaches the approved 000 pose", "reason": "Independent review confirms the left-side snout remains visible and the loop boundary is coherent."}
   ],
   "continuity_review": {
     "report": "qa/look-continuity.json",
     "verdict": "reviewed_warning",
-    "warnings": [
-      "000 transparent-row candidate is outside the filled silhouette on alpha inspection.",
-      "157.5->180, 247.5->270, and 337.5->000 have larger metric deltas but no visible snap or wrong-quadrant transition at normal size."
+      "warnings": [
+      "000 transparent-row candidate is outside the filled silhouette on high-contrast alpha inspection.",
+      "022.5->045, 157.5->180, 247.5->270, and 337.5->000 have larger metric deltas but no visible snap, scale pop, or wrong-quadrant transition at normal size."
     ]
   }
 }
