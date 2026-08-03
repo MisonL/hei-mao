@@ -12,7 +12,7 @@
 
 ### Petdex 安装
 
-Petdex 审核上线后，可在已安装 Node.js 20 或更高版本的 macOS、Linux 或 Windows 上运行：
+当前根包已在 Petdex 上线，可在已安装 Node.js 20 或更高版本的 macOS、Linux 或 Windows 上运行：
 
 ```bash
 npx -y petdex@latest install hei-mao
@@ -25,20 +25,9 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 ~/.codex/pets/hei-mao
 ```
 
-### 品控官角色
+### 其他角色
 
-品控官角色已在 Petdex 建立独立条目。当前仓库图集为最新版本；Petdex 线上资源待其编辑链路修复后同步。同步完成后可运行：
-
-```bash
-npx -y petdex@latest install hei-mao-quality
-```
-
-在同步前，本地安装请使用仓库中的角色包目录：
-
-```bash
-mkdir -p ~/.codex/pets/hei-mao-quality
-cp pets/hei-mao-quality/pet.json pets/hei-mao-quality/spritesheet.webp ~/.codex/pets/hei-mao-quality/
-```
+其他角色仍在独立生成和复核阶段。当前公开仓库只提供根包 `hei-mao`；未同时具备完整 v2 图集、方向连续性验证和视觉复核证据前，不作为可安装或可发布包提供。Petdex 中的历史角色条目不属于当前发布集，请勿安装。
 
 ### 一键安装
 
