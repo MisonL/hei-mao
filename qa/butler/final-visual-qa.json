@@ -1,0 +1,18 @@
+{
+  "visual_qa": "pass_with_reviewed_warnings",
+  "reviewed_by": "independent_visual_qa",
+  "repair_rows": [],
+  "warnings": [
+    "Intermediate back-facing directions have weaker secondary-axis cues at normal pet size.",
+    "Continuity outliers at 067.5->090, 180->202.5, 247.5->270, and 337.5->000 remain visually coherent.",
+    "Blind review warnings are limited to intermediate directions and do not affect cardinal gates."
+  ],
+  "evidence": [
+    "contact-sheet-extended.png",
+    "look-directions.png",
+    "direction-semantics.json",
+    "direction-blind-validation.json",
+    "look-continuity.json",
+    "validation.json"
+  ]
+}

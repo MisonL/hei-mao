@@ -42,6 +42,21 @@ mkdir -p ~/.codex/pets/hei-mao-quality
 cp pets/hei-mao-quality/pet.json pets/hei-mao-quality/spritesheet.webp ~/.codex/pets/hei-mao-quality/
 ```
 
+### 大管家角色
+
+`hei-mao-butler` 是黑毛的大管家角色包，包含完整的 v2 动画图集和 16 个观察方向的独立 QA 证据。
+
+```bash
+npx -y petdex@latest install hei-mao-butler
+```
+
+本地验收或 Petdex 条目同步前，可手动安装仓库中的已验证包：
+
+```bash
+mkdir -p ~/.codex/pets/hei-mao-butler
+cp pets/hei-mao-butler/pet.json pets/hei-mao-butler/spritesheet.webp ~/.codex/pets/hei-mao-butler/
+```
+
 ### 一键安装
 
 macOS / Linux:
@@ -111,6 +126,8 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/videos/`: 每个状态的 mp4 预览
 - `pets/hei-mao-quality/`: 已验证的品控官角色包
 - `qa/quality/`: 品控官 v5 的独立验证与视觉复核证据
+- `pets/hei-mao-butler/`: 已验证的大管家角色包
+- `qa/butler/`: 大管家 v2 的独立验证与视觉复核证据
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
 
@@ -154,6 +171,16 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/quality/direction-blind-validation.json`: `ok: true`，`000=up`、`180=down`、`270=screen-left` 硬门禁通过
 - `qa/quality/final-visual-qa.json`: `visual_qa: pass`，无需要修复的行
 - 连续性指标在 `157.5 -> 180` 与 `337.5 -> 000` 处有已复核的边界警告；正常尺寸下未见跳变、比例突变、身份变化或错误象限
+
+### 大管家 v2 验证结果
+
+- `pets/hei-mao-butler/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`
+- 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
+- `qa/butler/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
+- `qa/butler/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
+- `qa/butler/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
+- `qa/butler/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
+- 中间/背面方向的次轴提示较弱，且连续性报告有局部离群值；独立正常尺寸复核未见跳帧、裁切、透明洞、比例突变或方向反转
 
 ## 许可
 
