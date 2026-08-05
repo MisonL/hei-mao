@@ -44,9 +44,10 @@ cp pets/hei-mao-quality/pet.json pets/hei-mao-quality/spritesheet.webp ~/.codex/
 
 ### 大管家角色
 
-`hei-mao-butler` 是黑毛的大管家角色包，包含完整的 v2 动画图集和 16 个观察方向的独立 QA 证据。
+`hei-mao-butler` 是黑毛的大管家角色包，包含完整的 v2 动画图集和 16 个观察方向的独立 QA 证据。该包已提交 Petdex，当前状态为待审核（`held for review: possible policy issue`）；审核完成前不将其视为 Petdex 已上线包。
 
 ```bash
+# Petdex 审核通过后执行
 npx -y petdex@latest install hei-mao-butler
 ```
 
