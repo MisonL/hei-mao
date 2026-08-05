@@ -25,9 +25,22 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 ~/.codex/pets/hei-mao
 ```
 
-### 其他角色
+### 品控官角色
 
-其他角色仍在独立生成和复核阶段。当前公开仓库只提供根包 `hei-mao`；未同时具备完整 v2 图集、方向连续性验证和视觉复核证据前，不作为可安装或可发布包提供。Petdex 中的历史角色条目不属于当前发布集，请勿安装。
+`hei-mao-quality` 是黑毛的品控官角色包，已完成完整的 v2 图集、方向连续性、三份独立方向盲测和最终视觉复核。
+
+Petdex 上已存在同名条目，但当前线上资源仍是旧版。本次使用 `petdex edit` 提交 v5 时，资源上传成功，生产编辑提交接口仍返回 HTML 404，因此不能把线上条目视为已同步。不要使用 `petdex submit` 创建重复条目；待上游编辑接口部署完成后，再对现有 slug 执行编辑。
+
+```bash
+npx -y petdex@latest install hei-mao-quality
+```
+
+如需从仓库手动安装到 Codex App：
+
+```bash
+mkdir -p ~/.codex/pets/hei-mao-quality
+cp pets/hei-mao-quality/pet.json pets/hei-mao-quality/spritesheet.webp ~/.codex/pets/hei-mao-quality/
+```
 
 ### 一键安装
 
@@ -96,6 +109,8 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/direction-blind-validation.json`: 方向盲测结果
 - `qa/look-continuity.json`: 方向连续性测量
 - `qa/videos/`: 每个状态的 mp4 预览
+- `pets/hei-mao-quality/`: 已验证的品控官角色包
+- `qa/quality/`: 品控官 v5 的独立验证与视觉复核证据
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
 
@@ -129,6 +144,16 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 ## 备注
 
 `running-left` 为单独生成，不是从 `running-right` 镜像派生，以避免破坏黑毛单肩背带裤的方向特征。
+
+### 品控官 v5 验证结果
+
+- `pets/hei-mao-quality/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f`
+- 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
+- `qa/quality/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
+- `qa/quality/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
+- `qa/quality/direction-blind-validation.json`: `ok: true`，`000=up`、`180=down`、`270=screen-left` 硬门禁通过
+- `qa/quality/final-visual-qa.json`: `visual_qa: pass`，无需要修复的行
+- 连续性指标在 `157.5 -> 180` 与 `337.5 -> 000` 处有已复核的边界警告；正常尺寸下未见跳变、比例突变、身份变化或错误象限
 
 ## 许可
 

@@ -1,0 +1,24 @@
+{
+  "verdict": "pass",
+  "source": "generated/quality-look-row-10-v5-left-profile-nonstream.webp",
+  "directions": {
+    "180": "pass: 正面下视可读，眼睛和鼻口向下，脚部基线固定",
+    "202.5": "pass: 屏幕左下过渡，鼻口开始向左并保持下俯",
+    "225": "pass: 明确左下方向，左侧脸部逐步增加可见度",
+    "247.5": "pass: 左向侧脸过渡连续，鼻口和眼睛继续向屏幕左侧",
+    "270": "pass: 明确屏幕左侧 profile，鼻口和瞳孔位于头部左侧",
+    "292.5": "pass: 左上过渡，鼻口抬起且仍保持左向",
+    "315": "pass: 左上方向增强，头部和道具随上半身连续跟随",
+    "337.5": "pass: 接近上视的左上弧线，与 000 边界保持连续趋势"
+  },
+  "identity_consistency": "pass",
+  "baseline_continuity": "pass",
+  "adjacent_jumps": "pass_with_metric_warnings",
+  "uncertainty": [
+    "000 到 337.5 的闭环边界需结合最终 despill 图集连续性报告解释",
+    "对角帧的上下轴部分为视觉近水平，已由三份独立盲审保留为 ambiguous，不影响硬 cardinal gate",
+    "透明边缘的色溢出由最终单次 despill 处理，不在源图阶段判定"
+  ],
+  "reviewer": "three independent blind reviewers plus primary normal-size inspection",
+  "reviewed_at": "2026-08-05T02:31:27Z"
+}

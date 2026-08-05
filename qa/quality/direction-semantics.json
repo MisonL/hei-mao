@@ -1,0 +1,45 @@
+{
+  "atlas": "final/spritesheet-extended-v5.webp",
+  "atlas_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+  "reviewed_by": "three independent blind reviewers; primary normal-size visual inspection",
+  "verdict": "pass_with_continuity_warnings",
+  "hard_cardinal_gate": {
+    "000": "up",
+    "180": "down",
+    "270": "screen-left"
+  },
+  "directions": [
+    {"direction":"000","expected":"up","verdict":"pass","horizontal":"centered snout; no horizontal cue required","vertical":"snout sits above the two eye arcs and reads as an up-pitch","reason":"Hard cardinal gate passed; identity and scale remain stable."},
+    {"direction":"022.5","expected":"up-right","verdict":"pass","horizontal":"snout begins moving toward screen-right","vertical":"upward eye and head pitch remains visible","reason":"Smooth first diagonal after the up cardinal."},
+    {"direction":"045","expected":"up-right","verdict":"pass","horizontal":"snout and face project screen-right","vertical":"upward pitch remains visible","reason":"Intermediate pose stays in the intended quadrant."},
+    {"direction":"067.5","expected":"up-right","verdict":"pass","horizontal":"snout is clearly screen-right","vertical":"head and eye arcs remain above the level face","reason":"Approaches the screen-right cardinal without reversal."},
+    {"direction":"090","expected":"right","verdict":"pass","horizontal":"snout and head project screen-right","vertical":"near-level side profile","reason":"Approved cardinal with solid head and no edge overflow."},
+    {"direction":"112.5","expected":"down-right","verdict":"pass","horizontal":"snout remains screen-right","vertical":"face and snout move below the level profile","reason":"Down-right transition is visible and continuous."},
+    {"direction":"135","expected":"down-right","verdict":"pass","horizontal":"snout remains screen-right","vertical":"downward pitch is stronger","reason":"Stable diagonal with fixed identity and baseline."},
+    {"direction":"157.5","expected":"down-right","verdict":"pass","horizontal":"snout remains screen-right","vertical":"approaches the down cardinal","reason":"Last row-9 pose approaches 180 without a back-view reversal."},
+    {"direction":"180","expected":"down","verdict":"pass","horizontal":"centered down-facing snout","vertical":"snout sits below the eye arcs in a visible down-pitch","reason":"Hard cardinal gate passed; clear down-facing cardinal, not a back view."},
+    {"direction":"202.5","expected":"down-left","verdict":"pass","horizontal":"snout begins moving screen-left","vertical":"downward pitch remains clear","reason":"First row-10 diagonal continues from 180 toward screen-left."},
+    {"direction":"225","expected":"down-left","verdict":"pass","horizontal":"snout and head project screen-left","vertical":"face remains down-pitched","reason":"Coherent diagonal with stable costume and baseline."},
+    {"direction":"247.5","expected":"down-left","verdict":"pass","horizontal":"snout remains screen-left","vertical":"downward pitch relaxes toward the left cardinal","reason":"Metric transition warning is present but no visible semantic break."},
+    {"direction":"270","expected":"left","verdict":"pass","horizontal":"unmistakable screen-left profile","vertical":"near-level side profile","reason":"Hard cardinal gate passed; final-cell edge gate also passes."},
+    {"direction":"292.5","expected":"up-left","verdict":"pass","horizontal":"snout remains screen-left","vertical":"head begins rising toward the up-left arc","reason":"Continuous return from the left cardinal."},
+    {"direction":"315","expected":"up-left","verdict":"pass","horizontal":"snout and face remain screen-left","vertical":"upward pitch is visible","reason":"Stable scale, identity, and baseline."},
+    {"direction":"337.5","expected":"up-left","verdict":"pass","horizontal":"snout remains screen-left one step before 000","vertical":"up-pitch approaches the approved 000 pose","reason":"Left-side snout remains visible and the loop boundary is coherent at normal size."}
+  ],
+  "continuity_review": {
+    "report": "qa/look-continuity-v5.json",
+    "verdict": "reviewed_warning",
+    "warnings": [
+      "157.5->180 has a larger metric delta and center shift",
+      "337.5->000 has a larger metric delta, center shift, and area ratio",
+      "No alpha holes, visible snap, scale pop, or wrong-quadrant transition was observed at normal size."
+    ]
+  },
+  "blind_review": {
+    "validation": "qa/direction-blind-validation-v5.json",
+    "ok": true,
+    "review_required": true,
+    "hard_gate_errors": [],
+    "unconfirmed": []
+  }
+}
