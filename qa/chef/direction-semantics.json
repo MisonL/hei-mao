@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "atlas": "pets/hei-mao-chef/spritesheet.webp",
+  "atlas_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+  "reviewed_by": "independent_visual_qa_worker; parent",
+  "review_basis": [
+    "qa/chef/look-directions.png",
+    "qa/chef/contact-sheet-extended.png",
+    "qa/chef/previews/look-directions.gif",
+    "qa/chef/look-continuity.json"
+  ],
+  "hard_failures": [],
+  "warnings": [
+    "157.5->180 area ratio is elevated but the ordered transition remains readable at normal pet size",
+    "225->247.5 diff is a local continuity outlier without a visible snap",
+    "247.5->270 center shift is elevated without a visible registration jump",
+    "337.5->000 has the largest loop-boundary change; the up-left cue remains visible and no reversal is present"
+  ],
+  "directions": [
+    {
+      "degree": "000",
+      "expected": "up",
+      "verdict": "pass",
+      "observed": "up",
+      "horizontal_axis": "screen-center",
+      "vertical_axis": "up",
+      "reason": "鼻吻和眼线抬向画面上方，帽子底部与脸部下缘露出，明确是仰视。"
+    },
+    {
+      "degree": "022.5",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "up-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "up",
+      "reason": "鼻吻略向画面右侧并保持上抬，头部从 000 平滑转向右上。"
+    },
+    {
+      "degree": "045",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "up-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "up",
+      "reason": "鼻吻明显位于头部右上侧，面部仍然抬起，处于右上象限。"
+    },
+    {
+      "degree": "067.5",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "up-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "up",
+      "reason": "右侧轮廓接近右视，鼻吻仍高于头部中心，向 090 平滑收敛。"
+    },
+    {
+      "degree": "090",
+      "expected": "right",
+      "verdict": "pass",
+      "observed": "right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "screen-center",
+      "reason": "鼻吻、眼线和头部轮廓明确朝向画面右侧，构成稳定右侧面。"
+    },
+    {
+      "degree": "112.5",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "down-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "down",
+      "reason": "右侧面基础上鼻吻下沉，脸部朝右下，处于右下象限。"
+    },
+    {
+      "degree": "135",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "down-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "down",
+      "reason": "头部转向右后下方，鼻吻低于头部中心，右下方向清晰。"
+    },
+    {
+      "degree": "157.5",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "down-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "down",
+      "reason": "姿态接近 180 但仍保留右侧露耳和右侧偏移，鼻吻朝下，方向连续。"
+    },
+    {
+      "degree": "180",
+      "expected": "down",
+      "verdict": "pass",
+      "observed": "down",
+      "horizontal_axis": "screen-center",
+      "vertical_axis": "down",
+      "reason": "后脑和帽顶占主导，鼻吻位于下方中心，明确为俯视。"
+    },
+    {
+      "degree": "202.5",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "down-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "down",
+      "reason": "从 180 向画面左侧转动，鼻吻向左下偏移，保持俯视轴。"
+    },
+    {
+      "degree": "225",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "down-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "down",
+      "reason": "鼻吻处于头部左下方，左侧轮廓和低头姿态同时可见。"
+    },
+    {
+      "degree": "247.5",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "down-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "down",
+      "reason": "左侧面逐步形成，鼻吻低于中心并朝画面左侧，向 270 连续过渡。"
+    },
+    {
+      "degree": "270",
+      "expected": "left",
+      "verdict": "pass",
+      "observed": "left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "screen-center",
+      "reason": "鼻吻、眼线和头部轮廓明确朝向画面左侧，构成稳定左侧面。"
+    },
+    {
+      "degree": "292.5",
+      "expected": "up-left",
+      "verdict": "pass",
+      "observed": "up-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "up",
+      "reason": "左侧面基础上鼻吻抬高，头部朝左上，处于左上象限。"
+    },
+    {
+      "degree": "315",
+      "expected": "up-left",
+      "verdict": "pass",
+      "observed": "up-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "up",
+      "reason": "鼻吻明显位于头部左上侧，仰视趋势向 000 平滑收敛。"
+    },
+    {
+      "degree": "337.5",
+      "expected": "up-left",
+      "verdict": "warning",
+      "observed": "up-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "up",
+      "reason": "上抬方向清晰但左侧偏移较轻，作为 000 前一帧仍保持左上象限且无方向反转。"
+    }
+  ]
+}

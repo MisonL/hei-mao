@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "blind_validation": "qa/chef/direction-blind-validation.json",
+  "blind_validation_ok": true,
+  "cardinal_hard_gates": {
+    "000_vs_180": "pass",
+    "090_vs_270": "pass"
+  },
+  "continuity_report": "qa/chef/look-continuity.json",
+  "continuity_warnings_reviewed": [
+    {
+      "transition": "157.5->180",
+      "metrics": {
+        "area_ratio": 1.1969923489578753
+      },
+      "decision": "accept_warning_after_visual_review"
+    },
+    {
+      "transition": "225->247.5",
+      "metrics": {
+        "diff_pixels": 3426
+      },
+      "decision": "accept_warning_after_visual_review"
+    },
+    {
+      "transition": "247.5->270",
+      "metrics": {
+        "center_shift_px": 9.5
+      },
+      "decision": "accept_warning_after_visual_review"
+    },
+    {
+      "transition": "337.5->000",
+      "metrics": {
+        "diff_pixels": 4660,
+        "center_shift_px": 9.12414379544733,
+        "area_ratio": 1.3058712930518759
+      },
+      "decision": "accept_warning_after_visual_review"
+    }
+  ],
+  "decision": "accept",
+  "severity": "minor",
+  "evidence": [
+    "labeled normal-size direction review found no wrong quadrant or visible reversal",
+    "final direction preview preserves the ordered 16-pose loop and stable lower-body anchor",
+    "no conspicuous snap, scale pop, identity change, clipping, broken attachment, or alpha hole",
+    "v2 atlas validator and chroma despill checks passed"
+  ],
+  "hard_failures": []
+}

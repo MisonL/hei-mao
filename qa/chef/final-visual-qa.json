@@ -1,0 +1,39 @@
+{
+  "visual_qa": "pass_with_reviewed_warnings",
+  "raw_worker_verdict": "fail",
+  "reviewed_by": "independent_visual_qa_worker; parent",
+  "repair_rows": [],
+  "hard_failures": [],
+  "warnings": [
+    "157.5->180 面积比约 1.20，但方向转场在正常尺寸下连续。",
+    "225->247.5 差异为局部离群值，但未见可见 snap 或身份变化。",
+    "247.5->270 中心偏移约 9.5px，但下半身锚点和轮廓保持连贯。",
+    "337.5->000 为回环处最大变化，面积比约 1.31、中心偏移约 9.1px，但未见回环反转、裁切或比例跳变。",
+    "独立复核将上述连续性指标初判为 fail，依据视觉复核规则判定为 minor warning 并接受。"
+  ],
+  "evidence": {
+    "contact_sheet": "qa/chef/contact-sheet-extended.png",
+    "direction_sheet": "qa/chef/look-directions.png",
+    "direction_semantics": "qa/chef/direction-semantics.json",
+    "blind_validation": "qa/chef/direction-blind-validation.json",
+    "blind_resolution": "qa/chef/blind-review-resolution.json",
+    "continuity": "qa/chef/look-continuity.json",
+    "standard_review": "qa/chef/review.json",
+    "atlas_validation": "qa/chef/validation.json",
+    "chroma_despill": "qa/chef/chroma-despill.json",
+    "motion_previews": "qa/chef/previews"
+  },
+  "direction_summary": {
+    "cardinal_gates": {
+      "000": "pass",
+      "090": "pass",
+      "180": "pass",
+      "270": "pass"
+    },
+    "all_expected_directions_have_verdicts": true,
+    "wrong_quadrant_or_reversal": false,
+    "identity_or_scale_failure": false
+  },
+  "resolution": "accept_minor_warnings",
+  "reviewed_at": "2026-08-06T07:26:33Z"
+}
