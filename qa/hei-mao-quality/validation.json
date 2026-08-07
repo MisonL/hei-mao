@@ -1,7 +1,6 @@
 {
   "ok": true,
   "file": "pets/hei-mao-quality/spritesheet.webp",
-  "chroma_key": "#FF00FF",
   "format": "WEBP",
   "mode": "RGBA",
   "columns": 8,
@@ -805,5 +804,6 @@
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     }
-  ]
+  ],
+  "chroma_key": "#FF00FF"
 }
