@@ -31,8 +31,8 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 | slug | 角色 | 本地状态 | Petdex 状态 |
 | --- | --- | --- | --- |
-| `hei-mao` | 黑毛 | 已验证 | 已上线 |
-| `hei-mao-quality` | 品控官 | 已验证 | 已有同名条目，线上资源同步待 Petdex 编辑接口恢复 |
+| `hei-mao` | 黑毛 | 已验证 | 已上线，公开资源版本落后 |
+| `hei-mao-quality` | 品控官 | 已验证 | 已有同名条目，公开资源版本落后 |
 | `hei-mao-butler` | 大管家 | 已验证 | 已提交，等待审核 |
 | `hei-mao-chef` | 厨师 | 已验证 | 已提交，等待审核 |
 | `hei-mao-foodie` | 美食家 | 已验证 | 已提交，等待审核 |
@@ -52,7 +52,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-`hei-mao-quality` 已有同名条目，但线上资源仍是旧版。此前 `petdex edit` 的资源上传成功，生产编辑提交接口返回 HTML 404，因此不能把线上条目标记为已同步，也不能使用 `petdex submit` 创建重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 已进入个人提交区的 `pending` 状态，审核完成前不将它们视为 Petdex 已上线包。
+截至 2026-08-08，Petdex 公开 manifest 中有 `hei-mao`、`hei-mao-quality` 和历史重复条目 `hei-mao-2`。公开下载的 `hei-mao` SHA-256 为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`，`hei-mao-quality` SHA-256 为 `254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`，均不同于本仓库当前已验证版本。当前 `petdex edit` 可以完成资源上传，但生产编辑提交接口返回 HTML 404，因此不能把线上资源标记为已同步，也不能使用 `petdex submit` 创建重复条目。`hei-mao-2` 是历史重复条目，不属于当前发布集。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 已进入个人提交区的 `pending` 状态，审核完成前不将它们视为 Petdex 已上线包。
 
 ### 角色安装器
 
