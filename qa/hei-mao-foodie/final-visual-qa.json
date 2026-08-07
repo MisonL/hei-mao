@@ -1,0 +1,31 @@
+{
+  "visual_qa": "pass_with_reviewed_warnings",
+  "reviewed_by": "parent",
+  "repair_rows": [],
+  "hard_failures": [],
+  "warnings": [
+    "Intermediate vertical cues are subtle for the four diagonal pairs called out by blind review.",
+    "Continuity metrics report local outliers at 112.5->135, 135->157.5, 157.5->180, and 337.5->000; visual review keeps the loop coherent.",
+    "The 180 direction's transparent ear gap is intentional negative space, not a broken body."
+  ],
+  "evidence": {
+    "contact_sheet": "qa/hei-mao-foodie/contact-sheet-extended.png",
+    "direction_sheet": "qa/hei-mao-foodie/look-directions.png",
+    "direction_semantics": "qa/hei-mao-foodie/direction-semantics.json",
+    "blind_validation": "qa/hei-mao-foodie/direction-blind-validation.json",
+    "blind_resolution": "qa/hei-mao-foodie/blind-review-resolution.json",
+    "continuity": "qa/hei-mao-foodie/look-continuity.json",
+    "standard_review": "qa/hei-mao-foodie/review.json",
+    "atlas_validation": "qa/hei-mao-foodie/validation.json",
+    "chroma_despill": "qa/hei-mao-foodie/chroma-despill.json",
+    "motion_previews": "qa/hei-mao-foodie/previews"
+  },
+  "direction_summary": {
+    "cardinal_gates": {"000":"pass","090":"pass","180":"pass","270":"pass"},
+    "all_expected_directions_have_verdicts": true,
+    "wrong_quadrant_or_reversal": false,
+    "identity_or_scale_failure": false
+  },
+  "resolution": "accept_minor_warnings",
+  "reviewed_at": "2026-08-08"
+}

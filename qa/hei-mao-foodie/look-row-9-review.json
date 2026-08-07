@@ -1,0 +1,53 @@
+{
+  "row": "look-row-9",
+  "source": "decoded/look-row-9-retry-04.png",
+  "registered": "qa/look-row-9-registered-retry-04.png",
+  "registration": {
+    "ok": true,
+    "scale": 0.8048780487804879,
+    "edge_failures": [],
+    "empty_slots": []
+  },
+  "semantic": {
+    "000": {
+      "verdict": "pass",
+      "evidence": "snout and mouth are visibly above the head center; face reads up"
+    },
+    "022.5": {
+      "verdict": "pass",
+      "evidence": "small screen-right and upward progression from 000"
+    },
+    "045": {
+      "verdict": "pass",
+      "evidence": "screen-right three-quarter face with upward tendency"
+    },
+    "067.5": {
+      "verdict": "pass",
+      "evidence": "screen-right three-quarter face approaching the right cardinal"
+    },
+    "090": {
+      "verdict": "pass",
+      "evidence": "pink snout and face surface clearly aim to screen-right"
+    },
+    "112.5": {
+      "verdict": "pass",
+      "evidence": "complete screen-right/down transition pose"
+    },
+    "135": {
+      "verdict": "pass",
+      "evidence": "screen-right/down face with lowered snout"
+    },
+    "157.5": {
+      "verdict": "pass",
+      "evidence": "screen-right/down pose continues toward the approved 180 down anchor"
+    }
+  },
+  "continuity": {
+    "verdict": "pass_with_warning",
+    "warnings": [
+      "135->157.5 center shift measured 9.0px, just above the 8px review threshold; no reversal, clipping, empty slot, or interior hole observed"
+    ],
+    "alpha_holes": [],
+    "component_groups": 8
+  }
+}

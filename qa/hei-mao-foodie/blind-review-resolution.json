@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "blind_validation": "qa/hei-mao-foodie/direction-blind-validation.json",
+  "blind_validation_ok": true,
+  "cardinal_hard_gates": {
+    "000_vs_180": "pass",
+    "090_vs_270": "pass"
+  },
+  "accepted_minor_warnings": [
+    {
+      "checks": ["vertical-4", "vertical-7"],
+      "decision": "accept_warning_after_labeled_review",
+      "reason": "Three-way blind consensus was ambiguous only for intermediate vertical cues. The labeled direction sheet keeps 067.5/112.5 and 292.5/247.5 in the intended quadrants and the ordered loop is coherent."
+    },
+    {
+      "checks": ["look-continuity"],
+      "decision": "accept_warning_after_visual_review",
+      "reason": "Continuity outliers at 112.5->135, 135->157.5, 157.5->180, and 337.5->000 do not show a visible snap, reversal, clipping, scale pop, or prop detachment at normal pet size."
+    },
+    {
+      "checks": ["180-alpha-hole-candidate"],
+      "decision": "accept_intentional_negative_space",
+      "reason": "The two reported rows are the transparent gap between the 180 down pose's ears, confirmed in the labeled cell and focused direction sheet; the filled head, face, apron, and props remain connected."
+    }
+  ],
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "parent",
+  "hard_failures": []
+}

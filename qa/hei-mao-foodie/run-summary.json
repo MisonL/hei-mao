@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "spriteVersionNumber": 2,
+  "spritesheet": "pets/hei-mao-foodie/spritesheet.webp",
+  "validation": "qa/hei-mao-foodie/validation.json",
+  "chroma_despill": "qa/hei-mao-foodie/chroma-despill.json",
+  "contact_sheet": "qa/hei-mao-foodie/contact-sheet-extended.png",
+  "direction_sheet": "qa/hei-mao-foodie/look-directions.png",
+  "direction_semantics": "qa/hei-mao-foodie/direction-semantics.json",
+  "blind_direction_validation": "qa/hei-mao-foodie/direction-blind-validation.json",
+  "blind_review_resolution": "qa/hei-mao-foodie/blind-review-resolution.json",
+  "continuity": "qa/hei-mao-foodie/look-continuity.json",
+  "review": "qa/hei-mao-foodie/review.json",
+  "package": "pets/hei-mao-foodie"
+}
