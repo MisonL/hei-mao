@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "input": "/Users/mison/Documents/Codex/2026-07-28/hei-mao-role-family/butler/final/butler-r5/spritesheet-extended.png",
-  "output": "/Users/mison/Documents/Codex/2026-07-28/hei-mao-role-family/butler/final/butler-r5/spritesheet-extended-clean.png",
+  "input": "pets/hei-mao-butler/spritesheet.webp",
+  "output": "pets/hei-mao-butler/spritesheet.webp",
   "chroma_key": "#00FF00",
   "algorithm": "edge-local-chroma-spill-suppression",
   "strength": 1,
