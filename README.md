@@ -35,6 +35,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-quality` | 品控官 | 已验证 | 已有同名条目，线上资源同步待 Petdex 编辑接口恢复 |
 | `hei-mao-butler` | 大管家 | 已验证 | 已提交，等待审核 |
 | `hei-mao-chef` | 厨师 | 已验证 | 尚未提交 Petdex |
+| `hei-mao-foodie` | 美食家 | 已验证 | 尚未提交 Petdex |
 
 ```bash
 npx -y petdex@latest install hei-mao
@@ -57,6 +58,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 ```bash
 HEI_MAO_PET_ID=hei-mao-chef curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-chef bash
+HEI_MAO_PET_ID=hei-mao-foodie curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-foodie bash
 ```
 
 PowerShell 可使用同一个环境变量，或直接传 `-PetId`：
@@ -64,11 +66,13 @@ PowerShell 可使用同一个环境变量，或直接传 `-PetId`：
 ```powershell
 $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL/hei-mao/main/install.ps1 | iex
 ./install.ps1 -PetId hei-mao-chef
+$env:HEI_MAO_PET_ID="hei-mao-foodie"; irm https://raw.githubusercontent.com/MisonL/hei-mao/main/install.ps1 | iex
+./install.ps1 -PetId hei-mao-foodie
 ```
 
 安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
-未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-foodie`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。
+未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。
 
 本地手动安装角色时：
 
@@ -84,6 +88,10 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 ### Chef 角色
 
 `hei-mao-chef` 是黑毛的厨师角色包，已通过结构、透明度、方向盲测、连续性和独立视觉复核。连续性报告中的四处数值告警均已记录为 minor warning，未发现可见跳帧、裁切、比例突变、身份漂移或方向反转。
+
+### 美食家角色
+
+`hei-mao-foodie` 是黑毛的美食家角色包，已通过结构、透明度、方向盲测、连续性和独立视觉复核。最终视觉复核为 `pass_with_reviewed_warnings`，警告均已记录为 minor，未发现需要修复的硬失败。
 
 ### 品控官角色
 
@@ -182,6 +190,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-butler/`: 大管家 v2 的独立验证与视觉复核证据
 - `pets/hei-mao-chef/`: 已验证的厨师角色包（Petdex 尚未上线）
 - `qa/hei-mao-chef/`: 厨师 v2 的独立验证与视觉复核证据
+- `pets/hei-mao-foodie/`: 已验证的美食家角色包（Petdex 尚未上线）
+- `qa/hei-mao-foodie/`: 美食家 v2 的独立验证与视觉复核证据
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
 
@@ -246,6 +256,16 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-chef/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
 - `qa/hei-mao-chef/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
 - 连续性告警集中在 `157.5 -> 180`、`225 -> 247.5`、`247.5 -> 270` 和 `337.5 -> 000`；正常尺寸下未见跳帧、裁切、比例突变、身份漂移或方向反转
+
+### 美食家 v2 验证结果
+
+- `pets/hei-mao-foodie/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`
+- `pets/hei-mao-foodie/pet.json`: SHA-256 为 `0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c`
+- `spriteVersionNumber: 2`，尺寸 `1536x2288`，单元格 `192x208`
+- `qa/hei-mao-foodie/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
+- `qa/hei-mao-foodie/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
+- `qa/hei-mao-foodie/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
+- `qa/hei-mao-foodie/final-visual-qa.json`: `pass_with_reviewed_warnings`，警告均为已复核 minor
 
 ## 许可
 
