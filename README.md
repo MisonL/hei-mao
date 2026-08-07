@@ -16,6 +16,7 @@
 
 ```bash
 npx -y petdex@latest install hei-mao
+npx -y petdex@latest install hei-mao-quality
 ```
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
@@ -37,13 +38,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-chef` | 厨师 | 已验证 | 已提交，等待审核 |
 | `hei-mao-foodie` | 美食家 | 已验证 | 已提交，等待审核 |
 
-```bash
-npx -y petdex@latest install hei-mao
-npx -y petdex@latest install hei-mao-quality
-npx -y petdex@latest install hei-mao-butler
-npx -y petdex@latest install hei-mao-chef
-npx -y petdex@latest install hei-mao-foodie
-```
+公开 manifest 当前只提供以上两个 slug，安装命令只对已审核的公开条目有效。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 仍处于个人提交区的 `pending` 状态，审核完成前不能使用 `petdex install` 下载；它们只能通过本仓库安装器或本地文件安装。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
