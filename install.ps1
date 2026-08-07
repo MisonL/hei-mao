@@ -1,5 +1,6 @@
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSAvoidUsingWriteHost", "", Justification = "Installer TUI uses host colors only when output is interactive.")]
 param(
+    [string]$PetId = "",
     [string]$BaseUrl = "",
     [string]$InstallDir = ""
 )
@@ -7,10 +8,10 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-$PetId = "hei-mao"
 $DefaultBaseUrl = "https://raw.githubusercontent.com/MisonL/hei-mao/main"
-$PetJsonSha256 = "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
-$SpritesheetSha256 = "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
+$PetSubdir = ""
+$PetJsonSha256 = ""
+$SpritesheetSha256 = ""
 $InstallerScriptRoot = $PSScriptRoot
 $script:StepIndex = 0
 $script:StepTotal = 4
@@ -18,6 +19,44 @@ $script:StepTotal = 4
 function Test-Text {
     param([AllowNull()][string]$Value)
     return -not [string]::IsNullOrEmpty($Value)
+}
+
+function Set-PetConfiguration {
+    $requestedPetId = $PetId
+    if (-not (Test-Text $requestedPetId)) {
+        $requestedPetId = $env:HEI_MAO_PET_ID
+    }
+    if (-not (Test-Text $requestedPetId)) {
+        $requestedPetId = "hei-mao"
+    }
+
+    switch ($requestedPetId) {
+        "hei-mao" {
+            $script:PetJsonSha256 = "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
+            $script:SpritesheetSha256 = "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
+            $script:PetSubdir = ""
+        }
+        "hei-mao-quality" {
+            $script:PetJsonSha256 = "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07"
+            $script:SpritesheetSha256 = "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f"
+            $script:PetSubdir = "pets/$requestedPetId"
+        }
+        "hei-mao-butler" {
+            $script:PetJsonSha256 = "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4"
+            $script:SpritesheetSha256 = "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"
+            $script:PetSubdir = "pets/$requestedPetId"
+        }
+        "hei-mao-chef" {
+            $script:PetJsonSha256 = "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a"
+            $script:SpritesheetSha256 = "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"
+            $script:PetSubdir = "pets/$requestedPetId"
+        }
+        default {
+            throw "Unsupported pet id: $requestedPetId. Supported ids: hei-mao, hei-mao-quality, hei-mao-butler, hei-mao-chef."
+        }
+    }
+
+    $script:PetId = $requestedPetId
 }
 
 $script:UseColor = (-not [System.Console]::IsOutputRedirected) -and (-not (Test-Text $env:NO_COLOR))
@@ -170,28 +209,39 @@ function Copy-OrDownloadAsset {
     $hasBaseOverride = (Test-Text $BaseUrl) -or (Test-Text $env:HEI_MAO_BASE_URL)
     $hasLocalAssets = $false
     if ($scriptDir) {
-        $localManifest = Join-Path $scriptDir "pet.json"
-        $localSheet = Join-Path $scriptDir "spritesheet.webp"
+        $localAssetRoot = $scriptDir
+        if (Test-Text $PetSubdir) {
+            $localAssetRoot = Join-Path $scriptDir $PetSubdir
+        }
+        $localManifest = Join-Path $localAssetRoot "pet.json"
+        $localSheet = Join-Path $localAssetRoot "spritesheet.webp"
         $hasLocalAssets = ((Test-Path -LiteralPath $localManifest) -and (Test-Path -LiteralPath $localSheet))
     }
 
     if ((-not $hasBaseOverride) -and $hasLocalAssets) {
         Write-Detail "Source: local files"
-        Write-Detail "Path: $scriptDir"
-        Copy-Item -LiteralPath (Join-Path $scriptDir "pet.json") -Destination (Join-Path $TempDir "pet.json") -Force
-        Copy-Item -LiteralPath (Join-Path $scriptDir "spritesheet.webp") -Destination (Join-Path $TempDir "spritesheet.webp") -Force
+        Write-Detail "Path: $localAssetRoot"
+        Copy-Item -LiteralPath (Join-Path $localAssetRoot "pet.json") -Destination (Join-Path $TempDir "pet.json") -Force
+        Copy-Item -LiteralPath (Join-Path $localAssetRoot "spritesheet.webp") -Destination (Join-Path $TempDir "spritesheet.webp") -Force
         return
     }
 
     if (Test-Path -LiteralPath $ResolvedBaseUrl) {
+        $localAssetRoot = $ResolvedBaseUrl
+        if (Test-Text $PetSubdir) {
+            $localAssetRoot = Join-Path $ResolvedBaseUrl $PetSubdir
+        }
         Write-Detail "Source: local files"
-        Write-Detail "Path: $ResolvedBaseUrl"
-        Copy-Item -LiteralPath (Join-Path $ResolvedBaseUrl "pet.json") -Destination (Join-Path $TempDir "pet.json") -Force
-        Copy-Item -LiteralPath (Join-Path $ResolvedBaseUrl "spritesheet.webp") -Destination (Join-Path $TempDir "spritesheet.webp") -Force
+        Write-Detail "Path: $localAssetRoot"
+        Copy-Item -LiteralPath (Join-Path $localAssetRoot "pet.json") -Destination (Join-Path $TempDir "pet.json") -Force
+        Copy-Item -LiteralPath (Join-Path $localAssetRoot "spritesheet.webp") -Destination (Join-Path $TempDir "spritesheet.webp") -Force
         return
     }
 
     $trimmedBaseUrl = $ResolvedBaseUrl.TrimEnd("/")
+    if (Test-Text $PetSubdir) {
+        $trimmedBaseUrl = "$trimmedBaseUrl/$PetSubdir"
+    }
     Write-Detail "Source: GitHub raw"
     Write-Detail "URL: $trimmedBaseUrl"
     Save-RemoteFile "$trimmedBaseUrl/pet.json" (Join-Path $TempDir "pet.json")
@@ -228,6 +278,7 @@ function Test-Asset {
 }
 
 try {
+    Set-PetConfiguration
     Write-Intro
     Write-Step "Prepare target"
 
@@ -280,9 +331,9 @@ try {
     }
 
     Write-Output ""
-    Write-Success "Hei Mao pet installed."
+    Write-Success "$PetId pet installed."
     Write-Detail "Install dir: $resolvedInstallDir"
-    Write-Detail "Next: Codex App settings -> Appearance -> Pets -> Refresh -> Hei Mao"
+    Write-Detail "Next: Codex App settings -> Appearance -> Pets -> Refresh -> $PetId"
     Write-Output ""
     exit 0
 }

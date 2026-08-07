@@ -12,7 +12,7 @@
 
 ### Petdex 安装
 
-当前根包已在 Petdex 上线，可在已安装 Node.js 20 或更高版本的 macOS、Linux 或 Windows 上运行：
+根包已在 Petdex 上线，可在已安装 Node.js 20 或更高版本的 macOS、Linux 或 Windows 上运行：
 
 ```bash
 npx -y petdex@latest install hei-mao
@@ -25,11 +25,72 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 ~/.codex/pets/hei-mao
 ```
 
+### 角色包状态
+
+当前仓库中的可安装角色包如下。每个角色都有独立的 `pet.json`、v2 图集和 QA 证据，不能用其他角色的图集替代。
+
+| slug | 角色 | 本地状态 | Petdex 状态 |
+| --- | --- | --- | --- |
+| `hei-mao` | 黑毛 | 已验证 | 已上线 |
+| `hei-mao-quality` | 品控官 | 已验证 | 已有同名条目，线上资源同步待 Petdex 编辑接口恢复 |
+| `hei-mao-butler` | 大管家 | 已验证 | 已提交，等待审核 |
+| `hei-mao-chef` | 厨师 | 已验证 | 尚未提交 |
+
+```bash
+npx -y petdex@latest install hei-mao
+npx -y petdex@latest install hei-mao-quality
+npx -y petdex@latest install hei-mao-butler
+npx -y petdex@latest install hei-mao-chef
+```
+
+Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
+
+```text
+~/.petdex/pets/<slug>
+~/.codex/pets/<slug>
+```
+
+`hei-mao-quality` 已有同名条目，但线上资源仍是旧版。此前 `petdex edit` 的资源上传成功，生产编辑提交接口返回 HTML 404，因此不能把线上条目标记为已同步，也不能使用 `petdex submit` 创建重复条目。`hei-mao-butler` 的审核状态仍以 Petdex 页面为准。
+
+### 角色安装器
+
+无参数时安装根包。通过环境变量选择已经通过本仓库 QA 的角色：
+
+```bash
+HEI_MAO_PET_ID=hei-mao-chef curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-chef bash
+```
+
+PowerShell 可使用同一个环境变量，或直接传 `-PetId`：
+
+```powershell
+$env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL/hei-mao/main/install.ps1 | iex
+./install.ps1 -PetId hei-mao-chef
+```
+
+安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
+
+未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-foodie`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。
+
+本地手动安装角色时：
+
+```bash
+mkdir -p ~/.codex/pets/hei-mao-chef
+cp pets/hei-mao-chef/pet.json pets/hei-mao-chef/spritesheet.webp ~/.codex/pets/hei-mao-chef/
+```
+
+### 大管家角色
+
+`hei-mao-butler` 包含完整的 v2 动画图集和 16 个观察方向的独立 QA 证据。该包已提交 Petdex，当前状态为待审核；审核完成前不将其视为 Petdex 已上线包。
+
+### Chef 角色
+
+`hei-mao-chef` 是黑毛的厨师角色包，已通过结构、透明度、方向盲测、连续性和独立视觉复核。连续性报告中的四处数值告警均已记录为 minor warning，未发现可见跳帧、裁切、比例突变、身份漂移或方向反转。
+
 ### 品控官角色
 
 `hei-mao-quality` 是黑毛的品控官角色包，已完成完整的 v2 图集、方向连续性、三份独立方向盲测和最终视觉复核。
 
-Petdex 上已存在同名条目，但当前线上资源仍是旧版。本次使用 `petdex edit` 提交 v5 时，资源上传成功，生产编辑提交接口仍返回 HTML 404，因此不能把线上条目视为已同步。不要使用 `petdex submit` 创建重复条目；待上游编辑接口部署完成后，再对现有 slug 执行编辑。
+Petdex 安装：
 
 ```bash
 npx -y petdex@latest install hei-mao-quality
@@ -40,22 +101,6 @@ npx -y petdex@latest install hei-mao-quality
 ```bash
 mkdir -p ~/.codex/pets/hei-mao-quality
 cp pets/hei-mao-quality/pet.json pets/hei-mao-quality/spritesheet.webp ~/.codex/pets/hei-mao-quality/
-```
-
-### 大管家角色
-
-`hei-mao-butler` 是黑毛的大管家角色包，包含完整的 v2 动画图集和 16 个观察方向的独立 QA 证据。该包已提交 Petdex，当前状态为待审核（`held for review: possible policy issue`）；审核完成前不将其视为 Petdex 已上线包。
-
-```bash
-# Petdex 审核通过后执行
-npx -y petdex@latest install hei-mao-butler
-```
-
-本地验收或 Petdex 条目同步前，可手动安装仓库中的已验证包：
-
-```bash
-mkdir -p ~/.codex/pets/hei-mao-butler
-cp pets/hei-mao-butler/pet.json pets/hei-mao-butler/spritesheet.webp ~/.codex/pets/hei-mao-butler/
 ```
 
 ### 一键安装
@@ -77,6 +122,8 @@ irm https://raw.githubusercontent.com/MisonL/hei-mao/main/install.ps1 | iex
 ```text
 ~/.codex/pets/hei-mao
 ```
+
+通过 `HEI_MAO_PET_ID` 选择已验证角色，安装器会同时更换目标目录和远程资源路径；不传时始终安装根包。
 
 如需指定 Codex 配置目录：
 
@@ -129,6 +176,8 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/quality/`: 品控官 v5 的独立验证与视觉复核证据
 - `pets/hei-mao-butler/`: 已验证的大管家角色包
 - `qa/butler/`: 大管家 v2 的独立验证与视觉复核证据
+- `pets/hei-mao-chef/`: 已验证的厨师角色包
+- `qa/chef/`: 厨师 v2 的独立验证与视觉复核证据
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
 
@@ -182,6 +231,16 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/butler/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
 - `qa/butler/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
 - 中间/背面方向的次轴提示较弱，且连续性报告有局部离群值；独立正常尺寸复核未见跳帧、裁切、透明洞、比例突变或方向反转
+
+### 厨师 v2 验证结果
+
+- `pets/hei-mao-chef/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`
+- 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
+- `qa/chef/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
+- `qa/chef/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
+- `qa/chef/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
+- `qa/chef/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
+- 连续性告警集中在 `157.5 -> 180`、`225 -> 247.5`、`247.5 -> 270` 和 `337.5 -> 000`；正常尺寸下未见跳帧、裁切、比例突变、身份漂移或方向反转
 
 ## 许可
 

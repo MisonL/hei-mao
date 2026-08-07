@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PET_ID="hei-mao"
 DEFAULT_BASE_URL="https://raw.githubusercontent.com/MisonL/hei-mao/main"
-PET_JSON_SHA256="dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
-SPRITESHEET_SHA256="dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
+PET_ID=""
+PET_SUBDIR=""
+PET_JSON_SHA256=""
+SPRITESHEET_SHA256=""
 STEP_INDEX=0
 STEP_TOTAL=4
 
@@ -101,6 +102,38 @@ die() {
   exit 1
 }
 
+configure_pet() {
+  requested_pet_id="${1:-${HEI_MAO_PET_ID:-hei-mao}}"
+
+  case "$requested_pet_id" in
+    hei-mao)
+      PET_JSON_SHA256="dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
+      SPRITESHEET_SHA256="dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
+      PET_SUBDIR=""
+      ;;
+    hei-mao-quality)
+      PET_JSON_SHA256="c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07"
+      SPRITESHEET_SHA256="1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f"
+      PET_SUBDIR="pets/$requested_pet_id"
+      ;;
+    hei-mao-butler)
+      PET_JSON_SHA256="903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4"
+      SPRITESHEET_SHA256="1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"
+      PET_SUBDIR="pets/$requested_pet_id"
+      ;;
+    hei-mao-chef)
+      PET_JSON_SHA256="d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a"
+      SPRITESHEET_SHA256="32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"
+      PET_SUBDIR="pets/$requested_pet_id"
+      ;;
+    *)
+      die "Unsupported pet id: $requested_pet_id. Supported ids: hei-mao, hei-mao-quality, hei-mao-butler, hei-mao-chef."
+      ;;
+  esac
+
+  PET_ID="$requested_pet_id"
+}
+
 need_home() {
   if [ -z "${CODEX_HOME:-}" ] && [ -z "${HOME:-}" ]; then
     die "HOME is not set. Set CODEX_HOME or HOME before running this installer."
@@ -161,18 +194,25 @@ copy_or_download_assets() {
     [ -n "$script_path" ] &&
     [ -f "$script_path" ]; then
     script_dir="$(cd "$(dirname "$script_path")" >/dev/null 2>&1 && pwd -P)"
+    source_dir="$script_dir"
+    if [ -n "$PET_SUBDIR" ]; then
+      source_dir="$script_dir/$PET_SUBDIR"
+    fi
 
-    if [ -f "$script_dir/pet.json" ] &&
-      [ -f "$script_dir/spritesheet.webp" ]; then
+    if [ -f "$source_dir/pet.json" ] &&
+      [ -f "$source_dir/spritesheet.webp" ]; then
       detail "Source: local files"
-      detail "Path: $script_dir"
-      cp "$script_dir/pet.json" "$tmp_dir/pet.json"
-      cp "$script_dir/spritesheet.webp" "$tmp_dir/spritesheet.webp"
+      detail "Path: $source_dir"
+      cp "$source_dir/pet.json" "$tmp_dir/pet.json"
+      cp "$source_dir/spritesheet.webp" "$tmp_dir/spritesheet.webp"
       return
     fi
   fi
 
   base_url="${base_url%/}"
+  if [ -n "$PET_SUBDIR" ]; then
+    base_url="$base_url/$PET_SUBDIR"
+  fi
   detail "Source: GitHub raw"
   detail "URL: $base_url"
   download_file "$base_url/pet.json" "$tmp_dir/pet.json"
@@ -185,7 +225,7 @@ validate_assets() {
   [ -s "$tmp_dir/pet.json" ] || die "Downloaded pet.json is missing or empty."
   [ -s "$tmp_dir/spritesheet.webp" ] || die "Downloaded spritesheet.webp is missing or empty."
 
-  if ! grep -q '"id"[[:space:]]*:[[:space:]]*"hei-mao"' "$tmp_dir/pet.json"; then
+  if ! grep -q "\"id\"[[:space:]]*:[[:space:]]*\"$PET_ID\"" "$tmp_dir/pet.json"; then
     die "pet.json does not describe the expected pet id: $PET_ID"
   fi
 
@@ -194,6 +234,7 @@ validate_assets() {
 }
 
 main() {
+  configure_pet "${1:-}"
   show_intro
 
   step "Prepare target"
@@ -223,9 +264,9 @@ main() {
   detail "Wrote: spritesheet.webp"
 
   printf '\n'
-  ok "Hei Mao pet installed."
+  ok "$PET_ID pet installed."
   detail "Install dir: $install_dir"
-  detail "Next: Codex App settings -> Appearance -> Pets -> Refresh -> Hei Mao"
+  detail "Next: Codex App settings -> Appearance -> Pets -> Refresh -> $PET_ID"
   printf '\n'
 }
 
