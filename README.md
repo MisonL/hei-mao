@@ -216,6 +216,7 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 
 - `pets/hei-mao-quality/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f`
 - 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
+- quality 图集使用洋红色抠像键 `#FF00FF`；独立复核时运行 `validate_atlas.py --require-v2 --chroma-key '#FF00FF' pets/hei-mao-quality/spritesheet.webp`
 - `qa/quality/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
 - `qa/quality/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
 - `qa/quality/direction-blind-validation.json`: `ok: true`，`000=up`、`180=down`、`270=screen-left` 硬门禁通过
