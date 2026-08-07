@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"ambiguous","B":"screen-right","reason":"A 为正面，无明确左右朝向；B 鼻部和侧脸轮廓朝画面右侧。"},
+    {"pair":"horizontal-2","A":"screen-right","B":"screen-right","reason":"两者均可见右侧侧脸，鼻部朝画面右侧。"},
+    {"pair":"horizontal-3","A":"ambiguous","B":"screen-right","reason":"A 为后脑勺或无可见面部地标；B 鼻部朝画面右侧。"},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A 鼻部从头部左侧伸出；B 鼻部在画面右侧。"},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A 为右侧侧脸；B 可见左侧鼻部和眼睛。"},
+    {"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A 侧脸鼻部朝右；B 鼻部朝左。"},
+    {"pair":"horizontal-7","A":"ambiguous","B":"screen-right","reason":"A 近正面，左右不明确；B 为右侧侧脸。"},
+    {"pair":"vertical-1","A":"down","B":"up","reason":"A 可见正面双眼和鼻部；B 为后脑勺，面部朝离开观察者方向。"},
+    {"pair":"vertical-2","A":"ambiguous","B":"down","reason":"A 为侧脸，无法判定上下；B 为正面朝向。"},
+    {"pair":"vertical-3","A":"ambiguous","B":"ambiguous","reason":"两者均为侧脸，缺少正面或后脑勺地标。"},
+    {"pair":"vertical-4","A":"ambiguous","B":"ambiguous","reason":"两者均为侧脸，无法确定上下方向。"},
+    {"pair":"vertical-5","A":"ambiguous","B":"down","reason":"A 为侧脸；B 可见正面双眼和鼻部。"},
+    {"pair":"vertical-6","A":"ambiguous","B":"ambiguous","reason":"两者为左右侧向或斜侧向，不能确定上下。"},
+    {"pair":"vertical-7","A":"up","B":"ambiguous","reason":"A 为明显后脑勺；B 为侧脸，无法判定上下。"}
+  ]
+}

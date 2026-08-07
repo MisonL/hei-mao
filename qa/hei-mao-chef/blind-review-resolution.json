@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "blind_validation": "qa/chef/direction-blind-validation.json",
+  "blind_validation": "qa/hei-mao-chef/direction-blind-validation.json",
   "blind_validation_ok": true,
   "cardinal_hard_gates": {
     "000_vs_180": "pass",
     "090_vs_270": "pass"
   },
-  "continuity_report": "qa/chef/look-continuity.json",
+  "continuity_report": "qa/hei-mao-chef/look-continuity.json",
   "continuity_warnings_reviewed": [
     {
       "transition": "157.5->180",

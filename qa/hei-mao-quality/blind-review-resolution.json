@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "blind_validation": "qa/hei-mao-quality/direction-blind-validation.json",
+  "blind_verdicts": [
+    "qa/hei-mao-quality/direction-blind-verdicts-a.json",
+    "qa/hei-mao-quality/direction-blind-verdicts-b.json",
+    "qa/hei-mao-quality/direction-blind-verdicts-c.json",
+    "qa/hei-mao-quality/direction-blind-verdicts.json"
+  ],
+  "answer_key": "qa/hei-mao-quality/direction-blind-answer-key.json",
+  "cardinal_hard_gates": {
+    "000_vs_180": "pass",
+    "090_vs_270": "pass"
+  },
+  "decision": "accept",
+  "severity": "minor",
+  "hard_failures": [],
+  "accepted_warnings": [
+    "中间方向存在少量左右或上下轴向歧义，但三份独立盲测没有否定 cardinal 硬门禁。",
+    "方向语义复核确认 16 个方向均位于预期象限，未发现可见反转、身份漂移或错误回环。"
+  ],
+  "evidence": [
+    "qa/hei-mao-quality/direction-semantics.json",
+    "qa/hei-mao-quality/look-continuity.json",
+    "qa/hei-mao-quality/final-visual-qa.json",
+    "qa/hei-mao-quality/validation.json",
+    "qa/hei-mao-quality/chroma-despill.json"
+  ],
+  "resolution": "保留已通过 cardinal 硬门禁的 coherent look rows；将中间方向的盲测分歧作为 minor warning 公开记录，不以静默方式抹除。"
+}

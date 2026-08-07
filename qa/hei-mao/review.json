@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "source": "spritesheet.webp",
+  "source": "pets/hei-mao/spritesheet.webp",
   "errors": [],
   "warnings": [
     "jumping uses the stable-slots extraction path and requires motion-playback confirmation"

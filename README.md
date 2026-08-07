@@ -6,7 +6,7 @@
 
 ## 预览
 
-![contact sheet](qa/contact-sheet.png)
+![contact sheet](qa/hei-mao/contact-sheet.png)
 
 ## 安装
 
@@ -34,13 +34,12 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao` | 黑毛 | 已验证 | 已上线 |
 | `hei-mao-quality` | 品控官 | 已验证 | 已有同名条目，线上资源同步待 Petdex 编辑接口恢复 |
 | `hei-mao-butler` | 大管家 | 已验证 | 已提交，等待审核 |
-| `hei-mao-chef` | 厨师 | 已验证 | 尚未提交 |
+| `hei-mao-chef` | 厨师 | 已验证 | 尚未提交 Petdex |
 
 ```bash
 npx -y petdex@latest install hei-mao
 npx -y petdex@latest install hei-mao-quality
 npx -y petdex@latest install hei-mao-butler
-npx -y petdex@latest install hei-mao-chef
 ```
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
@@ -54,7 +53,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 ### 角色安装器
 
-无参数时安装根包。通过环境变量选择已经通过本仓库 QA 的角色：
+无参数时安装 `hei-mao`。通过环境变量选择已经通过本仓库 QA 的角色：
 
 ```bash
 HEI_MAO_PET_ID=hei-mao-chef curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-chef bash
@@ -74,8 +73,8 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 本地手动安装角色时：
 
 ```bash
-mkdir -p ~/.codex/pets/hei-mao-chef
-cp pets/hei-mao-chef/pet.json pets/hei-mao-chef/spritesheet.webp ~/.codex/pets/hei-mao-chef/
+mkdir -p ~/.codex/pets/hei-mao
+cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 ```
 
 ### 大管家角色
@@ -123,7 +122,7 @@ irm https://raw.githubusercontent.com/MisonL/hei-mao/main/install.ps1 | iex
 ~/.codex/pets/hei-mao
 ```
 
-通过 `HEI_MAO_PET_ID` 选择已验证角色，安装器会同时更换目标目录和远程资源路径；不传时始终安装根包。
+通过 `HEI_MAO_PET_ID` 选择已验证角色，安装器会同时更换目标目录和远程资源路径；不传时安装 hei-mao。
 
 如需指定 Codex 配置目录：
 
@@ -141,18 +140,18 @@ $env:CODEX_HOME="C:\Users\you\.codex"; irm https://raw.githubusercontent.com/Mis
 
 ### 手动安装
 
-将本仓库复制到 Codex 自定义宠物目录，或只复制根目录下这两个文件：
+将本仓库复制到 Codex 自定义宠物目录，或只复制目标角色目录下这两个文件：
 
 ```text
-pet.json
-spritesheet.webp
+pets/<slug>/pet.json
+pets/<slug>/spritesheet.webp
 ```
 
 推荐目录结构：
 
 ```bash
 mkdir -p ~/.codex/pets/hei-mao
-cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
+cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 ```
 
 然后在 Codex App 中：
@@ -163,21 +162,26 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 
 ## 文件说明
 
-- `pet.json`: Codex App 宠物清单文件
-- `spritesheet.webp`: v2 11 行动画精灵图，尺寸 `1536x2288`
-- `qa/contact-sheet.png`: 动画帧总览
-- `qa/validation.json`: atlas 验证结果
-- `qa/review.json`: 帧提取与透明度检查结果
-- `qa/look-directions.png`: 16 个观察方向总览
-- `qa/direction-blind-validation.json`: 方向盲测结果
-- `qa/look-continuity.json`: 方向连续性测量
-- `qa/videos/`: 每个状态的 mp4 预览
+- `pets/<slug>/pet.json`: Codex App 宠物清单文件
+- `pets/<slug>/spritesheet.webp`: v2 11 行动画精灵图，尺寸 `1536x2288`
+- `qa/<slug>/contact-sheet.png`: 动画帧总览
+- `qa/<slug>/validation.json`: atlas 验证结果
+- `qa/<slug>/review.json`: 帧提取与透明度检查结果
+- `qa/<slug>/look-directions.png`: 16 个观察方向总览
+- `qa/<slug>/direction-blind-validation.json`: 方向盲测结果
+- `qa/<slug>/direction-blind-verdicts-*.json`: 三份独立盲测投票与严格多数合并结果
+- `qa/<slug>/direction-blind-answer-key.json`: 盲测完成后的隐藏答案记录
+- `qa/<slug>/blind-review-resolution.json`: 中间方向 warning 的审查与处理决定
+- `qa/<slug>/look-continuity.json`: 方向连续性测量
+- `qa/<slug>/videos/`: 每个状态的 mp4 预览
+- `pets/hei-mao/`: 根角色包
+- `qa/hei-mao/`: 根角色的独立验证与视觉复核证据
 - `pets/hei-mao-quality/`: 已验证的品控官角色包
-- `qa/quality/`: 品控官 v5 的独立验证与视觉复核证据
+- `qa/hei-mao-quality/`: 品控官 v5 的独立验证、盲测投票与视觉复核证据
 - `pets/hei-mao-butler/`: 已验证的大管家角色包
-- `qa/butler/`: 大管家 v2 的独立验证与视觉复核证据
-- `pets/hei-mao-chef/`: 已验证的厨师角色包
-- `qa/chef/`: 厨师 v2 的独立验证与视觉复核证据
+- `qa/hei-mao-butler/`: 大管家 v2 的独立验证与视觉复核证据
+- `pets/hei-mao-chef/`: 已验证的厨师角色包（Petdex 尚未上线）
+- `qa/hei-mao-chef/`: 厨师 v2 的独立验证与视觉复核证据
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
 
@@ -185,13 +189,13 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 
 本包已通过 hatch-pet 校验：
 
-- `spritesheet.webp`: `WEBP` / `RGBA`
+- `pets/hei-mao/spritesheet.webp`: `WEBP` / `RGBA`
 - `spriteVersionNumber`: `2`
 - 尺寸: `1536x2288`
 - 单元格: `192x208`
-- `validation.json`: `ok: true`
-- `review.json`: `ok: true`
-- `direction-blind-validation.json`: `ok: true`
+- `qa/hei-mao/validation.json`: `ok: true`
+- `qa/hei-mao/review.json`: `ok: true`
+- `qa/hei-mao/direction-blind-validation.json`: `ok: true`
 - 错误: 0
 - 图集透明 RGB 残留: 0
 - 独立最终视觉复核: WARN（无 BLOCK）；247.5 -> 270、337.5 -> 000 为较大但可接受的方向过渡，000 的 y=12 透明行保留在连续性报告中
@@ -217,30 +221,30 @@ cp pet.json spritesheet.webp ~/.codex/pets/hei-mao/
 - `pets/hei-mao-quality/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f`
 - 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
 - quality 图集使用洋红色抠像键 `#FF00FF`；独立复核时运行 `validate_atlas.py --require-v2 --chroma-key '#FF00FF' pets/hei-mao-quality/spritesheet.webp`
-- `qa/quality/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
-- `qa/quality/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
-- `qa/quality/direction-blind-validation.json`: `ok: true`，`000=up`、`180=down`、`270=screen-left` 硬门禁通过
-- `qa/quality/final-visual-qa.json`: `visual_qa: pass`，无需要修复的行
+- `qa/hei-mao-quality/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
+- `qa/hei-mao-quality/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
+- `qa/hei-mao-quality/direction-blind-validation.json`: `ok: true`，`000=up`、`180=down`、`270=screen-left` 硬门禁通过
+- `qa/hei-mao-quality/final-visual-qa.json`: `visual_qa: pass`，无需要修复的行
 - 连续性指标在 `157.5 -> 180` 与 `337.5 -> 000` 处有已复核的边界警告；正常尺寸下未见跳变、比例突变、身份变化或错误象限
 
 ### 大管家 v2 验证结果
 
 - `pets/hei-mao-butler/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`
 - 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
-- `qa/butler/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
-- `qa/butler/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
-- `qa/butler/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
-- `qa/butler/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
+- `qa/hei-mao-butler/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
+- `qa/hei-mao-butler/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
+- `qa/hei-mao-butler/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
+- `qa/hei-mao-butler/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
 - 中间/背面方向的次轴提示较弱，且连续性报告有局部离群值；独立正常尺寸复核未见跳帧、裁切、透明洞、比例突变或方向反转
 
 ### 厨师 v2 验证结果
 
 - `pets/hei-mao-chef/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`
 - 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
-- `qa/chef/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
-- `qa/chef/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
-- `qa/chef/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
-- `qa/chef/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
+- `qa/hei-mao-chef/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
+- `qa/hei-mao-chef/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
+- `qa/hei-mao-chef/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
+- `qa/hei-mao-chef/final-visual-qa.json`: `pass_with_reviewed_warnings`，无需要修复的动作行
 - 连续性告警集中在 `157.5 -> 180`、`225 -> 247.5`、`247.5 -> 270` 和 `337.5 -> 000`；正常尺寸下未见跳帧、裁切、比例突变、身份漂移或方向反转
 
 ## 许可

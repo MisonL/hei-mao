@@ -12,16 +12,16 @@
     "独立复核将上述连续性指标初判为 fail，依据视觉复核规则判定为 minor warning 并接受。"
   ],
   "evidence": {
-    "contact_sheet": "qa/chef/contact-sheet-extended.png",
-    "direction_sheet": "qa/chef/look-directions.png",
-    "direction_semantics": "qa/chef/direction-semantics.json",
-    "blind_validation": "qa/chef/direction-blind-validation.json",
-    "blind_resolution": "qa/chef/blind-review-resolution.json",
-    "continuity": "qa/chef/look-continuity.json",
-    "standard_review": "qa/chef/review.json",
-    "atlas_validation": "qa/chef/validation.json",
-    "chroma_despill": "qa/chef/chroma-despill.json",
-    "motion_previews": "qa/chef/previews"
+    "contact_sheet": "qa/hei-mao-chef/contact-sheet-extended.png",
+    "direction_sheet": "qa/hei-mao-chef/look-directions.png",
+    "direction_semantics": "qa/hei-mao-chef/direction-semantics.json",
+    "blind_validation": "qa/hei-mao-chef/direction-blind-validation.json",
+    "blind_resolution": "qa/hei-mao-chef/blind-review-resolution.json",
+    "continuity": "qa/hei-mao-chef/look-continuity.json",
+    "standard_review": "qa/hei-mao-chef/review.json",
+    "atlas_validation": "qa/hei-mao-chef/validation.json",
+    "chroma_despill": "qa/hei-mao-chef/chroma-despill.json",
+    "motion_previews": "qa/hei-mao-chef/previews"
   },
   "direction_summary": {
     "cardinal_gates": {

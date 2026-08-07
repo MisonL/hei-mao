@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "input": "quality-v5-pre-despill.png",
+  "input": null,
   "output": "pets/hei-mao-quality/spritesheet.webp",
   "chroma_key": "#FF00FF",
   "algorithm": "edge-local-chroma-spill-suppression",
@@ -88,5 +88,7 @@
     "r10c5": 1109,
     "r10c4": 1057
   },
-  "alpha_preserved": true
+  "alpha_preserved": true,
+  "input_retained": false,
+  "input_note": "预去溢源图未作为发布证据保留；本报告的 output、validation 和 QA 图均指向仓库内最终图集。"
 }

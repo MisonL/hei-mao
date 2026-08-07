@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"ambiguous","B":"screen-right","reason":"A 近正面，鼻尖居中且双眼可见；B 鼻尖和脸部轮廓明显朝向画面右侧。"},
+    {"pair":"horizontal-2","A":"screen-right","B":"screen-right","reason":"A、B 的鼻尖都位于头部右侧，均为右侧脸。"},
+    {"pair":"horizontal-3","A":"screen-left","B":"screen-right","reason":"A 的鼻尖从头部左侧突出；B 的鼻尖从头部右侧突出。"},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A 鼻尖明确朝画面左侧；B 鼻尖明确朝画面右侧。"},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A 鼻尖在右侧；B 的鼻尖从头部左侧突出。"},
+    {"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A 为右侧脸；B 的鼻尖和脸部朝向画面左侧。"},
+    {"pair":"horizontal-7","A":"ambiguous","B":"screen-right","reason":"A 接近正面、鼻尖居中；B 鼻尖明显朝向画面右侧。"},
+    {"pair":"vertical-1","A":"up","B":"down","reason":"A 瞳孔和鼻尖呈上仰姿态；B 可见头顶、瞳孔偏下且面部下俯。"},
+    {"pair":"vertical-2","A":"down","B":"up","reason":"A 侧脸鼻尖和视线偏下；B 正面鼻尖及视线呈上仰。"},
+    {"pair":"vertical-3","A":"down","B":"up","reason":"A 头部和鼻尖朝下；B 眼睛、鼻尖和脸部轮廓呈上仰。"},
+    {"pair":"vertical-4","A":"ambiguous","B":"ambiguous","reason":"两者近水平侧脸，鼻尖和瞳孔没有足够明确的上下偏转。"},
+    {"pair":"vertical-5","A":"down","B":"down","reason":"A 鼻尖和视线偏下；B 双眼明显向下，面部朝下。"},
+    {"pair":"vertical-6","A":"down","B":"down","reason":"A 侧脸视线和鼻尖偏下；B 双眼及鼻尖均显示向下姿态。"},
+    {"pair":"vertical-7","A":"ambiguous","B":"ambiguous","reason":"两者主要显示侧后方轮廓，缺少可可靠判断上下的鼻尖或瞳孔证据。"}
+  ]
+}

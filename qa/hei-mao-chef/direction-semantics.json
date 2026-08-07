@@ -4,10 +4,10 @@
   "atlas_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
   "reviewed_by": "independent_visual_qa_worker; parent",
   "review_basis": [
-    "qa/chef/look-directions.png",
-    "qa/chef/contact-sheet-extended.png",
-    "qa/chef/previews/look-directions.gif",
-    "qa/chef/look-continuity.json"
+    "qa/hei-mao-chef/look-directions.png",
+    "qa/hei-mao-chef/contact-sheet-extended.png",
+    "qa/hei-mao-chef/previews/look-directions.gif",
+    "qa/hei-mao-chef/look-continuity.json"
   ],
   "hard_failures": [],
   "warnings": [

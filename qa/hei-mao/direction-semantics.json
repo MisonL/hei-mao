@@ -1,5 +1,5 @@
 {
-  "atlas": "spritesheet.webp",
+  "atlas": "pets/hei-mao/spritesheet.webp",
   "reviewed_by": "independent_visual_worker_r10; parent_alpha_review",
   "verdict": "pass_with_continuity_warnings",
   "directions": [
@@ -21,7 +21,7 @@
     {"direction": "337.5", "expected": "up-left", "verdict": "pass", "horizontal": "snout remains screen-left one step before 000", "vertical": "up-pitch approaches the approved 000 pose", "reason": "Independent review confirms the left-side snout remains visible and the loop boundary is coherent."}
   ],
   "continuity_review": {
-    "report": "qa/look-continuity.json",
+    "report": "qa/hei-mao/look-continuity.json",
     "verdict": "reviewed_warning",
       "warnings": [
       "000 transparent-row candidate is outside the filled silhouette on high-contrast alpha inspection.",

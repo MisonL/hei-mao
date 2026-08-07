@@ -1,6 +1,6 @@
 {
   "verdict": "pass",
-  "source": "generated/quality-look-row-10-v5-left-profile-nonstream.webp",
+  "source": "pets/hei-mao-quality/spritesheet.webp",
   "directions": {
     "180": "pass: 正面下视可读，眼睛和鼻口向下，脚部基线固定",
     "202.5": "pass: 屏幕左下过渡，鼻口开始向左并保持下俯",

@@ -1,0 +1,30 @@
+{
+  "visual_qa": "pass",
+  "qa_note": "9 个标准动画行与 16 个 look 方向身份、比例、基线和朝向一致；透明背景、无裁切、无明显跳变。",
+  "sources": {
+    "contact_sheet": "qa/hei-mao-quality/contact-sheet.png",
+    "direction_sheet": "qa/hei-mao-quality/look-directions.png",
+    "direction_semantics": "qa/hei-mao-quality/direction-semantics.json",
+    "blind_validation": "qa/hei-mao-quality/direction-blind-validation.json",
+    "blind_pairs": "qa/hei-mao-quality/direction-blind-pairs.png",
+    "blind_answer_key": "qa/hei-mao-quality/direction-blind-answer-key.json",
+    "blind_verdicts": [
+      "qa/hei-mao-quality/direction-blind-verdicts-a.json",
+      "qa/hei-mao-quality/direction-blind-verdicts-b.json",
+      "qa/hei-mao-quality/direction-blind-verdicts-c.json",
+      "qa/hei-mao-quality/direction-blind-verdicts.json"
+    ],
+    "blind_resolution": "qa/hei-mao-quality/blind-review-resolution.json",
+    "continuity": "qa/hei-mao-quality/look-continuity.json",
+    "atlas_validation": "qa/hei-mao-quality/validation.json",
+    "standard_review": "qa/hei-mao-quality/review.json"
+  },
+  "repair_rows": [],
+  "warnings": [
+    "running-right 和 running-left 各保留 1 个已被最终 atlas validator 允许的 opaque chroma-key 像素",
+    "157.5->180 与 337.5->000 的连续性指标离群，但正常尺寸下未见 snap、scale pop、身份变化或错误象限",
+    "盲测 reviewRequired 仅来自中间方向的 ambiguous 或方向分歧，硬 cardinal gate 已通过"
+  ],
+  "reviewer": "independent visual QA worker",
+  "reviewed_at": "2026-08-05T02:46:24Z"
+}

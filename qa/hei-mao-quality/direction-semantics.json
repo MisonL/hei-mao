@@ -1,5 +1,5 @@
 {
-  "atlas": "final/spritesheet-extended-v5.webp",
+  "atlas": "pets/hei-mao-quality/spritesheet.webp",
   "atlas_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
   "reviewed_by": "three independent blind reviewers; primary normal-size visual inspection",
   "verdict": "pass_with_continuity_warnings",
@@ -27,7 +27,7 @@
     {"direction":"337.5","expected":"up-left","verdict":"pass","horizontal":"snout remains screen-left one step before 000","vertical":"up-pitch approaches the approved 000 pose","reason":"Left-side snout remains visible and the loop boundary is coherent at normal size."}
   ],
   "continuity_review": {
-    "report": "qa/look-continuity-v5.json",
+    "report": "qa/hei-mao-quality/look-continuity.json",
     "verdict": "reviewed_warning",
     "warnings": [
       "157.5->180 has a larger metric delta and center shift",
@@ -36,7 +36,7 @@
     ]
   },
   "blind_review": {
-    "validation": "qa/direction-blind-validation-v5.json",
+    "validation": "qa/hei-mao-quality/direction-blind-validation.json",
     "ok": true,
     "review_required": true,
     "hard_gate_errors": [],

@@ -34,7 +34,7 @@ function Set-PetConfiguration {
         "hei-mao" {
             $script:PetJsonSha256 = "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
             $script:SpritesheetSha256 = "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
-            $script:PetSubdir = ""
+            $script:PetSubdir = "pets/$requestedPetId"
         }
         "hei-mao-quality" {
             $script:PetJsonSha256 = "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07"
