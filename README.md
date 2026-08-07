@@ -34,13 +34,15 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao` | 黑毛 | 已验证 | 已上线 |
 | `hei-mao-quality` | 品控官 | 已验证 | 已有同名条目，线上资源同步待 Petdex 编辑接口恢复 |
 | `hei-mao-butler` | 大管家 | 已验证 | 已提交，等待审核 |
-| `hei-mao-chef` | 厨师 | 已验证 | 尚未提交 Petdex |
-| `hei-mao-foodie` | 美食家 | 已验证 | 尚未提交 Petdex |
+| `hei-mao-chef` | 厨师 | 已验证 | 已提交，等待审核 |
+| `hei-mao-foodie` | 美食家 | 已验证 | 已提交，等待审核 |
 
 ```bash
 npx -y petdex@latest install hei-mao
 npx -y petdex@latest install hei-mao-quality
 npx -y petdex@latest install hei-mao-butler
+npx -y petdex@latest install hei-mao-chef
+npx -y petdex@latest install hei-mao-foodie
 ```
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
@@ -50,7 +52,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-`hei-mao-quality` 已有同名条目，但线上资源仍是旧版。此前 `petdex edit` 的资源上传成功，生产编辑提交接口返回 HTML 404，因此不能把线上条目标记为已同步，也不能使用 `petdex submit` 创建重复条目。`hei-mao-butler` 的审核状态仍以 Petdex 页面为准。
+`hei-mao-quality` 已有同名条目，但线上资源仍是旧版。此前 `petdex edit` 的资源上传成功，生产编辑提交接口返回 HTML 404，因此不能把线上条目标记为已同步，也不能使用 `petdex submit` 创建重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 已进入个人提交区的 `pending` 状态，审核完成前不将它们视为 Petdex 已上线包。
 
 ### 角色安装器
 
@@ -188,9 +190,9 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-quality/`: 品控官 v5 的独立验证、盲测投票与视觉复核证据
 - `pets/hei-mao-butler/`: 已验证的大管家角色包
 - `qa/hei-mao-butler/`: 大管家 v2 的独立验证与视觉复核证据
-- `pets/hei-mao-chef/`: 已验证的厨师角色包（Petdex 尚未上线）
+- `pets/hei-mao-chef/`: 已验证的厨师角色包（Petdex 待审核）
 - `qa/hei-mao-chef/`: 厨师 v2 的独立验证与视觉复核证据
-- `pets/hei-mao-foodie/`: 已验证的美食家角色包（Petdex 尚未上线）
+- `pets/hei-mao-foodie/`: 已验证的美食家角色包（Petdex 待审核）
 - `qa/hei-mao-foodie/`: 美食家 v2 的独立验证与视觉复核证据
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
