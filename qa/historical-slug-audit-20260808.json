@@ -1,0 +1,182 @@
+{
+  "audited_at": "2026-08-08T08:45:17Z",
+  "source_commit": "cb06b0f5fee64416802f5e9b3a14d6d7d636a5ca",
+  "scope": "历史角色 slug、公开重复条目、旧图集和本机安装状态",
+  "current_release_set": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie"
+  ],
+  "historical_repository_slugs": [
+    {
+      "slug": "hei-mao-recommender",
+      "introduced_commit": "1f0e4c9cb2cf0fa557cd95563776a02cc6362000",
+      "last_atlas_commit": "94280fb8408d15d1ba8dc878916fd8120d3e3faa",
+      "removed_commit": "58b58ffce337babc36507032063ff8f1ff927831",
+      "historical_atlas_sha256": "6f74c646c597cdcda869a01586945adfa2e1c6e41b9cede9607e50f71525390e",
+      "historical_pet_json_id": "hei-mao-recommender",
+      "historical_atlas_validation": {
+        "validator": "hatch-pet validate_atlas.py --require-v2 --chroma-key #00FF00",
+        "ok": true,
+        "format": "WEBP",
+        "mode": "RGBA",
+        "columns": 8,
+        "rows": 11,
+        "sprite_version_number": 2,
+        "width": 1536,
+        "height": 2288,
+        "transparent_rgb_residue_pixels": 0,
+        "errors": [],
+        "warnings": []
+      },
+      "direction_continuity": {
+        "ok": true,
+        "review_required": true,
+        "warnings": [
+          "000 has transparent interior hole rows at y=81",
+          "022.5 has transparent interior hole rows at y=79",
+          "157.5->180 diff is a local outlier",
+          "157.5->180 center shift is high at 12.3px",
+          "157.5->180 sprite area ratio is high at 1.32",
+          "247.5->270 diff is a local outlier",
+          "337.5->000 diff is a local outlier"
+        ]
+      },
+      "current_repository_present": false,
+      "installed_in_codex": false,
+      "installed_in_petdex": false,
+      "release_decision": "excluded",
+      "reason": "历史图集虽满足结构合同，但方向内部洞和连续性离群未完成修复，且已从当前发布集移除。"
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "manifest_commit": "176aed941645173df8aab2a1758d76afb634c7b9",
+      "historical_pet_json_id": "hei-mao-delivery",
+      "historical_atlas_present": false,
+      "current_repository_present": false,
+      "installed_in_codex": false,
+      "installed_in_petdex": false,
+      "release_decision": "not_publishable",
+      "reason": "仅有角色 manifest，没有可验证图集。"
+    },
+    {
+      "slug": "hei-mao-fortune",
+      "manifest_commit": "176aed941645173df8aab2a1758d76afb634c7b9",
+      "historical_pet_json_id": "hei-mao-fortune",
+      "historical_atlas_present": false,
+      "current_repository_present": false,
+      "installed_in_codex": false,
+      "installed_in_petdex": false,
+      "release_decision": "not_publishable",
+      "reason": "仅有角色 manifest，没有可验证图集。"
+    },
+    {
+      "slug": "hei-mao-traveler",
+      "manifest_commit": "176aed941645173df8aab2a1758d76afb634c7b9",
+      "historical_pet_json_id": "hei-mao-traveler",
+      "historical_atlas_present": false,
+      "current_repository_present": false,
+      "installed_in_codex": false,
+      "installed_in_petdex": false,
+      "release_decision": "not_publishable",
+      "reason": "仅有角色 manifest，没有可验证图集。"
+    }
+  ],
+  "petdex_manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "generated_at": "2026-08-08T06:37:47.022Z",
+    "total": 4425,
+    "selected_entries": [
+      {
+        "slug": "hei-mao",
+        "pet_json_id": "hei-mao",
+        "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+        "repository_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+        "sha_matches_repository": false,
+        "atlas_validation": {
+          "ok": true,
+          "format": "WEBP",
+          "mode": "RGBA",
+          "columns": 8,
+          "rows": 11,
+          "sprite_version_number": 2,
+          "width": 1536,
+          "height": 2288,
+          "transparent_rgb_residue_pixels": 0,
+          "errors": [],
+          "warnings": []
+        },
+        "direction_continuity": {
+          "ok": true,
+          "review_required": true,
+          "warnings": [
+            "090 has transparent interior hole rows at y=36 and y=37",
+            "225->247.5 diff is a local outlier",
+            "337.5->000 diff is a local outlier"
+          ]
+        }
+      },
+      {
+        "slug": "hei-mao-quality",
+        "pet_json_id": "hei-mao-quality",
+        "spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+        "repository_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+        "sha_matches_repository": false,
+        "atlas_validation": {
+          "ok": false,
+          "format": "WEBP",
+          "mode": "RGBA",
+          "columns": 8,
+          "rows": 11,
+          "sprite_version_number": 2,
+          "width": 1536,
+          "height": 2288,
+          "transparent_rgb_residue_pixels": 0,
+          "error_count": 34,
+          "error_class": "visible edge pixels contaminated by chroma key #00FF00"
+        },
+        "direction_continuity": {
+          "ok": true,
+          "review_required": true,
+          "warnings": [
+            "022.5->045 diff is a local outlier and center shift is high at 9.5px",
+            "135->157.5 center shift is high at 12.2px",
+            "157.5->180 diff is a local outlier and sprite area ratio is high at 1.20",
+            "202.5->225 diff is a local outlier and center shift is high at 11.0px",
+            "270->292.5 diff is a local outlier and center shift is high at 18.8px",
+            "337.5->000 diff is a local outlier"
+          ]
+        }
+      },
+      {
+        "slug": "hei-mao-2",
+        "pet_json_id": "hei-mao",
+        "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+        "same_spritesheet_as": "hei-mao",
+        "same_pet_json_id_as": "hei-mao",
+        "current_release": false,
+        "classification": "duplicate_public_entry"
+      }
+    ],
+    "absent_slugs": [
+      "hei-mao-recommender",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ]
+  },
+  "checks": {
+    "historical_slug_installation_absent_in_both_local_roots": true,
+    "duplicate_entry_not_added_to_current_release_set": true,
+    "public_record_contains_no_local_paths_or_credentials": true
+  },
+  "result": "pass_with_open_followups",
+  "open_followups": [
+    "为 delivery、fortune、traveler 生成并独立复核完整品牌图集。",
+    "按已有 Petdex slug 编辑规则修复并同步公开 hei-mao 和 hei-mao-quality 资源。",
+    "修复或关闭历史重复条目 hei-mao-2，不能通过重新提交创建替代条目。",
+    "recommender 历史图集如需重新启用，必须先修复方向内部洞和连续性离群并重新完成盲测。"
+  ]
+}
