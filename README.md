@@ -170,9 +170,11 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `pets/<slug>/pet.json`: Codex App 宠物清单文件
 - `pets/<slug>/spritesheet.webp`: v2 11 行动画精灵图，尺寸 `1536x2288`
 - `qa/<slug>/contact-sheet.png`: 动画帧总览
+- `qa/<slug>/contact-sheet-extended.png`: 包含 16 个观察方向的 v2 动画帧总览
 - `qa/<slug>/validation.json`: atlas 验证结果
 - `qa/<slug>/review.json`: 帧提取与透明度检查结果
 - `qa/<slug>/look-directions.png`: 16 个观察方向总览
+- `qa/<slug>/direction-blind-pairs.png`: 随机化的无标签方向盲测图
 - `qa/<slug>/direction-blind-validation.json`: 方向盲测结果
 - `qa/<slug>/direction-blind-verdicts-*.json`: 三份独立盲测投票与严格多数合并结果
 - `qa/<slug>/direction-blind-answer-key.json`: 盲测完成后的隐藏答案记录
