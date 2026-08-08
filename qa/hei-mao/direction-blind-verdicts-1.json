@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"screen-right","B":"screen-left","reason":"A nose right, B nose left"},
+    {"pair":"horizontal-2","A":"screen-left","B":"screen-right","reason":"Noses left and right"},
+    {"pair":"horizontal-3","A":"screen-right","B":"screen-right","reason":"Both noses right"},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"Left-only and right nose"},
+    {"pair":"horizontal-5","A":"screen-right","B":"down","reason":"A nose right, B head down"},
+    {"pair":"horizontal-6","A":"screen-right","B":"down","reason":"A nose right-down, B nose down"},
+    {"pair":"horizontal-7","A":"screen-right","B":"down","reason":"A nose right-down, B head down"},
+    {"pair":"vertical-1","A":"up","B":"down","reason":"Noses up and down"},
+    {"pair":"vertical-2","A":"down","B":"up","reason":"Head down and up"},
+    {"pair":"vertical-3","A":"screen-right","B":"down","reason":"A nose right, B head down"},
+    {"pair":"vertical-4","A":"screen-right","B":"down","reason":"A nose right, B nose down"},
+    {"pair":"vertical-5","A":"up","B":"down","reason":"Noses up and down"},
+    {"pair":"vertical-6","A":"down","B":"up","reason":"Head down and up"},
+    {"pair":"vertical-7","A":"screen-right","B":"down","reason":"A nose right, B head down"}
+  ]
+}
