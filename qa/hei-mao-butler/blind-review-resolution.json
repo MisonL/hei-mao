@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source": "pets/hei-mao-butler/spritesheet.webp",
+  "atlas_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+  "blind_validation": "qa/hei-mao-butler/direction-blind-validation.json",
+  "blind_validation_ok": true,
+  "cardinal_hard_gates": {
+    "000_vs_180": "pass",
+    "090_vs_270": "pass"
+  },
+  "accepted_minor_warnings": [
+    {
+      "checks": ["horizontal-6", "horizontal-7", "vertical-2", "vertical-3", "vertical-4"],
+      "decision": "accept_warning_after_labeled_review",
+      "reason": "Blind ambiguity and opposite-sign votes are limited to intermediate rear three-quarter poses. The labeled normal-size direction sheet keeps every pose on the intended ordered arc, with no wrong cardinal, wrong principal quadrant, or visible reversal."
+    },
+    {
+      "checks": ["look-continuity"],
+      "decision": "accept_warning_after_visual_review",
+      "reason": "The reported local difference, center, and area outliers remain visually coherent at normal pet size and do not show a snap, scale pop, clipping, identity change, broken attachment, or transparent interior hole."
+    }
+  ],
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "parent",
+  "hard_failures": []
+}

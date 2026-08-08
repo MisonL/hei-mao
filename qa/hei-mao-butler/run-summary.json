@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "spriteVersionNumber": 2,
+  "spritesheet": "pets/hei-mao-butler/spritesheet.webp",
+  "sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+  "validation": "qa/hei-mao-butler/validation.json",
+  "chroma_despill": "qa/hei-mao-butler/chroma-despill.json",
+  "contact_sheet": "qa/hei-mao-butler/contact-sheet-extended.png",
+  "direction_sheet": "qa/hei-mao-butler/look-directions.png",
+  "direction_semantics": "qa/hei-mao-butler/direction-semantics.json",
+  "blind_direction_validation": "qa/hei-mao-butler/direction-blind-validation.json",
+  "blind_review_resolution": "qa/hei-mao-butler/blind-review-resolution.json",
+  "continuity": "qa/hei-mao-butler/look-continuity.json",
+  "review": "qa/hei-mao-butler/review.json",
+  "package": "pets/hei-mao-butler"
+}
