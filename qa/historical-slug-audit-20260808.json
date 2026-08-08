@@ -1,6 +1,6 @@
 {
-  "audited_at": "2026-08-08T12:52:29Z",
-  "source_commit": "1375c89",
+  "audited_at": "2026-08-08T14:16:52Z",
+  "source_commit": "1d27ab58305ddfc9852bc6a924521e6657ebb746",
   "scope": "历史角色 slug、公开重复条目、旧图集和本机安装状态",
   "current_release_set": [
     "hei-mao",
@@ -171,6 +171,47 @@
     "historical_slug_installation_absent_in_both_local_roots": true,
     "duplicate_entry_not_added_to_current_release_set": true,
     "public_record_contains_no_local_paths_or_credentials": true
+  },
+  "live_public_asset_check": {
+    "observed_at": "2026-08-08T14:16:52Z",
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_generated_at": "2026-08-08T12:31:23.501Z",
+    "manifest_total": 4425,
+    "entries": [
+      {
+        "slug": "hei-mao",
+        "pet_json_id": "hei-mao",
+        "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+        "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+        "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-ecc8adda8bc9/sprite.webp",
+        "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-ecc8adda8bc9/petjson.json",
+        "atlas_validation": "pass",
+        "sha_matches_repository": false
+      },
+      {
+        "slug": "hei-mao-quality",
+        "pet_json_id": "hei-mao-quality",
+        "pet_json_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+        "spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+        "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-quality-c670e9210683/sprite.webp",
+        "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-quality-c670e9210683/petjson.json",
+        "atlas_validation": "fail: 34 visible edge pixels contaminated by #00FF00",
+        "sha_matches_repository": false
+      },
+      {
+        "slug": "hei-mao-2",
+        "pet_json_id": "hei-mao",
+        "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+        "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+        "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-9bec2a5af4c2/sprite.webp",
+        "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-9bec2a5af4c2/petjson.json",
+        "atlas_validation": "pass",
+        "classification": "duplicate_public_entry"
+      }
+    ],
+    "download_and_hash_verification": true,
+    "petdex_cli_version": "1.1.0",
+    "selected_hei_mao_slugs_are_current_public_entries": true
   },
   "edit_attempts": [
     {
