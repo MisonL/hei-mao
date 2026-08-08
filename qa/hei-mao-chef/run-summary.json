@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "spriteVersionNumber": 2,
+  "spritesheet": "pets/hei-mao-chef/spritesheet.webp",
+  "sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+  "validation": "qa/hei-mao-chef/validation.json",
+  "chroma_despill": "qa/hei-mao-chef/chroma-despill.json",
+  "contact_sheet": "qa/hei-mao-chef/contact-sheet-extended.png",
+  "direction_sheet": "qa/hei-mao-chef/look-directions.png",
+  "direction_semantics": "qa/hei-mao-chef/direction-semantics.json",
+  "blind_direction_validation": "qa/hei-mao-chef/direction-blind-validation.json",
+  "blind_review_resolution": "qa/hei-mao-chef/blind-review-resolution.json",
+  "continuity": "qa/hei-mao-chef/look-continuity.json",
+  "review": "qa/hei-mao-chef/review.json",
+  "package": "pets/hei-mao-chef"
+}
