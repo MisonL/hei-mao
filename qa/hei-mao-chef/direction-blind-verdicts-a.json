@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"screen-left","B":"screen-right","reason":"A nose projects left; B nose projects right."},
+    {"pair":"horizontal-2","A":"screen-right","B":"screen-left","reason":"A nose projects right; B nose projects left."},
+    {"pair":"horizontal-3","A":"screen-right","B":"screen-left","reason":"A nose projects right; B nose projects left."},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A nose projects left; B nose projects right."},
+    {"pair":"horizontal-5","A":"screen-left","B":"screen-right","reason":"A nose projects left; B nose projects right."},
+    {"pair":"horizontal-6","A":"screen-left","B":"screen-right","reason":"A nose projects left; B nose projects right."},
+    {"pair":"horizontal-7","A":"screen-right","B":"screen-left","reason":"A nose projects right; B nose projects left."},
+    {"pair":"vertical-1","A":"up","B":"down","reason":"A muzzle is raised; B muzzle angles downward."},
+    {"pair":"vertical-2","A":"up","B":"down","reason":"A muzzle is raised; B muzzle angles downward."},
+    {"pair":"vertical-3","A":"up","B":"down","reason":"A muzzle sits higher; B muzzle angles lower."},
+    {"pair":"vertical-4","A":"up","B":"down","reason":"A muzzle is higher; B muzzle is lower."},
+    {"pair":"vertical-5","A":"up","B":"down","reason":"A face is raised; B muzzle angles downward."},
+    {"pair":"vertical-6","A":"down","B":"up","reason":"A muzzle angles down-left; B is raised relative to A."},
+    {"pair":"vertical-7","A":"down","B":"up","reason":"A muzzle angles lower; B muzzle is visibly raised."}
+  ]
+}

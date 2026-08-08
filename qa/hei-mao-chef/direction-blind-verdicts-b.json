@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair": "horizontal-1", "A": "screen-left", "B": "screen-right", "reason": "A muzzle points toward screen-left; B muzzle points toward screen-right."},
+    {"pair": "horizontal-2", "A": "screen-right", "B": "screen-left", "reason": "A muzzle points toward screen-right; B muzzle points toward screen-left."},
+    {"pair": "horizontal-3", "A": "screen-right", "B": "screen-left", "reason": "A muzzle points toward screen-right; B muzzle points toward screen-left."},
+    {"pair": "horizontal-4", "A": "screen-left", "B": "screen-right", "reason": "A muzzle points toward screen-left; B muzzle points toward screen-right."},
+    {"pair": "horizontal-5", "A": "screen-left", "B": "screen-right", "reason": "A muzzle points toward screen-left; B muzzle points toward screen-right."},
+    {"pair": "horizontal-6", "A": "screen-left", "B": "screen-right", "reason": "A muzzle points toward screen-left; B muzzle points toward screen-right."},
+    {"pair": "horizontal-7", "A": "screen-right", "B": "screen-left", "reason": "A muzzle points toward screen-right; B muzzle points toward screen-left."},
+    {"pair": "vertical-1", "A": "up", "B": "down", "reason": "A muzzle is raised; B muzzle is lowered."},
+    {"pair": "vertical-2", "A": "up", "B": "down", "reason": "A muzzle is raised; B muzzle angles downward."},
+    {"pair": "vertical-3", "A": "up", "B": "down", "reason": "A muzzle sits higher; B muzzle sits lower."},
+    {"pair": "vertical-4", "A": "up", "B": "down", "reason": "A muzzle is higher; B muzzle is lower."},
+    {"pair": "vertical-5", "A": "up", "B": "down", "reason": "A face is raised; B muzzle angles downward."},
+    {"pair": "vertical-6", "A": "down", "B": "up", "reason": "A muzzle angles downward; B face is raised."},
+    {"pair": "vertical-7", "A": "down", "B": "up", "reason": "A muzzle is lower; B muzzle is raised."}
+  ]
+}
