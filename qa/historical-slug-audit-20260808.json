@@ -1,6 +1,6 @@
 {
-  "audited_at": "2026-08-08T08:45:17Z",
-  "source_commit": "cb06b0f5fee64416802f5e9b3a14d6d7d636a5ca",
+  "audited_at": "2026-08-08T12:52:29Z",
+  "source_commit": "1375c89",
   "scope": "历史角色 slug、公开重复条目、旧图集和本机安装状态",
   "current_release_set": [
     "hei-mao",
@@ -86,7 +86,7 @@
   ],
   "petdex_manifest": {
     "source": "https://petdex.dev/api/manifest",
-    "generated_at": "2026-08-08T06:37:47.022Z",
+    "generated_at": "2026-08-08T12:31:23.501Z",
     "total": 4425,
     "selected_entries": [
       {
@@ -172,6 +172,24 @@
     "duplicate_entry_not_added_to_current_release_set": true,
     "public_record_contains_no_local_paths_or_credentials": true
   },
+  "edit_attempts": [
+    {
+      "slug": "hei-mao",
+      "cli_version": "1.1.0",
+      "operation": "petdex edit with current sprite, pet.json, and package zip",
+      "slug_resolution": "resolved",
+      "asset_upload": "completed",
+      "edit_submission": {
+        "http_status": 404,
+        "response_class": "html_error",
+        "status": "blocked"
+      },
+      "manifest_changed": false,
+      "repository_changed": false,
+      "duplicate_submit_attempted": false,
+      "decision": "external_blocked"
+    }
+  ],
   "result": "pass_with_open_followups",
   "open_followups": [
     "为 delivery、fortune、traveler 生成并独立复核完整品牌图集。",
