@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-08T12:46:04Z",
-  "source_commit": "e32b72499fb5fdc18b133bd4a116e3c65656e93b",
+  "checked_at": "2026-08-08T14:12:26Z",
+  "source_commit": "1bb9699bb0e30e440234946fc626e6db3eb35978",
   "validator": {
     "script": "hatch-pet/scripts/validate_atlas.py",
     "runtime": "bundled hatch-pet runtime Python 3.12.11",
@@ -152,6 +152,23 @@
       }
     ],
     "all_packages_match": true
+  },
+  "installer_validation": {
+    "checked_at": "2026-08-08T14:12:26Z",
+    "bash_command": "HEI_MAO_NO_ANIMATION=1 CODEX_HOME=<temporary-directory> bash install.sh <slug>",
+    "powershell_command": "CODEX_HOME=<temporary-directory> HEI_MAO_NO_ANIMATION=1 pwsh -NoLogo -NoProfile -File install.ps1 -PetId <slug>",
+    "supported_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "bash_all_supported_slugs": true,
+    "powershell_all_supported_slugs": true,
+    "sha256_verified": true,
+    "unknown_slug_rejected": true,
+    "temporary_outputs_removed": true
   },
   "result": "pass"
 }
