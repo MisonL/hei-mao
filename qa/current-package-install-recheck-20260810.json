@@ -84,9 +84,40 @@
     "codex_to_petdex_sha256_match": true,
     "blocked_foodie_absent": true
   },
+  "petdex_install_smoke": {
+    "cli_version": "1.2.0",
+    "isolated_home_used": true,
+    "all_release_slugs_downloaded": true,
+    "desktop_and_codex_files_match": true,
+    "repository_to_petdex_download": {
+      "hei-mao": {
+        "metadata_sha256_match": true,
+        "spritesheet_sha256_match": false,
+        "repository_spritesheet_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+        "petdex_spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c"
+      },
+      "hei-mao-quality": {
+        "metadata_sha256_match": false,
+        "spritesheet_sha256_match": false,
+        "repository_metadata_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+        "petdex_metadata_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+        "repository_spritesheet_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+        "petdex_spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92"
+      },
+      "hei-mao-butler": {
+        "metadata_sha256_match": true,
+        "spritesheet_sha256_match": true
+      },
+      "hei-mao-chef": {
+        "metadata_sha256_match": true,
+        "spritesheet_sha256_match": true
+      }
+    },
+    "temporary_target_removed": true
+  },
   "public_file_scan": {
     "tracked_files_contain_local_paths_or_credentials": false,
     "protocol_term_bearer_only": true
   },
-  "result": "release_packages_pass_foodie_blocked"
+  "result": "local_release_packages_pass_petdex_remote_drift_foodie_blocked"
 }

@@ -209,7 +209,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-desktop-live-smoke-20260809.json`: Petdex Desktop 单角色实时烟测；不替代 Codex App 全量验收
 - `qa/petdex-desktop-live-smoke-20260810.json`: Desktop 0.6.0 hook stdin 退出门禁与发布集复核；发现宿主保持 stdin 打开时原生 hook 仍会等待 EOF，不能据此宣称 App 验收完成
 - `qa/v2-contract-recheck-20260809.json`: 本轮五个角色的 v2 合同、安装一致性和技能测试复核
-- `qa/current-package-install-recheck-20260810.json`: 最新四个发布角色的 v2 合同、安装器、SHA 和本机双目录一致性复核
+- `qa/current-package-install-recheck-20260810.json`: 最新四个发布角色的 v2 合同、安装器、本机双目录一致性和 Petdex 隔离下载安装复核；其中根包与品控官线上资源仍与仓库 SHA 不同
 - `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/petdex-sync-recheck-20260810.json`: 最新 Petdex manifest、编辑接口和 PR #654 状态复核
 - `prompts/`: 生成 base 和各动画行时使用的提示词
