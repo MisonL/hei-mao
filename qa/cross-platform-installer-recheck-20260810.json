@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-08-09T18:41:48Z",
+  "source_commit": "aee3a28ac89598a2acb870eb1270da0a1acbb118",
+  "scope": "authorized Windows and Linux installer smoke using isolated temporary targets",
+  "source_package": {
+    "release_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
+    "blocked_slugs": [
+      "hei-mao-foodie",
+      "unknown"
+    ],
+    "asset_validation": "installer SHA-256 checks passed for every allowed role"
+  },
+  "linux": {
+    "platform": "Linux x86_64",
+    "runtime": "bash",
+    "script_syntax": "pass",
+    "allowed_slugs": "all four passed",
+    "blocked_slugs": "both rejected before write",
+    "temporary_target_cleanup": "pass",
+    "github_raw_network": "unavailable; outbound HTTPS timed out"
+  },
+  "windows": {
+    "platform": "Windows 10 x64",
+    "runtime": "Windows PowerShell 5.1",
+    "script_parse": "pass",
+    "allowed_slugs": "all four passed",
+    "blocked_slugs": "both rejected before write",
+    "temporary_target_cleanup": "pass",
+    "github_raw_network": "HTTP 200"
+  },
+  "checks": {
+    "repository_modified": false,
+    "user_pet_directories_modified": false,
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false
+  },
+  "result": "installer_logic_passes_windows_and_linux_local_source_smoke_linux_public_network_remains_environment_blocked"
+}
