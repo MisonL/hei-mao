@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-08-09T16:05:45Z",
+  "source_commit": "1e57cb891ce5ab9e5a95be1ffb30e78dd6e4a30f",
+  "scope": "Petdex Desktop 0.6.0 local hook exit behavior and release-set smoke",
+  "desktop": {
+    "version": "desktop-v0.6.0",
+    "active_slug": "hei-mao-chef",
+    "installed_release_set": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ]
+  },
+  "hook_hardening_check": {
+    "result": "pass",
+    "binary": "already-bounded",
+    "legacy_hook": "native-symlink",
+    "codex_config": "unchanged",
+    "claude_code_config": "unchanged",
+    "gemini_config": "unchanged"
+  },
+  "hook_exit_tests": {
+    "closed_stdin": {
+      "result": "pass",
+      "cases": 5,
+      "max_elapsed_ms": 20
+    },
+    "open_stdin": {
+      "result": "fail",
+      "cases": 13,
+      "clients": [
+        "codex",
+        "claude-code",
+        "gemini"
+      ],
+      "timeout_ms": 1500,
+      "timed_out_cases": 13,
+      "root_cause": "The native hook reads until EOF after reaching its capture limit, so a host that keeps stdin open is still blocked."
+    }
+  },
+  "package_contract_recheck": {
+    "packages": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "validator": "validate_atlas.py --require-v2",
+    "all_passed": true,
+    "all_zero_errors": true,
+    "all_zero_warnings": true,
+    "all_zero_transparent_rgb_residue": true
+  },
+  "visual_followups": [
+    "Codex App refresh and multi-role visual selection remain unverified.",
+    "The foodie waiting row remains blocked by detached effects.",
+    "Delivery, fortune, and traveler remain without publishable atlases."
+  ],
+  "public_file_scan": {
+    "local_paths_or_credentials_found": false
+  },
+  "result": "hook_stdin_blocker_keeps_app_acceptance_open"
+}
