@@ -17,6 +17,8 @@
 ```bash
 npx -y petdex@latest install hei-mao
 npx -y petdex@latest install hei-mao-quality
+npx -y petdex@latest install hei-mao-butler
+npx -y petdex@latest install hei-mao-chef
 ```
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
@@ -83,9 +85,21 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 
 `hei-mao-butler` 包含完整的 v2 动画图集和 16 个观察方向的独立 QA 证据。该包已提交 Petdex，当前状态为待审核；审核完成前不将其视为 Petdex 已上线包。
 
+Petdex 安装：
+
+```bash
+npx -y petdex@latest install hei-mao-butler
+```
+
 ### Chef 角色
 
 `hei-mao-chef` 是黑毛的厨师角色包，已通过结构、透明度、方向盲测、连续性和独立视觉复核。连续性报告中的四处数值告警均已记录为 minor warning，未发现可见跳帧、裁切、比例突变、身份漂移或方向反转。
+
+Petdex 安装：
+
+```bash
+npx -y petdex@latest install hei-mao-chef
+```
 
 ### 美食家角色
 
