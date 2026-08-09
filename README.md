@@ -12,7 +12,7 @@
 
 ### Petdex 安装
 
-根包已在 Petdex 上线，可在已安装 Node.js 20 或更高版本的 macOS、Linux 或 Windows 上运行：
+根包已有 Petdex 公开条目；线上资源版本仍以 manifest 为准。已安装 Node.js 20 或更高版本的 macOS、Linux 或 Windows 可运行：
 
 ```bash
 npx -y petdex@latest install hei-mao
@@ -32,13 +32,13 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 当前仓库中的角色包如下。每个角色都有独立的 `pet.json`、v2 图集和 QA 证据，不能用其他角色的图集替代；只有没有视觉阻断的角色才会进入安装器白名单。
 
-| slug | 角色 | 本地状态 | Petdex 状态 |
-| --- | --- | --- | --- |
-| `hei-mao` | 黑毛 | 已验证 | manifest 可见，字段仍为 v1 |
-| `hei-mao-quality` | 品控官 | 已验证 | manifest 可见，字段仍为 v1 |
-| `hei-mao-butler` | 大管家 | 已验证 | manifest 可见，字段仍为 v1 |
-| `hei-mao-chef` | 厨师 | 已验证 | manifest 可见，字段仍为 v1 |
-| `hei-mao-foodie` | 美食家 | 视觉 QA 阻断，暂缓安装 | manifest 可见，字段仍为 v1 |
+| slug              | 角色   | 本地状态               | Petdex 状态                |
+| ----------------- | ------ | ---------------------- | -------------------------- |
+| `hei-mao`         | 黑毛   | 已验证                 | manifest 可见，字段仍为 v1 |
+| `hei-mao-quality` | 品控官 | 已验证                 | manifest 可见，字段仍为 v1 |
+| `hei-mao-butler`  | 大管家 | 已验证                 | manifest 可见，字段仍为 v1 |
+| `hei-mao-chef`    | 厨师   | 已验证                 | manifest 可见，字段仍为 v1 |
+| `hei-mao-foodie`  | 美食家 | 视觉 QA 阻断，暂缓安装 | manifest 可见，字段仍为 v1 |
 
 公开 manifest 当前可见五个角色条目以及历史重复条目 `hei-mao-2`。manifest 中的公开资源仍报告 `spriteVersionNumber: 1`，不能据此宣称本仓库的 v2 版本已经同步。`hei-mao-foodie` 的本地最终视觉 QA 已发现 waiting 行的三个 detached effects，已从安装器白名单和本机 active 安装中移除；生图渠道恢复并完成整行重生成前不得安装或发布。
 
@@ -49,7 +49,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-截至 2026-08-09T12:55:55Z，Petdex 公开 manifest 的生成时间为 `2026-08-09T12:33:27.214Z`，总数为 4489，包含 `hei-mao`、`hei-mao-quality`、`hei-mao-butler`、`hei-mao-chef`、`hei-mao-foodie` 和历史重复条目 `hei-mao-2`，这些条目的 manifest 字段均为 `spriteVersionNumber: 1`。公开下载的 sprite SHA-256 依次为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`、`254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`、`1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`、`32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`、`fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`；根包和品控官的线上 sprite 与本仓库当前版本不同，其他三个 sprite 字节相同但 manifest 版本字段仍为 v1。最新 CLI 为 `petdex@1.2.0`，其编辑流程使用 `/api/pets/<slug>`、`POST /api/cli/edit-presign` 和 `PATCH /api/my-pets/<id>/edit`；本 PR 提议的 `PATCH /api/cli/edit` 在正式服务仍返回 HTML 404，说明 PR #654 尚未部署。未登录调用 `edit-presign` 返回 JSON 401 属于认证门禁，不能替代已登录端到端验证；本轮未进行外部写入，因此不能将线上 v2 同步标记为完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/petdex-sync-recheck-20260809.json`。
+截至 2026-08-09T15:31:01Z，Petdex 公开 manifest 的生成时间为 `2026-08-09T12:33:27.214Z`，总数为 4489，包含 `hei-mao`、`hei-mao-quality`、`hei-mao-butler`、`hei-mao-chef`、`hei-mao-foodie` 和历史重复条目 `hei-mao-2`，这些条目的 manifest 字段均为 `spriteVersionNumber: 1`。公开下载的 sprite SHA-256 依次为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`、`254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`、`1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`、`32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`、`fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`；根包和品控官的线上 sprite 与本仓库当前版本不同，其他三个 sprite 字节相同但 manifest 版本字段仍为 v1。最新 CLI 为 `petdex@1.2.0`，其编辑流程使用 `/api/pets/<slug>`、`POST /api/cli/edit-presign` 和 `PATCH /api/my-pets/<id>/edit`；本 PR 提议的 `PATCH /api/cli/edit` 在正式服务仍返回 HTML 404，说明 PR #654 尚未部署。未登录调用 `edit-presign` 返回 JSON 401 属于认证门禁，不能替代已登录端到端验证；本轮未进行外部写入，因此不能将线上 v2 同步标记为完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/petdex-sync-recheck-20260809.json`。
 
 本机当前只保留四个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致；`hei-mao-foodie` 已从两处 active 安装中移除。当前安装复核见 `qa/current-package-install-recheck-20260809.json`。
 
@@ -207,6 +207,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `pets/hei-mao-foodie/`: 美食家角色包（最终视觉 QA 阻断，待修复）
 - `qa/hei-mao-foodie/`: 美食家 v2 的结构验证和视觉阻断证据
 - `qa/petdex-desktop-live-smoke-20260809.json`: Petdex Desktop 单角色实时烟测；不替代 Codex App 全量验收
+- `qa/v2-contract-recheck-20260809.json`: 本轮五个角色的 v2 合同、安装一致性和技能测试复核
+- `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
 
