@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-09T12:55:55Z",
-  "source_commit": "04092e4b3d9bec38c04c6dd0f7d206f2f7b07c34",
+  "checked_at": "2026-08-09T15:31:01Z",
+  "source_commit": "af9675ef0d97b962b3c9233997c5950c1cbb9db4",
   "cli_version": "1.2.0",
   "manifest": {
     "generated_at": "2026-08-09T12:33:27.214Z",
@@ -106,6 +106,16 @@
       "response_class": "auth_required"
     },
     "latest_cli_edit_route": "PATCH /api/my-pets/<id>/edit"
+  },
+  "pr_654": {
+    "state": "OPEN",
+    "mergeable": "MERGEABLE",
+    "merge_state_status": "UNSTABLE",
+    "head_sha": "3f52f2c2da99c8adc5ee927ee6e5ba4b151e6b49",
+    "ci": "passed",
+    "vercel": "team_authorization_required",
+    "latest_public_update": "2026-08-09T11:30:58Z",
+    "production_route_deployed": false
   },
   "checks": {
     "duplicate_submit_attempted": false,
