@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-08-09T19:04:38Z",
-  "source_commit": "71c05c7e7c3f30e55543665d4de5ed80eb1e4f11",
+  "checked_at": "2026-08-09T19:18:00Z",
+  "source_commit": "82480ab989badcaeeaf39efe58f81826bee1aa06",
   "scope": "fresh remote source, Petdex manifest, public asset, and upstream PR recheck",
   "remote_heads": {
-    "github_main": "71c05c7e7c3f30e55543665d4de5ed80eb1e4f11",
-    "gitlab_main": "71c05c7e7c3f30e55543665d4de5ed80eb1e4f11",
+    "github_main": "82480ab989badcaeeaf39efe58f81826bee1aa06",
+    "gitlab_main": "82480ab989badcaeeaf39efe58f81826bee1aa06",
     "match": true
   },
   "raw_source_sha256": {
     "github": {
-      "README.md": "9410721b09d8e676bc8e2fee7c1c17d51975341e7c6d30c3daf2b1b9b2fabf06",
+      "README.md": "a45febe0ba5b313fcfe0a077f93c9a4a16707e7fe6c7654220611fb493b0d917",
       "install.sh": "2f73c521e7a0fdcc31a1f0f66d8f889bdf1c2ba29e7c132e5bb7ed964813c042",
       "install.ps1": "c79cd6bf616568ea56653654c068b972be99c8af0ebdee11376ef1efeba4da27",
       "pets/hei-mao/pet.json": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
