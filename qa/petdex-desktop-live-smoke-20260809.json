@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-08-09T14:35:12Z",
+  "source_commit": "20382fffdd0e778769e4b39a2e04301d73d737a3",
+  "scope": "Petdex Desktop live single-role render smoke",
+  "active_slug": "hei-mao-chef",
+  "installed_release_set": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef"
+  ],
+  "window": {
+    "logical_size_points": [
+      135,
+      146
+    ],
+    "transparent_sprite_visible": true,
+    "background_or_overlay_artifact": false
+  },
+  "animation_sample": {
+    "frame_count": 6,
+    "interval_ms": 180,
+    "frame_changes_visible": true,
+    "body_remains_complete": true,
+    "visible_scale_or_baseline_jump": false,
+    "visual_result": "pass"
+  },
+  "not_verified": [
+    "Codex App refresh after file replacement",
+    "live selection of each installed role",
+    "live look-direction trigger and loop boundary",
+    "Windows and Linux desktop rendering"
+  ],
+  "result": "single_role_desktop_smoke_pass_with_app_and_cross_platform_followups"
+}
