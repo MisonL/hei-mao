@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-08-09T19:04:38Z",
+  "source_commit": "71c05c7e7c3f30e55543665d4de5ed80eb1e4f11",
+  "scope": "fresh remote source, Petdex manifest, public asset, and upstream PR recheck",
+  "remote_heads": {
+    "github_main": "71c05c7e7c3f30e55543665d4de5ed80eb1e4f11",
+    "gitlab_main": "71c05c7e7c3f30e55543665d4de5ed80eb1e4f11",
+    "match": true
+  },
+  "raw_source_sha256": {
+    "github": {
+      "README.md": "9410721b09d8e676bc8e2fee7c1c17d51975341e7c6d30c3daf2b1b9b2fabf06",
+      "install.sh": "2f73c521e7a0fdcc31a1f0f66d8f889bdf1c2ba29e7c132e5bb7ed964813c042",
+      "install.ps1": "c79cd6bf616568ea56653654c068b972be99c8af0ebdee11376ef1efeba4da27",
+      "pets/hei-mao/pet.json": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "pets/hei-mao/spritesheet.webp": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "pets/hei-mao-quality/pet.json": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "pets/hei-mao-quality/spritesheet.webp": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "pets/hei-mao-butler/pet.json": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "pets/hei-mao-butler/spritesheet.webp": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "pets/hei-mao-chef/pet.json": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "pets/hei-mao-chef/spritesheet.webp": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"
+    },
+    "gitlab": "github_values_match",
+    "repository_values_match": true
+  },
+  "petdex_manifest": {
+    "url": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "http_status": 200,
+    "generated_at": "2026-08-09T18:28:16.433Z",
+    "total": 4489,
+    "selected_entries": [
+      {"slug": "hei-mao", "sprite_version_number": 1},
+      {"slug": "hei-mao-quality", "sprite_version_number": 1},
+      {"slug": "hei-mao-2", "sprite_version_number": 1, "classification": "duplicate_public_entry"},
+      {"slug": "hei-mao-butler", "sprite_version_number": 1},
+      {"slug": "hei-mao-chef", "sprite_version_number": 1},
+      {"slug": "hei-mao-foodie", "sprite_version_number": 1}
+    ],
+    "top_level_v2_sync": false,
+    "note": "Selected pet JSON files report spriteVersionNumber 2, but the public manifest records version 1."
+  },
+  "petdex_asset_sha256": {
+    "hei-mao": {"sprite": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c", "sprite_matches_repository": false, "metadata_matches_repository": true},
+    "hei-mao-quality": {"sprite": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92", "sprite_matches_repository": false, "metadata_matches_repository": false},
+    "hei-mao-butler": {"sprite": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "sprite_matches_repository": true, "metadata_matches_repository": true},
+    "hei-mao-chef": {"sprite": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "sprite_matches_repository": true, "metadata_matches_repository": true},
+    "hei-mao-foodie": {"sprite": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49", "sprite_matches_repository": true, "metadata_matches_repository": true}
+  },
+  "production_probes": {
+    "PATCH /api/cli/edit": {"http_status": 404, "content_type": "text/html; charset=utf-8", "result": "route_not_deployed"},
+    "POST /api/cli/edit-presign": {"http_status": 401, "content_type": "application/json", "result": "auth_required_route_exists"},
+    "authenticated_edit_e2e": false,
+    "external_write_attempted": false
+  },
+  "pr_654": {
+    "url": "https://github.com/crafter-station/petdex/pull/654",
+    "state": "OPEN",
+    "mergeable": true,
+    "merge_state_status": "UNSTABLE",
+    "head_sha": "3f52f2c2da99c8adc5ee927ee6e5ba4b151e6b49",
+    "updated_at": "2026-08-09T11:30:58Z",
+    "ci": "all reported build and test checks pass",
+    "vercel": "authorization_required",
+    "production_submission_route": "not_deployed"
+  },
+  "my_petdex_prs": {
+    "654": "open",
+    "650": "closed",
+    "662": "merged",
+    "667": "merged",
+    "583": "merged"
+  },
+  "related_issues": {
+    "603": "closed",
+    "611": "closed",
+    "596": "closed",
+    "656": "closed",
+    "657": "closed"
+  },
+  "checks": {
+    "duplicate_submit_attempted": false,
+    "v2_manifest_sync": false,
+    "local_environment_data_recorded": false
+  },
+  "result": "remote_sources_match_commit_manifest_v1_metadata_v2_mismatch_pr_654_undeployed"
+}

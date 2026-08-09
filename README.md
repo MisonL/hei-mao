@@ -51,7 +51,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-截至 2026-08-09T17:17:39Z，Petdex 公开 manifest 的生成时间为 `2026-08-09T12:33:27.214Z`，总数为 4489，包含 `hei-mao`、`hei-mao-quality`、`hei-mao-butler`、`hei-mao-chef`、`hei-mao-foodie` 和历史重复条目 `hei-mao-2`，这些条目的 manifest 字段均为 `spriteVersionNumber: 1`。公开下载的 sprite SHA-256 依次为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`、`254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`、`1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`、`32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`、`fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`；根包和品控官的线上 sprite 与本仓库当前版本不同，其他三个 sprite 字节相同但 manifest 版本字段仍为 v1。最新 CLI 为 `petdex@1.2.0`，其编辑流程使用 `/api/pets/<slug>`、`POST /api/cli/edit-presign` 和 `PATCH /api/my-pets/<id>/edit`；本 PR 提议的 `PATCH /api/cli/edit` 在正式服务仍返回 HTML 404，说明 PR #654 尚未部署。未登录调用 `edit-presign` 返回 JSON 401 属于认证门禁，不能替代已登录端到端验证；本轮未进行外部写入，因此不能将线上 v2 同步标记为完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/petdex-sync-recheck-20260810.json`。
+截至 2026-08-09T19:04:38Z，Petdex 公开 manifest 的生成时间为 `2026-08-09T18:28:16.433Z`，总数为 4489，包含 `hei-mao`、`hei-mao-quality`、`hei-mao-butler`、`hei-mao-chef`、`hei-mao-foodie` 和历史重复条目 `hei-mao-2`，这些条目的 manifest 字段均为 `spriteVersionNumber: 1`。公开下载的 sprite SHA-256 依次为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`、`254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`、`1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`、`32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`、`fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`；根包和品控官的线上 sprite 与本仓库当前版本不同，其他三个 sprite 字节相同但 manifest 版本字段仍为 v1。在线 pet JSON 中根包、大管家、厨师和美食家与仓库一致，品控官 metadata 仍不一致。最新 CLI 为 `petdex@1.2.0`，其编辑流程使用 `/api/pets/<slug>`、`POST /api/cli/edit-presign` 和 `PATCH /api/my-pets/<id>/edit`；本 PR 提议的 `PATCH /api/cli/edit` 在正式服务仍返回 HTML 404，说明 PR #654 尚未部署。未登录调用 `edit-presign` 返回 JSON 401 属于认证门禁，不能替代已登录端到端验证；本轮未进行外部写入，因此不能将线上 v2 同步标记为完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/remote-release-source-recheck-20260810.json`。
 
 本机当前只保留四个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致；`hei-mao-foodie` 已从两处 active 安装中移除。当前安装复核见 `qa/current-package-install-recheck-20260810.json`。
 
@@ -216,6 +216,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-local-gate-recheck-20260810.json`: 基于当前提交重新执行的 v2 合同、hatch-pet 测试、安装器允许/拒绝路径、双目录一致性和公开文件卫生复核
 - `qa/local-release-hygiene-recheck-20260810.json`: 最新角色身份、历史 slug 隔离、本机双目录 SHA、一键安装器和公开文件卫生复核
 - `qa/remote-install-source-recheck-20260810.json`: GitHub/GitLab main、raw 下载源和安装器拒绝路径复核
+- `qa/remote-release-source-recheck-20260810.json`: 基于 `71c05c7` 的 GitHub/GitLab raw 文件、Petdex manifest/资源、PR #654 和正式路由即时复核
 - `qa/imagegen-channel-recheck-20260810.json`: 本地生图 Agent 的 capabilities、runtime、契约和真实 smoke 复核；真实生成通道当前失败，禁止启动新角色图集生成
 - `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/petdex-sync-recheck-20260810.json`: 最新 Petdex manifest、编辑接口和 PR #654 状态复核
