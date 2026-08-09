@@ -1,0 +1,86 @@
+{
+  "audited_at": "2026-08-09T06:35:00Z",
+  "source_commit": "96d5be2204eaf9437603d9843b77fb31f41daf46",
+  "current_release_set": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie"
+  ],
+  "historical_slugs": {
+    "hei-mao-recommender": {
+      "repository_present": false,
+      "codex_install_present": false,
+      "petdex_install_present": false,
+      "release_decision": "excluded",
+      "reason": "历史图集存在方向内部洞与连续性离群，未重新生成和复核。"
+    },
+    "hei-mao-2": {
+      "repository_present": false,
+      "codex_install_present": false,
+      "petdex_install_present": false,
+      "public_manifest_classification": "duplicate_public_entry",
+      "release_decision": "excluded",
+      "duplicate_submit_attempted": false
+    },
+    "hei-mao-delivery": {
+      "repository_present": false,
+      "codex_install_present": false,
+      "petdex_install_present": false,
+      "release_decision": "not_publishable",
+      "reason": "独立图集尚未生成。"
+    },
+    "hei-mao-fortune": {
+      "repository_present": false,
+      "codex_install_present": false,
+      "petdex_install_present": false,
+      "release_decision": "not_publishable",
+      "reason": "独立图集尚未生成。"
+    },
+    "hei-mao-traveler": {
+      "repository_present": false,
+      "codex_install_present": false,
+      "petdex_install_present": false,
+      "release_decision": "not_publishable",
+      "reason": "独立图集尚未生成。"
+    }
+  },
+  "live_public_manifest": {
+    "generated_at": "2026-08-09T01:06:28.256Z",
+    "total": 4425,
+    "selected_entries": [
+      {"slug": "hei-mao", "sprite_version_number": 1},
+      {"slug": "hei-mao-quality", "sprite_version_number": 1},
+      {"slug": "hei-mao-2", "classification": "duplicate_public_entry"}
+    ]
+  },
+  "local_install_roots": {
+    "codex": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "petdex": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ]
+  },
+  "checks": {
+    "historical_installation_absent": true,
+    "duplicate_entry_excluded_from_release_set": true,
+    "current_release_sets_match": true,
+    "public_record_contains_local_environment_data": false
+  },
+  "open_followups": [
+    "等待本地生图渠道恢复后生成 delivery、fortune、traveler。",
+    "按 Petdex 编辑规则同步已有 hei-mao 与 hei-mao-quality 条目。",
+    "等待 Petdex 处理历史重复条目 hei-mao-2。"
+  ],
+  "result": "pass_with_open_followups"
+}

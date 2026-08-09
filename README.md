@@ -69,7 +69,7 @@ $env:HEI_MAO_PET_ID="hei-mao-foodie"; irm https://raw.githubusercontent.com/Miso
 
 安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
-未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。
+未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
 这三个角色目前没有可发布图集。2026-08-09 的本地生图渠道复核显示能力与契约正常，但没有任何 effective request mode，因此未发送可交付图集，也未把缺图角色加入安装器；复核证据见 `qa/imagegen-channel-recheck-20260809.json`。
 
