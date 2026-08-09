@@ -1,0 +1,92 @@
+{
+  "checked_at": "2026-08-09T16:32:45Z",
+  "source_commit": "7deee6af80949ada32e4d9b9b4b80f8411b29281",
+  "scope": "current release packages, v2 atlas contract, installer allowlist, and local installation parity",
+  "runtime": {
+    "python": "hatch-pet bundled runtime",
+    "pillow": "12.3.0"
+  },
+  "release_packages": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef"
+  ],
+  "blocked_packages": [
+    {
+      "slug": "hei-mao-foodie",
+      "reason": "final visual QA still fails on three detached effects in the waiting row",
+      "active_installation_removed": true,
+      "regeneration_required": "waiting row as one complete generated strip"
+    }
+  ],
+  "validator": {
+    "script": "hatch-pet/scripts/validate_atlas.py",
+    "arguments": "--require-v2 --chroma-key <package-key>",
+    "all_release_packages_ok": true,
+    "all_release_packages_have_zero_errors": true,
+    "all_release_packages_have_zero_warnings": true,
+    "all_release_packages_have_zero_transparent_rgb_residue": true,
+    "blocked_package_structure_ok_but_visual_blocked": true,
+    "contract": {
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "columns": 8,
+      "rows": 11,
+      "cell_width": 192,
+      "cell_height": 208,
+      "sprite_version_number": 2
+    }
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p test_*.py -q",
+    "passed": 28,
+    "failed": 0
+  },
+  "installation_smoke": {
+    "shell_syntax": "pass",
+    "powershell_parse": "pass",
+    "released_slugs": {
+      "hei-mao": "pass",
+      "hei-mao-quality": "pass",
+      "hei-mao-butler": "pass",
+      "hei-mao-chef": "pass"
+    },
+    "sha256_checks": "pass",
+    "blocked_slug": {
+      "slug": "hei-mao-foodie",
+      "result": "rejected",
+      "partial_target_created": false
+    },
+    "temporary_files_removed": true
+  },
+  "installation_parity": {
+    "roots": [
+      "CODEX_HOME/pets",
+      "PETDEX_HOME/pets"
+    ],
+    "codex_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
+    "petdex_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
+    "repository_to_codex_sha256_match": true,
+    "repository_to_petdex_sha256_match": true,
+    "codex_to_petdex_sha256_match": true,
+    "blocked_foodie_absent": true
+  },
+  "public_file_scan": {
+    "tracked_files_contain_local_paths_or_credentials": false,
+    "protocol_term_bearer_only": true
+  },
+  "result": "release_packages_pass_foodie_blocked"
+}
