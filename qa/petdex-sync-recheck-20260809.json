@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-09T06:12:00Z",
-  "source_commit": "bd5cb6e575c99d8df749e456d9b5849b709de92a",
+  "checked_at": "2026-08-09T06:36:00Z",
+  "source_commit": "40adee2204eaf9437603d9843b77fb31f41daf46",
   "cli_version": "1.2.0",
   "manifest": {
     "generated_at": "2026-08-09T01:06:28.256Z",
@@ -60,7 +60,8 @@
     "duplicate_submit_attempted": false,
     "public_entries_changed": false,
     "local_repository_changed": false,
-    "public_files_contain_local_environment_data": false
+    "public_files_contain_local_environment_data": false,
+    "live_download_and_hash_check": true
   },
   "result": "external_edit_endpoint_blocked"
 }
