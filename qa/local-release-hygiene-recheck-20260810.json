@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-08-09T17:12:50Z",
+  "scope": "release package identity, local installation parity, historical slug isolation, installer syntax, and public file hygiene",
+  "release_slugs": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef"
+  ],
+  "blocked_slugs": {
+    "hei-mao-foodie": "not installed; final visual QA still blocks the package",
+    "hei-mao-delivery": "no repository package or local installation",
+    "hei-mao-fortune": "no repository package or local installation",
+    "hei-mao-traveler": "no repository package or local installation"
+  },
+  "historical_slugs": {
+    "hei-mao-recommender": "absent from repository and local installations",
+    "hei-mao-2": "absent from repository and local installations; excluded duplicate public entry"
+  },
+  "identity_contract": {
+    "all_repository_packages_have_matching_ids": true,
+    "all_repository_packages_use_sprite_version_number": 2,
+    "all_repository_packages_reference_spritesheet_webp": true
+  },
+  "installation_parity": {
+    "roots": [
+      "CODEX_HOME/pets",
+      "PETDEX_HOME/pets"
+    ],
+    "repository_to_codex_sha256_match": true,
+    "repository_to_petdex_sha256_match": true,
+    "codex_to_petdex_sha256_match": true,
+    "release_slug_sets_match": true,
+    "blocked_and_historical_slugs_absent": true
+  },
+  "installer_checks": {
+    "bash_syntax": "pass",
+    "powershell_parse": "pass",
+    "release_file_presence": "pass"
+  },
+  "public_file_scan": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false,
+    "allowed_protocol_word_only": "Bearer"
+  },
+  "result": "release_set_isolated_and_locally_consistent"
+}
