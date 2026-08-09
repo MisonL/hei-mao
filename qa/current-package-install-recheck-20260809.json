@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-08-09T12:55:55Z",
-  "source_commit": "04092e4b3d9bec38c04c6dd0f7d206f2f7b07c34",
+  "source_commit": "55d787edb558380dd9bfc897bd72e9cd83fc9ee8",
   "scope": "current release packages, v2 atlas contract, installer allowlist, and local installation parity",
   "release_packages": [
     "hei-mao",
@@ -88,23 +88,32 @@
   },
   "petdex_install_smoke": {
     "cli_version": "1.2.0",
-    "slug": "hei-mao-chef",
+    "slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
     "result": "pass",
     "isolated_home_used": true,
     "desktop_and_codex_files_match": true,
+    "downloaded_metadata_sha256_match": true,
     "temporary_target_removed": true
   },
-  "cross_platform_remote_smoke": {
+  "cross_platform_smoke": {
     "linux": {
       "chef_install": "pass",
       "foodie_rejection_exit_code": 1,
-      "temporary_files_removed": true
+      "temporary_files_removed": true,
+      "source": "SCP of the verified working tree",
+      "github_clone": "blocked_by_remote_network_timeout"
     },
     "windows_powershell_5_1": {
       "chef_install": "pass",
       "foodie_rejection_exit_code": 1,
       "crlf_checkout_normalization": "pass",
-      "temporary_files_removed": true
+      "temporary_files_removed": true,
+      "source": "direct clone of pushed GitHub main"
     }
   },
   "public_file_scan": {
