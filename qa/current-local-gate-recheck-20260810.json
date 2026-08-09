@@ -1,0 +1,76 @@
+{
+  "checked_at": "2026-08-09T18:09:11Z",
+  "source_commit": "38fe9b56df66ef6eafcaa9b061703ae4ece80324",
+  "scope": "fresh local contract, installer, and public-file gate recheck",
+  "runtime": {
+    "validator": "hatch-pet/scripts/validate_atlas.py",
+    "pillow": "12.3.0"
+  },
+  "atlas_contract": {
+    "contract": {
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "columns": 8,
+      "rows": 11,
+      "cell_width": 192,
+      "cell_height": 208,
+      "sprite_version_number": 2
+    },
+    "packages": {
+      "hei-mao": "pass",
+      "hei-mao-quality": "pass",
+      "hei-mao-butler": "pass",
+      "hei-mao-chef": "pass",
+      "hei-mao-foodie": "pass_structure_only_visual_block_remains"
+    },
+    "errors": 0,
+    "warnings": 0,
+    "transparent_rgb_residue": 0
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p test_*.py -q",
+    "passed": 28,
+    "failed": 0
+  },
+  "installer": {
+    "bash_syntax": "pass",
+    "powershell_parse": "pass",
+    "allowed_slugs": {
+      "hei-mao": "pass",
+      "hei-mao-quality": "pass",
+      "hei-mao-butler": "pass",
+      "hei-mao-chef": "pass"
+    },
+    "blocked_slugs": {
+      "hei-mao-foodie": "rejected_before_write",
+      "unknown": "rejected_before_write"
+    },
+    "temporary_targets_cleaned": true
+  },
+  "installation_parity": {
+    "repository_to_codex_sha256_match": true,
+    "repository_to_petdex_sha256_match": true,
+    "codex_to_petdex_sha256_match": true,
+    "active_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
+    "blocked_and_historical_slugs_absent": true
+  },
+  "public_file_scan": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false
+  },
+  "visual_followups": {
+    "foodie": "waiting row still has three detached effects and requires complete row regeneration",
+    "delivery": "no publishable atlas",
+    "fortune": "no publishable atlas",
+    "traveler": "no publishable atlas"
+  },
+  "result": "local_gates_passed_generation_and_foodie_visual_work_remain_blocked"
+}

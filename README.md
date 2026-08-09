@@ -213,6 +213,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/v2-contract-recheck-20260809.json`: 本轮五个角色的 v2 合同、安装一致性和技能测试复核
 - `qa/v2-contract-recheck-20260810.json`: 最新五个角色的 v2 合同、hatch-pet 测试和 foodie 视觉阻断复核
 - `qa/current-package-install-recheck-20260810.json`: 最新四个发布角色的 v2 合同、安装器、本机双目录一致性和 Petdex 隔离下载安装复核；其中根包与品控官线上资源仍与仓库 SHA 不同
+- `qa/current-local-gate-recheck-20260810.json`: 基于当前提交重新执行的 v2 合同、hatch-pet 测试、安装器允许/拒绝路径、双目录一致性和公开文件卫生复核
 - `qa/local-release-hygiene-recheck-20260810.json`: 最新角色身份、历史 slug 隔离、本机双目录 SHA、一键安装器和公开文件卫生复核
 - `qa/remote-install-source-recheck-20260810.json`: GitHub/GitLab main、raw 下载源和安装器拒绝路径复核
 - `qa/imagegen-channel-recheck-20260810.json`: 本地生图 Agent 的 capabilities、runtime、契约和真实 smoke 复核；真实生成通道当前失败，禁止启动新角色图集生成
