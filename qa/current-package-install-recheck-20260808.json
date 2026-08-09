@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-08-08T17:00:08Z",
+  "source_commit": "a20842f3abef37826294cb6a5898165d605ed408",
+  "scope": "current repository packages, v2 atlas contract, and local installation parity",
+  "validator": {
+    "script": "hatch-pet/scripts/validate_atlas.py",
+    "arguments": "--require-v2 --chroma-key <package-key>",
+    "runtime": "python3 with Pillow",
+    "all_packages_ok": true,
+    "all_packages_have_zero_errors": true,
+    "all_packages_have_zero_warnings": true,
+    "all_packages_have_zero_transparent_rgb_residue": true
+  },
+  "packages": [
+    {
+      "slug": "hei-mao",
+      "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "spritesheet_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "chroma_key": "#00FF00",
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "sprite_version_number": 2,
+      "validation": "pass",
+      "visual_qa": "pass_with_reviewed_warnings"
+    },
+    {
+      "slug": "hei-mao-quality",
+      "pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "spritesheet_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "chroma_key": "#FF00FF",
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "sprite_version_number": 2,
+      "validation": "pass",
+      "visual_qa": "pass_with_reviewed_warnings"
+    },
+    {
+      "slug": "hei-mao-butler",
+      "pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "chroma_key": "#00FF00",
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "sprite_version_number": 2,
+      "validation": "pass",
+      "visual_qa": "pass_with_reviewed_warnings"
+    },
+    {
+      "slug": "hei-mao-chef",
+      "pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "chroma_key": "#00FFFF",
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "sprite_version_number": 2,
+      "validation": "pass",
+      "visual_qa": "pass_with_reviewed_warnings"
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "spritesheet_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "chroma_key": "#FF00FF",
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "sprite_version_number": 2,
+      "validation": "pass",
+      "visual_qa": "pass_with_reviewed_warnings"
+    }
+  ],
+  "installation_parity": {
+    "roots": ["CODEX_HOME/pets", "PETDEX_HOME/pets"],
+    "repository_to_codex_match": true,
+    "repository_to_petdex_match": true,
+    "codex_to_petdex_match": true,
+    "all_current_packages_present": true
+  },
+  "public_file_scan": {
+    "checked_files": ["README.md", "install.sh", "install.ps1", "pets", "qa", "LICENSE", "NOTICE"],
+    "local_paths_or_credentials_found": false
+  },
+  "result": "pass_for_current_packages",
+  "does_not_close_missing_roles_or_external_petdex_sync": true
+}
