@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-08-09T18:14:17Z",
+  "source_commit": "bb44ebd5f2035e26780ed98abea3e583debee5d5",
+  "petdex_manifest": {
+    "url": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "http_status": 200,
+    "generated_at": "2026-08-09T12:33:27.214Z",
+    "total": 4489,
+    "selected_entries": [
+      {"slug": "hei-mao", "sprite_version_number": 1, "sprite_sha_match": false, "metadata_sha_match": true},
+      {"slug": "hei-mao-quality", "sprite_version_number": 1, "sprite_sha_match": false, "metadata_sha_match": false},
+      {"slug": "hei-mao-2", "sprite_version_number": 1, "classification": "duplicate_public_entry"},
+      {"slug": "hei-mao-butler", "sprite_version_number": 1, "sprite_sha_match": true, "metadata_sha_match": true},
+      {"slug": "hei-mao-chef", "sprite_version_number": 1, "sprite_sha_match": true, "metadata_sha_match": true},
+      {"slug": "hei-mao-foodie", "sprite_version_number": 1, "sprite_sha_match": true, "metadata_sha_match": true}
+    ],
+    "v2_sync": "not_available; manifest remains v1"
+  },
+  "live_routes": {
+    "GET /api/pets/hei-mao": {"http_status": 401, "response_class": "auth_required"},
+    "GET /api/pets/hei-mao-quality": {"http_status": 401, "response_class": "auth_required"},
+    "PATCH /api/cli/edit": {"http_status": 404, "response_class": "html_error"},
+    "POST /api/cli/edit-presign": {"http_status": 401, "response_class": "auth_required"},
+    "latest_cli_edit_route": "PATCH /api/my-pets/<id>/edit"
+  },
+  "pr_654": {
+    "url": "https://github.com/crafter-station/petdex/pull/654",
+    "state": "OPEN",
+    "mergeable": "MERGEABLE",
+    "merge_state_status": "UNSTABLE",
+    "head_sha": "3f52f2c2da99c8adc5ee927ee6e5ba4b151e6b49",
+    "updated_at": "2026-08-09T11:30:58Z",
+    "ci": "all reported checks passed",
+    "vercel": "team_authorization_required",
+    "latest_maintainer_review": "requested four fixes, rebase, and split consideration; author replied with fixes and verification",
+    "latest_author_comment": "production smoke still saw 404 for PATCH /api/cli/edit and requested deployment or route confirmation",
+    "production_submission_route": "not deployed"
+  },
+  "checks": {
+    "authenticated_edit_e2e": false,
+    "duplicate_submit_attempted": false,
+    "credentials_recorded": false,
+    "local_environment_data_recorded": false
+  },
+  "result": "upstream_manifest_unchanged_pr_654_open_production_cli_edit_route_not_deployed"
+}
