@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-09T17:12:50Z",
+  "checked_at": "2026-08-09T17:49:21Z",
   "service_scope": "local_image_playground",
   "verification": {
     "first_run": {
@@ -32,17 +32,43 @@
     }
   },
   "billable_smoke": {
-    "status": "not_run",
-    "reason": "本轮仅完成非计费能力与合同检查；真实上游 smoke 仍需显式授权且当前生图服务不可作为发布证明。"
+    "status": "failed",
+    "checks": {
+      "orchestration_generate_1k": {
+        "status": "failed",
+        "error_class": "timeout",
+        "elapsed_ms": 75007
+      },
+      "agent_generate_1k": {
+        "status": "failed",
+        "error_class": "timeout",
+        "elapsed_ms": 75005
+      },
+      "responses_page_sse_generate_1k": {
+        "status": "failed",
+        "http_status": 503,
+        "error_code": "page_sse_failed",
+        "reason": "没有支持 responses-sse 的健康渠道凭证"
+      },
+      "responses_agent_generate_1k": {
+        "status": "failed",
+        "error_code": "configuration_error",
+        "retryable": false,
+        "reason": "没有支持 responses-non-stream 的健康渠道凭证"
+      },
+      "edit_1k": "skipped_reference_not_provided",
+      "page_sse_edit_2k": "skipped_reference_not_provided"
+    },
+    "billable": true
   },
   "release_decision": {
     "new_generation_allowed": false,
-    "reason": "配置可见性不等于渠道真实可用性；不得在真实 smoke 前启动角色图集生成。"
+    "reason": "真实 smoke 未发现可用的发布通道；不得启动角色图集生成。"
   },
   "checks": {
     "credentials_recorded": false,
     "local_environment_data_recorded": false,
     "failed_idempotency_keys_reused": false
   },
-  "result": "non_billable_contract_pass_real_generation_still_blocked"
+  "result": "contract_pass_real_smoke_failed_generation_blocked"
 }
