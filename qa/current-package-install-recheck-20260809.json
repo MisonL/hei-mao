@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-08-09T12:55:55Z",
-  "source_commit": "f113e8fc590e31a84fac49c918aaa3b7c59e47ca",
+  "source_commit": "04092e4b3d9bec38c04c6dd0f7d206f2f7b07c34",
   "scope": "current release packages, v2 atlas contract, installer allowlist, and local installation parity",
   "release_packages": [
     "hei-mao",
