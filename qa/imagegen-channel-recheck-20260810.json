@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-08-09T17:12:50Z",
+  "service_scope": "local_image_playground",
+  "verification": {
+    "first_run": {
+      "status": "pass",
+      "capabilities_contract": "pass",
+      "runtime_capabilities_contract": "pass",
+      "agent_auth_required": false,
+      "page_sse_supported": true,
+      "agent_jobs_supported": true
+    },
+    "agent_doctor": {
+      "status": "pass",
+      "configured_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "effective_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "recommended_concurrency": 1,
+      "channel_capacity_per_credential": 1,
+      "responses_image_backend_enabled": false,
+      "state_backend": "sqlite"
+    },
+    "contract_check": {
+      "status": "pass",
+      "idempotency_key_required": true,
+      "page_sse_client_request_id_required": true
+    }
+  },
+  "billable_smoke": {
+    "status": "not_run",
+    "reason": "本轮仅完成非计费能力与合同检查；真实上游 smoke 仍需显式授权且当前生图服务不可作为发布证明。"
+  },
+  "release_decision": {
+    "new_generation_allowed": false,
+    "reason": "配置可见性不等于渠道真实可用性；不得在真实 smoke 前启动角色图集生成。"
+  },
+  "checks": {
+    "credentials_recorded": false,
+    "local_environment_data_recorded": false,
+    "failed_idempotency_keys_reused": false
+  },
+  "result": "non_billable_contract_pass_real_generation_still_blocked"
+}
