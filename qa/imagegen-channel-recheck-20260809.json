@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-09T06:20:39Z",
+  "checked_at": "2026-08-09T15:22:59Z",
   "service_scope": "local_image_playground",
   "diagnostics": {
     "capabilities": "ok",
@@ -12,8 +12,26 @@
     ],
     "effective_request_modes": [],
     "healthy_channel_credentials": 0,
+    "configured_channel_id": "jisuanyun-gpt-image",
     "selected_channel_id": null,
     "upstream_host": null
+  },
+  "upstream_probe": {
+    "host": "xkj.jisuanyun.vip",
+    "dns": "ok",
+    "tls": "ok",
+    "models": {
+      "status": 403,
+      "error_code": "INSUFFICIENT_BALANCE",
+      "billable": false
+    },
+    "request_modes": {
+      "images-non-stream": "not_run_requires_billable",
+      "images-sse": "not_run_requires_billable",
+      "responses-non-stream": "not_run_requires_billable",
+      "responses-sse": "not_run_requires_billable"
+    },
+    "result": "upstream_account_balance_blocked"
   },
   "billable_smoke": {
     "orchestration_generate_1k": {
