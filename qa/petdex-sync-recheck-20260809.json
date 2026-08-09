@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-08-09T06:12:00Z",
+  "source_commit": "bd5cb6e575c99d8df749e456d9b5849b709de92a",
+  "cli_version": "1.2.0",
+  "manifest": {
+    "generated_at": "2026-08-09T01:06:28.256Z",
+    "total": 4425,
+    "entries": [
+      {
+        "slug": "hei-mao",
+        "display_name": "黑毛",
+        "submitted_by": "misonl",
+        "sprite_version_number": 1,
+        "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+        "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
+      },
+      {
+        "slug": "hei-mao-quality",
+        "display_name": "黑毛·品控官",
+        "submitted_by": "misonl",
+        "sprite_version_number": 1,
+        "spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+        "pet_json_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43"
+      },
+      {
+        "slug": "hei-mao-2",
+        "display_name": "黑毛",
+        "submitted_by": "misonl",
+        "sprite_version_number": 1,
+        "classification": "duplicate_public_entry"
+      }
+    ]
+  },
+  "local_release_set": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie"
+  ],
+  "edit_attempts": [
+    {
+      "slug": "hei-mao",
+      "assets": ["spritesheet.webp", "pet.json"],
+      "assets_uploaded": true,
+      "submission_status": "blocked",
+      "http_status": 404,
+      "response_class": "html_error"
+    },
+    {
+      "slug": "hei-mao-quality",
+      "assets": ["spritesheet.webp", "pet.json"],
+      "assets_uploaded": true,
+      "submission_status": "blocked",
+      "http_status": 404,
+      "response_class": "html_error"
+    }
+  ],
+  "checks": {
+    "duplicate_submit_attempted": false,
+    "public_entries_changed": false,
+    "local_repository_changed": false,
+    "public_files_contain_local_environment_data": false
+  },
+  "result": "external_edit_endpoint_blocked"
+}

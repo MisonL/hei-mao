@@ -38,7 +38,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-chef` | 厨师 | 已验证 | 已提交，等待审核 |
 | `hei-mao-foodie` | 美食家 | 已验证 | 已提交，等待审核 |
 
-公开 manifest 当前只提供以上两个 slug，安装命令只对已审核的公开条目有效。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 仍处于个人提交区的 `pending` 状态，审核完成前不能使用 `petdex install` 下载；它们只能通过本仓库安装器或本地文件安装。
+公开 manifest 当前包含 `hei-mao`、`hei-mao-quality` 和历史重复条目 `hei-mao-2`，安装命令只对已审核的公开条目有效。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 仍处于个人提交区的 `pending` 状态，审核完成前不能使用 `petdex install` 下载；它们只能通过本仓库安装器或本地文件安装。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -47,7 +47,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-截至 2026-08-08，Petdex 公开 manifest 中有 `hei-mao`、`hei-mao-quality` 和历史重复条目 `hei-mao-2`。公开下载的 `hei-mao` SHA-256 为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`，`hei-mao-quality` SHA-256 为 `254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`，均不同于本仓库当前已验证版本。按已有 slug 的编辑规则复核时，当前 `petdex@1.1.0` 对 `hei-mao` 报资源预签名端点不可用并在提交阶段返回 HTML 404，对 `hei-mao-quality` 报条目不存在或不属于当前账号；因此不能把线上资源标记为已同步，也不能使用 `petdex submit` 创建重复条目。`hei-mao-2` 是历史重复条目，不属于当前发布集。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 已进入个人提交区的 `pending` 状态，审核完成前不将它们视为 Petdex 已上线包。
+截至 2026-08-09，Petdex 公开 manifest 中有 `hei-mao`、`hei-mao-quality` 和历史重复条目 `hei-mao-2`。公开下载的 `hei-mao` SHA-256 为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`，`hei-mao-quality` SHA-256 为 `254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`，均不同于本仓库当前已验证版本。使用 `petdex@1.2.0 edit` 按已有 slug 规则上传当前 `sprite` 和 `meta` 后，`hei-mao`、`hei-mao-quality` 均在提交阶段返回 HTML 404；因此不能把线上资源标记为已同步，也不能使用 `petdex submit` 创建重复条目。`hei-mao-2` 是历史重复条目，不属于当前发布集。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-foodie` 已进入个人提交区的 `pending` 状态，审核完成前不将它们视为 Petdex 已上线包。完整复核证据见 `qa/petdex-sync-recheck-20260809.json`。
 
 ### 角色安装器
 
