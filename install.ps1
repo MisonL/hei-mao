@@ -195,6 +195,20 @@ function Test-Sha256 {
     Write-Detail "SHA256 ok: $okName"
 }
 
+function Copy-LocalPetJson {
+    param(
+        [string]$SourcePath,
+        [string]$DestinationPath
+    )
+
+    # Git on Windows may materialize tracked JSON as CRLF. Normalize the
+    # text-only manifest to the repository's UTF-8/LF bytes before hashing.
+    $manifestText = [System.IO.File]::ReadAllText($SourcePath, [System.Text.Encoding]::UTF8)
+    $manifestText = $manifestText.Replace("`r`n", "`n")
+    $utf8NoBom = New-Object System.Text.UTF8Encoding -ArgumentList $false
+    [System.IO.File]::WriteAllText($DestinationPath, $manifestText, $utf8NoBom)
+}
+
 function Copy-OrDownloadAsset {
     param(
         [string]$TempDir,
@@ -221,7 +235,7 @@ function Copy-OrDownloadAsset {
     if ((-not $hasBaseOverride) -and $hasLocalAssets) {
         Write-Detail "Source: local files"
         Write-Detail "Path: $localAssetRoot"
-        Copy-Item -LiteralPath (Join-Path $localAssetRoot "pet.json") -Destination (Join-Path $TempDir "pet.json") -Force
+        Copy-LocalPetJson -SourcePath (Join-Path $localAssetRoot "pet.json") -DestinationPath (Join-Path $TempDir "pet.json")
         Copy-Item -LiteralPath (Join-Path $localAssetRoot "spritesheet.webp") -Destination (Join-Path $TempDir "spritesheet.webp") -Force
         return
     }
@@ -233,7 +247,7 @@ function Copy-OrDownloadAsset {
         }
         Write-Detail "Source: local files"
         Write-Detail "Path: $localAssetRoot"
-        Copy-Item -LiteralPath (Join-Path $localAssetRoot "pet.json") -Destination (Join-Path $TempDir "pet.json") -Force
+        Copy-LocalPetJson -SourcePath (Join-Path $localAssetRoot "pet.json") -DestinationPath (Join-Path $TempDir "pet.json")
         Copy-Item -LiteralPath (Join-Path $localAssetRoot "spritesheet.webp") -Destination (Join-Path $TempDir "spritesheet.webp") -Force
         return
     }
@@ -268,7 +282,8 @@ function Test-Asset {
         throw "Downloaded assets are empty."
     }
 
-    $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+    $manifestText = [System.IO.File]::ReadAllText($manifestPath, [System.Text.Encoding]::UTF8)
+    $manifest = $manifestText | ConvertFrom-Json
     if ($manifest.id -ne $PetId) {
         throw "pet.json does not describe the expected pet id: $PetId"
     }

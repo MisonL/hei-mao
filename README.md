@@ -66,7 +66,7 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 ./install.ps1 -PetId hei-mao-chef
 ```
 
-安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
+安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。Windows PowerShell 5.1 的本地 checkout 可能受 Git `core.autocrlf` 影响，安装器会对文本 manifest 显式按 UTF-8/LF 规范化后再校验固定 SHA，二进制图集保持原样。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
 未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。`hei-mao-foodie` 虽有图集文件，但最终视觉 QA 因 waiting 行 detached effects 阻断，同样不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 

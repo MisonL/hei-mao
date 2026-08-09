@@ -94,6 +94,19 @@
     "desktop_and_codex_files_match": true,
     "temporary_target_removed": true
   },
+  "cross_platform_remote_smoke": {
+    "linux": {
+      "chef_install": "pass",
+      "foodie_rejection_exit_code": 1,
+      "temporary_files_removed": true
+    },
+    "windows_powershell_5_1": {
+      "chef_install": "pass",
+      "foodie_rejection_exit_code": 1,
+      "crlf_checkout_normalization": "pass",
+      "temporary_files_removed": true
+    }
+  },
   "public_file_scan": {
     "local_paths_or_credentials_found": false
   },
