@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-08-09T06:20:39Z",
+  "service_scope": "local_image_playground",
+  "diagnostics": {
+    "capabilities": "ok",
+    "contract_check": "ok",
+    "runtime": "ok",
+    "state_backend": "sqlite",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "effective_request_modes": [],
+    "healthy_channel_credentials": 0,
+    "selected_channel_id": null,
+    "upstream_host": null
+  },
+  "billable_smoke": {
+    "orchestration_generate_1k": {
+      "status": "failed",
+      "error_code": "configuration_error",
+      "request_mode": "images-non-stream",
+      "retryable": false
+    },
+    "agent_generate_1k": {
+      "status": "failed",
+      "error_code": "configuration_error",
+      "request_mode": "images-non-stream",
+      "retryable": false
+    },
+    "responses_page_sse_generate_1k": {
+      "status": "failed",
+      "error_code": "page_sse_failed",
+      "http_status": 503,
+      "request_mode": "responses-sse",
+      "retryable": false
+    },
+    "responses_agent_generate_1k": {
+      "status": "failed",
+      "error_code": "configuration_error",
+      "request_mode": "responses-non-stream",
+      "retryable": false
+    }
+  },
+  "delivery_run": {
+    "run_id": "hei-mao-delivery",
+    "visual_jobs_pending": 13,
+    "decoded_outputs": 0,
+    "package_created": false
+  },
+  "checks": {
+    "failed_idempotency_keys_reused": false,
+    "generated_artifacts_created": false,
+    "local_environment_data_recorded": false
+  },
+  "result": "local_image_channel_blocked",
+  "resume_condition": "A healthy image-generation channel must become effective before starting a new role run."
+}

@@ -71,6 +71,8 @@ $env:HEI_MAO_PET_ID="hei-mao-foodie"; irm https://raw.githubusercontent.com/Miso
 
 未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。
 
+这三个角色目前没有可发布图集。2026-08-09 的本地生图渠道复核显示能力与契约正常，但没有任何 effective request mode，因此未发送可交付图集，也未把缺图角色加入安装器；复核证据见 `qa/imagegen-channel-recheck-20260809.json`。
+
 本地手动安装角色时：
 
 ```bash
