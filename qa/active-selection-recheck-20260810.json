@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-08-09T18:47:21Z",
+  "source_commit": "6b9685b1fc89ff4a5ac08adcaa87e84757edd807",
+  "scope": "active Codex selection and local release-set reconciliation",
+  "active_selection": {
+    "selected_avatar_id": "custom:hei-mao",
+    "historical_selection_removed": true
+  },
+  "installed_release_set": {
+    "codex": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
+    "petdex": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
+    "sets_match": true,
+    "historical_and_blocked_slugs_absent": true,
+    "file_sha256_parity": true
+  },
+  "desktop_visibility": {
+    "petdex_desktop_process": "running",
+    "codex_app_process": "running",
+    "screen_capture": "unavailable_in_current_session",
+    "multi_role_visual_selection": "not_verified"
+  },
+  "checks": {
+    "repository_modified_by_local_selection_fix": false,
+    "private_paths_recorded": false,
+    "credentials_recorded": false
+  },
+  "result": "active_selection_reconciled_visual_app_acceptance_remains_open"
+}
