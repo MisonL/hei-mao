@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-08-09T17:24:00Z",
+  "scope": "fresh v2 atlas contract and existing visual QA recheck",
+  "runtime": {
+    "python": "hatch-pet bundled runtime",
+    "pillow": "12.3.0"
+  },
+  "validator": {
+    "script": "hatch-pet/scripts/validate_atlas.py",
+    "arguments": "--require-v2 --chroma-key <package-key>",
+    "contract": {
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "columns": 8,
+      "rows": 11,
+      "cell_width": 192,
+      "cell_height": 208,
+      "sprite_version_number": 2
+    },
+    "release_packages": {
+      "hei-mao": "pass",
+      "hei-mao-quality": "pass",
+      "hei-mao-butler": "pass",
+      "hei-mao-chef": "pass"
+    },
+    "blocked_package_structure": {
+      "hei-mao-foodie": "pass; visual gate remains blocked"
+    },
+    "all_packages_zero_errors": true,
+    "all_packages_zero_warnings": true,
+    "all_packages_zero_transparent_rgb_residue": true
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p test_*.py -q",
+    "passed": 28,
+    "failed": 0
+  },
+  "visual_gate_recheck": {
+    "release_packages": {
+      "hei-mao": "pass_with_reviewed_warnings",
+      "hei-mao-quality": "pass",
+      "hei-mao-butler": "pass_with_reviewed_warnings",
+      "hei-mao-chef": "pass_with_reviewed_warnings"
+    },
+    "blocked_packages": {
+      "hei-mao-foodie": {
+        "status": "fail",
+        "repair_rows": [
+          "waiting"
+        ],
+        "reason": "waiting 行仍含 3 个 detached effects；必须整行重新生成。"
+      }
+    }
+  },
+  "checks": {
+    "fake_or_tiled_assets_used": false,
+    "release_allowlist_changed": false,
+    "local_environment_data_recorded": false
+  },
+  "result": "four_release_packages_pass_fresh_contract_foodie_visual_block_remains"
+}
