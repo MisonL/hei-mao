@@ -206,6 +206,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-chef/`: 厨师 v2 的独立验证与视觉复核证据
 - `pets/hei-mao-foodie/`: 美食家角色包（最终视觉 QA 阻断，待修复）
 - `qa/hei-mao-foodie/`: 美食家 v2 的结构验证和视觉阻断证据
+- `qa/petdex-desktop-live-smoke-20260809.json`: Petdex Desktop 单角色实时烟测；不替代 Codex App 全量验收
 - `prompts/`: 生成 base 和各动画行时使用的提示词
 - `pet_request.json`: 本次宠物生成请求配置
 
