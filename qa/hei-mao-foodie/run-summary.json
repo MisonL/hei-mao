@@ -1,6 +1,6 @@
 {
-  "ok": true,
-  "status": "pass_with_reviewed_warnings",
+  "ok": false,
+  "status": "blocked_visual_qa_waiting_row",
   "spriteVersionNumber": 2,
   "spritesheet": "pets/hei-mao-foodie/spritesheet.webp",
   "sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",

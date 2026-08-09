@@ -1,11 +1,13 @@
 {
-  "audited_at": "2026-08-09T06:35:00Z",
-  "source_commit": "96d5be2204eaf9437603d9843b77fb31f41daf46",
+  "audited_at": "2026-08-09T12:55:55Z",
+  "source_commit": "f113e8fc590e31a84fac49c918aaa3b7c59e47ca",
   "current_release_set": [
     "hei-mao",
     "hei-mao-quality",
     "hei-mao-butler",
-    "hei-mao-chef",
+    "hei-mao-chef"
+  ],
+  "blocked_local_packages": [
     "hei-mao-foodie"
   ],
   "historical_slugs": {
@@ -47,12 +49,15 @@
     }
   },
   "live_public_manifest": {
-    "generated_at": "2026-08-09T01:06:28.256Z",
-    "total": 4425,
+    "generated_at": "2026-08-09T12:33:27.214Z",
+    "total": 4489,
     "selected_entries": [
       {"slug": "hei-mao", "sprite_version_number": 1},
       {"slug": "hei-mao-quality", "sprite_version_number": 1},
-      {"slug": "hei-mao-2", "classification": "duplicate_public_entry"}
+      {"slug": "hei-mao-2", "classification": "duplicate_public_entry"},
+      {"slug": "hei-mao-butler", "sprite_version_number": 1},
+      {"slug": "hei-mao-chef", "sprite_version_number": 1},
+      {"slug": "hei-mao-foodie", "sprite_version_number": 1}
     ]
   },
   "local_install_roots": {
@@ -60,27 +65,28 @@
       "hei-mao",
       "hei-mao-quality",
       "hei-mao-butler",
-      "hei-mao-chef",
-      "hei-mao-foodie"
+      "hei-mao-chef"
     ],
     "petdex": [
       "hei-mao",
       "hei-mao-quality",
       "hei-mao-butler",
-      "hei-mao-chef",
-      "hei-mao-foodie"
+      "hei-mao-chef"
     ]
   },
   "checks": {
     "historical_installation_absent": true,
     "duplicate_entry_excluded_from_release_set": true,
     "current_release_sets_match": true,
-    "public_record_contains_local_environment_data": false
+    "public_record_contains_local_environment_data": false,
+    "blocked_foodie_absent_from_active_install": true
   },
   "open_followups": [
+    "等待生图渠道恢复后完整重生成 hei-mao-foodie 的 waiting 行并重新通过最终视觉 QA。",
     "等待本地生图渠道恢复后生成 delivery、fortune、traveler。",
     "按 Petdex 编辑规则同步已有 hei-mao 与 hei-mao-quality 条目。",
-    "等待 Petdex 处理历史重复条目 hei-mao-2。"
+    "等待 Petdex 处理历史重复条目 hei-mao-2；当前公开 manifest 仍报告相关条目为 spriteVersionNumber 1。",
+    "等待 PR #654 的 Bearer 编辑路由部署后再进行已登录端到端验证。"
   ],
-  "result": "pass_with_open_followups"
+  "result": "pass_with_open_followups_and_blocked_foodie"
 }
