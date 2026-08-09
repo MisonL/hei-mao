@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-08-09T17:27:00Z",
+  "scope": "GitHub and GitLab main raw asset parity after publish",
+  "snapshot_base_commit": "319fa7fe9c27e0e703989886693c133dece45a27",
+  "remote_heads": {
+    "github_main": "319fa7fe9c27e0e703989886693c133dece45a27",
+    "gitlab_main": "319fa7fe9c27e0e703989886693c133dece45a27",
+    "match": true
+  },
+  "release_slugs": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef"
+  ],
+  "raw_asset_checks": {
+    "github": "all release metadata and spritesheet SHA-256 values match repository",
+    "gitlab": "all release metadata and spritesheet SHA-256 values match repository",
+    "github_gitlab_cross_match": true
+  },
+  "installer_smoke": {
+    "release_slugs": "pass",
+    "blocked_foodie": "rejected_before_write",
+    "unknown_slug": "rejected_before_write",
+    "temporary_targets_cleaned": true
+  },
+  "checks": {
+    "credentials_recorded": false,
+    "local_environment_data_recorded": false
+  },
+  "result": "github_gitlab_sources_and_installers_consistent"
+}
