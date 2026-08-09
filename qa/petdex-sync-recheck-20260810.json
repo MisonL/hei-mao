@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-08-09T16:13:21Z",
+  "source_commit": "e015b23e05453ca5a9d5e54b3bb50912e91abf75",
+  "cli_version": "1.2.0",
+  "desktop_version": "0.6.0",
+  "manifest": {
+    "url": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "http_status": 200,
+    "generated_at": "2026-08-09T12:33:27.214Z",
+    "total": 4489,
+    "selected_entries": [
+      {"slug": "hei-mao", "sprite_version_number": 1},
+      {"slug": "hei-mao-quality", "sprite_version_number": 1},
+      {"slug": "hei-mao-2", "sprite_version_number": 1, "classification": "duplicate_public_entry"},
+      {"slug": "hei-mao-butler", "sprite_version_number": 1},
+      {"slug": "hei-mao-chef", "sprite_version_number": 1},
+      {"slug": "hei-mao-foodie", "sprite_version_number": 1}
+    ]
+  },
+  "live_probes": {
+    "cli_edit_patch_without_auth": {
+      "method": "PATCH",
+      "path": "/api/cli/edit",
+      "http_status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "response_class": "html_error"
+    },
+    "cli_edit_presign_post_without_auth": {
+      "method": "POST",
+      "path": "/api/cli/edit-presign",
+      "http_status": 401,
+      "content_type": "application/json",
+      "response_class": "auth_required"
+    },
+    "latest_cli_edit_route": "PATCH /api/my-pets/<id>/edit"
+  },
+  "pr_654": {
+    "state": "OPEN",
+    "mergeable": "MERGEABLE",
+    "merge_state_status": "UNSTABLE",
+    "head_sha": "3f52f2c2da99c8adc5ee927ee6e5ba4b151e6b49",
+    "updated_at": "2026-08-09T11:30:58Z",
+    "ci": "passed",
+    "vercel": "team_authorization_required",
+    "production_route_deployed": false
+  },
+  "checks": {
+    "duplicate_submit_attempted": false,
+    "public_entries_changed": false,
+    "authenticated_edit_e2e": false,
+    "v2_manifest_sync": false,
+    "production_edit_route_available": false,
+    "public_files_contain_local_environment_data": false
+  },
+  "result": "manifest_unchanged_v2_sync_blocked_edit_route_not_deployed"
+}
