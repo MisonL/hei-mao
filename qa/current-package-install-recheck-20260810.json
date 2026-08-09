@@ -85,6 +85,7 @@
     "blocked_foodie_absent": true
   },
   "petdex_install_smoke": {
+    "source_commit": "6a394687f1c0511f59349b471b6361a8dd0e4de2",
     "cli_version": "1.2.0",
     "isolated_home_used": true,
     "all_release_slugs_downloaded": true,
