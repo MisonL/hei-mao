@@ -86,6 +86,14 @@
     ],
     "foodie_rejected_by_allowlist": true
   },
+  "petdex_install_smoke": {
+    "cli_version": "1.2.0",
+    "slug": "hei-mao-chef",
+    "result": "pass",
+    "isolated_home_used": true,
+    "desktop_and_codex_files_match": true,
+    "temporary_target_removed": true
+  },
   "public_file_scan": {
     "local_paths_or_credentials_found": false
   },
