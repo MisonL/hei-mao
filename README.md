@@ -21,6 +21,8 @@ npx -y petdex@latest install hei-mao-butler
 npx -y petdex@latest install hei-mao-chef
 ```
 
+截至本次复核，以上命令会下载 Petdex 当前公开版本：`hei-mao` 和 `hei-mao-quality` 的线上 metadata 或 spritesheet SHA 与本仓库 v2 不一致，`hei-mao-butler` 和 `hei-mao-chef` 的字节与仓库一致。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录；Petdex 编辑路由部署并完成已登录同步前，不要把线上下载结果当作本仓库 v2。
+
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 ```text
