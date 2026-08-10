@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-08-10T04:14:43Z",
+  "scope": "Petdex PR #654 deployment and production edit-route recheck",
+  "pull_request": {
+    "number": 654,
+    "state": "OPEN",
+    "merged": false,
+    "head_commit": "3f52f2c2da99c8adc5ee927ee6e5ba4b151e6b49",
+    "base_commit": "ea78ad34eeabecb3ee315a2e6c5a43c3d8cf7983",
+    "automated_checks": "all CLI, SDK, and platform matrix checks passed",
+    "vercel_deploy_check": "failed_authorization_required"
+  },
+  "production_routes": {
+    "post_cli_edit_presign": {
+      "http_status": 401,
+      "content_type": "application/json",
+      "meaning": "route exists; unauthenticated request rejected"
+    },
+    "patch_cli_edit": {
+      "http_status": 404,
+      "content_type": "text/html",
+      "meaning": "Bearer edit submission route from PR is not deployed"
+    }
+  },
+  "external_write": {
+    "attempted": false,
+    "duplicate_edit_submitted": false
+  },
+  "release_decision": {
+    "petdex_v2_sync_complete": false,
+    "blocking_condition": "upstream PR remains open and production deployment authorization is pending"
+  },
+  "public_file_scan": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false
+  },
+  "result": "pr_654_code_checks_pass_production_bearer_edit_route_not_deployed"
+}
