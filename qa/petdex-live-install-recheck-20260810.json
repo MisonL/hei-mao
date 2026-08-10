@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-08-10T04:08:08Z",
+  "source_commit": "214f2974449c1392642694b6da902891add1d7a9",
+  "scope": "Petdex 1.2.0 public manifest, isolated install, and repository drift recheck",
+  "cli": {
+    "version": "1.2.0",
+    "doctor": "removed_in_v1",
+    "isolated_install": "pass",
+    "installed_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "petdex_and_codex_files_match": true
+  },
+  "manifest": {
+    "generated_at": "2026-08-10T01:07:58.002Z",
+    "total": 4489,
+    "owned_current_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "historical_duplicate_slug": "hei-mao-2",
+    "index_sprite_version_number": 1,
+    "all_current_entries_http_status": 200
+  },
+  "online_metadata": {
+    "pet_json_sprite_version_number": 2,
+    "repository_to_online_sha256_match": {
+      "hei-mao": true,
+      "hei-mao-quality": false,
+      "hei-mao-butler": true,
+      "hei-mao-chef": true,
+      "hei-mao-foodie": true
+    }
+  },
+  "online_sprites": {
+    "repository_to_online_sha256_match": {
+      "hei-mao": false,
+      "hei-mao-quality": false,
+      "hei-mao-butler": true,
+      "hei-mao-chef": true,
+      "hei-mao-foodie": false
+    },
+    "all_downloads_http_status": 200
+  },
+  "public_file_scan": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false
+  },
+  "release_decision": {
+    "petdex_v2_sync_complete": false,
+    "reason": "Petdex 编辑路由和已登录同步尚未完成；在线 manifest 索引仍为 v1，部分公开 sprite 与仓库 v2 漂移。"
+  },
+  "result": "petdex_install_available_online_assets_drift_from_repository_v2"
+}

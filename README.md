@@ -43,7 +43,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest 可见，字段仍为 v1 |
 | `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，字段仍为 v1 |
 
-公开 manifest 当前可见五个角色条目以及历史重复条目 `hei-mao-2`。manifest 中的公开资源仍报告 `spriteVersionNumber: 1`，不能据此宣称本仓库的 v2 版本已经同步。`hei-mao-foodie` 的 waiting 行已完整重生成并通过最终视觉 QA；Petdex 线上条目仍需按编辑流程同步，线上旧资源不能视为本仓库 v2。
+公开 manifest 当前可见五个角色条目以及历史重复条目 `hei-mao-2`。manifest 索引仍报告 `spriteVersionNumber: 1`，虽然当前公开 pet JSON 已报告 v2，但部分 sprite 和 metadata 仍与本仓库不一致，不能据此宣称本仓库的 v2 版本已经同步。`hei-mao-foodie` 的 waiting 行已完整重生成并通过最终视觉 QA；Petdex 线上条目仍需按编辑流程同步，线上旧资源不能视为本仓库 v2。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -52,7 +52,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-截至 2026-08-09T19:04:38Z，Petdex 公开 manifest 的生成时间为 `2026-08-09T18:28:16.433Z`，总数为 4489，包含 `hei-mao`、`hei-mao-quality`、`hei-mao-butler`、`hei-mao-chef`、`hei-mao-foodie` 和历史重复条目 `hei-mao-2`，这些条目的 manifest 字段均为 `spriteVersionNumber: 1`。公开下载的 sprite SHA-256 依次为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`、`254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`、`1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`、`32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`、`fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`；根包和品控官的线上 sprite 与本仓库当前版本不同，其他三个 sprite 字节相同但 manifest 版本字段仍为 v1。在线 pet JSON 中根包、大管家、厨师和美食家与仓库一致，品控官 metadata 仍不一致。最新 CLI 为 `petdex@1.2.0`，其编辑流程使用 `/api/pets/<slug>`、`POST /api/cli/edit-presign` 和 `PATCH /api/my-pets/<id>/edit`；本 PR 提议的 `PATCH /api/cli/edit` 在正式服务仍返回 HTML 404，说明 PR #654 尚未部署。未登录调用 `edit-presign` 返回 JSON 401 属于认证门禁，不能替代已登录端到端验证；本轮未进行外部写入，因此不能将线上 v2 同步标记为完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/remote-release-source-recheck-20260810.json`。
+截至 2026-08-10T04:08:08Z，Petdex 公开 manifest 的生成时间为 `2026-08-10T01:07:58.002Z`，总数为 4489，包含五个当前角色和历史重复条目 `hei-mao-2`；五个当前条目的 manifest 索引字段仍为 `spriteVersionNumber: 1`，但公开 pet JSON 的 `spriteVersionNumber` 已为 2。公开下载的 sprite 中，`hei-mao-butler` 和 `hei-mao-chef` 与仓库字节一致，`hei-mao`、`hei-mao-quality`、`hei-mao-foodie` 仍与仓库 v2 不一致；品控官的在线 metadata 也与仓库不一致。`petdex@1.2.0 install` 已在隔离目录成功下载五个角色并同时写入 Petdex/Codex 目录；这只证明线上安装可用，不代表线上资源已同步为仓库 v2。当前 CLI 的 `doctor` 已在 v1 移除；编辑流程仍需按正式的已登录编辑接口完成，不能把公开安装 smoke 当作 v2 发布完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/petdex-live-install-recheck-20260810.json`。
 
 本机当前保留五个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。最新 foodie 安装复核见 `qa/foodie-install-recheck-20260810.json`。
 
@@ -238,6 +238,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/petdex-sync-recheck-20260810.json`: 最新 Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/remote-petdex-pr-recheck-20260810.json`: 当前 Petdex manifest、公开资源 SHA、编辑路由和 PR #654 最新审查/部署状态复核
+- `qa/petdex-live-install-recheck-20260810.json`: Petdex 1.2.0 当前 manifest、隔离安装、公开资源 SHA 漂移和 `doctor` 移除状态复核
 - `qa/cross-platform-installer-recheck-20260810.json`: Windows 10 PowerShell 5.1 与 Linux x86_64 隔离安装器复核及远端网络可达性结果
 - `qa/active-selection-recheck-20260810.json`: 活动角色选择、双目录发布集和 Codex/Petdex Desktop 画面验收边界复核
 - `prompts/`: 生成 base 和各动画行时使用的提示词
