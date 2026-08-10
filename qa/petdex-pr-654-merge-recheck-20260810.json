@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-08-10T06:35:15Z",
+  "source_commit": "910e6d29",
+  "scope": "Petdex PR #654 merge and production route recheck",
+  "pull_request": {
+    "number": 654,
+    "url": "https://github.com/crafter-station/petdex/pull/654",
+    "state": "CLOSED",
+    "merged": true,
+    "merged_at": "2026-08-10T06:32:57Z",
+    "merged_by": "Railly",
+    "head_sha": "be9c541e27696889b21d37bcad34ac2b9f887719",
+    "commits": [
+      "5984815f6381b5cc26921185738a12344a8ea1df",
+      "f8df84c0ef7f053ab1ed2b887a33f757dad31b48",
+      "be9c541e27696889b21d37bcad34ac2b9f887719"
+    ],
+    "maintainer_confirmation": "作者确认已 rebase 到 main，并完成合并；修复包含锁快照竞态、spriteVersionNumber 传递、R2 幂等删除、迁移编号和用户级限流。"
+  },
+  "verification": {
+    "combined_status": "success",
+    "check_runs_total": 13,
+    "check_runs_success": 12,
+    "check_runs_neutral": 1,
+    "maintainer_ci_summary": "396 app tests, 94 CLI tests, tsc and biome clean, 9/9 CI jobs green"
+  },
+  "production_routes": {
+    "patch_cli_edit": {
+      "method": "OPTIONS",
+      "path": "/api/cli/edit",
+      "http_status": 204,
+      "allow": "OPTIONS, PATCH",
+      "meaning": "路由已部署；本次未使用凭证执行真实编辑提交。"
+    },
+    "post_cli_edit_presign": {
+      "method": "OPTIONS",
+      "path": "/api/cli/edit-presign",
+      "http_status": 204,
+      "allow": "OPTIONS, POST",
+      "meaning": "预签名路由已部署；本次未使用凭证执行真实上传。"
+    }
+  },
+  "remaining_gates": [
+    "Petdex manifest 当前仍显示 v1 索引，仓库 v2 资源和线上资源 SHA 仍需逐包复核。",
+    "未执行带凭证的 Petdex 编辑端到端提交，避免产生外部资产变更。"
+  ],
+  "public_file_hygiene": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false
+  },
+  "result": "pr_654_merged_production_routes_present_v2_sync_and_authenticated_e2e_remain_open"
+}
