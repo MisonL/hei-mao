@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-08-10T04:43:00Z",
+  "source_commit": "c800b879e8604b6a9b9ffc5996530c6d80e9897a",
+  "scope": "Petdex Desktop multi-display window placement and bubble overlap",
+  "desktop": {
+    "version": "desktop-v0.6.0",
+    "active_slug": "hei-mao-chef",
+    "process_running": true,
+    "installed_release_set": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ]
+  },
+  "display_topology": {
+    "online_display_count": 2,
+    "main_display": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "secondary_display": {
+      "x": -1792,
+      "y": 72,
+      "width": 1792,
+      "height": 1008
+    }
+  },
+  "initial_visibility": {
+    "pet_window": {
+      "x": -1176,
+      "y": 489,
+      "width": 135,
+      "height": 146,
+      "display": "secondary"
+    },
+    "bubble_window": {
+      "x": -1303,
+      "y": 337,
+      "width": 387,
+      "height": 743,
+      "display": "secondary"
+    },
+    "secondary_display_capture": "pet and bubble visible",
+    "main_display_codex_capture": "Codex App visible; Petdex windows are on the other display"
+  },
+  "cross_display_move": {
+    "operation": "move pet window through macOS accessibility API to the main display, then restore",
+    "moved_pet_window": {
+      "x": 120,
+      "y": 300,
+      "width": 135,
+      "height": 146,
+      "display": "main"
+    },
+    "observed_bubble_window": {
+      "x": 0,
+      "y": 337,
+      "width": 432,
+      "height": 743,
+      "display": "main"
+    },
+    "result": "fail",
+    "failure": "the pet overlaps the visible bubble content after the pet is moved to the other display; bubble placement does not avoid the new pet position",
+    "restored_pet_position": {
+      "x": -1176,
+      "y": 489,
+      "display": "secondary"
+    },
+    "restored_visual_state": "no overlap observed after restoring the original position"
+  },
+  "artifacts": {
+    "screen_captures": "not committed because they contain unrelated local desktop content",
+    "private_paths_or_credentials_recorded": false
+  },
+  "result": "blocked_by_upstream_multidisplay_overlap"
+}
