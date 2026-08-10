@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-08-10T04:00:47Z",
+  "source_commit": "0440179b99ceef58b43bd2c29686d0b51ed40bb7",
+  "scope": "public GitHub and GitLab main synchronization after local release-gate QA",
+  "branches": {
+    "github_main": "0440179b99ceef58b43bd2c29686d0b51ed40bb7",
+    "gitlab_main": "0440179b99ceef58b43bd2c29686d0b51ed40bb7",
+    "sha_equal": true
+  },
+  "raw_files": {
+    "github_readme": 200,
+    "github_current_gate": 200,
+    "github_imagegen_gate": 200,
+    "gitlab_readme": 200,
+    "gitlab_current_gate": 200
+  },
+  "working_tree": {
+    "clean": true,
+    "tracking_branch_synchronized": true
+  },
+  "public_file_scan": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false
+  },
+  "result": "github_gitlab_main_equal_and_public_raw_files_available"
+}
