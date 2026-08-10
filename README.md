@@ -75,7 +75,7 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
-这三个角色目前没有可发布图集。2026-08-10 的本地生图服务已通过 `images-non-stream` 的最小真实 smoke（1024x1024 WebP）；新角色可以按 hatch-pet 流程继续生成，但在完整 v2 合同、方向盲测、连续性和视觉 QA 完成前不会加入安装器。复核证据见 `qa/imagegen-channel-recheck-20260810.json`。
+这三个角色目前没有可发布图集。2026-08-10 的最小真实 smoke 仅代表历史检查曾通过；本轮新的 `images-non-stream` 和 `images-sse` base 生成请求分别因上游不可用和操作中止失败，均未产生 artifact，因此暂停新角色生成。复核证据见 `qa/imagegen-channel-recheck-20260810.json`。
 
 本地手动安装角色时：
 
@@ -232,7 +232,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/local-release-hygiene-recheck-20260810.json`: 最新角色身份、历史 slug 隔离、本机双目录 SHA、一键安装器和公开文件卫生复核
 - `qa/remote-install-source-recheck-20260810.json`: GitHub/GitLab main、raw 下载源和安装器拒绝路径复核
 - `qa/remote-release-source-recheck-20260810.json`: 基于 `82480ab` 的 GitHub/GitLab raw 文件、Petdex manifest/资源、PR #654 和正式路由即时复核
-- `qa/imagegen-channel-recheck-20260810.json`: 本地生图 Agent 的 capabilities、runtime、契约和 `images-non-stream` 真实 smoke 复核；临时 smoke 产物已清理
+- `qa/imagegen-channel-recheck-20260810.json`: 本地生图 Agent 的 capabilities、runtime、契约、历史 smoke 和本轮失败生成请求复核；当前新角色生成保持阻断
 - `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/petdex-sync-recheck-20260810.json`: 最新 Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/remote-petdex-pr-recheck-20260810.json`: 当前 Petdex manifest、公开资源 SHA、编辑路由和 PR #654 最新审查/部署状态复核

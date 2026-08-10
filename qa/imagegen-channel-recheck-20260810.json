@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-10T02:31:10Z",
-  "source_commit": "a027fc3b2d6db31c56d2680316f14f5601767c1e",
+  "checked_at": "2026-08-10T03:42:18Z",
+  "source_commit": "16051fb0947f94b7e7a65b55e86b1b4111e4f678",
   "service_scope": "local_image_playground",
   "verification": {
     "first_run": {
@@ -33,16 +33,37 @@
     }
   },
   "billable_smoke": {
-    "status": "passed",
+    "status": "blocked",
     "checks": {
-      "orchestration_generate_1k": {
+      "historical_orchestration_generate_1k": {
         "status": "passed",
         "request_mode": "images-non-stream",
         "elapsed_ms": 46255,
         "actual_dimensions": "1024x1024",
-        "output_format": "webp"
+        "output_format": "webp",
+        "checked_at": "2026-08-10T02:31:10Z",
+        "release_gate": "historical_only"
       },
-      "agent_generate_1k": "not_run_same_channel_smoke_already_passed",
+      "delivery_base_worker": {
+        "status": "failed",
+        "request_mode": "images-non-stream",
+        "error_code": "upstream_unavailable",
+        "retryable": true,
+        "elapsed_seconds_approx": 301,
+        "artifact_count": 0,
+        "idempotency_key": "redacted"
+      },
+      "delivery_base_sse": {
+        "status": "failed",
+        "request_mode": "images-sse",
+        "error_code": "unexpected_error",
+        "message": "操作被中止",
+        "retryable": false,
+        "elapsed_seconds_approx": 190,
+        "artifact_count": 0,
+        "idempotency_key": "redacted"
+      },
+      "agent_generate_1k": "not_run_after_current_generation_block",
       "responses_page_sse_generate_1k": "skipped_backend_disabled",
       "responses_agent_generate_1k": "skipped_backend_disabled",
       "edit_1k": "skipped_reference_not_provided",
@@ -51,16 +72,17 @@
     "billable": true,
     "request_id": "redacted",
     "idempotency_key": "redacted",
+    "distinct_idempotency_keys": true,
     "artifact_cleanup": "passed"
   },
   "release_decision": {
-    "new_generation_allowed": true,
-    "reason": "images-non-stream 真实 smoke 已通过；新角色生成仍须按 hatch-pet 单 job、独立幂等键和完整 v2 QA 执行。"
+    "new_generation_allowed": false,
+    "reason": "历史最小 smoke 曾通过，但本轮独立 base 生成请求均无 artifact 且至少一个上游不可用；必须等待新的健康真实 smoke 后再生成角色图集。"
   },
   "checks": {
     "credentials_recorded": false,
     "local_environment_data_recorded": false,
     "failed_idempotency_keys_reused": false
   },
-  "result": "contract_pass_real_smoke_passed_images_non_stream"
+  "result": "contract_pass_historical_smoke_current_generation_blocked"
 }
