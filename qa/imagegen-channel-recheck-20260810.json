@@ -1,5 +1,6 @@
 {
-  "checked_at": "2026-08-09T17:49:21Z",
+  "checked_at": "2026-08-10T02:31:10Z",
+  "source_commit": "a027fc3b2d6db31c56d2680316f14f5601767c1e",
   "service_scope": "local_image_playground",
   "verification": {
     "first_run": {
@@ -32,43 +33,34 @@
     }
   },
   "billable_smoke": {
-    "status": "failed",
+    "status": "passed",
     "checks": {
       "orchestration_generate_1k": {
-        "status": "failed",
-        "error_class": "timeout",
-        "elapsed_ms": 75007
+        "status": "passed",
+        "request_mode": "images-non-stream",
+        "elapsed_ms": 46255,
+        "actual_dimensions": "1024x1024",
+        "output_format": "webp"
       },
-      "agent_generate_1k": {
-        "status": "failed",
-        "error_class": "timeout",
-        "elapsed_ms": 75005
-      },
-      "responses_page_sse_generate_1k": {
-        "status": "failed",
-        "http_status": 503,
-        "error_code": "page_sse_failed",
-        "reason": "没有支持 responses-sse 的健康渠道凭证"
-      },
-      "responses_agent_generate_1k": {
-        "status": "failed",
-        "error_code": "configuration_error",
-        "retryable": false,
-        "reason": "没有支持 responses-non-stream 的健康渠道凭证"
-      },
+      "agent_generate_1k": "not_run_same_channel_smoke_already_passed",
+      "responses_page_sse_generate_1k": "skipped_backend_disabled",
+      "responses_agent_generate_1k": "skipped_backend_disabled",
       "edit_1k": "skipped_reference_not_provided",
       "page_sse_edit_2k": "skipped_reference_not_provided"
     },
-    "billable": true
+    "billable": true,
+    "request_id": "redacted",
+    "idempotency_key": "redacted",
+    "artifact_cleanup": "passed"
   },
   "release_decision": {
-    "new_generation_allowed": false,
-    "reason": "真实 smoke 未发现可用的发布通道；不得启动角色图集生成。"
+    "new_generation_allowed": true,
+    "reason": "images-non-stream 真实 smoke 已通过；新角色生成仍须按 hatch-pet 单 job、独立幂等键和完整 v2 QA 执行。"
   },
   "checks": {
     "credentials_recorded": false,
     "local_environment_data_recorded": false,
     "failed_idempotency_keys_reused": false
   },
-  "result": "contract_pass_real_smoke_failed_generation_blocked"
+  "result": "contract_pass_real_smoke_passed_images_non_stream"
 }
