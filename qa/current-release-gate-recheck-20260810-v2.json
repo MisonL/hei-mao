@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-08-10T04:00:47Z",
+  "source_commit": "a8db02d5f1790f6c1b8109879f15d2a863c9b9c3",
+  "scope": "current five-role v2 contract, installer, local parity, skill tests, and public-file recheck",
+  "runtime": {
+    "python": "Python 3.14.6",
+    "pillow": "12.2.0",
+    "validator": "hatch-pet/scripts/validate_atlas.py --require-v2"
+  },
+  "atlas_contract": {
+    "contract": {
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "columns": 8,
+      "rows": 11,
+      "cell_width": 192,
+      "cell_height": 208,
+      "sprite_version_number": 2
+    },
+    "chroma_keys": {
+      "hei-mao": "#00FF00",
+      "hei-mao-quality": "#FF00FF",
+      "hei-mao-butler": "#00FF00",
+      "hei-mao-chef": "#00FFFF",
+      "hei-mao-foodie": "#FF00FF"
+    },
+    "packages": {
+      "hei-mao": "pass",
+      "hei-mao-quality": "pass",
+      "hei-mao-butler": "pass",
+      "hei-mao-chef": "pass",
+      "hei-mao-foodie": "pass"
+    },
+    "errors": 0,
+    "warnings": 0,
+    "transparent_rgb_residue": 0
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p test_*.py -q",
+    "passed": 28,
+    "failed": 0,
+    "result": "pass"
+  },
+  "installer": {
+    "bash_syntax": "pass",
+    "powershell_parse": "pass",
+    "unix_isolated_local_source": "all five allowed slugs passed",
+    "powershell_isolated_local_source": "all five allowed slugs passed",
+    "unknown_slug": "rejected_before_write",
+    "temporary_targets": "isolated; no repository or user pet directory writes"
+  },
+  "installation_parity": {
+    "active_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "repository_to_codex_sha256_match": true,
+    "repository_to_petdex_sha256_match": true,
+    "codex_to_petdex_sha256_match": true,
+    "blocked_and_historical_slugs_absent": true
+  },
+  "public_file_scan": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false
+  },
+  "visual_followups": {
+    "five_published_roles": "retained visual QA artifacts have no hard failures; reviewed minor warnings remain documented",
+    "codex_app": "live multi-role refresh and normal-size visual acceptance remain unverified",
+    "delivery": "no publishable atlas; generation blocked by current image channel",
+    "fortune": "no publishable atlas",
+    "traveler": "no publishable atlas"
+  },
+  "result": "five_role_local_contract_and_install_gates_pass_visual_app_and_new_role_generation_open"
+}
