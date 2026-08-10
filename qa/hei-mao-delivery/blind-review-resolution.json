@@ -1,0 +1,46 @@
+{
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "parent",
+  "checks": [
+    {
+      "name": "alpha_holes_look_row_9",
+      "failed_checks": [
+        "000 transparent interior hole rows y=10,11",
+        "022.5 transparent interior hole rows y=12,13"
+      ],
+      "evidence": [
+        "The enlarged alpha masks show both gaps between the two ears and open to the exterior background.",
+        "ImageMagick connected-components 8 reports one foreground component and one exterior background component for each cell; no enclosed transparent component is present.",
+        "The normal-size direction sheet preserves a complete silhouette with intentional ear negative space and no body seam or see-through band."
+      ],
+      "resolution": "Accept the continuity heuristic warnings as legal ear negative space; do not regenerate row 9 or patch individual cells."
+    },
+    {
+      "name": "alpha_holes_look_row_10_v14",
+      "failed_checks": [
+        "202.5, 225, and 247.5 transparent interior hole rows y=19-21",
+        "202.5 has one threshold-only transparent pixel at cell coordinate (123,100) with alpha 16"
+      ],
+      "evidence": [
+        "High-contrast alpha masks show each reported gap opens through the top edge between the two ears.",
+        "Four-connected transparent-component analysis found no enclosed transparent component in 225 or 247.5; the only 202.5 component is one threshold-only anti-aliased pixel at an outline/prop edge.",
+        "The normal-size direction sheet shows a continuous filled silhouette, no see-through body band, and the independent visual QA classified all row-10 directions semantically correctly."
+      ],
+      "resolution": "Accept the three continuity heuristic warnings as legal ear negative space and anti-aliased edge behavior; do not regenerate row 10 or patch individual cells."
+    },
+    {
+      "name": "look_row_10_v14_continuity",
+      "failed_checks": [
+        "247.5->270 diff local outlier",
+        "315->337.5 diff and area-ratio warnings"
+      ],
+      "evidence": [
+        "The labeled normal-size loop keeps the expected clockwise direction and stable lower-body registration.",
+        "Independent visual QA marked 337.5 as a warning, not a hard semantic failure; no visible snap, clipping, identity change, or broken prop attachment is present.",
+        "Cardinal blind gates pass and all row-10 semantic verdicts pass."
+      ],
+      "resolution": "Accept these metric warnings as minor continuity evidence; keep the v14 row because repeated regeneration attempts degraded direction semantics."
+    }
+  ]
+}

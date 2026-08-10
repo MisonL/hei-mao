@@ -1,0 +1,39 @@
+{
+  "visual_qa": "pass_with_reviewed_warnings",
+  "raw_worker_verdict": "fail",
+  "reviewed_by": "independent_visual_qa_worker; parent",
+  "repair_rows": [],
+  "hard_failures": [],
+  "warnings": [
+    "202.5, 225, and 247.5 were flagged by the row heuristic, but high-contrast alpha review confirmed open ear negative space and no enclosed transparent component.",
+    "202.5 contains one threshold-only alpha-16 anti-aliased edge pixel; it is not a body hole.",
+    "247.5->270 and 315->337.5 are continuity metric outliers without a visible snap, clipping, identity change, or broken prop attachment.",
+    "337.5 is closer to the frontal identity pose than 315, but remains a readable up-left direction and transitions toward 000 without reversal.",
+    "The independent worker's failed result was resolved under the minor-warning policy with the retained alpha and labeled-loop evidence."
+  ],
+  "evidence": {
+    "contact_sheet": "qa/hei-mao-delivery/contact-sheet-extended.png",
+    "direction_sheet": "qa/hei-mao-delivery/look-directions.png",
+    "direction_semantics": "qa/hei-mao-delivery/direction-semantics.json",
+    "blind_validation": "qa/hei-mao-delivery/direction-blind-validation.json",
+    "blind_resolution": "qa/hei-mao-delivery/blind-review-resolution.json",
+    "continuity": "qa/hei-mao-delivery/look-continuity.json",
+    "standard_review": "qa/hei-mao-delivery/review.json",
+    "atlas_validation": "qa/hei-mao-delivery/validation.json",
+    "chroma_despill": "qa/hei-mao-delivery/chroma-despill.json",
+    "motion_previews": "qa/hei-mao-delivery/previews"
+  },
+  "direction_summary": {
+    "cardinal_gates": {
+      "000": "pass",
+      "090": "pass",
+      "180": "pass",
+      "270": "pass"
+    },
+    "all_expected_directions_have_verdicts": true,
+    "wrong_quadrant_or_reversal": false,
+    "identity_or_scale_failure": false
+  },
+  "resolution": "accept_minor_warnings",
+  "reviewed_at": "2026-08-11"
+}

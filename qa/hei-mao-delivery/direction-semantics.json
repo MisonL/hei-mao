@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "atlas": "pets/hei-mao-delivery/spritesheet.webp",
+  "atlas_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+  "reviewed_by": "independent_visual_qa_worker; parent",
+  "review_basis": [
+    "qa/hei-mao-delivery/look-directions.png",
+    "qa/hei-mao-delivery/contact-sheet-extended.png",
+    "qa/hei-mao-delivery/look-continuity.json",
+    "qa/hei-mao-delivery/direction-blind-validation.json"
+  ],
+  "hard_failures": [],
+  "warnings": [
+    "202.5, 225, and 247.5 continuity heuristic rows are legal open negative space between the ears, not enclosed body holes",
+    "247.5->270 and 315->337.5 are metric outliers without a visible snap or direction reversal",
+    "337.5 remains readable as up-left but is closer to the frontal identity pose than its 315 neighbor"
+  ],
+  "directions": [
+    {
+      "degree": "000",
+      "expected": "up",
+      "verdict": "pass",
+      "observed": "up",
+      "horizontal_axis": "screen-center",
+      "vertical_axis": "up",
+      "reason": "鼻吻和双眼抬向画面上方，头部俯仰明确。"
+    },
+    {
+      "degree": "022.5",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "up-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "up",
+      "reason": "鼻吻略向右并保持上抬，连接 000 与 090。"
+    },
+    {
+      "degree": "045",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "up-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "up",
+      "reason": "右上三分之二侧脸，两个轴都可辨。"
+    },
+    {
+      "degree": "067.5",
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "up-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "up",
+      "reason": "接近右侧面，鼻吻仍高于头部中心。"
+    },
+    {
+      "degree": "090",
+      "expected": "right",
+      "verdict": "pass",
+      "observed": "right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "screen-center",
+      "reason": "鼻吻、眼睛和头部轮廓明确朝向画面右侧。"
+    },
+    {
+      "degree": "112.5",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "down-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "down",
+      "reason": "右侧面基础上鼻吻下沉，右下方向连续。"
+    },
+    {
+      "degree": "135",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "down-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "down",
+      "reason": "鼻吻低于头部中心，右下三分之四侧脸清晰。"
+    },
+    {
+      "degree": "157.5",
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "down-right",
+      "horizontal_axis": "screen-right",
+      "vertical_axis": "down",
+      "reason": "接近 180 但仍保留右侧偏移，和俯视方向相连。"
+    },
+    {
+      "degree": "180",
+      "expected": "down",
+      "verdict": "pass",
+      "observed": "down",
+      "horizontal_axis": "screen-center",
+      "vertical_axis": "down",
+      "reason": "鼻吻位于头部下方中心，双眼可见，俯视明确。"
+    },
+    {
+      "degree": "202.5",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "down-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "down",
+      "reason": "鼻吻转向左下，仍保留连续的俯视角度。"
+    },
+    {
+      "degree": "225",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "down-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "down",
+      "reason": "左下侧脸和下倾头部均清晰。"
+    },
+    {
+      "degree": "247.5",
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "down-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "down",
+      "reason": "左侧轮廓接近 270，鼻吻仍低于头部中心。"
+    },
+    {
+      "degree": "270",
+      "expected": "left",
+      "verdict": "pass",
+      "observed": "left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "screen-center",
+      "reason": "鼻吻位于头部左缘，左侧面不可混淆。"
+    },
+    {
+      "degree": "292.5",
+      "expected": "up-left",
+      "verdict": "pass",
+      "observed": "up-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "up",
+      "reason": "左侧面基础上鼻吻和眼线抬向左上。"
+    },
+    {
+      "degree": "315",
+      "expected": "up-left",
+      "verdict": "pass",
+      "observed": "up-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "up",
+      "reason": "左上方向明确，和 270、337.5 保持同一面部运动族。"
+    },
+    {
+      "degree": "337.5",
+      "expected": "up-left",
+      "verdict": "warning",
+      "observed": "up-left",
+      "horizontal_axis": "screen-left",
+      "vertical_axis": "up",
+      "reason": "鼻吻仍偏左上且方向可辨；与 315 的面积变化属于已复核的 minor 连续性告警。"
+    }
+  ]
+}

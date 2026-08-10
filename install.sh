@@ -131,8 +131,13 @@ configure_pet() {
       SPRITESHEET_SHA256="9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23"
       PET_SUBDIR="pets/$requested_pet_id"
       ;;
+    hei-mao-delivery)
+      PET_JSON_SHA256="16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2"
+      SPRITESHEET_SHA256="ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"
+      PET_SUBDIR="pets/$requested_pet_id"
+      ;;
     *)
-      die "Unsupported pet id: $requested_pet_id. Supported ids: hei-mao, hei-mao-quality, hei-mao-butler, hei-mao-chef, hei-mao-foodie."
+      die "Unsupported pet id: $requested_pet_id. Supported ids: hei-mao, hei-mao-quality, hei-mao-butler, hei-mao-chef, hei-mao-foodie, hei-mao-delivery."
       ;;
   esac
 

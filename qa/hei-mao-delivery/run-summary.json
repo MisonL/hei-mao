@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "spriteVersionNumber": 2,
+  "spritesheet": "pets/hei-mao-delivery/spritesheet.webp",
+  "sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+  "validation": "qa/hei-mao-delivery/validation.json",
+  "chroma_despill": "qa/hei-mao-delivery/chroma-despill.json",
+  "contact_sheet": "qa/hei-mao-delivery/contact-sheet-extended.png",
+  "direction_sheet": "qa/hei-mao-delivery/look-directions.png",
+  "direction_semantics": "qa/hei-mao-delivery/direction-semantics.json",
+  "blind_direction_validation": "qa/hei-mao-delivery/direction-blind-validation.json",
+  "blind_review_resolution": "qa/hei-mao-delivery/blind-review-resolution.json",
+  "continuity": "qa/hei-mao-delivery/look-continuity.json",
+  "review": "qa/hei-mao-delivery/review.json",
+  "final_visual_qa": "qa/hei-mao-delivery/final-visual-qa.json",
+  "package": "pets/hei-mao-delivery"
+}
