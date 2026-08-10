@@ -42,9 +42,9 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-butler`  | 大管家 | 已验证                 | manifest 可见，字段仍为 v1 |
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest 可见，字段仍为 v1 |
 | `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，字段仍为 v1 |
-| `hei-mao-delivery` | 配送员 | v2 已验证，可本地安装 | 待提交 Petdex 编辑流程 |
+| `hei-mao-delivery` | 配送员 | v2 已验证，可本地安装 | 已提交，待审核 |
 
-公开 manifest 当前可见五个历史角色条目以及历史重复条目 `hei-mao-2`；`hei-mao-delivery` 的仓库包已通过本地 v2 门禁，尚未提交 Petdex 编辑流程。manifest 索引仍报告 `spriteVersionNumber: 1`，虽然当前公开 pet JSON 已报告 v2，但部分 sprite 和 metadata 仍与本仓库不一致，不能据此宣称线上资源已经同步。`hei-mao-foodie` 的 waiting 行已完整重生成并通过最终视觉 QA；线上旧资源不能视为本仓库 v2。
+公开 manifest 当前可见五个历史角色条目以及历史重复条目 `hei-mao-2`；`hei-mao-delivery` 的仓库包已通过本地 v2 门禁，并已提交 Petdex、当前等待审核。manifest 索引仍报告 `spriteVersionNumber: 1`，虽然当前公开 pet JSON 已报告 v2，但部分 sprite 和 metadata 仍与本仓库不一致，不能据此宣称线上资源已经同步。`hei-mao-foodie` 的 waiting 行已完整重生成并通过最终视觉 QA；线上旧资源不能视为本仓库 v2。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -123,7 +123,7 @@ npx -y petdex@latest install hei-mao-foodie
 
 ### 配送员角色
 
-`hei-mao-delivery` 是黑毛的社区配送角色包，已通过 v2 图集、透明度、方向盲测和独立视觉复核。连续性报告中的耳间开放负空间和局部数值告警均已按 minor review resolution 复核，没有封闭透明洞、裁切、身份漂移、比例跳变或方向反转。当前仓库安装器已纳入该角色；Petdex 线上编辑同步待执行。
+`hei-mao-delivery` 是黑毛的社区配送角色包，已通过 v2 图集、透明度、方向盲测和独立视觉复核。连续性报告中的耳间开放负空间和局部数值告警均已按 minor review resolution 复核，没有封闭透明洞、裁切、身份漂移、比例跳变或方向反转。当前仓库安装器已纳入该角色；Petdex 已接受提交并标记为 `held for review`，审核通过前不能使用 Petdex 在线安装命令。
 
 本地安装：
 
@@ -131,7 +131,7 @@ npx -y petdex@latest install hei-mao-foodie
 HEI_MAO_PET_ID=hei-mao-delivery curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-delivery bash
 ```
 
-Petdex 条目完成编辑同步后使用：
+Petdex 审核通过后使用：
 
 ```bash
 npx -y petdex@latest install hei-mao-delivery
@@ -347,6 +347,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-delivery/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
 - `qa/hei-mao-delivery/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
 - `qa/hei-mao-delivery/final-visual-qa.json`: `pass_with_reviewed_warnings`；耳间开放负空间和局部连续性告警已由独立复核与 alpha 连通性证据确认，不存在封闭透明洞或方向反转
+- `qa/petdex-delivery-submit-20260811.json`: Petdex 提交已接受，当前 `held_for_review`
 
 ## 许可
 

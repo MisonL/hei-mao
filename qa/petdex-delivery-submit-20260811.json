@@ -1,0 +1,12 @@
+{
+  "slug": "hei-mao-delivery",
+  "operation": "submit",
+  "cli_version": "1.2.0",
+  "result": "submitted",
+  "review_status": "held_for_review",
+  "review_note": "possible policy issue",
+  "duplicate_check": "no existing public entry was present before submission",
+  "submitted_at": "2026-08-11",
+  "install_status": "blocked_until_approval",
+  "evidence": "petdex submit pets/hei-mao-delivery returned 1 submitted, 0 failed"
+}
