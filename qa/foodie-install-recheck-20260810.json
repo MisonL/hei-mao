@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-08-10",
+  "source_commit": "working-tree-foodie-repair",
+  "scope": "hei-mao-foodie repaired v2 package, installer allowlist, and local installation parity",
+  "package": {
+    "slug": "hei-mao-foodie",
+    "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+    "spritesheet_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+    "sprite_version_number": 2,
+    "atlas_contract": "1536x2288 RGBA WebP, 8x11, 192x208 cells",
+    "validator": {
+      "command": "hatch-pet/scripts/validate_atlas.py --require-v2 --chroma-key '#FF00FF'",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "transparent_rgb_residue_pixels": 0
+    },
+    "waiting_row": {
+      "frames": 6,
+      "complete_regeneration": true,
+      "detached_effects": [],
+      "visual_qa": "pass"
+    },
+    "direction_qa": {
+      "cardinal_gates": {
+        "000": "pass",
+        "090": "pass",
+        "180": "pass",
+        "270": "pass"
+      },
+      "wrong_quadrant_or_reversal": false,
+      "identity_or_scale_failure": false
+    }
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p 'test_*.py' -q",
+    "passed": 28,
+    "failed": 0
+  },
+  "installer": {
+    "bash_syntax": "pass",
+    "foodie_local_source_smoke": "pass",
+    "powershell_local_source_smoke": "pass",
+    "foodie_sha256_validation": "pass",
+    "unknown_slug_rejected_before_write": true,
+    "powershell_parse": "pass"
+  },
+  "local_installation": {
+    "codex_path": "~/.codex/pets/hei-mao-foodie",
+    "petdex_path": "~/.petdex/pets/hei-mao-foodie",
+    "repository_to_codex_sha256_match": true,
+    "repository_to_petdex_sha256_match": true,
+    "codex_to_petdex_sha256_match": true,
+    "byte_parity": true,
+    "codex_app_refresh": "pending live visual acceptance"
+  },
+  "public_file_scan": {
+    "local_paths_found": false,
+    "private_network_addresses_found": false,
+    "credentials_found": false
+  },
+  "result": "foodie_repair_and_local_double_directory_install_passed_app_refresh_pending"
+}

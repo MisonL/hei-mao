@@ -19,9 +19,10 @@ npx -y petdex@latest install hei-mao
 npx -y petdex@latest install hei-mao-quality
 npx -y petdex@latest install hei-mao-butler
 npx -y petdex@latest install hei-mao-chef
+npx -y petdex@latest install hei-mao-foodie
 ```
 
-截至本次复核，以上命令会下载 Petdex 当前公开版本：`hei-mao` 和 `hei-mao-quality` 的线上 metadata 或 spritesheet SHA 与本仓库 v2 不一致，`hei-mao-butler` 和 `hei-mao-chef` 的字节与仓库一致。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录；Petdex 编辑路由部署并完成已登录同步前，不要把线上下载结果当作本仓库 v2。
+截至本次复核，以上命令会下载 Petdex 当前公开版本：`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的线上 metadata 或 spritesheet SHA 与本仓库 v2 不一致，`hei-mao-butler` 和 `hei-mao-chef` 的字节与仓库一致。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录；Petdex 编辑路由部署并完成已登录同步前，不要把线上下载结果当作本仓库 v2。
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -40,9 +41,9 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-quality` | 品控官 | 已验证                 | manifest 可见，字段仍为 v1 |
 | `hei-mao-butler`  | 大管家 | 已验证                 | manifest 可见，字段仍为 v1 |
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest 可见，字段仍为 v1 |
-| `hei-mao-foodie`  | 美食家 | 视觉 QA 阻断，暂缓安装 | manifest 可见，字段仍为 v1 |
+| `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，字段仍为 v1 |
 
-公开 manifest 当前可见五个角色条目以及历史重复条目 `hei-mao-2`。manifest 中的公开资源仍报告 `spriteVersionNumber: 1`，不能据此宣称本仓库的 v2 版本已经同步。`hei-mao-foodie` 的本地最终视觉 QA 已发现 waiting 行的三个 detached effects，已从安装器白名单和本机 active 安装中移除；生图渠道恢复并完成整行重生成前不得安装或发布。
+公开 manifest 当前可见五个角色条目以及历史重复条目 `hei-mao-2`。manifest 中的公开资源仍报告 `spriteVersionNumber: 1`，不能据此宣称本仓库的 v2 版本已经同步。`hei-mao-foodie` 的 waiting 行已完整重生成并通过最终视觉 QA；Petdex 线上条目仍需按编辑流程同步，线上旧资源不能视为本仓库 v2。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -53,7 +54,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 截至 2026-08-09T19:04:38Z，Petdex 公开 manifest 的生成时间为 `2026-08-09T18:28:16.433Z`，总数为 4489，包含 `hei-mao`、`hei-mao-quality`、`hei-mao-butler`、`hei-mao-chef`、`hei-mao-foodie` 和历史重复条目 `hei-mao-2`，这些条目的 manifest 字段均为 `spriteVersionNumber: 1`。公开下载的 sprite SHA-256 依次为 `ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c`、`254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92`、`1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304`、`32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957`、`fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`；根包和品控官的线上 sprite 与本仓库当前版本不同，其他三个 sprite 字节相同但 manifest 版本字段仍为 v1。在线 pet JSON 中根包、大管家、厨师和美食家与仓库一致，品控官 metadata 仍不一致。最新 CLI 为 `petdex@1.2.0`，其编辑流程使用 `/api/pets/<slug>`、`POST /api/cli/edit-presign` 和 `PATCH /api/my-pets/<id>/edit`；本 PR 提议的 `PATCH /api/cli/edit` 在正式服务仍返回 HTML 404，说明 PR #654 尚未部署。未登录调用 `edit-presign` 返回 JSON 401 属于认证门禁，不能替代已登录端到端验证；本轮未进行外部写入，因此不能将线上 v2 同步标记为完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/remote-release-source-recheck-20260810.json`。
 
-本机当前只保留四个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致；`hei-mao-foodie` 已从两处 active 安装中移除。当前安装复核见 `qa/current-package-install-recheck-20260810.json`。
+本机当前保留五个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。最新 foodie 安装复核见 `qa/foodie-install-recheck-20260810.json`。
 
 ### 角色安装器
 
@@ -72,9 +73,9 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。Windows PowerShell 5.1 的本地 checkout 可能受 Git `core.autocrlf` 影响，安装器会对文本 manifest 显式按 UTF-8/LF 规范化后再校验固定 SHA，二进制图集保持原样。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
-未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。`hei-mao-foodie` 虽有图集文件，但最终视觉 QA 因 waiting 行 detached effects 阻断，同样不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
+未完成完整 v2 图集和复核的 `hei-mao-delivery`、`hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
-这三个角色目前没有可发布图集。2026-08-09 的本地生图渠道复核显示能力与契约正常，但没有任何 effective request mode，因此未发送可交付图集，也未把缺图角色加入安装器；复核证据见 `qa/imagegen-channel-recheck-20260809.json`。同一渠道不可用期间，`hei-mao-foodie` 的 waiting 行也不能合法重生成。
+这三个角色目前没有可发布图集。2026-08-10 的本地生图渠道仍未通过真实 smoke，因此未发送可交付图集，也未把缺图角色加入安装器；复核证据见 `qa/imagegen-channel-recheck-20260810.json`。
 
 本地手动安装角色时：
 
@@ -105,7 +106,19 @@ npx -y petdex@latest install hei-mao-chef
 
 ### 美食家角色
 
-`hei-mao-foodie` 是黑毛的美食家角色包。结构、透明度、方向盲测和连续性检查已通过，但最终视觉复核发现 waiting 行第 1 帧的悬浮感叹号、第 3 帧的悬浮爱心和第 5 帧的悬浮星光，属于 Hatch Pet 禁止的 detached effects。该包当前为 `fail`，在完整重生成 waiting 行并重新通过最终视觉复核前不得安装或发布。
+`hei-mao-foodie` 是黑毛的美食家角色包。waiting 行已作为完整六帧行重新生成，结构、透明度、方向盲测、连续性和独立视觉复核均通过；没有 detached effects、身份漂移或比例/基线异常。仓库安装器已纳入该角色。
+
+本地安装：
+
+```bash
+HEI_MAO_PET_ID=hei-mao-foodie curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-foodie bash
+```
+
+Petdex 安装：
+
+```bash
+npx -y petdex@latest install hei-mao-foodie
+```
 
 ### 品控官角色
 
@@ -206,13 +219,14 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-butler/`: 大管家 v2 的独立验证与视觉复核证据
 - `pets/hei-mao-chef/`: 已验证的厨师角色包（Petdex 待审核）
 - `qa/hei-mao-chef/`: 厨师 v2 的独立验证与视觉复核证据
-- `pets/hei-mao-foodie/`: 美食家角色包（最终视觉 QA 阻断，待修复）
-- `qa/hei-mao-foodie/`: 美食家 v2 的结构验证和视觉阻断证据
+- `pets/hei-mao-foodie/`: 已通过最终视觉 QA 的美食家 v2 角色包
+- `qa/hei-mao-foodie/`: 美食家 v2 的结构、方向和视觉复核证据
 - `qa/petdex-desktop-live-smoke-20260809.json`: Petdex Desktop 单角色实时烟测；不替代 Codex App 全量验收
 - `qa/petdex-desktop-live-smoke-20260810.json`: Desktop 0.6.0 hook stdin 退出门禁与发布集复核；发现宿主保持 stdin 打开时原生 hook 仍会等待 EOF，不能据此宣称 App 验收完成
 - `qa/v2-contract-recheck-20260809.json`: 本轮五个角色的 v2 合同、安装一致性和技能测试复核
-- `qa/v2-contract-recheck-20260810.json`: 最新五个角色的 v2 合同、hatch-pet 测试和 foodie 视觉阻断复核
-- `qa/current-package-install-recheck-20260810.json`: 最新四个发布角色的 v2 合同、安装器、本机双目录一致性和 Petdex 隔离下载安装复核；其中根包与品控官线上资源仍与仓库 SHA 不同
+- `qa/v2-contract-recheck-20260810.json`: foodie 修复前的历史 v2 合同和视觉阻断快照
+- `qa/current-package-install-recheck-20260810.json`: foodie 修复前的历史四角色安装一致性快照
+- `qa/foodie-install-recheck-20260810.json`: foodie 修复后的 v2 合同、安装器、本机双目录一致性和公开文件卫生复核
 - `qa/current-local-gate-recheck-20260810.json`: 基于当前提交重新执行的 v2 合同、hatch-pet 测试、安装器允许/拒绝路径、双目录一致性和公开文件卫生复核
 - `qa/current-release-gate-recheck-20260810.json`: 提交 `d1a849d` 下使用专用运行时的五角色 v2 合同、28 项技能测试、安装器解析和本机双目录 SHA 复核
 - `qa/local-release-hygiene-recheck-20260810.json`: 最新角色身份、历史 slug 隔离、本机双目录 SHA、一键安装器和公开文件卫生复核
@@ -291,13 +305,13 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 
 ### 美食家 v2 验证结果
 
-- `pets/hei-mao-foodie/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49`（当前包仅保留为待修复输入）
+- `pets/hei-mao-foodie/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23`
 - `pets/hei-mao-foodie/pet.json`: SHA-256 为 `0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c`
 - `spriteVersionNumber: 2`，尺寸 `1536x2288`，单元格 `192x208`
 - `qa/hei-mao-foodie/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
 - `qa/hei-mao-foodie/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
 - `qa/hei-mao-foodie/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
-- `qa/hei-mao-foodie/final-visual-qa.json`: `fail`，waiting 行有 3 个 detached effects，阻止安装和发布
+- `qa/hei-mao-foodie/final-visual-qa.json`: `pass`，waiting 行完整重生成后无 detached effects；独立视觉复核记录 minor warning
 
 ## 许可
 

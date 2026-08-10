@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-08-10",
+  "scope": "hei-mao-foodie waiting row complete regeneration and v2 package repair",
+  "package": "pets/hei-mao-foodie",
+  "sprite_version_number": 2,
+  "atlas": {
+    "format": "WEBP",
+    "mode": "RGBA",
+    "width": 1536,
+    "height": 2288,
+    "columns": 8,
+    "rows": 11,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+  "validation": {
+    "despill": "pass",
+    "atlas": "pass",
+    "standard_rows": "pass",
+    "waiting_row_frames": 6,
+    "waiting_row_extraction": "components",
+    "errors": [],
+    "warnings": []
+  },
+  "visual_qa": {
+    "status": "pass",
+    "reviewed_by": "independent_visual_review",
+    "detached_effects": [],
+    "identity_and_props": "pass",
+    "scale_and_baseline": "pass",
+    "direction_regression": "none"
+  },
+  "remaining_scope": [
+    "install and compare both local pet directories",
+    "refresh current app selection and animation smoke",
+    "update installer and release documentation"
+  ],
+  "result": "foodie_waiting_repair_passed_install_pending"
+}

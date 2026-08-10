@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-09T18:09:11Z",
-  "source_commit": "38fe9b56df66ef6eafcaa9b061703ae4ece80324",
+  "checked_at": "2026-08-10",
+  "source_commit": "working-tree-foodie-repair",
   "scope": "fresh local contract, installer, and public-file gate recheck",
   "runtime": {
     "validator": "hatch-pet/scripts/validate_atlas.py",
@@ -23,7 +23,7 @@
       "hei-mao-quality": "pass",
       "hei-mao-butler": "pass",
       "hei-mao-chef": "pass",
-      "hei-mao-foodie": "pass_structure_only_visual_block_remains"
+      "hei-mao-foodie": "pass"
     },
     "errors": 0,
     "warnings": 0,
@@ -41,10 +41,10 @@
       "hei-mao": "pass",
       "hei-mao-quality": "pass",
       "hei-mao-butler": "pass",
-      "hei-mao-chef": "pass"
+      "hei-mao-chef": "pass",
+      "hei-mao-foodie": "pass"
     },
     "blocked_slugs": {
-      "hei-mao-foodie": "rejected_before_write",
       "unknown": "rejected_before_write"
     },
     "temporary_targets_cleaned": true
@@ -57,7 +57,8 @@
       "hei-mao",
       "hei-mao-quality",
       "hei-mao-butler",
-      "hei-mao-chef"
+      "hei-mao-chef",
+      "hei-mao-foodie"
     ],
     "blocked_and_historical_slugs_absent": true
   },
@@ -67,10 +68,10 @@
     "credentials_found": false
   },
   "visual_followups": {
-    "foodie": "waiting row still has three detached effects and requires complete row regeneration",
+    "foodie": "waiting row repaired; double-directory SHA parity passed; Codex App live refresh pending",
     "delivery": "no publishable atlas",
     "fortune": "no publishable atlas",
     "traveler": "no publishable atlas"
   },
-  "result": "local_gates_passed_generation_and_foodie_visual_work_remain_blocked"
+  "result": "local_gates_passed_foodie_repair_and_double_directory_install_generation_and_app_acceptance_open"
 }

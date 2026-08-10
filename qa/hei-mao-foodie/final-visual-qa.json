@@ -1,16 +1,12 @@
 {
-  "visual_qa": "fail",
-  "reviewed_by": "parent",
-  "repair_rows": ["waiting"],
-  "hard_failures": [
-    "waiting frame 1 contains detached yellow punctuation above the pet",
-    "waiting frame 3 contains a detached yellow heart above the pet",
-    "waiting frame 5 contains detached yellow sparkles above the pet"
-  ],
+  "visual_qa": "pass",
+  "reviewed_by": "independent_visual_review",
+  "repair_rows": [],
+  "hard_failures": [],
   "warnings": [
-    "Intermediate vertical cues are subtle for the four diagonal pairs called out by blind review.",
-    "Continuity metrics report local outliers at 112.5->135, 135->157.5, 157.5->180, and 337.5->000; visual review keeps the loop coherent.",
-    "The 180 direction's transparent ear gap is intentional negative space, not a broken body."
+    "waiting frame 02/03 spoon overlaps snout/torso as a coherent action pose",
+    "waiting frame 03 eye highlight is part of the expression",
+    "direction continuity metrics retain previously reviewed minor outliers without visible reversal"
   ],
   "evidence": {
     "contact_sheet": "qa/hei-mao-foodie/contact-sheet-extended.png",
@@ -25,11 +21,16 @@
     "motion_previews": "qa/hei-mao-foodie/previews"
   },
   "direction_summary": {
-    "cardinal_gates": {"000":"pass","090":"pass","180":"pass","270":"pass"},
+    "cardinal_gates": {
+      "000": "pass",
+      "090": "pass",
+      "180": "pass",
+      "270": "pass"
+    },
     "all_expected_directions_have_verdicts": true,
     "wrong_quadrant_or_reversal": false,
     "identity_or_scale_failure": false
   },
-  "resolution": "block_until_complete_waiting_row_regeneration",
-  "reviewed_at": "2026-08-09"
+  "resolution": "foodie waiting row accepted after complete regeneration",
+  "reviewed_at": "2026-08-10"
 }

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "frames_root": "qa/standard-all-20260807-v4/frames",
+  "frames_root": "qa/hei-mao-foodie/frames",
   "states": [
     "idle",
     "running-right",
@@ -26,7 +26,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/idle/00.png",
+          "file": "qa/hei-mao-foodie/frames/idle/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24751,
@@ -41,7 +41,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/idle/01.png",
+          "file": "qa/hei-mao-foodie/frames/idle/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24692,
@@ -56,7 +56,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/idle/02.png",
+          "file": "qa/hei-mao-foodie/frames/idle/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24662,
@@ -71,7 +71,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/idle/03.png",
+          "file": "qa/hei-mao-foodie/frames/idle/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24579,
@@ -86,7 +86,7 @@
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/idle/04.png",
+          "file": "qa/hei-mao-foodie/frames/idle/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24567,
@@ -101,7 +101,7 @@
         },
         {
           "index": 5,
-          "file": "qa/standard-all-20260807-v4/frames/idle/05.png",
+          "file": "qa/hei-mao-foodie/frames/idle/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24591,
@@ -127,7 +127,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/00.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 20832,
@@ -142,7 +142,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/01.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19931,
@@ -157,7 +157,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/02.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19090,
@@ -172,7 +172,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/03.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19907,
@@ -187,7 +187,7 @@
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/04.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19439,
@@ -202,7 +202,7 @@
         },
         {
           "index": 5,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/05.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19391,
@@ -217,7 +217,7 @@
         },
         {
           "index": 6,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/06.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19780,
@@ -232,7 +232,7 @@
         },
         {
           "index": 7,
-          "file": "qa/standard-all-20260807-v4/frames/running-right/07.png",
+          "file": "qa/hei-mao-foodie/frames/running-right/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19757,
@@ -258,7 +258,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/00.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 20935,
@@ -273,7 +273,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/01.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21710,
@@ -288,7 +288,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/02.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21082,
@@ -303,7 +303,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/03.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 20920,
@@ -318,7 +318,7 @@
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/04.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 20509,
@@ -333,7 +333,7 @@
         },
         {
           "index": 5,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/05.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21197,
@@ -348,7 +348,7 @@
         },
         {
           "index": 6,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/06.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21372,
@@ -363,7 +363,7 @@
         },
         {
           "index": 7,
-          "file": "qa/standard-all-20260807-v4/frames/running-left/07.png",
+          "file": "qa/hei-mao-foodie/frames/running-left/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21558,
@@ -389,7 +389,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/waving/00.png",
+          "file": "qa/hei-mao-foodie/frames/waving/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23787,
@@ -404,7 +404,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/waving/01.png",
+          "file": "qa/hei-mao-foodie/frames/waving/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23163,
@@ -419,7 +419,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/waving/02.png",
+          "file": "qa/hei-mao-foodie/frames/waving/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 19291,
@@ -434,7 +434,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/waving/03.png",
+          "file": "qa/hei-mao-foodie/frames/waving/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24802,
@@ -460,7 +460,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/jumping/00.png",
+          "file": "qa/hei-mao-foodie/frames/jumping/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24209,
@@ -475,7 +475,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/jumping/01.png",
+          "file": "qa/hei-mao-foodie/frames/jumping/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24069,
@@ -490,7 +490,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/jumping/02.png",
+          "file": "qa/hei-mao-foodie/frames/jumping/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24175,
@@ -505,7 +505,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/jumping/03.png",
+          "file": "qa/hei-mao-foodie/frames/jumping/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23311,
@@ -520,7 +520,7 @@
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/jumping/04.png",
+          "file": "qa/hei-mao-foodie/frames/jumping/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23975,
@@ -546,7 +546,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/failed/00.png",
+          "file": "qa/hei-mao-foodie/frames/failed/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24928,
@@ -561,7 +561,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/failed/01.png",
+          "file": "qa/hei-mao-foodie/frames/failed/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23630,
@@ -576,7 +576,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/failed/02.png",
+          "file": "qa/hei-mao-foodie/frames/failed/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 24248,
@@ -591,7 +591,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/failed/03.png",
+          "file": "qa/hei-mao-foodie/frames/failed/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 22659,
@@ -606,7 +606,7 @@
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/failed/04.png",
+          "file": "qa/hei-mao-foodie/frames/failed/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 22262,
@@ -621,7 +621,7 @@
         },
         {
           "index": 5,
-          "file": "qa/standard-all-20260807-v4/frames/failed/05.png",
+          "file": "qa/hei-mao-foodie/frames/failed/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 22426,
@@ -636,7 +636,7 @@
         },
         {
           "index": 6,
-          "file": "qa/standard-all-20260807-v4/frames/failed/06.png",
+          "file": "qa/hei-mao-foodie/frames/failed/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 25445,
@@ -651,7 +651,7 @@
         },
         {
           "index": 7,
-          "file": "qa/standard-all-20260807-v4/frames/failed/07.png",
+          "file": "qa/hei-mao-foodie/frames/failed/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23079,
@@ -677,93 +677,93 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/waiting/00.png",
+          "file": "qa/hei-mao-foodie/frames/waiting/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 23642,
+          "nontransparent_pixels": 17104,
           "bbox": [
-            10,
             5,
-            182,
-            203
+            35,
+            187,
+            173
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 138
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/waiting/01.png",
+          "file": "qa/hei-mao-foodie/frames/waiting/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 20159,
+          "nontransparent_pixels": 16876,
           "bbox": [
-            20,
             5,
-            171,
-            203
+            31,
+            187,
+            176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 169
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/waiting/02.png",
+          "file": "qa/hei-mao-foodie/frames/waiting/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 20263,
+          "nontransparent_pixels": 22059,
           "bbox": [
             5,
-            10,
+            21,
             187,
-            198
+            186
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 120
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/waiting/03.png",
+          "file": "qa/hei-mao-foodie/frames/waiting/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 19783,
+          "nontransparent_pixels": 21750,
           "bbox": [
-            21,
             5,
-            170,
-            203
+            22,
+            187,
+            185
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 122
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/waiting/04.png",
+          "file": "qa/hei-mao-foodie/frames/waiting/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 21459,
+          "nontransparent_pixels": 16888,
           "bbox": [
-            17,
             5,
-            174,
-            203
+            34,
+            187,
+            174
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 111
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "qa/standard-all-20260807-v4/frames/waiting/05.png",
+          "file": "qa/hei-mao-foodie/frames/waiting/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 23143,
+          "nontransparent_pixels": 20549,
           "bbox": [
-            13,
             5,
-            179,
-            203
+            24,
+            187,
+            183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 141
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -778,7 +778,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/running/00.png",
+          "file": "qa/hei-mao-foodie/frames/running/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23363,
@@ -793,7 +793,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/running/01.png",
+          "file": "qa/hei-mao-foodie/frames/running/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21288,
@@ -808,7 +808,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/running/02.png",
+          "file": "qa/hei-mao-foodie/frames/running/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 20897,
@@ -823,7 +823,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/running/03.png",
+          "file": "qa/hei-mao-foodie/frames/running/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23367,
@@ -838,7 +838,7 @@
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/running/04.png",
+          "file": "qa/hei-mao-foodie/frames/running/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21587,
@@ -853,7 +853,7 @@
         },
         {
           "index": 5,
-          "file": "qa/standard-all-20260807-v4/frames/running/05.png",
+          "file": "qa/hei-mao-foodie/frames/running/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23391,
@@ -879,7 +879,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "qa/standard-all-20260807-v4/frames/review/00.png",
+          "file": "qa/hei-mao-foodie/frames/review/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23902,
@@ -894,7 +894,7 @@
         },
         {
           "index": 1,
-          "file": "qa/standard-all-20260807-v4/frames/review/01.png",
+          "file": "qa/hei-mao-foodie/frames/review/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21468,
@@ -909,7 +909,7 @@
         },
         {
           "index": 2,
-          "file": "qa/standard-all-20260807-v4/frames/review/02.png",
+          "file": "qa/hei-mao-foodie/frames/review/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23601,
@@ -924,7 +924,7 @@
         },
         {
           "index": 3,
-          "file": "qa/standard-all-20260807-v4/frames/review/03.png",
+          "file": "qa/hei-mao-foodie/frames/review/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 23498,
@@ -939,7 +939,7 @@
         },
         {
           "index": 4,
-          "file": "qa/standard-all-20260807-v4/frames/review/04.png",
+          "file": "qa/hei-mao-foodie/frames/review/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 22974,
@@ -954,7 +954,7 @@
         },
         {
           "index": 5,
-          "file": "qa/standard-all-20260807-v4/frames/review/05.png",
+          "file": "qa/hei-mao-foodie/frames/review/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 21173,

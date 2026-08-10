@@ -1,9 +1,9 @@
 {
-  "ok": false,
-  "status": "blocked_visual_qa_waiting_row",
+  "ok": true,
+  "status": "pass",
   "spriteVersionNumber": 2,
   "spritesheet": "pets/hei-mao-foodie/spritesheet.webp",
-  "sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+  "sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
   "validation": "qa/hei-mao-foodie/validation.json",
   "chroma_despill": "qa/hei-mao-foodie/chroma-despill.json",
   "contact_sheet": "qa/hei-mao-foodie/contact-sheet-extended.png",
@@ -13,5 +13,12 @@
   "blind_review_resolution": "qa/hei-mao-foodie/blind-review-resolution.json",
   "continuity": "qa/hei-mao-foodie/look-continuity.json",
   "review": "qa/hei-mao-foodie/review.json",
-  "package": "pets/hei-mao-foodie"
+  "package": "pets/hei-mao-foodie",
+  "final_visual_qa": "qa/hei-mao-foodie/final-visual-qa.json",
+  "waiting_repair": {
+    "status": "pass",
+    "source": "qa/hei-mao-foodie/waiting-repair-source.webp",
+    "visual_qa": "independent review pass",
+    "hard_failures": []
+  }
 }
