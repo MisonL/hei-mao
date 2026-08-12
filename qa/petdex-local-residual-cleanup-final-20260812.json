@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-08-12T07:19:58Z",
+  "scope": "Petdex local residual cleanup final recheck",
+  "cleanup": {
+    "telemetry_disabled": true,
+    "desktop_app_absent": true,
+    "authenticated_session_absent": true,
+    "installed_pet_assets_preserved": true
+  },
+  "hook_recheck": {
+    "codex_hooks_file_absent": true,
+    "codex_claude_opencode_hook_references": 0,
+    "petdex_processes": 0,
+    "petdex_launch_agents": 0
+  },
+  "asset_recheck": {
+    "role_count": 6,
+    "repository_codex_petdex_sha256_mismatches": 0
+  },
+  "cli": {
+    "version": "1.2.0",
+    "signed_in": false
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false,
+    "install_identifier_recorded": false
+  },
+  "result": "petdex_local_residual_cleanup_final_pass"
+}
