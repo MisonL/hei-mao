@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-08-12T09:25:00Z",
+  "scope": "Fortune role review animation row",
+  "generation": {
+    "idempotency_key": "hei-mao-fortune-20260812-review-v2",
+    "request_id": "26e32331-e409-4c68-b29b-d3f8f107d68e",
+    "artifact_id": "e155927b-cf17-4030-a4b6-920c80989bbe",
+    "transport": "agent_json",
+    "channel_request_mode": "images-sse",
+    "source_dimensions": [
+      1536,
+      512
+    ],
+    "source_format": "webp",
+    "decoded_sha256": "a1969d4a7a963f23cc76603220beda89b4a24fd33e5f45bb974cc4a2d3528346"
+  },
+  "row_qa": {
+    "state": "review",
+    "frames": 6,
+    "frame_dimensions": [
+      192,
+      208
+    ],
+    "extraction_method": "components",
+    "errors": [],
+    "warnings": [],
+    "visual_review": "pass: focused review loop is expressed through subtle pose and eye changes; Fortune identity, attached props, apparent scale and baseline remain stable"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "fortune_review_row_pass"
+}
