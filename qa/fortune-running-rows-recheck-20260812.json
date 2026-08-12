@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-08-12T05:30:00Z",
+  "scope": "Fortune role running-right generation and running-left derivation",
+  "running_right": {
+    "idempotency_key": "hei-mao-fortune-20260812-running-right-v2",
+    "transport": "page_sse",
+    "source_dimensions": [1536, 512],
+    "source_format": "webp",
+    "completed_event_count": 1,
+    "done_received": true,
+    "final_image_count": 1,
+    "row": {
+      "state": "running-right",
+      "frames": 8,
+      "frame_dimensions": [192, 208],
+      "extraction_method": "components",
+      "errors": [],
+      "warnings": [],
+      "visual_review": "pass: unmistakable screen-right gait, alternating leg phases, stable baseline, identity and attached props"
+    }
+  },
+  "running_left": {
+    "derived_from": "running-right",
+    "derivation": "framewise-horizontal-mirror-preserving-order",
+    "row": {
+      "state": "running-left",
+      "frames": 8,
+      "frame_dimensions": [192, 208],
+      "extraction_method": "components",
+      "errors": [],
+      "warnings": [],
+      "visual_review": "pass: unmistakable screen-left gait, mirrored attached props, stable baseline and preserved frame order"
+    }
+  },
+  "failure_reconciliation": {
+    "initial_timeout_had_artifact": false,
+    "initial_timeout_server_state_found": false,
+    "retry_used_new_idempotency_key": true
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "fortune_running_rows_pass"
+}
