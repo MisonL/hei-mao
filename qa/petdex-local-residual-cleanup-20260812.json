@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-08-12T03:42:38Z",
+  "scope": "Petdex local residual cleanup and configuration preservation",
+  "cleanup": {
+    "disabled_telemetry_record_removed": true,
+    "desktop_webkit_runtime_cache_removed": true,
+    "installed_pet_assets_preserved": true,
+    "upstream_source_checkout_preserved": true
+  },
+  "runtime_recheck": {
+    "petdex_processes": 0,
+    "petdex_launch_agents": 0,
+    "petdex_listening_ports": 0,
+    "petdex_library_residuals": 0,
+    "petdex_home_residuals_outside_source_and_assets": 0
+  },
+  "configuration_recheck": {
+    "codex_hooks": "empty",
+    "codex_config_changed": false,
+    "claude_config_changed": false,
+    "opencode_config_changed": false
+  },
+  "asset_recheck": {
+    "petdex_asset_file_count": 12,
+    "codex_asset_file_count": 12,
+    "petdex_and_codex_sha256_match": true
+  },
+  "cli": {
+    "version": "1.2.0"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "petdex_local_residual_cleanup_pass"
+}
