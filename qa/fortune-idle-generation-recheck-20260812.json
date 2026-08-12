@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-08-12T04:57:00Z",
+  "scope": "Fortune role idle animation row",
+  "generation": {
+    "idempotency_key": "hei-mao-fortune-20260812-idle-v3",
+    "transport": "page_sse",
+    "source_dimensions": [1536, 512],
+    "source_format": "webp",
+    "completed_event_count": 1,
+    "done_received": true,
+    "final_image_count": 1,
+    "decoded_sha256_recorded": true
+  },
+  "row_qa": {
+    "state": "idle",
+    "frames": 6,
+    "frame_dimensions": [192, 208],
+    "extraction_method": "components",
+    "errors": [],
+    "warnings": [],
+    "visual_review": "pass: stable Fortune identity, baseline, scale, attached props, six non-overlapping slots, and calm idle variation"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "fortune_idle_row_pass"
+}
