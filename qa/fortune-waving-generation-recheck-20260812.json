@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-08-12T06:05:00Z",
+  "scope": "Fortune role waving animation row",
+  "generation": {
+    "idempotency_key": "hei-mao-fortune-20260812-waving-v1",
+    "transport": "page_sse",
+    "source_dimensions": [1536, 512],
+    "source_format": "webp",
+    "completed_event_count": 1,
+    "done_received": true,
+    "final_image_count": 1
+  },
+  "row_qa": {
+    "state": "waving",
+    "frames": 4,
+    "frame_dimensions": [192, 208],
+    "extraction_method": "components",
+    "errors": [],
+    "warnings": [],
+    "visual_review": "pass: greeting is expressed only through the raised forelimb; identity, props, scale, baseline and clean background are stable"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "fortune_waving_row_pass"
+}
