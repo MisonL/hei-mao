@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-08-12T07:20:00Z",
+  "scope": "Fortune role waiting animation row",
+  "generation": {
+    "idempotency_key": "hei-mao-fortune-20260812-waiting-v1",
+    "transport": "page_sse",
+    "source_dimensions": [1536, 512],
+    "source_format": "webp",
+    "completed_event_count": 1,
+    "done_received": true,
+    "final_image_count": 1
+  },
+  "row_qa": {
+    "state": "waiting",
+    "frames": 6,
+    "frame_dimensions": [192, 208],
+    "extraction_method": "components",
+    "errors": [],
+    "warnings": [],
+    "visual_review": "pass: patient needs-input pose is distinct from idle and review; attached props, scale, baseline and clean background are stable"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "fortune_waiting_row_pass"
+}
