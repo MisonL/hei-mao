@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-08-12T07:33:53Z",
+  "scope": "Fortune role running animation row",
+  "generation": {
+    "idempotency_key": "hei-mao-fortune-20260812-running-v1",
+    "transport": "page_sse",
+    "source_dimensions": [1536, 512],
+    "source_format": "webp",
+    "completed_event_count": 1,
+    "done_received": true,
+    "final_image_count": 1,
+    "actual_cost": "unavailable; service returned no authoritative cost"
+  },
+  "row_qa": {
+    "state": "running",
+    "frames": 6,
+    "frame_dimensions": [192, 208],
+    "extraction_method": "components",
+    "errors": [],
+    "warnings": [],
+    "visual_review": "pass: focused Fortune work loop sorts and processes the attached basket and greens; it is not literal foot-running; identity, proportions, baseline, scarf, basket, pouch and greens remain stable"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "fortune_running_row_pass"
+}
