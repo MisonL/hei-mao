@@ -17,7 +17,7 @@
     "upstream_host": null
   },
   "upstream_probe": {
-    "host": "xkj.jisuanyun.vip",
+    "host": "<redacted-upstream>",
     "dns": "ok",
     "tls": "ok",
     "models": {

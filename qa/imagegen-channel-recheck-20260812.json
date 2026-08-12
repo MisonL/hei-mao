@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-08-12T02:02:37Z",
+  "service_scope": "local_image_playground",
+  "service_base_url": "local_deployment",
+  "verification": {
+    "first_run": "pass",
+    "agent_doctor": "pass",
+    "capabilities_contract": "pass",
+    "runtime_capabilities_contract": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "effective_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1,
+    "channel_capacity_per_credential": 1,
+    "responses_image_backend_enabled": false,
+    "state_backend": "sqlite"
+  },
+  "billable_smoke": {
+    "status": "blocked",
+    "checks": {
+      "orchestration_images_non_stream": {
+        "status": "failed",
+        "error_code": "upstream_unavailable",
+        "retryable": true,
+        "artifact_count": 0,
+        "idempotency_key": "redacted"
+      },
+      "page_sse_images_sse": {
+        "status": "failed",
+        "error_code": "page_sse_failed",
+        "http_status": 500,
+        "message": "fetch failed",
+        "artifact_count": 0,
+        "idempotency_key": "redacted"
+      },
+      "responses_paths": "skipped_backend_disabled"
+    },
+    "distinct_idempotency_keys": true,
+    "artifact_cleanup": "passed"
+  },
+  "release_decision": {
+    "new_generation_allowed": false,
+    "reason": "当前真实 smoke 的两条已启用图像路径均未产生 artifact；不得开始 Fortune 或 Traveler 的新图集生成。"
+  },
+  "checks": {
+    "credentials_recorded": false,
+    "local_environment_data_recorded": false,
+    "private_upstream_host_recorded": false,
+    "failed_idempotency_keys_reused": false
+  },
+  "result": "contract_pass_current_generation_blocked"
+}
