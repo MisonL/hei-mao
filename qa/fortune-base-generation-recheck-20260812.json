@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-08-12T04:15:38Z",
+  "scope": "Fortune role base generation and canonical reference",
+  "generation": {
+    "request_id": "7d1f759b-6e38-4185-95dc-e855e93bdacd",
+    "idempotency_key": "hei-mao-fortune-20260812-base-v1",
+    "artifact_id": "48059266-41a5-4fb6-a868-970ae782d8ac",
+    "model": "gpt-image-2",
+    "channel_request_mode": "images-non-stream",
+    "cached_retrieval": true,
+    "source_format": "webp",
+    "source_dimensions": [1024, 1024]
+  },
+  "canonical_reference": {
+    "format": "png",
+    "mode": "rgba",
+    "dimensions": [1024, 1024],
+    "decoded_sha256_recorded": true,
+    "transparent_rgb_residue": 0,
+    "visible_exact_chroma_pixels": 0,
+    "transparent_corners": true,
+    "subject_bbox": [205, 177, 875, 842],
+    "visual_review": "pass: complete centered Fortune role with stable identity cues; no text, logo, scene, or detached effects"
+  },
+  "processing": {
+    "tool": "remove_chroma_key.py",
+    "mode": "auto-key-border-soft-matte-despill",
+    "passes": 1,
+    "source_background_encoding_variance": "source WEBP background differed from the requested key by at most two channel values"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "credentials": false,
+    "private_network_addresses": false
+  },
+  "result": "fortune_base_canonical_reference_pass"
+}
