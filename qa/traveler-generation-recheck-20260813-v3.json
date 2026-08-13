@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T15:36:13Z",
+  "scope": "Traveler idle row generation after service recovery probe",
+  "service": {
+    "kind": "local_image_playground",
+    "deployment": "local_deployment",
+    "health_probe": "reachable",
+    "capabilities_contract": "pass",
+    "runtime_capabilities_contract": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1,
+    "contract_doctor": "pass",
+    "last_real_attempt": {
+      "status": "blocked",
+      "error_code": "upstream_rate_limited",
+      "http_status": 429,
+      "request_mode": "images-non-stream",
+      "transport": "agent_json",
+      "artifact_count": 0,
+      "retryable": true
+    }
+  },
+  "generation_attempt": {
+    "operation": "idle",
+    "status": "blocked",
+    "new_idempotency_key": true,
+    "dimension_check": "not_reached",
+    "artifact_count": 0,
+    "reason": "本地服务合同和运行态均通过，但唯一上游渠道仍返回 429；未产生可提取的 idle 行。"
+  },
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "Traveler 仍只有独立 base，缺少 9 个标准动作行、cardinal、look row 9/10、完整 v2 QA 和安装验收；不得使用占位图、复用其他角色或静默降级。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "traveler_idle_generation_blocked_upstream_rate_limited"
+}
