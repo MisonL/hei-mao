@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_at": "2026-08-14T04:38:59+08:00",
-  "checked_commit": "d20c8dc36328cae83fe8a425ed740943dadbf6bd",
+  "checked_commit": "ce8e3bed74cbfbeaae68011a41768d103781c171",
   "scope": "post-smoke current local role release state, Petdex manifest, package validation, remote parity, and Codex App boundary",
   "local_release": {
     "roles": 7,
@@ -39,8 +39,8 @@
     "reason": "只读检查时前台应用不是 Codex App 的宠物设置或动画画面，未执行刷新、点击或进程信号。"
   },
   "remote_consistency": {
-    "gitlab_main": "d20c8dc36328cae83fe8a425ed740943dadbf6bd",
-    "github_main": "d20c8dc36328cae83fe8a425ed740943dadbf6bd"
+    "gitlab_main": "ce8e3bed74cbfbeaae68011a41768d103781c171",
+    "github_main": "ce8e3bed74cbfbeaae68011a41768d103781c171"
   },
   "public_file_hygiene": {
     "absolute_local_paths": false,
