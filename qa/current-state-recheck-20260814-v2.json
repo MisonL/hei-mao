@@ -2,6 +2,7 @@
   "schema_version": 1,
   "checked_at": "2026-08-13T18:00:15Z",
   "source_commit": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
+  "evidence_commit": "c65944f654c1cd54acfff627718f741163ad3118",
   "scope": "seven local role packages, explicit chroma-key v2 validation, installation parity, repository remotes, and image-generation boundary",
   "roles": [
     "hei-mao",
@@ -84,9 +85,9 @@
     }
   },
   "repository_remotes": {
-    "local_head": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
-    "gitlab_main": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
-    "github_main": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
+    "local_head": "c65944f654c1cd54acfff627718f741163ad3118",
+    "gitlab_main": "c65944f654c1cd54acfff627718f741163ad3118",
+    "github_main": "c65944f654c1cd54acfff627718f741163ad3118",
     "working_tree": "clean"
   },
   "petdex_manifest_recheck": {
