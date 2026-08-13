@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T12:23:56Z",
+  "scope": "current Petdex manifest, CLI, edit route, upstream merge state, and owned slugs",
+  "cli": {
+    "version": "1.2.1",
+    "whoami": "not_signed_in",
+    "install_command": "npx -y petdex@latest install <slug>",
+    "dual_install_targets": true
+  },
+  "manifest": {
+    "generated_at": "2026-08-13T07:15:23.489Z",
+    "total": 4521,
+    "owned_entries": [
+      {"slug": "hei-mao", "sprite_version_number": 1},
+      {"slug": "hei-mao-quality", "sprite_version_number": 1},
+      {"slug": "hei-mao-2", "sprite_version_number": 1, "classification": "historical_duplicate_entry"},
+      {"slug": "hei-mao-butler", "sprite_version_number": 1},
+      {"slug": "hei-mao-chef", "sprite_version_number": 1},
+      {"slug": "hei-mao-foodie", "sprite_version_number": 1},
+      {"slug": "hei-mao-delivery", "sprite_version_number": 2}
+    ],
+    "fortune_present": false,
+    "traveler_present": false,
+    "recommender_present": false
+  },
+  "online_resource_sha256_match": {
+    "hei-mao": {"metadata": true, "spritesheet": false},
+    "hei-mao-quality": {"metadata": false, "spritesheet": false},
+    "hei-mao-butler": {"metadata": true, "spritesheet": true},
+    "hei-mao-chef": {"metadata": true, "spritesheet": true},
+    "hei-mao-foodie": {"metadata": true, "spritesheet": false},
+    "hei-mao-delivery": {"metadata": true, "spritesheet": false}
+  },
+  "online_sprite_contract": {
+    "all_checked_entries": "1536x2288 RGBA WEBP",
+    "canonical_chroma_keys": {
+      "hei-mao": "#00FF00",
+      "hei-mao-quality": "#FF00FF",
+      "hei-mao-butler": "#00FF00",
+      "hei-mao-chef": "#00FFFF",
+      "hei-mao-foodie": "#FF00FF",
+      "hei-mao-delivery": "#FF00FF"
+    },
+    "canonical_v2_validation": "pass_for_all_checked_entries",
+    "delivery_manifest_v2": true,
+    "fortune_or_traveler_online_assets": false
+  },
+  "edit_route": {
+    "patch_cli_edit_without_auth": 401,
+    "post_cli_edit_presign_without_auth": 401,
+    "route_state": "deployed_and_auth_protected",
+    "authenticated_edit_e2e": "not_run_without_signed_in_session",
+    "duplicate_edit_submitted": false
+  },
+  "upstream": {
+    "main_commit": "115d837aea89c235aa18c5a744ba768ccbc87d5a",
+    "cli_release": "1.2.1",
+    "merged_commits_present": {
+      "pr_654_bearer_edit": true,
+      "pr_611_menu_bar": true,
+      "pr_656_terminal_focus": true
+    }
+  },
+  "related_issue_pr_state": {
+    "603": "closed_with_merged_fix",
+    "611": "merged",
+    "650": "closed_with_merged_fix",
+    "654": "merged",
+    "656": "merged",
+    "657": "closed_with_merged_fix"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_metadata": false
+  },
+  "release_decision": {
+    "fortune_submit_allowed": true,
+    "fortune_submit_performed": false,
+    "traveler_submit_allowed": false,
+    "current_online_v2_sync_complete": false,
+    "reason": "已有线上角色仍有资源 SHA 漂移；Fortune 尚未提交；Traveler 仍无图集。"
+  },
+  "result": "petdex_current_state_rechecked"
+}
