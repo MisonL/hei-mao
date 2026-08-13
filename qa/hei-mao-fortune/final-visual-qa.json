@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "scope": "complete v2 extended atlas",
+  "visual_qa": "pass_with_reviewed_warnings",
+  "reviewed_by": "independent_visual_review_workers; parent",
+  "repair_rows": [],
+  "hard_failures": [],
+  "evidence": {
+    "contact_sheet": "qa/hei-mao-fortune/contact-sheet-extended.png",
+    "direction_sheet": "qa/hei-mao-fortune/look-directions.png",
+    "direction_semantics": "qa/hei-mao-fortune/direction-semantics.json",
+    "blind_validation": "qa/hei-mao-fortune/direction-blind-validation.json",
+    "blind_resolution": "qa/hei-mao-fortune/blind-review-resolution.json",
+    "continuity": "qa/hei-mao-fortune/look-continuity.json",
+    "standard_review": "qa/hei-mao-fortune/review.json",
+    "atlas_validation": "qa/hei-mao-fortune/validation.json",
+    "chroma_despill": "qa/hei-mao-fortune/chroma-despill.json",
+    "motion_previews": "qa/hei-mao-fortune/previews"
+  },
+  "identity": "黑毛小猪福气官身份、红金服饰、爱心手套、屏幕右侧粮篮和屏幕左侧南瓜在 11 行中保持一致。",
+  "directions": {
+    "cardinal_gates": {"000":"pass","090":"pass","180":"pass","270":"pass"},
+    "all_expected_directions_have_verdicts": true,
+    "wrong_quadrant_or_reversal": false,
+    "identity_or_scale_failure": false
+  },
+  "warnings": [
+    "112.5、135、157.5 等中间方向存在少量盲测歧义或轴向分歧，已由标注正常尺寸回环复核接受。",
+    "157.5->180 和 337.5->000 的连续性指标为局部 outlier，但视觉上保持身份、比例和方向语义。",
+    "135、157.5、180 的透明行是开放负空间；连通性复核未发现封闭透明主体洞。"
+  ],
+  "release_decision": "accept_minor_warnings"
+}

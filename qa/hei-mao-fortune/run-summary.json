@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "pet": "hei-mao-fortune",
+  "sprite_version_number": 2,
+  "spritesheet": "pets/hei-mao-fortune/spritesheet.webp",
+  "spritesheet_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71",
+  "layout": {
+    "width": 1536,
+    "height": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cell_width": 192,
+    "cell_height": 208
+  },
+  "validation": "qa/hei-mao-fortune/validation.json",
+  "chroma_despill": "qa/hei-mao-fortune/chroma-despill.json",
+  "contact_sheet": "qa/hei-mao-fortune/contact-sheet-extended.png",
+  "direction_sheet": "qa/hei-mao-fortune/look-directions.png",
+  "direction_semantics": "qa/hei-mao-fortune/direction-semantics.json",
+  "blind_direction_validation": "qa/hei-mao-fortune/direction-blind-validation.json",
+  "blind_review_resolution": "qa/hei-mao-fortune/blind-review-resolution.json",
+  "continuity": "qa/hei-mao-fortune/look-continuity.json",
+  "review": "qa/hei-mao-fortune/review.json",
+  "final_visual_qa": "qa/hei-mao-fortune/final-visual-qa.json",
+  "source_jobs": {
+    "row_9": {
+      "idempotency_key": "hei-mao-fortune-20260812-look-row-9-v4",
+      "request_id": "57fdfedf-a232-4c04-9d37-ae1a8938513d",
+      "artifact_id": "b570e7c8-81ea-4487-b803-db14a4d21325",
+      "source_sha256": "a31f463f04228d0ad55fd69f2b392e9378a228e25855abc375acd238f846d749"
+    },
+    "row_10": {
+      "idempotency_key": "hei-mao-fortune-20260812-look-row-10-v1",
+      "request_id": "f7bdc7ad-cc46-42b0-8a43-2e4d4e576054",
+      "artifact_id": "63052c47-5b70-4263-8ce6-ea3628e467a0",
+      "source_sha256": "bedef98ad75280ef83751023cf02edc998c61b1ffc578359a35fa344e407f9e3"
+    },
+    "running": {
+      "idempotency_key": "hei-mao-fortune-20260812-running-v2",
+      "request_id": "0537fd53-a601-4015-9512-326a981942cc",
+      "artifact_id": "048ca86f-4329-49bd-b9e8-58993f4e3d86",
+      "source_sha256": "83dcfb37449dd3f38c93f4e74480093ad07232506b1f720a269f285ad9fb3d6d"
+    }
+  }
+}

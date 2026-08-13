@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "blind_validation": "qa/hei-mao-fortune/direction-blind-validation.json",
+  "blind_validation_ok": true,
+  "cardinal_hard_gates": {
+    "000_vs_180": "pass",
+    "090_vs_270": "pass"
+  },
+  "continuity_report": "qa/hei-mao-fortune/look-continuity.json",
+  "accepted_minor_warnings": [
+    {
+      "checks": ["horizontal-5", "horizontal-6", "horizontal-7", "vertical-3", "vertical-6", "vertical-7"],
+      "decision": "accept_warning_after_labeled_review",
+      "reason": "这些分歧仅出现在中间斜向或后方三分之四方向。标注方向表的正常尺寸复核确认所有姿态仍处于预期象限，cardinal 明确，回环没有可见反转。"
+    },
+    {
+      "checks": ["157.5->180", "337.5->000", "alpha-hole heuristic rows"],
+      "decision": "accept_warning_after_visual_review",
+      "reason": "连续性 outlier 和透明行告警已结合高对比 alpha 连通性检查复核。透明区域是开放负空间，不是封闭主体洞；未见 snap、裁切、身份变化、断裂道具或比例跳变。"
+    }
+  ],
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "independent_visual_review_workers; parent",
+  "hard_failures": [],
+  "resolution": "保留当前 coherent v49 图集，不重生成单个方向 cell，也不进行第二次 despill。"
+}

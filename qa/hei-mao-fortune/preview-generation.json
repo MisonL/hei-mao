@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "output_dir": "qa/hei-mao-fortune/previews",
+  "previews": [
+    {
+      "state": "idle",
+      "path": "qa/hei-mao-fortune/previews/idle.gif",
+      "frames": 6
+    },
+    {
+      "state": "running-right",
+      "path": "qa/hei-mao-fortune/previews/running-right.gif",
+      "frames": 8
+    },
+    {
+      "state": "running-left",
+      "path": "qa/hei-mao-fortune/previews/running-left.gif",
+      "frames": 8
+    },
+    {
+      "state": "waving",
+      "path": "qa/hei-mao-fortune/previews/waving.gif",
+      "frames": 4
+    },
+    {
+      "state": "jumping",
+      "path": "qa/hei-mao-fortune/previews/jumping.gif",
+      "frames": 5
+    },
+    {
+      "state": "failed",
+      "path": "qa/hei-mao-fortune/previews/failed.gif",
+      "frames": 8
+    },
+    {
+      "state": "waiting",
+      "path": "qa/hei-mao-fortune/previews/waiting.gif",
+      "frames": 6
+    },
+    {
+      "state": "running",
+      "path": "qa/hei-mao-fortune/previews/running.gif",
+      "frames": 6
+    },
+    {
+      "state": "review",
+      "path": "qa/hei-mao-fortune/previews/review.gif",
+      "frames": 6
+    }
+  ]
+}
