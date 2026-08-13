@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13",
+  "scope": "isolated Bash and PowerShell installer verification",
+  "runtimes": {
+    "bash": {
+      "script": "install.sh",
+      "result": "pass"
+    },
+    "powershell": {
+      "script": "install.ps1",
+      "runtime": "PowerShell Core",
+      "result": "pass"
+    }
+  },
+  "accepted_roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune"
+  ],
+  "accepted_role_checks": {
+    "pet_id_matches_directory": true,
+    "sprite_version_number": 2,
+    "spritesheet_path": "spritesheet.webp",
+    "pet_json_sha_matches_repository": true,
+    "spritesheet_sha_matches_repository": true,
+    "target_scope": "temporary_isolated_directory"
+  },
+  "rejected_roles": {
+    "hei-mao-traveler": {
+      "result": "rejected",
+      "target_written": false
+    },
+    "hei-mao-recommender": {
+      "result": "rejected",
+      "target_written": false
+    }
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "temporary_target_paths": false
+  },
+  "result": "bash_and_powershell_installer_isolation_pass"
+}
