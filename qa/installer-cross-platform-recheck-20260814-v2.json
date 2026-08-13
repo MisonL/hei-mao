@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T03:34:00+08:00",
+  "checked_commit": "30e82cd",
+  "scope": "isolated cross-platform installer smoke for current release set",
+  "shell_installer": {
+    "script": "install.sh",
+    "runtime": "bash",
+    "roles_tested": 7,
+    "all_current_roles_installed": true,
+    "historical_or_blocked_role": "hei-mao-traveler",
+    "blocked_role_exit_nonzero": true,
+    "blocked_role_target_created": false,
+    "sha_validation": "pass"
+  },
+  "powershell_installer": {
+    "script": "install.ps1",
+    "runtime": "PowerShell",
+    "roles_tested": 7,
+    "all_current_roles_installed": true,
+    "historical_or_blocked_role": "hei-mao-traveler",
+    "blocked_role_exit_nonzero": true,
+    "blocked_role_target_created": false,
+    "sha_validation": "pass"
+  },
+  "isolation": {
+    "temporary_targets_only": true,
+    "existing_codex_or_petdex_directories_touched": false,
+    "temporary_files_removed": true
+  },
+  "syntax": {
+    "install_sh": "pass",
+    "install_ps1": "pass"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false
+  },
+  "result": "cross_platform_installer_isolation_pass"
+}
