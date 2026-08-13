@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13",
+  "scope": "all published local roles v2 deterministic recheck with recorded chroma keys",
+  "runtime": {
+    "validator": "hatch-pet validate_atlas.py",
+    "python_runtime": "hatch-pet bundled runtime",
+    "command": "validate_atlas.py --require-v2 --chroma-key <recorded-key>",
+    "result": "pass"
+  },
+  "roles": [
+    {
+      "slug": "hei-mao",
+      "chroma_key": "#00FF00",
+      "result": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "grid": "8x11",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "slug": "hei-mao-quality",
+      "chroma_key": "#FF00FF",
+      "result": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "grid": "8x11",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "slug": "hei-mao-butler",
+      "chroma_key": "#00FF00",
+      "result": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "grid": "8x11",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "slug": "hei-mao-chef",
+      "chroma_key": "#00FFFF",
+      "result": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "grid": "8x11",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "chroma_key": "#FF00FF",
+      "result": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "grid": "8x11",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "chroma_key": "#FF00FF",
+      "result": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "grid": "8x11",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "slug": "hei-mao-fortune",
+      "chroma_key": "#00FFFF",
+      "result": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "grid": "8x11",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "parity": {
+    "repository_to_codex": "pass",
+    "repository_to_petdex": "pass",
+    "codex_to_petdex": "pass",
+    "roles_checked": 7,
+    "files_checked_per_role": 2
+  },
+  "retained_qa": {
+    "single_despill_reports": "pass",
+    "standard_review_errors": 0,
+    "direction_blind_errors": 0,
+    "cardinal_hard_gates": "pass"
+  },
+  "limitations": [
+    "This deterministic recheck does not replace live Codex App visual acceptance.",
+    "Petdex online review, publication, and installability remain external checks.",
+    "Traveler remains blocked because its required image generation rows have not been produced."
+  ],
+  "result": "all_seven_roles_pass_recorded_keyed_v2_gate"
+}
