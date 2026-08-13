@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T04:33:20+08:00",
+  "scope": "Traveler independent concept smoke after local Docker service recovery",
+  "preflight": {
+    "service_base_url": "local Docker service",
+    "capabilities": "pass",
+    "runtime_contract": "pass",
+    "channel_health": "healthy snapshot with recent upstream 429",
+    "enabled_image_backend": "images-api",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1
+  },
+  "attempt": {
+    "transport": "agent_job_polling",
+    "route": "server orchestration",
+    "request_mode": "images-non-stream",
+    "status": "blocked",
+    "http_status": 429,
+    "error_code": "upstream_rate_limited",
+    "error_classification": "upstream_rate_limited",
+    "retryable": false,
+    "artifact_count": 0,
+    "dimension_check": "not_reached",
+    "new_idempotency_key": true,
+    "selected_channel": "configured image channel",
+    "fallback_applied": false,
+    "retry_after_ms": 30000
+  },
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "本次服务编排 smoke 仍被上游 429 拒绝，未产生 artifact；Traveler 仍缺少完整图集和 v2 QA，不得使用占位图、其他角色资源或静默降级。"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "idempotency_keys": false,
+    "private_environment_details": false
+  },
+  "result": "traveler_generation_blocked_upstream_rate_limited"
+}
