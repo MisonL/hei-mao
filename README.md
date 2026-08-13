@@ -44,9 +44,9 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest index 为 v1，资源一致 |
 | `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，在线精灵图漂移 |
 | `hei-mao-delivery` | 配送员 | v2 已验证，可本地安装 | manifest 可见，在线 v2 精灵图漂移 |
-| `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | 尚未提交 |
+| `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | 已提交，等待审核 |
 
-公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，但线上精灵图仍与仓库 SHA 不一致。`hei-mao-fortune` 尚未提交，`hei-mao-traveler` 不存在于 manifest。完整当前证据见 `qa/petdex-current-recheck-20260813.json`；历史 8 月复核只作为背景，不替代当前结论。
+公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，但线上精灵图仍与仓库 SHA 不一致。`hei-mao-fortune` 已提交但仍在审核中，尚未出现在公开 manifest；`hei-mao-traveler` 不存在于 manifest。提交后状态见 `qa/petdex-fortune-submit-recheck-20260813.json`，提交前 manifest 快照见 `qa/petdex-current-recheck-20260813.json`；历史 8 月复核只作为背景，不替代当前结论。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -78,7 +78,7 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。Windows PowerShell 5.1 的本地 checkout 可能受 Git `core.autocrlf` 影响，安装器会对文本 manifest 显式按 UTF-8/LF 规范化后再校验固定 SHA，二进制图集保持原样。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
-未完成完整 v2 图集和复核的 `hei-mao-traveler` 不在安装器白名单内。`hei-mao-fortune` 已完成本地 v2 图集和 QA，并已加入安装器白名单；Petdex 尚未提交，不能使用 Petdex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
+未完成完整 v2 图集和复核的 `hei-mao-traveler` 不在安装器白名单内。`hei-mao-fortune` 已完成本地 v2 图集和 QA，并已加入安装器白名单；Petdex 提交已接受，当前等待审核，审核完成并同步线上资源前不能使用 Petdex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
 `hei-mao-traveler` 仍没有可发布图集。2026-08-13 复核确认本地生图服务合同和运行时均可达，但唯一上游渠道在非流式与 SSE 两条已声明路径均返回 429，基础图未产生；在完成独立完整图集、全部 v2 门禁和视觉验收前，不得生成、安装或发布该角色。阻断证据见 `qa/traveler-generation-recheck-20260813.json` 和 `qa/imagegen-channel-recheck-20260812.json`。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。
 
@@ -159,7 +159,7 @@ npx -y petdex@latest install hei-mao-delivery
 HEI_MAO_PET_ID=hei-mao-fortune curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-fortune bash
 ```
 
-Petdex 发布状态：尚未提交。本轮 `petdex submit` 在上传前因当前 CLI 会话未登录而阻断，没有产生外部写入；完成登录后再按 Petdex 编辑/提交规则提交。证据见 `qa/petdex-fortune-submit-blocked-20260813.json`。提交审核并完成线上资源同步前，不要运行 `npx -y petdex@latest install hei-mao-fortune`。
+Petdex 发布状态：已提交，当前审核中。提交结果为 `1 submitted, 0 failed`，审核状态为 `held_for_review`，审核备注为 `possible policy issue`；当前公开 manifest 尚未出现该条目，因此仍不能运行 `npx -y petdex@latest install hei-mao-fortune`。提交后状态见 `qa/petdex-fortune-submit-recheck-20260813.json`；此前未登录时在上传前阻断的历史记录见 `qa/petdex-fortune-submit-blocked-20260813.json`。
 
 ### 品控官角色
 
@@ -288,7 +288,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游两条图像路径均被 429 限流的当前阻断记录，不含本机环境信息
 - `qa/current-local-gate-live-recheck-20260813.json`: 七个角色实时 v2 结构门禁、双目录 SHA 一致性和安装器隔离复核，不含本机环境信息
 - `qa/petdex-current-recheck-20260813.json`: 当前 Petdex CLI、manifest、线上资源 SHA、编辑路由、上游合并和相关条目状态复核
-- `qa/petdex-fortune-submit-blocked-20260813.json`: Fortune 提交在未登录状态下于上传前安全阻断的记录
+- `qa/petdex-fortune-submit-blocked-20260813.json`: Fortune 提交在未登录状态下于上传前安全阻断的历史记录
+- `qa/petdex-fortune-submit-recheck-20260813.json`: Fortune 已提交、等待审核且尚未进入公开 manifest 的当前状态记录
 - `qa/current-local-app-boundary-recheck-20260813.json`: 七角色本地门禁、安装器隔离和 Codex App 实时验收边界复核
 - `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/petdex-sync-recheck-20260810.json`: 最新 Petdex manifest、编辑接口和 PR #654 状态复核

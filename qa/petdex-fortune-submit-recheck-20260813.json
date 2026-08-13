@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T13:41:13Z",
+  "scope": "Fortune Petdex submission and public-visibility recheck",
+  "cli": {
+    "version": "1.2.1",
+    "whoami": "signed_in",
+    "operation": "submit result recheck",
+    "target": "hei-mao-fortune"
+  },
+  "submission": {
+    "status": "submitted",
+    "submitted_count": 1,
+    "failed_count": 0,
+    "review_status": "held_for_review",
+    "review_note": "possible policy issue",
+    "duplicate_submit_attempted_during_recheck": false,
+    "external_write_observed": true
+  },
+  "public_manifest": {
+    "generated_at": "2026-08-13T12:52:22.710Z",
+    "total": 4521,
+    "fortune_listed": false,
+    "list_command_observed": false,
+    "interpretation": "提交已接受但尚未审核通过，未进入公开列表"
+  },
+  "release_decision": {
+    "fortune_submitted": true,
+    "fortune_review_pending": true,
+    "fortune_published": false,
+    "fortune_installable_from_petdex": false,
+    "reason": "提交结果已接受，但公开 manifest 尚未出现 Fortune；审核完成并同步线上资源前不能使用 Petdex 在线安装。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_metadata": false
+  },
+  "result": "fortune_submitted_pending_petdex_review"
+}
