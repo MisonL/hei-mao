@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T02:37:37+08:00",
+  "checked_commit": "04f28f40d84b32e97495a021d8d4b62a3d877d68",
+  "scope": "seven local role packages, explicit chroma-key v2 validation, installation parity, repository remotes, skill tests, and image-generation boundary",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune"
+  ],
+  "atlas_validation": {
+    "command": "validate_atlas.py --require-v2 --chroma-key <recorded-role-key>",
+    "result": "pass_all_roles",
+    "contract": {
+      "dimensions": "1536x2288",
+      "layout": "8x11 cells of 192x208",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "chroma_keys": {
+      "hei-mao": "#00FF00",
+      "hei-mao-quality": "#FF00FF",
+      "hei-mao-butler": "#00FF00",
+      "hei-mao-chef": "#00FFFF",
+      "hei-mao-delivery": "#FF00FF",
+      "hei-mao-foodie": "#FF00FF",
+      "hei-mao-fortune": "#00FFFF"
+    }
+  },
+  "hatch_pet_tests": {
+    "runtime": "workspace-provided Python 3.14.6",
+    "command": "python -m unittest discover -s <hatch-pet-skill>/tests -p 'test_*.py' -q",
+    "passed": 28,
+    "failed": 0,
+    "result": "pass",
+    "timeout_seconds": 60,
+    "note": "The tests are provided by the installed hatch-pet skill; the repository does not contain a hatch-pet/tests directory."
+  },
+  "installation_parity": {
+    "roots": [
+      "repository_pets",
+      "codex_pets",
+      "petdex_pets"
+    ],
+    "role_sets_match": true,
+    "file_sets_match": true,
+    "sha256_match_all_roles_and_files": true,
+    "historical_or_blocked_directories_present": false
+  },
+  "repository_remotes": {
+    "local_head": "04f28f40d84b32e97495a021d8d4b62a3d877d68",
+    "gitlab_main": "04f28f40d84b32e97495a021d8d4b62a3d877d68",
+    "github_main": "04f28f40d84b32e97495a021d8d4b62a3d877d68",
+    "working_tree_before_recording": "clean"
+  },
+  "petdex_manifest_recheck": {
+    "evidence": "qa/petdex-current-recheck-20260814.json",
+    "manifest_total": 4521,
+    "fortune_present": false,
+    "traveler_present": false,
+    "online_v2_sync": "incomplete",
+    "online_resource_drift": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-foodie"
+    ],
+    "online_resource_match": [
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery"
+    ]
+  },
+  "image_generation_boundary": {
+    "channel_health": "local_container_healthy_and_reachable_with_recent_upstream_429",
+    "contract_check": "pass_without_billable_generation",
+    "latest_real_generation_evidence": "qa/traveler-generation-recheck-20260814.json",
+    "traveler": {
+      "publishable": false,
+      "installable": false,
+      "artifact_count": 0,
+      "historical_base": "independent_base_only; not a complete atlas",
+      "provenance_guard": "The current run reference is a Butler atlas and must not be used as Traveler grounding.",
+      "reason": "Two page SSE attempts and one explicit Agent JSON edit attempt used new idempotency keys and returned upstream HTTP 429; no Traveler idle row or complete atlas exists."
+    }
+  },
+  "external_boundaries": {
+    "codex_app_visual_acceptance": "not_run",
+    "petdex_online_v2_sync": "incomplete",
+    "fortune_public_manifest": "not_present_in_retained_manifest_snapshot",
+    "traveler_public_manifest": "not_present"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "private_environment_details": false
+  },
+  "result": "local_explicit_key_v2_and_parity_pass_external_acceptance_and_traveler_generation_open"
+}
