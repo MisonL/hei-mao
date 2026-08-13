@@ -24,21 +24,21 @@
   "final_visual_qa": "qa/hei-mao-fortune/final-visual-qa.json",
   "source_jobs": {
     "row_9": {
-      "idempotency_key": "hei-mao-fortune-20260812-look-row-9-v4",
-      "request_id": "57fdfedf-a232-4c04-9d37-ae1a8938513d",
-      "artifact_id": "b570e7c8-81ea-4487-b803-db14a4d21325",
+      "idempotency_key": "redacted",
+      "request_id": "redacted",
+      "artifact_id": "redacted",
       "source_sha256": "a31f463f04228d0ad55fd69f2b392e9378a228e25855abc375acd238f846d749"
     },
     "row_10": {
-      "idempotency_key": "hei-mao-fortune-20260812-look-row-10-v1",
-      "request_id": "f7bdc7ad-cc46-42b0-8a43-2e4d4e576054",
-      "artifact_id": "63052c47-5b70-4263-8ce6-ea3628e467a0",
+      "idempotency_key": "redacted",
+      "request_id": "redacted",
+      "artifact_id": "redacted",
       "source_sha256": "bedef98ad75280ef83751023cf02edc998c61b1ffc578359a35fa344e407f9e3"
     },
     "running": {
-      "idempotency_key": "hei-mao-fortune-20260812-running-v2",
-      "request_id": "0537fd53-a601-4015-9512-326a981942cc",
-      "artifact_id": "048ca86f-4329-49bd-b9e8-58993f4e3d86",
+      "idempotency_key": "redacted",
+      "request_id": "redacted",
+      "artifact_id": "redacted",
       "source_sha256": "83dcfb37449dd3f38c93f4e74480093ad07232506b1f720a269f285ad9fb3d6d"
     }
   }

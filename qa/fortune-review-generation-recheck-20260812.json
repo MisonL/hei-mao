@@ -2,9 +2,9 @@
   "checked_at": "2026-08-12T09:25:00Z",
   "scope": "Fortune role review animation row",
   "generation": {
-    "idempotency_key": "hei-mao-fortune-20260812-review-v2",
-    "request_id": "26e32331-e409-4c68-b29b-d3f8f107d68e",
-    "artifact_id": "e155927b-cf17-4030-a4b6-920c80989bbe",
+    "idempotency_key": "redacted",
+    "request_id": "redacted",
+    "artifact_id": "redacted",
     "transport": "agent_json",
     "channel_request_mode": "images-sse",
     "source_dimensions": [

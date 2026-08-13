@@ -2,7 +2,7 @@
   "checked_at": "2026-08-12T07:00:00Z",
   "scope": "Fortune role failed animation row",
   "generation": {
-    "idempotency_key": "hei-mao-fortune-20260812-failed-v1",
+    "idempotency_key": "redacted",
     "transport": "page_sse",
     "source_dimensions": [1536, 512],
     "source_format": "webp",
