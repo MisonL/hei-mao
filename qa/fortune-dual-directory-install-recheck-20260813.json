@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scope": "repository, Codex and Petdex local package parity",
+  "checked_at": "2026-08-13",
+  "roots": [
+    "pets/<slug>",
+    "~/.codex/pets/<slug>",
+    "~/.petdex/pets/<slug>"
+  ],
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune"
+  ],
+  "checks": {
+    "pet_json_ids_match_slug": true,
+    "sprite_version_number": 2,
+    "required_files_present": true,
+    "repository_to_codex_byte_parity": true,
+    "repository_to_petdex_byte_parity": true,
+    "codex_to_petdex_byte_parity": true
+  },
+  "fortune": {
+    "pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+    "spritesheet_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71"
+  },
+  "result": "pass",
+  "limitations": [
+    "Byte parity does not constitute Codex App visual acceptance or Petdex online publication acceptance.",
+    "Traveler is intentionally absent because its image-generation channel is currently unavailable."
+  ]
+}
