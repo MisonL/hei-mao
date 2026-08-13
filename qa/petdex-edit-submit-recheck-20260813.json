@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T16:03:56Z",
+  "scope": "Petdex owned-slug edits submitted through the authenticated CLI",
+  "cli": {
+    "version": "1.2.1",
+    "auth_state": "signed_in",
+    "command": "petdex edit <slug>"
+  },
+  "edits": [
+    {
+      "slug": "hei-mao",
+      "fields": ["sprite"],
+      "local_sprite_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "result": "queued_for_admin_review"
+    },
+    {
+      "slug": "hei-mao-quality",
+      "fields": ["meta", "sprite"],
+      "local_pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "local_sprite_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "result": "queued_for_admin_review"
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "fields": ["sprite"],
+      "local_sprite_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+      "result": "queued_for_admin_review"
+    }
+  ],
+  "public_manifest_after_submit": {
+    "generated_at": "2026-08-13T12:52:22.710Z",
+    "total": 4521,
+    "fortune_present": false,
+    "traveler_present": false,
+    "recommender_present": false,
+    "delivery_online_sprite_matches_repository": true,
+    "hei_mao_edit_visible": false,
+    "hei_mao_quality_edit_visible": false,
+    "hei_mao_foodie_edit_visible": false,
+    "interpretation": "编辑已受理但尚未完成审核和 CDN 资源切换；当前公开资源仍可能是旧版本。"
+  },
+  "safety": {
+    "duplicate_entries_created": false,
+    "new_slugs_created": false,
+    "credentials_recorded": false,
+    "local_environment_data_recorded": false
+  },
+  "result": "three_owned_petdex_edits_queued_without_duplicate_submission"
+}

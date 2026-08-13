@@ -23,7 +23,7 @@ npx -y petdex@latest install hei-mao-foodie
 npx -y petdex@latest install hei-mao-delivery
 ```
 
-截至 2026-08-13 的复核，Petdex CLI 为 `1.2.1`。当前公开条目中 `hei-mao`、`hei-mao-quality`、`hei-mao-foodie` 和 `hei-mao-delivery` 的线上精灵图与仓库 v2 SHA 不一致；`hei-mao-quality` 的线上 metadata 也不一致；大管家和厨师的 metadata、精灵图均一致。Petdex 编辑路由现已部署并受认证保护，但未在本轮使用登录会话提交编辑。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录。当前在线资源与本仓库 v2 尚未完全同步，不能把在线下载结果当作仓库 v2。
+本次复核中 Petdex CLI 为 `1.2.1`，登录会话有效。`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的仓库 v2 图集已按已有 slug 的编辑规则提交，当前均为管理员审核队列，公开 manifest 尚未切换资源；`hei-mao-quality` 的线上 metadata 也仍是旧版本。`hei-mao-delivery` 的线上 metadata 和精灵图已与仓库 v2 SHA 一致；大管家和厨师的 metadata、精灵图也一致。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录。审核和 CDN 切换完成前，不能把 Petdex 在线下载结果当作仓库 v2。
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -38,15 +38,15 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 | slug              | 角色   | 本地状态               | Petdex 状态                |
 | ----------------- | ------ | ---------------------- | -------------------------- |
-| `hei-mao`         | 黑毛   | 已验证                 | manifest 可见，在线精灵图漂移 |
-| `hei-mao-quality` | 品控官 | 已验证                 | manifest 可见，在线 metadata 与精灵图漂移 |
+| `hei-mao`         | 黑毛   | 已验证                 | manifest 可见，图集编辑待审核，线上仍为旧资源 |
+| `hei-mao-quality` | 品控官 | 已验证                 | manifest 可见，metadata 与图集编辑待审核 |
 | `hei-mao-butler`  | 大管家 | 已验证                 | manifest index 为 v1，资源一致 |
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest index 为 v1，资源一致 |
-| `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，在线精灵图漂移 |
-| `hei-mao-delivery` | 配送员 | v2 已验证，可本地安装 | manifest 可见，在线 v2 精灵图漂移 |
+| `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，图集编辑待审核，线上仍为旧资源 |
+| `hei-mao-delivery` | 配送员 | v2 已验证，可本地安装 | manifest 可见，线上 v2 资源已与仓库一致 |
 | `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | 已提交，等待审核 |
 
-公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，但线上精灵图仍与仓库 SHA 不一致。`hei-mao-fortune` 已提交但仍在审核中，尚未出现在公开 manifest；`hei-mao-traveler` 不存在于 manifest。提交后状态见 `qa/petdex-fortune-submit-recheck-20260813.json`，提交前 manifest 快照见 `qa/petdex-current-recheck-20260813.json`；历史 8 月复核只作为背景，不替代当前结论。
+公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，线上 metadata 和精灵图与仓库 SHA 一致。`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的编辑已受理但尚未完成审核和 CDN 切换。`hei-mao-fortune` 已提交但仍在审核中，尚未出现在公开 manifest；`hei-mao-traveler` 不存在于 manifest。最新编辑状态见 `qa/petdex-edit-submit-recheck-20260813.json`，Fortune 提交状态见 `qa/petdex-fortune-submit-recheck-20260813.json`，当前 manifest 快照见 `qa/petdex-current-recheck-20260813.json`；历史复核只作为背景，不替代当前结论。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -292,6 +292,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/traveler-generation-recheck-20260813-v3.json`: Traveler 使用全新幂等键的最新生成阻断记录；上游返回 429，未产生图像，不含本机环境信息
 - `qa/current-local-gate-live-recheck-20260813.json`: 七个角色实时 v2 结构门禁、双目录 SHA 一致性和安装器隔离复核，不含本机环境信息
 - `qa/petdex-current-recheck-20260813.json`: 当前 Petdex CLI、manifest、线上资源 SHA、编辑路由、上游合并和相关条目状态复核
+- `qa/petdex-edit-submit-recheck-20260813.json`: `hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的已有 slug 编辑提交、审核队列和提交后 manifest 状态复核
 - `qa/petdex-fortune-submit-blocked-20260813.json`: Fortune 提交在未登录状态下于上传前安全阻断的历史记录
 - `qa/petdex-fortune-submit-recheck-20260813.json`: Fortune 已提交、等待审核且尚未进入公开 manifest 的当前状态记录
 - `qa/current-local-app-boundary-recheck-20260813.json`: 七角色本地门禁、安装器隔离和 Codex App 实时验收边界复核
@@ -387,7 +388,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-delivery/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
 - `qa/hei-mao-delivery/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
 - `qa/hei-mao-delivery/final-visual-qa.json`: `pass_with_reviewed_warnings`；耳间开放负空间和局部连续性告警已由独立复核与 alpha 连通性证据确认，不存在封闭透明洞或方向反转
-- `qa/petdex-delivery-submit-20260811.json`: 配送员首次提交的历史记录；当前状态以 `qa/petdex-current-recheck-20260813.json` 为准，manifest 已可见但线上精灵图仍与仓库 v2 SHA 漂移
+- `qa/petdex-delivery-submit-20260811.json`: 配送员首次提交的历史记录；当前线上 metadata 和精灵图已与仓库 v2 SHA 一致
 
 ## 许可
 
