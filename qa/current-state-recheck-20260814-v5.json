@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T03:40:00+08:00",
+  "checked_commit": "35524f0ac08129993f15f704ea617d25de50c3cd",
+  "scope": "current local role release state, Petdex manifest, installation parity, cross-platform installers, and generation boundary",
+  "local_roles": {
+    "count": 7,
+    "slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune"
+    ],
+    "atlas_gate": {
+      "validator": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+      "result": "pass_all_roles",
+      "dimensions": "1536x2288",
+      "layout": "8x11 cells of 192x208",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "hatch_pet_tests": {
+      "runtime": "workspace-provided Python 3.14.6",
+      "test_root": "installed hatch-pet skill tests",
+      "passed": 28,
+      "failed": 0
+    }
+  },
+  "installation_parity": {
+    "roots": [
+      "repository_pets",
+      "codex_pets",
+      "petdex_pets"
+    ],
+    "role_sets_match": true,
+    "file_sets_match": true,
+    "sha256_match_all_roles_and_files": true,
+    "historical_or_blocked_directories_present": false
+  },
+  "cross_platform_installers": {
+    "evidence": "qa/installer-cross-platform-recheck-20260814-v2.json",
+    "shell": "seven current roles pass; Traveler rejected without target creation",
+    "powershell": "seven current roles pass; Traveler rejected without target creation",
+    "temporary_targets_only": true
+  },
+  "petdex": {
+    "evidence": "qa/petdex-current-recheck-20260814-v2.json",
+    "cli_version": "1.2.1",
+    "manifest_total": 4521,
+    "public_current_entries": [
+      "hei-mao",
+      "hei-mao-delivery",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "historical_duplicate_entry": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "online_v2_sync": "incomplete",
+    "owned_edits": "hei-mao, hei-mao-quality, and hei-mao-foodie queued for review",
+    "fortune_submission": "held_for_review"
+  },
+  "traveler": {
+    "evidence": "qa/traveler-generation-recheck-20260814-v2.json",
+    "publishable": false,
+    "installable": false,
+    "latest_generation_status": "upstream_rate_limited",
+    "latest_http_status": 429,
+    "latest_artifact_count": 0,
+    "complete_atlas": false
+  },
+  "codex_app": {
+    "process_status": "running",
+    "visual_acceptance": "not_run",
+    "reason": "当前前台不是宠物设置或动画画面，窗口和截图证据不可用；不发送刷新、点击或进程信号。"
+  },
+  "remote_consistency": {
+    "gitlab_main": "35524f0ac08129993f15f704ea617d25de50c3cd",
+    "github_main": "35524f0ac08129993f15f704ea617d25de50c3cd",
+    "working_tree_tracked_files": "clean"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "private_environment_details": false
+  },
+  "result": "seven_local_roles_and_cross_platform_installers_pass; traveler_generation_codex_app_visual_acceptance_and_petdex_online_v2_sync_open"
+}
