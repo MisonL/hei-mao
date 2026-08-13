@@ -38,7 +38,7 @@
       "passed": 159,
       "failed": 0
     },
-    "installed_batch_script_sha256": "27da1eae10f8a0f4153a82c1f38f71583007a9d5849849dfb6616252cc492f5"
+    "installed_batch_script_sha256": "27da1eae10ed8f0a4153a82c1f38f71583007a9d5849849dfb6616252cc492f5"
   },
   "prompt_repair": {
     "status": "pass",
