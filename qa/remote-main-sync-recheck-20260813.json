@@ -24,11 +24,19 @@
     "force_push": false,
     "remote_history_rewritten": false
   },
+  "after_sync": {
+    "local_main": "97fe609ba00798acf8dd4bff186707d62511afc3",
+    "github_main": "97fe609ba00798acf8dd4bff186707d62511afc3",
+    "gitlab_main": "97fe609ba00798acf8dd4bff186707d62511afc3",
+    "local_remote_commit_delta": 0,
+    "github_gitlab_commit_delta": 0,
+    "worktree_clean": true
+  },
   "public_file_hygiene": {
     "local_absolute_paths": false,
     "private_network_addresses": false,
     "credentials": false,
-    "secret_material": false
+    "sensitive_material": false
   },
-  "result": "pre_sync_recheck"
+  "result": "main_synced_and_verified"
 }
