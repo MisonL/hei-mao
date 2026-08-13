@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T13:28:00Z",
+  "scope": "live v2 atlas validation, dual-directory parity, and installer isolation",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune"
+  ],
+  "atlas_validation": {
+    "command": "validate_atlas.py --require-v2",
+    "result": "pass_all_roles",
+    "dimensions": "1536x2288",
+    "layout": "8x11 cells of 192x208",
+    "format": "WEBP RGBA",
+    "sprite_version_number": 2,
+    "transparent_rgb_residue_pixels": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "dual_directory_sha_parity": {
+    "roots": [
+      "codex_pets",
+      "petdex_pets"
+    ],
+    "result": "pass_all_roles_and_files"
+  },
+  "installer_isolation": {
+    "accepted_roles": "all_seven",
+    "rejected_roles": [
+      "hei-mao-traveler",
+      "hei-mao-recommender"
+    ],
+    "rejected_roles_written": false,
+    "temporary_target_only": true,
+    "result": "pass"
+  },
+  "codex_app": {
+    "visual_acceptance": "not_run",
+    "reason": "当前前台画面不是宠物设置或动画画面；未发送刷新、点击或进程信号。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "local_v2_and_installer_gates_pass_app_visual_acceptance_open"
+}

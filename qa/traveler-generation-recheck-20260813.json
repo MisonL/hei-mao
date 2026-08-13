@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T13:24:00Z",
+  "scope": "Traveler v2 atlas generation prerequisite recheck",
+  "service": {
+    "kind": "local_image_playground",
+    "deployment": "local_deployment",
+    "health_probe": "reachable",
+    "capabilities_contract": "pass",
+    "runtime_capabilities_contract": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1
+  },
+  "generation_attempts": [
+    {
+      "operation": "base",
+      "status": "blocked",
+      "request_mode": "images-non-stream",
+      "error_code": "upstream_rate_limited",
+      "upstream_status": 429,
+      "retryable": true,
+      "artifact_count": 0,
+      "idempotency_key_reused": false
+    },
+    {
+      "operation": "base",
+      "status": "blocked",
+      "request_mode": "images-sse",
+      "error_code": "upstream_rate_limited",
+      "upstream_status": 429,
+      "artifact_count": 0,
+      "idempotency_key_reused": false
+    }
+  ],
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "本地生图服务合同和运行时均可达，但唯一上游渠道在非流式与 SSE 两条已声明路径均返回 429，未产生基础图；不得使用占位图、复用其他角色或静默降级。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "traveler_generation_blocked_upstream_rate_limit"
+}
