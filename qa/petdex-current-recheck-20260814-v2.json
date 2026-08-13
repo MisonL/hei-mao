@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T02:47:55+08:00",
+  "manifest_source": "https://petdex.dev/api/manifest",
+  "manifest_sha256": "9445e0e77b89ae11d613442fcea9eebd807b9110fe9f5f5ffedaa8e108c56696",
+  "manifest_total": 4521,
+  "cli_version": "1.2.1",
+  "owned_entries": {
+    "hei-mao": {"sprite_version_number": 1, "metadata_match": true, "spritesheet_match": false},
+    "hei-mao-delivery": {"sprite_version_number": 2, "metadata_match": true, "spritesheet_match": true},
+    "hei-mao-quality": {"sprite_version_number": 1, "metadata_match": false, "spritesheet_match": false},
+    "hei-mao-2": {"sprite_version_number": 1, "classification": "historical_duplicate_entry"},
+    "hei-mao-butler": {"sprite_version_number": 1, "metadata_match": true, "spritesheet_match": true},
+    "hei-mao-chef": {"sprite_version_number": 1, "metadata_match": true, "spritesheet_match": true},
+    "hei-mao-foodie": {"sprite_version_number": 1, "metadata_match": true, "spritesheet_match": false}
+  },
+  "fortune_present": false,
+  "traveler_present": false,
+  "recommender_present": false,
+  "online_resource_sha256": {
+    "hei-mao": {"metadata": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "spritesheet": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c"},
+    "hei-mao-delivery": {"metadata": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "spritesheet": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"},
+    "hei-mao-quality": {"metadata": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43", "spritesheet": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92"},
+    "hei-mao-butler": {"metadata": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "spritesheet": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"metadata": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "spritesheet": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-foodie": {"metadata": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "spritesheet": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49"}
+  },
+  "repository_commit_checked": "a91cfa4beca78560881da65cd9109bd41f62032e",
+  "result": "manifest_and_public_sprites_rechecked; online_v2_sync_incomplete",
+  "limitations": [
+    "Fortune and Traveler are not present in this public manifest snapshot.",
+    "Online resource URLs and SHA values are current at checked_at and require a fresh check after upstream review or CDN changes."
+  ]
+}
