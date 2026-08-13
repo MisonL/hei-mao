@@ -57,7 +57,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 此前的 2026-08-10 复核快照仍保留在 `qa/petdex-live-install-recheck-20260810.json`，仅用于追溯历史漂移，不代表当前线上状态。当前结论以 `qa/petdex-current-recheck-20260813.json` 为准。
 
-本机当前保留七个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，七个角色的当前门禁复核见 `qa/current-v2-gate-recheck-20260813.json`。
+本机当前保留七个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，七个角色的当前门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和最新的 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
 本轮本地安装器隔离验证已通过七个角色，并确认历史或阻断角色不会写入；Codex App 进程仍在运行，但当前可见画面不是宠物设置或动画画面，因此没有执行刷新或视觉选择验收。多显示器气泡重叠仍以 `qa/petdex-multidisplay-recheck-20260810.json` 记录的上游边界为准。当前本地 App 验收边界见 `qa/current-local-app-boundary-recheck-20260813.json`。
 
@@ -80,7 +80,7 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 未完成完整 v2 图集和复核的 `hei-mao-traveler` 不在安装器白名单内。`hei-mao-fortune` 已完成本地 v2 图集和 QA，并已加入安装器白名单；Petdex 提交已接受，当前等待审核，审核完成并同步线上资源前不能使用 Petdex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
-`hei-mao-traveler` 仍没有可发布图集。2026-08-13 复核确认本地生图服务合同和运行时均可达，但唯一上游渠道在非流式与 SSE 两条已声明路径均返回 429，基础图未产生；在完成独立完整图集、全部 v2 门禁和视觉验收前，不得生成、安装或发布该角色。阻断证据见 `qa/traveler-generation-recheck-20260813.json` 和 `qa/imagegen-channel-recheck-20260812.json`。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。
+`hei-mao-traveler` 仍没有可发布图集。2026-08-13 最新复核确认本地生图服务合同和运行时均可达，但唯一上游渠道在非流式请求中仍返回 429，基础图未产生；在完成独立完整图集、全部 v2 门禁和视觉验收前，不得生成、安装或发布该角色。当前阻断证据见 `qa/traveler-generation-recheck-20260813-v3.json`；此前的 `qa/traveler-generation-recheck-20260813.json` 和 `qa/traveler-generation-recheck-20260813-v2.json` 仅作历史记录。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。
 
 本地手动安装角色时：
 
@@ -258,7 +258,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-quality/`: 品控官 v5 的独立验证、盲测投票与视觉复核证据
 - `pets/hei-mao-butler/`: 已验证的大管家角色包
 - `qa/hei-mao-butler/`: 大管家 v2 的独立验证与视觉复核证据
-- `pets/hei-mao-chef/`: 已验证的厨师角色包（Petdex 待审核）
+- `pets/hei-mao-chef/`: 已验证的厨师角色包（Petdex manifest 可见，线上资源与仓库一致）
 - `qa/hei-mao-chef/`: 厨师 v2 的独立验证与视觉复核证据
 - `pets/hei-mao-foodie/`: 已通过最终视觉 QA 的美食家 v2 角色包
 - `qa/hei-mao-foodie/`: 美食家 v2 的结构、方向和视觉复核证据
@@ -275,6 +275,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/foodie-install-recheck-20260810.json`: foodie 修复后的 v2 合同、安装器、本机双目录一致性和公开文件卫生复核
 - `qa/current-local-gate-recheck-20260810.json`: 基于当前提交重新执行的 v2 合同、hatch-pet 测试、安装器允许/拒绝路径、双目录一致性和公开文件卫生复核
 - `qa/current-v2-gate-recheck-20260813.json`: 七个当前角色的 v2 atlas、单次 despill、标准动作、方向盲测、连续性和最终视觉 QA 门禁复核
+- `qa/all-roles-v2-keyed-recheck-20260813.json`: 使用各角色实际抠像键重新执行的七角色 v2 结构、透明度和双目录 SHA 一致性复核
 - `qa/current-release-gate-recheck-20260810-v2.json`: 提交 `a8db02d` 下五个角色的 v2 合同、实际双平台安装器隔离 smoke、28 项技能测试、双目录 SHA 和公开文件复核；Codex App 实时验收仍未完成
 - `qa/current-release-gate-recheck-20260810.json`: 提交 `d1a849d` 下使用专用运行时的五角色 v2 合同、28 项技能测试、安装器解析和本机双目录 SHA 复核
 - `qa/local-release-hygiene-recheck-20260810.json`: 最新角色身份、历史 slug 隔离、本机双目录 SHA、一键安装器和公开文件卫生复核
@@ -285,7 +286,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260810.json`: 本地生图 Agent 的 capabilities、runtime、契约、历史 smoke 和本轮失败生成请求复核；当前新角色生成保持阻断
 - `qa/imagegen-channel-recheck-20260812.json`: 本地 Docker 生图服务的当前 capabilities、runtime、两条启用路径真实 smoke 和新角色生成阻断复核
 - `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务连接拒绝时的历史安全阻断记录，不含本机环境信息
-- `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游两条图像路径均被 429 限流的当前阻断记录，不含本机环境信息
+- `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游图像路径被 429 限流的历史阻断记录，不含本机环境信息
+- `qa/traveler-generation-recheck-20260813-v3.json`: Traveler 使用全新幂等键的最新生成阻断记录；上游返回 429，未产生图像，不含本机环境信息
 - `qa/current-local-gate-live-recheck-20260813.json`: 七个角色实时 v2 结构门禁、双目录 SHA 一致性和安装器隔离复核，不含本机环境信息
 - `qa/petdex-current-recheck-20260813.json`: 当前 Petdex CLI、manifest、线上资源 SHA、编辑路由、上游合并和相关条目状态复核
 - `qa/petdex-fortune-submit-blocked-20260813.json`: Fortune 提交在未登录状态下于上传前安全阻断的历史记录
@@ -383,7 +385,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-delivery/chroma-despill.json`: `ok: true`，单次边缘色键去溢完成
 - `qa/hei-mao-delivery/direction-blind-validation.json`: `ok: true`，四个 cardinal 硬门禁通过
 - `qa/hei-mao-delivery/final-visual-qa.json`: `pass_with_reviewed_warnings`；耳间开放负空间和局部连续性告警已由独立复核与 alpha 连通性证据确认，不存在封闭透明洞或方向反转
-- `qa/petdex-delivery-submit-20260811.json`: Petdex 提交已接受，当前 `held_for_review`
+- `qa/petdex-delivery-submit-20260811.json`: 配送员首次提交的历史记录；当前状态以 `qa/petdex-current-recheck-20260813.json` 为准，manifest 已可见但线上精灵图仍与仓库 v2 SHA 漂移
 
 ## 许可
 
