@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T03:44:27+08:00",
+  "checked_commit": "96d8ae43cd4e7b97c933f2901c0fdde234016880",
+  "scope": "current local role release state, Petdex manifest, installation parity, cross-platform installers, and latest generation boundary",
+  "local_release": {
+    "roles": 7,
+    "atlas_gate": "all pass: 1536x2288, 8x11, RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "hatch_pet_tests": "28 passed",
+    "repository_codex_petdex_parity": "pass",
+    "cross_platform_installers": "Shell and PowerShell seven-role isolated smoke pass; Traveler rejected without target creation"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-current-recheck-20260814-v2.json",
+    "manifest_total": 4521,
+    "fortune_public": false,
+    "traveler_public": false,
+    "online_v2_sync": "incomplete",
+    "owned_edits": "three existing slugs queued for review",
+    "fortune_submission": "held_for_review"
+  },
+  "traveler": {
+    "evidence": "qa/traveler-generation-recheck-20260814-v3.json",
+    "latest_page_sse": "429 upstream_rate_limited",
+    "latest_agent_json": "429 upstream_rate_limited after server-selected images-sse fallback",
+    "artifacts": 0,
+    "publishable": false,
+    "installable": false
+  },
+  "codex_app": {
+    "process_status": "running",
+    "visual_acceptance": "not_run",
+    "reason": "当前前台不是宠物设置或动画画面，系统截图不可用；不发送刷新、点击或进程信号。"
+  },
+  "remote_consistency": {
+    "gitlab_main": "96d8ae43cd4e7b97c933f2901c0fdde234016880",
+    "github_main": "96d8ae43cd4e7b97c933f2901c0fdde234016880"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "private_environment_details": false
+  },
+  "result": "local_release_gates_pass; traveler_generation_codex_app_visual_acceptance_and_petdex_online_v2_sync_open"
+}

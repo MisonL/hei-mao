@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T03:44:27+08:00",
+  "checked_commit": "96d8ae43cd4e7b97c933f2901c0fdde234016880",
+  "scope": "Traveler idle row generation using page SSE and Agent JSON comparison paths",
+  "preflight": {
+    "capabilities": "pass",
+    "runtime_contract": "pass",
+    "channel_health": "healthy snapshot; latest request still rate limited",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1
+  },
+  "attempts": [
+    {
+      "transport": "page_sse",
+      "status": "blocked",
+      "http_status": 429,
+      "error_code": "page_sse_request_rejected",
+      "error_classification": "upstream_rate_limited",
+      "fallback_applied": false,
+      "artifact_count": 0,
+      "dimension_check": "not_reached",
+      "new_idempotency_key": true
+    },
+    {
+      "transport": "agent_json",
+      "status": "blocked",
+      "upstream_status": 429,
+      "error_code": "upstream_rate_limited",
+      "error_classification": "upstream_rate_limited",
+      "selected_request_mode": "images-sse",
+      "fallback_applied": true,
+      "artifact_count": 0,
+      "dimension_check": "not_reached",
+      "diagnostic_state": "failed_with_retryable_true",
+      "new_idempotency_key": true
+    }
+  ],
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "页面 SSE 和 Agent JSON 对照路径都在同一上游渠道被限流；Traveler 仍缺少完整标准动作、cardinal、look row 9/10、v2 QA、安装和视觉验收。不得使用其他角色、占位图或静默降级。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "private_environment_details": false
+  },
+  "result": "traveler_generation_blocked_on_page_and_agent_paths"
+}
