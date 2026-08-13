@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T12:04:18Z",
+  "scope": "GitHub and GitLab main synchronization",
+  "before_sync": {
+    "local_main": "7686c45ec7eba0f97f664600162c10666658ac5b",
+    "github_main": "5301fefdbccf91fe1608a7d382a3285409ab1029",
+    "gitlab_main": "5301fefdbccf91fe1608a7d382a3285409ab1029",
+    "remote_branch_names": {
+      "github": ["main"],
+      "gitlab": ["main"]
+    },
+    "local_commits_pending_sync": [
+      "e9672f32a751b3ae8c19b11414c75e1418ebef1a",
+      "bc2b5aa5c8c7ce881ccd21ccab4c5e3e33dd11a3",
+      "d3e041b0c051a9ff5d2082379acf1b29b93bdb2d",
+      "082e695bcc4bb48ff804a6005543c07f8104e902",
+      "8bd1112f8a3a4177cde324a47f256d23615e213d",
+      "7686c45ec7eba0f97f664600162c10666658ac5b"
+    ]
+  },
+  "sync_policy": {
+    "target_branch": "main",
+    "force_push": false,
+    "remote_history_rewritten": false
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "secret_material": false
+  },
+  "result": "pre_sync_recheck"
+}
