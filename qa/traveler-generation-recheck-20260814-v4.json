@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T04:12:08+08:00",
+  "checked_commit": "d37e539f17b353afb6c55c56b697a7d87ba39ec2",
+  "scope": "Traveler independent base generation retry using local GPT Image Playground Agent paths",
+  "preflight": {
+    "capabilities": "pass",
+    "runtime_contract": "pass",
+    "enabled_image_backend": "images-api",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "channel_queue_capacity_per_credential": 1,
+    "recommended_concurrency": 1,
+    "active_requests_at_check": 0,
+    "healthy_credential_count": 1
+  },
+  "attempts": [
+    {
+      "transport": "agent_json",
+      "route": "/api/agent/images/generate",
+      "status": "blocked",
+      "http_status": 429,
+      "error_code": "upstream_rate_limited",
+      "error_classification": "upstream_rate_limited",
+      "selected_request_mode": "images-non-stream",
+      "artifact_count": 0,
+      "dimension_check": "not_reached",
+      "new_idempotency_key": true,
+      "script_retryable": false,
+      "diagnostic_retryable": true
+    },
+    {
+      "transport": "page_sse",
+      "route": "/api/images",
+      "status": "blocked",
+      "http_status": 429,
+      "error_code": "page_sse_request_rejected",
+      "error_classification": "upstream_rate_limited",
+      "artifact_count": 0,
+      "dimension_check": "not_reached",
+      "new_idempotency_key": true,
+      "fallback_applied": false,
+      "billable": false
+    }
+  ],
+  "existing_base": {
+    "present": true,
+    "independent_role": true,
+    "used_as_publishable_artifact": false,
+    "reason": "已有 base 只能作为 Traveler 身份参考，不能替代完整标准动作和 look 图集。"
+  },
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "Agent JSON 与页面 SSE 两条真实路径均被上游 429 阻断，未产生新 artifact；Traveler 仍缺少完整标准动作、cardinal、look row 9/10、v2 QA、安装和视觉验收。不得使用其他角色、占位图或静默降级。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "idempotency_keys": false,
+    "private_environment_details": false
+  },
+  "result": "traveler_generation_blocked_on_agent_json_and_page_sse_paths"
+}
