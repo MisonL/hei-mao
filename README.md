@@ -157,7 +157,7 @@ npx -y petdex@latest install hei-mao-delivery
 HEI_MAO_PET_ID=hei-mao-fortune curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-fortune bash
 ```
 
-Petdex 发布状态：尚未提交。提交审核并完成线上资源同步前，不要运行 `npx -y petdex@latest install hei-mao-fortune`。
+Petdex 发布状态：尚未提交。本轮 `petdex submit` 在上传前因当前 CLI 会话未登录而阻断，没有产生外部写入；完成登录后再按 Petdex 编辑/提交规则提交。证据见 `qa/petdex-fortune-submit-blocked-20260813.json`。提交审核并完成线上资源同步前，不要运行 `npx -y petdex@latest install hei-mao-fortune`。
 
 ### 品控官角色
 
@@ -284,6 +284,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260812.json`: 本地 Docker 生图服务的当前 capabilities、runtime、两条启用路径真实 smoke 和新角色生成阻断复核
 - `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务当前不可用的安全阻断记录，不含本机环境信息
 - `qa/petdex-current-recheck-20260813.json`: 当前 Petdex CLI、manifest、线上资源 SHA、编辑路由、上游合并和相关条目状态复核
+- `qa/petdex-fortune-submit-blocked-20260813.json`: Fortune 提交在未登录状态下于上传前安全阻断的记录
 - `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/petdex-sync-recheck-20260810.json`: 最新 Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/remote-petdex-pr-recheck-20260810.json`: 当前 Petdex manifest、公开资源 SHA、编辑路由和 PR #654 最新审查/部署状态复核

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T12:24:00Z",
+  "scope": "Fortune Petdex submission authorization boundary",
+  "cli": {
+    "version": "1.2.1",
+    "operation": "submit",
+    "target": "hei-mao-fortune",
+    "auth_state": "not_signed_in"
+  },
+  "result": {
+    "status": "blocked_before_scan",
+    "message_class": "authentication_required",
+    "presign_requested": false,
+    "upload_started": false,
+    "register_requested": false,
+    "duplicate_submit_risk": false
+  },
+  "package_gate": {
+    "sprite_version_number": 2,
+    "required_files_present": true,
+    "repository_package_sha_verified": true,
+    "traveler_substitution": false
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_metadata": false
+  },
+  "release_decision": {
+    "fortune_published": false,
+    "reason": "提交需要已登录 Petdex 会话；当前会话未登录，不能绕过认证或代替用户完成外部授权。"
+  }
+}
