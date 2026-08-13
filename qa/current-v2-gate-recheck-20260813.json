@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scope": "fresh v2 atlas and retained QA gate recheck",
+  "checked_at": "2026-08-13",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune"
+  ],
+  "atlas_gate": {
+    "dimensions": "1536x2288",
+    "layout": "8x11 cells of 192x208",
+    "format": "WEBP RGBA",
+    "sprite_version_number": 2,
+    "transparent_rgb_residue_pixels": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "retained_qa_gate": {
+    "single_despill_ok": true,
+    "standard_review_errors": [],
+    "direction_blind_errors": [],
+    "direction_blind_unconfirmed": [],
+    "continuity_reports_ok": true,
+    "final_visual_qa": "pass or pass_with_reviewed_warnings",
+    "cardinal_hard_gates": "pass for all retained packages"
+  },
+  "result": "pass",
+  "limitations": [
+    "This is a deterministic and retained-artifact recheck; it does not replace live Codex App visual acceptance.",
+    "Petdex online metadata and sprite synchronization remain separate external checks."
+  ]
+}

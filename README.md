@@ -56,7 +56,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 截至 2026-08-10T04:08:08Z，Petdex 公开 manifest 的生成时间为 `2026-08-10T01:07:58.002Z`，总数为 4489，包含五个历史角色和历史重复条目 `hei-mao-2`；这些条目的 manifest 索引字段仍为 `spriteVersionNumber: 1`，但公开 pet JSON 的 `spriteVersionNumber` 已为 2。公开下载的 sprite 中，`hei-mao-butler` 和 `hei-mao-chef` 与仓库字节一致，`hei-mao`、`hei-mao-quality`、`hei-mao-foodie` 仍与仓库 v2 不一致；品控官的在线 metadata 也与仓库不一致。`petdex@1.2.0 install` 已在隔离目录成功下载五个角色并同时写入 Petdex/Codex 目录；这只证明线上安装可用，不代表线上资源已同步为仓库 v2。当前 CLI 的 `doctor` 已在 v1 移除；编辑流程仍需按正式的已登录编辑接口完成，不能把公开安装 smoke 当作 v2 发布完成。`hei-mao-2` 是历史重复条目，不属于当前发布集。完整复核证据见 `qa/petdex-live-install-recheck-20260810.json`。
 
-本机当前保留六个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，最新 foodie 安装复核见 `qa/foodie-install-recheck-20260810.json`。
+本机当前保留七个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，七个角色的当前门禁复核见 `qa/current-v2-gate-recheck-20260813.json`。
 
 ### 角色安装器
 
@@ -269,6 +269,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-package-install-recheck-20260810.json`: foodie 修复前的历史四角色安装一致性快照
 - `qa/foodie-install-recheck-20260810.json`: foodie 修复后的 v2 合同、安装器、本机双目录一致性和公开文件卫生复核
 - `qa/current-local-gate-recheck-20260810.json`: 基于当前提交重新执行的 v2 合同、hatch-pet 测试、安装器允许/拒绝路径、双目录一致性和公开文件卫生复核
+- `qa/current-v2-gate-recheck-20260813.json`: 七个当前角色的 v2 atlas、单次 despill、标准动作、方向盲测、连续性和最终视觉 QA 门禁复核
 - `qa/current-release-gate-recheck-20260810-v2.json`: 提交 `a8db02d` 下五个角色的 v2 合同、实际双平台安装器隔离 smoke、28 项技能测试、双目录 SHA 和公开文件复核；Codex App 实时验收仍未完成
 - `qa/current-release-gate-recheck-20260810.json`: 提交 `d1a849d` 下使用专用运行时的五角色 v2 合同、28 项技能测试、安装器解析和本机双目录 SHA 复核
 - `qa/local-release-hygiene-recheck-20260810.json`: 最新角色身份、历史 slug 隔离、本机双目录 SHA、一键安装器和公开文件卫生复核
