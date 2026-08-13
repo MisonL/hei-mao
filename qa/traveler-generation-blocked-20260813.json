@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T12:04:18Z",
+  "scope": "Traveler v2 atlas generation prerequisite",
+  "service": {
+    "kind": "local_image_playground",
+    "deployment": "local_deployment",
+    "health_probe": "connection_refused",
+    "matching_runtime_discovered": false,
+    "capabilities_contract": "unavailable",
+    "runtime_capabilities_contract": "unavailable"
+  },
+  "generation_smoke": {
+    "status": "not_started",
+    "reason": "图像服务不可用时不得发送真实生成请求",
+    "artifact_count": 0,
+    "new_generation_allowed": false
+  },
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "Traveler 尚无独立完整图集，且生成前置服务当前不可用；不得使用占位图、复用其他角色或静默降级"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "traveler_generation_blocked"
+}

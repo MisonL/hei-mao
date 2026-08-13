@@ -77,7 +77,7 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 未完成完整 v2 图集和复核的 `hei-mao-traveler` 不在安装器白名单内。`hei-mao-fortune` 已完成本地 v2 图集和 QA，并已加入安装器白名单；Petdex 尚未提交，不能使用 Petdex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
-`hei-mao-traveler` 仍没有可发布图集。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。证据见 `qa/hei-mao-fortune/run-summary.json` 和 `qa/hei-mao-fortune/final-visual-qa.json`。2026-08-12 的本地生图服务合同检查和失败 smoke 仍只约束 traveler 后续生成，不影响已完成的 Fortune 图集。
+`hei-mao-traveler` 仍没有可发布图集。2026-08-13 复核确认本地生图服务不可用，因此 Traveler 的真实生成 smoke 尚未启动；在服务恢复并完成独立完整图集、全部 v2 门禁和视觉验收前，不得生成、安装或发布该角色。阻断证据见 `qa/traveler-generation-blocked-20260813.json` 和 `qa/imagegen-channel-recheck-20260812.json`。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。
 
 本地手动安装角色时：
 
@@ -278,6 +278,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/remote-release-source-recheck-20260810.json`: 基于 `82480ab` 的 GitHub/GitLab raw 文件、Petdex manifest/资源、PR #654 和正式路由即时复核
 - `qa/imagegen-channel-recheck-20260810.json`: 本地生图 Agent 的 capabilities、runtime、契约、历史 smoke 和本轮失败生成请求复核；当前新角色生成保持阻断
 - `qa/imagegen-channel-recheck-20260812.json`: 本地 Docker 生图服务的当前 capabilities、runtime、两条启用路径真实 smoke 和新角色生成阻断复核
+- `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务当前不可用的安全阻断记录，不含本机环境信息
 - `qa/petdex-sync-recheck-20260809.json`: Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/petdex-sync-recheck-20260810.json`: 最新 Petdex manifest、编辑接口和 PR #654 状态复核
 - `qa/remote-petdex-pr-recheck-20260810.json`: 当前 Petdex manifest、公开资源 SHA、编辑路由和 PR #654 最新审查/部署状态复核
