@@ -14,25 +14,63 @@
     ],
     "recommended_concurrency": 1,
     "channel_health_probe": "pass",
-    "real_attempt_count": 2,
+    "real_attempt_count": 3,
     "last_real_attempt": {
       "status": "blocked",
       "error_code": "upstream_rate_limited",
       "http_status": 429,
       "artifact_count": 0,
-      "retryable": true
+      "retryable": true,
+      "transport": "agent_json",
+      "route": "/api/agent/images/edit"
     }
   },
   "generation_attempt": {
     "operation": "idle",
     "status": "blocked",
-    "attempt_count": 2,
+    "attempt_count": 3,
     "new_idempotency_key": true,
-    "transport": "page_sse",
+    "transports_attempted": [
+      "page_sse",
+      "page_sse",
+      "agent_json"
+    ],
     "dimension_check": "not_reached",
     "artifact_count": 0,
-    "reason": "本地服务能力和运行态均通过；两个独立幂等键的真实请求都返回 429，未产生可提取的 idle 行。"
+    "reason": "本地服务能力和运行态均通过；两次页面 SSE 请求和一次显式 Agent JSON 请求均使用新的幂等键并返回 429，未产生可提取的 idle 行。"
   },
+  "attempts": [
+    {
+      "transport": "page_sse",
+      "route": "/api/images",
+      "status": "blocked",
+      "error_code": "upstream_rate_limited",
+      "http_status": 429,
+      "artifact_count": 0,
+      "retryable": true,
+      "new_idempotency_key": true
+    },
+    {
+      "transport": "page_sse",
+      "route": "/api/images",
+      "status": "blocked",
+      "error_code": "upstream_rate_limited",
+      "http_status": 429,
+      "artifact_count": 0,
+      "retryable": true,
+      "new_idempotency_key": true
+    },
+    {
+      "transport": "agent_json",
+      "route": "/api/agent/images/edit",
+      "status": "blocked",
+      "error_code": "upstream_rate_limited",
+      "http_status": 429,
+      "artifact_count": 0,
+      "retryable": true,
+      "new_idempotency_key": true
+    }
+  ],
   "local_role_recheck": {
     "status": "pass",
     "roles": 7,
