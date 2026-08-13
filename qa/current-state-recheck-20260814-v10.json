@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T04:22:32+08:00",
+  "checked_commit": "1319b5eac8a902ec6ee5b5f56ada14f709e6a1a6",
+  "scope": "post-commit current local role release state, latest Petdex manifest, installation parity, cross-platform installers, and Traveler generation boundary",
+  "local_release": {
+    "roles": 7,
+    "atlas_gate": "all pass: 1536x2288, 8x11, RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "hatch_pet_tests": "28 passed",
+    "repository_codex_petdex_parity": "pass",
+    "cross_platform_installers": "Shell and PowerShell seven-role isolated smoke pass; Traveler rejected without target creation"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-current-recheck-20260814-v3.json",
+    "manifest_sha256": "fdada3156a6043e7ee925dfca2acc1e48b8a76399b700c3f3a44a9ac4086e443",
+    "manifest_total": 4521,
+    "manifest_generated_at": "2026-08-13T18:52:14.739Z",
+    "cli_version": "1.2.1",
+    "auth_state": "signed_in",
+    "public_current_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "online_v2_sync": "incomplete",
+    "owned_edits": "hei-mao, hei-mao-quality, and hei-mao-foodie remain queued for review",
+    "fortune_submission": "held_for_review"
+  },
+  "traveler": {
+    "evidence": "qa/traveler-generation-recheck-20260814-v5.json",
+    "latest_agent_json": "429 upstream_rate_limited",
+    "latest_page_sse": "429 upstream_rate_limited",
+    "latest_forced_agent_sse": "429 upstream_rate_limited",
+    "artifacts": 0,
+    "publishable": false,
+    "installable": false
+  },
+  "codex_app": {
+    "process_status": "running",
+    "visual_acceptance": "not_run",
+    "frontmost_application": "not_codex_app",
+    "reason": "当前前台不是 Codex App 的宠物设置或动画画面，未执行刷新、点击或进程信号。"
+  },
+  "remote_consistency": {
+    "gitlab_main": "1319b5eac8a902ec6ee5b5f56ada14f709e6a1a6",
+    "github_main": "1319b5eac8a902ec6ee5b5f56ada14f709e6a1a6"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "private_environment_details": false
+  },
+  "result": "local_release_gates_pass; traveler_generation_and_codex_app_visual_acceptance_and_petdex_online_v2_sync_open"
+}
