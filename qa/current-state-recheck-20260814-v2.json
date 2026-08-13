@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T18:00:15Z",
+  "source_commit": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
+  "scope": "seven local role packages, explicit chroma-key v2 validation, installation parity, repository remotes, and image-generation boundary",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune"
+  ],
+  "atlas_validation": {
+    "command": "validate_atlas.py --require-v2 --chroma-key <recorded-role-key>",
+    "result": "pass_all_roles",
+    "contract": {
+      "dimensions": "1536x2288",
+      "layout": "8x11 cells of 192x208",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "chroma_keys": {
+      "hei-mao": "#00FF00",
+      "hei-mao-quality": "#FF00FF",
+      "hei-mao-butler": "#00FF00",
+      "hei-mao-chef": "#00FFFF",
+      "hei-mao-delivery": "#FF00FF",
+      "hei-mao-foodie": "#FF00FF",
+      "hei-mao-fortune": "#00FFFF"
+    },
+    "note": "A previous no-key run used the validator default and falsely reported delivery edge contamination; the explicit role key run is the authoritative result."
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p 'test_*.py' -q",
+    "passed": 28,
+    "failed": 0,
+    "result": "pass",
+    "timeout_seconds": 60
+  },
+  "installation_parity": {
+    "roots": [
+      "repository_pets",
+      "codex_pets",
+      "petdex_pets"
+    ],
+    "role_sets_match": true,
+    "file_sets_match": true,
+    "sha256_match_all_roles_and_files": true,
+    "historical_or_blocked_directories_present": false,
+    "roles": {
+      "hei-mao": {
+        "pet_json": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+        "spritesheet": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
+      },
+      "hei-mao-quality": {
+        "pet_json": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+        "spritesheet": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f"
+      },
+      "hei-mao-butler": {
+        "pet_json": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+        "spritesheet": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"
+      },
+      "hei-mao-chef": {
+        "pet_json": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+        "spritesheet": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"
+      },
+      "hei-mao-delivery": {
+        "pet_json": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+        "spritesheet": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"
+      },
+      "hei-mao-foodie": {
+        "pet_json": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+        "spritesheet": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23"
+      },
+      "hei-mao-fortune": {
+        "pet_json": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+        "spritesheet": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71"
+      }
+    }
+  },
+  "repository_remotes": {
+    "local_head": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
+    "gitlab_main": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
+    "github_main": "dc80c93ed2fdeac1787933b8d4f788663c3da1da",
+    "working_tree": "clean"
+  },
+  "petdex_manifest_recheck": {
+    "checked_at": "2026-08-13T18:02:33Z",
+    "cli_version": "1.2.1",
+    "manifest_total": 4521,
+    "owned_entries": [
+      "hei-mao",
+      "hei-mao-delivery",
+      "hei-mao-quality",
+      "hei-mao-2",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie"
+    ],
+    "fortune_present": false,
+    "traveler_present": false,
+    "online_spritesheet_sha256": {
+      "hei-mao": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "hei-mao-delivery": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "hei-mao-quality": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "hei-mao-butler": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "hei-mao-chef": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "hei-mao-foodie": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49"
+    },
+    "online_vs_repository": {
+      "hei-mao": "drift",
+      "hei-mao-delivery": "match",
+      "hei-mao-quality": "drift",
+      "hei-mao-butler": "match",
+      "hei-mao-chef": "match",
+      "hei-mao-foodie": "drift"
+    },
+    "result": "manifest_and_public_sprites_rechecked; online_v2_sync_incomplete"
+  },
+  "image_generation_boundary": {
+    "channel_health": "healthy_process_with_recent_upstream_429",
+    "contract_check": "pass_without_billable_generation",
+    "real_generation_attempted_this_recheck": false,
+    "latest_real_generation_evidence": "qa/traveler-generation-recheck-20260814.json",
+    "traveler": {
+      "publishable": false,
+      "installable": false,
+      "artifact_count": 0,
+      "historical_base": {
+        "path_class": "private_retained_run_artifact",
+        "dimensions": "1536x1024 WEBP",
+        "sha256": "c1b68ee6560ebbae48a7df8c38c2dc55f9d5aaafce6c418c9801e7d6cfb3a221",
+        "identity": "independent Traveler base with mustard utility jacket, green attached backpack, and red-blue travel pennant",
+        "complete_atlas": false
+      },
+      "provenance_guard": "The current run reference-01 is a retained Butler atlas and is not a Traveler canonical base; it must not be used for Traveler generation.",
+      "reason": "The latest independent page SSE and Agent edit attempts used new idempotency keys and were rate-limited upstream; no complete Traveler atlas exists."
+    }
+  },
+  "external_boundaries": {
+    "codex_app_visual_acceptance": "not_run",
+    "petdex_online_v2_sync": "incomplete; see qa/petdex-current-recheck-20260814.json",
+    "fortune_public_manifest": "not_present_in_retained_manifest_snapshot",
+    "traveler_public_manifest": "not_present"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "private_environment_details": false
+  },
+  "result": "local_explicit_key_v2_and_parity_pass_external_acceptance_and_traveler_generation_open"
+}
