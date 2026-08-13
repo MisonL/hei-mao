@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T12:30:00Z",
+  "scope": "current local package gates, installer isolation, and Codex App acceptance boundary",
+  "local_v2_gate": {
+    "roles": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune"
+    ],
+    "validate_atlas_require_v2": "pass_all_roles",
+    "errors": 0,
+    "warnings": 0,
+    "dual_directory_sha_parity": true
+  },
+  "installer_isolation": {
+    "accepted_roles": "all_seven",
+    "rejected_historical_or_blocked_roles": [
+      "hei-mao-traveler",
+      "hei-mao-recommender"
+    ],
+    "rejected_roles_written": false,
+    "temporary_target_only": true
+  },
+  "codex_app": {
+    "process_detected": true,
+    "petdex_desktop_process_detected": false,
+    "screen_capture_available": true,
+    "pet_settings_or_pet_animation_visible_in_capture": false,
+    "refresh_action_performed": false,
+    "multi_role_visual_selection": "not_verified",
+    "animation_ratio_and_direction_visual_acceptance": "not_verified",
+    "reason": "当前前台画面不是 Codex App 宠物设置或动画画面；不发送点击、刷新或进程信号。"
+  },
+  "known_external_boundary": {
+    "multidisplay_bubble_overlap": "remains_open_from_prior_recheck",
+    "source": "qa/petdex-multidisplay-recheck-20260810.json"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "screen_capture_committed": false
+  },
+  "result": "local_gates_pass_app_visual_acceptance_open"
+}
