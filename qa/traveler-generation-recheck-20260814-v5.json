@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T04:18:05+08:00",
+  "checked_commit": "a6c007a1d9bf868247751209b9aac683cee0d78f",
+  "scope": "Traveler independent base generation final channel comparison",
+  "preflight": {
+    "capabilities": "pass",
+    "runtime_contract": "pass",
+    "enabled_image_backend": "images-api",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1
+  },
+  "attempt": {
+    "transport": "agent_json",
+    "route": "/api/agent/images/generate",
+    "streaming_strategy": "force-sse",
+    "selected_request_mode": "images-sse",
+    "status": "blocked",
+    "http_status": 429,
+    "error_code": "upstream_rate_limited",
+    "error_classification": "upstream_rate_limited",
+    "artifact_count": 0,
+    "dimension_check": "not_reached",
+    "new_idempotency_key": true,
+    "script_retryable": false
+  },
+  "comparison": {
+    "agent_json_default_images_non_stream": "blocked_429",
+    "page_sse": "blocked_429",
+    "agent_json_forced_images_sse": "blocked_429",
+    "all_paths_produced_artifact": false
+  },
+  "existing_base": {
+    "present": true,
+    "independent_role": true,
+    "used_as_publishable_artifact": false
+  },
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "默认 Agent JSON、页面 SSE 和显式 Agent SSE 三条真实路径均被同一上游 429 阻断，未产生新 artifact；不得使用其他角色、占位图或静默降级。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "idempotency_keys": false,
+    "private_environment_details": false
+  },
+  "result": "traveler_generation_blocked_on_all_enabled_image_paths"
+}
