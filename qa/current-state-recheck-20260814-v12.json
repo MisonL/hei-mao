@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_at": "2026-08-14T04:47:35+08:00",
-  "checked_commit": "f7926224dcba43161b97d20eee82da6a4bb87370",
+  "checked_commit": "5f90b054e1285e1e8f22f923ce1d3df9a84ef33a",
   "scope": "final current local role release state, Petdex catalog/auth state, package parity, remote synchronization, and Codex App boundary",
   "local_release": {
     "roles": 7,
@@ -58,8 +58,8 @@
     "historical_directories_present": false
   },
   "remote_consistency": {
-    "gitlab_main": "f7926224dcba43161b97d20eee82da6a4bb87370",
-    "github_main": "f7926224dcba43161b97d20eee82da6a4bb87370"
+    "gitlab_main": "5f90b054e1285e1e8f22f923ce1d3df9a84ef33a",
+    "github_main": "5f90b054e1285e1e8f22f923ce1d3df9a84ef33a"
   },
   "public_file_hygiene": {
     "absolute_local_paths": false,
