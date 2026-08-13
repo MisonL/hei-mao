@@ -80,7 +80,7 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 未完成完整 v2 图集和复核的 `hei-mao-traveler` 不在安装器白名单内。`hei-mao-fortune` 已完成本地 v2 图集和 QA，并已加入安装器白名单；Petdex 提交已接受，当前等待审核，审核完成并同步线上资源前不能使用 Petdex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
-`hei-mao-traveler` 仍没有可发布图集。2026-08-14 最新复核确认本地生图服务可达，但两次页面 SSE 请求和一次显式 Agent JSON 请求均使用新的幂等键并返回 429，未产生可提取的 idle 动画行；已有独立 base 不构成完整发布图集。在完成独立完整图集、全部 v2 门禁和视觉验收前，不得生成、安装或发布该角色。当前阻断证据见 `qa/traveler-generation-recheck-20260814.json`；此前的 2026-08-13 记录仅作历史记录。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。
+`hei-mao-traveler` 仍没有可发布图集。2026-08-14 最新复核确认本地生图服务能力和运行态契约通过，但新的页面 SSE 真实编辑请求仍在上游图片编辑阶段返回 429，未产生可提取的 idle 动画行；已有独立 base 不构成完整发布图集。在完成独立完整图集、全部 v2 门禁和视觉验收前，不得生成、安装或发布该角色。当前阻断证据见 `qa/traveler-generation-recheck-20260814-v2.json`，早期记录仅作历史记录。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。
 
 本地手动安装角色时：
 
@@ -291,6 +291,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游图像路径被 429 限流的历史阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813-v3.json`: Traveler 使用全新幂等键的历史生成阻断记录；上游返回 429，未产生图像，不含本机环境信息
 - `qa/traveler-generation-recheck-20260814.json`: Traveler 当前生成阻断记录；两次页面 SSE 和一次显式 Agent JSON 请求均返回 429，未产生图像，不含本机环境信息
+- `qa/traveler-generation-recheck-20260814-v2.json`: Traveler 最新 Agent API 真实编辑阻断记录；能力契约通过但上游返回 429，未产生图像，不含本机环境信息
 - `qa/current-state-recheck-20260814-v2.json`: 2026-08-14 早期状态快照，仅用于追溯
 - `qa/current-state-recheck-20260814-v3.json`: 当前七角色显式色键 v2 门禁、28 项测试、三处目录 parity、远端 SHA 和 Traveler/App/Petdex 未完成边界复核，不含本机环境信息
 - `qa/current-local-gate-live-recheck-20260813.json`: 七个角色实时 v2 结构门禁、双目录 SHA 一致性和安装器隔离复核，不含本机环境信息

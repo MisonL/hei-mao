@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T03:06:02+08:00",
+  "checked_commit": "62e7c1d82bf7da4568daa0f93784252465de2001",
+  "scope": "Traveler idle row generation through the local Visual Journal Agent API",
+  "preflight": {
+    "capabilities": "pass",
+    "runtime_contract": "pass",
+    "channel_health": "healthy snapshot with a recent upstream 429",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1,
+    "responses_image_backend": "disabled"
+  },
+  "generation_attempt": {
+    "operation": "idle",
+    "transport": "page_sse",
+    "route": "POST /api/images",
+    "request_mode": "images-non-stream",
+    "status": "blocked",
+    "http_status": 429,
+    "error_code": "page_sse_request_rejected",
+    "error_classification": "upstream_rate_limited",
+    "billable": false,
+    "artifact_count": 0,
+    "dimension_check": "not_reached",
+    "new_idempotency_key": true,
+    "sse_events": [
+      "request_started",
+      "request_failed"
+    ],
+    "agent_state_diagnostic": "no_persisted_agent_state_found",
+    "reason": "使用独立 Traveler base、合法 1536x1024 画布和新的幂等键执行一次真实编辑请求；本地服务进入上游图片编辑后返回 429，未产生可提取的 idle 行。"
+  },
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "Traveler 仍缺少完整 9 个标准动作行、cardinal、look row 9/10、完整 v2 QA、双目录安装和视觉验收；不得使用其他角色、占位图或静默降级。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "private_environment_details": false
+  },
+  "result": "traveler_idle_generation_blocked_upstream_rate_limited"
+}
