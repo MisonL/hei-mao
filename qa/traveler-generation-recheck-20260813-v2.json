@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-13T15:07:17Z",
+  "scope": "Traveler v2 atlas generation after local Agent script and prompt repair",
+  "service": {
+    "kind": "local_image_playground",
+    "deployment": "local_deployment",
+    "health_probe": "reachable",
+    "capabilities_contract": "pass",
+    "runtime_capabilities_contract": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1,
+    "images_sse_state": "healthy",
+    "channel_health_state": "healthy",
+    "last_real_smoke": {
+      "status": "blocked",
+      "error_code": "upstream_rate_limited",
+      "http_status": 429,
+      "request_mode": "images-non-stream",
+      "retryable": true,
+      "artifact_count": 0
+    }
+  },
+  "client_script_repair": {
+    "repository": "visual-journal",
+    "commits": ["9542fae", "86ac42a", "5796081"],
+    "changes": [
+      "restore isIntegerWithinCapabilityRange capability validation helper",
+      "allow explicit batch agent_json edit transport",
+      "allow non-stream batch agent edits"
+    ],
+    "syntax_check": "pass",
+    "lint_scripts": "pass",
+    "script_tests": {
+      "passed": 159,
+      "failed": 0
+    },
+    "installed_batch_script_sha256": "27da1eae10f8a0f4153a82c1f38f71583007a9d5849849dfb6616252cc492f5"
+  },
+  "prompt_repair": {
+    "status": "pass",
+    "change": "aligned Traveler generation prompts and metadata to the actual magenta #FF00FF chroma key",
+    "conflicting_cyan_reference_remaining": false
+  },
+  "generation_attempts": [
+    {
+      "operation": "base",
+      "request_mode": "images-sse",
+      "status": "succeeded",
+      "artifact_count": 1,
+      "dimensions": "2048x2048",
+      "idempotency_key": "redacted"
+    },
+    {
+      "operation": "idle",
+      "request_mode": "images-sse",
+      "status": "blocked",
+      "error_code": "page_sse_failed",
+      "http_status": 503,
+      "reason": "此前页面 SSE 尝试没有可用的健康 images-sse 路径",
+      "artifact_count": 0,
+      "idempotency_key": "redacted"
+    },
+    {
+      "operation": "idle",
+      "request_mode": "local_client_validation",
+      "status": "fixed",
+      "error_code": "isIntegerWithinCapabilityRange_missing",
+      "reason": "补齐后定向脚本测试通过；该尝试未发请求"
+    },
+    {
+      "operation": "idle",
+      "request_mode": "images-non-stream",
+      "transport": "agent_json",
+      "status": "blocked",
+      "error_code": "upstream_rate_limited",
+      "http_status": 429,
+      "reason": "显式 Agent JSON edit 已正确路由到 images-non-stream，但上游限流，未产生最终图",
+      "artifact_count": 0,
+      "idempotency_key": "redacted"
+    },
+    {
+      "operation": "idle",
+      "request_mode": "images-non-stream",
+      "transport": "agent_json",
+      "status": "blocked",
+      "error_code": "upstream_rate_limited",
+      "http_status": 429,
+      "reason": "等待冷却窗口后使用全新幂等键重试，仍被同一上游限流；未产生最终图",
+      "artifact_count": 0,
+      "idempotency_key": "redacted"
+    }
+  ],
+  "release_decision": {
+    "traveler_publishable": false,
+    "traveler_installable": false,
+    "reason": "Traveler 仅有独立 base，尚无 9 个标准动作行、cardinal、look row 9/10、完整 v2 QA 或安装验收；不得使用占位图、复用其他角色或静默降级。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "traveler_generation_blocked_upstream_rate_limited"
+}
