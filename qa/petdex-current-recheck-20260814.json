@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-14T00:47:23+08:00",
+  "source_commit": "dfdc15b7c4ef5598a81eaa790e24f00e1049736b",
+  "scope": "current Petdex manifest, public resources, local package parity, and generation boundary",
+  "cli": {
+    "version": "1.2.1",
+    "auth_state": "signed_in",
+    "install_command": "npx -y petdex@latest install <slug>",
+    "dual_install_targets": true
+  },
+  "manifest": {
+    "generated_at": "2026-08-13T12:52:22.710Z",
+    "total": 4521,
+    "owned_entries": [
+      {"slug": "hei-mao", "sprite_version_number": 1},
+      {"slug": "hei-mao-delivery", "sprite_version_number": 2},
+      {"slug": "hei-mao-quality", "sprite_version_number": 1},
+      {"slug": "hei-mao-2", "sprite_version_number": 1, "classification": "historical_duplicate_entry"},
+      {"slug": "hei-mao-butler", "sprite_version_number": 1},
+      {"slug": "hei-mao-chef", "sprite_version_number": 1},
+      {"slug": "hei-mao-foodie", "sprite_version_number": 1}
+    ],
+    "fortune_present": false,
+    "traveler_present": false,
+    "recommender_present": false
+  },
+  "online_resource_sha256": {
+    "hei-mao": {"metadata": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "spritesheet": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c"},
+    "hei-mao-quality": {"metadata": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43", "spritesheet": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92"},
+    "hei-mao-butler": {"metadata": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "spritesheet": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"metadata": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "spritesheet": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-foodie": {"metadata": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "spritesheet": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49"},
+    "hei-mao-delivery": {"metadata": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "spritesheet": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"}
+  },
+  "repository_resource_sha256": {
+    "hei-mao": {"metadata": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "spritesheet": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"},
+    "hei-mao-quality": {"metadata": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07", "spritesheet": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f"},
+    "hei-mao-butler": {"metadata": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "spritesheet": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"metadata": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "spritesheet": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-foodie": {"metadata": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "spritesheet": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23"},
+    "hei-mao-delivery": {"metadata": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "spritesheet": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"}
+  },
+  "online_resource_match": {
+    "hei-mao": {"metadata": true, "spritesheet": false},
+    "hei-mao-quality": {"metadata": false, "spritesheet": false},
+    "hei-mao-butler": {"metadata": true, "spritesheet": true},
+    "hei-mao-chef": {"metadata": true, "spritesheet": true},
+    "hei-mao-foodie": {"metadata": true, "spritesheet": false},
+    "hei-mao-delivery": {"metadata": true, "spritesheet": true}
+  },
+  "online_sprite_contract": {"checked_entries": "all six current public entries", "dimensions": "1536x2288", "format": "WEBP RGBA", "result": "pass"},
+  "local_install_parity": {"roots": ["repository_pets", "codex_pets", "petdex_pets"], "roles": 7, "role_sets_match": true, "file_sets_match": true, "sha256_match_all_roles_and_files": true, "historical_or_blocked_directories_present": false},
+  "owned_submission_state": {"existing_slug_edits": "hei-mao, hei-mao-quality, and hei-mao-foodie queued for admin review", "fortune": "submitted and held_for_review with possible policy issue", "fortune_public_manifest": false, "traveler": "not submitted", "duplicate_submission_attempted": false},
+  "generation_boundary": {"latest_traveler_evidence": "qa/traveler-generation-recheck-20260814.json", "local_service_reachable": true, "real_attempts": 2, "last_error": "upstream_rate_limited", "http_status": 429, "artifact_count": 0, "traveler_publishable": false, "reason": "Traveler still has only an independent base image and no complete animation atlas; no placeholder or reused role assets are allowed."},
+  "upstream": {"main_commit": "115d837aea89c235aa18c5a744ba768ccbc87d5a", "cli_release": "1.2.1", "known_related_fixes_merged": ["603", "611", "650", "654", "656", "657"]},
+  "release_decision": {"local_roles_publishable": 7, "petdex_online_v2_sync_complete": false, "reason": "hei-mao, hei-mao-quality, and hei-mao-foodie still have pending edits and online SHA drift; Fortune is under review; Traveler has no publishable atlas."},
+  "public_file_hygiene": {"local_absolute_paths": false, "private_network_addresses": false, "credentials": false, "request_identifiers": false, "local_environment_details": false},
+  "result": "petdex_current_state_rechecked_with_online_sha_and_local_parity"
+}
