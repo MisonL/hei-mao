@@ -61,8 +61,13 @@ function Set-PetConfiguration {
             $script:SpritesheetSha256 = "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"
             $script:PetSubdir = "pets/$requestedPetId"
         }
+        "hei-mao-fortune" {
+            $script:PetJsonSha256 = "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b"
+            $script:SpritesheetSha256 = "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71"
+            $script:PetSubdir = "pets/$requestedPetId"
+        }
         default {
-            throw "Unsupported pet id: $requestedPetId. Supported ids: hei-mao, hei-mao-quality, hei-mao-butler, hei-mao-chef, hei-mao-foodie, hei-mao-delivery."
+            throw "Unsupported pet id: $requestedPetId. Supported ids: hei-mao, hei-mao-quality, hei-mao-butler, hei-mao-chef, hei-mao-foodie, hei-mao-delivery, hei-mao-fortune."
         }
     }
 

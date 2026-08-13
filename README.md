@@ -43,6 +43,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest 可见，字段仍为 v1 |
 | `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，字段仍为 v1 |
 | `hei-mao-delivery` | 配送员 | v2 已验证，可本地安装 | 已提交，待审核 |
+| `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | 尚未提交 |
 
 公开 manifest 当前可见五个历史角色条目以及历史重复条目 `hei-mao-2`；`hei-mao-delivery` 的仓库包已通过本地 v2 门禁，并已提交 Petdex、当前等待审核。manifest 索引仍报告 `spriteVersionNumber: 1`，虽然当前公开 pet JSON 已报告 v2，但部分 sprite 和 metadata 仍与本仓库不一致，不能据此宣称线上资源已经同步。`hei-mao-foodie` 的 waiting 行已完整重生成并通过最终视觉 QA；线上旧资源不能视为本仓库 v2。
 
@@ -74,15 +75,21 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。Windows PowerShell 5.1 的本地 checkout 可能受 Git `core.autocrlf` 影响，安装器会对文本 manifest 显式按 UTF-8/LF 规范化后再校验固定 SHA，二进制图集保持原样。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
-未完成完整 v2 图集和复核的 `hei-mao-fortune`、`hei-mao-traveler` 不在安装器白名单内。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
+未完成完整 v2 图集和复核的 `hei-mao-traveler` 不在安装器白名单内。`hei-mao-fortune` 已完成本地 v2 图集和 QA，并已加入安装器白名单；Petdex 尚未提交，不能使用 Petdex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
-`hei-mao-fortune` 和 `hei-mao-traveler` 目前没有可发布图集。2026-08-12 的本地服务合同检查通过，但新的 `images-non-stream` 和 `images-sse` 真实 smoke 均未产生 artifact，分别返回上游不可用和页面 SSE 500，因此这两个角色仍保持未开始。复核证据见 `qa/imagegen-channel-recheck-20260812.json`。
+`hei-mao-traveler` 仍没有可发布图集。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。证据见 `qa/hei-mao-fortune/run-summary.json` 和 `qa/hei-mao-fortune/final-visual-qa.json`。2026-08-12 的本地生图服务合同检查和失败 smoke 仍只约束 traveler 后续生成，不影响已完成的 Fortune 图集。
 
 本地手动安装角色时：
 
 ```bash
 mkdir -p ~/.codex/pets/hei-mao
 cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
+```
+
+Fortune 角色的本地安装：
+
+```bash
+HEI_MAO_PET_ID=hei-mao-fortune curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-fortune bash
 ```
 
 ### 大管家角色
@@ -136,6 +143,18 @@ Petdex 审核通过后使用：
 ```bash
 npx -y petdex@latest install hei-mao-delivery
 ```
+
+### 福气官角色
+
+`hei-mao-fortune` 是黑毛的福气官角色包，使用红金服饰、爱心手套、屏幕右侧粮篮和屏幕左侧南瓜表达新鲜、丰盛和每日好彩头。该包已通过 v2 图集、单次 despill、9 个标准动作行、16 个方向、三份独立盲测和最终视觉复核；方向连续性中的局部 outlier 已记录为 minor warning，没有身份漂移、比例跳变、封闭透明洞或方向反转。
+
+本地安装：
+
+```bash
+HEI_MAO_PET_ID=hei-mao-fortune curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-fortune bash
+```
+
+Petdex 发布状态：尚未提交。提交审核并完成线上资源同步前，不要运行 `npx -y petdex@latest install hei-mao-fortune`。
 
 ### 品控官角色
 
@@ -240,6 +259,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-foodie/`: 美食家 v2 的结构、方向和视觉复核证据
 - `pets/hei-mao-delivery/`: 已通过最终视觉 QA 的配送员 v2 角色包
 - `qa/hei-mao-delivery/`: 配送员 v2 的结构、方向、alpha 复核和视觉证据
+- `pets/hei-mao-fortune/`: 已通过最终视觉 QA 的福气官 v2 角色包
+- `qa/hei-mao-fortune/`: 福气官 v2 的结构、方向、盲测、连续性和视觉证据
 - `qa/petdex-desktop-live-smoke-20260809.json`: Petdex Desktop 单角色实时烟测；不替代 Codex App 全量验收
 - `qa/petdex-desktop-live-smoke-20260810.json`: Desktop 0.6.0 hook stdin 退出门禁与发布集复核；发现宿主保持 stdin 打开时原生 hook 仍会等待 EOF，不能据此宣称 App 验收完成
 - `qa/petdex-multidisplay-recheck-20260810.json`: 双显示器实时窗口复核；Petdex 窗口可显示在另一块屏幕，但跨屏移动后气泡与宠物重叠，Codex App 多角色验收仍被阻断
