@@ -55,9 +55,9 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-此前的 2026-08-10、2026-08-13 和 v2 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。当前结论以 `qa/current-state-recheck-20260814-v3.json` 和 `qa/petdex-current-recheck-20260814.json` 为准。
+此前的 2026-08-10、2026-08-13 和 v2/v3 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。当前结论以 `qa/current-state-recheck-20260814-v4.json` 和 `qa/petdex-current-recheck-20260814-v2.json` 为准。
 
-本机当前保留七个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。2026-08-14 按各角色实际色键重新执行的七包门禁、28 项 Hatch Pet 测试、三处目录 parity、GitHub/GitLab SHA 和当前 Petdex manifest 复核见 `qa/current-state-recheck-20260814-v3.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，七个角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
+本机当前保留七个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。2026-08-14 按各角色实际色键重新执行的七包门禁、28 项 Hatch Pet 测试、三处目录 parity、GitHub/GitLab SHA 和当前 Petdex manifest 复核见 `qa/current-state-recheck-20260814-v4.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，七个角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
 本轮本地安装器隔离验证已通过七个角色，并确认历史或阻断角色不会写入；Codex App 进程仍在运行，但当前可见画面不是宠物设置或动画画面，因此没有执行刷新或视觉选择验收。多显示器气泡重叠仍以 `qa/petdex-multidisplay-recheck-20260810.json` 记录的上游边界为准。当前本地 App 验收边界见 `qa/current-local-app-boundary-recheck-20260813.json`。
 
@@ -293,7 +293,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/traveler-generation-recheck-20260814.json`: Traveler 当前生成阻断记录；两次页面 SSE 和一次显式 Agent JSON 请求均返回 429，未产生图像，不含本机环境信息
 - `qa/traveler-generation-recheck-20260814-v2.json`: Traveler 最新 Agent API 真实编辑阻断记录；能力契约通过但上游返回 429，未产生图像，不含本机环境信息
 - `qa/current-state-recheck-20260814-v2.json`: 2026-08-14 早期状态快照，仅用于追溯
-- `qa/current-state-recheck-20260814-v3.json`: 当前七角色显式色键 v2 门禁、28 项测试、三处目录 parity、远端 SHA 和 Traveler/App/Petdex 未完成边界复核，不含本机环境信息
+- `qa/current-state-recheck-20260814-v3.json`: 早期七角色显式色键 v2 门禁快照，仅用于追溯
+- `qa/current-state-recheck-20260814-v4.json`: 当前七角色 v2 门禁、28 项测试、三处目录 parity、Petdex manifest、Traveler/App 未完成边界和远端一致性复核，不含本机环境信息
 - `qa/current-local-gate-live-recheck-20260813.json`: 七个角色实时 v2 结构门禁、双目录 SHA 一致性和安装器隔离复核，不含本机环境信息
 - `qa/petdex-current-recheck-20260813.json`: 2026-08-13 的 Petdex CLI、manifest、线上资源 SHA、编辑路由、上游合并和相关条目历史复核
 - `qa/petdex-current-recheck-20260814.json`: 2026-08-14 早期 Petdex 状态快照，仅用于追溯
