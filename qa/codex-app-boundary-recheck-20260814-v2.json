@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T06:04:43Z",
+  "scope": "read-only Codex App visibility boundary",
+  "window_access": {
+    "app_window_discovered": true,
+    "target_view_visible": false,
+    "target_view": "pet settings or animation view not visible",
+    "accessible_static_text_count": 0,
+    "accessible_controls": "window controls only"
+  },
+  "verification_boundary": {
+    "screen_capture": "not_taken",
+    "refresh_or_selection": "not_run",
+    "process_mutation": "none",
+    "normal_size_acceptance": "not_verified",
+    "animation_loop_acceptance": "not_verified",
+    "multi_role_selection_acceptance": "not_verified"
+  },
+  "result": "codex_app_target_view_not_available; visual_acceptance_remains_open"
+}
