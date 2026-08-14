@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "output_dir": "qa/hei-mao-butler/previews",
+  "source": "pets/hei-mao-butler/spritesheet.webp",
+  "source_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+  "previews": [
+    {"state": "idle", "path": "qa/hei-mao-butler/previews/idle.gif", "frames": 6},
+    {"state": "running-right", "path": "qa/hei-mao-butler/previews/running-right.gif", "frames": 8},
+    {"state": "running-left", "path": "qa/hei-mao-butler/previews/running-left.gif", "frames": 8},
+    {"state": "waving", "path": "qa/hei-mao-butler/previews/waving.gif", "frames": 4},
+    {"state": "jumping", "path": "qa/hei-mao-butler/previews/jumping.gif", "frames": 5},
+    {"state": "failed", "path": "qa/hei-mao-butler/previews/failed.gif", "frames": 8},
+    {"state": "waiting", "path": "qa/hei-mao-butler/previews/waiting.gif", "frames": 6},
+    {"state": "running", "path": "qa/hei-mao-butler/previews/running.gif", "frames": 6},
+    {"state": "review", "path": "qa/hei-mao-butler/previews/review.gif", "frames": 6}
+  ]
+}

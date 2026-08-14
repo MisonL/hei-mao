@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "scope": "eight published role packages",
+  "generated_from": "current pets/<slug>/spritesheet.webp files",
+  "contact_sheet": {
+    "format": "PNG",
+    "dimensions": "1536x2530",
+    "roles": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "unused_cells_are_empty": true,
+    "transparent_checkerboard": true
+  },
+  "standard_motion_previews": {
+    "roles": ["hei-mao", "hei-mao-butler"],
+    "states": {
+      "idle": 6,
+      "running-right": 8,
+      "running-left": 8,
+      "waving": 4,
+      "jumping": 5,
+      "failed": 8,
+      "waiting": 6,
+      "running": 6,
+      "review": 6
+    },
+    "frame_dimensions": "192x208",
+    "alpha_channel": true,
+    "source_sha256": {
+      "hei-mao": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "hei-mao-butler": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"
+    }
+  },
+  "path_policy": {
+    "all_references_relative": true,
+    "machine_paths_present": false,
+    "generated_images_or_temp_paths_present": false
+  }
+}

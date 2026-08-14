@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "output_dir": "qa/hei-mao/previews",
+  "source": "pets/hei-mao/spritesheet.webp",
+  "source_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+  "previews": [
+    {"state": "idle", "path": "qa/hei-mao/previews/idle.gif", "frames": 6},
+    {"state": "running-right", "path": "qa/hei-mao/previews/running-right.gif", "frames": 8},
+    {"state": "running-left", "path": "qa/hei-mao/previews/running-left.gif", "frames": 8},
+    {"state": "waving", "path": "qa/hei-mao/previews/waving.gif", "frames": 4},
+    {"state": "jumping", "path": "qa/hei-mao/previews/jumping.gif", "frames": 5},
+    {"state": "failed", "path": "qa/hei-mao/previews/failed.gif", "frames": 8},
+    {"state": "waiting", "path": "qa/hei-mao/previews/waiting.gif", "frames": 6},
+    {"state": "running", "path": "qa/hei-mao/previews/running.gif", "frames": 6},
+    {"state": "review", "path": "qa/hei-mao/previews/review.gif", "frames": 6}
+  ]
+}
