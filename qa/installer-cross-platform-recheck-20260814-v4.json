@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:03:51Z",
+  "checked_commit": "ce2b7dc62cb5192c1867050155e6a32fb238ca3c",
+  "scope": "isolated Bash and PowerShell installer smoke with temporary targets",
+  "bash": {
+    "syntax": "pass",
+    "shellcheck": "pass",
+    "roles": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "isolated_install": "pass",
+    "unsupported_slug_rejection": "pass"
+  },
+  "powershell": {
+    "runtime": "PowerShell Core",
+    "traveler_isolated_install": "pass",
+    "unsupported_slug_rejection": "pass"
+  },
+  "cleanup": {
+    "temporary_targets_removed": true,
+    "repository_or_user_pet_directories_modified": false
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "cross_platform_installer_smoke_pass"
+}

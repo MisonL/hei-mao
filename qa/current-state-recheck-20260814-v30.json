@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:03:51Z",
+  "checked_commit": "ce2b7dc62cb5192c1867050155e6a32fb238ca3c",
+  "scope": "post-installer-gate local, PetDex, upstream hook, and desktop boundary recheck",
+  "local_release": {
+    "roles": 8,
+    "cli_version": "1.2.2",
+    "desktop_release": "desktop-v0.8.0",
+    "asset_gate": "pass; see qa/current-v2-gate-recheck-20260814-v3.json",
+    "three_directory_parity": "pass; all eight repository, Codex, and PetDex local role files have matching SHA-256",
+    "installer_gate": "pass; see qa/installer-cross-platform-recheck-20260814-v4.json",
+    "process_mutation": "none"
+  },
+  "petdex": {
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_total": 4521,
+    "current_public_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "cdn_v2_sync_pending": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-foodie"
+    ],
+    "review_pending": [
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "evidence": [
+      "qa/petdex-public-resource-recheck-20260814-v4.json",
+      "qa/petdex-current-recheck-20260814-v7.json"
+    ]
+  },
+  "upstream": {
+    "repository": "https://github.com/crafter-station/petdex",
+    "main_sha": "0243af614f30eee31913ff3e3839467615c1c744",
+    "latest_release": "desktop-v0.8.0",
+    "issue_689": {
+      "state": "OPEN",
+      "comments": 0,
+      "timeline_events_observed": 0,
+      "url": "https://github.com/crafter-station/petdex/issues/689"
+    },
+    "stdin_implementation": "CLI and Native runners still wait for end/EOF after the useful payload; no finite idle or total timeout is present in main",
+    "related_fix_boundary": "#583 remains the merged bounded-drain and EPIPE fix; #689 remains a distinct open finite-wait issue"
+  },
+  "desktop_boundary": {
+    "animation_and_role_selection": "pass; see qa/petdex-desktop-live-recheck-20260814-v3.json",
+    "multidisplay_bubble_follow": "pass; see qa/petdex-desktop-multidisplay-recheck-20260814-v1.json",
+    "codex_app_visual_acceptance": "open; the read-only accessibility probe did not expose the target pet settings view",
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "installer_gate_and_existing_local_smokes_pass; PetDex CDN and review states, upstream issue_689, and complete Codex App visual acceptance remain open"
+}
