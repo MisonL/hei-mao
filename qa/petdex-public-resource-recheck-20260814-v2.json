@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T06:41:27Z",
+  "cli_version": "1.2.2",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "generated_at": "2026-08-14T01:15:36.149Z",
+    "total": 4521,
+    "hei_mao_family_entries": 7,
+    "current_hei_mao_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_listed": false,
+    "traveler_listed": false
+  },
+  "public_resources": {
+    "hei-mao": {
+      "manifest_sprite_version_number": 1,
+      "public_petjson_sprite_version_number": 2,
+      "local_sprite_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "public_sprite_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "local_petjson_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "public_petjson_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "public_petjson_matches_local": true,
+      "public_sprite_matches_local": false,
+      "public_dimensions": "1536x2288 RGBA"
+    },
+    "hei-mao-quality": {
+      "manifest_sprite_version_number": 1,
+      "public_petjson_sprite_version_number": 2,
+      "local_sprite_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "public_sprite_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "local_petjson_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "public_petjson_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+      "public_petjson_matches_local": true,
+      "public_sprite_matches_local": false,
+      "public_dimensions": "1536x2288 RGBA",
+      "metadata_changed_since_previous_snapshot": true,
+      "previous_public_petjson_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07"
+    },
+    "hei-mao-butler": {
+      "manifest_sprite_version_number": 1,
+      "public_petjson_sprite_version_number": 2,
+      "local_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "public_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "local_petjson_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "public_petjson_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "public_petjson_matches_local": true,
+      "public_sprite_matches_local": true,
+      "public_dimensions": "1536x2288 RGBA"
+    },
+    "hei-mao-chef": {
+      "manifest_sprite_version_number": 1,
+      "public_petjson_sprite_version_number": 2,
+      "local_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "public_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "local_petjson_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "public_petjson_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "public_petjson_matches_local": true,
+      "public_sprite_matches_local": true,
+      "public_dimensions": "1536x2288 RGBA"
+    },
+    "hei-mao-foodie": {
+      "manifest_sprite_version_number": 1,
+      "public_petjson_sprite_version_number": 2,
+      "local_sprite_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+      "public_sprite_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "local_petjson_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "public_petjson_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "public_petjson_matches_local": true,
+      "public_sprite_matches_local": false,
+      "public_dimensions": "1536x2288 RGBA"
+    },
+    "hei-mao-delivery": {
+      "manifest_sprite_version_number": 2,
+      "public_petjson_sprite_version_number": 2,
+      "local_sprite_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "public_sprite_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "local_petjson_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "public_petjson_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "public_petjson_matches_local": true,
+      "public_sprite_matches_local": true,
+      "public_dimensions": "1536x2288 RGBA"
+    }
+  },
+  "interpretation": {
+    "quality_metadata_now_matches_local": true,
+    "delivery_is_public_v2": true,
+    "butler_chef_public_bytes_match_but_manifest_index_lags": true,
+    "root_quality_foodie_sprites_not_live": true,
+    "fortune_traveler_require_review_before_install": true,
+    "petdex_install_must_not_be_used_as_local_v2_source_until_sprite_review_switch": true
+  },
+  "result": "manifest_unchanged; quality_metadata_switched; quality_sprite_still_pending; delivery_matches_v2; root_and_foodie_sprites_pending; fortune_traveler_pending_review"
+}

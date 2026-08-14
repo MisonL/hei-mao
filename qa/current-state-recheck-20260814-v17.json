@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_at": "2026-08-14T06:41:27Z",
-  "checked_commit_before_evidence": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
+  "checked_commit_before_evidence": "e6e7e9516dd50b44861441138d5c19042b9502e7",
   "scope": "current eight-role local release, QA media completeness, public PetDex resources, remote branches, and Codex App boundary",
   "local_release": {
     "roles": 8,
@@ -25,7 +25,7 @@
     "delivery_public_v2_matches_local": true,
     "root_quality_foodie_edits_pending_cdn_switch": true,
     "fortune_traveler_pending_review": true,
-    "resource_evidence": "qa/petdex-public-resource-recheck-20260814.json",
+    "resource_evidence": "qa/petdex-public-resource-recheck-20260814-v2.json",
     "edit_evidence": "qa/petdex-edit-sync-recheck-20260814.json"
   },
   "codex_app": {
@@ -35,9 +35,9 @@
     "boundary_evidence": "qa/codex-app-boundary-recheck-20260814-v2.json"
   },
   "remote_consistency": {
-    "local_main": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
-    "github_main": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
-    "gitlab_main": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
+    "local_main": "e6e7e9516dd50b44861441138d5c19042b9502e7",
+    "github_main": "e6e7e9516dd50b44861441138d5c19042b9502e7",
+    "gitlab_main": "e6e7e9516dd50b44861441138d5c19042b9502e7",
     "all_match": true
   },
   "result": "local_release_qa_media_and_remote_sync_pass; PetDex review_and_cdn_sync_open; Codex_App_visual_acceptance_open"
