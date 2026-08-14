@@ -56,11 +56,11 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-此前的 2026-08-10、2026-08-13 和 v2-v16 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。当前本地、远端和 App 边界结论以 `qa/current-state-recheck-20260814-v17.json` 为准，当前线上资源结论以 `qa/petdex-public-resource-recheck-20260814-v2.json` 和 `qa/petdex-edit-sync-recheck-20260814.json` 为准。
+此前的 2026-08-10、2026-08-13 和 v2-v17 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。当前本地、远端、上游状态和 App 边界结论以 `qa/current-state-recheck-20260814-v18.json` 为准，当前线上资源结论以 `qa/petdex-public-resource-recheck-20260814-v2.json` 和 `qa/petdex-edit-sync-recheck-20260814.json` 为准。
 
-本机当前保留八个通过 v2 合同和最终视觉门禁的角色，Codex 与 PetDex 两个本地目录的文件集合和 SHA-256 一致。2026-08-14 按各角色实际色键重新执行的八包门禁见 `qa/current-v2-gate-recheck-20260814.json`，当前状态、QA 媒体完整性、三处目录 parity、远端一致性、跨平台安装器隔离和 Codex App 边界见 `qa/current-state-recheck-20260814-v17.json`；本轮接触表和标准状态预览补档见 `qa/qa-media-completeness-recheck-20260814.json`。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
+本机当前保留八个通过 v2 合同和最终视觉门禁的角色，Codex 与 PetDex 两个本地目录的文件集合和 SHA-256 一致。2026-08-14 按各角色实际色键重新执行的八包门禁见 `qa/current-v2-gate-recheck-20260814.json`，当前状态、QA 媒体完整性、三处目录 parity、远端一致性、上游状态和 Codex App 边界见 `qa/current-state-recheck-20260814-v18.json`；本轮接触表和标准状态预览补档见 `qa/qa-media-completeness-recheck-20260814.json`。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
-本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认历史或未完成角色仍不会写入；当前证据见 `qa/installer-cross-platform-recheck-20260814-v3.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Codex App 进程仍在运行，但当前可访问窗口没有宠物设置或动画内容，因此没有执行刷新或视觉选择验收；当前只读边界见 `qa/codex-app-boundary-recheck-20260814-v2.json`。多显示器气泡重叠仍以 `qa/petdex-multidisplay-recheck-20260810.json` 记录的上游边界为准。当前总体状态见 `qa/current-state-recheck-20260814-v17.json`。
+本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认历史或未完成角色仍不会写入；当前证据见 `qa/installer-cross-platform-recheck-20260814-v3.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Codex App 进程仍在运行，但当前可访问窗口没有宠物设置或动画内容，因此没有执行刷新或视觉选择验收；当前只读边界见 `qa/codex-app-boundary-recheck-20260814-v2.json`。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；Hook 在宿主不关闭 stdin 时持续等待 EOF 的问题见 #689，当前仍待上游修复。当前总体状态见 `qa/current-state-recheck-20260814-v18.json`。
 
 ### 角色安装器
 
@@ -333,7 +333,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260814-v13.json`: 八角色早期状态快照，仅用于追溯
 - `qa/current-state-recheck-20260814-v15.json`: 当前八角色本地发布门禁、PetDex 编辑审核边界、三处目录 parity、远端一致性和 Codex App 视觉验收边界，不含本机环境信息
 - `qa/current-state-recheck-20260814-v16.json`: 以当前远端同步提交为基线的八角色发布门禁、PetDex 资源/编辑边界、三处目录 parity、远端一致性和 Codex App 视觉验收边界，不含本机环境信息
-- `qa/current-state-recheck-20260814-v17.json`: 当前八角色发布门禁、QA 媒体完整性、PetDex 资源/编辑边界、三处目录 parity、远端一致性和 Codex App 视觉验收边界，不含本机环境信息
+- `qa/current-state-recheck-20260814-v17.json`: 2026-08-14 早期八角色发布门禁和 PetDex 边界快照，仅用于追溯，不含本机环境信息
+- `qa/current-state-recheck-20260814-v18.json`: 当前八角色发布门禁、QA 媒体完整性、PetDex 资源/编辑边界、上游 issue/PR 状态、三处目录 parity、远端一致性和 Codex App 视觉验收边界，不含本机环境信息
 - `qa/qa-media-completeness-recheck-20260814.json`: 八个角色的标准接触表、根包和大管家标准状态预览、来源 SHA 与公开路径完整性证据
 - `qa/codex-app-boundary-recheck-20260814-v2.json`: 脱敏的只读 App 可见性检查；目标宠物界面未出现，不代表视觉验收通过
 - `qa/installer-cross-platform-recheck-20260814-v2.json`: Shell 和 PowerShell 七角色隔离安装、SHA 校验、Traveler 拒绝和临时目标清理复核，不含本机环境信息
