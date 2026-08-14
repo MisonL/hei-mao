@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "atlas": "pets/hei-mao-traveler/spritesheet.webp",
+  "reviewed_by": "parent",
+  "review_basis": [
+    "qa/hei-mao-traveler/look-directions.png",
+    "qa/hei-mao-traveler/contact-sheet-extended.png",
+    "qa/hei-mao-traveler/look-continuity.json",
+    "qa/hei-mao-traveler/direction-blind-validation.json"
+  ],
+  "directions": [
+    {"degree":"000","expected":"up","verdict":"pass","observed":"up","horizontal_axis":"screen-center","vertical_axis":"up","reason":"头部、眼睛和鼻吻明确抬向上方。"},
+    {"degree":"022.5","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"鼻吻向右偏移并保持上抬趋势。"},
+    {"degree":"045","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"头部和鼻吻处于右上象限。"},
+    {"degree":"067.5","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"接近右向 cardinal，仍保持右上过渡。"},
+    {"degree":"090","expected":"right","verdict":"pass","observed":"right","horizontal_axis":"screen-right","vertical_axis":"screen-center","reason":"鼻吻、眼睛和头部轮廓明确朝向画面右侧。"},
+    {"degree":"112.5","expected":"down-right","verdict":"pass","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"down","reason":"鼻吻向右且下沉，进入右下过渡。"},
+    {"degree":"135","expected":"down-right","verdict":"pass","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"down","reason":"头部朝右下，方向弧线连续。"},
+    {"degree":"157.5","expected":"down-right","verdict":"pass","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"down","reason":"接近下向 cardinal 但仍保留右侧偏移。"},
+    {"degree":"180","expected":"down","verdict":"pass","observed":"down","horizontal_axis":"screen-center","vertical_axis":"down","reason":"鼻吻位于下方中心，明确是下视 cardinal。"},
+    {"degree":"202.5","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"从下视向画面左侧平滑偏移。"},
+    {"degree":"225","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"鼻吻位于左下象限，侧别保持一致。"},
+    {"degree":"247.5","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"左侧轮廓逐步形成并保持下视。"},
+    {"degree":"270","expected":"left","verdict":"pass","observed":"left","horizontal_axis":"screen-left","vertical_axis":"screen-center","reason":"鼻吻、眼睛和头部轮廓明确朝向画面左侧。"},
+    {"degree":"292.5","expected":"up-left","verdict":"pass","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"up","reason":"左向 cardinal 后鼻吻抬高，进入左上过渡。"},
+    {"degree":"315","expected":"up-left","verdict":"pass","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"up","reason":"鼻吻和头部位于左上象限。"},
+    {"degree":"337.5","expected":"up-left","verdict":"pass","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"up","reason":"保持左侧偏移并向 000 平滑回环。"}
+  ],
+  "cardinal_hard_gates": {"000":"pass","090":"pass","180":"pass","270":"pass"},
+  "hard_failures": []
+}

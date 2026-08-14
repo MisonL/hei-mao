@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "atlas": "pets/hei-mao-traveler/spritesheet.webp",
+  "blind_validation": "qa/hei-mao-traveler/direction-blind-validation.json",
+  "blind_validation_ok": true,
+  "cardinal_hard_gates": {"000_vs_180":"pass","090_vs_270":"pass"},
+  "accepted_minor_warnings": [
+    {
+      "checks": ["horizontal-1","horizontal-2","horizontal-5","vertical-3","vertical-7"],
+      "decision": "accept_warning_after_labeled_review",
+      "reason": "三份独立盲测只在中间方向的水平或垂直次轴出现分歧；标注方向图显示 000、090、180、270 四个 cardinal 明确，全部中间姿态仍处于预期象限且没有可见反转。"
+    },
+    {
+      "checks": ["look-continuity"],
+      "decision": "accept_warning_after_visual_review",
+      "reason": "连续性报告中的面积比、局部差异和回环偏移在正常宠物尺寸下没有形成 snap、比例跳变、裁切、身份变化或道具断裂。000 的脚部透明行是自然负空间，不是封闭主体洞。"
+    }
+  ],
+  "decision": "accept_minor_warnings",
+  "severity": "minor",
+  "reviewed_by": "parent",
+  "hard_failures": []
+}

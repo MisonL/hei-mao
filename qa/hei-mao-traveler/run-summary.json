@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "spriteVersionNumber": 2,
+  "pet": "hei-mao-traveler",
+  "spritesheet": "pets/hei-mao-traveler/spritesheet.webp",
+  "sha256": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e",
+  "layout": {
+    "width": 1536,
+    "height": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cell_width": 192,
+    "cell_height": 208
+  },
+  "validation": "qa/hei-mao-traveler/validation.json",
+  "chroma_despill": "qa/hei-mao-traveler/chroma-despill.json",
+  "contact_sheet": "qa/hei-mao-traveler/contact-sheet-extended.png",
+  "direction_sheet": "qa/hei-mao-traveler/look-directions.png",
+  "direction_semantics": "qa/hei-mao-traveler/direction-semantics.json",
+  "blind_direction_validation": "qa/hei-mao-traveler/direction-blind-validation.json",
+  "blind_review_resolution": "qa/hei-mao-traveler/blind-review-resolution.json",
+  "continuity": "qa/hei-mao-traveler/look-continuity.json",
+  "review": "qa/hei-mao-traveler/review.json",
+  "final_visual_qa": "qa/hei-mao-traveler/final-visual-qa.json",
+  "motion_previews": "qa/hei-mao-traveler/previews",
+  "package": "pets/hei-mao-traveler"
+}

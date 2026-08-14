@@ -23,7 +23,7 @@ npx -y petdex@latest install hei-mao-foodie
 npx -y petdex@latest install hei-mao-delivery
 ```
 
-2026-08-14 复核中 Petdex CLI 为 `1.2.1`，登录会话有效。`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的仓库 v2 图集已按已有 slug 的编辑规则提交，当前仍在管理员审核队列，公开 manifest 尚未切换资源；`hei-mao-quality` 的线上 metadata 仍是旧版本。`hei-mao-delivery`、大管家和厨师的线上 metadata、精灵图均已与仓库 v2 SHA 一致。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录。审核和 CDN 切换完成前，不能把 Petdex 在线下载结果当作仓库 v2。完整 SHA 对照见 `qa/petdex-current-recheck-20260814-v3.json`。
+2026-08-14 复核中 Petdex CLI 为 `1.2.1`，登录会话有效。`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的仓库 v2 图集已按已有 slug 的编辑规则提交，当前仍在管理员审核队列，公开 manifest 尚未切换资源；`hei-mao-quality` 的线上 metadata 仍是旧版本。`hei-mao-delivery`、大管家和厨师的线上 metadata、精灵图均已与仓库 v2 SHA 一致。`hei-mao-fortune` 已提交并等待审核；`hei-mao-traveler` 已完成本地 v2 包，但尚未提交到 PetDex，当前不在公开 manifest。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录。审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。完整 SHA 对照见 `qa/petdex-current-recheck-20260814-v4.json`。
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -45,8 +45,9 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，图集编辑待审核，线上仍为旧资源 |
 | `hei-mao-delivery` | 配送员 | v2 已验证，可本地安装 | manifest 可见，线上 v2 资源已与仓库一致 |
 | `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | 已提交，等待审核 |
+| `hei-mao-traveler` | 旅行家 | v2 已验证，可本地安装 | 尚未提交，不在公开 manifest |
 
-公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，线上 metadata 和精灵图与仓库 SHA 一致。`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的编辑已受理但尚未完成审核和 CDN 切换。`hei-mao-fortune` 已提交但仍在审核中，尚未出现在公开 manifest；`hei-mao-traveler` 不存在于 manifest。最新编辑状态见 `qa/petdex-edit-submit-recheck-20260813.json`，Fortune 提交状态见 `qa/petdex-fortune-submit-recheck-20260813.json`，当前 manifest 和线上 SHA 快照见 `qa/petdex-current-recheck-20260814-v3.json`；历史复核只作为背景，不替代当前结论。
+公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，线上 metadata 和精灵图与仓库 SHA 一致。`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的编辑已受理但尚未完成审核和 CDN 切换。`hei-mao-fortune` 已提交但仍在审核中，尚未出现在公开 manifest；`hei-mao-traveler` 尚未提交，也不在 manifest。最新编辑状态见 `qa/petdex-edit-submit-recheck-20260813.json`，Fortune 提交状态见 `qa/petdex-fortune-submit-recheck-20260813.json`，当前 manifest 和线上 SHA 快照见 `qa/petdex-current-recheck-20260814-v4.json`；历史复核只作为背景，不替代当前结论。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -57,9 +58,9 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 此前的 2026-08-10、2026-08-13 和 v2-v11 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。当前结论以 `qa/current-state-recheck-20260814-v12.json` 和 `qa/petdex-current-recheck-20260814-v4.json` 为准。
 
-本机当前保留七个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。2026-08-14 按各角色实际色键重新执行的七包门禁、28 项 Hatch Pet 测试、三处目录 parity、跨平台安装器隔离、GitHub/GitLab SHA 和当前 Petdex manifest 复核见 `qa/current-state-recheck-20260814-v11.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，七个角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
+本机当前保留八个通过 v2 合同和最终视觉门禁的角色，Codex 与 Petdex 两个本地目录的文件集合和 SHA-256 一致。2026-08-14 按各角色实际色键重新执行的七包门禁、28 项 Hatch Pet 测试、三处目录 parity、跨平台安装器隔离、GitHub/GitLab SHA 和当前 Petdex manifest 复核见 `qa/current-state-recheck-20260814-v11.json`；Traveler 的新增独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，其余七个角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
-本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的七个角色，并确认历史或阻断角色不会写入；对应证据见 `qa/installer-cross-platform-recheck-20260814-v2.json`。Codex App 进程仍在运行，但当前可见画面不是宠物设置或动画画面，因此没有执行刷新或视觉选择验收。多显示器气泡重叠仍以 `qa/petdex-multidisplay-recheck-20260810.json` 记录的上游边界为准。当前本地 App 验收边界见 `qa/current-local-app-boundary-recheck-20260813.json`。
+本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认历史或未完成角色仍不会写入；当前证据见 `qa/installer-cross-platform-recheck-20260814-v3.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Codex App 进程仍在运行，但当前可见画面不是宠物设置或动画画面，因此没有执行刷新或视觉选择验收。多显示器气泡重叠仍以 `qa/petdex-multidisplay-recheck-20260810.json` 记录的上游边界为准。当前本地 App 验收边界见 `qa/current-local-app-boundary-recheck-20260813.json`。
 
 ### 角色安装器
 
@@ -78,9 +79,9 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。Windows PowerShell 5.1 的本地 checkout 可能受 Git `core.autocrlf` 影响，安装器会对文本 manifest 显式按 UTF-8/LF 规范化后再校验固定 SHA，二进制图集保持原样。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
-未完成完整 v2 图集和复核的 `hei-mao-traveler` 不在安装器白名单内。`hei-mao-fortune` 已完成本地 v2 图集和 QA，并已加入安装器白名单；Petdex 提交已接受，当前等待审核，审核完成并同步线上资源前不能使用 Petdex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
+`hei-mao-fortune` 和 `hei-mao-traveler` 均已完成本地 v2 图集、结构门禁和视觉 QA，并加入安装器白名单；Fortune 已提交 PetDex、Traveler 尚未提交，二者在审核或提交前都不能使用 PetDex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
 
-`hei-mao-traveler` 仍没有可发布图集。2026-08-14 最新复核确认本地生图服务能力和运行态契约通过，但服务编排入口的真实 smoke 仍返回上游 429，未产生新的 artifact 或可提取的动画行；已有独立 base 不构成完整发布图集。在完成独立完整图集、全部 v2 门禁和视觉验收前，不得生成、安装或发布该角色。当前阻断证据见 `qa/traveler-generation-recheck-20260814-v6.json`，早期记录仅作历史记录。`hei-mao-fortune` 已通过 v2 结构、透明度、方向盲测、连续性和独立视觉复核；中间方向与连续性告警已按 minor warning 记录，不影响本地发布。
+`hei-mao-traveler` 是黑毛的小旅行家角色，使用红色旅行背心、绿色蔬菜纹样背包、叶菜和小福袋表达社区探访与新鲜食材探索。其 11 行 v2 图集已完成单次 despill、透明度验证、三份独立方向盲测、连续性复核和最终视觉 QA；中间方向的盲测分歧与连续性 outlier 均按 minor warning 记录，四个 cardinal、身份、比例、回环和透明主体检查通过。当前仅可通过仓库安装器安装，PetDex 条目尚未创建。
 
 本地手动安装角色时：
 
@@ -93,6 +94,12 @@ Fortune 角色的本地安装：
 
 ```bash
 HEI_MAO_PET_ID=hei-mao-fortune curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-fortune bash
+```
+
+Traveler 角色的本地安装：
+
+```bash
+HEI_MAO_PET_ID=hei-mao-traveler curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-traveler bash
 ```
 
 ### 大管家角色
@@ -266,6 +273,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-delivery/`: 配送员 v2 的结构、方向、alpha 复核和视觉证据
 - `pets/hei-mao-fortune/`: 已通过最终视觉 QA 的福气官 v2 角色包
 - `qa/hei-mao-fortune/`: 福气官 v2 的结构、方向、盲测、连续性和视觉证据
+- `pets/hei-mao-traveler/`: 已通过最终视觉 QA 的旅行家 v2 角色包
+- `qa/hei-mao-traveler/`: 旅行家 v2 的结构、方向、盲测、连续性和视觉证据
 - `qa/petdex-desktop-live-smoke-20260809.json`: Petdex Desktop 单角色实时烟测；不替代 Codex App 全量验收
 - `qa/petdex-desktop-live-smoke-20260810.json`: Desktop 0.6.0 hook stdin 退出门禁与发布集复核；发现宿主保持 stdin 打开时原生 hook 仍会等待 EOF，不能据此宣称 App 验收完成
 - `qa/petdex-multidisplay-recheck-20260810.json`: 双显示器实时窗口复核；Petdex 窗口可显示在另一块屏幕，但跨屏移动后气泡与宠物重叠，Codex App 多角色验收仍被阻断
