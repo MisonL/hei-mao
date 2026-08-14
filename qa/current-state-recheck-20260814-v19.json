@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T07:29:03Z",
+  "checked_commit_before_evidence": "51246e0fea3b7adc892f314d9ccff2f04fd98442",
+  "scope": "current eight-role local release, QA media completeness, public PetDex resources, upstream status, local CLI and hook boundary, remote branches, and Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "atlas_recheck": "all eight freshly passed validate_atlas.py --require-v2 with recorded chroma keys",
+    "contract": "1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "qa_media": "all eight contact sheets are 1536x2530; root and butler each have nine standard-state RGBA previews at 192x208",
+    "local_installation_sha_parity": true,
+    "hatch_pet_unit_tests": "28 passed",
+    "installers": "Bash syntax pass; PowerShell isolation and parse pass in retained cross-platform evidence"
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "global_cli_version": "1.2.2",
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_generated_at": "2026-08-14T01:15:36.149Z",
+    "manifest_total": 4521,
+    "manifest_hei_mao_family_entries": 7,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "delivery_public_v2_matches_local": true,
+    "root_quality_foodie_edits_pending_cdn_switch": true,
+    "fortune_traveler_pending_review": true,
+    "resource_evidence": "qa/petdex-public-resource-recheck-20260814-v2.json",
+    "edit_evidence": "qa/petdex-edit-sync-recheck-20260814.json"
+  },
+  "upstream": {
+    "desktop_latest_release": "desktop-v0.8.0",
+    "desktop_release_scope": "safe update discovery",
+    "issue_689": {
+      "state": "OPEN",
+      "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住",
+      "url": "https://github.com/crafter-station/petdex/issues/689",
+      "updated_at": "2026-08-11T11:05:48Z"
+    },
+    "pr_662": {
+      "state": "MERGED",
+      "title": "[codex] keep activity bubbles anchored across displays",
+      "merged_at": "2026-08-08T19:58:14Z",
+      "url": "https://github.com/crafter-station/petdex/pull/662"
+    },
+    "pr_667": {
+      "state": "MERGED",
+      "title": "[codex] keep activity bubbles clear of pet",
+      "merged_at": "2026-08-08T19:57:34Z",
+      "url": "https://github.com/crafter-station/petdex/pull/667"
+    },
+    "pr_654": {
+      "state": "MERGED",
+      "title": "修复 CLI petdex edit 的 Bearer 编辑接口",
+      "merged_at": "2026-08-10T06:32:57Z",
+      "url": "https://github.com/crafter-station/petdex/pull/654"
+    }
+  },
+  "local_cli_hook_boundary": {
+    "evidence": "qa/petdex-local-cli-recheck-20260814.json",
+    "hook_issue_689_reproduced": true,
+    "isolated_test_child_only": true,
+    "codex_process_mutation": "none"
+  },
+  "codex_app": {
+    "visual_acceptance": "not_run",
+    "foreground_view": "not_codex_pet_view",
+    "process_mutation": "none",
+    "boundary_evidence": "qa/codex-app-boundary-recheck-20260814-v2.json"
+  },
+  "remote_consistency": {
+    "local_main": "51246e0fea3b7adc892f314d9ccff2f04fd98442",
+    "github_main": "51246e0fea3b7adc892f314d9ccff2f04fd98442",
+    "gitlab_main": "51246e0fea3b7adc892f314d9ccff2f04fd98442",
+    "all_match": true
+  },
+  "result": "local_release_qa_media_remote_sync_cli_version_and_upstream_status_recheck_pass; Hook issue_689_and_PetDex_review_cdn_sync_open; Codex_App_visual_acceptance_open"
+}
