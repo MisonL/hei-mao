@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T08:02:10Z",
+  "checked_commit_before_evidence": "49a6b0687e43e0765b3899af5bd1c9bb924a56ed",
+  "scope": "read-only Petdex Desktop runtime, animation, and role-selection smoke",
+  "application": {
+    "release": "desktop-v0.8.0",
+    "settings_view_visible": true,
+    "pet_window_visible": true,
+    "role_list_visible": true,
+    "role_list_count": 8,
+    "loaded_from_local_petdex_directory": true
+  },
+  "animation": {
+    "capture_interval_ms": 450,
+    "frames_differ": true,
+    "observed_change": "second frame shows a changed eye state"
+  },
+  "role_selection": {
+    "initial_role": "hei-mao-traveler",
+    "selected_role": "hei-mao-chef",
+    "selected_role_verified": true,
+    "restored_role": "hei-mao-traveler",
+    "restored_role_verified": true,
+    "selection_sequence": ["hei-mao-traveler", "hei-mao-chef", "hei-mao-traveler"]
+  },
+  "settings_observed": {
+    "scale": 0.7,
+    "bubbles_enabled": true,
+    "bubbles_per_conversation": true,
+    "rotate_pets": false,
+    "latest_desktop_version": "0.8.0"
+  },
+  "acceptance": {
+    "settings_and_pet_visible": true,
+    "animation_loop": true,
+    "multi_role_selection": true,
+    "multi_display_bubble_placement": "not_run",
+    "codex_process_mutation": "none"
+  },
+  "result": "desktop_settings_animation_and_role_selection_verified_and_original_role_restored; multidisplay_acceptance_remains_open"
+}
