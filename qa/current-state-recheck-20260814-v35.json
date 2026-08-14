@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:41:19Z",
+  "checked_commit": "d8f9320a43c0e0237b594a5c8be5f3eaffb4e13b",
+  "scope": "post-hatch-pet-runtime test suite recheck",
+  "local_release": {
+    "roles": 8,
+    "asset_gate": "pass; see qa/current-v2-gate-recheck-20260814-v4.json",
+    "hatch_pet_tests": "28 passed; see qa/hatch-pet-runtime-test-recheck-20260814-v1.json",
+    "package_contract": "pass",
+    "three_directory_parity": "pass",
+    "installer_source": "Bash syntax/ShellCheck and PowerShell AST pass",
+    "process_mutation": "none"
+  },
+  "petdex": {
+    "manifest_sha256": "0cae009c5ca2de2954e9e1433a58431d4f71d2630d5cdad701799a60f1fb8041",
+    "manifest_total": 4521,
+    "fortune_public": false,
+    "traveler_public": false,
+    "cdn_v2_sync_pending": ["hei-mao", "hei-mao-quality", "hei-mao-foodie"],
+    "review_pending": ["hei-mao-fortune", "hei-mao-traveler"]
+  },
+  "upstream": {
+    "main_sha": "0243af614f30eee31913ff3e3839467615c1c744",
+    "latest_release": "desktop-v0.8.0",
+    "issue_689": "OPEN",
+    "owned_open_pull_requests": []
+  },
+  "desktop_boundary": {
+    "animation_and_role_selection": "previously passed",
+    "multidisplay_bubble_follow": "previously passed",
+    "codex_app_visual_acceptance": "open; target settings view unavailable to read-only probe",
+    "process_mutation": "none"
+  },
+  "remaining_blockers": [
+    "PetDex CDN v2 edits remain queued for three existing slugs.",
+    "Fortune and Traveler remain held for PetDex review and are not in the public manifest.",
+    "Upstream issue #689 remains open.",
+    "Complete Codex App visual acceptance remains unavailable to the read-only probe."
+  ],
+  "result": "local_assets_contract_and_hatch_pet_tests_pass; external_publication_and_app_acceptance_remain_open"
+}

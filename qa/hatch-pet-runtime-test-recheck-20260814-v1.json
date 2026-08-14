@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:41:19Z",
+  "checked_commit": "d8f9320a43c0e0237b594a5c8be5f3eaffb4e13b",
+  "runtime": "hatch-pet bundled Python 3.12 runtime",
+  "test_command": "python -m unittest discover -s hatch-pet/tests -p 'test_*.py' -v",
+  "tests_run": 28,
+  "tests_failed": 0,
+  "tests_errors": 0,
+  "result": "pass",
+  "stderr_note": "Pillow emitted getdata deprecation notices; no test failed and no production asset was modified.",
+  "scope": [
+    "extended atlas registration and assembly",
+    "chroma matte decontamination",
+    "direction acceptance and blind consensus",
+    "look-row safe-box prompt contracts",
+    "single final chroma pass"
+  ]
+}
