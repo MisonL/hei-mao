@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T01:34:36Z",
+  "scope": "Traveler Petdex submission and public visibility boundary",
+  "cli": {
+    "version": "1.2.2",
+    "auth_state": "signed_in",
+    "operation": "submission result retained from authenticated run",
+    "target": "hei-mao-traveler"
+  },
+  "submission": {
+    "status": "submitted",
+    "submitted_count": 1,
+    "failed_count": 0,
+    "review_status": "held_for_review",
+    "review_note": "possible policy issue",
+    "duplicate_submit_attempted_during_recheck": false,
+    "external_write_observed": true,
+    "verification_note": "使用已保留的认证提交结果；本次只读复核未重复提交。"
+  },
+  "public_manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "generated_at": "2026-08-14T01:15:36.149Z",
+    "total": 4521,
+    "traveler_listed": false,
+    "fortune_listed": false,
+    "interpretation": "提交已接受但尚未审核通过，未进入公开列表。"
+  },
+  "release_decision": {
+    "traveler_submitted": true,
+    "traveler_review_pending": true,
+    "traveler_published": false,
+    "traveler_installable_from_petdex": false,
+    "reason": "公开 manifest 尚未出现 Traveler；审核完成并同步线上资源前不能使用 Petdex 在线安装。"
+  },
+  "public_file_hygiene": {
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_metadata": false
+  },
+  "result": "traveler_submitted_pending_petdex_review"
+}
