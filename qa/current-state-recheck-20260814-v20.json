@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T07:43:21Z",
+  "checked_commit": "a79b931f5aeefd0bba238aa39bc19a45b5214dba",
+  "scope": "eight-role local release, PetDex resources, Desktop installation, hook boundary, remote synchronization, and Codex App acceptance",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "all eight passed validate_atlas.py --require-v2; 1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "qa_and_tests": "28 hatch-pet unit tests passed; retained cross-platform installer isolation evidence passed",
+    "installation": "three local package directories have matching file sets and SHA-256 values"
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_total": 4521,
+    "public_family_entries": 7,
+    "historical_duplicate": "hei-mao-2",
+    "delivery_public_v2_matches_local": true,
+    "root_quality_foodie_cdn_sync_pending": true,
+    "fortune_traveler_review_pending": true,
+    "hook_issue_689": "open and reproduced with isolated child; Codex processes were not mutated"
+  },
+  "desktop": {
+    "release": "desktop-v0.8.0",
+    "bundle_version": "0.8.0",
+    "dmg_sha256": "9377d0e7d5482a21c1c336361e815e6deafc00702d1d20a8ee3fecdc4313bbb3",
+    "signature": "valid Developer ID signature with stapled notarization ticket",
+    "installed_to_standard_directory": true,
+    "started": false,
+    "evidence": "qa/petdex-desktop-install-recheck-20260814.json"
+  },
+  "codex_app": {
+    "visual_acceptance": "not_run; target pet settings or animation view was unavailable",
+    "process_mutation": "none"
+  },
+  "remote_consistency": {
+    "local_main": "a79b931f5aeefd0bba238aa39bc19a45b5214dba",
+    "github_main": "a79b931f5aeefd0bba238aa39bc19a45b5214dba",
+    "gitlab_main": "a79b931f5aeefd0bba238aa39bc19a45b5214dba",
+    "all_match": true
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "desktop_install_verified_and_remote_sync_pass; PetDex review and CDN sync, issue_689, and Codex App visual acceptance remain open"
+}
