@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T07:56:20Z",
+  "checked_commit_before_evidence": "8bc83617d9b698543038c2db1b978543f76235a6",
+  "scope": "read-only Petdex Desktop runtime and animation smoke",
+  "application": {
+    "release": "desktop-v0.8.0",
+    "settings_view_visible": true,
+    "pet_window_visible": true,
+    "active_pet": "hei-mao-traveler",
+    "role_list_visible": true,
+    "role_list_count": 8,
+    "loaded_from_local_petdex_directory": true
+  },
+  "animation": {
+    "capture_interval_ms": 450,
+    "frame_a_sha256": "c104f8fcf7159b5719c82a73248c2ebae6ae351ebe3b3b39f26af4a36f9acd96",
+    "frame_b_sha256": "c937081870ca1f19c56f32163ef1cf3a6ff0e567a41f95a5cc02a7371a8c76de",
+    "frames_differ": true,
+    "observed_change": "second frame shows a changed eye state"
+  },
+  "settings_observed": {
+    "scale": 0.7,
+    "bubbles_enabled": true,
+    "bubbles_per_conversation": true,
+    "rotate_pets": false,
+    "latest_desktop_version": "0.8.0"
+  },
+  "acceptance": {
+    "settings_and_pet_visible": true,
+    "animation_loop": true,
+    "multi_role_selection": "not_run",
+    "multi_display_bubble_placement": "not_run",
+    "codex_process_mutation": "none"
+  },
+  "result": "desktop_settings_active_traveler_and_animation_frame_change_verified; role_selection_and_multidisplay_acceptance_remain_open"
+}
