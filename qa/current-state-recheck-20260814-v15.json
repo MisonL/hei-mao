@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T02:31:55Z",
+  "checked_commit_before_evidence": "d3ac8d8027d2d446fa108d0a991353e173e33726",
+  "scope": "current eight-role local release, PetDex edit queue, public manifest, and Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "fresh_v2_gate_evidence": "qa/current-v2-gate-recheck-20260814.json",
+    "local_installation_sha_parity": true,
+    "hatch_pet_unit_tests": "28 passed",
+    "installers": "Bash syntax pass; PowerShell parse pass"
+  },
+  "petdex": {
+    "edit_evidence": "qa/petdex-edit-sync-recheck-20260814.json",
+    "existing_edits_queued": ["hei-mao", "hei-mao-quality", "hei-mao-foodie"],
+    "fortune_public": false,
+    "traveler_public": false,
+    "manifest_entry_count_for_hei_mao_family": 7,
+    "historical_duplicate": "hei-mao-2",
+    "online_sync": "pending_admin_review_and_cdn_refresh"
+  },
+  "codex_app": {
+    "visual_acceptance": "not_run",
+    "foreground_view": "not_codex_pet_view",
+    "process_mutation": "none"
+  },
+  "remote_consistency": {
+    "local_main": "d3ac8d8027d2d446fa108d0a991353e173e33726",
+    "github_main": "d3ac8d8027d2d446fa108d0a991353e173e33726",
+    "gitlab_main": "d3ac8d8027d2d446fa108d0a991353e173e33726",
+    "all_match": true
+  },
+  "result": "local_release_pass; existing_edits_pending_review; fortune_traveler_pending_review; codex_app_visual_acceptance_open"
+}

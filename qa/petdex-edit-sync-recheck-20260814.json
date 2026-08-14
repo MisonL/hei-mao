@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T02:31:55Z",
+  "checked_commit_before_evidence": "d3ac8d8027d2d446fa108d0a991353e173e33726",
+  "cli_version": "1.2.2",
+  "edit_requests": {
+    "hei-mao": {
+      "operation": "petdex edit <slug> --sprite <validated local sprite> --meta <validated local pet.json>",
+      "resolved_existing_slug": true,
+      "assets_uploaded": true,
+      "result": "queued_for_admin_review",
+      "gallery_slug": "hei-mao"
+    },
+    "hei-mao-quality": {
+      "operation": "petdex edit <slug> --sprite <validated local sprite> --meta <validated local pet.json>",
+      "resolved_existing_slug": true,
+      "assets_uploaded": true,
+      "result": "queued_for_admin_review",
+      "gallery_slug": "hei-mao-quality"
+    },
+    "hei-mao-foodie": {
+      "operation": "petdex edit <slug> --sprite <validated local sprite> --meta <validated local pet.json>",
+      "resolved_existing_slug": true,
+      "assets_uploaded": true,
+      "result": "queued_for_admin_review",
+      "gallery_slug": "hei-mao-foodie"
+    }
+  },
+  "post_edit_manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-14T01:15:36.149Z",
+    "sha256": "3bb66a50557eb21994b2834f6dfb158d1b14d5561d0fd47304fccca90a2e0d1b",
+    "total": 4521,
+    "hei_mao_entry_count": 7,
+    "fortune_listed": false,
+    "traveler_listed": false,
+    "duplicate_entry_count": 1,
+    "manifest_changed_after_edit": false
+  },
+  "resource_boundary": {
+    "hei-mao": {
+      "local_sprite_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "public_sprite_sha256_before_review": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "synchronized": false
+    },
+    "hei-mao-quality": {
+      "local_sprite_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "public_sprite_sha256_before_review": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "synchronized": false
+    },
+    "hei-mao-foodie": {
+      "local_sprite_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+      "public_sprite_sha256_before_review": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "synchronized": false
+    }
+  },
+  "codex_app_boundary": {
+    "screen_capture_taken": true,
+    "pet_settings_or_animation_visible": false,
+    "foreground_view": "not_codex_pet_view",
+    "accessibility_query": "failed_without_window_data",
+    "process_mutation": "none",
+    "screen_capture_committed": false
+  },
+  "result": "three_existing_edits_queued;_public_manifest_and_cdn_pending;codex_app_visual_acceptance_open"
+}
