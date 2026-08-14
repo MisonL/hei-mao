@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T03:00:13Z",
+  "checked_commit_before_evidence": "142dcc74680389d8bc80bfc6c8db215584bade3a",
+  "scope": "current eight-role local release, public PetDex resources, edit queue, remote branches, and Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "atlas_recheck": "all eight passed validate_atlas.py --require-v2 with recorded chroma keys",
+    "contract": "1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "local_installation_sha_parity": true,
+    "hatch_pet_unit_tests": "28 passed",
+    "installers": "Bash syntax pass; PowerShell isolation and parse pass in retained cross-platform evidence"
+  },
+  "petdex": {
+    "resource_evidence": "qa/petdex-public-resource-recheck-20260814.json",
+    "edit_evidence": "qa/petdex-edit-sync-recheck-20260814.json",
+    "manifest_total": 4521,
+    "manifest_hei_mao_family_entries": 7,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "delivery_public_v2_matches_local": true,
+    "root_quality_foodie_edits_pending_cdn_switch": true,
+    "fortune_traveler_pending_review": true
+  },
+  "codex_app": {
+    "visual_acceptance": "not_run",
+    "foreground_view": "not_codex_pet_view",
+    "process_mutation": "none"
+  },
+  "remote_consistency": {
+    "local_main": "142dcc74680389d8bc80bfc6c8db215584bade3a",
+    "github_main": "142dcc74680389d8bc80bfc6c8db215584bade3a",
+    "gitlab_main": "142dcc74680389d8bc80bfc6c8db215584bade3a",
+    "all_match": true
+  },
+  "result": "local_release_and_remote_sync_pass; PetDex review_and_cdn_sync_open; Codex_App_visual_acceptance_open"
+}
