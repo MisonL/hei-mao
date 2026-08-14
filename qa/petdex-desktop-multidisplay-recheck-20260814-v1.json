@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T08:51:50Z",
+  "checked_commit_before_evidence": "5f76f24",
+  "scope": "Petdex Desktop v0.8.0 multi-display pet and activity-bubble placement",
+  "application": {
+    "release": "desktop-v0.8.0",
+    "active_pet": "hei-mao-traveler",
+    "process_mutation": "none",
+    "codex_process_mutation": "none"
+  },
+  "display_topology": {
+    "online_display_count": 2,
+    "main_display_origin": {"x": 0, "y": 0},
+    "secondary_display_origin": {"x": -1792, "y": 72}
+  },
+  "initial_secondary_display": {
+    "pet_window": {"x": -1642, "y": 339, "width": 135, "height": 146},
+    "bubble_window": {"x": -1668, "y": 236, "width": 186, "height": 97},
+    "bubble_pet_overlap": false,
+    "bubble_pet_gap_px": 6
+  },
+  "cross_display_move": {
+    "operation": "move the Petdex pet window through the macOS accessibility API to the main display",
+    "target_pet_window": {"x": 120, "y": 300, "width": 135, "height": 146},
+    "observed_bubble_window": {"x": 94, "y": 197, "width": 186, "height": 97},
+    "bubble_followed_pet": true,
+    "bubble_pet_overlap": false,
+    "bubble_pet_gap_px": 6
+  },
+  "restore": {
+    "pet_window": {"x": -1642, "y": 339, "width": 135, "height": 146},
+    "bubble_window": {"x": -1668, "y": 236, "width": 186, "height": 97},
+    "bubble_pet_overlap": false,
+    "original_position_restored": true
+  },
+  "event_delivery": {
+    "http_status": 200,
+    "accepted": true,
+    "payload_text": "redacted test text",
+    "token_recorded": false
+  },
+  "artifacts": {
+    "screen_captures_committed": false,
+    "private_desktop_content_recorded": false
+  },
+  "result": "pass; activity bubble followed the pet across displays and remained clear of the pet before, during, and after restoration"
+}

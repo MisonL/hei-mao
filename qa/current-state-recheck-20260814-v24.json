@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T08:51:50Z",
+  "checked_commit_before_evidence": "5f76f24",
+  "scope": "eight-role local release, PetDex resources, Desktop animation, role selection, multi-display bubble placement, hook boundary, remote synchronization, and Codex App acceptance",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "all eight passed validate_atlas.py --require-v2; 1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "qa_and_tests": "28 hatch-pet unit tests passed; retained cross-platform installer isolation evidence passed",
+    "installation": "three local package directories have matching file sets and SHA-256 values"
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-14T07:13:06.941Z",
+    "manifest_total": 4521,
+    "public_family_entries": 7,
+    "historical_duplicate": "hei-mao-2",
+    "delivery_public_v2_matches_local": true,
+    "root_quality_foodie_cdn_sync_pending": true,
+    "fortune_traveler_review_pending": true,
+    "hook_issue_689": "open and reproduced with isolated child; Codex processes were not mutated"
+  },
+  "desktop": {
+    "release": "desktop-v0.8.0",
+    "settings_and_pet_visible": true,
+    "animation_loop": "verified by different window captures 450ms apart",
+    "multi_role_selection": "verified traveler -> chef -> traveler and original role restored",
+    "multi_display_bubble_placement": "pass; bubble followed the pet across displays and stayed clear",
+    "evidence": [
+      "qa/petdex-desktop-live-recheck-20260814-v3.json",
+      "qa/petdex-desktop-multidisplay-recheck-20260814-v1.json"
+    ]
+  },
+  "codex_app": {
+    "visual_acceptance": "Desktop settings, animation, role selection, and multi-display geometry passed; complete Codex App visual acceptance remains open",
+    "process_mutation": "none"
+  },
+  "remote_consistency": {
+    "local_main": "5f76f24",
+    "github_main": "5f76f24",
+    "gitlab_main": "5f76f24",
+    "all_match": true
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "desktop_animation_role_selection_and_multidisplay_pass; PetDex review and CDN sync, issue_689, and complete Codex App visual acceptance remain open"
+}
