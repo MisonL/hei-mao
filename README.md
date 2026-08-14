@@ -49,7 +49,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | 已提交，等待审核 |
 | `hei-mao-traveler` | 旅行家 | v2 已验证，可本地安装 | 已提交，审核中，不在公开 manifest |
 
-公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，线上 metadata 和精灵图与仓库 SHA 一致。`hei-mao-quality` 的公开 metadata 与本地 JSON 语义一致但字节 SHA 不同，图集 CDN 仍待切换；`hei-mao` 和 `hei-mao-foodie` 的编辑已受理但尚未完成图集 CDN 切换。`hei-mao-fortune` 与 `hei-mao-traveler` 的提交均已接受但仍在审核中，尚未出现在公开 manifest。最新编辑状态见 `qa/petdex-edit-sync-recheck-20260814.json`，Fortune 提交状态见 `qa/petdex-fortune-submit-recheck-20260813.json`，Traveler 提交状态见 `qa/petdex-traveler-submit-recheck-20260814.json`，当前 manifest 和线上 SHA 快照见 `qa/petdex-public-resource-recheck-20260814-v3.json`；历史复核只作为背景，不替代当前结论。
+公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`；`hei-mao-delivery` 已公开为 v2，线上 metadata 和精灵图与仓库 SHA 一致。`hei-mao-quality` 的公开 metadata 与本地 JSON 语义一致但字节 SHA 不同，图集 CDN 仍待切换；`hei-mao` 和 `hei-mao-foodie` 的编辑已受理但尚未完成图集 CDN 切换。`hei-mao-fortune` 与 `hei-mao-traveler` 的提交均已接受但仍在审核中，尚未出现在公开 manifest。最新编辑状态见 `qa/petdex-edit-sync-recheck-20260814.json`，Fortune 提交状态见 `qa/petdex-fortune-submit-recheck-20260813.json`，Traveler 提交状态见 `qa/petdex-traveler-submit-recheck-20260814.json`，当前 manifest 和线上 SHA 快照见 `qa/petdex-public-resource-recheck-20260814-v4.json`；历史复核只作为背景，不替代当前结论。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
