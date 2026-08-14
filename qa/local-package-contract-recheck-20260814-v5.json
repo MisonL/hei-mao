@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:29:58Z",
+  "checked_commit": "d251c421e72b3ec53b3ce5a037fdaa47867a5ea9",
+  "scope": "local eight-role package contract, installer source and three-directory parity",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "package_contract": {
+    "all_ids_match_directory_names": true,
+    "all_sprite_version_numbers_are_2": true,
+    "all_spritesheet_paths_are_spritesheet_webp": true,
+    "all_repository_files_present": true
+  },
+  "parity": {
+    "roots": [
+      "repository/pets",
+      "codex_pets",
+      "petdex_pets"
+    ],
+    "pet_json_sha256_matches": true,
+    "spritesheet_sha256_matches": true,
+    "roles_checked": 8
+  },
+  "installer_source": {
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_ast": "pass",
+    "supported_role_ids_match_repository": true,
+    "unknown_slug_rejection": "previously passed; see qa/installer-cross-platform-recheck-20260814-v4.json"
+  },
+  "historical_slug_boundary": {
+    "hei-mao-2": "not_installed",
+    "hei-mao-recommender": "not_installed"
+  },
+  "qa_artifacts": {
+    "all_repository_qa_json_parse": "pass",
+    "bundled_hatch_pet_validator_rerun": "not_run",
+    "bundled_validator_blocker": "load_workspace_dependencies tool is unavailable in the current tool environment; system Python was not substituted"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "local_package_contract_and_parity_pass; bundled_validator_rerun_remains_open_due_to_unavailable_workspace_runtime_loader"
+}
