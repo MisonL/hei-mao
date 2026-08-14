@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T11:42:19Z",
+  "checked_commit": "30f734a150cb9ab3730770e9ff8101fc95b1ceb6",
+  "asset_baseline_commit": "ab63934eaddbde548e509d0844baccc72b4ce1cd",
+  "scope": "post-push current state, unchanged asset and installer tree, PetDex public state, upstream hook issue, remote synchronization, and read-only Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "asset_tree_unchanged_since_baseline": true,
+    "atlas_contract": "the eight-role v2 gate remains valid; all eight passed validate_atlas.py --require-v2 on the asset baseline",
+    "installation": "repository, Codex, and PetDex directories remain byte-identical for all eight roles",
+    "evidence": ["qa/current-v2-gate-recheck-20260814-v3.json", "qa/three-directory-parity-recheck-20260814-v2.json", "qa/codex-app-boundary-recheck-20260814-v3.json"]
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-14T07:13:06.941Z",
+    "manifest_sha256": "0cae009c5ca2de2954e9e1433a58431d4f71d2630d5cdad701799a60f1fb8041",
+    "manifest_total": 4521,
+    "current_public_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "root_quality_foodie_cdn_sync_pending": true,
+    "fortune_traveler_review_pending": true,
+    "evidence": ["qa/petdex-public-resource-recheck-20260814-v4.json", "qa/petdex-current-recheck-20260814-v7.json"]
+  },
+  "upstream": {
+    "issue_582_pr_583": {"issue_state": "CLOSED", "pr_state": "MERGED", "release": "desktop-v0.4.0 and petdex@1.0.1", "scope": "drain stdin beyond the 64 KiB parse prefix and avoid EPIPE or early-read termination"},
+    "issue_689": {"state": "OPEN", "updated_at": "2026-08-11T11:05:48Z", "comments": 0, "url": "https://github.com/crafter-station/petdex/issues/689", "scope": "host keeps stdin open after valid payload; finite idle or total timeout is still requested"}
+  },
+  "remote_consistency": {"local_main": "30f734a150cb9ab3730770e9ff8101fc95b1ceb6", "github_main": "30f734a150cb9ab3730770e9ff8101fc95b1ceb6", "gitlab_main": "30f734a150cb9ab3730770e9ff8101fc95b1ceb6", "all_match": true},
+  "codex_app_boundary": {"target_pet_settings_accessible": false, "full_visual_acceptance": "open", "evidence": "qa/codex-app-boundary-recheck-20260814-v3.json", "process_mutation": "none"},
+  "public_file_hygiene": {"absolute_local_paths": false, "private_network_addresses": false, "credentials": false, "process_identifiers": false},
+  "result": "post_push_remote_sync_pass; local_v2_assets_and_parity_remain_pass; PetDex CDN/review, issue_689, and complete Codex App visual acceptance remain open"
+}

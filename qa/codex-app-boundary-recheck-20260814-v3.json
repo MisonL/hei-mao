@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T11:42:19Z",
+  "evidence_commit": "30f734a150cb9ab3730770e9ff8101fc95b1ceb6",
+  "probe": "macOS System Events read-only accessibility query",
+  "observed_processes": {
+    "ChatGPT": {"windows": 0, "menu_bar_items": 7},
+    "petdex-desktop-native": {"windows": 0, "menu_bar_items": 3}
+  },
+  "target_pet_settings_accessible": false,
+  "visual_acceptance": "open",
+  "process_mutation": "none",
+  "limitations": [
+    "Only window and menu-bar counts were queried; window titles and element contents were not read.",
+    "No app launch, quit, signal, input event, configuration change, or Codex process mutation was attempted."
+  ],
+  "result": "target_codex_pet_view_not_exposed_to_read_only_accessibility_probe"
+}
