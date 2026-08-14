@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T02:06:21Z",
+  "manifest_source": "https://petdex.dev/api/manifest",
+  "manifest_final_url": "https://assets.petdex.dev/manifests/petdex-v1.json",
+  "manifest_http_status": 200,
+  "manifest_sha256": "3bb66a50557eb21994b2834f6dfb158d1b14d5561d0fd47304fccca90a2e0d1b",
+  "manifest_generated_at": "2026-08-14T01:15:36.149Z",
+  "manifest_total": 4521,
+  "cli_version": "1.2.2",
+  "owned_manifest_entries": {
+    "hei-mao": {
+      "manifest_sprite_version_number": 1,
+      "metadata_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "online_pet_json_sprite_version_number": 2,
+      "online_matches_current_local_package": false
+    },
+    "hei-mao-quality": {
+      "manifest_sprite_version_number": 1,
+      "metadata_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+      "spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "online_pet_json_sprite_version_number": 2,
+      "online_matches_current_local_package": false
+    },
+    "hei-mao-butler": {
+      "manifest_sprite_version_number": 1,
+      "metadata_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "online_pet_json_sprite_version_number": 2,
+      "online_matches_current_local_package": true
+    },
+    "hei-mao-chef": {
+      "manifest_sprite_version_number": 1,
+      "metadata_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "online_pet_json_sprite_version_number": 2,
+      "online_matches_current_local_package": true
+    },
+    "hei-mao-foodie": {
+      "manifest_sprite_version_number": 1,
+      "metadata_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "spritesheet_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "online_pet_json_sprite_version_number": 2,
+      "online_matches_current_local_package": false
+    },
+    "hei-mao-delivery": {
+      "manifest_sprite_version_number": 2,
+      "metadata_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "spritesheet_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "online_pet_json_sprite_version_number": 2,
+      "online_matches_current_local_package": true
+    },
+    "hei-mao-2": {
+      "manifest_sprite_version_number": 1,
+      "metadata_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "online_pet_json_id": "hei-mao",
+      "classification": "historical_duplicate_entry"
+    }
+  },
+  "submitted_not_listed": {
+    "hei-mao-fortune": {
+      "local_v2_gate": true,
+      "public_manifest_listed": false,
+      "petdex_installable": false,
+      "status": "held_for_review"
+    },
+    "hei-mao-traveler": {
+      "local_v2_gate": true,
+      "public_manifest_listed": false,
+      "petdex_installable": false,
+      "status": "held_for_review"
+    }
+  },
+  "local_installation": {
+    "roots_checked": ["repository", "codex_pets", "petdex_pets"],
+    "role_count": 8,
+    "recursive_sha_parity": true,
+    "historical_directories_present": false
+  },
+  "codex_app_boundary": {
+    "process_status": "running",
+    "screen_capture_taken_for_context": true,
+    "pet_settings_or_animation_visible": false,
+    "visual_acceptance": "not_run",
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "screen_capture_committed": false
+  },
+  "result": "online_resources_rechecked; three_current_packages_still_not_synchronized; fortune_and_traveler_review_pending; codex_app_visual_acceptance_open"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T02:06:21Z",
+  "checked_commit_before_evidence": "70c459d9944a895020a21e25d3162e87adce12de",
+  "scope": "current eight-role local release gates, Petdex online resource parity, and Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "atlas_gate": "8 of 8 pass: 1536x2288, 8x11, WEBP/RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "hatch_pet_tests": "28 passed with bundled Python unittest",
+    "repository_codex_petdex_parity": "pass",
+    "cross_platform_installers": "Bash syntax pass; PowerShell parse pass; eight-role whitelist and fixed SHA checks present"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-current-recheck-20260814-v6.json",
+    "manifest_sha256": "3bb66a50557eb21994b2834f6dfb158d1b14d5561d0fd47304fccca90a2e0d1b",
+    "manifest_generated_at": "2026-08-14T01:15:36.149Z",
+    "manifest_total": 4521,
+    "cli_version": "1.2.2",
+    "public_current_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "online_current_resource_sync": "hei-mao, hei-mao-quality, and hei-mao-foodie still serve older sprite resources; butler, chef, and delivery match local current resources",
+    "manifest_version_lag": "manifest reports v1 for hei-mao, quality, butler, chef, and foodie even though fetched petjson reports v2; delivery reports v2",
+    "review_status": "fortune and traveler held_for_review"
+  },
+  "codex_app": {
+    "process_status": "running",
+    "visual_acceptance": "not_run",
+    "window_access": "current capture is not a Codex App pet settings or animation view",
+    "process_mutation": "none"
+  },
+  "remote_consistency": {
+    "local_main": "70c459d9944a895020a21e25d3162e87adce12de",
+    "github_main": "70c459d9944a895020a21e25d3162e87adce12de",
+    "gitlab_main": "70c459d9944a895020a21e25d3162e87adce12de",
+    "local_github_match": true,
+    "local_gitlab_match": true
+  },
+  "result": "local_gates_pass; Petdex online synchronization and Codex App visual acceptance remain open"
+}
