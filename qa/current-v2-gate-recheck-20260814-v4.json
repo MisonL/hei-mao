@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:37:15Z",
+  "checked_commit": "b77a134a784c64a9650c84c9eb848de46c8c4297",
+  "validator": "hatch-pet validate_atlas.py --require-v2",
+  "runtime": "hatch-pet bundled Python 3.12 runtime",
+  "runtime_version": "Python 3.12.13; Pillow 12.3.0",
+  "command": "validate_atlas.py --require-v2 --chroma-key <recorded-key>",
+  "roles": {
+    "hei-mao": {"chroma_key":"#00FF00","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]},
+    "hei-mao-quality": {"chroma_key":"#FF00FF","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]},
+    "hei-mao-butler": {"chroma_key":"#00FF00","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]},
+    "hei-mao-chef": {"chroma_key":"#00FFFF","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]},
+    "hei-mao-delivery": {"chroma_key":"#FF00FF","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]},
+    "hei-mao-foodie": {"chroma_key":"#FF00FF","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]},
+    "hei-mao-fortune": {"chroma_key":"#00FFFF","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]},
+    "hei-mao-traveler": {"chroma_key":"#FF00FF","ok":true,"dimensions":"1536x2288","grid":"8x11","format":"WEBP RGBA","sprite_version_number":2,"transparent_rgb_residue_pixels":0,"errors":[],"warnings":[]}
+  },
+  "all_roles_passed": true,
+  "runtime_note": "Pillow emitted getdata deprecation notices on stderr; validator JSON contained no atlas warnings or errors.",
+  "result": "fresh_local_v2_gate_pass_on_b77a134"
+}
