@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T11:15:38Z",
+  "checked_commit": "44e85a9f2ab8c753bb796df0083fd84cff1c37b2",
+  "scope": "current eight-role local release, alpha-hole review, three-directory parity, PetDex public state, upstream issue state, remote synchronization, and Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "all eight passed validate_atlas.py --require-v2 on the current commit; 1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero validator errors and warnings",
+    "alpha_hole_review": "reported candidates are open negative space or anti-aliased edge behavior; no enclosed transparent body hole was found",
+    "evidence": [
+      "qa/current-v2-alpha-review-20260814.json",
+      "qa/current-v2-gate-recheck-20260814-v2.json"
+    ]
+  },
+  "installation": {
+    "roots": ["repository", "~/.codex/pets", "~/.petdex/pets"],
+    "roles_checked": 8,
+    "file_sets_present": true,
+    "byte_parity": true,
+    "evidence": "fresh read-only shasum and diff parity check"
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-14T07:13:06.941Z",
+    "manifest_sha256": "0cae009c5ca2de2954e9e1433a58431d4f71d2630d5cdad701799a60f1fb8041",
+    "manifest_total": 4521,
+    "current_public_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "root_quality_foodie_cdn_sync_pending": true,
+    "fortune_traveler_review_pending": true,
+    "evidence": "qa/petdex-public-resource-recheck-20260814-v3.json plus fresh manifest fetch"
+  },
+  "upstream": {
+    "issue_689": {
+      "state": "OPEN",
+      "updated_at": "2026-08-11T11:05:48Z",
+      "comments": 0,
+      "url": "https://github.com/crafter-station/petdex/issues/689",
+      "local_reproduction": "isolated child received payload while stdin stayed open and exceeded the timeout; no Codex process was signaled"
+    },
+    "open_prs_observed": [702, 695, 648],
+    "relevant_merged_prs": [654, 662, 667]
+  },
+  "remote_consistency": {
+    "local_main": "44e85a9f2ab8c753bb796df0083fd84cff1c37b2",
+    "github_main": "44e85a9f2ab8c753bb796df0083fd84cff1c37b2",
+    "gitlab_main": "44e85a9f2ab8c753bb796df0083fd84cff1c37b2",
+    "all_match": true
+  },
+  "codex_app_boundary": {
+    "petdex_desktop_process_observed": true,
+    "chatgpt_codex_process_observed": true,
+    "target_pet_settings_accessible": false,
+    "full_visual_acceptance": "open",
+    "process_mutation": "none",
+    "reason": "The current foreground/accessibility probe did not expose the target pet settings or animation view; no restart, quit, signal, or configuration change was attempted."
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "local_v2_gate_alpha_review_three_directory_parity_and_remote_sync_pass; PetDex CDN/review, issue_689, and complete Codex App visual acceptance remain open"
+}
