@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_at": "2026-08-14T01:34:36Z",
-  "checked_commit": "8379a1cfade4af0704706049cfd1fd60b9cf1486",
+  "checked_commit": "fdfd17884ecef28ee30babd388ac46170d380772",
   "scope": "current eight-role local release gates, installation parity, Petdex state, and Codex App boundary",
   "local_release": {
     "roles": 8,
@@ -68,10 +68,13 @@
     "historical_directories_present": false
   },
   "remote_consistency": {
-    "local_main": "8379a1cfade4af0704706049cfd1fd60b9cf1486",
-    "github_main_before_sync": "8cdc3f1",
-    "gitlab_main_before_sync": "8cdc3f1",
-    "sync_required_after_this_evidence_commit": true
+    "local_main": "fdfd17884ecef28ee30babd388ac46170d380772",
+    "github_main": "fdfd17884ecef28ee30babd388ac46170d380772",
+    "gitlab_main": "fdfd17884ecef28ee30babd388ac46170d380772",
+    "force_push": false,
+    "local_github_match": true,
+    "local_gitlab_match": true,
+    "raw_readme_content_match": true
   },
   "public_file_hygiene": {
     "absolute_local_paths": false,
