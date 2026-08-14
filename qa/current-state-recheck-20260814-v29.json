@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T11:55:20Z",
+  "checked_commit": "9c6be8c0be209bdeb68d1850dc52247d8c8c167d",
+  "scope": "fresh local, PetDex public, upstream hook, and desktop boundary recheck",
+  "local_release": {
+    "roles": 8,
+    "cli_version": "1.2.2",
+    "desktop_release": "desktop-v0.8.0",
+    "asset_gate": "pass; see qa/current-v2-gate-recheck-20260814-v3.json",
+    "three_directory_parity": "pass; all eight repository, Codex, and PetDex local role files have matching SHA-256",
+    "installed_role_shas_match_repository": true,
+    "installer_cross_platform": "pass; see qa/installer-cross-platform-recheck-20260814-v3.json",
+    "process_mutation": "none"
+  },
+  "petdex": {
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "resolved_source": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "manifest_sha256": "0cae009c5ca2de2954e9e1433a58431d4f71d2630d5cdad701799a60f1fb8041",
+    "manifest_generated_at": "2026-08-14T07:13:06.941Z",
+    "manifest_total": 4521,
+    "current_public_roles": [
+      "hei-mao-delivery",
+      "hei-mao-butler",
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-foodie",
+      "hei-mao-chef"
+    ],
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "cdn_v2_sync_pending": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-foodie"
+    ],
+    "review_pending": [
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "evidence": [
+      "qa/petdex-public-resource-recheck-20260814-v4.json",
+      "qa/petdex-current-recheck-20260814-v7.json"
+    ]
+  },
+  "upstream": {
+    "repository": "https://github.com/crafter-station/petdex",
+    "main_sha": "0243af614f30eee31913ff3e3839467615c1c744",
+    "latest_main_commit": "feat(desktop): add DeepSeek Harness Web integration (#702)",
+    "latest_release": "desktop-v0.8.0",
+    "issue_689": {
+      "state": "OPEN",
+      "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住",
+      "comments": 0,
+      "timeline_events_observed": 0,
+      "updated_at": "2026-08-11T11:05:48Z",
+      "url": "https://github.com/crafter-station/petdex/issues/689"
+    },
+    "stdin_evidence": [
+      {
+        "runner": "CLI TypeScript",
+        "source": "https://github.com/crafter-station/petdex/blob/0243af614f30eee31913ff3e3839467615c1c744/packages/petdex-cli/src/hooks/bubble-runner.ts#L293-L330",
+        "observed": "readStdin resolves from end or error handlers and has no idle or total timeout; a host that keeps stdin open can keep the promise pending"
+      },
+      {
+        "runner": "Desktop Native Zig",
+        "source": "https://github.com/crafter-station/petdex/blob/0243af614f30eee31913ff3e3839467615c1c744/packages/petdex-desktop-native/src/plat.zig#L230-L252",
+        "observed": "readCappedAndDrain loops until a zero-length read or error, so it still waits for EOF when the host keeps the pipe open"
+      }
+    ],
+    "related_fix_boundary": "#583 is merged for bounded-prefix drain and EPIPE prevention; it does not implement the finite-wait behavior requested by #689"
+  },
+  "desktop_boundary": {
+    "animation_and_role_selection": "pass; see qa/petdex-desktop-live-recheck-20260814-v3.json",
+    "multidisplay_bubble_follow": "pass; see qa/petdex-desktop-multidisplay-recheck-20260814-v1.json",
+    "codex_app_visual_acceptance": "open; the read-only accessibility probe did not expose the target pet settings view",
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "local_assets_installers_and_desktop_smokes_pass; PetDex CDN and review states, upstream issue_689, and complete Codex App visual acceptance remain open"
+}
