@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T07:13:06Z",
+  "scope": "live PetDex manifest and owned-role CDN byte recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "resolved_source": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "http_status": 200,
+    "sha256": "0cae009c5ca2de2954e9e1433a58431d4f71d2630d5cdad701799a60f1fb8041",
+    "generated_at": "2026-08-14T07:13:06.941Z",
+    "total": 4521,
+    "owned_current_role_count": 6,
+    "historical_duplicate_count": 1,
+    "fortune_listed": false,
+    "traveler_listed": false
+  },
+  "owned_entries": {
+    "hei-mao-delivery": {
+      "manifest_sprite_version_number": 2,
+      "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-delivery-ba2235a78dfc/sprite.webp",
+      "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-delivery-ba2235a78dfc/petjson.json",
+      "public_sprite_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "local_sprite_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "public_pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "local_pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "public_sprite_matches_local": true,
+      "public_pet_json_matches_local": true
+    },
+    "hei-mao-2": {
+      "manifest_sprite_version_number": 1,
+      "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-9bec2a5af4c2/sprite.webp",
+      "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-9bec2a5af4c2/petjson.json",
+      "public_sprite_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "public_pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "current_repository_role": false,
+      "historical_duplicate": true
+    },
+    "hei-mao-butler": {
+      "manifest_sprite_version_number": 1,
+      "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-butler-99f146a1f0ee/sprite.webp",
+      "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-butler-99f146a1f0ee/petjson.json",
+      "public_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "local_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "public_pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "local_pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "public_sprite_matches_local": true,
+      "public_pet_json_matches_local": true
+    },
+    "hei-mao": {
+      "manifest_sprite_version_number": 1,
+      "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-ecc8adda8bc9/sprite.webp",
+      "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-ecc8adda8bc9/petjson.json",
+      "public_sprite_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "local_sprite_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "public_pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "local_pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "public_sprite_matches_local": false,
+      "public_pet_json_matches_local": true
+    },
+    "hei-mao-quality": {
+      "manifest_sprite_version_number": 1,
+      "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-quality-c670e9210683/sprite.webp",
+      "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-quality-c670e9210683/petjson.json",
+      "public_sprite_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "local_sprite_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "public_pet_json_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+      "local_pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "public_sprite_matches_local": false,
+      "public_pet_json_matches_local": false,
+      "public_pet_json_semantically_matches_local": true
+    },
+    "hei-mao-foodie": {
+      "manifest_sprite_version_number": 1,
+      "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-foodie-aa88c396f82c/sprite.webp",
+      "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-foodie-aa88c396f82c/petjson.json",
+      "public_sprite_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "local_sprite_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+      "public_pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "local_pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "public_sprite_matches_local": false,
+      "public_pet_json_matches_local": true
+    },
+    "hei-mao-chef": {
+      "manifest_sprite_version_number": 1,
+      "spritesheet_url": "https://assets.petdex.dev/pets/hei-mao-chef-7bc0ed4f8243/sprite.webp",
+      "pet_json_url": "https://assets.petdex.dev/pets/hei-mao-chef-7bc0ed4f8243/petjson.json",
+      "public_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "local_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "public_pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "local_pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "public_sprite_matches_local": true,
+      "public_pet_json_matches_local": true
+    }
+  },
+  "pending_reviews": {
+    "existing_slug_edits": ["hei-mao", "hei-mao-quality", "hei-mao-foodie"],
+    "new_submissions": ["hei-mao-fortune", "hei-mao-traveler"],
+    "status": "not_visible_in_public_manifest"
+  },
+  "result": "manifest_refreshed; public_resources_unchanged; v2_sync_and_new_role_review_remain_pending"
+}

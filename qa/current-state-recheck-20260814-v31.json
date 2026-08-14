@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:19:57Z",
+  "checked_commit": "4d5fcfddc0e697e28c79871b223e141a0dcf9312",
+  "scope": "post-reboot live PetDex, upstream, local release and repository state recheck",
+  "local_release": {
+    "roles": 8,
+    "cli_version": "1.2.2",
+    "desktop_release": "desktop-v0.8.0",
+    "asset_gate": "previously passed on unchanged asset files; see qa/current-v2-gate-recheck-20260814-v3.json",
+    "three_directory_parity": "previously passed; repository, Codex and PetDex local role files match",
+    "installer_gate": "previously passed; see qa/installer-cross-platform-recheck-20260814-v4.json",
+    "process_mutation": "none"
+  },
+  "petdex": {
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_sha256": "0cae009c5ca2de2954e9e1433a58431d4f71d2630d5cdad701799a60f1fb8041",
+    "manifest_generated_at": "2026-08-14T07:13:06.941Z",
+    "manifest_total": 4521,
+    "current_public_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "cdn_v2_sync_pending": ["hei-mao", "hei-mao-quality", "hei-mao-foodie"],
+    "review_pending": ["hei-mao-fortune", "hei-mao-traveler"],
+    "evidence": [
+      "qa/petdex-public-resource-recheck-20260814-v5.json",
+      "qa/petdex-current-recheck-20260814-v7.json"
+    ]
+  },
+  "upstream": {
+    "repository": "https://github.com/crafter-station/petdex",
+    "main_sha": "0243af614f30eee31913ff3e3839467615c1c744",
+    "latest_release": "desktop-v0.8.0",
+    "issue_689": {
+      "state": "OPEN",
+      "comments": 0,
+      "timeline_events_observed": 0,
+      "url": "https://github.com/crafter-station/petdex/issues/689",
+      "scope": "stdin remains open after a valid payload and the hook waits for EOF"
+    },
+    "stdin_implementation": "CLI and Native runners still wait for end/EOF after the useful payload; no finite idle or total timeout is present in main",
+    "related_fix_boundary": "#583 remains the merged bounded-drain and EPIPE fix; #689 remains a distinct open finite-wait issue"
+  },
+  "owned_github_activity": {
+    "open_issues": [689],
+    "open_pull_requests": [],
+    "merged_pull_requests": [583, 650, 654, 662, 667],
+    "closed_issues": [559, 582, 606, 651]
+  },
+  "desktop_boundary": {
+    "animation_and_role_selection": "previously passed; see qa/petdex-desktop-live-recheck-20260814-v3.json",
+    "multidisplay_bubble_follow": "previously passed; see qa/petdex-desktop-multidisplay-recheck-20260814-v1.json",
+    "codex_app_visual_acceptance": "open; the read-only accessibility probe did not expose the target pet settings view",
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "external_state_refreshed; local release remains clean; PetDex CDN/review and complete Codex App visual acceptance remain open"
+}
