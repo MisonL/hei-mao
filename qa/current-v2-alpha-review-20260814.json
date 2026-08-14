@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14",
+  "checked_commit": "dfd42563882d42cb69437418e0fe7c56dbe7fd65",
+  "scope": "fresh v2 atlas gate and alpha-hole review for all eight local roles",
+  "runtime": {
+    "validator": "hatch-pet validate_atlas.py",
+    "python": "bundled codex-primary-runtime Python 3.12.13 with Pillow 12.3.0",
+    "command": "validate_atlas.py --require-v2 --chroma-key <recorded-key>"
+  },
+  "roles": {
+    "hei-mao": {
+      "chroma_key": "#00FF00",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "intentional_open_negative_space",
+      "evidence": [
+        "The 000 candidate is the open gap between the ears and connects to the exterior background.",
+        "The high-contrast alpha mask shows a complete filled head and body with no enclosed transparent component.",
+        "Labeled direction review remains semantically coherent with no visible seam or see-through band."
+      ]
+    },
+    "hei-mao-quality": {
+      "chroma_key": "#FF00FF",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "none_reported"
+    },
+    "hei-mao-butler": {
+      "chroma_key": "#00FF00",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "none_reported"
+    },
+    "hei-mao-chef": {
+      "chroma_key": "#00FFFF",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "none_reported"
+    },
+    "hei-mao-delivery": {
+      "chroma_key": "#FF00FF",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "intentional_open_negative_space",
+      "evidence": [
+        "The 202.5, 225, and 247.5 candidates are gaps between the ears and connect to the exterior background.",
+        "The high-contrast alpha masks show no enclosed transparent component; the single alpha-16 edge pixel is anti-aliased outline behavior.",
+        "Labeled direction review shows a continuous filled silhouette without a body seam or broken prop attachment."
+      ]
+    },
+    "hei-mao-foodie": {
+      "chroma_key": "#FF00FF",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "intentional_open_negative_space",
+      "evidence": [
+        "The 180 candidate is the open gap between the ears and connects to the exterior background.",
+        "The high-contrast alpha mask shows the filled head, apron, and props remain connected."
+      ]
+    },
+    "hei-mao-fortune": {
+      "chroma_key": "#00FFFF",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "intentional_open_negative_space",
+      "evidence": [
+        "The 135, 157.5, and 180 candidates are open gaps between separated limbs or props, not holes inside a filled body.",
+        "The high-contrast alpha masks show no enclosed transparent component and preserve the full silhouette."
+      ]
+    },
+    "hei-mao-traveler": {
+      "chroma_key": "#FF00FF",
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "alpha_hole_review": "intentional_open_negative_space",
+      "evidence": [
+        "The 000 candidate is open negative space around the lower body and connects to the exterior background.",
+        "The high-contrast alpha mask shows no enclosed transparent component and no broken backpack or body silhouette."
+      ]
+    }
+  },
+  "summary": {
+    "roles_checked": 8,
+    "atlas_gate_passed": 8,
+    "atlas_contract": "1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero validator errors and warnings",
+    "alpha_hole_hard_failures": 0,
+    "alpha_hole_reviewed_warnings": 5,
+    "result": "local_v2_gate_pass; reported alpha-hole candidates are open negative space and require no atlas mutation"
+  },
+  "limitations": [
+    "This evidence does not close the separate Codex App full visual acceptance boundary.",
+    "This evidence does not change PetDex external review or publication state."
+  ]
+}
