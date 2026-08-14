@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T06:41:27Z",
+  "checked_commit_before_evidence": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
+  "scope": "current eight-role local release, QA media completeness, public PetDex resources, remote branches, and Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "atlas_recheck": "all eight passed validate_atlas.py --require-v2 with recorded chroma keys",
+    "contract": "1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "qa_media": "all eight contact sheets are 1536x2530; root and butler each have nine standard-state RGBA previews at 192x208",
+    "qa_media_evidence": "qa/qa-media-completeness-recheck-20260814.json",
+    "local_installation_sha_parity": true,
+    "hatch_pet_unit_tests": "28 passed",
+    "installers": "Bash syntax pass; PowerShell isolation and parse pass in retained cross-platform evidence"
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_generated_at": "2026-08-14T01:15:36.149Z",
+    "manifest_total": 4521,
+    "manifest_hei_mao_family_entries": 7,
+    "historical_duplicate": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "delivery_public_v2_matches_local": true,
+    "root_quality_foodie_edits_pending_cdn_switch": true,
+    "fortune_traveler_pending_review": true,
+    "resource_evidence": "qa/petdex-public-resource-recheck-20260814.json",
+    "edit_evidence": "qa/petdex-edit-sync-recheck-20260814.json"
+  },
+  "codex_app": {
+    "visual_acceptance": "not_run",
+    "foreground_view": "not_codex_pet_view",
+    "process_mutation": "none",
+    "boundary_evidence": "qa/codex-app-boundary-recheck-20260814-v2.json"
+  },
+  "remote_consistency": {
+    "local_main": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
+    "github_main": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
+    "gitlab_main": "c862fd9796f83729c18c3489e2d59942c11cb9e6",
+    "all_match": true
+  },
+  "result": "local_release_qa_media_and_remote_sync_pass; PetDex review_and_cdn_sync_open; Codex_App_visual_acceptance_open"
+}
