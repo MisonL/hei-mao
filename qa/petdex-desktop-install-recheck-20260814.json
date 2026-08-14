@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T07:40:48Z",
+  "scope": "official Petdex Desktop installation verification",
+  "source": {
+    "release": "desktop-v0.8.0",
+    "bundle_version": "0.8.0",
+    "architecture": "x86_64",
+    "dmg_sha256": "9377d0e7d5482a21c1c336361e815e6deafc00702d1d20a8ee3fecdc4313bbb3"
+  },
+  "verification": {
+    "bundle_identifier": "dev.petdex.desktop-native",
+    "minimum_macos": "11.0",
+    "code_signature": "valid; Developer ID Application signature; notarization ticket stapled",
+    "copied_to_standard_applications_directory": true,
+    "dmg_unmounted_after_install": true,
+    "application_started": false,
+    "codex_processes_stopped_or_restarted": false
+  },
+  "result": "official_desktop_0.8.0_installed_and_signature_verified_without_starting_or_mutating_codex"
+}
