@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T02:20:18Z",
+  "checked_commit": "e8c6aba6fac590635690abb0722d4e42d1bced28",
+  "validator": "hatch-pet validate_atlas.py --require-v2",
+  "fresh_validation_runtime": "Python 3.14.6 with Pillow",
+  "roles": {
+    "hei-mao": {
+      "chroma_key": "#00FF00",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    },
+    "hei-mao-quality": {
+      "chroma_key": "#FF00FF",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    },
+    "hei-mao-butler": {
+      "chroma_key": "#00FF00",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    },
+    "hei-mao-chef": {
+      "chroma_key": "#00FFFF",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    },
+    "hei-mao-delivery": {
+      "chroma_key": "#FF00FF",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    },
+    "hei-mao-foodie": {
+      "chroma_key": "#FF00FF",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    },
+    "hei-mao-fortune": {
+      "chroma_key": "#00FFFF",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    },
+    "hei-mao-traveler": {
+      "chroma_key": "#FF00FF",
+      "ok": true,
+      "dimensions": "1536x2288",
+      "grid": "8x11",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "unit_tests": {
+    "command": "python3 -m unittest discover -s hatch-pet/tests -p test_*.py",
+    "passed": 28,
+    "failed": 0
+  },
+  "result": "fresh_local_v2_gate_pass"
+}
