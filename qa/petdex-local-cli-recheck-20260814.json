@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T07:29:03Z",
+  "cli": {
+    "global_version": "1.2.2",
+    "official_latest_version": "1.2.2",
+    "catalog_total": 4521,
+    "authenticated_session": true,
+    "source": "npm global package"
+  },
+  "desktop": {
+    "latest_release": "desktop-v0.8.0",
+    "published_at": "2026-08-14T05:19:51Z",
+    "release_scope": "safe update discovery",
+    "recognized_installation": false,
+    "running_process_detected": false,
+    "detection_scope": "standard macOS application locations and process list"
+  },
+  "hook_reproduction": {
+    "command_class": "petdex bubble pre codex",
+    "payload_received": true,
+    "stdin_closed": false,
+    "test_timeout_ms": 1200,
+    "observed": "test child remained running through the timeout and was then terminated by the test harness",
+    "result": "issue_689_reproduced",
+    "upstream_issue": "https://github.com/crafter-station/petdex/issues/689",
+    "process_scope": "isolated test child only; no Codex process was signaled"
+  },
+  "source_recheck": {
+    "desktop_v0_8_0_hook_timeout_fix": false,
+    "cli_read_stdin_semantics": "drain until EOF or input error",
+    "native_read_stdin_semantics": "drain until EOF or read error",
+    "issue_689_state": "OPEN"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "global_cli_current; desktop_release_boundary_recorded; issue_689_reproduced_without_codex_mutation"
+}

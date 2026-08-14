@@ -25,6 +25,8 @@ npx -y petdex@latest install hei-mao-delivery
 
 2026-08-14 复核中 PetDex CLI 为 `1.2.2`，登录会话有效。公开 manifest 仍为 4521 个条目，当前六个角色可见，`hei-mao-2` 仍是历史重复条目；`hei-mao-quality` 的公开 metadata 已切换为本地 v2，但图集 CDN 仍是旧 SHA；`hei-mao` 和 `hei-mao-foodie` 的仓库 v2 图集仍未切换，`hei-mao-delivery` 的线上 metadata、精灵图和仓库 v2 SHA 一致，大管家和厨师的公开字节也与仓库一致但 manifest 索引仍标为 v1。`hei-mao-fortune` 与 `hei-mao-traveler` 的提交均已接受并处于 `held_for_review`，但尚未进入公开 manifest，不能运行对应的 PetDex 在线安装命令。需要使用仓库 v2 图集时，请先使用下方角色安装器或手动复制到 Codex 目录。审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。当前公开资源版本和 SHA 对照见 `qa/petdex-public-resource-recheck-20260814-v2.json`，编辑队列见 `qa/petdex-edit-sync-recheck-20260814.json`。
 
+本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，本机当前未检测到可识别的 Desktop 安装或运行进程，因此没有启动或替换应用。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；本地复现和版本边界见 `qa/petdex-local-cli-recheck-20260814.json`。
+
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 ```text
@@ -291,6 +293,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/hei-mao-traveler/`: 旅行家 v2 的结构、方向、盲测、连续性和视觉证据
 - `qa/petdex-desktop-live-smoke-20260809.json`: Petdex Desktop 单角色实时烟测；不替代 Codex App 全量验收
 - `qa/petdex-desktop-live-smoke-20260810.json`: Desktop 0.6.0 hook stdin 退出门禁与发布集复核；发现宿主保持 stdin 打开时原生 hook 仍会等待 EOF，不能据此宣称 App 验收完成
+- `qa/petdex-local-cli-recheck-20260814.json`: 全局 CLI 1.2.2、Desktop v0.8.0 发布边界和 #689 Hook EOF 阻塞复现；不含本机路径或进程标识
 - `qa/petdex-multidisplay-recheck-20260810.json`: 双显示器实时窗口复核；Petdex 窗口可显示在另一块屏幕，但跨屏移动后气泡与宠物重叠，Codex App 多角色验收仍被阻断
 - `qa/v2-contract-recheck-20260809.json`: 本轮五个角色的 v2 合同、安装一致性和技能测试复核
 - `qa/v2-contract-recheck-20260810.json`: foodie 修复前的历史 v2 合同和视觉阻断快照
