@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T10:33:13Z",
+  "checked_commit": "6872a59",
+  "validator": "hatch-pet validate_atlas.py --require-v2",
+  "runtime": "bundled Python 3.12.13 with Pillow",
+  "roles": {
+    "hei-mao": {"chroma_key": "#00FF00", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []},
+    "hei-mao-quality": {"chroma_key": "#FF00FF", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []},
+    "hei-mao-butler": {"chroma_key": "#00FF00", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []},
+    "hei-mao-chef": {"chroma_key": "#00FFFF", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []},
+    "hei-mao-delivery": {"chroma_key": "#FF00FF", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []},
+    "hei-mao-foodie": {"chroma_key": "#FF00FF", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []},
+    "hei-mao-fortune": {"chroma_key": "#00FFFF", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []},
+    "hei-mao-traveler": {"chroma_key": "#FF00FF", "ok": true, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "transparent_rgb_residue_pixels": 0, "errors": [], "warnings": []}
+  },
+  "all_roles_passed": true,
+  "result": "fresh_local_v2_gate_pass"
+}

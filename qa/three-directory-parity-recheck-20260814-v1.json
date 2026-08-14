@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T10:33:13Z",
+  "checked_commit": "6872a59",
+  "roots": ["repository", "codex_pets", "petdex_pets"],
+  "files_per_role": ["pet.json", "spritesheet.webp"],
+  "roles": {
+    "hei-mao": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "spritesheet_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"},
+    "hei-mao-quality": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07", "spritesheet_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f"},
+    "hei-mao-butler": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-delivery": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "spritesheet_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"},
+    "hei-mao-foodie": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "spritesheet_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23"},
+    "hei-mao-fortune": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b", "spritesheet_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71"},
+    "hei-mao-traveler": {"file_sets_match": true, "metadata_match": true, "pet_json_sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f", "spritesheet_sha256": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e"}
+  },
+  "all_file_sets_match": true,
+  "all_sha_match": true,
+  "result": "repository_codex_and_petdex_directories_are_byte_identical_for_all_eight_roles"
+}
