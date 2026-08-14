@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T11:33:12Z",
+  "checked_commit": "ab63934eaddbde548e509d0844baccc72b4ce1cd",
+  "cli_version": "1.2.2",
+  "list_command": {"exit_code": 0, "total": 4521, "public_family_slugs": ["hei-mao-delivery", "hei-mao-2", "hei-mao-butler", "hei-mao", "hei-mao-quality", "hei-mao-foodie", "hei-mao-chef"], "fortune_listed": false, "traveler_listed": false},
+  "manifest_evidence": "qa/petdex-public-resource-recheck-20260814-v4.json",
+  "authenticated_submission_state": {
+    "existing_slug_edits": {"hei-mao": "queued_for_admin_review", "hei-mao-quality": "queued_for_admin_review", "hei-mao-foodie": "queued_for_admin_review"},
+    "fortune": "submitted_and_held_for_review",
+    "traveler": "submitted_and_held_for_review",
+    "review_note": "possible policy issue",
+    "duplicate_submit_attempted_during_this_recheck": false,
+    "source": "retained authenticated submission evidence; current public manifest still excludes both new slugs"
+  },
+  "upstream_issue_689": {
+    "state": "OPEN",
+    "updated_at": "2026-08-11T11:05:48Z",
+    "comments": 0,
+    "url": "https://github.com/crafter-station/petdex/issues/689",
+    "verified_by": ["GitHub issue page", "GitHub authenticated MCP issue_read"],
+    "scope": "Hook waits for EOF when the host keeps stdin open after a valid payload; distinct from merged #583 drain and EPIPE fix"
+  },
+  "release_decision": {"local_roles_publishable": 8, "petdex_online_v2_sync_complete": false, "fortune_traveler_public": false, "codex_app_visual_acceptance_complete": false, "issue_689_fixed_upstream": false},
+  "public_file_hygiene": {"absolute_local_paths": false, "private_network_addresses": false, "credentials": false, "process_identifiers": false},
+  "result": "local_and_public_state_rechecked; online_v2_sync_review_and_codex_app_acceptance_remain_open"
+}
