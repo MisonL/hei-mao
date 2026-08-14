@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T10:40:27Z",
+  "checked_commit_before_evidence": "e843623d59712c1350efd31709c91d6db01ce7eb",
+  "scope": "eight-role local release, PetDex public resources, upstream issue and PR state, Desktop animation and multi-display behavior, hook boundary, remote synchronization, and Codex App acceptance",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "all eight passed validate_atlas.py --require-v2; 1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2, zero transparent RGB residue, zero errors and warnings",
+    "qa_and_tests": "fresh eight-role v2 gate passed; retained hatch-pet unit and cross-platform installer evidence passed",
+    "installation": "repository, Codex, and PetDex directories have matching file sets and SHA-256 values",
+    "evidence": [
+      "qa/current-v2-gate-recheck-20260814-v2.json",
+      "qa/three-directory-parity-recheck-20260814-v1.json"
+    ]
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "desktop_release": "desktop-v0.8.0",
+    "manifest_generated_at": "2026-08-14T07:13:06.941Z",
+    "manifest_total": 4521,
+    "public_family_entries": 7,
+    "current_public_roles": 6,
+    "historical_duplicate": "hei-mao-2",
+    "public_resource_evidence": "qa/petdex-public-resource-recheck-20260814-v3.json",
+    "root_quality_foodie_cdn_sync_pending": true,
+    "quality_metadata_byte_mismatch_but_semantics_match": true,
+    "butler_chef_actual_bytes_match_but_manifest_index_lags": true,
+    "fortune_traveler_review_pending": true
+  },
+  "upstream": {
+    "issue_689": {
+      "state": "OPEN",
+      "updated_at": "2026-08-11T11:05:48Z",
+      "comments": 0,
+      "url": "https://github.com/crafter-station/petdex/issues/689",
+      "local_reproduction": "payload received while stdin remained open; isolated child exceeded the 1200 ms timeout; no Codex process was signaled"
+    },
+    "pr_654": {"state": "MERGED", "merged_at": "2026-08-10T06:32:57Z", "url": "https://github.com/crafter-station/petdex/pull/654"},
+    "pr_662": {"state": "MERGED", "merged_at": "2026-08-08T19:58:14Z", "url": "https://github.com/crafter-station/petdex/pull/662"},
+    "pr_667": {"state": "MERGED", "merged_at": "2026-08-08T19:57:34Z", "url": "https://github.com/crafter-station/petdex/pull/667"}
+  },
+  "desktop": {
+    "release": "desktop-v0.8.0",
+    "settings_and_pet_visible": true,
+    "animation_loop": "verified by different window captures 450 ms apart",
+    "multi_role_selection": "verified traveler -> chef -> traveler and original role restored",
+    "multi_display_bubble_placement": "passed; bubble followed the pet across displays, stayed clear, and restored its original position",
+    "evidence": [
+      "qa/petdex-desktop-live-recheck-20260814-v3.json",
+      "qa/petdex-desktop-multidisplay-recheck-20260814-v1.json"
+    ],
+    "process_mutation": "none"
+  },
+  "codex_app": {
+    "visual_acceptance": "Desktop settings, animation, role selection, and multi-display geometry passed; complete Codex App visual acceptance remains open",
+    "process_mutation": "none"
+  },
+  "remote_consistency": {
+    "local_main": "e843623d59712c1350efd31709c91d6db01ce7eb",
+    "github_main": "e843623d59712c1350efd31709c91d6db01ce7eb",
+    "gitlab_main": "e843623d59712c1350efd31709c91d6db01ce7eb",
+    "all_match": true
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "local_v2_gate_and_three_directory_parity_pass; public root_quality_foodie_sprites_and_fortune_traveler_review remain open; issue_689 and complete Codex App visual acceptance remain open"
+}
