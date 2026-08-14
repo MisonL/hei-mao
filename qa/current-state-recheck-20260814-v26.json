@@ -31,12 +31,21 @@
     "evidence": "qa/petdex-public-resource-recheck-20260814-v3.json plus fresh manifest fetch"
   },
   "upstream": {
+    "issue_582_pr_583": {
+      "issue_state": "CLOSED",
+      "pr_state": "MERGED",
+      "pr": 583,
+      "merged_at": "2026-07-29T23:49:20Z",
+      "release": "desktop-v0.4.0 and petdex@1.0.1",
+      "scope": "drain stdin beyond the 64 KiB parse prefix and avoid EPIPE or early-read termination"
+    },
     "issue_689": {
       "state": "OPEN",
       "updated_at": "2026-08-11T11:05:48Z",
       "comments": 0,
       "url": "https://github.com/crafter-station/petdex/issues/689",
-      "local_reproduction": "isolated child received payload while stdin stayed open and exceeded the timeout; no Codex process was signaled"
+      "local_reproduction": "isolated child received payload while stdin stayed open and exceeded the timeout; no Codex process was signaled",
+      "scope_difference_from_583": "stdin never reaches EOF; #583's drain-until-EOF fix does not provide a finite completion bound for this host behavior"
     },
     "open_prs_observed": [702, 695, 648],
     "relevant_merged_prs": [654, 662, 667]
