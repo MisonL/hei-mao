@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:23:00Z",
+  "checked_commit": "10d426c54648c116ec8db20318bf0dfb762b0e2d",
+  "scope": "post-reboot read-only Codex App boundary follow-up",
+  "local_release": {
+    "roles": 8,
+    "cli_version": "1.2.2",
+    "desktop_release": "desktop-v0.8.0",
+    "process_mutation": "none"
+  },
+  "petdex": {
+    "manifest_sha256": "0cae009c5ca2de2954e9e1433a58431d4f71d2630d5cdad701799a60f1fb8041",
+    "manifest_total": 4521,
+    "fortune_public": false,
+    "traveler_public": false,
+    "cdn_v2_sync_pending": ["hei-mao", "hei-mao-quality", "hei-mao-foodie"],
+    "review_pending": ["hei-mao-fortune", "hei-mao-traveler"]
+  },
+  "upstream": {
+    "main_sha": "0243af614f30eee31913ff3e3839467615c1c744",
+    "latest_release": "desktop-v0.8.0",
+    "issue_689": "OPEN",
+    "owned_open_pull_requests": []
+  },
+  "desktop_boundary": {
+    "animation_and_role_selection": "previously passed; see qa/petdex-desktop-live-recheck-20260814-v3.json",
+    "multidisplay_bubble_follow": "previously passed; see qa/petdex-desktop-multidisplay-recheck-20260814-v1.json",
+    "codex_app_visual_acceptance": "open; post-reboot read-only accessibility probe exposed no target settings view",
+    "evidence": "qa/codex-app-boundary-recheck-20260814-v4.json",
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "Codex App visual acceptance remains open because the target settings view was not exposed; no process was changed"
+}

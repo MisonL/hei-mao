@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-14T12:23:00Z",
+  "evidence_commit": "10d426c54648c116ec8db20318bf0dfb762b0e2d",
+  "probe": "macOS System Events read-only accessibility query after host reboot",
+  "observed_processes": {
+    "ChatGPT": {
+      "windows": 0,
+      "menu_bar_items": 0
+    },
+    "petdex-desktop-native": {
+      "windows": 0,
+      "menu_bar_items": 0
+    },
+    "codex_named_gui_processes": {
+      "count": 0
+    }
+  },
+  "target_pet_settings_accessible": false,
+  "visual_acceptance": "open",
+  "process_mutation": "none",
+  "limitations": [
+    "The probe only read process visibility, window counts and menu-bar counts.",
+    "No app launch, quit, signal, input event, configuration change, screen capture or Codex process mutation was attempted.",
+    "Existing prior Desktop animation, role-selection and multidisplay evidence remains valid but does not replace this unavailable Codex App settings view."
+  ],
+  "result": "post_reboot_read_only_probe_could_not_expose_codex_pet_settings_view"
+}
