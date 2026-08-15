@@ -1,34 +1,45 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "ok": true,
   "status": "pass_with_reviewed_warnings",
   "visual_qa": "pass_with_reviewed_warnings",
   "reviewed_by": "parent",
-  "repair_rows": [],
   "hard_failures": [],
-  "evidence": {
-    "contact_sheet": "qa/hei-mao-traveler/contact-sheet-extended.png",
-    "direction_sheet": "qa/hei-mao-traveler/look-directions.png",
-    "direction_semantics": "qa/hei-mao-traveler/direction-semantics.json",
-    "blind_validation": "qa/hei-mao-traveler/direction-blind-validation.json",
-    "blind_resolution": "qa/hei-mao-traveler/blind-review-resolution.json",
-    "continuity": "qa/hei-mao-traveler/look-continuity.json",
-    "standard_review": "qa/hei-mao-traveler/review.json",
-    "atlas_validation": "qa/hei-mao-traveler/validation.json",
-    "chroma_despill": "qa/hei-mao-traveler/chroma-despill.json",
-    "motion_previews": "qa/hei-mao-traveler/previews"
+  "gates": {
+    "atlas_png_require_v2": "pass",
+    "atlas_webp_require_v2": "pass",
+    "transparent_rgb_residue": "pass_zero",
+    "chroma_despill": "pass",
+    "direction_cardinals": "pass",
+    "direction_blind_validation": "pass_with_minor_reviewed_warnings",
+    "standard_motion": "pass_with_stable_slot_review",
+    "look_continuity": "pass_with_minor_reviewed_warnings"
   },
-  "identity": "深棕色黑毛小猪、红色旅行背心、绿色蔬菜纹样背包、叶菜和福袋在 11 行中保持一致。",
+  "identity": "深棕色黑毛小猪、红色旅行背心、绿色蔬菜纹样背包、叶菜和福袋在标准动作与 16 个方向中保持一致。",
   "directions": {
     "cardinal_gates": {"000":"pass","090":"pass","180":"pass","270":"pass"},
     "all_expected_directions_have_verdicts": true,
     "wrong_quadrant_or_reversal": false,
     "identity_or_scale_failure": false
   },
+  "evidence": {
+    "atlas": "pets/hei-mao-traveler/spritesheet.webp",
+    "validation": "qa/hei-mao-traveler/validation.json",
+    "chroma_despill": "qa/hei-mao-traveler/chroma-despill.json",
+    "contact_sheet": "qa/hei-mao-traveler/contact-sheet-extended.png",
+    "direction_sheet": "qa/hei-mao-traveler/look-directions.png",
+    "direction_qa_sheet": "qa/hei-mao-traveler/direction-qa-labeled.png",
+    "direction_semantics": "qa/hei-mao-traveler/direction-semantics.json",
+    "blind_validation": "qa/hei-mao-traveler/direction-blind-validation.json",
+    "blind_resolution": "qa/hei-mao-traveler/blind-review-resolution.json",
+    "continuity": "qa/hei-mao-traveler/look-continuity.json",
+    "standard_review": "qa/hei-mao-traveler/review.json",
+    "motion_previews": "qa/hei-mao-traveler/previews"
+  },
   "warnings": [
-    "中间方向盲测存在少量次轴分歧或 ambiguity，已由标注方向图和有序回环复核接受。",
-    "090->112.5、157.5->180、247.5->270、292.5->315 和 337.5->000 有连续性指标 warning，但未见可见跳变。",
-    "000 的脚部自然负空间行已确认不是封闭透明主体洞。"
+    "000/180 的脚部自然负空间被连续性脚本识别为 interior hole，已逐行 alpha 复核并确认不是封闭身体内部的透明洞。",
+    "少量中间方向盲测 ambiguity 与局部差异 warning 已通过标注方向图、接触表和动画预览复核。",
+    "标准行使用 stable-slots，已确认帧数、边界和预览稳定。"
   ],
   "release_decision": "accept_minor_warnings"
 }

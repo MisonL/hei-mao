@@ -1,1 +1,88 @@
-{"pairs":[{"pair":"horizontal-1","A":"screen-left","B":"screen-right","reason":"A nose points left; B nose points right."},{"pair":"horizontal-2","A":"screen-right","B":"screen-left","reason":"A nose points right; B nose points left."},{"pair":"horizontal-3","A":"screen-left","B":"screen-right","reason":"A is a left profile; B nose points right."},{"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A nose points left; B nose and body point right."},{"pair":"horizontal-5","A":"screen-left","B":"screen-left","reason":"Both noses point left."},{"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A nose points right; B nose points left."},{"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"A points left; B points right."},{"pair":"vertical-1","A":"down","B":"up","reason":"A head and nose pitch down; B pitches up."},{"pair":"vertical-2","A":"down","B":"up","reason":"A face pitches down; B pitches up."},{"pair":"vertical-3","A":"down","B":"up","reason":"A is down-pitched; B is up-pitched."},{"pair":"vertical-4","A":"down","B":"up","reason":"A eye-nose line slopes down; B slopes up."},{"pair":"vertical-5","A":"down","B":"up","reason":"A nose and head pitch down; B pitches up."},{"pair":"vertical-6","A":"down","B":"up","reason":"A is down-pitched; B is up-pitched."},{"pair":"vertical-7","A":"down","B":"up","reason":"A head is lower; B head is raised."}]}
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-left",
+      "B": "ambiguous",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "vertical-1",
+      "A": "up",
+      "B": "down",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "vertical-2",
+      "A": "up",
+      "B": "down",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "vertical-3",
+      "A": "down",
+      "B": "up",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "vertical-4",
+      "A": "up",
+      "B": "down",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "vertical-5",
+      "A": "up",
+      "B": "down",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "vertical-6",
+      "A": "down",
+      "B": "up",
+      "reason": "blind reviewer A classification"
+    },
+    {
+      "pair": "vertical-7",
+      "A": "up",
+      "B": "down",
+      "reason": "blind reviewer A classification"
+    }
+  ]
+}

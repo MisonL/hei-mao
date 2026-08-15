@@ -1,1 +1,88 @@
-{"pairs":[{"pair":"horizontal-1","A":"screen-right","B":"screen-right","reason":"Both visible noses point right."},{"pair":"horizontal-2","A":"screen-right","B":"screen-right","reason":"Both noses are slightly right-facing."},{"pair":"horizontal-3","A":"screen-left","B":"screen-right","reason":"A is left profile; B nose points right."},{"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A nose points left; B nose points right."},{"pair":"horizontal-5","A":"screen-left","B":"screen-left","reason":"Both noses point left."},{"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A points right; B points left."},{"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"A points left; B points right."},{"pair":"vertical-1","A":"down","B":"ambiguous","reason":"A is down-facing; B lacks a clear pitch cue."},{"pair":"vertical-2","A":"screen-left","B":"screen-right","reason":"Both are horizontal side views."},{"pair":"vertical-3","A":"screen-right","B":"screen-right","reason":"Both are near-front with rightward cues."},{"pair":"vertical-4","A":"screen-left","B":"screen-right","reason":"A is left profile; B right-facing."},{"pair":"vertical-5","A":"screen-left","B":"screen-right","reason":"A left-facing; B right/up-facing."},{"pair":"vertical-6","A":"screen-left","B":"screen-right","reason":"A left-facing; B right/up-facing."},{"pair":"vertical-7","A":"screen-left","B":"screen-right","reason":"A left-facing; B right-facing."}]}
+{
+  "pairs": [
+    {
+      "pair": "horizontal-1",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "horizontal-2",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "horizontal-3",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "horizontal-4",
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "horizontal-5",
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "horizontal-6",
+      "A": "screen-left",
+      "B": "ambiguous",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "horizontal-7",
+      "A": "ambiguous",
+      "B": "screen-left",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "vertical-1",
+      "A": "up",
+      "B": "up",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "vertical-2",
+      "A": "up",
+      "B": "down",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "vertical-3",
+      "A": "down",
+      "B": "up",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "vertical-4",
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "vertical-5",
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "vertical-6",
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "blind reviewer B classification"
+    },
+    {
+      "pair": "vertical-7",
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "blind reviewer B classification"
+    }
+  ]
+}

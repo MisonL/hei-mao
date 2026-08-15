@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "atlas_sha256": "264352ed62cc91e0fd5388bdb128238edfea11f3ab42b6a857e8d0d26e1d5ac7",
+  "atlas_sha256": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592",
   "instructions": "Do not provide this answer key to the blind visual QA reviewer.",
   "pairs": [
     {
@@ -8,12 +8,12 @@
       "axis": "horizontal",
       "gate": "review",
       "A": {
-        "expected_direction": "screen-right",
-        "source_direction": "022.5"
-      },
-      "B": {
         "expected_direction": "screen-left",
         "source_direction": "337.5"
+      },
+      "B": {
+        "expected_direction": "screen-right",
+        "source_direction": "022.5"
       }
     },
     {
@@ -21,12 +21,12 @@
       "axis": "horizontal",
       "gate": "review",
       "A": {
-        "expected_direction": "screen-left",
-        "source_direction": "315"
-      },
-      "B": {
         "expected_direction": "screen-right",
         "source_direction": "045"
+      },
+      "B": {
+        "expected_direction": "screen-left",
+        "source_direction": "315"
       }
     },
     {
@@ -47,12 +47,12 @@
       "axis": "horizontal",
       "gate": "hard",
       "A": {
-        "expected_direction": "screen-left",
-        "source_direction": "270"
-      },
-      "B": {
         "expected_direction": "screen-right",
         "source_direction": "090"
+      },
+      "B": {
+        "expected_direction": "screen-left",
+        "source_direction": "270"
       }
     },
     {
@@ -60,12 +60,12 @@
       "axis": "horizontal",
       "gate": "review",
       "A": {
-        "expected_direction": "screen-right",
-        "source_direction": "112.5"
-      },
-      "B": {
         "expected_direction": "screen-left",
         "source_direction": "247.5"
+      },
+      "B": {
+        "expected_direction": "screen-right",
+        "source_direction": "112.5"
       }
     },
     {
@@ -73,12 +73,12 @@
       "axis": "horizontal",
       "gate": "review",
       "A": {
-        "expected_direction": "screen-right",
-        "source_direction": "135"
-      },
-      "B": {
         "expected_direction": "screen-left",
         "source_direction": "225"
+      },
+      "B": {
+        "expected_direction": "screen-right",
+        "source_direction": "135"
       }
     },
     {
@@ -86,12 +86,12 @@
       "axis": "horizontal",
       "gate": "review",
       "A": {
-        "expected_direction": "screen-left",
-        "source_direction": "202.5"
-      },
-      "B": {
         "expected_direction": "screen-right",
         "source_direction": "157.5"
+      },
+      "B": {
+        "expected_direction": "screen-left",
+        "source_direction": "202.5"
       }
     },
     {
@@ -99,12 +99,12 @@
       "axis": "vertical",
       "gate": "hard",
       "A": {
-        "expected_direction": "down",
-        "source_direction": "180"
-      },
-      "B": {
         "expected_direction": "up",
         "source_direction": "000"
+      },
+      "B": {
+        "expected_direction": "down",
+        "source_direction": "180"
       }
     },
     {
@@ -112,12 +112,12 @@
       "axis": "vertical",
       "gate": "review",
       "A": {
-        "expected_direction": "down",
-        "source_direction": "157.5"
-      },
-      "B": {
         "expected_direction": "up",
         "source_direction": "022.5"
+      },
+      "B": {
+        "expected_direction": "down",
+        "source_direction": "157.5"
       }
     },
     {
@@ -125,12 +125,12 @@
       "axis": "vertical",
       "gate": "review",
       "A": {
-        "expected_direction": "up",
-        "source_direction": "045"
-      },
-      "B": {
         "expected_direction": "down",
         "source_direction": "135"
+      },
+      "B": {
+        "expected_direction": "up",
+        "source_direction": "045"
       }
     },
     {
@@ -138,12 +138,12 @@
       "axis": "vertical",
       "gate": "review",
       "A": {
-        "expected_direction": "down",
-        "source_direction": "112.5"
-      },
-      "B": {
         "expected_direction": "up",
         "source_direction": "067.5"
+      },
+      "B": {
+        "expected_direction": "down",
+        "source_direction": "112.5"
       }
     },
     {
@@ -151,12 +151,12 @@
       "axis": "vertical",
       "gate": "review",
       "A": {
-        "expected_direction": "down",
-        "source_direction": "202.5"
-      },
-      "B": {
         "expected_direction": "up",
         "source_direction": "337.5"
+      },
+      "B": {
+        "expected_direction": "down",
+        "source_direction": "202.5"
       }
     },
     {
@@ -164,12 +164,12 @@
       "axis": "vertical",
       "gate": "review",
       "A": {
-        "expected_direction": "down",
-        "source_direction": "225"
-      },
-      "B": {
         "expected_direction": "up",
         "source_direction": "315"
+      },
+      "B": {
+        "expected_direction": "down",
+        "source_direction": "225"
       }
     },
     {
@@ -177,12 +177,12 @@
       "axis": "vertical",
       "gate": "review",
       "A": {
-        "expected_direction": "down",
-        "source_direction": "247.5"
-      },
-      "B": {
         "expected_direction": "up",
         "source_direction": "292.5"
+      },
+      "B": {
+        "expected_direction": "down",
+        "source_direction": "247.5"
       }
     }
   ]

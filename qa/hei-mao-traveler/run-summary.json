@@ -4,7 +4,7 @@
   "spriteVersionNumber": 2,
   "pet": "hei-mao-traveler",
   "spritesheet": "pets/hei-mao-traveler/spritesheet.webp",
-  "sha256": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e",
+  "sha256": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592",
   "layout": {
     "width": 1536,
     "height": 2288,
@@ -17,6 +17,7 @@
   "chroma_despill": "qa/hei-mao-traveler/chroma-despill.json",
   "contact_sheet": "qa/hei-mao-traveler/contact-sheet-extended.png",
   "direction_sheet": "qa/hei-mao-traveler/look-directions.png",
+  "direction_qa_sheet": "qa/hei-mao-traveler/direction-qa-labeled.png",
   "direction_semantics": "qa/hei-mao-traveler/direction-semantics.json",
   "blind_direction_validation": "qa/hei-mao-traveler/direction-blind-validation.json",
   "blind_review_resolution": "qa/hei-mao-traveler/blind-review-resolution.json",
