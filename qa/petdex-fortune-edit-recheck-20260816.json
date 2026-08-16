@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T13:46:00Z",
+  "scope": "Fortune owned-slug edit after local v2 package refresh",
+  "operation": {
+    "command": "petdex edit hei-mao-fortune --sprite pets/hei-mao-fortune/spritesheet.webp --meta pets/hei-mao-fortune/pet.json",
+    "local_spritesheet_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
+    "local_pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b"
+  },
+  "result": {
+    "exit_code": 1,
+    "http_status": 409,
+    "error": "pet_not_editable",
+    "status": "pending",
+    "resolution": "Do not retry edit or submit a duplicate while the existing Fortune submission is pending review."
+  },
+  "upload": {
+    "presign_succeeded": false,
+    "asset_replaced": false,
+    "request_identifiers_recorded": false
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false
+  },
+  "result_summary": "PetDex ownership state is pending; local package remains validated and installed, online update is blocked by the platform review state"
+}

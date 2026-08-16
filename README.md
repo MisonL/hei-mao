@@ -168,7 +168,7 @@ npx -y petdex@latest install hei-mao-delivery
 HEI_MAO_PET_ID=hei-mao-fortune curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-fortune bash
 ```
 
-Petdex 发布状态：已提交，当前审核中。提交结果为 `1 submitted, 0 failed`，审核状态为 `held_for_review`，审核备注为 `possible policy issue`；当前公开 manifest 尚未出现该条目，因此仍不能运行 `npx -y petdex@latest install hei-mao-fortune`。提交后状态见 `qa/petdex-fortune-submit-recheck-20260813.json`；此前未登录时在上传前阻断的历史记录见 `qa/petdex-fortune-submit-blocked-20260813.json`。
+Petdex 发布状态：已提交，当前审核中。提交结果为 `1 submitted, 0 failed`，审核状态为 `held_for_review`，审核备注为 `possible policy issue`；2026-08-16 按 owned-slug 规则尝试更新时返回 `409 pet_not_editable` 且状态为 `pending`，未替换线上资源，也没有重复 submit。当前公开 manifest 尚未出现该条目，因此仍不能运行 `npx -y petdex@latest install hei-mao-fortune`。提交和编辑状态分别见 `qa/petdex-fortune-submit-recheck-20260813.json` 与 `qa/petdex-fortune-edit-recheck-20260816.json`；此前未登录时在上传前阻断的历史记录见 `qa/petdex-fortune-submit-blocked-20260813.json`。
 
 ### 品控官角色
 
@@ -368,6 +368,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
+- `qa/petdex-fortune-edit-recheck-20260816.json`: Fortune owned-slug 编辑被 PetDex 以 409 `pet_not_editable`/`pending` 拒绝的脱敏结果，不含本机环境信息
 - `qa/current-v2-gate-recheck-20260816-v1.json`: 提交 `e9c29e9` 前按每个角色记录的实际色键重新执行八角色 `validate_atlas.py --require-v2`，全部通过且无透明 RGB 残留、错误或警告
 - `qa/petdex-live-recheck-20260816-v2.json`: 实时 PetDex manifest、公开资源 HTTP 状态与 SHA 对照、历史重复条目和 Fortune/Traveler 公开边界，不含本机环境信息
 - `qa/petdex-live-recheck-20260816-v3.json`: 2026-08-16 06:25 manifest、公开资源 SHA 对照、历史重复条目和 Fortune/Traveler 公开边界，不含本机环境信息

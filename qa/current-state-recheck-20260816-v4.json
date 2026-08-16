@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "checked_at": "2026-08-16T13:43:11Z",
+  "checked_at": "2026-08-16T13:46:00Z",
   "checked_base_commit": "736f08ca4892f6bdcd96550b0449f638a5c06cf1",
   "scope": "Fortune v2 deterministic reassembly, package parity, installer and full local atlas regression",
   "git": {
@@ -67,7 +67,9 @@
   },
   "petdex": {
     "evidence": "qa/petdex-live-recheck-20260816-v3.json",
+    "fortune_edit_evidence": "qa/petdex-fortune-edit-recheck-20260816.json",
     "cli_version": "1.2.2",
+    "fortune_owned_slug_edit": "blocked_409_pet_not_editable_pending_review",
     "public_manifest_sync": "not_rechecked_in_this_local_change",
     "fortune_online_install": "blocked_until_public_manifest_entry"
   },
