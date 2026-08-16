@@ -362,7 +362,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260814-v33.json`: 提交 `d251c42` 上八角色本地包契约、安装器和外部阻断汇总，不含本机环境信息
 - `qa/current-state-recheck-20260814-v34.json`: 提交 `b77a134` 上使用精确 hatch-pet runtime 的八角色 v2 门禁和剩余阻断汇总，不含本机环境信息
 - `qa/current-state-recheck-20260814-v35.json`: 提交 `d8f9320` 上 hatch-pet 28 项测试、八角色 v2 门禁和剩余阻断汇总，不含本机环境信息
-- `qa/current-state-recheck-20260816-v2.json`: 提交 `cceca66` 上八角色 v2 门禁、hatch-pet 测试、三目录 SHA parity、远端 main 同步和剩余发布阻断，不含本机环境信息
+- `qa/current-state-recheck-20260816-v2.json`: 以提交 `cceca66` 为检查基线并记录发布提交 `56ead92`，包含八角色 v2 门禁、hatch-pet 测试、三目录 SHA parity、GitHub/GitLab main 同步和剩余发布阻断，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/current-v2-gate-recheck-20260816-v1.json`: 提交 `e9c29e9` 前按每个角色记录的实际色键重新执行八角色 `validate_atlas.py --require-v2`，全部通过且无透明 RGB 残留、错误或警告

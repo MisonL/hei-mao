@@ -2,12 +2,15 @@
   "schema_version": 2,
   "checked_at": "2026-08-16T06:00:22Z",
   "checked_commit": "cceca665bc6bf4f7eefbe9e3d68278050628fe66",
+  "published_commit": "56ead9278ed8e407a8f3d853d5cff317914b1206",
   "scope": "post-reboot local release, remote parity and package gate recheck",
   "git": {
     "worktree_clean": true,
     "diff_check": "pass",
-    "github_main": "cceca665bc6bf4f7eefbe9e3d68278050628fe66",
-    "gitlab_main": "cceca665bc6bf4f7eefbe9e3d68278050628fe66",
+    "checked_github_main": "cceca665bc6bf4f7eefbe9e3d68278050628fe66",
+    "checked_gitlab_main": "cceca665bc6bf4f7eefbe9e3d68278050628fe66",
+    "published_github_main": "56ead9278ed8e407a8f3d853d5cff317914b1206",
+    "published_gitlab_main": "56ead9278ed8e407a8f3d853d5cff317914b1206",
     "main_refs_equal": true
   },
   "atlas_gate": {
