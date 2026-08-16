@@ -1,7 +1,7 @@
 {
   "schema_version": 7,
-  "checked_at": "2026-08-16T16:10:34Z",
-  "checked_commit": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
+  "checked_at": "2026-08-16T16:20:46Z",
+  "checked_commit": "5e8bb34a0e12358fea96cee175d6100537b0d151",
   "scope": "当前八角色 v2 门禁、连续性、测试、三目录 parity、PetDex 公开资源复探和发布边界",
   "roles": [
     "hei-mao",
@@ -57,6 +57,7 @@
   },
   "asset_baseline": {
     "asset_paths_changed_since_previous_gate": false,
+    "tested_asset_commit": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
     "previous_gate_evidence": "qa/current-state-recheck-20260816-v6.json",
     "package_sha_evidence": "qa/current-state-recheck-20260816-v6.json"
   },
@@ -79,9 +80,24 @@
     "user_pet_directories_modified": false
   },
   "remote_sync": {
-    "github_main": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
-    "gitlab_main": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
+    "github_main": "5e8bb34a0e12358fea96cee175d6100537b0d151",
+    "gitlab_main": "5e8bb34a0e12358fea96cee175d6100537b0d151",
     "local_main_matches_both": true
+  },
+  "upstream": {
+    "issue_689": {
+      "state": "OPEN",
+      "updated_at": "2026-08-11T11:05:48Z",
+      "comments": 0,
+      "scope": "host keeps stdin open after valid payload; finite idle or total timeout remains unimplemented",
+      "url": "https://github.com/crafter-station/petdex/issues/689"
+    },
+    "related_prs": {
+      "654": "MERGED",
+      "662": "MERGED",
+      "667": "MERGED"
+    },
+    "checked_with": "GitHub public API via gh; no write operations"
   },
   "petdex": {
     "cli_version": "1.2.2",
@@ -130,7 +146,16 @@
     "visual_acceptance": "open",
     "target_pet_settings_accessible": false,
     "process_mutation": "none",
-    "evidence": "qa/codex-app-boundary-recheck-20260816.json"
+    "evidence": "qa/codex-app-boundary-recheck-20260816.json",
+    "fresh_read_only_probe": {
+      "checked_at": "2026-08-16T16:20:46Z",
+      "chatgpt_windows": 0,
+      "chatgpt_menu_bar_items": 7,
+      "codex_process_visible": false,
+      "petdex_process_visible": false,
+      "target_pet_settings_accessible": false,
+      "process_mutation": "none"
+    }
   },
   "public_file_hygiene": {
     "absolute_local_paths": false,
@@ -138,5 +163,5 @@
     "credentials": false,
     "request_identifiers": false
   },
-  "result": "local_eight_role_release_gates_pass; parity_and_remote_sync_pass; PetDex resources reconfirmed with three legacy atlas diffs; Fortune and Traveler pending review; Codex App visual acceptance remains open"
+  "result": "local_eight_role_release_gates_pass; parity_and_remote_sync_pass; PetDex resources reconfirmed with three legacy atlas diffs; Fortune and Traveler pending review; upstream issue 689 remains open; Codex App visual acceptance remains open"
 }
