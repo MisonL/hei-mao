@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T14:24:29Z",
+  "checked_commit": "84473064370eb110955487e30c6439bf45b160cb",
+  "scope": "PetDex manifest-only refresh and read-only publication boundary check",
+  "cli": {
+    "version": "1.2.2",
+    "list_exit_code": 0,
+    "list_total": 4523
+  },
+  "manifest": {
+    "generated_at": null,
+    "total": 4523,
+    "sha256": "c327eef87d902bfba88803bce20664253b44726e57abc645b9f0bf4c9ea2b373",
+    "current_owned_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "historical_duplicate_slug": "hei-mao-2",
+    "missing_new_slugs": ["hei-mao-fortune", "hei-mao-traveler"],
+    "manifest_sprite_versions": {
+      "hei-mao": 1,
+      "hei-mao-quality": 1,
+      "hei-mao-butler": 1,
+      "hei-mao-chef": 1,
+      "hei-mao-foodie": 1,
+      "hei-mao-delivery": 2
+    }
+  },
+  "publication_boundary": {
+    "fortune": {
+      "manifest_present": false,
+      "online_install_allowed": false,
+      "submission_state": "pending_review",
+      "edit_state": "blocked_409_pet_not_editable_pending_review",
+      "evidence": "qa/petdex-fortune-edit-recheck-20260816.json"
+    },
+    "traveler": {
+      "manifest_present": false,
+      "online_install_allowed": false,
+      "submission_state": "pending_review",
+      "evidence": "qa/petdex-traveler-submit-recheck-20260814.json"
+    },
+    "duplicate_submit_or_edit_attempted": false
+  },
+  "resource_sha_probe": {
+    "status": "blocked_external_tls_timeout",
+    "successful_manifest_fetch": true,
+    "successful_resource_fetches": 0,
+    "reason": "公开资产 CDN 的 TLS 握手在只读探针超时；未将超时视为资源一致或发布成功。",
+    "last_successful_resource_sha_evidence": "qa/petdex-live-recheck-20260816-v3.json"
+  },
+  "release_boundary": {
+    "local_v2_packages": 8,
+    "public_v2_resource_sync": "not_reconfirmed_in_this_probe",
+    "public_new_role_sync": false,
+    "result": "manifest_current; public_fortune_and_traveler_still_pending"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "artifact_identifiers": false
+  }
+}
