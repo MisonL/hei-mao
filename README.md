@@ -58,11 +58,11 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。安装器和本地主线状态以最新的 `qa/current-state-recheck-20260816-v5.json` 为准，PetDex manifest 和发布边界以 `qa/petdex-live-recheck-20260816-v4.json` 为准，资源 SHA 仍以最近一次成功对照的 `qa/petdex-live-recheck-20260816-v3.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
+此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。安装器和本地主线状态以最新的 `qa/current-state-recheck-20260816-v6.json` 为准，PetDex manifest 和发布边界以 `qa/petdex-live-recheck-20260816-v4.json` 为准，资源 SHA 仍以最近一次成功对照的 `qa/petdex-live-recheck-20260816-v3.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
 
-本机当前保留八个通过 v2 合同和最终视觉门禁的角色，仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 一致。2026-08-16 按各角色实际色键使用 hatch-pet 精确 runtime 重新执行的八包门禁、28 项测试、安装器和双远端一致性见 `qa/current-state-recheck-20260816-v5.json`；此前 2026-08-14 的详细证据仍用于追溯。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的最新图集与双目录复核见 `qa/hei-mao-fortune/run-summary.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
+本机当前保留八个通过 v2 合同和最终视觉门禁的角色，仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 一致。2026-08-16 按各角色实际色键使用 hatch-pet 精确 runtime 重新执行的八包门禁、28 项测试、连续性 warning 复核、安装器和双远端一致性见 `qa/current-state-recheck-20260816-v6.json`；此前 2026-08-14 的详细证据仍用于追溯。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的最新图集与双目录复核见 `qa/hei-mao-fortune/run-summary.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
-本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；最新安装器和本地主线证据见 `qa/current-state-recheck-20260816-v5.json`，当前 manifest 和发布边界见 `qa/petdex-live-recheck-20260816-v4.json`，最近一次成功的资源 SHA 对照见 `qa/petdex-live-recheck-20260816-v3.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Petdex Desktop `v0.8.0` 已完成官方签名校验、标准目录安装、Pets 设置可见性、动画帧变化、角色切换和双屏气泡跟随复测；已验证旅行家切换到厨师后恢复旅行家，宠物从副屏移动到主屏时气泡同步移动且保持间距，运行证据见 `qa/petdex-desktop-live-recheck-20260814-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`。本机 Codex App 当前只读边界见 `qa/codex-app-boundary-recheck-20260816.json`，尚未暴露宠物设置视图。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复。
+本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；最新安装器和本地主线证据见 `qa/current-state-recheck-20260816-v6.json`，当前 manifest 和发布边界见 `qa/petdex-live-recheck-20260816-v4.json`，最近一次成功的资源 SHA 对照见 `qa/petdex-live-recheck-20260816-v3.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Petdex Desktop `v0.8.0` 已完成官方签名校验、标准目录安装、Pets 设置可见性、动画帧变化、角色切换和双屏气泡跟随复测；已验证旅行家切换到厨师后恢复旅行家，宠物从副屏移动到主屏时气泡同步移动且保持间距，运行证据见 `qa/petdex-desktop-live-recheck-20260814-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`。本机 Codex App 当前只读边界见 `qa/codex-app-boundary-recheck-20260816.json`，尚未暴露宠物设置视图。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复。
 
 ### 角色安装器
 
@@ -366,6 +366,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260816-v3.json`: 以提交 `9699e72` 为检查基线，记录八角色按实际色键 v2 门禁、28 项测试、安装器、三目录 SHA parity、双远端一致性和剩余发布边界，不含本机环境信息
 - `qa/current-state-recheck-20260816-v4.json`: Fortune v2 基础图集纠错后的全角色门禁、盲测、安装器、三目录 parity 和剩余 PetDex/Codex App 边界，不含本机环境信息
 - `qa/current-state-recheck-20260816-v5.json`: 八角色当前门禁、Fortune 盲测平票边界、PetDex manifest、Codex App 可访问性和双远端状态汇总，不含本机环境信息
+- `qa/current-state-recheck-20260816-v6.json`: 当前提交上的八角色结构/连续性复核、28 项测试、三目录 parity、Shell/PowerShell 隔离安装器和公开发布边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息

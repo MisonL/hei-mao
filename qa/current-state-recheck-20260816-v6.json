@@ -1,0 +1,146 @@
+{
+  "schema_version": 6,
+  "checked_at": "2026-08-16T15:46:54Z",
+  "checked_commit": "8d7331c1962d0e97ee58f2e0b23e28d7a0304b76",
+  "scope": "当前八角色 v2 门禁、视觉 warning 复核、隔离安装器和公开发布边界",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "local_release_gates": {
+    "runtime": "hatch-pet bundled Python 3.13.7",
+    "atlas_validator": {
+      "command": "validate_atlas.py --require-v2 with each role chroma key",
+      "all_roles_exit_code": 0,
+      "all_roles_ok": true,
+      "contract": "1536x2288 RGBA 8x11 spriteVersionNumber=2",
+      "errors": 0,
+      "warnings": 0,
+      "transparent_rgb_residue_pixels": 0
+    },
+    "continuity_validator": {
+      "command": "measure_direction_continuity.py",
+      "all_roles_ok": true,
+      "warnings_by_role": {
+        "hei-mao": {"warnings": 6, "alpha_hole_candidates": 1},
+        "hei-mao-quality": {"warnings": 5, "alpha_hole_candidates": 0},
+        "hei-mao-butler": {"warnings": 6, "alpha_hole_candidates": 0},
+        "hei-mao-chef": {"warnings": 6, "alpha_hole_candidates": 0},
+        "hei-mao-delivery": {"warnings": 6, "alpha_hole_candidates": 3},
+        "hei-mao-foodie": {"warnings": 9, "alpha_hole_candidates": 1},
+        "hei-mao-fortune": {"warnings": 6, "alpha_hole_candidates": 0},
+        "hei-mao-traveler": {"warnings": 6, "alpha_hole_candidates": 2}
+      },
+      "warning_resolution": "all candidates independently reviewed as open design negative space or threshold-only edge behavior; no major failure"
+    },
+    "hatch_pet_tests": {
+      "runner": "python -m unittest discover",
+      "passed": 28,
+      "failed": 0,
+      "errors": 0,
+      "warnings": "Pillow deprecation notices only"
+    },
+    "visual_qa": {
+      "all_roles_have_16_direction_semantic_verdicts": true,
+      "all_roles_hard_failures": false,
+      "cardinal_gates": "pass_all_roles",
+      "fortune_intermediate_blind_unresolved": [
+        "horizontal-1.A",
+        "vertical-7.A",
+        "vertical-7.B"
+      ],
+      "fortune_resolution": "accepted minor warning after labeled normal-size review; no cardinal or wrong-quadrant failure",
+      "evidence": "qa/<role>/final-visual-qa.json, direction-semantics.json, blind-review-resolution.json"
+    }
+  },
+  "package_sha256": {
+    "hei-mao": {
+      "pet_json": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "spritesheet": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
+    },
+    "hei-mao-quality": {
+      "pet_json": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "spritesheet": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f"
+    },
+    "hei-mao-butler": {
+      "pet_json": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "spritesheet": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"
+    },
+    "hei-mao-chef": {
+      "pet_json": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "spritesheet": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"
+    },
+    "hei-mao-delivery": {
+      "pet_json": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "spritesheet": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"
+    },
+    "hei-mao-foodie": {
+      "pet_json": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "spritesheet": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23"
+    },
+    "hei-mao-fortune": {
+      "pet_json": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+      "spritesheet": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1"
+    },
+    "hei-mao-traveler": {
+      "pet_json": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f",
+      "spritesheet": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592"
+    }
+  },
+  "directory_parity": {
+    "roots": ["repository", "codex-pets", "petdex-pets"],
+    "roles": 8,
+    "pet_json_byte_compare": true,
+    "spritesheet_byte_compare": true,
+    "sha256_matches": true
+  },
+  "installer_smoke": {
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "bash_isolated_roles": "8/8 pass",
+    "powershell_isolated_roles": "8/8 pass",
+    "unknown_slug_rejection": "pass",
+    "user_pet_directories_modified": false
+  },
+  "remote_sync": {
+    "github_main": "8d7331c1962d0e97ee58f2e0b23e28d7a0304b76",
+    "gitlab_main": "8d7331c1962d0e97ee58f2e0b23e28d7a0304b76",
+    "local_main_matches_both": true
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-16T12:22:49.975Z",
+    "manifest_total": 4523,
+    "current_public_owned_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "public_duplicate_slug": "hei-mao-2",
+    "fortune_public": false,
+    "traveler_public": false,
+    "resource_sha_reprobe": "not_reconfirmed_after_previous_public_cdn_tls_timeout",
+    "write_operations": "none"
+  },
+  "codex_app": {
+    "visual_acceptance": "open",
+    "target_pet_settings_accessible": false,
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "local_eight_role_release_gates_pass; PetDex_public_sync_and_Codex_App_visual_acceptance_remain_open"
+}
