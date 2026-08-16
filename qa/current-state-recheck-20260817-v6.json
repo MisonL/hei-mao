@@ -1,0 +1,155 @@
+{
+  "schema_version": 12,
+  "checked_at": "2026-08-16T19:21:17Z",
+  "tested_commit": "f0ce45f72392062dab56555cf44103807098e382",
+  "scope": "八角色 v2 门禁、视觉 QA 证据、三目录 parity、PetDex、上游 Hook 和 Codex App 边界",
+  "asset_baseline": {
+    "visual_baseline_commit": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
+    "asset_paths_changed_since_visual_baseline": false,
+    "current_package_sha_evidence": "sha256 recorded in qa/petdex-live-recheck-20260817.json"
+  },
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "local_release_gates": {
+    "runtime": {
+      "python": "hatch-pet bundled Python 3.12.13",
+      "pillow": "12.3.0"
+    },
+    "atlas_validation": {
+      "command": "validate_atlas.py --require-v2 with each recorded role chroma key",
+      "roles_passed": 8,
+      "roles_failed": 0,
+      "contract": "WEBP RGBA 1536x2288, 8x11, spriteVersionNumber=2",
+      "errors": 0,
+      "warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "chroma_keys": {
+        "hei-mao": "#00FF00",
+        "hei-mao-quality": "#FF00FF",
+        "hei-mao-butler": "#00FF00",
+        "hei-mao-chef": "#00FFFF",
+        "hei-mao-delivery": "#FF00FF",
+        "hei-mao-foodie": "#FF00FF",
+        "hei-mao-fortune": "#00FFFF",
+        "hei-mao-traveler": "#FF00FF"
+      }
+    },
+    "continuity": {
+      "command": "measure_direction_continuity.py",
+      "roles_ok": 8,
+      "errors": 0,
+      "warnings_by_role": {
+        "hei-mao": 6,
+        "hei-mao-quality": 5,
+        "hei-mao-butler": 6,
+        "hei-mao-chef": 6,
+        "hei-mao-delivery": 6,
+        "hei-mao-foodie": 9,
+        "hei-mao-fortune": 6,
+        "hei-mao-traveler": 6
+      },
+      "warning_policy": "all warnings remain documented minor review evidence"
+    },
+    "direction_semantics": {
+      "roles": 8,
+      "directions_per_role": 16,
+      "fail_verdicts": 0,
+      "missing_required_field_records": 0,
+      "cardinal_gate_failures": 0
+    },
+    "blind_direction_validation": {
+      "roles_ok": 8,
+      "errors": 0,
+      "cardinal_gates": "pass",
+      "intermediate_warning_counts": {
+        "hei-mao": 10,
+        "hei-mao-quality": 11,
+        "hei-mao-butler": 6,
+        "hei-mao-chef": 0,
+        "hei-mao-delivery": 9,
+        "hei-mao-foodie": 4,
+        "hei-mao-fortune": 0,
+        "hei-mao-traveler": 9
+      }
+    },
+    "final_visual_qa": {
+      "artifacts": "8/8 present",
+      "hard_failures": 0,
+      "status": "all pass or pass_with_reviewed_warnings",
+      "motion_and_contact_sheet_evidence": "retained per role under qa/<role>/"
+    },
+    "tests": {
+      "hatch_pet_unittest": "28 passed, 0 failed, 0 errors",
+      "bash_n": "pass",
+      "shellcheck": "pass",
+      "powershell_parse": "pass from prior cross-platform evidence"
+    }
+  },
+  "installation": {
+    "roots": ["repository", "codex-pets", "petdex-pets"],
+    "roles": 8,
+    "pet_json_and_spritesheet_sha_parity": true,
+    "all_ids_match_directories": true,
+    "all_sprite_version_numbers": 2,
+    "historical_slug_residuals": {
+      "hei-mao-2": false,
+      "hei-mao-recommender": false
+    }
+  },
+  "remote_sync": {
+    "github_main": "f0ce45f72392062dab56555cf44103807098e382",
+    "configured_gitlab_mirror_main": "f0ce45f72392062dab56555cf44103807098e382",
+    "local_main_matches_both": true,
+    "worktree_clean": true
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-16T18:17:23.966Z",
+    "manifest_total": 4568,
+    "current_owned_slugs_public": 8,
+    "historical_duplicate_slug": "hei-mao-2",
+    "resource_and_install_evidence": "qa/petdex-live-recheck-20260817.json and qa/petdex-live-install-recheck-20260817-v2.json",
+    "current_resource_sync": "3/8 exact; 5/8 owned-slug edits pending review",
+    "fortune_traveler": "public and installable; latest local sprite edits queued for admin review",
+    "duplicate_submission": false
+  },
+  "upstream": {
+    "main_commit": "0243af614f30eee31913ff3e3839467615c1c744",
+    "issue_689": {
+      "state": "OPEN",
+      "updated_at": "2026-08-11T11:05:48Z",
+      "comments": 0,
+      "stdin_eof_fix": "not implemented"
+    },
+    "pr_710": {
+      "state": "OPEN",
+      "merge_state": "BLOCKED",
+      "updated_at": "2026-08-15T10:44:56Z",
+      "stdin_eof_fix": "not included"
+    }
+  },
+  "codex_app": {
+    "process_visible": true,
+    "window_count": 0,
+    "menu_bar_item_count": 7,
+    "pet_settings_accessible": false,
+    "process_mutation": "none",
+    "visual_acceptance": "open"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "docker_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "fresh_eight_role_local_gates_pass; PetDex publication and install pass with five resource edits pending review; upstream issue 689 and Codex App visual acceptance remain open"
+}
