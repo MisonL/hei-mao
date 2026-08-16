@@ -1,0 +1,164 @@
+{
+  "schema_version": 8,
+  "checked_at": "2026-08-16T16:28:16Z",
+  "checked_commit": "88d1120dab57aba677cb2c9adcb11f08766dc0cc",
+  "scope": "八角色本地发布门禁、三目录 parity、PetDex 公开资源重试、上游状态和 Codex App 边界",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "asset_baseline": {
+    "tested_asset_commit": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
+    "asset_paths_changed_since_tested_commit": false,
+    "prior_visual_and_package_evidence": "qa/current-state-recheck-20260817-v1.json"
+  },
+  "local_release_gates": {
+    "runtime": "hatch-pet bundled Python 3.12.13",
+    "atlas_validator": {
+      "command": "validate_atlas.py --require-v2 with each recorded chroma key",
+      "roles_passed": 8,
+      "roles_failed": 0,
+      "contract": "1536x2288 RGBA 8x11 spriteVersionNumber=2",
+      "errors": 0,
+      "warnings": 0,
+      "transparent_rgb_residue_pixels": 0
+    },
+    "continuity_validator": {
+      "command": "measure_direction_continuity.py",
+      "roles_ok": 8,
+      "warnings_by_role": {
+        "hei-mao": 6,
+        "hei-mao-quality": 5,
+        "hei-mao-butler": 6,
+        "hei-mao-chef": 6,
+        "hei-mao-delivery": 6,
+        "hei-mao-foodie": 9,
+        "hei-mao-fortune": 6,
+        "hei-mao-traveler": 6
+      },
+      "warning_policy": "continuity warnings remain review evidence; prior independent visual review accepted them as minor with no major hole, snap, reversal, or identity failure"
+    },
+    "hatch_pet_tests": {
+      "runner": "python -m unittest discover -s tests -q",
+      "passed": 28,
+      "failed": 0,
+      "errors": 0,
+      "warnings": "Pillow deprecation notices only"
+    },
+    "installer_static_checks": {
+      "bash_n": "pass",
+      "shellcheck": "pass"
+    },
+    "visual_qa": {
+      "status": "pass_with_reviewed_warnings",
+      "fresh_visual_review": false,
+      "evidence": "qa/current-state-recheck-20260817-v1.json and qa/<role>/final-visual-qa.json"
+    }
+  },
+  "directory_parity": {
+    "roots": ["repository", "codex-pets", "petdex-pets"],
+    "roles": 8,
+    "pet_json_sha256_matches": true,
+    "spritesheet_sha256_matches": true,
+    "historical_slug_residual_check": {
+      "hei-mao-recommender": false,
+      "hei-mao-2": false
+    }
+  },
+  "installer_smoke": {
+    "previous_cross_platform_evidence": "qa/installer-cross-platform-recheck-20260814-v4.json",
+    "bash_isolated_roles": "8/8 pass",
+    "powershell_isolated_roles": "8/8 pass",
+    "unknown_slug_rejection": "pass",
+    "user_pet_directories_modified": false
+  },
+  "remote_sync": {
+    "github_main": "88d1120dab57aba677cb2c9adcb11f08766dc0cc",
+    "gitlab_main": "88d1120dab57aba677cb2c9adcb11f08766dc0cc",
+    "local_main_matches_both": true
+  },
+  "upstream": {
+    "issue_689": {
+      "state": "OPEN",
+      "updated_at": "2026-08-11T11:05:48Z",
+      "comments": 0,
+      "scope": "host keeps stdin open after valid payload; finite idle or total timeout remains unimplemented",
+      "url": "https://github.com/crafter-station/petdex/issues/689"
+    },
+    "related_prs": {
+      "654": "MERGED",
+      "662": "MERGED",
+      "667": "MERGED"
+    },
+    "write_operations": "none"
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-16T12:22:49.975Z",
+    "manifest_sha256": "c327eef87d902bfba88803bce20664253b44726e57abc645b9f0bf4c9ea2b373",
+    "manifest_total": 4523,
+    "current_public_owned_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "public_duplicate_slug": "hei-mao-2",
+    "resource_probe": {
+      "manifest_status": "pass",
+      "first_batch": "partial_timeout_after_manifest_within_20_seconds",
+      "individual_retry": "pass",
+      "json_downloads": "6/6 pass",
+      "sprite_downloads": "6/6 pass",
+      "dimensions": "1536x2288 for all six",
+      "downloaded_sprite_version": 2,
+      "pet_json_matches_repository": {
+        "hei-mao": true,
+        "hei-mao-quality": false,
+        "hei-mao-butler": true,
+        "hei-mao-chef": true,
+        "hei-mao-foodie": true,
+        "hei-mao-delivery": true
+      },
+      "sprite_matches_repository": {
+        "hei-mao": false,
+        "hei-mao-quality": false,
+        "hei-mao-butler": true,
+        "hei-mao-chef": true,
+        "hei-mao-foodie": false,
+        "hei-mao-delivery": true
+      },
+      "evidence": "qa/petdex-live-recheck-20260816-v5.json plus current individual retry probes"
+    },
+    "fortune_public": false,
+    "traveler_public": false,
+    "pending_review_must_not_be_retried": true,
+    "write_operations": "none"
+  },
+  "codex_app": {
+    "visual_acceptance": "open",
+    "target_pet_settings_accessible": false,
+    "fresh_read_only_probe": {
+      "chatgpt_windows": 0,
+      "chatgpt_menu_bar_items": 7,
+      "codex_process_visible": false,
+      "petdex_process_visible": false,
+      "process_mutation": "none"
+    }
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "local_eight_role_gates_pass; parity_and_remote_sync_pass; six PetDex resources pass after individual retry with three legacy atlas diffs; Fortune and Traveler pending review; issue 689 open; Codex App visual acceptance open"
+}
