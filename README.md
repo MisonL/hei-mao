@@ -23,7 +23,7 @@ npx -y petdex@latest install hei-mao-foodie
 npx -y petdex@latest install hei-mao-delivery
 ```
 
-2026-08-16 复核中 PetDex CLI 为 `1.2.2`。本次 manifest 刷新响应未提供生成时间，共 4523 个条目；当前六个黑毛角色可见，`hei-mao-2` 仍是历史重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-delivery` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的 CDN v2 编辑仍未切换。实际下载的公开 `petjson.json` 已包含 v2 字段，但 manifest 索引对这些旧条目仍报告 v1；不能据此把旧图集当作仓库 v2。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未进入公开 manifest，不能运行对应的 PetDex 在线安装命令。Fortune 的 cardinal 生成重试和上游 502 证据仍保留在历史 QA 中；当前本地包使用通过门禁的 v2 标准行与 row10 v29 候选重新组装，WebP SHA-256 为 `b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1`。需要使用仓库 v2 图集时，请使用下方角色安装器；审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。当前 manifest 与发布边界见 `qa/petdex-live-recheck-20260816-v4.json`，上一份成功的资源 SHA 对照见 `qa/petdex-live-recheck-20260816-v3.json`，生图重试证据见 `qa/fortune-cardinal-generation-recheck-20260816-v3.json`，历史编辑队列见 `qa/petdex-edit-sync-recheck-20260814.json`。
+2026-08-16 复核中 PetDex CLI 为 `1.2.2`。本次 manifest 生成时间为 `2026-08-16T12:22:49.975Z`，共 4523 个条目；当前六个黑毛角色可见，`hei-mao-2` 仍是历史重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-delivery` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的 CDN v2 编辑仍未切换。实际下载的公开 `petjson.json` 已包含 v2 字段，但 manifest 索引对这些旧条目仍报告 v1；不能据此把旧图集当作仓库 v2。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未进入公开 manifest，不能运行对应的 PetDex 在线安装命令。Fortune 的 cardinal 生成重试和上游 502 证据仍保留在历史 QA 中；当前本地包使用通过门禁的 v2 标准行与 row10 v29 候选重新组装，WebP SHA-256 为 `b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1`。需要使用仓库 v2 图集时，请使用下方角色安装器；审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。当前 manifest 与历史 slug 核验见 `qa/historical-slug-recheck-20260816.json`，发布边界见 `qa/petdex-live-recheck-20260816-v4.json`，上一份成功的资源 SHA 对照见 `qa/petdex-live-recheck-20260816-v3.json`，生图重试证据见 `qa/fortune-cardinal-generation-recheck-20260816-v3.json`，历史编辑队列见 `qa/petdex-edit-sync-recheck-20260814.json`。
 
 本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录，但本轮没有启动应用，也没有停止或重启任何 Codex 进程。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；本地复现和版本边界见 `qa/petdex-local-cli-recheck-20260814.json`。
 
@@ -81,7 +81,7 @@ $env:HEI_MAO_PET_ID="hei-mao-chef"; irm https://raw.githubusercontent.com/MisonL
 
 安装器只接受仓库中已有完整图集和固定 SHA 的角色，未知 slug 会显式失败。Windows PowerShell 5.1 的本地 checkout 可能受 Git `core.autocrlf` 影响，安装器会对文本 manifest 显式按 UTF-8/LF 规范化后再校验固定 SHA，二进制图集保持原样。角色包默认安装到 `~/.codex/pets/<slug>`；需要 Petdex Desktop 时请使用上面的 `petdex install`，不要手动复制到未知目录。
 
-`hei-mao-fortune` 和 `hei-mao-traveler` 均已完成本地 v2 图集、结构门禁和视觉 QA，并加入安装器白名单；二者均已提交 PetDex，当前处于审核队列，公开 manifest 尚未出现，因此不能使用 PetDex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集。历史 slug 的当日复核见 `qa/historical-slug-recheck-20260809.json`。
+`hei-mao-fortune` 和 `hei-mao-traveler` 均已完成本地 v2 图集、结构门禁和视觉 QA，并加入安装器白名单；二者均已提交 PetDex，当前处于审核队列，公开 manifest 尚未出现，因此不能使用 PetDex 在线安装命令。历史 `hei-mao-recommender` 和 `hei-mao-2` 也不属于当前发布集；三处本地目录没有这两个历史 slug 的残留。历史 slug 的最新复核见 `qa/historical-slug-recheck-20260816.json`。
 
 `hei-mao-traveler` 是黑毛的小旅行家角色，使用红色旅行背心、绿色蔬菜纹样背包、叶菜和小福袋表达社区探访与新鲜食材探索。其 11 行 v2 图集已完成单次 despill、透明度验证、三份独立方向盲测、连续性复核和最终视觉 QA；中间方向的盲测分歧与连续性 outlier 均按 minor warning 记录，四个 cardinal、身份、比例、回环和透明主体检查通过。当前仅可通过仓库安装器安装；PetDex 条目已提交并在审核队列中，公开 manifest 尚未出现。
 

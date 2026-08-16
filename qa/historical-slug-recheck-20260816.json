@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "audited_at": "2026-08-16T14:55:44Z",
+  "source_commit": "ed0b6c8713c14d592a1b049a2669153e96c8bc08",
+  "scope": "历史角色 slug、重复公开条目、当前三处本地安装根和 metadata id",
+  "current_repository_slugs": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "historical_slugs": {
+    "hei-mao-recommender": {
+      "repository_present": false,
+      "codex_install_present": false,
+      "petdex_install_present": false,
+      "release_decision": "excluded",
+      "reason": "历史角色不在当前仓库发布集，且没有本地安装残留。"
+    },
+    "hei-mao-2": {
+      "repository_present": false,
+      "codex_install_present": false,
+      "petdex_install_present": false,
+      "public_manifest_classification": "duplicate_public_entry",
+      "release_decision": "excluded",
+      "duplicate_submit_or_edit_attempted": false
+    }
+  },
+  "local_roots": {
+    "repository": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "codex_pets": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "petdex_pets": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ]
+  },
+  "metadata_checks": {
+    "all_current_directories_have_pet_json_and_spritesheet": true,
+    "directory_name_matches_pet_json_id_in_all_roots": true,
+    "duplicate_current_ids": [],
+    "three_root_file_sets_match": true,
+    "historical_installation_absent": true
+  },
+  "live_public_manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "generated_at": "2026-08-16T12:22:49.975Z",
+    "total": 4523,
+    "current_owned_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "historical_duplicate_slugs": ["hei-mao-2"],
+    "missing_submitted_slugs": ["hei-mao-fortune", "hei-mao-traveler"],
+    "sprite_versions": {
+      "hei-mao": 1,
+      "hei-mao-quality": 1,
+      "hei-mao-butler": 1,
+      "hei-mao-chef": 1,
+      "hei-mao-foodie": 1,
+      "hei-mao-delivery": 2,
+      "hei-mao-2": 1
+    }
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "pass_with_public_duplicate_and_pending_submissions"
+}
