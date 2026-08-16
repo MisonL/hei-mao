@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T06:44:00Z",
+  "checked_commit": "489008322f8fad5991918856de57abc8382d92ec",
+  "scope": "Fresh PetDex manifest and public resource SHA recheck after local QA update",
+  "cli": {
+    "version": "1.2.2",
+    "list_exit_code": 0,
+    "list_total": 4523
+  },
+  "manifest": {
+    "generated_at": "2026-08-16T06:25:53.244Z",
+    "total": 4523,
+    "sha256": "5bfc0f8b39353784775dd329803f258983921c1f4dfeb8d6ae6cb63198312b21",
+    "owned_current_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "historical_duplicate_slug": "hei-mao-2"
+  },
+  "owned_entries": {
+    "hei-mao": {
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "metadata_equal_to_local": true,
+      "spritesheet_equal_to_local": false,
+      "classification": "public_entry_old_spritesheet"
+    },
+    "hei-mao-quality": {
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "metadata_equal_to_local": false,
+      "spritesheet_equal_to_local": false,
+      "classification": "public_entry_old_metadata_and_spritesheet"
+    },
+    "hei-mao-butler": {
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "metadata_equal_to_local": true,
+      "spritesheet_equal_to_local": true,
+      "classification": "public_entry_resource_match"
+    },
+    "hei-mao-chef": {
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "metadata_equal_to_local": true,
+      "spritesheet_equal_to_local": true,
+      "classification": "public_entry_resource_match"
+    },
+    "hei-mao-foodie": {
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "metadata_equal_to_local": true,
+      "spritesheet_equal_to_local": false,
+      "classification": "public_entry_old_spritesheet"
+    },
+    "hei-mao-delivery": {
+      "manifest_sprite_version": 2,
+      "remote_pet_json_sprite_version": 2,
+      "metadata_equal_to_local": true,
+      "spritesheet_equal_to_local": true,
+      "classification": "public_entry_resource_match"
+    }
+  },
+  "new_roles": {
+    "hei-mao-fortune": {
+      "public_manifest_present": false,
+      "online_install_allowed": false,
+      "submission_state": "submitted_and_held_for_review"
+    },
+    "hei-mao-traveler": {
+      "public_manifest_present": false,
+      "online_install_allowed": false,
+      "submission_state": "submitted_and_held_for_review"
+    }
+  },
+  "release_boundary": {
+    "local_v2_packages": 8,
+    "public_v2_resource_sync": false,
+    "duplicate_submit_attempted": false,
+    "reason": "Three existing public entries still serve resources that differ from the repository v2 package; Fortune and Traveler remain absent from the public manifest."
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "artifact_identifiers": false
+  },
+  "result": "live_manifest_and_resource_sha_rechecked; public_v2_sync_incomplete"
+}
