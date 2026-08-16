@@ -370,6 +370,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260816-v6.json`: 当前提交上的八角色结构/连续性复核、28 项测试、三目录 parity、Shell/PowerShell 隔离安装器和公开发布边界，不含本机环境信息
 - `qa/current-state-recheck-20260817-v1.json`: 提交 `a18c063` 上重新执行的八角色 v2 结构/连续性门禁、28 项测试、三目录 parity、双远端一致性、PetDex 公开资源和上游 issue/PR 复探、Codex App 未完成边界，不含本机环境信息
 - `qa/current-state-recheck-20260817-v2.json`: 提交 `88d1120` 上重新执行的八角色 v2 结构/连续性门禁、28 项测试、安装器静态检查、三目录 parity、PetDex 资源重试结果、上游 issue/PR 和 Codex App 未完成边界，不含本机环境信息
+- `qa/current-state-recheck-20260817-v3.json`: 提交 `577712c` 上的方向语义字段统一、QA 摘要索引、预览帧数、请求标识脱敏和八角色最终本地复核，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
