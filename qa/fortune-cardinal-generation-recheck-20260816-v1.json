@@ -39,8 +39,22 @@
       "upstream_status": 502,
       "retryable": true,
       "artifact_count": 0
+    },
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-look-cardinals-v8",
+      "transport": "page_sse",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0,
+      "diagnostics": {
+        "sse_log": "request_started_then_request_failed",
+        "agent_state_found": false
+      }
     }
   ],
-  "result": "no_cardinal_artifact_produced; look-cardinals remains pending",
+  "result": "no_cardinal_artifact_produced_after_four_independent_attempts; look-cardinals remains pending",
   "next_action": "Wait for upstream image service recovery, then retry with a new idempotency key; do not mark the job complete or package a candidate without deterministic and visual QA."
 }
