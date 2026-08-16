@@ -24,6 +24,7 @@
   "continuity": "qa/hei-mao-traveler/look-continuity.json",
   "review": "qa/hei-mao-traveler/review.json",
   "final_visual_qa": "qa/hei-mao-traveler/final-visual-qa.json",
+  "look_mechanics": "qa/hei-mao-traveler/look-mechanics.md",
   "motion_previews": "qa/hei-mao-traveler/previews",
   "package": "pets/hei-mao-traveler"
 }

@@ -11,7 +11,7 @@
   },
   "attempts": [
     {
-      "idempotency_key_label": "v11-agent-edit",
+      "idempotency_key_label": "redacted",
       "transport": "agent_json",
       "request_mode": "images-non-stream",
       "status": "failed",
@@ -22,7 +22,7 @@
       "diagnostics_state_recorded": true
     },
     {
-      "idempotency_key_label": "v12-page-sse",
+      "idempotency_key_label": "redacted",
       "transport": "page_sse",
       "request_mode": "images-sse",
       "status": "failed",
@@ -33,7 +33,7 @@
       "diagnostics_state_recorded": false
     },
     {
-      "idempotency_key_label": "v13-agent-sse",
+      "idempotency_key_label": "redacted",
       "transport": "agent_json",
       "request_mode": "images-sse",
       "status": "failed",

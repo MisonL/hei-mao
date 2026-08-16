@@ -11,7 +11,7 @@
   },
   "attempts": [
     {
-      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v5-agent",
+      "idempotency_key": "redacted",
       "transport": "agent_json",
       "request_mode": "images-non-stream",
       "status": "failed",
@@ -21,7 +21,7 @@
       "artifact_count": 0
     },
     {
-      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v6-agent",
+      "idempotency_key": "redacted",
       "transport": "agent_json",
       "request_mode": "images-non-stream",
       "status": "failed",
@@ -31,7 +31,7 @@
       "artifact_count": 0
     },
     {
-      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v7-agent-sse",
+      "idempotency_key": "redacted",
       "transport": "agent_json",
       "request_mode": "images-sse",
       "status": "failed",
@@ -41,7 +41,7 @@
       "artifact_count": 0
     },
     {
-      "idempotency_key": "hei-mao-fortune-20260816-look-cardinals-v8",
+      "idempotency_key": "redacted",
       "transport": "page_sse",
       "request_mode": "images-sse",
       "status": "failed",

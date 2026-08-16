@@ -12,6 +12,9 @@
   "blind_direction_validation": "qa/hei-mao-chef/direction-blind-validation.json",
   "blind_review_resolution": "qa/hei-mao-chef/blind-review-resolution.json",
   "continuity": "qa/hei-mao-chef/look-continuity.json",
+  "final_visual_qa": "qa/hei-mao-chef/final-visual-qa.json",
+  "motion_previews": "qa/hei-mao-chef/previews",
+  "look_mechanics": "qa/hei-mao-chef/look-mechanics.md",
   "review": "qa/hei-mao-chef/review.json",
   "package": "pets/hei-mao-chef"
 }

@@ -12,6 +12,8 @@
   "blind_direction_validation": "qa/hei-mao-foodie/direction-blind-validation.json",
   "blind_review_resolution": "qa/hei-mao-foodie/blind-review-resolution.json",
   "continuity": "qa/hei-mao-foodie/look-continuity.json",
+  "motion_previews": "qa/hei-mao-foodie/previews",
+  "look_mechanics": "qa/hei-mao-foodie/look-mechanics.md",
   "review": "qa/hei-mao-foodie/review.json",
   "package": "pets/hei-mao-foodie",
   "final_visual_qa": "qa/hei-mao-foodie/final-visual-qa.json",

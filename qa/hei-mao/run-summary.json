@@ -1,5 +1,12 @@
 {
   "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "spriteVersionNumber": 2,
+  "spritesheet": "pets/hei-mao/spritesheet.webp",
+  "final_visual_qa": "qa/hei-mao/final-visual-qa.json",
+  "motion_previews": "qa/hei-mao/previews",
+  "look_mechanics": "qa/hei-mao/look-mechanics.md",
+  "package": "pets/hei-mao",
   "candidate": "pets/hei-mao/spritesheet.webp",
   "sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
   "layout": {

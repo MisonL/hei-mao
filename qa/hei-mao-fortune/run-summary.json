@@ -1,5 +1,7 @@
 {
   "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "spriteVersionNumber": 2,
   "pet": "hei-mao-fortune",
   "sprite_version_number": 2,
   "spritesheet": "pets/hei-mao-fortune/spritesheet.webp",
@@ -22,6 +24,9 @@
   "continuity": "qa/hei-mao-fortune/look-continuity.json",
   "review": "qa/hei-mao-fortune/review.json",
   "final_visual_qa": "qa/hei-mao-fortune/final-visual-qa.json",
+  "motion_previews": "qa/hei-mao-fortune/previews",
+  "look_mechanics": "qa/hei-mao-fortune/look-mechanics.md",
+  "package": "pets/hei-mao-fortune",
   "source_jobs": {
     "row_9": {
       "idempotency_key": "redacted",

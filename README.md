@@ -267,6 +267,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/<slug>/contact-sheet-extended.png`: 包含 16 个观察方向的 v2 动画帧总览
 - `qa/<slug>/previews/*.gif`: 标准状态动画预览
 - `qa/<slug>/preview-generation.json`（存在时）: 标准状态预览的相对路径、帧数和来源 SHA
+- `qa/<slug>/look-mechanics.md`: 角色专属的 16 方向视线、锚点和道具跟随规则
+- `qa/<slug>/run-summary.json`: 当前图集、结构门禁、视觉复核、方向 QA 和预览证据索引
 - `qa/<slug>/validation.json`: atlas 验证结果
 - `qa/<slug>/review.json`: 帧提取与透明度检查结果
 - `qa/<slug>/look-directions.png`: 16 个观察方向总览
@@ -276,7 +278,6 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/<slug>/direction-blind-answer-key.json`: 盲测完成后的隐藏答案记录
 - `qa/<slug>/blind-review-resolution.json`: 中间方向 warning 的审查与处理决定
 - `qa/<slug>/look-continuity.json`: 方向连续性测量
-- `qa/<slug>/videos/`: 每个状态的 mp4 预览
 - `pets/hei-mao/`: 根角色包
 - `qa/hei-mao/`: 根角色的独立验证与视觉复核证据
 - `pets/hei-mao-quality/`: 已验证的品控官角色包

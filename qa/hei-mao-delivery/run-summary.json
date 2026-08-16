@@ -12,6 +12,8 @@
   "blind_direction_validation": "qa/hei-mao-delivery/direction-blind-validation.json",
   "blind_review_resolution": "qa/hei-mao-delivery/blind-review-resolution.json",
   "continuity": "qa/hei-mao-delivery/look-continuity.json",
+  "motion_previews": "qa/hei-mao-delivery/previews",
+  "look_mechanics": "qa/hei-mao-delivery/look-mechanics.md",
   "review": "qa/hei-mao-delivery/review.json",
   "final_visual_qa": "qa/hei-mao-delivery/final-visual-qa.json",
   "package": "pets/hei-mao-delivery"

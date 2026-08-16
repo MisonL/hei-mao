@@ -12,6 +12,9 @@
   "blind_direction_validation": "qa/hei-mao-butler/direction-blind-validation.json",
   "blind_review_resolution": "qa/hei-mao-butler/blind-review-resolution.json",
   "continuity": "qa/hei-mao-butler/look-continuity.json",
+  "final_visual_qa": "qa/hei-mao-butler/final-visual-qa.json",
+  "motion_previews": "qa/hei-mao-butler/previews",
+  "look_mechanics": "qa/hei-mao-butler/look-mechanics.md",
   "review": "qa/hei-mao-butler/review.json",
   "package": "pets/hei-mao-butler"
 }

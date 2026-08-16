@@ -10,14 +10,14 @@
     "billable_requests_allowed_by_task": true
   },
   "preflight": {
-    "idempotency_key": "hei-mao-fortune-20260816-cardinals-v9",
+    "idempotency_key": "redacted",
     "status": "not_sent",
     "reason": "local_reference_path_missing_from_service_repository_working_directory",
     "billable_request_sent": false
   },
   "attempts": [
     {
-      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v5-agent",
+      "idempotency_key": "redacted",
       "transport": "agent_json",
       "request_mode": "images-non-stream",
       "status": "failed",
@@ -27,7 +27,7 @@
       "artifact_count": 0
     },
     {
-      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v6-agent",
+      "idempotency_key": "redacted",
       "transport": "agent_json",
       "request_mode": "images-non-stream",
       "status": "failed",
@@ -37,7 +37,7 @@
       "artifact_count": 0
     },
     {
-      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v7-agent-sse",
+      "idempotency_key": "redacted",
       "transport": "agent_json",
       "request_mode": "images-sse",
       "status": "failed",
@@ -47,7 +47,7 @@
       "artifact_count": 0
     },
     {
-      "idempotency_key": "hei-mao-fortune-20260816-look-cardinals-v8",
+      "idempotency_key": "redacted",
       "transport": "page_sse",
       "request_mode": "images-sse",
       "status": "failed",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v10",
+      "idempotency_key": "redacted",
       "transport": "page_sse",
       "request_mode": "images-sse",
       "status": "failed",
