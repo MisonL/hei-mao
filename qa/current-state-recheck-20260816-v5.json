@@ -1,0 +1,73 @@
+{
+  "schema_version": 5,
+  "checked_at": "2026-08-16T14:30:00Z",
+  "checked_commit": "13489b29597ceef1a10f93177a0f6922b75b39bb",
+  "scope": "Eight-role local release gates, current PetDex boundary and Codex App visibility boundary",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "local_release_gates": {
+    "atlas_require_v2": "pass_all_eight_roles",
+    "atlas_errors": 0,
+    "atlas_warnings": 0,
+    "sprite_contract": "1536x2288 RGBA 8x11 spriteVersionNumber=2",
+    "transparent_rgb_residue": 0,
+    "hatch_pet_tests": {"passed": 28, "failed": 0, "errors": 0, "warnings": "Pillow deprecation notices only"},
+    "installer_cross_platform": "bash_and_powershell_pass_for_all_eight_roles",
+    "unknown_slug_rejection": "pass"
+  },
+  "visual_qa": {
+    "fortune": {
+      "status": "accept_minor_warnings",
+      "atlas_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
+      "cardinal_gates": "pass",
+      "strict_majority_pass": false,
+      "strict_majority_unresolved": ["horizontal-1.A", "vertical-7.A", "vertical-7.B"],
+      "evidence": "qa/hei-mao-fortune/final-visual-qa.json"
+    },
+    "traveler": {
+      "status": "accept_minor_warnings",
+      "atlas_sha256": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592",
+      "cardinal_gates": "pass",
+      "evidence": "qa/hei-mao-traveler/final-visual-qa.json"
+    }
+  },
+  "directory_parity": {
+    "roots": ["repository", "codex-pets", "petdex-pets"],
+    "roles": 8,
+    "pet_json_sha256_match": true,
+    "spritesheet_sha256_match": true
+  },
+  "remote_sync": {
+    "github_main": "13489b29597ceef1a10f93177a0f6922b75b39bb",
+    "gitlab_main": "13489b29597ceef1a10f93177a0f6922b75b39bb"
+  },
+  "petdex": {
+    "manifest_evidence": "qa/petdex-live-recheck-20260816-v4.json",
+    "fortune_edit_evidence": "qa/petdex-fortune-edit-recheck-20260816.json",
+    "fortune_public": false,
+    "traveler_public": false,
+    "existing_public_v2_sync": "not_reconfirmed_after_manifest_refresh",
+    "pending_review_must_not_be_retried": true
+  },
+  "codex_app": {
+    "evidence": "qa/codex-app-boundary-recheck-20260816.json",
+    "visual_acceptance": "open",
+    "target_pet_settings_accessible": false,
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "local_eight_role_gates_pass_with_reviewed_minor_warnings; PetDex_public_sync_and_Codex_App_visual_acceptance_remain_open"
+}
