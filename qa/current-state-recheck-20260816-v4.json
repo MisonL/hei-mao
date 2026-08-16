@@ -1,11 +1,11 @@
 {
   "schema_version": 4,
   "checked_at": "2026-08-16T13:46:00Z",
-  "checked_base_commit": "736f08ca4892f6bdcd96550b0449f638a5c06cf1",
+  "checked_commit": "4dc79b63821da3b519874acdc7f060eaa4e47e23",
   "scope": "Fortune v2 deterministic reassembly, package parity, installer and full local atlas regression",
   "git": {
     "diff_check": "pass",
-    "worktree_state": "scoped_changes_pending_commit",
+    "worktree_state": "clean",
     "scope": [
       "pets/hei-mao-fortune/spritesheet.webp",
       "install.sh",
