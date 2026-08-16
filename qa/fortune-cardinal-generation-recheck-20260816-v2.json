@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T05:33:56Z",
+  "scope": "Fortune cardinal anchor generation recheck after local image service recovery",
+  "service_contract": {
+    "capabilities": "pass",
+    "agent_edit_contract": "pass",
+    "effective_request_modes": ["images-non-stream", "images-sse"],
+    "recommended_concurrency": 1,
+    "billable_requests_allowed_by_task": true
+  },
+  "preflight": {
+    "idempotency_key": "hei-mao-fortune-20260816-cardinals-v9",
+    "status": "not_sent",
+    "reason": "local_reference_path_missing_from_service_repository_working_directory",
+    "billable_request_sent": false
+  },
+  "attempts": [
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v5-agent",
+      "transport": "agent_json",
+      "request_mode": "images-non-stream",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0
+    },
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v6-agent",
+      "transport": "agent_json",
+      "request_mode": "images-non-stream",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0
+    },
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v7-agent-sse",
+      "transport": "agent_json",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0
+    },
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-look-cardinals-v8",
+      "transport": "page_sse",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0,
+      "diagnostics": {
+        "sse_log": "request_started_then_request_failed",
+        "agent_state_found": false
+      }
+    },
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v10",
+      "transport": "page_sse",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "page_sse_failed",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0,
+      "started_at": "2026-08-16T05:33:38.822Z",
+      "completed_at": "2026-08-16T05:33:56.321Z",
+      "elapsed_ms": 17499,
+      "diagnostics": {
+        "page_request_found": false,
+        "agent_state_found": false,
+        "diagnosis_result": "no_recoverable_task_or_artifact"
+      }
+    }
+  ],
+  "result": "no_cardinal_artifact_produced_after_five_billable_attempts; v9 was local preflight only; look-cardinals remains pending",
+  "next_action": "Do not package or publish a candidate. Wait for a confirmed upstream recovery, then retry with a new idempotency key and run deterministic plus visual QA before replacing any atlas rows.",
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  }
+}
