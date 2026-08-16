@@ -107,8 +107,8 @@
     }
   },
   "remote_sync": {
-    "github_main": "1c5926060b29d78c02d38e3dd016ac8edf9015dd",
-    "gitlab_main": "1c5926060b29d78c02d38e3dd016ac8edf9015dd",
+    "github_main": "ef1a7cab679148568bfb1d345491b78952c3776e",
+    "gitlab_main": "ef1a7cab679148568bfb1d345491b78952c3776e",
     "local_main_matches_both": true,
     "worktree_clean": true
   },
