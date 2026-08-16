@@ -12,6 +12,8 @@
     "direction_sheet": "qa/hei-mao-fortune/look-directions.png",
     "direction_semantics": "qa/hei-mao-fortune/direction-semantics.json",
     "blind_validation": "qa/hei-mao-fortune/direction-blind-validation.json",
+    "blind_verdicts": "qa/hei-mao-fortune/direction-blind-verdicts.json",
+    "fresh_blind_reviewer": "qa/hei-mao-fortune/direction-blind-verdicts-c.json",
     "blind_resolution": "qa/hei-mao-fortune/blind-review-resolution.json",
     "continuity": "qa/hei-mao-fortune/look-continuity.json",
     "standard_review": "qa/hei-mao-fortune/review.json",
@@ -27,7 +29,7 @@
     "identity_or_scale_failure": false
   },
   "warnings": [
-    "horizontal-1 以及 157.5、202.5 等中间方向存在少量盲测歧义或轴向分歧，已由标注正常尺寸回环复核接受。",
+    "horizontal-1.A 和 vertical-7.A/B 在三份盲测中未形成严格多数；另有 157.5、202.5 等中间方向存在少量轴向分歧，均已由标注正常尺寸回环复核并保留为 minor warning。",
     "022.5->045、067.5->090、157.5->180、202.5->225 和 337.5->000 的连续性指标为局部 outlier，但视觉上保持身份、比例和方向语义。",
     "135、157.5、180 的透明行是开放负空间；连通性复核未发现封闭透明主体洞。"
   ],

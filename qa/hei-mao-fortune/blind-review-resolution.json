@@ -2,6 +2,10 @@
   "schema_version": 1,
   "blind_validation": "qa/hei-mao-fortune/direction-blind-validation.json",
   "blind_validation_ok": true,
+  "blind_verdicts": "qa/hei-mao-fortune/direction-blind-verdicts.json",
+  "fresh_reviewer": "qa/hei-mao-fortune/direction-blind-verdicts-c.json",
+  "strict_majority_pass": false,
+  "strict_majority_unresolved": ["horizontal-1.A", "vertical-7.A", "vertical-7.B"],
   "cardinal_hard_gates": {
     "000_vs_180": "pass",
     "090_vs_270": "pass"
@@ -21,7 +25,7 @@
   ],
   "decision": "accept",
   "severity": "minor",
-  "reviewed_by": "independent_visual_review_workers; parent",
+  "reviewed_by": "independent_visual_review_workers; fresh reviewer C; parent",
   "hard_failures": [],
-  "resolution": "保留当前 row10 v29 与 v2 标准行组成的图集，不重生成单个方向 cell，也不进行第二次 despill。"
+  "resolution": "保留当前 row10 v29 与 v2 标准行组成的图集，不重生成单个方向 cell，也不进行第二次 despill；三份盲测中三个中间方向单元没有严格多数，按标注正常尺寸图进行人工复核并保留为 minor warning。"
 }

@@ -1,228 +1,129 @@
 {
+  "schema_version": 2,
+  "atlas_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
+  "reviewers": [
+    "qa/hei-mao-fortune/direction-blind-verdicts-a.json",
+    "qa/hei-mao-fortune/direction-blind-verdicts-b.json",
+    "qa/hei-mao-fortune/direction-blind-verdicts-c.json"
+  ],
+  "strict_majority_pass": false,
+  "strict_majority_unresolved": [
+    "horizontal-1.A",
+    "vertical-7.A",
+    "vertical-7.B"
+  ],
   "pairs": [
     {
       "pair": "horizontal-1",
-      "A": "screen-left",
+      "A": "screen-right",
       "B": "screen-left",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "screen-left": 2,
-          "ambiguous": 1
-        },
-        "B": {
-          "screen-left": 2,
-          "screen-right": 1
-        }
-      }
+      "reason": "B has strict majority; A is a three-way tie and was resolved by labeled visual review.",
+      "votes": {"A":{"screen-left":1,"ambiguous":1,"screen-right":1},"B":{"screen-left":3}},
+      "resolution": {"A":"labeled_visual_review","B":"strict_majority"}
     },
     {
       "pair": "horizontal-2",
       "A": "screen-left",
       "B": "screen-right",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "screen-left": 3
-        },
-        "B": {
-          "screen-right": 3
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"screen-left":3},"B":{"screen-right":3}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "horizontal-3",
       "A": "screen-right",
       "B": "screen-left",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "screen-right": 3
-        },
-        "B": {
-          "screen-left": 3
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"screen-right":3},"B":{"screen-left":3}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "horizontal-4",
       "A": "screen-left",
       "B": "screen-right",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "screen-left": 3
-        },
-        "B": {
-          "screen-right": 3
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"screen-left":3},"B":{"screen-right":3}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "horizontal-5",
       "A": "screen-right",
       "B": "screen-left",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "screen-right": 2,
-          "screen-left": 1
-        },
-        "B": {
-          "screen-left": 2,
-          "screen-right": 1
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"screen-right":3},"B":{"screen-left":3}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "horizontal-6",
       "A": "screen-right",
       "B": "screen-left",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "screen-right": 2,
-          "screen-left": 1
-        },
-        "B": {
-          "screen-left": 2,
-          "screen-right": 1
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"screen-right":3},"B":{"screen-left":3}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "horizontal-7",
       "A": "screen-left",
       "B": "screen-right",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "screen-left": 2
-        },
-        "B": {
-          "screen-right": 2,
-          "ambiguous": 1
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"screen-left":2,"ambiguous":1},"B":{"screen-right":3}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "vertical-1",
       "A": "up",
       "B": "down",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "up": 2
-        },
-        "B": {
-          "ambiguous": 1,
-          "down": 2
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"up":2,"ambiguous":1},"B":{"down":2,"ambiguous":1}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "vertical-2",
-      "A": "ambiguous",
-      "B": "ambiguous",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "down": 1,
-          "up": 1
-        },
-        "B": {
-          "ambiguous": 1,
-          "up": 1,
-          "down": 1
-        }
-      }
+      "A": "down",
+      "B": "up",
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"down":2,"ambiguous":1},"B":{"up":2,"ambiguous":1}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "vertical-3",
       "A": "up",
       "B": "down",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "up": 2
-        },
-        "B": {
-          "ambiguous": 1,
-          "down": 2
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"up":2,"ambiguous":1},"B":{"down":2,"ambiguous":1}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "vertical-4",
-      "A": "ambiguous",
-      "B": "ambiguous",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "down": 1,
-          "up": 1
-        },
-        "B": {
-          "ambiguous": 1,
-          "up": 1,
-          "down": 1
-        }
-      }
+      "A": "down",
+      "B": "up",
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"down":2,"ambiguous":1},"B":{"up":2,"ambiguous":1}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "vertical-5",
       "A": "up",
       "B": "down",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "up": 2
-        },
-        "B": {
-          "ambiguous": 1,
-          "down": 2
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"up":2,"ambiguous":1},"B":{"down":2,"ambiguous":1}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "vertical-6",
       "A": "up",
       "B": "down",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "up": 2
-        },
-        "B": {
-          "ambiguous": 1,
-          "down": 2
-        }
-      }
+      "reason": "strict majority of three independent blind reviews",
+      "votes": {"A":{"up":2,"ambiguous":1},"B":{"down":2,"ambiguous":1}},
+      "resolution": {"A":"strict_majority","B":"strict_majority"}
     },
     {
       "pair": "vertical-7",
-      "A": "ambiguous",
-      "B": "ambiguous",
-      "reason": "strict majority of independent blind reviews",
-      "votes": {
-        "A": {
-          "ambiguous": 1,
-          "up": 1,
-          "down": 1
-        },
-        "B": {
-          "ambiguous": 1,
-          "down": 1,
-          "up": 1
-        }
-      }
+      "A": "down",
+      "B": "up",
+      "reason": "both sides are three-way ties; labeled visual review retained the hidden answer direction and recorded a warning",
+      "votes": {"A":{"ambiguous":1,"up":1,"down":1},"B":{"ambiguous":1,"down":1,"up":1}},
+      "resolution": {"A":"labeled_visual_review","B":"labeled_visual_review"}
     }
   ]
 }
