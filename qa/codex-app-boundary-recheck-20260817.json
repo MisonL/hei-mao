@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-16T18:10:14Z",
+  "scope": "ChatGPT/Codex App 宠物设置入口只读可访问性边界复核",
+  "application_probe": {
+    "process_visible": true,
+    "window_count": 0,
+    "menu_bar_item_count": 7,
+    "settings_menu_item_present": true,
+    "settings_menu_item_enabled": true,
+    "settings_action_attempted": true,
+    "pet_settings_visible": false,
+    "pet_animation_visible": false,
+    "process_was_stopped_or_restarted": false,
+    "chat_content_or_agent_state_changed": false
+  },
+  "limitations": [
+    "ChatGPT 进程存在但没有可访问窗口；打开设置菜单项后窗口数仍为 0。",
+    "没有执行宠物刷新、角色切换、消息发送、退出、重启或 Codex 进程信号操作。"
+  ],
+  "result": "settings_menu_accessible_but_pet_view_unavailable; visual_acceptance_remains_open"
+}
