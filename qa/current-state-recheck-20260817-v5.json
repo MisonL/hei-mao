@@ -1,7 +1,7 @@
 {
   "schema_version": 11,
-  "checked_at": "2026-08-16T17:50:15Z",
-  "tested_commit": "7763f2e4ac692da48db275b1d6170e76bf45beb5",
+  "checked_at": "2026-08-16T17:56:10Z",
+  "tested_commit": "11295dcd5e0381af86effd16f91769b6a618d08b",
   "scope": "当前八角色本地门禁、隔离安装器、PetDex 公开资源和上游 Hook 边界增量复核",
   "local_release_gates": {
     "atlas_contract": {
@@ -71,7 +71,7 @@
       }
     },
     "tests": {
-      "hatch_pet_unittest": "not rerun; exact validation runtime has no pytest module; prior evidence remains 28 passed",
+      "hatch_pet_unittest": "28 passed, 0 failed, 0 errors in isolated uv runtime; 37 Pillow deprecation warnings",
       "bash_n": "pass",
       "shellcheck": "pass",
       "powershell_parse": "pass"

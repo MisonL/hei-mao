@@ -60,7 +60,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。安装器和本地主线状态以最新的 `qa/current-state-recheck-20260817-v5.json` 为准，PetDex manifest、公开资源和发布边界以该快照及 `qa/petdex-live-recheck-20260816-v5.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
 
-本机当前保留八个通过 v2 合同和最终视觉门禁的角色，仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 一致。2026-08-17（北京时间）按各角色实际色键重新执行的八包结构门禁、连续性、方向/盲测、隔离安装器和 parity 见 `qa/current-state-recheck-20260817-v5.json`；Skill 的 28 项测试沿用先前已通过证据，本轮 exact Python runtime 未安装 pytest，未重复宣称通过；视觉 warning 和 App 边界仍按专项证据标注，未把不可见的 App 设置视图误报为完成。此前 2026-08-14 的详细证据仍用于追溯。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的最新图集与双目录复核见 `qa/hei-mao-fortune/run-summary.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
+本机当前保留八个通过 v2 合同和最终视觉门禁的角色，仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 一致。2026-08-17（北京时间）按各角色实际色键重新执行的八包结构门禁、连续性、方向/盲测、隔离安装器和 parity 见 `qa/current-state-recheck-20260817-v5.json`；Skill 的 28 项测试已在隔离 uv runtime 中通过（28 passed，37 条 Pillow 弃用告警），视觉 warning 和 App 边界仍按专项证据标注，未把不可见的 App 设置视图误报为完成。此前 2026-08-14 的详细证据仍用于追溯。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的最新图集与双目录复核见 `qa/hei-mao-fortune/run-summary.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
 本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；最新安装器和本地主线证据见 `qa/current-state-recheck-20260817-v5.json`，当前 manifest、公开资源和发布边界见同一快照及 `qa/petdex-live-recheck-20260816-v5.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Petdex Desktop `v0.8.0` 已完成官方签名校验、标准目录安装、Pets 设置可见性、动画帧变化、角色切换和双屏气泡跟随复测；已验证旅行家切换到厨师后恢复旅行家，宠物从副屏移动到主屏时气泡同步移动且保持间距，运行证据见 `qa/petdex-desktop-live-recheck-20260814-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`。本机 Codex App 当前只读边界见 `qa/codex-app-boundary-recheck-20260816.json`，尚未暴露宠物设置视图。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复；开放的 PR #710 也未改变 stdin EOF 语义。
 
@@ -372,7 +372,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260817-v2.json`: 提交 `88d1120` 上重新执行的八角色 v2 结构/连续性门禁、28 项测试、安装器静态检查、三目录 parity、PetDex 资源重试结果、上游 issue/PR 和 Codex App 未完成边界，不含本机环境信息
 - `qa/current-state-recheck-20260817-v3.json`: 提交 `577712c` 上的方向语义字段统一、QA 摘要索引、预览帧数、请求标识脱敏和八角色最终本地复核，不含本机环境信息
 - `qa/current-state-recheck-20260817-v4.json`: 提交 `1c59260` 上按各角色实际色键重跑的八角色 v2 门禁、连续性、方向/盲测、三目录 parity、最新 PetDex manifest、#689 和 Codex App 边界，不含本机环境信息
-- `qa/current-state-recheck-20260817-v5.json`: 提交 `7763f2e` 上的八角色实时 atlas/连续性/方向门禁、隔离安装器、公开资源 CDN、#689 与开放 PR #710 边界；明确记录 Skill 测试未因缺少 pytest 重跑、公共 GitLab 未完成认证复核，不含本机环境信息
+- `qa/current-state-recheck-20260817-v5.json`: 提交 `11295dc` 上的八角色实时 atlas/连续性/方向门禁、隔离安装器、公开资源 CDN、#689 与开放 PR #710 边界；记录 Skill 测试在隔离 uv runtime 中 28 项通过、公共 GitLab 未完成认证复核，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
