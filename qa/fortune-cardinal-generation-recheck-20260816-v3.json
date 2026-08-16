@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T06:36:20Z",
+  "scope": "Fortune cardinal anchor generation recheck after two image transport failures",
+  "service_contract": {
+    "capabilities": "pass",
+    "agent_edit_contract": "pass",
+    "effective_request_modes": ["images-non-stream", "images-sse"],
+    "recommended_concurrency": 1,
+    "billable_requests_allowed_by_task": true
+  },
+  "attempts": [
+    {
+      "idempotency_key_label": "v11-agent-edit",
+      "transport": "agent_json",
+      "request_mode": "images-non-stream",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0,
+      "diagnostics_state_recorded": true
+    },
+    {
+      "idempotency_key_label": "v12-page-sse",
+      "transport": "page_sse",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "page_sse_failed",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0,
+      "diagnostics_state_recorded": false
+    },
+    {
+      "idempotency_key_label": "v13-agent-sse",
+      "transport": "agent_json",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0,
+      "diagnostics_state_recorded": true
+    }
+  ],
+  "result": "three_new_cardinal_attempts_failed_without_artifact; existing Fortune atlas unchanged; look-cardinals remains pending",
+  "next_action": "Wait for confirmed upstream recovery, then retry once with a new idempotency key and run cardinal extraction plus visual and deterministic QA before replacing any atlas rows.",
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "artifact_identifiers": false
+  }
+}
