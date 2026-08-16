@@ -1,7 +1,7 @@
 {
   "schema_version": 11,
-  "checked_at": "2026-08-16T17:56:10Z",
-  "tested_commit": "11295dcd5e0381af86effd16f91769b6a618d08b",
+  "checked_at": "2026-08-16T18:02:50Z",
+  "tested_commit": "b86da01d9a07c787185fd3ad620d5aa10691b332",
   "scope": "当前八角色本地门禁、隔离安装器、PetDex 公开资源和上游 Hook 边界增量复核",
   "local_release_gates": {
     "atlas_contract": {
@@ -94,10 +94,11 @@
     }
   },
   "remote_sync": {
-    "github_main": "7763f2e4ac692da48db275b1d6170e76bf45beb5",
-    "configured_gitlab_mirror_main": "7763f2e4ac692da48db275b1d6170e76bf45beb5",
+    "github_main": "b86da01d9a07c787185fd3ad620d5aa10691b332",
+    "configured_gitlab_mirror_main": "b86da01d9a07c787185fd3ad620d5aa10691b332",
+    "configured_gitlab_mirror_visibility": "public",
     "local_main_matches_verified_refs": true,
-    "public_gitlab_reprobe": "not verified; unauthenticated request redirected to sign-in",
+    "gitlab_com_namespace": "not separately authenticated; configured public mirror is the verified GitLab publication target",
     "worktree_clean": true
   },
   "petdex": {
@@ -168,5 +169,5 @@
     "credentials": false,
     "request_identifiers": false
   },
-  "result": "local eight-role gates, parity and isolated installers pass; three PetDex legacy atlas edits, Fortune/Traveler review, public GitLab verification, issue 689, PR 710 completion and Codex App visual acceptance remain open boundaries"
+  "result": "local eight-role gates, parity and isolated installers pass; configured GitLab publication is public and synced; three PetDex legacy atlas edits, Fortune/Traveler review, issue 689, PR 710 completion and Codex App visual acceptance remain open boundaries"
 }
