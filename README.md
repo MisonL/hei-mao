@@ -398,6 +398,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-public-resource-recheck-20260814-v4.json`: 历史公开 manifest、六个公开角色实际下载资源的 SHA/尺寸和 metadata 字节/语义对照
 - `qa/petdex-public-resource-recheck-20260814-v5.json`: 最新实时公开 manifest、七个 `hei-mao*` 条目和本地角色 CDN SHA 对照
 - `qa/codex-app-boundary-recheck-20260814-v4.json`: 重启主机后的只读 Codex App 可访问性边界，不含本机环境信息
+- `qa/codex-app-boundary-recheck-20260816.json`: 当前主机只读 System Events 查询；目标 Codex App 宠物设置仍未暴露，不含本机环境信息
 - `qa/local-package-contract-recheck-20260814-v5.json`: 八角色 pet.json 契约、三目录 SHA、Bash/PowerShell 安装器和 QA JSON 复核，不含本机环境信息
 - `qa/petdex-edit-sync-recheck-20260814.json`: `hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的已有 slug 编辑队列及提交后 manifest 状态
 - `qa/petdex-edit-submit-recheck-20260813.json`: `hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的已有 slug 编辑提交、审核队列和提交后 manifest 状态复核

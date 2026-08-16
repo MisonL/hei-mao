@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T14:30:00Z",
+  "evidence_commit": "2439343",
+  "probe": "macOS System Events read-only accessibility query",
+  "observed_processes": {
+    "ChatGPT": {"windows": 0, "menu_bar_items": 0},
+    "Codex": "process_not_visible",
+    "PetDex": "process_not_visible",
+    "petdex-desktop-native": "process_not_visible"
+  },
+  "target_pet_settings_accessible": false,
+  "visual_acceptance": "open",
+  "process_mutation": "none",
+  "limitations": [
+    "The query only read process visibility, window counts and menu-bar counts.",
+    "No app launch, quit, signal, input event, configuration change, refresh action or screen capture was attempted.",
+    "PetDex Desktop animation, role-selection and multidisplay evidence does not replace a Codex App settings view."
+  ],
+  "result": "read_only_probe_could_not_expose_codex_pet_settings_view"
+}
