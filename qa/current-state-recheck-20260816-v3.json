@@ -1,0 +1,67 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-08-16T06:52:00Z",
+  "checked_commit": "9699e72e3e1d94dcbebb0307575363e1bca40162",
+  "scope": "post-QA-commit local package, remote parity and release-boundary recheck",
+  "git": {
+    "worktree_clean": true,
+    "diff_check": "pass",
+    "github_main": "9699e72e3e1d94dcbebb0307575363e1bca40162",
+    "gitlab_main": "9699e72e3e1d94dcbebb0307575363e1bca40162",
+    "main_refs_equal": true
+  },
+  "atlas_gate": {
+    "runtime": "hatch-pet bundled runtime",
+    "command": "validate_atlas.py --chroma-key <role key> --require-v2",
+    "all_pass": true,
+    "roles": 8,
+    "dimensions": "1536x2288",
+    "layout": "8x11",
+    "sprite_version_number": 2,
+    "transparent_rgb_residue_pixels": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p 'test_*.py' -v",
+    "passed": 28,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 37,
+    "warning_kind": "Pillow deprecation notices only"
+  },
+  "installer": {
+    "bash_syntax": "pass",
+    "powershell_ast": "pass",
+    "supported_roles": 8,
+    "all_role_checks": "pass"
+  },
+  "directory_parity": {
+    "roots": ["repository", "codex-pets", "petdex-pets"],
+    "roles": 8,
+    "pet_json_sha256_match": true,
+    "spritesheet_sha256_match": true
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260816-v3.json",
+    "cli_version": "1.2.2",
+    "manifest_total": 4523,
+    "public_v2_sync": false,
+    "pending_existing_slug_edits": ["hei-mao", "hei-mao-quality", "hei-mao-foodie"],
+    "pending_new_submissions": ["hei-mao-fortune", "hei-mao-traveler"],
+    "fortune_cardinal_evidence": "qa/fortune-cardinal-generation-recheck-20260816-v3.json"
+  },
+  "codex_app_boundary": {
+    "settings_view": "not_rechecked",
+    "desktop_evidence_is_not_app_acceptance": true,
+    "no_process_mutation": true
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false,
+    "artifact_identifiers": false
+  },
+  "result": "local_v2_gates_and_remote_main_parity_pass; PetDex public sync, Fortune cardinal generation and Codex App settings acceptance remain open"
+}
