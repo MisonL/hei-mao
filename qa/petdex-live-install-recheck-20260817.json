@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T18:12:58Z",
+  "scope": "PetDex CLI 最新版本隔离安装六个公开黑毛角色",
+  "cli": {
+    "version": "1.2.2",
+    "manifest_sha256": "c327eef87d902bfba88803bce20664253b44726e57abc645b9f0bf4c9ea2b373",
+    "command_exit_code": 0
+  },
+  "requested_slugs": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery"
+  ],
+  "installation": {
+    "installed_roles": 6,
+    "target_roots": ["petdex", "codex"],
+    "all_ids_match_slugs": true,
+    "all_sprite_version_numbers": 2,
+    "all_dimensions": "1536x2288",
+    "all_modes": "RGBA",
+    "both_roots_file_parity": true
+  },
+  "downloaded_public_resource_comparison": {
+    "hei-mao": {
+      "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "metadata_matches_repository": true,
+      "sprite_matches_repository": false
+    },
+    "hei-mao-quality": {
+      "pet_json_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+      "spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "metadata_matches_repository": false,
+      "sprite_matches_repository": false
+    },
+    "hei-mao-butler": {
+      "pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "metadata_matches_repository": true,
+      "sprite_matches_repository": true
+    },
+    "hei-mao-chef": {
+      "pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "metadata_matches_repository": true,
+      "sprite_matches_repository": true
+    },
+    "hei-mao-foodie": {
+      "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "spritesheet_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "metadata_matches_repository": true,
+      "sprite_matches_repository": false
+    },
+    "hei-mao-delivery": {
+      "pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "spritesheet_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "metadata_matches_repository": true,
+      "sprite_matches_repository": true
+    }
+  },
+  "pending_slugs_not_attempted": ["hei-mao-fortune", "hei-mao-traveler"],
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "isolated_cli_install_pass; public_installable_resources_are_old_for_three_roles; pending_slugs_not_retried"
+}

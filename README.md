@@ -49,7 +49,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | 已提交，等待审核 |
 | `hei-mao-traveler` | 旅行家 | v2 已验证，可本地安装 | 已提交，审核中，不在公开 manifest |
 
-公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4523；公开资源下载和 v2 结构验证见 `qa/petdex-live-recheck-20260816-v5.json`。`hei-mao-delivery`、`hei-mao-butler` 和 `hei-mao-chef` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的线上图集仍未切换到仓库版本。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未出现在公开 manifest。提交状态和历史编辑记录见 `qa/petdex-fortune-submit-recheck-20260813.json`、`qa/petdex-traveler-submit-recheck-20260814.json` 与 `qa/petdex-edit-sync-recheck-20260814.json`；历史快照只用于追溯。
+公开 manifest 当前包含六个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4523；公开资源下载和 v2 结构验证见 `qa/petdex-live-recheck-20260816-v5.json`，最新 CLI 隔离安装见 `qa/petdex-live-install-recheck-20260817.json`。`hei-mao-delivery`、`hei-mao-butler` 和 `hei-mao-chef` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的线上图集仍未切换到仓库版本；CLI 安装成功不代表这三个线上资源已切换。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未出现在公开 manifest。提交状态和历史编辑记录见 `qa/petdex-fortune-submit-recheck-20260813.json`、`qa/petdex-traveler-submit-recheck-20260814.json` 与 `qa/petdex-edit-sync-recheck-20260814.json`；历史快照只用于追溯。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -374,6 +374,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260817-v4.json`: 提交 `1c59260` 上按各角色实际色键重跑的八角色 v2 门禁、连续性、方向/盲测、三目录 parity、最新 PetDex manifest、#689 和 Codex App 边界，不含本机环境信息
 - `qa/current-state-recheck-20260817-v5.json`: 证据提交 `9a7a975`（八角色门禁基线 `b86da01`）上的实时 atlas/连续性/方向门禁、隔离安装器、公开资源 CDN、#689 与开放 PR #710 边界；记录 Skill 测试在隔离 uv runtime 中 28 项通过、配置的 GitLab 镜像项目为 public 且已同步，不含本机环境信息
 - `qa/codex-app-boundary-recheck-20260817.json`: ChatGPT/Codex App 进程、菜单栏和设置菜单可见性复核；窗口数为 0，宠物视图仍不可访问，未停止或重启 Codex 进程，不含本机环境信息
+- `qa/petdex-live-install-recheck-20260817.json`: PetDex CLI `1.2.2` 隔离安装六个公开角色到两个目标根目录的真实结果、v2 尺寸/ID/parity 和线上旧资源 SHA 对照，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
