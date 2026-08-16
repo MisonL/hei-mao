@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T05:21:17Z",
+  "scope": "Fresh PetDex manifest and public resource SHA recheck",
+  "cli": {
+    "version": "1.2.2",
+    "list_exit_code": 0,
+    "list_total": 4523
+  },
+  "manifest": {
+    "source_url": "https://petdex.dev/api/manifest",
+    "final_url": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "http_status": 200,
+    "generated_at": "2026-08-16T00:51:18.804Z",
+    "sha256": "dc4f2e35e4e61bc1d17d7a8cb59a64ca16120d86ef14275456ecb372207e6fdd",
+    "total": 4523
+  },
+  "owned_entries": [
+    {
+      "slug": "hei-mao",
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "remote_metadata_http_status": 200,
+      "remote_spritesheet_http_status": 200,
+      "local_metadata_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "remote_metadata_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+      "local_spritesheet_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "remote_spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "metadata_equal": true,
+      "spritesheet_equal": false,
+      "classification": "public_entry_old_spritesheet"
+    },
+    {
+      "slug": "hei-mao-quality",
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "remote_metadata_http_status": 200,
+      "remote_spritesheet_http_status": 200,
+      "local_metadata_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "remote_metadata_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+      "local_spritesheet_sha256": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "remote_spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "metadata_equal": false,
+      "spritesheet_equal": false,
+      "classification": "public_entry_old_metadata_and_spritesheet"
+    },
+    {
+      "slug": "hei-mao-butler",
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "remote_metadata_http_status": 200,
+      "remote_spritesheet_http_status": 200,
+      "local_metadata_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "remote_metadata_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+      "local_spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "remote_spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "metadata_equal": true,
+      "spritesheet_equal": true,
+      "classification": "public_entry_resource_match"
+    },
+    {
+      "slug": "hei-mao-chef",
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "remote_metadata_http_status": 200,
+      "remote_spritesheet_http_status": 200,
+      "local_metadata_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "remote_metadata_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+      "local_spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "remote_spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "metadata_equal": true,
+      "spritesheet_equal": true,
+      "classification": "public_entry_resource_match"
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "manifest_sprite_version": 1,
+      "remote_pet_json_sprite_version": 2,
+      "remote_metadata_http_status": 200,
+      "remote_spritesheet_http_status": 200,
+      "local_metadata_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "remote_metadata_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+      "local_spritesheet_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+      "remote_spritesheet_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "metadata_equal": true,
+      "spritesheet_equal": false,
+      "classification": "public_entry_old_spritesheet"
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "manifest_sprite_version": 2,
+      "remote_pet_json_sprite_version": 2,
+      "remote_metadata_http_status": 200,
+      "remote_spritesheet_http_status": 200,
+      "local_metadata_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "remote_metadata_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+      "local_spritesheet_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "remote_spritesheet_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "metadata_equal": true,
+      "spritesheet_equal": true,
+      "classification": "public_entry_resource_match"
+    }
+  ],
+  "historical_duplicate": {
+    "slug": "hei-mao-2",
+    "manifest_sprite_version": 1,
+    "remote_pet_json_id": "hei-mao",
+    "remote_pet_json_sprite_version": 2,
+    "classification": "historical_duplicate_entry"
+  },
+  "new_roles": {
+    "hei-mao-fortune": {
+      "public_manifest_present": false,
+      "online_install_allowed": false,
+      "submission_state": "submitted_and_held_for_review",
+      "state_source": "qa/petdex-fortune-submit-recheck-20260813.json"
+    },
+    "hei-mao-traveler": {
+      "public_manifest_present": false,
+      "online_install_allowed": false,
+      "submission_state": "submitted_and_held_for_review",
+      "state_source": "qa/petdex-traveler-submit-recheck-20260814.json"
+    }
+  },
+  "release_boundary": {
+    "local_v2_packages": 8,
+    "public_v2_resource_sync": false,
+    "reason": "Three existing public entries still serve spritesheets whose SHA differs from the repository v2 package; Fortune and Traveler remain absent from the public manifest.",
+    "duplicate_submit_attempted": false
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "live_manifest_and_resource_sha_rechecked; public_v2_sync_incomplete"
+}
