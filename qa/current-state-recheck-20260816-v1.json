@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T04:20:37Z",
+  "checked_commit": "32c74e878c6eeb1b6f3582e87101e5b4e3db3428",
+  "scope": "post-reboot installer checksum and live PetDex manifest recheck",
+  "local_release": {
+    "roles": 8,
+    "installer_sha_fix": {
+      "target": "hei-mao-traveler",
+      "spritesheet_sha256": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592"
+    },
+    "package_sha256": {
+      "hei-mao": {
+        "pet_json": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+        "spritesheet": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a"
+      },
+      "hei-mao-quality": {
+        "pet_json": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+        "spritesheet": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f"
+      },
+      "hei-mao-butler": {
+        "pet_json": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+        "spritesheet": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"
+      },
+      "hei-mao-chef": {
+        "pet_json": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+        "spritesheet": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"
+      },
+      "hei-mao-foodie": {
+        "pet_json": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+        "spritesheet": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23"
+      },
+      "hei-mao-delivery": {
+        "pet_json": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+        "spritesheet": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"
+      },
+      "hei-mao-fortune": {
+        "pet_json": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+        "spritesheet": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71"
+      },
+      "hei-mao-traveler": {
+        "pet_json": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f",
+        "spritesheet": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592"
+      }
+    },
+    "installer_validation": {
+      "bash_syntax": "pass",
+      "powershell_parse": "pass",
+      "shell_isolation": "pass; eight roles and unsupported slug rejection",
+      "powershell_isolation": "pass; eight roles and unsupported slug rejection",
+      "installed_sha_matches_repository": true,
+      "temporary_targets_cleaned": true,
+      "process_mutation": "none"
+    }
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_generated_at": "2026-08-16T00:51:18.804Z",
+    "manifest_sha256": "dc4f2e35e4e61bc1d17d7a8cb59a64ca16120d86ef14275456ecb372207e6fdd",
+    "manifest_total": 4523,
+    "public_current_roles": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "historical_duplicates": ["hei-mao-2"],
+    "fortune_public": false,
+    "traveler_public": false,
+    "public_sprite_sha256": {
+      "hei-mao": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "hei-mao-quality": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "hei-mao-butler": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "hei-mao-chef": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "hei-mao-foodie": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "hei-mao-delivery": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"
+    },
+    "public_v2_matches_local": {
+      "hei-mao": false,
+      "hei-mao-quality": false,
+      "hei-mao-butler": true,
+      "hei-mao-chef": true,
+      "hei-mao-foodie": false,
+      "hei-mao-delivery": true
+    },
+    "pending_reviews": {
+      "existing_slug_edits": ["hei-mao", "hei-mao-quality", "hei-mao-foodie"],
+      "new_submissions": ["hei-mao-fortune", "hei-mao-traveler"]
+    }
+  },
+  "remaining_blockers": [
+    "PetDex CDN v2 edits remain queued for three existing slugs.",
+    "Fortune and Traveler remain held for PetDex review and are not in the public manifest.",
+    "Fortune cardinal generation attempts did not produce an artifact because the upstream image channel was unavailable."
+  ],
+  "result": "installer_checksum_and_cross_platform_validation_pass; PetDex publication and Fortune cardinal generation remain open"
+}
