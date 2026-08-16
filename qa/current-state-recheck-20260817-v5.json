@@ -1,6 +1,7 @@
 {
   "schema_version": 11,
-  "checked_at": "2026-08-16T18:02:50Z",
+  "checked_at": "2026-08-16T18:05:27Z",
+  "evidence_commit": "9a7a975be1c3919a3227515018e937e7c66fd118",
   "tested_commit": "b86da01d9a07c787185fd3ad620d5aa10691b332",
   "scope": "当前八角色本地门禁、隔离安装器、PetDex 公开资源和上游 Hook 边界增量复核",
   "local_release_gates": {
@@ -94,8 +95,8 @@
     }
   },
   "remote_sync": {
-    "github_main": "b86da01d9a07c787185fd3ad620d5aa10691b332",
-    "configured_gitlab_mirror_main": "b86da01d9a07c787185fd3ad620d5aa10691b332",
+    "github_main": "9a7a975be1c3919a3227515018e937e7c66fd118",
+    "configured_gitlab_mirror_main": "9a7a975be1c3919a3227515018e937e7c66fd118",
     "configured_gitlab_mirror_visibility": "public",
     "local_main_matches_verified_refs": true,
     "gitlab_com_namespace": "not separately authenticated; configured public mirror is the verified GitLab publication target",
