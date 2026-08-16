@@ -3,7 +3,7 @@
   "pet": "hei-mao-fortune",
   "sprite_version_number": 2,
   "spritesheet": "pets/hei-mao-fortune/spritesheet.webp",
-  "spritesheet_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71",
+  "spritesheet_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
   "layout": {
     "width": 1536,
     "height": 2288,
@@ -27,13 +27,13 @@
       "idempotency_key": "redacted",
       "request_id": "redacted",
       "artifact_id": "redacted",
-      "source_sha256": "a31f463f04228d0ad55fd69f2b392e9378a228e25855abc375acd238f846d749"
+      "source_sha256": "3469fb9ad3f7b1327be4fb2d3c6b92a0f6f5c65643bd60bce5e6b5bfb6990809"
     },
     "row_10": {
       "idempotency_key": "redacted",
       "request_id": "redacted",
       "artifact_id": "redacted",
-      "source_sha256": "bedef98ad75280ef83751023cf02edc998c61b1ffc578359a35fa344e407f9e3"
+      "source_sha256": "ab61c2e93af9eede7f4f441424c3e5560d9baa6e493c9d4617b6ef29e7697a43"
     },
     "running": {
       "idempotency_key": "redacted",

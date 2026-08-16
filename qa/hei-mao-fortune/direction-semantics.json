@@ -1,45 +1,49 @@
 {
   "schema_version": 1,
-  "atlas": "pets/hei-mao-fortune/spritesheet.webp",
-  "atlas_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71",
+  "atlas": "qa/candidate-v29-final-correct-base-v1/spritesheet-extended-despill.webp",
+  "atlas_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
   "reviewed_by": "independent_visual_review_workers; parent",
   "review_basis": [
-    "qa/hei-mao-fortune/look-directions.png",
-    "qa/hei-mao-fortune/contact-sheet-extended.png",
-    "qa/hei-mao-fortune/look-continuity.json",
-    "qa/hei-mao-fortune/direction-blind-validation.json"
+    "qa/candidate-v29-final-correct-base-v1/look-directions.png",
+    "qa/candidate-v29-final-correct-base-v1/contact-sheet-extended.png",
+    "qa/candidate-v29-final-correct-base-v1/look-continuity.json",
+    "qa/candidate-v29-final-correct-base-v1/direction-blind-validation.json"
   ],
   "directions": [
-    {"degree":"000","expected":"up","verdict":"pass","observed":"up","horizontal_axis":"screen-center","vertical_axis":"up","reason":"鼻吻和眼睛朝向画面上方，明确是上视 cardinal。"},
-    {"degree":"022.5","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"鼻吻开始向画面右侧偏移，同时保持上抬趋势。"},
-    {"degree":"045","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"头部和鼻吻位于右上象限，方向连续。"},
-    {"degree":"067.5","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"接近右侧 cardinal，鼻吻仍高于头部中心且无反转。"},
+    {"degree":"000","expected":"up","verdict":"pass","observed":"up","horizontal_axis":"screen-center","vertical_axis":"up","reason":"鼻吻和眼睛朝向画面上方，仰视 cardinal 清晰。"},
+    {"degree":"022.5","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"鼻吻向右偏移并保持上抬趋势。"},
+    {"degree":"045","expected":"up-right","verdict":"pass","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"up","reason":"头部和鼻吻处于右上象限，方向连续。"},
+    {"degree":"067.5","expected":"up-right","verdict":"warning","observed":"up-right","horizontal_axis":"screen-right","vertical_axis":"subtle-up","reason":"右轴清晰，上轴较弱但仍向 090 平滑过渡。"},
     {"degree":"090","expected":"right","verdict":"pass","observed":"right","horizontal_axis":"screen-right","vertical_axis":"screen-center","reason":"鼻吻、眼睛和头部轮廓明确朝向画面右侧。"},
-    {"degree":"112.5","expected":"down-right","verdict":"pass","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"down","reason":"鼻吻继续位于画面右侧并下沉，形成右下过渡。"},
-    {"degree":"135","expected":"down-right","verdict":"pass","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"down","reason":"头部朝右下，侧别和下视趋势均可见。"},
-    {"degree":"157.5","expected":"down-right","verdict":"pass","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"down","reason":"接近 180 度但仍保留右侧偏移，过渡没有反向。"},
-    {"degree":"180","expected":"down","verdict":"pass","observed":"down","horizontal_axis":"screen-center","vertical_axis":"down","reason":"鼻吻位于下方中心，明确是下视 cardinal。"},
-    {"degree":"202.5","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"从 180 度开始向画面左侧偏移并保持下视。"},
-    {"degree":"225","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"鼻吻位于左下象限，头部和道具侧别保持一致。"},
-    {"degree":"247.5","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"左侧轮廓逐步形成，鼻吻仍低于头部中心。"},
+    {"degree":"112.5","expected":"down-right","verdict":"warning","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"subtle-down","reason":"右侧面稳定，鼻吻开始下沉，向 180 连续。"},
+    {"degree":"135","expected":"down-right","verdict":"warning","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"subtle-down","reason":"右下象限保持，垂直下视 cue 较弱但没有反转。"},
+    {"degree":"157.5","expected":"down-right","verdict":"warning","observed":"down-right","horizontal_axis":"screen-right","vertical_axis":"subtle-down","reason":"接近 180 下视锚点，右侧偏移仍在且方向连续。"},
+    {"degree":"180","expected":"down","verdict":"pass","observed":"down","horizontal_axis":"screen-center","vertical_axis":"down","reason":"鼻吻位于下方中心，俯视 cardinal 清晰。"},
+    {"degree":"202.5","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"从 180 向画面左侧偏移并保持下视轴。"},
+    {"degree":"225","expected":"down-left","verdict":"pass","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"down","reason":"鼻吻处于左下象限，身份和道具侧别稳定。"},
+    {"degree":"247.5","expected":"down-left","verdict":"warning","observed":"down-left","horizontal_axis":"screen-left","vertical_axis":"subtle-down","reason":"左侧轴清晰，垂直下视 cue 较弱但向 270 连续。"},
     {"degree":"270","expected":"left","verdict":"pass","observed":"left","horizontal_axis":"screen-left","vertical_axis":"screen-center","reason":"鼻吻、眼睛和头部轮廓明确朝向画面左侧。"},
-    {"degree":"292.5","expected":"up-left","verdict":"pass","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"up","reason":"左侧 cardinal 后鼻吻抬高，进入左上过渡。"},
-    {"degree":"315","expected":"up-left","verdict":"pass","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"up","reason":"鼻吻和头部位于左上象限，身份与比例稳定。"},
-    {"degree":"337.5","expected":"up-left","verdict":"pass","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"up","reason":"仍保留左侧偏移并向 000 度平滑回环，无方向反转。"}
+    {"degree":"292.5","expected":"up-left","verdict":"warning","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"subtle-up","reason":"左侧轴清晰，上视 cue 较弱但保持左上象限。"},
+    {"degree":"315","expected":"up-left","verdict":"pass","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"up","reason":"鼻吻和头部位于左上象限，向 000 平滑收敛。"},
+    {"degree":"337.5","expected":"up-left","verdict":"warning","observed":"up-left","horizontal_axis":"screen-left","vertical_axis":"subtle-up","reason":"左侧偏移较轻，但仍是 000 前的左上过渡帧且无反转。"}
   ],
-  "cardinal_hard_gates": {
-    "000": "pass",
-    "090": "pass",
-    "180": "pass",
-    "270": "pass"
-  },
+  "cardinal_hard_gates": {"000":"pass","090":"pass","180":"pass","270":"pass"},
+  "all_expected_directions_have_verdicts": true,
+  "wrong_quadrant_or_reversal": false,
+  "hard_failures": [],
   "continuity_review": {
-    "report": "qa/hei-mao-fortune/look-continuity.json",
+    "report": "qa/candidate-v29-final-correct-base-v1/look-continuity.json",
     "verdict": "reviewed_warning",
     "accepted_minor_warnings": [
-      "157.5->180 的面积比和中心偏移为局部 outlier，但正常尺寸回环没有可见 snap、身份变化或比例跳变。",
-      "337.5->000 是回环最大变化，仍保持身份、比例和上左到上视语义连续。",
-      "135、157.5、180 的透明行位于分离肢体和道具之间；高对比 alpha 检查确认不是封闭主体洞。"
+      "022.5->045、067.5->090、202.5->225 的局部 diff outlier 在正常尺寸回环中没有可见 snap 或身份跳变。",
+      "157.5->180、337.5->000 的边界变化较大，但方向、比例、基线和道具连接保持连续。",
+      "透明性检查 alphaHoles 为空，未发现封闭主体内部的意外透明洞。"
     ]
+  },
+  "blind_review": {
+    "validation": "qa/candidate-v29-final-correct-base-v1/direction-blind-validation.json",
+    "ok": true,
+    "hard_gate_errors": [],
+    "intermediate_warnings_reviewed": true
   }
 }

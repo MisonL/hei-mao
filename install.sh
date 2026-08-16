@@ -138,7 +138,7 @@ configure_pet() {
       ;;
     hei-mao-fortune)
       PET_JSON_SHA256="ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b"
-      SPRITESHEET_SHA256="1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71"
+      SPRITESHEET_SHA256="b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1"
       PET_SUBDIR="pets/$requested_pet_id"
       ;;
     hei-mao-traveler)

@@ -23,7 +23,7 @@ npx -y petdex@latest install hei-mao-foodie
 npx -y petdex@latest install hei-mao-delivery
 ```
 
-2026-08-16 复核中 PetDex CLI 为 `1.2.2`。实时 manifest 生成于 `2026-08-16T06:25:53.244Z`，共 4523 个条目；当前六个黑毛角色可见，`hei-mao-2` 仍是历史重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-delivery` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的 CDN v2 编辑仍未切换。实际下载的公开 `petjson.json` 已包含 v2 字段，但 manifest 索引对这些旧条目仍报告 v1；不能据此把旧图集当作仓库 v2。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未进入公开 manifest，不能运行对应的 PetDex 在线安装命令。Fortune 的 cardinal 生成已按非流式、页面 SSE 和显式 Agent SSE 三种路径复核，八次真实请求均因上游 502 未产生 artifact（另有一次本地预检未发送请求）；现有 Fortune 图集未被替换。需要使用仓库 v2 图集时，请使用下方角色安装器；审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。当前实时 manifest、资源 SHA 和阻断边界见 `qa/petdex-live-recheck-20260816-v3.json`，最新生图阻断证据见 `qa/fortune-cardinal-generation-recheck-20260816-v3.json`，历史编辑队列见 `qa/petdex-edit-sync-recheck-20260814.json`。
+2026-08-16 复核中 PetDex CLI 为 `1.2.2`。实时 manifest 生成于 `2026-08-16T06:25:53.244Z`，共 4523 个条目；当前六个黑毛角色可见，`hei-mao-2` 仍是历史重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-delivery` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的 CDN v2 编辑仍未切换。实际下载的公开 `petjson.json` 已包含 v2 字段，但 manifest 索引对这些旧条目仍报告 v1；不能据此把旧图集当作仓库 v2。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未进入公开 manifest，不能运行对应的 PetDex 在线安装命令。Fortune 的 cardinal 生成重试和上游 502 证据仍保留在历史 QA 中；当前本地包使用通过门禁的 v2 标准行与 row10 v29 候选重新组装，WebP SHA-256 为 `b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1`。需要使用仓库 v2 图集时，请使用下方角色安装器；审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。当前实时 manifest、资源 SHA 和阻断边界见 `qa/petdex-live-recheck-20260816-v3.json`，生图重试证据见 `qa/fortune-cardinal-generation-recheck-20260816-v3.json`，历史编辑队列见 `qa/petdex-edit-sync-recheck-20260814.json`。
 
 本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录，但本轮没有启动应用，也没有停止或重启任何 Codex 进程。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；本地复现和版本边界见 `qa/petdex-local-cli-recheck-20260814.json`。
 
@@ -58,11 +58,11 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。安装器和本地主线状态以 `qa/current-state-recheck-20260816-v3.json` 为准，PetDex manifest 和公开资源以 `qa/petdex-live-recheck-20260816-v3.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
+此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。安装器和本地主线状态以最新的 `qa/current-state-recheck-20260816-v4.json` 为准，PetDex manifest 和公开资源以 `qa/petdex-live-recheck-20260816-v3.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
 
-本机当前保留八个通过 v2 合同和最终视觉门禁的角色，仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 一致。2026-08-16 按各角色实际色键使用 hatch-pet 精确 runtime 重新执行的八包门禁、28 项测试、安装器和双远端一致性见 `qa/current-state-recheck-20260816-v3.json`；此前 2026-08-14 的详细证据仍用于追溯。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
+本机当前保留八个通过 v2 合同和最终视觉门禁的角色，仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 一致。2026-08-16 按各角色实际色键使用 hatch-pet 精确 runtime 重新执行的八包门禁、28 项测试、安装器和双远端一致性见 `qa/current-state-recheck-20260816-v4.json`；此前 2026-08-14 的详细证据仍用于追溯。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的最新图集与双目录复核见 `qa/hei-mao-fortune/run-summary.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
-本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；最新安装器和本地主线证据见 `qa/current-state-recheck-20260816-v3.json`，公开 manifest 和资源证据见 `qa/petdex-live-recheck-20260816-v3.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Petdex Desktop `v0.8.0` 已完成官方签名校验、标准目录安装、Pets 设置可见性、动画帧变化、角色切换和双屏气泡跟随复测；已验证旅行家切换到厨师后恢复旅行家，宠物从副屏移动到主屏时气泡同步移动且保持间距，运行证据见 `qa/petdex-desktop-live-recheck-20260814-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复。
+本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；最新安装器和本地主线证据见 `qa/current-state-recheck-20260816-v4.json`，公开 manifest 和资源证据见 `qa/petdex-live-recheck-20260816-v3.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Petdex Desktop `v0.8.0` 已完成官方签名校验、标准目录安装、Pets 设置可见性、动画帧变化、角色切换和双屏气泡跟随复测；已验证旅行家切换到厨师后恢复旅行家，宠物从副屏移动到主屏时气泡同步移动且保持间距，运行证据见 `qa/petdex-desktop-live-recheck-20260814-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复。
 
 ### 角色安装器
 
@@ -160,7 +160,7 @@ npx -y petdex@latest install hei-mao-delivery
 
 ### 福气官角色
 
-`hei-mao-fortune` 是黑毛的福气官角色包，使用红金服饰、爱心手套、屏幕右侧粮篮和屏幕左侧南瓜表达新鲜、丰盛和每日好彩头。该包已通过 v2 图集、单次 despill、9 个标准动作行、16 个方向、三份独立盲测和最终视觉复核；方向连续性中的局部 outlier 已记录为 minor warning，没有身份漂移、比例跳变、封闭透明洞或方向反转。本轮重新生成 cardinal 锚点时上游连续返回 502，未产生可验收 artifact，因此没有替换现有已验证图集。
+`hei-mao-fortune` 是黑毛的福气官角色包，使用红金服饰、爱心手套、屏幕右侧粮篮和屏幕左侧南瓜表达新鲜、丰盛和每日好彩头。当前包由通过 v2 门禁的标准动作行与 row10 v29 coherent 候选重新组装，已通过单次 despill、9 个标准动作行、16 个方向、三份独立盲测和最终视觉复核；方向连续性中的局部 outlier 已记录为 minor warning，没有身份漂移、比例跳变、封闭透明洞、青色色键残留或方向反转。最新图集 SHA-256 为 `b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1`，证据见 `qa/hei-mao-fortune/run-summary.json`。cardinal 生成重试的上游 502 记录仍保留在 `qa/fortune-cardinal-generation-recheck-20260816-v3.json`，失败尝试没有覆盖已验收图集。
 
 本地安装：
 
@@ -364,6 +364,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260814-v35.json`: 提交 `d8f9320` 上 hatch-pet 28 项测试、八角色 v2 门禁和剩余阻断汇总，不含本机环境信息
 - `qa/current-state-recheck-20260816-v2.json`: 以提交 `cceca66` 为检查基线并记录发布提交 `56ead92`，包含八角色 v2 门禁、hatch-pet 测试、三目录 SHA parity、GitHub/GitLab main 同步和剩余发布阻断，不含本机环境信息
 - `qa/current-state-recheck-20260816-v3.json`: 以提交 `9699e72` 为检查基线，记录八角色按实际色键 v2 门禁、28 项测试、安装器、三目录 SHA parity、双远端一致性和剩余发布边界，不含本机环境信息
+- `qa/current-state-recheck-20260816-v4.json`: Fortune v2 基础图集纠错后的全角色门禁、盲测、安装器、三目录 parity 和剩余 PetDex/Codex App 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息

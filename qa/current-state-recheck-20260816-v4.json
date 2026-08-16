@@ -1,0 +1,86 @@
+{
+  "schema_version": 4,
+  "checked_at": "2026-08-16T13:43:11Z",
+  "checked_base_commit": "736f08ca4892f6bdcd96550b0449f638a5c06cf1",
+  "scope": "Fortune v2 deterministic reassembly, package parity, installer and full local atlas regression",
+  "git": {
+    "diff_check": "pass",
+    "worktree_state": "scoped_changes_pending_commit",
+    "scope": [
+      "pets/hei-mao-fortune/spritesheet.webp",
+      "install.sh",
+      "install.ps1",
+      "README.md",
+      "qa/hei-mao-fortune"
+    ]
+  },
+  "fortune_reassembly": {
+    "base_atlas": "final/spritesheet-standard-v2.webp",
+    "look_row_9_source": "decoded/look-row-9.png",
+    "look_row_10_source": "decoded/look-row-10.png",
+    "single_despill": true,
+    "spritesheet_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
+    "replaced_old_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71",
+    "reason": "旧候选误用了旧 8x9 基础图集；v2 标准行重组后 row7/c1 色键残留消失"
+  },
+  "atlas_gate": {
+    "runtime": "hatch-pet bundled scripts with Python 3",
+    "command": "validate_atlas.py --chroma-key <role key> --require-v2",
+    "roles": 8,
+    "all_pass": true,
+    "dimensions": "1536x2288",
+    "layout": "8x11",
+    "sprite_version_number": 2,
+    "transparent_rgb_residue_pixels": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "fortune_direction_gate": {
+    "blind_validation": "ok",
+    "cardinal_hard_gates": {"000_vs_180": "pass", "090_vs_270": "pass"},
+    "intermediate_warnings": "reviewed",
+    "continuity": "ok_with_reviewed_warnings",
+    "alpha_holes": 0,
+    "semantic_hard_failures": 0
+  },
+  "hatch_pet_tests": {
+    "command": "python -m unittest discover -s hatch-pet/tests -p 'test_*.py' -v",
+    "passed": 28,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 37,
+    "warning_kind": "Pillow deprecation notices only"
+  },
+  "installer": {
+    "bash_syntax": "pass",
+    "bash_role_install": "8 roles pass",
+    "powershell_ast": "pass",
+    "fortune_sha_constants_updated": true,
+    "unknown_slug_rejection": "retained"
+  },
+  "directory_parity": {
+    "roots": ["repository", "codex-pets", "petdex-pets"],
+    "roles": 8,
+    "pet_json_sha256_match": true,
+    "spritesheet_sha256_match": true,
+    "fortune_spritesheet_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260816-v3.json",
+    "cli_version": "1.2.2",
+    "public_manifest_sync": "not_rechecked_in_this_local_change",
+    "fortune_online_install": "blocked_until_public_manifest_entry"
+  },
+  "codex_app_boundary": {
+    "visual_refresh": "not_rechecked",
+    "desktop_evidence_is_not_app_acceptance": true,
+    "no_process_mutation": true
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "Fortune local v2 reassembly, all-role atlas gates, installer checks and three-directory parity pass; PetDex public sync and Codex App visual refresh remain separate boundaries"
+}
