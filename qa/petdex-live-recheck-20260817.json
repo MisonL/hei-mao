@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-16T18:31:49Z",
+  "scope": "PetDex manifest、八个黑毛角色公开资源、编辑队列和在线安装边界",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "generated_at": "2026-08-16T18:17:23.966Z",
+    "sha256": "9b08f9fc6f77783a3d3100425f73b15935814f38a3a493715c0d118293d89a73",
+    "total": 4568,
+    "current_owned_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate_slug": "hei-mao-2",
+    "all_current_slugs_listed": true
+  },
+  "resource_probe": {
+    "all_current_json_http_200": true,
+    "all_current_sprite_http_200": true,
+    "all_current_dimensions": "1536x2288",
+    "all_current_downloaded_petjson_v2": true,
+    "manifest_sprite_versions": {
+      "hei-mao": 1,
+      "hei-mao-quality": 1,
+      "hei-mao-butler": 1,
+      "hei-mao-chef": 1,
+      "hei-mao-delivery": 2,
+      "hei-mao-foodie": 1,
+      "hei-mao-fortune": 2,
+      "hei-mao-traveler": 2
+    },
+    "pet_json_matches_repository": {
+      "hei-mao": true,
+      "hei-mao-quality": false,
+      "hei-mao-butler": true,
+      "hei-mao-chef": true,
+      "hei-mao-delivery": true,
+      "hei-mao-foodie": true,
+      "hei-mao-fortune": true,
+      "hei-mao-traveler": true
+    },
+    "sprite_matches_repository": {
+      "hei-mao": false,
+      "hei-mao-quality": false,
+      "hei-mao-butler": true,
+      "hei-mao-chef": true,
+      "hei-mao-delivery": true,
+      "hei-mao-foodie": false,
+      "hei-mao-fortune": false,
+      "hei-mao-traveler": false
+    },
+    "remote_sprite_sha256": {
+      "hei-mao": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "hei-mao-quality": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "hei-mao-butler": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "hei-mao-chef": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "hei-mao-delivery": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "hei-mao-foodie": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "hei-mao-fortune": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71",
+      "hei-mao-traveler": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e"
+    },
+    "repository_sprite_sha256": {
+      "hei-mao": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+      "hei-mao-quality": "1e22f95b918ab423d1b4bede9af93761e89ff39c5a961ee3728c671b0dd05f9f",
+      "hei-mao-butler": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "hei-mao-chef": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "hei-mao-delivery": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "hei-mao-foodie": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+      "hei-mao-fortune": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
+      "hei-mao-traveler": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592"
+    },
+    "historical_resource_match": {
+      "hei-mao-fortune": "public sprite equals pre-refresh package at bc2b5aa; current package is ba5b7cc",
+      "hei-mao-traveler": "public sprite equals pre-row10 package at 0f1c0e7; current package is 25145b7"
+    }
+  },
+  "edit_requests": {
+    "hei-mao": "already queued from prior owned-slug edit; not retried",
+    "hei-mao-quality": "already queued from prior owned-slug edit; not retried",
+    "hei-mao-foodie": "already queued from prior owned-slug edit; not retried",
+    "hei-mao-fortune": {
+      "submitted": true,
+      "result": "queued_for_admin_review",
+      "duplicate_submission": false,
+      "fields": ["meta", "sprite"]
+    },
+    "hei-mao-traveler": {
+      "submitted": true,
+      "result": "queued_for_admin_review",
+      "duplicate_submission": false,
+      "fields": ["meta", "sprite"]
+    }
+  },
+  "online_install": {
+    "cli_version": "1.2.2",
+    "requested_roles": 8,
+    "exit_code": 0,
+    "isolated_dual_root_file_pairs": "8/8",
+    "ids_and_v2_metadata": "8/8",
+    "root_parity": true,
+    "telemetry": "disabled for isolated verification"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "all_eight_current_slugs_are_public_and_installable; eight_online_sprite_updates_remain_pending_review_or_prior_queue; no_duplicate_submission"
+}

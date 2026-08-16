@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-16T18:31:49Z",
+  "scope": "PetDex CLI 1.2.2 隔离安装八个公开黑毛角色",
+  "cli": {
+    "version": "1.2.2",
+    "command": "petdex install <eight current owned slugs>",
+    "exit_code": 0,
+    "telemetry": "disabled"
+  },
+  "installation": {
+    "requested_roles": 8,
+    "installed_roles": 8,
+    "target_roots": 2,
+    "all_ids_match_slugs": true,
+    "all_sprite_version_numbers": 2,
+    "all_required_file_pairs_present": true,
+    "both_roots_file_parity": true
+  },
+  "publication_boundary": {
+    "fortune_and_traveler": "publicly installable; latest local sprite edits queued for admin review",
+    "hei_mao_quality_foodie": "publicly installable; prior sprite or metadata edits remain queued",
+    "butler_chef_delivery": "publicly installable; downloaded resources match repository"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "isolated_eight_role_install_pass"
+}
