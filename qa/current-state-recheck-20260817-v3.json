@@ -1,0 +1,122 @@
+{
+  "schema_version": 9,
+  "checked_at": "2026-08-16T17:03:37Z",
+  "tested_commit": "577712c28b03e351a38773d640aff7cd1f49cad1",
+  "scope": "Eight-role v2 release evidence normalization and final local recheck",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "release_contract": {
+    "atlas": {
+      "format": "WEBP",
+      "mode": "RGBA",
+      "width": 1536,
+      "height": 2288,
+      "columns": 8,
+      "rows": 11,
+      "cell_width": 192,
+      "cell_height": 208,
+      "sprite_version_number": 2
+    },
+    "atlas_validation": {
+      "command": "validate_atlas.py --require-v2 with each role chroma key",
+      "roles_passed": 8,
+      "roles_failed": 0,
+      "errors": 0,
+      "warnings": 0,
+      "transparent_rgb_residue_pixels": 0
+    },
+    "direction_continuity": {
+      "command": "measure_direction_continuity.py",
+      "roles_ok": 8,
+      "warnings_by_role": {
+        "hei-mao": 6,
+        "hei-mao-quality": 5,
+        "hei-mao-butler": 6,
+        "hei-mao-chef": 6,
+        "hei-mao-foodie": 9,
+        "hei-mao-delivery": 6,
+        "hei-mao-fortune": 6,
+        "hei-mao-traveler": 6
+      },
+      "warning_policy": "Warnings remain review evidence; prior independent visual review accepted them as minor without a major hole, snap, reversal, or identity failure."
+    },
+    "direction_semantics": {
+      "roles": 8,
+      "directions_per_role": 16,
+      "required_fields": ["degree", "expected", "observed", "verdict", "reason"],
+      "missing_required_field_records": 0,
+      "fail_verdicts": 0,
+      "cardinal_gate_failures": 0
+    },
+    "standard_motion_previews": {
+      "roles": 8,
+      "required_gif_count": 72,
+      "required_states": {
+        "idle": 6,
+        "running-right": 8,
+        "running-left": 8,
+        "waving": 4,
+        "jumping": 5,
+        "failed": 8,
+        "waiting": 6,
+        "running": 6,
+        "review": 6
+      },
+      "all_frame_counts_match": true,
+      "atlas_frame_dimensions": "192x208",
+      "preview_dimension_note": "Seven roles use 192x208 GIF frames; the historical chef preview set is 96x104 but has complete state coverage and correct frame counts."
+    },
+    "summary_index": {
+      "roles": 8,
+      "all_have_final_visual_qa": true,
+      "all_have_motion_previews": true,
+      "all_have_look_mechanics": true
+    }
+  },
+  "package_manifests": {
+    "all_ids_match_directories": true,
+    "all_sprite_version_numbers": 2,
+    "all_spritesheet_paths": "spritesheet.webp",
+    "run_summary_sha_matches_package": true
+  },
+  "installer_and_installation": {
+    "bash_sha_map_matches_packages": true,
+    "powershell_sha_map_matches_packages": true,
+    "repository_codex_pets_petdex_pets_byte_parity": true,
+    "historical_slug_residuals": {
+      "hei-mao-2": false,
+      "hei-mao-recommender": false
+    },
+    "unknown_slug_rejection": "pass from qa/current-state-recheck-20260817-v2.json",
+    "cross_platform_isolated_smoke": "pass from qa/current-state-recheck-20260817-v2.json"
+  },
+  "tests": {
+    "hatch_pet_unittest": "28 passed, 0 failed, 0 errors",
+    "bash_n": "pass",
+    "shellcheck": "pass"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "non_redacted_request_identifiers": false,
+    "historical_cardinal_request_keys_redacted": true
+  },
+  "external_boundaries": {
+    "baseline": "qa/current-state-recheck-20260817-v2.json",
+    "petdex_manifest_and_resource_diffs": "unchanged; six public resources pass individual retry, three legacy atlas diffs remain",
+    "fortune_and_traveler_public_manifest": "pending review; not publicly installable through PetDex",
+    "upstream_issue_689": "open; host stdin EOF wait remains unimplemented",
+    "codex_app_visual_acceptance": "open; target pet settings were not accessible in the read-only probe",
+    "process_mutation": "none"
+  },
+  "result": "local eight-role release evidence is complete and normalized; external PetDex review, issue 689, and Codex App visual acceptance remain explicitly open"
+}
