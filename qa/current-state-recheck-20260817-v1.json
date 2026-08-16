@@ -1,0 +1,142 @@
+{
+  "schema_version": 7,
+  "checked_at": "2026-08-16T16:10:34Z",
+  "checked_commit": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
+  "scope": "当前八角色 v2 门禁、连续性、测试、三目录 parity、PetDex 公开资源复探和发布边界",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "local_release_gates": {
+    "runtime": "hatch-pet bundled Python 3.12.13",
+    "atlas_validator": {
+      "command": "validate_atlas.py --require-v2 with each role chroma key",
+      "all_roles_exit_code": 0,
+      "all_roles_ok": true,
+      "contract": "1536x2288 RGBA 8x11 spriteVersionNumber=2",
+      "errors": 0,
+      "warnings": 0,
+      "transparent_rgb_residue_pixels": 0
+    },
+    "continuity_validator": {
+      "command": "measure_direction_continuity.py",
+      "all_roles_ok": true,
+      "warnings_by_role": {
+        "hei-mao": 6,
+        "hei-mao-quality": 5,
+        "hei-mao-butler": 6,
+        "hei-mao-chef": 6,
+        "hei-mao-delivery": 6,
+        "hei-mao-foodie": 9,
+        "hei-mao-fortune": 6,
+        "hei-mao-traveler": 6
+      },
+      "warning_resolution": "warnings remain review evidence; prior independent visual review found no major hole, snap, reversal, or identity failure"
+    },
+    "hatch_pet_tests": {
+      "runner": "python -m unittest discover -s tests -q",
+      "passed": 28,
+      "failed": 0,
+      "errors": 0,
+      "warnings": "Pillow deprecation notices only"
+    },
+    "visual_qa": {
+      "status": "pass_with_reviewed_warnings",
+      "fresh_visual_review": false,
+      "all_roles_have_16_direction_semantic_verdicts": true,
+      "all_roles_hard_failures": false,
+      "cardinal_gates": "pass_all_roles",
+      "evidence": "qa/current-state-recheck-20260816-v6.json and qa/<role>/final-visual-qa.json"
+    }
+  },
+  "asset_baseline": {
+    "asset_paths_changed_since_previous_gate": false,
+    "previous_gate_evidence": "qa/current-state-recheck-20260816-v6.json",
+    "package_sha_evidence": "qa/current-state-recheck-20260816-v6.json"
+  },
+  "directory_parity": {
+    "roots": ["repository", "codex-pets", "petdex-pets"],
+    "roles": 8,
+    "pet_json_byte_compare": true,
+    "spritesheet_byte_compare": true,
+    "sha256_matches": true,
+    "historical_slug_residual_check": true
+  },
+  "installer_smoke": {
+    "status": "unchanged_since_previous_gate",
+    "previous_evidence": "qa/current-state-recheck-20260816-v6.json",
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "bash_isolated_roles": "8/8 pass",
+    "powershell_isolated_roles": "8/8 pass",
+    "unknown_slug_rejection": "pass",
+    "user_pet_directories_modified": false
+  },
+  "remote_sync": {
+    "github_main": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
+    "gitlab_main": "a18c063713ef21c4f71fabb60a7c3bc0797d08d5",
+    "local_main_matches_both": true
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-16T12:22:49.975Z",
+    "manifest_sha256": "c327eef87d902bfba88803bce20664253b44726e57abc645b9f0bf4c9ea2b373",
+    "manifest_total": 4523,
+    "current_public_owned_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "public_duplicate_slug": "hei-mao-2",
+    "resource_reprobe": {
+      "checked_at": "2026-08-16T16:10:34Z",
+      "all_six_json_downloads": "pass",
+      "all_six_sprite_downloads": "pass",
+      "all_six_dimensions": "1536x2288",
+      "all_six_downloaded_sprite_versions": 2,
+      "pet_json_matches_repository": {
+        "hei-mao": true,
+        "hei-mao-quality": false,
+        "hei-mao-butler": true,
+        "hei-mao-chef": true,
+        "hei-mao-foodie": true,
+        "hei-mao-delivery": true
+      },
+      "sprite_matches_repository": {
+        "hei-mao": false,
+        "hei-mao-quality": false,
+        "hei-mao-butler": true,
+        "hei-mao-chef": true,
+        "hei-mao-foodie": false,
+        "hei-mao-delivery": true
+      },
+      "evidence": "qa/petdex-live-recheck-20260816-v5.json plus same-manifest live re-probe"
+    },
+    "fortune_public": false,
+    "traveler_public": false,
+    "pending_review_must_not_be_retried": true,
+    "write_operations": "none"
+  },
+  "codex_app": {
+    "visual_acceptance": "open",
+    "target_pet_settings_accessible": false,
+    "process_mutation": "none",
+    "evidence": "qa/codex-app-boundary-recheck-20260816.json"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "local_eight_role_release_gates_pass; parity_and_remote_sync_pass; PetDex resources reconfirmed with three legacy atlas diffs; Fortune and Traveler pending review; Codex App visual acceptance remains open"
+}
