@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-16T04:37:34Z",
+  "scope": "Fortune cardinal anchor generation recheck",
+  "service_contract": {
+    "capabilities": "pass",
+    "agent_edit_contract": "pass",
+    "effective_request_modes": ["images-sse"],
+    "recommended_concurrency": 1,
+    "billable_requests_allowed_by_task": true
+  },
+  "attempts": [
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v5-agent",
+      "transport": "agent_json",
+      "request_mode": "images-non-stream",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0
+    },
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v6-agent",
+      "transport": "agent_json",
+      "request_mode": "images-non-stream",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0
+    },
+    {
+      "idempotency_key": "hei-mao-fortune-20260816-cardinals-v7-agent-sse",
+      "transport": "agent_json",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 502,
+      "retryable": true,
+      "artifact_count": 0
+    }
+  ],
+  "result": "no_cardinal_artifact_produced; look-cardinals remains pending",
+  "next_action": "Wait for upstream image service recovery, then retry with a new idempotency key; do not mark the job complete or package a candidate without deterministic and visual QA."
+}

@@ -23,7 +23,7 @@ npx -y petdex@latest install hei-mao-foodie
 npx -y petdex@latest install hei-mao-delivery
 ```
 
-2026-08-16 复核中 PetDex CLI 为 `1.2.2`。实时 manifest 生成于 `2026-08-16T00:51:18.804Z`，共 4523 个条目；当前六个黑毛角色可见，`hei-mao-2` 仍是历史重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-delivery` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的 CDN v2 编辑仍未切换。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未进入公开 manifest，不能运行对应的 PetDex 在线安装命令。需要使用仓库 v2 图集时，请使用下方角色安装器；审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。当前安装器、公开 manifest 和阻断边界见 `qa/current-state-recheck-20260816-v1.json`，历史编辑队列见 `qa/petdex-edit-sync-recheck-20260814.json`。
+2026-08-16 复核中 PetDex CLI 为 `1.2.2`。实时 manifest 生成于 `2026-08-16T00:51:18.804Z`，共 4523 个条目；当前六个黑毛角色可见，`hei-mao-2` 仍是历史重复条目。`hei-mao-butler`、`hei-mao-chef` 和 `hei-mao-delivery` 的线上图集与仓库 SHA 一致，`hei-mao`、`hei-mao-quality` 和 `hei-mao-foodie` 的 CDN v2 编辑仍未切换。`hei-mao-fortune` 与 `hei-mao-traveler` 尚未进入公开 manifest，不能运行对应的 PetDex 在线安装命令。Fortune 的 cardinal 生成已按非流式和 SSE 两种已声明路径复核，均因上游 502 未产生 artifact。需要使用仓库 v2 图集时，请使用下方角色安装器；审核和 CDN 切换完成前，不能把 PetDex 在线下载结果当作仓库 v2。当前安装器、公开 manifest 和阻断边界见 `qa/current-state-recheck-20260816-v1.json`，生图阻断证据见 `qa/fortune-cardinal-generation-recheck-20260816-v1.json`，历史编辑队列见 `qa/petdex-edit-sync-recheck-20260814.json`。
 
 本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录，但本轮没有启动应用，也没有停止或重启任何 Codex 进程。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；本地复现和版本边界见 `qa/petdex-local-cli-recheck-20260814.json`。
 
@@ -363,6 +363,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260814-v34.json`: 提交 `b77a134` 上使用精确 hatch-pet runtime 的八角色 v2 门禁和剩余阻断汇总，不含本机环境信息
 - `qa/current-state-recheck-20260814-v35.json`: 提交 `d8f9320` 上 hatch-pet 28 项测试、八角色 v2 门禁和剩余阻断汇总，不含本机环境信息
 - `qa/current-state-recheck-20260816-v1.json`: 提交 `32c74e8` 上八角色安装器哈希、Shell/PowerShell 隔离验证、实时 PetDex manifest 和剩余发布阻断，不含本机环境信息
+- `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/installer-cross-platform-recheck-20260814-v4.json`: 提交 `ce2b7dc` 上 Bash/PowerShell 八角色隔离安装、未知 slug 拒绝、ShellCheck 和临时目标清理证据，不含本机环境信息
 - `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`: Desktop v0.8.0 宠物窗口跨屏移动时的气泡跟随、间距和位置恢复证据，不含屏幕截图或本机敏感信息
 - `qa/qa-media-completeness-recheck-20260814.json`: 八个角色的标准接触表、根包和大管家标准状态预览、来源 SHA 与公开路径完整性证据
