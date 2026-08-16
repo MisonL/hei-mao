@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-16T15:53:48Z",
+  "checked_commit": "c03af47d7bbcd50cf14371c6e683c7ddb77fa334",
+  "scope": "PetDex manifest、公开六角色资源下载、SHA 对照和 v2 结构验证",
+  "cli": {
+    "version": "1.2.2",
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_generated_at": "2026-08-16T12:22:49.975Z",
+    "manifest_total": 4523,
+    "manifest_sha256": "c327eef87d902bfba88803bce20664253b44726e57abc645b9f0bf4c9ea2b373"
+  },
+  "manifest": {
+    "current_owned_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery"
+    ],
+    "historical_duplicate_slug": "hei-mao-2",
+    "missing_submitted_slugs": ["hei-mao-fortune", "hei-mao-traveler"],
+    "index_sprite_versions": {
+      "hei-mao": 1,
+      "hei-mao-quality": 1,
+      "hei-mao-butler": 1,
+      "hei-mao-chef": 1,
+      "hei-mao-foodie": 1,
+      "hei-mao-delivery": 2,
+      "hei-mao-2": 1
+    }
+  },
+  "resource_probe": {
+    "connect_timeout_seconds": 5,
+    "max_time_seconds": 20,
+    "all_six_json_downloads": "pass",
+    "all_six_sprite_downloads": "pass",
+    "all_six_v2_validations": "pass",
+    "entries": {
+      "hei-mao": {
+        "manifest_index_version": 1,
+        "downloaded_pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+        "downloaded_sprite_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+        "downloaded_sprite_version": 2,
+        "pet_json_matches_repository": true,
+        "sprite_matches_repository": false
+      },
+      "hei-mao-quality": {
+        "manifest_index_version": 1,
+        "downloaded_pet_json_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43",
+        "downloaded_sprite_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+        "downloaded_sprite_version": 2,
+        "pet_json_matches_repository": false,
+        "sprite_matches_repository": false
+      },
+      "hei-mao-butler": {
+        "manifest_index_version": 1,
+        "downloaded_pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+        "downloaded_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+        "downloaded_sprite_version": 2,
+        "pet_json_matches_repository": true,
+        "sprite_matches_repository": true
+      },
+      "hei-mao-chef": {
+        "manifest_index_version": 1,
+        "downloaded_pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+        "downloaded_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+        "downloaded_sprite_version": 2,
+        "pet_json_matches_repository": true,
+        "sprite_matches_repository": true
+      },
+      "hei-mao-foodie": {
+        "manifest_index_version": 1,
+        "downloaded_pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+        "downloaded_sprite_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+        "downloaded_sprite_version": 2,
+        "pet_json_matches_repository": true,
+        "sprite_matches_repository": false
+      },
+      "hei-mao-delivery": {
+        "manifest_index_version": 2,
+        "downloaded_pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+        "downloaded_sprite_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+        "downloaded_sprite_version": 2,
+        "pet_json_matches_repository": true,
+        "sprite_matches_repository": true
+      }
+    }
+  },
+  "publication_boundary": {
+    "fortune": {
+      "manifest_present": false,
+      "submission_state": "pending_review",
+      "edit_state": "blocked_409_pet_not_editable_pending_review",
+      "write_retried": false
+    },
+    "traveler": {
+      "manifest_present": false,
+      "submission_state": "pending_review",
+      "write_retried": false
+    },
+    "duplicate_submit_or_edit_attempted": false
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "manifest_and_public_resource_probes_pass; three_legacy_atlas_edits_not_yet_switched; fortune_and_traveler_pending"
+}
