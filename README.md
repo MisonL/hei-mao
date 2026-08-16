@@ -58,11 +58,11 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。安装器的当前状态以 `qa/current-state-recheck-20260816-v1.json` 为准，PetDex manifest 和公开资源则以 `qa/petdex-live-recheck-20260816-v2.json` 为准；Desktop、Hook 和 Codex App 的边界仍以 `qa/current-state-recheck-20260814-v35.json` 及其专项证据为背景，不能替代新的线上发布结论。
+此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。安装器的当前状态以 `qa/current-state-recheck-20260816-v2.json` 为准，PetDex manifest 和公开资源则以 `qa/petdex-live-recheck-20260816-v2.json` 为准；Desktop、Hook 和 Codex App 的边界仍以 `qa/current-state-recheck-20260814-v35.json` 及其专项证据为背景，不能替代新的线上发布结论。
 
 本机当前保留八个通过 v2 合同和最终视觉门禁的角色，仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 一致。2026-08-14 按各角色实际色键使用 hatch-pet 精确 runtime 重新执行的八包门禁见 `qa/current-v2-gate-recheck-20260814-v4.json`，hatch-pet 自带 28 项测试见 `qa/hatch-pet-runtime-test-recheck-20260814-v1.json`，三处目录 parity 见 `qa/three-directory-parity-recheck-20260814-v2.json`，本次针对 look-continuity alpha-hole 候选的高对比度与透明连通性复核见 `qa/current-v2-alpha-review-20260814.json`；最新本地状态、远端同步、PetDex 公开状态、Hook issue 和 Codex App 边界见 `qa/current-state-recheck-20260814-v35.json`。Traveler 的独立门禁和双目录复核见 `qa/hei-mao-traveler/run-summary.json`。`hei-mao-delivery` 的正式包复核见 `qa/hei-mao-delivery/run-summary.json`，`hei-mao-fortune` 的双目录复核见 `qa/fortune-dual-directory-install-recheck-20260813.json`，其余角色的历史门禁复核见 `qa/current-v2-gate-recheck-20260813.json` 和 `qa/all-roles-v2-keyed-recheck-20260813.json`。
 
-本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；安装器证据见 `qa/current-state-recheck-20260816-v1.json`，公开 manifest 和资源证据见 `qa/petdex-live-recheck-20260816-v2.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Petdex Desktop `v0.8.0` 已完成官方签名校验、标准目录安装、Pets 设置可见性、动画帧变化、角色切换和双屏气泡跟随复测；已验证旅行家切换到厨师后恢复旅行家，宠物从副屏移动到主屏时气泡同步移动且保持间距，运行证据见 `qa/petdex-desktop-live-recheck-20260814-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复。
+本轮本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；安装器证据见 `qa/current-state-recheck-20260816-v2.json`，公开 manifest 和资源证据见 `qa/petdex-live-recheck-20260816-v2.json`。Traveler 独立图集证据见 `qa/hei-mao-traveler/run-summary.json`。Petdex Desktop `v0.8.0` 已完成官方签名校验、标准目录安装、Pets 设置可见性、动画帧变化、角色切换和双屏气泡跟随复测；已验证旅行家切换到厨师后恢复旅行家，宠物从副屏移动到主屏时气泡同步移动且保持间距，运行证据见 `qa/petdex-desktop-live-recheck-20260814-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复。
 
 ### 角色安装器
 
@@ -362,7 +362,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260814-v33.json`: 提交 `d251c42` 上八角色本地包契约、安装器和外部阻断汇总，不含本机环境信息
 - `qa/current-state-recheck-20260814-v34.json`: 提交 `b77a134` 上使用精确 hatch-pet runtime 的八角色 v2 门禁和剩余阻断汇总，不含本机环境信息
 - `qa/current-state-recheck-20260814-v35.json`: 提交 `d8f9320` 上 hatch-pet 28 项测试、八角色 v2 门禁和剩余阻断汇总，不含本机环境信息
-- `qa/current-state-recheck-20260816-v1.json`: 提交 `32c74e8` 上八角色安装器哈希、Shell/PowerShell 隔离验证、实时 PetDex manifest 和剩余发布阻断，不含本机环境信息
+- `qa/current-state-recheck-20260816-v2.json`: 提交 `cceca66` 上八角色 v2 门禁、hatch-pet 测试、三目录 SHA parity、远端 main 同步和剩余发布阻断，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/current-v2-gate-recheck-20260816-v1.json`: 提交 `e9c29e9` 前按每个角色记录的实际色键重新执行八角色 `validate_atlas.py --require-v2`，全部通过且无透明 RGB 残留、错误或警告
