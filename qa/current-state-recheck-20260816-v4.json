@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "checked_at": "2026-08-16T13:46:00Z",
-  "checked_commit": "9272810bfd6ebebadf10b0ac6f8c95a7bde9ba1b",
+  "checked_commit": "a407526f2266eaf412d973c1964dcdc929b07978",
   "scope": "Fortune v2 deterministic reassembly, package parity, installer and full local atlas regression",
   "git": {
     "diff_check": "pass",
