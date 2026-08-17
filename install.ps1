@@ -63,7 +63,7 @@ function Set-PetConfiguration {
         }
         "hei-mao-fortune" {
             $script:PetJsonSha256 = "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b"
-            $script:SpritesheetSha256 = "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1"
+            $script:SpritesheetSha256 = "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9"
             $script:PetSubdir = "pets/$requestedPetId"
         }
         "hei-mao-traveler" {

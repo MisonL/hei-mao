@@ -1,19 +1,18 @@
 {
-  "reviewer": "fresh-independent-reviewer-c",
   "pairs": [
-    {"pair":"horizontal-1","A":"screen-right","B":"screen-left","reason":"A的鼻口和视线略偏画面右侧，B的鼻口明显朝画面左侧。"},
-    {"pair":"horizontal-2","A":"screen-left","B":"screen-right","reason":"A为左侧朝向，B的鼻口和身体轮廓转向右侧。"},
-    {"pair":"horizontal-3","A":"screen-right","B":"screen-left","reason":"A的鼻口指向右侧，B为相反的左侧朝向。"},
-    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A鼻口朝左，B鼻口和视线朝右。"},
-    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A头部轮廓向右，B的鼻口明显向左。"},
-    {"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A鼻口朝右侧，B鼻口朝左侧。"},
-    {"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"A的鼻口略偏左、头部朝左，B为右侧朝向。"},
-    {"pair":"vertical-1","A":"up","B":"down","reason":"A眼神和头部姿态上扬，B双眼及鼻口姿态下压。"},
-    {"pair":"vertical-2","A":"down","B":"up","reason":"A的眼神与头部朝下，B抬头望向上方。"},
-    {"pair":"vertical-3","A":"up","B":"down","reason":"A的视线和头部高度更上扬，B的眼神及鼻口姿态更低。"},
-    {"pair":"vertical-4","A":"down","B":"up","reason":"A呈低头、下视姿态，B眼神上抬且头部更上扬。"},
-    {"pair":"vertical-5","A":"up","B":"down","reason":"A眼神明显上望，B双眼和面部姿态朝下。"},
-    {"pair":"vertical-6","A":"up","B":"down","reason":"A仰视感更强，B眼神向下且头部姿态较低。"},
-    {"pair":"vertical-7","A":"down","B":"up","reason":"A的面部和眼神下压，B眼神上望、头部更上扬。"}
+    {"pair":"horizontal-1","A":"screen-right","B":"screen-left","reason":"A faces right; B faces left."},
+    {"pair":"horizontal-2","A":"screen-right","B":"screen-left","reason":"A faces right; B faces left."},
+    {"pair":"horizontal-3","A":"screen-left","B":"screen-right","reason":"A faces left; B faces right."},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A faces left; B faces right."},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A faces right; B faces left."},
+    {"pair":"horizontal-6","A":"screen-left","B":"screen-right","reason":"A faces left; B faces right."},
+    {"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"A faces left; B faces right."},
+    {"pair":"vertical-1","A":"down","B":"up","reason":"A is the inverted/down orientation; B is the upright/up orientation."},
+    {"pair":"vertical-2","A":"ambiguous","B":"ambiguous","reason":"No sufficiently clear vertical-facing landmark."},
+    {"pair":"vertical-3","A":"ambiguous","B":"ambiguous","reason":"No sufficiently clear vertical-facing landmark."},
+    {"pair":"vertical-4","A":"ambiguous","B":"ambiguous","reason":"No sufficiently clear vertical-facing landmark."},
+    {"pair":"vertical-5","A":"ambiguous","B":"ambiguous","reason":"No sufficiently clear vertical-facing landmark."},
+    {"pair":"vertical-6","A":"ambiguous","B":"ambiguous","reason":"No sufficiently clear vertical-facing landmark."},
+    {"pair":"vertical-7","A":"ambiguous","B":"ambiguous","reason":"No sufficiently clear vertical-facing landmark."}
   ]
 }

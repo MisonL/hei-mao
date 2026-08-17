@@ -162,7 +162,7 @@ npx -y petdex@latest install hei-mao-delivery
 
 ### 福气官角色
 
-`hei-mao-fortune` 是黑毛的福气官角色包，使用红金服饰、爱心手套、屏幕右侧粮篮和屏幕左侧南瓜表达新鲜、丰盛和每日好彩头。当前包由通过 v2 门禁的标准动作行与 row10 v29 coherent 候选重新组装，已通过单次 despill、9 个标准动作行、16 个方向、三份独立盲测和最终视觉复核；方向连续性中的局部 outlier 已记录为 minor warning，没有身份漂移、比例跳变、封闭透明洞、青色色键残留或方向反转。最新图集 SHA-256 为 `b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1`，证据见 `qa/hei-mao-fortune/run-summary.json`。cardinal 生成重试的上游 502 记录仍保留在 `qa/fortune-cardinal-generation-recheck-20260816-v3.json`，失败尝试没有覆盖已验收图集。
+`hei-mao-fortune` 是黑毛的福气官角色包，使用红金服饰、爱心手套、屏幕右侧粮篮和屏幕左侧南瓜表达新鲜、丰盛和每日好彩头。当前包由通过 v2 门禁的标准动作行与 v13-final coherent 方向行重新组装，已通过单次 despill、9 个标准动作行、16 个方向、三份独立盲测和最终视觉复核；方向连续性中的局部 outlier 已记录为 minor warning，没有身份漂移、比例跳变、封闭透明洞、青色色键残留或方向反转。最新图集 SHA-256 为 `10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9`，证据见 `qa/hei-mao-fortune/run-summary.json`。cardinal 生成重试的上游 502 记录仍保留在 `qa/fortune-cardinal-generation-recheck-20260816-v3.json`，失败尝试没有覆盖已验收图集。
 
 本地安装：
 

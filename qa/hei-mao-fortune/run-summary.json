@@ -5,7 +5,7 @@
   "pet": "hei-mao-fortune",
   "sprite_version_number": 2,
   "spritesheet": "pets/hei-mao-fortune/spritesheet.webp",
-  "spritesheet_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1",
+  "spritesheet_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
   "layout": {
     "width": 1536,
     "height": 2288,
@@ -46,5 +46,7 @@
       "artifact_id": "redacted",
       "source_sha256": "83dcfb37449dd3f38c93f4e74480093ad07232506b1f720a269f285ad9fb3d6d"
     }
-  }
+  },
+  "installer_recheck": "qa/fortune-installer-v13-recheck-20260817.json",
+  "dual_directory_install": "qa/fortune-dual-directory-install-v13-recheck-20260817.json"
 }

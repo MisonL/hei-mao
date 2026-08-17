@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "pet": "hei-mao-fortune",
+  "directories": ["CODEX_HOME/pets/hei-mao-fortune", "PETDEX_HOME/pets/hei-mao-fortune"],
+  "file_sets_match": true,
+  "pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+  "spritesheet_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+  "spritesheet_contract": {
+    "width": 1536,
+    "height": 2288,
+    "format": "WEBP RGBA",
+    "spriteVersionNumber": 2
+  },
+  "result": "both_local_install_directories_match_repository_v13_final"
+}

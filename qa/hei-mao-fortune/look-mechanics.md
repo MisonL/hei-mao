@@ -1,6 +1,6 @@
 # Fortune look mechanics
 
-The Fortune role keeps the lower body, feet, red-and-gold outfit contact, grain basket contact, and pumpkin contact anchored while the head and upper torso lead the gaze. The eyes, eyelids, snout, and ear angles follow the head turn. The heart mitts and grain basket are rigid attached props: they follow the torso with a small lag on diagonal turns and remain connected at every direction. The basket stays on the screen-right side and the pumpkin stays on the screen-left side without changing size or crossing the body.
+Fortune keeps the lower body, feet, red-and-gold outfit contact, grain basket, and pumpkin anchored while the head and upper torso lead the gaze. The eyes, eyelids, snout, and ear angles follow the head turn. The heart mitts and grain basket are attached props: they follow the torso with a small lag on diagonal turns and remain connected at every direction. The basket stays on the screen-right side and the pumpkin stays on the screen-left side without changing size or crossing the body.
 
 Cardinal pose families use viewer coordinates:
 

@@ -1,1 +1,18 @@
-{"pairs":[{"pair":"horizontal-1","A":"ambiguous","B":"screen-left","reason":"A接近正面；B鼻口明显朝左"},{"pair":"horizontal-2","A":"screen-left","B":"screen-right","reason":"鼻口方向相反"},{"pair":"horizontal-3","A":"screen-right","B":"screen-left","reason":"鼻口方向相反"},{"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"鼻口方向相反"},{"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"鼻口方向相反"},{"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"鼻口方向相反"},{"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"鼻口方向相反"},{"pair":"vertical-1","A":"up","B":"down","reason":"眼睛和头部分别上仰、下俯"},{"pair":"vertical-2","A":"down","B":"up","reason":"头部分别下倾、上仰"},{"pair":"vertical-3","A":"up","B":"down","reason":"头部倾角分别上、下"},{"pair":"vertical-4","A":"down","B":"up","reason":"头部倾角分别下、上"},{"pair":"vertical-5","A":"up","B":"down","reason":"眼睛和头部分别上仰、下俯"},{"pair":"vertical-6","A":"up","B":"down","reason":"头部倾角分别上、下"},{"pair":"vertical-7","A":"up","B":"down","reason":"头部倾角分别上、下"}]}
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"screen-right","B":"ambiguous","reason":"A visible pupils favor the snout side; B is rear-facing with no readable gaze."},
+    {"pair":"horizontal-2","A":"screen-right","B":"ambiguous","reason":"A pupils favor screen-right; B rear-facing."},
+    {"pair":"horizontal-3","A":"ambiguous","B":"screen-right","reason":"A rear-facing; B visible pupil favors screen-right."},
+    {"pair":"horizontal-4","A":"ambiguous","B":"screen-right","reason":"A rear-facing; B pupil is offset toward screen-right."},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A profile gaze is rightward; B profile gaze is leftward."},
+    {"pair":"horizontal-6","A":"screen-left","B":"screen-right","reason":"A pupil/snout orientation is leftward; B is rightward."},
+    {"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"The two profiles show opposite horizontal gaze directions."},
+    {"pair":"vertical-1","A":"ambiguous","B":"up","reason":"A eyes are closed with no direction; B pupils sit high."},
+    {"pair":"vertical-2","A":"up","B":"up","reason":"Both visible pupils sit in the upper eye regions."},
+    {"pair":"vertical-3","A":"up","B":"down","reason":"A pupil is elevated; B pupil sits lower in the eye."},
+    {"pair":"vertical-4","A":"up","B":"ambiguous","reason":"A pupil is high; B is near vertical center."},
+    {"pair":"vertical-5","A":"ambiguous","B":"up","reason":"A is rear-facing; B visible pupil is elevated."},
+    {"pair":"vertical-6","A":"ambiguous","B":"ambiguous","reason":"Both views are rear-facing with no readable pupils."},
+    {"pair":"vertical-7","A":"ambiguous","B":"ambiguous","reason":"Both are rear/side-back views without readable vertical gaze."}
+  ]
+}

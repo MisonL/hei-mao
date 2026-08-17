@@ -1,1 +1,18 @@
-{"pairs":[{"pair":"horizontal-1","A":"screen-left","B":"screen-left","reason":"两只宠物的鼻口都朝向画面左侧"},{"pair":"horizontal-2","A":"screen-left","B":"screen-right","reason":"A鼻口朝左，B鼻口朝右"},{"pair":"horizontal-3","A":"screen-right","B":"screen-left","reason":"A鼻口朝右，B鼻口朝左"},{"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A鼻口朝左，B鼻口朝右"},{"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A鼻口朝右，B鼻口朝左"},{"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A鼻口朝右，B鼻口朝左"},{"pair":"horizontal-7","A":"ambiguous","B":"screen-right","reason":"A接近正面，水平朝向不够明确；B鼻口明显朝右"},{"pair":"vertical-1","A":"ambiguous","B":"ambiguous","reason":"未见足够可靠的上下朝向差异"},{"pair":"vertical-2","A":"ambiguous","B":"ambiguous","reason":"未见足够可靠的上下朝向差异"},{"pair":"vertical-3","A":"ambiguous","B":"ambiguous","reason":"未见足够可靠的上下朝向差异"},{"pair":"vertical-4","A":"ambiguous","B":"ambiguous","reason":"未见足够可靠的上下朝向差异"},{"pair":"vertical-5","A":"ambiguous","B":"ambiguous","reason":"未见足够可靠的上下朝向差异"},{"pair":"vertical-6","A":"ambiguous","B":"ambiguous","reason":"未见足够可靠的上下朝向差异"},{"pair":"vertical-7","A":"ambiguous","B":"ambiguous","reason":"未见足够可靠的上下朝向差异"}]}
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"screen-right","B":"screen-left","reason":"A鼻吻在头部右侧，B鼻吻在头部左侧"},
+    {"pair":"horizontal-2","A":"screen-right","B":"screen-left","reason":"A侧脸朝右，B侧脸朝左"},
+    {"pair":"horizontal-3","A":"screen-left","B":"screen-right","reason":"A鼻吻朝左，B鼻吻朝右"},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A头部和鼻吻指向左，B指向右"},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A鼻吻位于右侧，B鼻吻位于左侧"},
+    {"pair":"horizontal-6","A":"screen-left","B":"screen-right","reason":"A侧脸朝左，B侧脸朝右"},
+    {"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"A鼻吻向左，B鼻吻向右"},
+    {"pair":"vertical-1","A":"down","B":"up","reason":"A眼睑下垂且头部低，B眼睛张开并抬头"},
+    {"pair":"vertical-2","A":"up","B":"down","reason":"A视线和头部略抬，B视线偏下"},
+    {"pair":"vertical-3","A":"ambiguous","B":"ambiguous","reason":"两者头部基本水平，缺乏明确上下地标"},
+    {"pair":"vertical-4","A":"ambiguous","B":"ambiguous","reason":"两者视线与头部高度近似水平"},
+    {"pair":"vertical-5","A":"ambiguous","B":"ambiguous","reason":"侧脸姿态主要体现水平朝向，无明确上下方向"},
+    {"pair":"vertical-6","A":"ambiguous","B":"ambiguous","reason":"A侧脸、B背侧，垂直轴地标不清晰"},
+    {"pair":"vertical-7","A":"ambiguous","B":"ambiguous","reason":"两者均为背侧姿态，无法确定上下方向"}
+  ]
+}

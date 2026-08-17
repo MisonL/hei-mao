@@ -1,6 +1,5 @@
 {
   "ok": true,
-  "source": "pets/hei-mao-fortune/spritesheet.webp",
   "states": [
     "idle",
     "running-right",
@@ -19,82 +18,898 @@
       "state": "idle",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21166,
+          "bbox": [
+            19,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20191,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19917,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19966,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19685,
+          "bbox": [
+            26,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19833,
+          "bbox": [
+            26,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "running-right",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20817,
+          "bbox": [
+            10,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19759,
+          "bbox": [
+            14,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20182,
+          "bbox": [
+            13,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19555,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20205,
+          "bbox": [
+            13,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21541,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19536,
+          "bbox": [
+            14,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20013,
+          "bbox": [
+            18,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "running-left",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18620,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19180,
+          "bbox": [
+            21,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18120,
+          "bbox": [
+            22,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19061,
+          "bbox": [
+            22,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18019,
+          "bbox": [
+            26,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18049,
+          "bbox": [
+            24,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18338,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18320,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "waving",
       "expected_frames": 4,
       "actual_frames": 4,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23606,
+          "bbox": [
+            5,
+            9,
+            187,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 25256,
+          "bbox": [
+            5,
+            5,
+            187,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 25256,
+          "bbox": [
+            5,
+            6,
+            187,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 25028,
+          "bbox": [
+            5,
+            5,
+            186,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "jumping",
       "expected_frames": 5,
       "actual_frames": 5,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23341,
+          "bbox": [
+            5,
+            9,
+            187,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21292,
+          "bbox": [
+            6,
+            5,
+            185,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20333,
+          "bbox": [
+            5,
+            11,
+            187,
+            196
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21446,
+          "bbox": [
+            6,
+            5,
+            186,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23176,
+          "bbox": [
+            5,
+            9,
+            187,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "failed",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23637,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22936,
+          "bbox": [
+            19,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22150,
+          "bbox": [
+            20,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21759,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23764,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21877,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21596,
+          "bbox": [
+            23,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22106,
+          "bbox": [
+            19,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "waiting",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21385,
+          "bbox": [
+            15,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21040,
+          "bbox": [
+            16,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20625,
+          "bbox": [
+            20,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20959,
+          "bbox": [
+            20,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20733,
+          "bbox": [
+            20,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20833,
+          "bbox": [
+            19,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "running",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21175,
+          "bbox": [
+            16,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20885,
+          "bbox": [
+            19,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20411,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20550,
+          "bbox": [
+            21,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20568,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20633,
+          "bbox": [
+            20,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     },
     {
       "state": "review",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "packaged-atlas-cell",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22871,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22175,
+          "bbox": [
+            16,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21831,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21304,
+          "bbox": [
+            22,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21566,
+          "bbox": [
+            21,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20428,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
     }
   ]
 }

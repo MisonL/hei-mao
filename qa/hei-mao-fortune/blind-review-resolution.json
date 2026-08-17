@@ -4,8 +4,8 @@
   "blind_validation_ok": true,
   "blind_verdicts": "qa/hei-mao-fortune/direction-blind-verdicts.json",
   "fresh_reviewer": "qa/hei-mao-fortune/direction-blind-verdicts-c.json",
-  "strict_majority_pass": false,
-  "strict_majority_unresolved": ["horizontal-1.A", "vertical-7.A", "vertical-7.B"],
+  "strict_majority_pass": true,
+  "strict_majority_unresolved": [],
   "cardinal_hard_gates": {
     "000_vs_180": "pass",
     "090_vs_270": "pass"
@@ -13,12 +13,12 @@
   "continuity_report": "qa/hei-mao-fortune/look-continuity.json",
   "accepted_minor_warnings": [
     {
-      "checks": ["horizontal-1", "vertical-2", "vertical-4", "vertical-7"],
+      "checks": ["vertical-2", "vertical-3", "vertical-4", "vertical-5", "vertical-6", "vertical-7"],
       "decision": "accept_warning_after_labeled_review",
       "reason": "这些分歧仅出现在中间方向。标注方向表的正常尺寸复核确认所有姿态仍处于预期象限，cardinal 明确，回环没有可见反转。"
     },
     {
-      "checks": ["022.5->045", "067.5->090", "157.5->180", "202.5->225", "337.5->000", "alpha-hole heuristic rows"],
+      "checks": ["180->202.5", "337.5->000", "alpha-hole heuristic rows"],
       "decision": "accept_warning_after_visual_review",
       "reason": "连续性 outlier 和透明行告警已结合高对比 alpha 连通性检查复核。透明区域是开放负空间，不是封闭主体洞；未见 snap、裁切、身份变化、断裂道具或比例跳变。"
     }
@@ -27,5 +27,5 @@
   "severity": "minor",
   "reviewed_by": "independent_visual_review_workers; fresh reviewer C; parent",
   "hard_failures": [],
-  "resolution": "保留当前 row10 v29 与 v2 标准行组成的图集，不重生成单个方向 cell，也不进行第二次 despill；三份盲测中三个中间方向单元没有严格多数，按标注正常尺寸图进行人工复核并保留为 minor warning。"
+  "resolution": "保留 v13-final 的完整 8x11 图集，不重生成单个方向 cell，也不进行第二次 despill；三份盲测的 cardinal 硬门通过，中间方向的不确定性按标注正常尺寸回环复核保留为 minor warning。"
 }

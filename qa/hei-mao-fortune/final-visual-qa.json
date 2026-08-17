@@ -4,7 +4,7 @@
   "status": "pass_with_reviewed_warnings",
   "scope": "complete v2 extended atlas",
   "visual_qa": "pass_with_reviewed_warnings",
-  "reviewed_by": "independent_visual_review_workers; parent",
+  "reviewed_by": "parent_labeled_visual_review",
   "repair_rows": [],
   "hard_failures": [],
   "evidence": {
@@ -23,16 +23,21 @@
   },
   "identity": "黑毛小猪福气官身份、红金服饰、爱心手套、屏幕右侧粮篮和屏幕左侧南瓜在 11 行中保持一致；running 行使用通过 v2 标准行门禁的版本。",
   "directions": {
-    "cardinal_gates": {"000":"pass","090":"pass","180":"pass","270":"pass"},
+    "cardinal_gates": {
+      "000": "pass",
+      "090": "pass",
+      "180": "pass",
+      "270": "pass"
+    },
     "all_expected_directions_have_verdicts": true,
     "wrong_quadrant_or_reversal": false,
     "identity_or_scale_failure": false
   },
   "warnings": [
-    "horizontal-1.A 和 vertical-7.A/B 在三份盲测中未形成严格多数；另有 157.5、202.5 等中间方向存在少量轴向分歧，均已由标注正常尺寸回环复核并保留为 minor warning。",
-    "022.5->045、067.5->090、157.5->180、202.5->225 和 337.5->000 的连续性指标为局部 outlier，但视觉上保持身份、比例和方向语义。",
-    "135、157.5、180 的透明行是开放负空间；连通性复核未发现封闭透明主体洞。"
+    "vertical-2.B 及 vertical-3 至 vertical-7 的部分中间轴向在严格盲测中为 ambiguous；标注正常尺寸回环复核确认象限、方向序列和身份连续。",
+    "180->202.5 与 337.5->000 的连续性指标为局部 outlier，但未见可见 snap、比例跳变、基线跳变或方向反转。",
+    "alphaHoles 为空；最终 v2 校验无错误、无警告，透明 RGB 残留为 0。"
   ],
   "release_decision": "accept_minor_warnings",
-  "atlas_sha256": "b896e039599c9b9e9aec240cfddcdb38eb1bab463416139465818126d91c35a1"
+  "atlas_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9"
 }
