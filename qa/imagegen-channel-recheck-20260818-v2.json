@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-17T19:51:12Z",
+  "scope": "local Docker image service read-only capability, contract, runtime, and channel-health recheck",
+  "service_base_url": "local_docker_deployment",
+  "skill": "visual-journal-image-agent",
+  "verification": {
+    "agent_capabilities": {
+      "status": 200,
+      "ok": true,
+      "request_modes_supported": [
+        "images-non-stream",
+        "images-sse",
+        "responses-non-stream",
+        "responses-sse"
+      ],
+      "channel_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ]
+    },
+    "contract_check": {
+      "status": "pass",
+      "billable": false,
+      "expected_validation_errors": [
+        "idempotency_key_required",
+        "page_sse_client_request_id_too_long"
+      ]
+    },
+    "runtime_capabilities": {
+      "status": 500,
+      "ok": false,
+      "error_code": "disk_io_error",
+      "error_message": "disk I/O error"
+    },
+    "state_backend": {
+      "backend": "sqlite",
+      "image_storage_mode": "fs"
+    },
+    "channel_health": {
+      "status": 200,
+      "state_initialized": true,
+      "channel_count": 1,
+      "healthy_credentials": 0,
+      "unhealthy_credentials": 1,
+      "state": "probe_pending",
+      "effective_request_modes": [],
+      "last_failure": {
+        "status": 403,
+        "code": "INSUFFICIENT_BALANCE",
+        "request_mode": "images-sse"
+      }
+    },
+    "billable_smoke": {
+      "status": "skipped",
+      "reason": "read-only recheck; --allow-billable was not used"
+    }
+  },
+  "generation_policy": {
+    "new_request_submitted": false,
+    "reason": "runtime-capabilities failed and the only configured channel is probe_pending after an upstream insufficient-balance failure",
+    "failed_idempotency_keys_reused": false,
+    "artifacts_created": 0
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "private_upstream_host_recorded": false
+  },
+  "result": "blocked_on_runtime_capabilities_and_upstream_balance"
+}
