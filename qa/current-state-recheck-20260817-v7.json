@@ -1,0 +1,148 @@
+{
+  "schema_version": 13,
+  "checked_at": "2026-08-16T19:44:45Z",
+  "tested_commit": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
+  "scope": "fresh eight-role local gates, PetDex live state, upstream Hook source, local Hook stall reproduction, Desktop release, and Codex App boundary",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "local_release_gates": {
+    "atlas_validation": {
+      "command": "validate_atlas.py --require-v2 with each recorded role chroma key",
+      "roles_passed": 8,
+      "roles_failed": 0,
+      "contract": "WEBP RGBA 1536x2288, 8x11, spriteVersionNumber=2",
+      "errors": 0,
+      "warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "fresh_run": true
+    },
+    "continuity": {
+      "command": "measure_direction_continuity.py",
+      "roles_ok": 8,
+      "errors": 0,
+      "warnings_by_role": {
+        "hei-mao": 6,
+        "hei-mao-quality": 5,
+        "hei-mao-butler": 6,
+        "hei-mao-chef": 6,
+        "hei-mao-delivery": 6,
+        "hei-mao-foodie": 9,
+        "hei-mao-fortune": 6,
+        "hei-mao-traveler": 6
+      },
+      "warning_policy": "existing minor warnings retained as review evidence",
+      "fresh_run": true
+    },
+    "visual_and_direction_qa": {
+      "roles": 8,
+      "hard_failures": 0,
+      "cardinal_gate_failures": 0,
+      "evidence": "retained per-role QA artifacts; no asset paths changed since the last visual gate"
+    },
+    "hatch_pet_tests": {
+      "result": "28 passed, 0 failed, 0 errors",
+      "evidence": "qa/hatch-pet-runtime-test-recheck-20260814-v1.json"
+    }
+  },
+  "installation": {
+    "local_roots": ["repository", "codex-pets", "petdex-pets"],
+    "local_role_count": 8,
+    "local_pet_json_and_spritesheet_sha_parity": true,
+    "all_local_ids_match_directories": true,
+    "all_local_sprite_version_numbers": 2,
+    "isolated_online_install": {
+      "cli_version": "1.2.2",
+      "requested_roles": 8,
+      "installed_roles": 8,
+      "exit_code": 0,
+      "all_ids_and_v2_metadata": true,
+      "temporary_home": true
+    },
+    "historical_slug_residuals": {
+      "hei-mao-2": false,
+      "hei-mao-recommender": false
+    }
+  },
+  "remote_sync": {
+    "local_main": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
+    "github_main": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
+    "gitlab_main": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
+    "live_refs_match": true,
+    "worktree_clean": true
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_source": "https://petdex.dev/api/manifest",
+    "manifest_generated_at": "2026-08-16T18:17:23.966Z",
+    "manifest_sha256": "9b08f9fc6f77783a3d3100425f73b15935814f38a3a493715c0d118293d89a73",
+    "manifest_total": 4568,
+    "current_owned_slugs_public": 8,
+    "historical_duplicate_slug": "hei-mao-2",
+    "exact_online_resource_matches": 3,
+    "owned_slug_edits_pending_review": 5,
+    "fortune_and_traveler": "public and installable; latest local sprite edits remain queued for review",
+    "duplicate_submission": false
+  },
+  "upstream": {
+    "main_commit": "0243af614f30eee31913ff3e3839467615c1c744",
+    "issue_689": {
+      "state": "OPEN",
+      "updated_at": "2026-08-11T11:05:48Z",
+      "comments": 0,
+      "stdin_eof_fix": "not implemented"
+    },
+    "pr_710": {
+      "state": "OPEN",
+      "draft": true,
+      "merge_state": "BLOCKED",
+      "updated_at": "2026-08-15T10:44:56Z",
+      "stdin_eof_fix": "not included"
+    },
+    "source_contract": {
+      "cli": "readStdin resolves only on end or error",
+      "native": "readCappedAndDrain reads until EOF or error"
+    }
+  },
+  "local_hook_reproduction": {
+    "cli_version": "1.2.2",
+    "held_open_stdin": {
+      "payload_sent": true,
+      "eof_sent": false,
+      "observation_window_ms": 1500,
+      "exited_within_window": false,
+      "isolated_parent_terminated_child": true
+    },
+    "explicit_eof": {
+      "payload_sent": true,
+      "eof_sent": true,
+      "exit_code": 0,
+      "elapsed_ms": 103
+    },
+    "codex_processes_mutated": false
+  },
+  "desktop_and_codex_app": {
+    "latest_public_desktop_release": "desktop-v0.8.0",
+    "installed_desktop_version": "0.8.0",
+    "codex_app_process_visible": true,
+    "codex_app_window_count": 0,
+    "pet_settings_accessible": false,
+    "visual_acceptance": "open",
+    "process_mutation": "none"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "docker_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "fresh local gates and remote sync pass; PetDex has five owned-slug edits pending review; local and upstream Hook EOF stall remains reproduced; Codex App visual acceptance remains open"
+}
