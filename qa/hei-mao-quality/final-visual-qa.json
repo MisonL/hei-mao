@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "ok": true,
-  "status": "pass_with_reviewed_warnings",
-  "visual_qa": "pass_with_reviewed_warnings",
+  "ok": false,
+  "status": "blocked_proportion_regression",
+  "visual_qa": "blocked",
   "spritesheet_sha256": "3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696",
   "proportion_repair": {
     "evidence": "qa/hei-mao-quality/proportion-repair-20260818.json",
@@ -10,7 +10,9 @@
     "method": "deterministic isotropic normalization of the complete look row"
   },
   "reviewed_by": "parent_labeled_visual_review",
-  "hard_failures": [],
+  "hard_failures": [
+    "look-row-9 and look-row-10 are materially shorter than the neutral frame and read as compressed across the complete row"
+  ],
   "gates": {
     "atlas_png_require_v2": "pass",
     "atlas_webp_require_v2": "pass",
@@ -19,7 +21,8 @@
     "direction_cardinals": "pass",
     "direction_blind_validation": "pass_with_existing_minor_reviewed_warnings",
     "look_continuity": "pass_with_minor_reviewed_warnings",
-    "row_10_scale": "pass; heights 162-169px against row-9 heights 159-169px"
+    "row_9_scale": "blocked; heights 159-169px against neutral height 198px",
+    "row_10_scale": "blocked; heights 162-169px against neutral height 198px"
   },
   "identity": "黑毛品控官的白色工作服、蓝色手套、放大镜和叶菜在标准动作与 16 个方向中保持一致；row 10 仅做整行等比归一化，不改变姿态语义或道具关系。",
   "directions": {
@@ -45,11 +48,13 @@
     "blind_resolution": "qa/hei-mao-quality/blind-review-resolution.json",
     "continuity": "qa/hei-mao-quality/look-continuity.json",
     "standard_review": "qa/hei-mao-quality/review.json",
-    "proportion_repair": "qa/hei-mao-quality/proportion-repair-20260818.json"
+    "proportion_repair": "qa/hei-mao-quality/proportion-repair-20260818.json",
+    "proportion_recheck": "qa/hei-mao-quality/proportion-recheck-20260818.json",
+    "generation_preflight": "qa/imagegen-channel-recheck-20260818-v3.json"
   },
   "warnings": [
     "157.5->180 and 337.5->000 remain reviewed direction-boundary continuity warnings; no visible wrong quadrant, reversal, or alpha hole was introduced.",
     "The repair is deterministic from the existing atlas; no new billable image-generation request was made while the local channel reported INSUFFICIENT_BALANCE."
   ],
-  "release_decision": "accept_minor_warnings"
+  "release_decision": "block_pending_coherent_row9_row10_generation"
 }

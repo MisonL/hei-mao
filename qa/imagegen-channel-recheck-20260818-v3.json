@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-17T20:58:53Z",
+  "scope": "read-only local Docker image-generation preflight for Quality look-row repair",
+  "container": {
+    "health": "healthy",
+    "billable_request": false
+  },
+  "runtime_capabilities": {
+    "status": 500,
+    "ok": false,
+    "error_code": "disk_io_error",
+    "error_message": "disk I/O error"
+  },
+  "channel_health": {
+    "state": "probe_pending",
+    "healthy_credentials": 0,
+    "unhealthy_credentials": 1,
+    "last_failure": {
+      "status": 403,
+      "code": "INSUFFICIENT_BALANCE",
+      "request_mode": "images-sse"
+    }
+  },
+  "generation_policy": {
+    "new_request_submitted": false,
+    "failed_idempotency_keys_reused": false,
+    "reason": "runtime capability failure and no healthy upstream channel"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false
+  },
+  "result": "blocked_on_runtime_capabilities_and_upstream_channel"
+}

@@ -44,21 +44,22 @@
     "git_diff_check": "pass"
   },
   "visual_review": {
-    "result": "pass_with_reviewed_warnings",
-    "scope": "quality extended contact sheet plus representative base and traveler sheets",
-    "proportion_regression": "no new compressed, cropped, or aspect-ratio-distorted pose found",
-    "quality_row_10": "complete row was isotropically normalized and remains within the row-9 practical height range",
+    "result": "blocked_proportion_regression",
+    "scope": "all eight role atlases with quality look-row proportion recheck",
+    "proportion_regression": "hei-mao-quality rows 9 and 10 remain materially shorter than the neutral frame and read as compressed",
+    "quality_rows_9_10": "complete coherent regeneration required; deterministic row-10 normalization is insufficient",
     "alpha_hole_candidates": "existing open negative-space candidates retained only where role-specific visual QA already classified them as non-body holes"
   },
   "image_generation": {
     "new_request": false,
     "repair_method": "deterministic atlas repair",
-    "reason": "local generation channel was not used for this validation pass"
+    "reason": "local generation channel was not used for this validation pass",
+    "current_preflight": "qa/imagegen-channel-recheck-20260818-v3.json"
   },
   "known_boundaries": [
     "Codex App live visual acceptance was not rerun in this pass.",
     "PetDex online resources may still lag the repaired local assets pending review.",
     "Continuity metrics retain previously reviewed minor boundary warnings."
   ],
-  "result": "pass_with_reviewed_warnings"
+  "result": "blocked_proportion_regression"
 }

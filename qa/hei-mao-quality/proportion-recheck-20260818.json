@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18",
+  "scope": "all eight local v2 role atlases, complete look rows 9 and 10",
+  "measurement": "alpha bounding-box height for each 192x208 cell; read-only raster inspection",
+  "neutral_frame_height_px": {
+    "hei-mao": 198,
+    "hei-mao-butler": 198,
+    "hei-mao-chef": 198,
+    "hei-mao-delivery": 198,
+    "hei-mao-foodie": 198,
+    "hei-mao-fortune": 198,
+    "hei-mao-quality": 198,
+    "hei-mao-traveler": 192
+  },
+  "cardinal_heights_px": {
+    "hei-mao": {"000": 194, "180": 175},
+    "hei-mao-butler": {"000": 194, "180": 190},
+    "hei-mao-chef": {"000": 198, "180": 184},
+    "hei-mao-delivery": {"000": 195, "180": 182},
+    "hei-mao-foodie": {"000": 198, "180": 187},
+    "hei-mao-fortune": {"000": 196, "180": 198},
+    "hei-mao-quality": {"000": 169, "180": 162},
+    "hei-mao-traveler": {"000": 188, "180": 188}
+  },
+  "quality_complete_rows_px": {
+    "row_9": [169, 169, 169, 169, 168, 167, 162, 159],
+    "row_10": [162, 165, 166, 166, 166, 166, 165, 169]
+  },
+  "finding": "hei-mao-quality has a material complete-row proportion regression in both look rows; its two cardinal frames are approximately 82%-85% of the neutral height and visibly read as compressed.",
+  "decision": "block_distribution_pending_coherent_row9_row10_generation",
+  "generation_blocker": {
+    "runtime_capabilities": "500 disk I/O error",
+    "upstream_channel": "probe_pending after insufficient-balance failure",
+    "new_request_submitted": false
+  }
+}
