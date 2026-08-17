@@ -3,6 +3,13 @@
   "ok": true,
   "status": "pass_with_reviewed_warnings",
   "visual_qa": "pass_with_reviewed_warnings",
+  "spritesheet_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+  "repair_rows": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look-000-to-157.5", "look-180-to-337.5"],
+  "proportion_repair": {
+    "evidence": "qa/hei-mao-traveler/proportion-repair-20260817.json",
+    "rows": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look-000-to-157.5", "look-180-to-337.5"],
+    "method": "deterministic isotropic cell normalization from approved Traveler candidate"
+  },
   "reviewed_by": "parent",
   "hard_failures": [],
   "gates": {
@@ -31,12 +38,15 @@
     "direction_qa_sheet": "qa/hei-mao-traveler/direction-qa-labeled.png",
     "direction_semantics": "qa/hei-mao-traveler/direction-semantics.json",
     "blind_validation": "qa/hei-mao-traveler/direction-blind-validation.json",
+    "post_repair_blind_review": "pass: three independent verdicts combined with strict majority; horizontal-6 B and horizontal-7 remain minor ambiguity warnings",
     "blind_resolution": "qa/hei-mao-traveler/blind-review-resolution.json",
     "continuity": "qa/hei-mao-traveler/look-continuity.json",
     "standard_review": "qa/hei-mao-traveler/review.json",
     "motion_previews": "qa/hei-mao-traveler/previews"
   },
   "warnings": [
+    "The five proportion-repair targets and all 16 direction cells were normalized; the new atlas passed structural, transparency, and edge checks.",
+    "Post-repair blind review retains minor horizontal ambiguity for horizontal-6 B and horizontal-7; both cardinal pairs pass and labeled direction review confirms the intended loop.",
     "000/180 的脚部自然负空间被连续性脚本识别为 interior hole，已逐行 alpha 复核并确认不是封闭身体内部的透明洞。",
     "少量中间方向盲测 ambiguity 与局部差异 warning 已通过标注方向图、接触表和动画预览复核。",
     "标准行使用 stable-slots，已确认帧数、边界和预览稳定。"

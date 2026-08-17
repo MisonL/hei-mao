@@ -1,9 +1,17 @@
 {
+  "ok": true,
   "visual_qa": "pass",
+  "spritesheet_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+  "proportion_repair": {
+    "evidence": "qa/hei-mao-foodie/proportion-repair-20260817.json",
+    "rows": ["waving", "waiting"],
+    "method": "deterministic isotropic cell normalization"
+  },
   "reviewed_by": "independent_visual_review",
-  "repair_rows": [],
+  "repair_rows": ["waving", "waiting"],
   "hard_failures": [],
   "warnings": [
+    "waving and waiting were normalized to the shared baseline and practical body scale; the repaired atlas passed structural and alpha checks.",
     "waiting frame 02/03 spoon overlaps snout/torso as a coherent action pose",
     "waiting frame 03 eye highlight is part of the expression",
     "direction continuity metrics retain previously reviewed minor outliers without visible reversal"

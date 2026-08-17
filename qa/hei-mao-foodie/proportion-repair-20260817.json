@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "role": "hei-mao-foodie",
+  "source_sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+  "output_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+  "repair_type": "deterministic isotropic cell normalization",
+  "baseline_y": 203,
+  "max_cell_width": 182,
+  "targets": {
+    "waving": 180,
+    "waiting": 188
+  },
+  "rows": [
+    3,
+    6
+  ],
+  "edge_cleanup": {
+    "algorithm": "edge-local-chroma-spill-suppression",
+    "spill_tolerance": 0.4,
+    "minimum_saturation": 0.05,
+    "edge_radius": 5
+  },
+  "result": "pass"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "scope": "eight local v2 role packages after the deterministic proportion repair",
+  "date": "2026-08-18",
+  "commands": [
+    "validate_atlas.py --require-v2 --chroma-key <recorded-role-key>",
+    "measure_direction_continuity.py",
+    "python -m unittest discover -s hatch-pet/tests -p test_*.py -v",
+    "git diff --check",
+    "bash -n install.sh",
+    "PowerShell parser for install.ps1"
+  ],
+  "role_chroma_keys": {
+    "hei-mao": "#00FF00",
+    "hei-mao-quality": "#FF00FF",
+    "hei-mao-butler": "#00FF00",
+    "hei-mao-chef": "#00FFFF",
+    "hei-mao-delivery": "#FF00FF",
+    "hei-mao-foodie": "#FF00FF",
+    "hei-mao-fortune": "#00FFFF",
+    "hei-mao-traveler": "#FF00FF"
+  },
+  "roles": {
+    "hei-mao": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "alpha_hole_candidates": 1, "sha_parity": "repo-codex-petdex"},
+    "hei-mao-quality": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 5, "alpha_hole_candidates": 0, "sha_parity": "repo-codex-petdex"},
+    "hei-mao-butler": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "alpha_hole_candidates": 0, "sha_parity": "repo-codex-petdex"},
+    "hei-mao-chef": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "alpha_hole_candidates": 0, "sha_parity": "repo-codex-petdex"},
+    "hei-mao-delivery": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "alpha_hole_candidates": 3, "sha_parity": "repo-codex-petdex"},
+    "hei-mao-foodie": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 9, "alpha_hole_candidates": 1, "sha_parity": "repo-codex-petdex"},
+    "hei-mao-fortune": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 4, "alpha_hole_candidates": 0, "sha_parity": "repo-codex-petdex"},
+    "hei-mao-traveler": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 9, "alpha_hole_candidates": 6, "sha_parity": "repo-codex-petdex"}
+  },
+  "atlas_contract": {
+    "all_roles": "1536x2288, 8x11, WEBP RGBA, spriteVersionNumber 2",
+    "transparent_rgb_residue": "zero for all roles",
+    "validator_errors": "zero for all roles with the recorded chroma key",
+    "validator_warnings": "zero for all roles with the recorded chroma key"
+  },
+  "tests": {"hatch_pet_unittest_count": 28, "result": "pass"},
+  "installer_checks": {
+    "shell_parse": "pass",
+    "powershell_parse": "pass",
+    "isolated_local_install_all_eight_roles": "pass",
+    "git_diff_check": "pass"
+  },
+  "visual_review": {
+    "result": "pass_with_reviewed_warnings",
+    "scope": "quality extended contact sheet plus representative base and traveler sheets",
+    "proportion_regression": "no new compressed, cropped, or aspect-ratio-distorted pose found",
+    "quality_row_10": "complete row was isotropically normalized and remains within the row-9 practical height range",
+    "alpha_hole_candidates": "existing open negative-space candidates retained only where role-specific visual QA already classified them as non-body holes"
+  },
+  "image_generation": {
+    "new_request": false,
+    "repair_method": "deterministic atlas repair",
+    "reason": "local generation channel was not used for this validation pass"
+  },
+  "known_boundaries": [
+    "Codex App live visual acceptance was not rerun in this pass.",
+    "PetDex online resources may still lag the repaired local assets pending review.",
+    "Continuity metrics retain previously reviewed minor boundary warnings."
+  ],
+  "result": "pass_with_reviewed_warnings"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "atlas": "pets/hei-mao-delivery/spritesheet.webp",
-  "atlas_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+  "atlas_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
   "reviewed_by": "independent_visual_qa_worker; parent",
   "review_basis": [
     "qa/hei-mao-delivery/look-directions.png",

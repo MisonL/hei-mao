@@ -3,7 +3,12 @@
   "status": "pass",
   "spriteVersionNumber": 2,
   "spritesheet": "pets/hei-mao-foodie/spritesheet.webp",
-  "sha256": "9ceb0e1411e3036fc496d70b8283bf11483bdcf589a340f68f3e4b47983b3d23",
+  "sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+  "proportion_repair": {
+    "evidence": "qa/hei-mao-foodie/proportion-repair-20260817.json",
+    "rows": ["waving", "waiting"],
+    "method": "deterministic isotropic cell normalization"
+  },
   "validation": "qa/hei-mao-foodie/validation.json",
   "chroma_despill": "qa/hei-mao-foodie/chroma-despill.json",
   "contact_sheet": "qa/hei-mao-foodie/contact-sheet-extended.png",

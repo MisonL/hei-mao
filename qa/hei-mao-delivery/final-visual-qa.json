@@ -1,10 +1,18 @@
 {
+  "ok": true,
   "visual_qa": "pass_with_reviewed_warnings",
+  "spritesheet_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+  "proportion_repair": {
+    "evidence": "qa/hei-mao-delivery/proportion-repair-20260817.json",
+    "rows": ["running-right", "running-left", "failed"],
+    "method": "deterministic isotropic cell normalization"
+  },
   "raw_worker_verdict": "fail",
   "reviewed_by": "independent_visual_qa_worker; parent",
-  "repair_rows": [],
+  "repair_rows": ["running-right", "running-left", "failed"],
   "hard_failures": [],
   "warnings": [
+    "running-right, running-left, and failed were normalized to the shared baseline and practical body scale; the repaired atlas passed structural and alpha checks.",
     "202.5, 225, and 247.5 were flagged by the row heuristic, but high-contrast alpha review confirmed open ear negative space and no enclosed transparent component.",
     "202.5 contains one threshold-only alpha-16 anti-aliased edge pixel; it is not a body hole.",
     "247.5->270 and 315->337.5 are continuity metric outliers without a visible snap, clipping, identity change, or broken prop attachment.",

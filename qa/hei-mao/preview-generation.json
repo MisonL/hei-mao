@@ -2,7 +2,7 @@
   "ok": true,
   "output_dir": "qa/hei-mao/previews",
   "source": "pets/hei-mao/spritesheet.webp",
-  "source_sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+  "source_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
   "previews": [
     {"state": "idle", "path": "qa/hei-mao/previews/idle.gif", "frames": 6},
     {"state": "running-right", "path": "qa/hei-mao/previews/running-right.gif", "frames": 8},

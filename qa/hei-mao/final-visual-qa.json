@@ -1,8 +1,15 @@
 {
   "ok": true,
   "scope": "complete v2 extended atlas",
+  "spritesheet_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+  "proportion_repair": {
+    "evidence": "qa/hei-mao/proportion-repair-20260817.json",
+    "rows": ["jumping"],
+    "method": "deterministic isotropic cell normalization"
+  },
   "visual_qa": "pass_with_reviewed_warnings",
   "independent_review": "PASS",
+  "repair_rows": ["jumping"],
   "hard_failures": [],
   "evidence": [
     "The rebuilt contact sheet and direction sheet contain the complete 11-row 1536x2288 atlas.",
@@ -11,6 +18,7 @@
     "The atlas validator reports RGBA, spriteVersionNumber 2, and zero transparent RGB residue pixels."
   ],
   "warnings": [
+    "jumping was normalized to the shared baseline and practical body scale; the repaired atlas passed structural and alpha checks.",
     "247.5 -> 270 and 337.5 -> 000 are larger but visually coherent transitions.",
     "The 000 direction has a y=12 transparent-row candidate recorded by qa/hei-mao/look-continuity.json; alpha review did not classify it as a filled-silhouette hole.",
     "Independent review covered the labeled 16-direction sheet and both row-boundary transitions; deterministic validators covered pixels and dimensions."

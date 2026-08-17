@@ -4,7 +4,12 @@
   "spriteVersionNumber": 2,
   "pet": "hei-mao-traveler",
   "spritesheet": "pets/hei-mao-traveler/spritesheet.webp",
-  "sha256": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592",
+  "sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+  "proportion_repair": {
+    "evidence": "qa/hei-mao-traveler/proportion-repair-20260817.json",
+    "rows": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look-000-to-157.5", "look-180-to-337.5"],
+    "method": "deterministic isotropic cell normalization from approved Traveler candidate"
+  },
   "layout": {
     "width": 1536,
     "height": 2288,
@@ -20,6 +25,7 @@
   "direction_qa_sheet": "qa/hei-mao-traveler/direction-qa-labeled.png",
   "direction_semantics": "qa/hei-mao-traveler/direction-semantics.json",
   "blind_direction_validation": "qa/hei-mao-traveler/direction-blind-validation.json",
+  "post_repair_blind_review": "pass_with_minor_reviewed_warnings",
   "blind_review_resolution": "qa/hei-mao-traveler/blind-review-resolution.json",
   "continuity": "qa/hei-mao-traveler/look-continuity.json",
   "review": "qa/hei-mao-traveler/review.json",

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "ok": true,
+  "input_sha256": "2c4986e81e09511568a67fc94992cf2c50dc54bf4684da92909e3d930bbaab9f",
+  "output_sha256": "3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696",
+  "chroma_key": "#FF00FF",
+  "algorithm": "edge-local-chroma-spill-suppression",
+  "source_report": "qa/hei-mao-quality/chroma-despill.json",
+  "operation": "inherited_single_pass_after_isotropic_row_normalization",
+  "additional_pass": false,
+  "alpha_preserved": true,
+  "validator_chroma_fringe_pixels": 0,
+  "validator_transparent_rgb_residue_pixels": 0
+}

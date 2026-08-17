@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "role": "hei-mao-quality",
+  "source_sha256": "2c4986e81e09511568a67fc94992cf2c50dc54bf4684da92909e3d930bbaab9f",
+  "output_sha256": "3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696",
+  "repair_type": "deterministic isotropic normalization of the complete look row",
+  "row": 10,
+  "directions": ["180", "202.5", "225", "247.5", "270", "292.5", "315", "337.5"],
+  "scale": 1.3,
+  "baseline_y": 201,
+  "source_cell_heights_px": [125, 127, 128, 128, 128, 128, 127, 130],
+  "output_cell_heights_px": [162, 165, 166, 166, 166, 166, 165, 169],
+  "source_row_reference": "row 9 and neutral cell from the same approved atlas",
+  "edge_cleanup": {
+    "algorithm": "edge-local-chroma-spill-suppression",
+    "source_report": "qa/hei-mao-quality/chroma-despill.json",
+    "additional_pass_after_normalization": false,
+    "validator_fringe_pixels": 0
+  },
+  "provenance": {
+    "kind": "deterministic_repair",
+    "source_atlas": "pets/hei-mao-quality/spritesheet.webp",
+    "source_generation_provenance_preserved": true,
+    "new_image_request": false
+  },
+  "result": "pass_with_reviewed_warnings"
+}

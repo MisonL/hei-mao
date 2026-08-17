@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "role": "hei-mao-traveler",
+  "source_sha256": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592",
+  "output_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+  "repair_type": "deterministic isotropic cell normalization from approved Traveler candidate",
+  "baseline_y": 203,
+  "max_cell_width": 182,
+  "targets": {
+    "idle": 192,
+    "running-right": 188,
+    "running-left": 188,
+    "waving": 180,
+    "jumping": 170,
+    "failed": 170,
+    "waiting": 188,
+    "running": 188,
+    "review": 188,
+    "look-000-to-157.5": 188,
+    "look-180-to-337.5": 188
+  },
+  "rows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "edge_cleanup": {
+    "algorithm": "edge-local-chroma-spill-suppression",
+    "spill_tolerance": 0.4,
+    "minimum_saturation": 0.05,
+    "edge_radius": 5
+  },
+  "direction_recheck": "new direction sheets and continuity report generated; blind semantic evidence remains bounded separately",
+  "result": "pass"
+}

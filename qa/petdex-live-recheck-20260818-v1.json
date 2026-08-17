@@ -1,0 +1,115 @@
+{
+  "schema_version": 3,
+  "audited_at": "2026-08-17T17:59:57Z",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "generated_at": "2026-08-17T12:27:22.014Z",
+    "total": 4568,
+    "current_slugs": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate_slugs": ["hei-mao-2"],
+    "missing_current_slugs": [],
+    "missing_historical_slugs": ["hei-mao-recommender"]
+  },
+  "online_resources": {
+    "hei-mao": {
+      "manifest_index_sprite_version": 1,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+      "local_sprite_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": false
+    },
+    "hei-mao-quality": {
+      "manifest_index_sprite_version": 1,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+      "local_sprite_sha256": "2c4986e81e09511568a67fc94992cf2c50dc54bf4684da92909e3d930bbaab9f",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": false
+    },
+    "hei-mao-butler": {
+      "manifest_index_sprite_version": 1,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "local_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": true
+    },
+    "hei-mao-chef": {
+      "manifest_index_sprite_version": 1,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "local_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": true
+    },
+    "hei-mao-delivery": {
+      "manifest_index_sprite_version": 2,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+      "local_sprite_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": false
+    },
+    "hei-mao-foodie": {
+      "manifest_index_sprite_version": 1,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+      "local_sprite_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": false
+    },
+    "hei-mao-fortune": {
+      "manifest_index_sprite_version": 2,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71",
+      "local_sprite_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": false
+    },
+    "hei-mao-traveler": {
+      "manifest_index_sprite_version": 2,
+      "metadata_sprite_version": 2,
+      "online_sprite_sha256": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e",
+      "local_sprite_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+      "resource_validation": "pass_with_actual_role_chroma_key",
+      "local_match": false
+    }
+  },
+  "historical_duplicate": {
+    "slug": "hei-mao-2",
+    "metadata_id": "hei-mao",
+    "classification": "duplicate_public_entry",
+    "local_installation_present": false,
+    "duplicate_submit_or_edit_attempted": false
+  },
+  "isolated_cli": {
+    "version": "1.2.2",
+    "eight_current_slugs_downloaded": true,
+    "codex_petdex_directory_parity": true,
+    "historical_slug_residuals": false
+  },
+  "remote_branches": {
+    "github_main": "5e30f415d168995b460e8a4c07ae2ecfa579c32d",
+    "gitlab_main": "5e30f415d168995b460e8a4c07ae2ecfa579c32d",
+    "local_head": "f52b2d6f0cb1bd42d61391e3ba9f755f3cc737d9",
+    "local_ahead_of_remote": 1,
+    "final_sync": "pending_local_quality_review_and_release"
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "result": "public_resources_and_isolated_download_pass; six_local_sprite_updates_pending_petdex_review; remote_branches_not_yet_synced"
+}

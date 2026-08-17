@@ -1,0 +1,100 @@
+{
+  "schema_version": 15,
+  "checked_at": "2026-08-17T15:35:37Z",
+  "tested_commit": "f52b2d6f0cb1bd42d61391e3ba9f755f3cc737d9",
+  "worktree_state": "dirty_by_intentional_proportion_repairs_and_qa_updates",
+  "scope": "five repaired atlases, eight-role v2 gates, post-repair Traveler blind direction QA, installers, local directory parity, public-file hygiene, and the remaining Quality row-10 proportion issue",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "proportion_repairs": {
+    "method": "deterministic isotropic cell normalization with shared baseline and single edge-local despill",
+    "roles": {
+      "hei-mao": {"rows": ["jumping"], "spritesheet_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c"},
+      "hei-mao-quality": {"rows": ["jumping"], "spritesheet_sha256": "2c4986e81e09511568a67fc94992cf2c50dc54bf4684da92909e3d930bbaab9f"},
+      "hei-mao-delivery": {"rows": ["running-right", "running-left", "failed"], "spritesheet_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86"},
+      "hei-mao-foodie": {"rows": ["waving", "waiting"], "spritesheet_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0"},
+      "hei-mao-traveler": {"rows": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look-000-to-157.5", "look-180-to-337.5"], "spritesheet_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"}
+    },
+    "evidence": "per-role proportion-repair-20260817.json files",
+    "result": "pass"
+  },
+  "open_visual_issues": {
+    "hei-mao-quality": {
+      "row": 10,
+      "directions": ["180", "202.5", "225", "247.5", "270", "292.5", "315", "337.5"],
+      "observed_cell_heights_px": [125, 127, 128, 128, 128, 128, 127, 130],
+      "comparison": "row 9 is 159-169px and neutral is 198px; row 10 remains visibly undersized",
+      "root_cause": "the source row is shorter than row 9 while the assembler reuses the row-9 registration scale",
+      "candidate_check": "an existing v4 source candidate passed isolated assembly, despill, v2 validation, and continuity review, but has no complete generation-request provenance and was not installed",
+      "status": "blocked_on_new_local_image_generation"
+    }
+  },
+  "local_release_gates": {
+    "atlas_validation": {
+      "command": "validate_atlas.py --require-v2 with each recorded role chroma key",
+      "roles_passed": 8,
+      "roles_failed": 0,
+      "contract": "WEBP RGBA 1536x2288, 8x11, spriteVersionNumber=2",
+      "errors": 0,
+      "warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "fresh_run": true
+    },
+    "continuity": {
+      "command": "measure_direction_continuity.py",
+      "roles_ok": 8,
+      "errors": 0,
+      "warning_policy": "minor continuity and intentional negative-space candidates remain review evidence",
+      "fresh_run": true
+    },
+    "traveler_post_repair_blind_direction": {
+      "command": "combine_direction_blind_verdicts.py plus validate_direction_blind_verdicts.py",
+      "independent_verdicts": 3,
+      "ok": true,
+      "cardinal_pairs": {"horizontal-4": "pass", "vertical-1": "pass"},
+      "warnings": ["horizontal-6 B horizontal axis is ambiguous", "horizontal-7 A horizontal axis is ambiguous", "horizontal-7 B horizontal axis is ambiguous"],
+      "resolution": "accepted as minor intermediate-direction ambiguity; labeled semantic review confirms no wrong quadrant or reversal"
+    },
+    "hatch_pet_tests": {
+      "result": "28 passed, 0 failed",
+      "warnings": "37 Pillow deprecation warnings only"
+    },
+    "installer_checks": {
+      "install_sh_bash_n": "pass",
+      "install_sh_shellcheck": "pass",
+      "install_ps1_powershell_parse": "pass",
+      "bash_local_source_smoke": "8 roles pass",
+      "powershell_local_source_smoke": "8 roles pass",
+      "unknown_slug_rejection": "Bash and PowerShell pass"
+    }
+  },
+  "installation": {
+    "local_roots": ["repository", "codex-pets", "petdex-pets"],
+    "local_role_count": 8,
+    "local_pet_json_and_spritesheet_sha_parity": true,
+    "all_local_ids_match_directories": true,
+    "all_local_sprite_version_numbers": 2,
+    "historical_slug_residuals": {"hei-mao-2": false, "hei-mao-recommender": false}
+  },
+  "public_file_hygiene": {
+    "absolute_local_paths_in_new_or_modified_qa": false,
+    "private_network_addresses": false,
+    "docker_addresses": false,
+    "credentials": false,
+    "request_identifiers": false
+  },
+  "external_boundaries": {
+    "petdex_live_state": "reused from qa/petdex-live-recheck-20260817.json; not re-queried in this local repair pass",
+    "codex_app_visual_acceptance": "open; no app process or window was stopped, restarted, or mutated",
+    "image_generation": "not used in this pass; local Docker channel-health is probe_pending with the last failure 403 INSUFFICIENT_BALANCE, so no new row-10 request was submitted"
+  },
+  "result": "five-role proportion repairs, eight-role v2 gates, post-repair Traveler blind QA, installer checks, parity, and hygiene pass; hei-mao-quality row 10 remains an explicit visual blocker and external PetDex/Codex App boundaries remain separate"
+}

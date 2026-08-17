@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-17T17:48:25Z",
+  "scope": "quality row-10 regeneration preflight and local release-gate recheck",
+  "service": {
+    "agent_capabilities": "pass",
+    "runtime_capabilities": "blocked_disk_io_error",
+    "channel_health": "probe_pending",
+    "healthy_channels": 0,
+    "last_failure": {
+      "status": 403,
+      "code": "INSUFFICIENT_BALANCE",
+      "request_mode": "images-sse"
+    }
+  },
+  "generation_policy": {
+    "new_request_submitted": false,
+    "reason": "No healthy upstream channel was available; no failed idempotency key was reused.",
+    "candidate_policy": "The isolated v4 candidate was not installed because complete generation-request provenance is absent."
+  },
+  "quality_row10": {
+    "current_cell_heights_px": [125, 127, 128, 128, 128, 128, 127, 130],
+    "candidate_cell_heights_px": [136, 141, 143, 144, 144, 144, 143, 143],
+    "candidate_structural_checks": "pass_in_isolation",
+    "candidate_continuity": "ok_with_review_required_warnings",
+    "status": "blocked_pending_new_local_generation"
+  },
+  "local_gates": {
+    "atlas_validation": "8/8 pass",
+    "direction_continuity": "8/8 pass",
+    "hatch_pet_tests": "28 passed, 0 failed",
+    "asset_mutation": "none"
+  },
+  "result": "blocked_on_image_generation_service"
+}

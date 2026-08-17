@@ -8,7 +8,7 @@
   "look_mechanics": "qa/hei-mao/look-mechanics.md",
   "package": "pets/hei-mao",
   "candidate": "pets/hei-mao/spritesheet.webp",
-  "sha256": "dd5f50c1f34010784af94c801a5042963e8aae6031f520fdd43f2b099811453a",
+  "sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
   "layout": {
     "width": 1536,
     "height": 2288,
@@ -19,6 +19,7 @@
     "spriteVersionNumber": 2
   },
   "optimizedRows": [
+    "jumping",
     "waiting",
     "running",
     "review",
@@ -31,6 +32,11 @@
     "lossless": true,
     "alphaPixelDifference": 0,
     "transparentRgbResiduePixels": 0
+  },
+  "proportionRepair": {
+    "evidence": "qa/hei-mao/proportion-repair-20260817.json",
+    "rows": ["jumping"],
+    "method": "deterministic isotropic cell normalization"
   },
   "validation": {
     "atlas": "pass",

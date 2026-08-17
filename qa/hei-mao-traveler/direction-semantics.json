@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "atlas": "spritesheet-extended-despilled.webp",
-  "atlas_sha256": "68ca886f057a6d9ef931c2f3095d9d1f412c5cd8921ed9dd7618f9845a068592",
-  "reviewed_by": "parent",
+  "atlas": "pets/hei-mao-traveler/spritesheet.webp",
+  "atlas_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+  "reviewed_by": "parent; three independent blind reviewers",
   "review_basis": [
     "look-directions.png",
     "direction-qa-labeled.png",
     "direction-blind-validation.json",
-    "look-continuity-final.json",
+    "look-continuity.json",
     "contact-sheet-extended.png"
   ],
   "directions": [

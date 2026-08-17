@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "role": "hei-mao-delivery",
+  "source_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+  "output_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+  "repair_type": "deterministic isotropic cell normalization",
+  "baseline_y": 203,
+  "max_cell_width": 182,
+  "targets": {
+    "running-right": 188,
+    "running-left": 188,
+    "failed": 170
+  },
+  "rows": [
+    1,
+    2,
+    5
+  ],
+  "edge_cleanup": {
+    "algorithm": "edge-local-chroma-spill-suppression",
+    "spill_tolerance": 0.4,
+    "minimum_saturation": 0.05,
+    "edge_radius": 5
+  },
+  "result": "pass"
+}
