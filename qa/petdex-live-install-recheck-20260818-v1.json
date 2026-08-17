@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-08-17T19:30:00Z",
+  "cli_version": "1.2.2",
+  "command": "petdex install <eight current slugs>",
+  "isolation": {
+    "real_user_directories_touched": false,
+    "petdex_target": "isolated HOME/.petdex/pets",
+    "codex_target": "isolated HOME/.codex/pets",
+    "telemetry_scope": "isolated HOME only"
+  },
+  "slugs": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "result": {
+    "exit_code": 0,
+    "installed_roles": 8,
+    "petdex_file_count": 16,
+    "codex_file_count": 16,
+    "dual_directory_sha_parity": true,
+    "all_metadata_ids_match_directories": true,
+    "all_downloaded_metadata_sprite_version": 2,
+    "online_sprite_matches_local_repository": {
+      "hei-mao": false,
+      "hei-mao-quality": false,
+      "hei-mao-butler": true,
+      "hei-mao-chef": true,
+      "hei-mao-delivery": false,
+      "hei-mao-foodie": false,
+      "hei-mao-fortune": false,
+      "hei-mao-traveler": false
+    }
+  },
+  "review_boundary": "Six existing owned-slug updates remain pending PetDex review; no duplicate submit or edit was attempted."
+}

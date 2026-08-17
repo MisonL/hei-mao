@@ -388,6 +388,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-recheck-20260817.json`: 最新 manifest 中八个黑毛角色均已公开、八个线上资源的 v2/尺寸/SHA 对照、Fortune/Traveler 当前 owned-slug 编辑队列和无重复提交边界，不含本机环境信息
 - `qa/petdex-live-recheck-20260818-v2.json`: 2026-08-17T18:26:47.414Z manifest、八角色公开资源 SHA/metadata、GitHub/GitLab `a6d7a71` 主线提交对照；六个本地修复图集仍待 PetDex 审核，不含本机环境信息
 - `qa/petdex-live-install-recheck-20260817-v2.json`: PetDex CLI `1.2.2` 隔离安装八个公开角色到两个目标根目录的真实结果、ID/v2/文件 parity 和公开资源编辑审核边界，不含本机环境信息
+- `qa/petdex-live-install-recheck-20260818-v1.json`: PetDex CLI `1.2.2` 新鲜隔离安装八个公开角色、两个目录各 16 个文件及 SHA parity；六个本地修复图集仍待线上审核，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
