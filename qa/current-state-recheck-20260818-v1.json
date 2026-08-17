@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-08-17T20:04:18Z",
+  "checked_commit": "f80b910487e99f2ae4f705398f0256cdca953eef",
+  "scope": "fresh eight-role local release, installer, PetDex, image-service, and Codex App boundary recheck",
+  "roles": {
+    "hei-mao": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "open_negative_space_candidates": 1},
+    "hei-mao-quality": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 5, "open_negative_space_candidates": 0},
+    "hei-mao-butler": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "open_negative_space_candidates": 0},
+    "hei-mao-chef": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "open_negative_space_candidates": 0},
+    "hei-mao-delivery": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 6, "open_negative_space_candidates": 3},
+    "hei-mao-foodie": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 9, "open_negative_space_candidates": 1},
+    "hei-mao-fortune": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 4, "open_negative_space_candidates": 0},
+    "hei-mao-traveler": {"atlas": "pass", "continuity": "pass_with_reviewed_warnings", "continuity_warnings": 9, "open_negative_space_candidates": 6}
+  },
+  "atlas_contract": {
+    "roles_checked": 8,
+    "dimensions": "1536x2288",
+    "grid": "8x11",
+    "format": "WEBP RGBA",
+    "sprite_version_number": 2,
+    "transparent_rgb_residue_pixels": 0,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "alpha_hole_hard_failures": 0,
+    "alpha_review": "All reported continuity candidates were reviewed as open negative space connected to the exterior; no enclosed body hole was found."
+  },
+  "tests": {
+    "hatch_pet_unittest": {"count": 28, "passed": 28, "failed": 0, "errors": 0},
+    "install_sh_syntax": "pass",
+    "install_ps1_syntax": "pass",
+    "isolated_install_all_eight_roles": "pass",
+    "unknown_historical_slug_rejected_without_target_mutation": "pass",
+    "three_directory_sha_parity": "pass",
+    "git_diff_check": "pass"
+  },
+  "historical_slugs": {
+    "hei-mao-2": "public_duplicate_entry_not_in_local_release_set",
+    "hei-mao-recommender": "not_present_in_current_manifest_or_local_release_set",
+    "local_codex_and_petdex_residuals": 0
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-17T18:26:47.414Z",
+    "manifest_total": 4568,
+    "current_slugs_public": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate_slugs": ["hei-mao-2"],
+    "online_resources": {
+      "hei-mao": {"manifest_index_sprite_version": 1, "metadata_sprite_version": 2, "online_sprite_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c", "local_sprite_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c", "local_match": false},
+      "hei-mao-quality": {"manifest_index_sprite_version": 1, "metadata_sprite_version": 2, "online_sprite_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92", "local_sprite_sha256": "3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696", "local_match": false},
+      "hei-mao-butler": {"manifest_index_sprite_version": 1, "metadata_sprite_version": 2, "online_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "local_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "local_match": true},
+      "hei-mao-chef": {"manifest_index_sprite_version": 1, "metadata_sprite_version": 2, "online_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "local_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "local_match": true},
+      "hei-mao-delivery": {"manifest_index_sprite_version": 2, "metadata_sprite_version": 2, "online_sprite_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a", "local_sprite_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86", "local_match": false},
+      "hei-mao-foodie": {"manifest_index_sprite_version": 1, "metadata_sprite_version": 2, "online_sprite_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49", "local_sprite_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0", "local_match": false},
+      "hei-mao-fortune": {"manifest_index_sprite_version": 2, "metadata_sprite_version": 2, "online_sprite_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71", "local_sprite_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9", "local_match": false},
+      "hei-mao-traveler": {"manifest_index_sprite_version": 2, "metadata_sprite_version": 2, "online_sprite_sha256": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e", "local_sprite_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25", "local_match": false}
+    },
+    "review_boundary": "Six local repaired sprite updates remain pending PetDex review; no duplicate submit or edit was attempted."
+  },
+  "image_service": {
+    "agent_capabilities_status": 200,
+    "contract_check": "pass",
+    "runtime_capabilities_status": 500,
+    "runtime_error_code": "disk_io_error",
+    "channel_health_status": 200,
+    "channel_state": "probe_pending",
+    "effective_request_modes": [],
+    "last_failure": {"status": 403, "code": "INSUFFICIENT_BALANCE", "request_mode": "images-sse"},
+    "billable_smoke": "skipped",
+    "new_generation_request": false
+  },
+  "codex_app": {
+    "process_present": true,
+    "read_only_window_count": 0,
+    "visual_acceptance": "blocked_until_main_window_is_accessible",
+    "no_process_lifecycle_change": true
+  },
+  "remote_branches": {
+    "github_main": "f80b910487e99f2ae4f705398f0256cdca953eef",
+    "gitlab_main": "f80b910487e99f2ae4f705398f0256cdca953eef",
+    "local_head": "f80b910487e99f2ae4f705398f0256cdca953eef",
+    "final_sync": "pass"
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "private_upstream_host_recorded": false
+  },
+  "result": "local_release_gates_pass; PetDex_review_image_service_and_Codex_App_boundaries_remain_open"
+}
