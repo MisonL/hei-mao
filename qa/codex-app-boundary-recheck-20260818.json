@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-17T19:45:00Z",
+  "scope": "ChatGPT/Codex App pet visual acceptance boundary, read-only probe",
+  "application_probe": {
+    "process_visible": true,
+    "window_count": 0,
+    "settings_action_attempted": false,
+    "pet_settings_visible": false,
+    "pet_animation_visible": false,
+    "process_was_stopped_or_restarted": false,
+    "chat_content_or_agent_state_changed": false
+  },
+  "probe_method": [
+    "System Events read-only window count",
+    "application process inspection"
+  ],
+  "limitations": [
+    "The App process is running but exposes no accessible window, so pet refresh, role switching, animation loop, and proportion acceptance cannot be verified in this pass.",
+    "No settings, refresh, pet selection, message sending, exit, restart, or process signal operation was attempted."
+  ],
+  "result": "process_visible_but_no_window; visual_acceptance_remains_open"
+}

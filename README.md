@@ -64,7 +64,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 本机当前保留八个角色；本轮五个角色和 Quality row 10 均已做确定性比例归一化，八个角色的 v2 结构、透明度和连续性门禁均通过。Quality row 10 采用整行等比缩放至 `162-169px`，与 row 9 的 `159-169px` 对齐，未使用纵向拉伸或占位图；当前仅保留方向边界 minor warning。Traveler 修复后的三份独立方向盲测也已重新合并通过，保留 3 个中间水平 ambiguity warning，两个 cardinal 对无错误。仓库、Codex 与 PetDex 三个本地目录的文件集合和 SHA-256 已完成 parity；本轮收尾证据见 Quality 的 `proportion-repair-20260818.json`、`final-visual-qa.json` 和 `run-summary.json`。Skill 的 28 项测试已在隔离 runtime 中通过，视觉 warning 和 App 边界仍按专项证据标注，未把不可见的 App 设置视图误报为完成。
 
-此前本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；Quality row 10 的新 SHA 已同步到仓库、安装器和三处本地目录。当前 PetDex CLI 八角色在线安装、资源 SHA 和远端分支对照见 `qa/petdex-live-recheck-20260818-v2.json`，但线上资源仍可能是审核前旧图集。Petdex Desktop `v0.8.0` 的历史签名、窗口和双屏证据仍保留在专项 QA 中，但最新 ChatGPT/Codex App 只读探针显示进程和“设置”菜单可见、窗口数为 0，设置动作未暴露宠物视图，Codex App 的本轮视觉验收仍未完成，见 `qa/codex-app-boundary-recheck-20260817.json`；未停止或重启任何 Codex 进程。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复；开放的 PR #710 也未改变 stdin EOF 语义。
+此前本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；Quality row 10 的新 SHA 已同步到仓库、安装器和三处本地目录。当前 PetDex CLI 八角色在线安装、资源 SHA 和远端分支对照见 `qa/petdex-live-recheck-20260818-v2.json`，但线上资源仍可能是审核前旧图集。Petdex Desktop `v0.8.0` 的历史签名、窗口和双屏证据仍保留在专项 QA 中，但最新 ChatGPT/Codex App 只读探针显示进程存在、窗口数为 0，未执行设置或宠物操作，Codex App 的本轮视觉验收仍未完成，见 `qa/codex-app-boundary-recheck-20260818.json`；未停止或重启任何 Codex 进程。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复；开放的 PR #710 也未改变 stdin EOF 语义。
 
 ### 角色安装器
 
@@ -389,6 +389,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-recheck-20260818-v2.json`: 2026-08-17T18:26:47.414Z manifest、八角色公开资源 SHA/metadata、GitHub/GitLab `a6d7a71` 主线提交对照；六个本地修复图集仍待 PetDex 审核，不含本机环境信息
 - `qa/petdex-live-install-recheck-20260817-v2.json`: PetDex CLI `1.2.2` 隔离安装八个公开角色到两个目标根目录的真实结果、ID/v2/文件 parity 和公开资源编辑审核边界，不含本机环境信息
 - `qa/petdex-live-install-recheck-20260818-v1.json`: PetDex CLI `1.2.2` 新鲜隔离安装八个公开角色、两个目录各 16 个文件及 SHA parity；六个本地修复图集仍待线上审核，不含本机环境信息
+- `qa/codex-app-boundary-recheck-20260818.json`: ChatGPT/Codex App 当前只读进程和窗口探针；进程可见但窗口数为 0，未执行设置或进程控制，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
