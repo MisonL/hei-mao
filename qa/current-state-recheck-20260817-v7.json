@@ -1,8 +1,9 @@
 {
-  "schema_version": 13,
-  "checked_at": "2026-08-16T19:44:45Z",
-  "tested_commit": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
-  "scope": "fresh eight-role local gates, PetDex live state, upstream Hook source, local Hook stall reproduction, Desktop release, and Codex App boundary",
+  "schema_version": 14,
+  "checked_at": "2026-08-17T00:44:59Z",
+  "tested_commit": "9221c80e6328d7fbab2afd367cc25557f97059e9",
+  "asset_tested_commit": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
+  "scope": "fresh eight-role local gates, QA artifact completeness, installer checks, PetDex live state, upstream Hook source, local Hook stall reproduction, Desktop release, and Codex App boundary",
   "roles": [
     "hei-mao",
     "hei-mao-quality",
@@ -50,6 +51,19 @@
     "hatch_pet_tests": {
       "result": "28 passed, 0 failed, 0 errors",
       "evidence": "qa/hatch-pet-runtime-test-recheck-20260814-v1.json"
+    },
+    "qa_artifact_completeness": {
+      "roles_checked": 8,
+      "roles_complete": 8,
+      "required_artifacts_per_role": "contact sheets, previews, direction semantics, blind verdicts and validation, continuity, despill, review, final visual QA, run summary, and blind-review resolution",
+      "missing_artifacts": 0
+    },
+    "installer_checks": {
+      "install_sh_bash_n": "pass",
+      "install_sh_shellcheck": "pass",
+      "install_ps1_powershell_parse": "pass",
+      "role_references_in_each_installer": 8,
+      "public_hygiene_scan": "pass"
     }
   },
   "installation": {
@@ -72,9 +86,9 @@
     }
   },
   "remote_sync": {
-    "local_main": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
-    "github_main": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
-    "gitlab_main": "19a6073256e870b2b6d6eac87da7dca039eb49e9",
+    "local_main": "9221c80e6328d7fbab2afd367cc25557f97059e9",
+    "github_main": "9221c80e6328d7fbab2afd367cc25557f97059e9",
+    "gitlab_main": "9221c80e6328d7fbab2afd367cc25557f97059e9",
     "live_refs_match": true,
     "worktree_clean": true
   },
@@ -144,5 +158,5 @@
     "credentials": false,
     "request_identifiers": false
   },
-  "result": "fresh local gates and remote sync pass; PetDex has five owned-slug edits pending review; local and upstream Hook EOF stall remains reproduced; Codex App visual acceptance remains open"
+  "result": "fresh local gates, artifact completeness, installer checks and remote sync pass; PetDex has five owned-slug edits pending review; local and upstream Hook EOF stall remains reproduced; Codex App visual acceptance remains open"
 }
