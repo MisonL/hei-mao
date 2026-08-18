@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T15:54:16Z",
+  "scope": "fresh PetDex manifest and in-memory public asset contract/SHA recheck",
+  "manifest": {
+    "generated_at": "2026-08-18T12:29:32.049Z",
+    "entry_count": 4568,
+    "current_role_count": 8,
+    "historical_duplicate_present": "hei-mao-2"
+  },
+  "roles": [
+    {"slug":"hei-mao","manifest_index_sprite_version_number":1,"metadata_sprite_version_number":2,"remote_sprite_sha256":"ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c","local_sprite_sha256":"52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c","remote_metadata_sha256":"dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802","local_metadata_sha256":"dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802","sha_match":false,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao"},
+    {"slug":"hei-mao-quality","manifest_index_sprite_version_number":1,"metadata_sprite_version_number":2,"remote_sprite_sha256":"254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92","local_sprite_sha256":"a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5","remote_metadata_sha256":"9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43","local_metadata_sha256":"c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07","sha_match":false,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao-quality"},
+    {"slug":"hei-mao-butler","manifest_index_sprite_version_number":1,"metadata_sprite_version_number":2,"remote_sprite_sha256":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304","local_sprite_sha256":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304","remote_metadata_sha256":"903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4","local_metadata_sha256":"903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4","sha_match":true,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao-butler"},
+    {"slug":"hei-mao-chef","manifest_index_sprite_version_number":1,"metadata_sprite_version_number":2,"remote_sprite_sha256":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957","local_sprite_sha256":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957","remote_metadata_sha256":"d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a","local_metadata_sha256":"d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a","sha_match":true,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao-chef"},
+    {"slug":"hei-mao-delivery","manifest_index_sprite_version_number":2,"metadata_sprite_version_number":2,"remote_sprite_sha256":"ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a","local_sprite_sha256":"6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86","remote_metadata_sha256":"16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2","local_metadata_sha256":"16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2","sha_match":false,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao-delivery"},
+    {"slug":"hei-mao-foodie","manifest_index_sprite_version_number":1,"metadata_sprite_version_number":2,"remote_sprite_sha256":"fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49","local_sprite_sha256":"eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0","remote_metadata_sha256":"0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c","local_metadata_sha256":"0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c","sha_match":false,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao-foodie"},
+    {"slug":"hei-mao-fortune","manifest_index_sprite_version_number":2,"metadata_sprite_version_number":2,"remote_sprite_sha256":"1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71","local_sprite_sha256":"10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9","remote_metadata_sha256":"ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b","local_metadata_sha256":"ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b","sha_match":false,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao-fortune"},
+    {"slug":"hei-mao-traveler","manifest_index_sprite_version_number":2,"metadata_sprite_version_number":2,"remote_sprite_sha256":"2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e","local_sprite_sha256":"d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25","remote_metadata_sha256":"82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f","local_metadata_sha256":"82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f","sha_match":false,"remote_contract":"HTTP 200; WEBP RGBA 1536x2288; metadata id hei-mao-traveler"}
+  ],
+  "summary": {
+    "entries_found": 8,
+    "sha_matches": 2,
+    "sha_mismatches_pending_owned_slug_review": 6,
+    "all_remote_downloads_contract_valid": true,
+    "historical_slug_local_residuals": 0,
+    "duplicate_entries_created": false,
+    "result": "public_assets_rechecked; six_owned_slug_updates_still_pending_review"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false
+  }
+}
