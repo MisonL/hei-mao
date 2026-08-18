@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T14:53:21Z",
+  "scope": "local Docker image-generation API recovery and minimal real smoke",
+  "service_base_url": "local_docker_deployment",
+  "preflight": {
+    "first_run": "pass",
+    "agent_doctor": "pass",
+    "agent_capabilities": "pass",
+    "runtime_capabilities": "pass",
+    "contract_check": "pass",
+    "channel_health": {
+      "state": "healthy",
+      "healthy_credentials": 1,
+      "unhealthy_credentials": 0,
+      "configured_request_modes": ["images-non-stream", "images-sse"],
+      "effective_request_modes": ["images-non-stream", "images-sse"],
+      "recommended_concurrency": 1,
+      "capacity_per_credential": 1
+    }
+  },
+  "real_smoke": {
+    "status": "pass",
+    "billable": true,
+    "transport": "agent_job_polling",
+    "endpoint": "/api/agent/image-requests",
+    "route_mode": "job",
+    "channel_request_mode": "images-non-stream",
+    "fallback_applied": false,
+    "dimensions": "1024x1024",
+    "format": "webp",
+    "dimension_check": "pass",
+    "artifact_count": 1,
+    "upstream_request_sent": true,
+    "artifact_cleanup": "pass",
+    "project_assets_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "upstream_host_recorded": false
+  },
+  "result": "service_recovered; real_smoke_passed; test_artifact_removed"
+}
