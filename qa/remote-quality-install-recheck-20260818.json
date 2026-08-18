@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T14:14:06Z",
+  "checked_commit": "fa9b7c3",
+  "scope": "post-push GitHub and GitLab raw installer smoke for the recovered Quality pet",
+  "sources": {
+    "github": {
+      "script_fetch": "pass",
+      "script_parse": "pass",
+      "quality_install": "pass",
+      "quality_pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "quality_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"
+    },
+    "gitlab": {
+      "script_fetch": "pass",
+      "script_parse": "pass",
+      "quality_install": "pass",
+      "quality_pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+      "quality_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"
+    }
+  },
+  "asset_checks": {
+    "requested_id_matches_slug": true,
+    "github_gitlab_quality_bytes_match_repository": true,
+    "unknown_slug_rejection": "pass",
+    "temporary_targets_removed": true
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "github_gitlab_quality_raw_installers_pass_and_match_repository"
+}

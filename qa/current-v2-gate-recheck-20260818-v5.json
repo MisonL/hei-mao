@@ -72,8 +72,13 @@
     "credentials_recorded": false
   },
   "remote": {
-    "status": "pending_push_and_raw_recheck",
-    "reason": "This gate records the local commit before remote publication; remote sources must be rechecked after push."
+    "status": "pass",
+    "github_main": "fa9b7c3",
+    "gitlab_main": "fa9b7c3",
+    "local_head": "fa9b7c3",
+    "sync": "pass",
+    "quality_raw_install": "pass",
+    "quality_raw_evidence": "qa/remote-quality-install-recheck-20260818.json"
   },
-  "result": "local_eight_role_v2_gate_pass; quality_visual_gate_pass_with_reviewed_warnings; remote_publication_pending"
+  "result": "local_and_remote_eight_role_v2_gate_pass; quality_visual_gate_pass_with_reviewed_warnings"
 }

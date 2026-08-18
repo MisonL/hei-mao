@@ -399,7 +399,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-v2-gate-recheck-20260818-v2.json`: 八角色色键 v2/连续性门禁、28 项 hatch-pet 测试、安装器解析与隔离安装、三目录 SHA parity 和 Quality look-row 比例阻断；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260818-v3.json`: 2026-08-18T07:50:43Z 新鲜八角色 v2/连续性门禁、28 项测试、QA 资产完整性、三目录 SHA parity、旧 slug 清理、安装器解析和双远端同步；唯一视觉阻断为 Quality 两条 look row 的完整重生成，不含本机环境信息
 - `qa/current-v2-gate-recheck-20260818-v4.json`: Quality 重生成前的八角色 v2 validator/连续性历史快照；当时 Quality 两条 look row 仍需完整重生成，不含本机环境信息
-- `qa/current-v2-gate-recheck-20260818-v5.json`: 提交 `167082e` 后八角色 v2 atlas、连续性、Quality 视觉门禁、安装器、双目录 SHA 和公开文件卫生复核；远端 raw 资源将在推送后另行复核，不含本机环境信息
+- `qa/current-v2-gate-recheck-20260818-v5.json`: 提交 `fa9b7c3` 后八角色 v2 atlas、连续性、Quality 视觉门禁、安装器、双目录 SHA、GitHub/GitLab 同步和公开文件卫生复核，不含本机环境信息
+- `qa/remote-quality-install-recheck-20260818.json`: GitHub/GitLab raw 安装器的 Quality 下载、固定 SHA、未知 slug 拒绝和临时目录清理复核，不含本机环境信息
 - `qa/current-state-recheck-20260818-v1.json`: 基于提交 `f80b910` 的八角色新鲜门禁、28 项测试、三目录 parity、安装器、PetDex 公开资源、生图服务和 Codex App 边界复核；不含本机环境信息
 - `qa/codex-app-boundary-recheck-20260817.json`: ChatGPT/Codex App 进程、菜单栏和设置菜单可见性复核；窗口数为 0，宠物视图仍不可访问，未停止或重启 Codex 进程，不含本机环境信息
 - `qa/petdex-live-install-recheck-20260817.json`: 2026-08-16 早期 PetDex CLI `1.2.2` 隔离安装六个公开角色的历史快照，仅用于追溯，不含本机环境信息
