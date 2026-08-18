@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T08:37:49Z",
+  "scope": "ChatGPT/Codex App pet visual acceptance boundary, read-only probe",
+  "application_probe": {
+    "process_visible": true,
+    "window_query": "timed_out_at_safe_8_second_boundary",
+    "window_count": null,
+    "settings_action_attempted": false,
+    "pet_settings_visible": false,
+    "pet_animation_visible": false,
+    "process_was_stopped_or_restarted": false,
+    "chat_content_or_agent_state_changed": false
+  },
+  "probe_method": [
+    "read-only process inspection",
+    "bounded System Events window query"
+  ],
+  "limitations": [
+    "The App process is running, but the accessibility window query did not return before the safe timeout; pet refresh, role switching, animation loop, and proportion acceptance remain unverified.",
+    "No settings, refresh, pet selection, message sending, exit, restart, or process signal operation was attempted."
+  ],
+  "result": "process_visible_but_app_visual_acceptance_unverified"
+}

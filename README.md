@@ -63,7 +63,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 本机当前保留八个角色，但 `hei-mao-quality` 的 look row 9/10 存在已确认的整行比例阻断，暂不进入安装器分发白名单；其余七个角色的 v2 结构、透明度和连续性门禁通过。Quality row 10 的确定性等比修复仅将高度调整到 `162-169px`，仍低于中性帧约 `198px`，不能替代两条 coherent look row 的重新生成。仓库、Codex 与 PetDex 的旧 Quality 文件仍保留用于追溯，不得据此宣称当前 Quality 资源已验收。证据见 `qa/hei-mao-quality/final-visual-qa.json`、`qa/hei-mao-quality/run-summary.json`、`qa/hei-mao-quality/proportion-recheck-20260818.json` 和 `qa/current-v2-gate-recheck-20260818-v3.json`；本地生图服务恢复前 goal 保持 active。
 
-此前本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；当前 `hei-mao-quality` 因比例阻断已从安装器白名单移出，已有本地文件不删除。其余七个角色的 PetDex 在线安装、资源 SHA 和远端分支对照见 `qa/petdex-live-recheck-20260818-v5.json` 和 `qa/petdex-live-install-recheck-20260818-v2.json`，但线上资源仍可能是审核前旧图集。Petdex Desktop `v0.8.0` 的历史签名、窗口和双屏证据仍保留在专项 QA 中，但最新 ChatGPT/Codex App 只读探针显示进程存在、窗口数为 0，未执行设置或宠物操作，Codex App 的本轮视觉验收仍未完成，见 `qa/codex-app-boundary-recheck-20260818.json`；未停止或重启任何 Codex 进程。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复；开放的 PR #710 也未改变 stdin EOF 语义。
+此前本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；当前 `hei-mao-quality` 因比例阻断已从安装器白名单移出，已有本地文件不删除。其余七个角色的 PetDex 在线安装、资源 SHA 和远端分支对照见 `qa/petdex-live-recheck-20260818-v5.json` 和 `qa/petdex-live-install-recheck-20260818-v2.json`，但线上资源仍可能是审核前旧图集。Petdex Desktop `v0.8.0` 的历史签名、窗口和双屏证据仍保留在专项 QA 中；最新 ChatGPT/Codex App 只读探针确认进程存在，但窗口查询在安全超时内未返回，未执行设置或宠物操作，Codex App 的本轮视觉验收仍未完成，见 `qa/codex-app-boundary-recheck-20260818-v2.json`；未停止或重启任何 Codex 进程。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复；开放的 PR #710 也未改变 stdin EOF 语义。
 
 ### 角色安装器
 
@@ -399,6 +399,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-install-recheck-20260818-v1.json`: PetDex CLI `1.2.2` 新鲜隔离安装八个公开角色、两个目录各 16 个文件及 SHA parity；六个本地修复图集仍待线上审核，不含本机环境信息
 - `qa/petdex-live-install-recheck-20260818-v2.json`: PetDex CLI `1.2.2` 新鲜隔离安装七个可发布角色到两个临时目标，14+14 个文件 SHA parity 通过，Quality 与历史 `hei-mao-2` 按规则拒绝，临时目标已清理，不含本机环境信息
 - `qa/codex-app-boundary-recheck-20260818.json`: ChatGPT/Codex App 当前只读进程和窗口探针；进程可见但窗口数为 0，未执行设置或进程控制，不含本机环境信息
+- `qa/codex-app-boundary-recheck-20260818-v2.json`: 2026-08-18T08:37:49Z ChatGPT/Codex App 只读进程探针；窗口查询在安全 8 秒边界超时，未执行设置或进程控制，视觉验收仍未完成，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
