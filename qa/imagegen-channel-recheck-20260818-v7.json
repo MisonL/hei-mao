@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T06:57:12Z",
+  "scope": "local Docker image-generation retry for Quality look-row-9 after a fresh idempotency key",
+  "service_base_url": "local_docker_deployment",
+  "preflight": {
+    "first_run": "pass",
+    "agent_doctor_contract": "pass",
+    "runtime_capabilities": "pass",
+    "channel_health": {
+      "state": "probe_pending",
+      "healthy_credentials": 0,
+      "unhealthy_credentials": 1,
+      "probe_required": true,
+      "last_failure": {
+        "status": 403,
+        "code": "INSUFFICIENT_BALANCE",
+        "request_mode": "images-non-stream"
+      }
+    },
+    "effective_request_modes": []
+  },
+  "retry": {
+    "job": "quality-look-row-9",
+    "transport": "agent_json",
+    "request_mode": "images-non-stream/images-sse",
+    "new_idempotency_key": true,
+    "status": "rejected_at_local_health_gate",
+    "error_code": "batch_task_failed",
+    "artifact_count": 0,
+    "image_count": 0,
+    "output_written": false,
+    "upstream_request_sent": false,
+    "message": "没有支持请求方式的健康渠道凭证；服务要求先完成恢复探针。",
+    "quality_row_9_submitted": false,
+    "quality_row_10_submitted": false
+  },
+  "generation_policy": {
+    "failed_idempotency_keys_reused": false,
+    "reason": "本次重试使用全新幂等键；渠道仍处于 probe_pending，因此不替换现有 Quality 资产。"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "upstream_host_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "blocked_on_local_channel_health_gate_after_upstream_403"
+}
