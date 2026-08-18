@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T17:25:40Z",
+  "scope": "current local Docker image-generation API after API switch and extended real smoke",
+  "service_base_url": "local_docker_deployment",
+  "preflight": {
+    "first_run": "pass",
+    "standalone_contract_check": "pass",
+    "agent_doctor_contract": "parent_timeout_during_page_sse_probe",
+    "agent_capabilities": "pass",
+    "runtime_capabilities": "pass",
+    "channel_health": {
+      "channel_id": "wahuiliyi-gpt-image",
+      "state": "healthy",
+      "healthy_credentials": 1,
+      "unhealthy_credentials": 0,
+      "probe_required": false,
+      "effective_request_modes": ["images-non-stream", "images-sse"]
+    }
+  },
+  "real_smoke": {
+    "status": "pass",
+    "billable": true,
+    "transport": "agent_job_polling",
+    "endpoint": "/api/agent/image-requests",
+    "route_mode": "job",
+    "channel_request_mode": "images-non-stream",
+    "server_elapsed_ms": 77456,
+    "dimensions": "1024x1024",
+    "format": "webp",
+    "dimension_check": "pass",
+    "artifact_cleanup": "pass",
+    "project_assets_changed": false
+  },
+  "diagnostics": {
+    "direct_agent_images_non_stream": {
+      "status": "failed",
+      "error_code": "unexpected_error",
+      "retryable": false,
+      "elapsed_ms": 74885,
+      "artifact_count": 0
+    },
+    "responses_non_stream": {
+      "status": "rejected_by_configuration",
+      "reason": "responses_image_backend_disabled",
+      "artifact_count": 0
+    },
+    "responses_sse": {
+      "status": "rejected_by_configuration",
+      "reason": "responses_image_backend_disabled",
+      "artifact_count": 0
+    },
+    "timeout_observation": "agent:doctor 的 75 秒子进程门限短于当前上游延迟；统一编排在延长超时后完成。"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local_service_extended_orchestration_smoke_pass; artifact_removed; direct_agent_timeout_observed; responses_backend_disabled"
+}
