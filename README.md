@@ -424,7 +424,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-install-recheck-20260819-v1.json`: PetDex CLI `1.2.2` 最新隔离安装八个当前角色到两个临时目标，16+16 个文件存在、metadata id 和双目录 SHA parity 通过，临时目标已清理，不含本机环境信息
 - `qa/codex-app-boundary-recheck-20260818.json`: ChatGPT/Codex App 当前只读进程和窗口探针；进程可见但窗口数为 0，未执行设置或进程控制，不含本机环境信息
 - `qa/codex-app-boundary-recheck-20260818-v2.json`: 2026-08-18T08:37:49Z ChatGPT/Codex App 只读进程探针；窗口查询在安全 8 秒边界超时，未执行设置或进程控制，视觉验收仍未完成，不含本机环境信息
-- `qa/codex-app-boundary-recheck-20260819.json`: 2026-08-18T19:04:26Z WindowServer 可见两个 ChatGPT 窗口，屏幕录制/辅助功能预检均为 true，但窗口截图和 ScreenCaptureKit 初始化仍失败；未发送输入、未改设置、未停止或重启 Codex 进程，视觉验收仍未完成，不含本机环境信息
+- `qa/codex-app-boundary-recheck-20260819.json`: 2026-08-18T19:13:29Z WindowServer 可见两个 ChatGPT 窗口，屏幕录制/辅助功能预检均为 true，ScreenCaptureKit 已找到窗口但以 `SCStreamErrorDomain Code -3811` 失败；未发送输入、未改设置、未停止或重启 Codex 进程，视觉验收仍未完成，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-08-18T19:04:26Z",
+  "checked_at": "2026-08-18T19:13:29Z",
   "scope": "read-only Codex App visibility probe after existing-app activation request",
   "applications": {
     "chatgpt_bundle_present": true,
@@ -24,7 +24,8 @@
   "capture": {
     "attempted": true,
     "window_capture_result": "could_not_create_image_from_window",
-    "screen_capture_kit_result": "system_initialization_failed",
+    "screen_capture_kit_window_found": true,
+    "screen_capture_kit_result": "SCStreamErrorDomain_Code_-3811_capture_failed_to_start",
     "screenshot_retained": false
   },
   "visual_gate": {
@@ -39,7 +40,7 @@
     "codex_process_restarted": false,
     "process_ids_recorded": false
   },
-  "result": "codex_app_windows_visible_permissions_true_but_visual_capture_unavailable",
+  "result": "codex_app_windows_visible_permissions_true_but_screen_capture_kit_stream_unavailable",
   "privacy": {
     "credentials_recorded": false,
     "local_paths_recorded": false,
