@@ -50,7 +50,7 @@
     "standard_review": "qa/hei-mao-quality/review.json",
     "proportion_repair": "qa/hei-mao-quality/proportion-repair-20260818.json",
     "proportion_recheck": "qa/hei-mao-quality/proportion-recheck-20260818.json",
-    "generation_preflight": "qa/imagegen-channel-recheck-20260818-v3.json"
+    "generation_preflight": "qa/imagegen-channel-recheck-20260818-v8.json"
   },
   "warnings": [
     "157.5->180 and 337.5->000 remain reviewed direction-boundary continuity warnings; no visible wrong quadrant, reversal, or alpha hole was introduced.",

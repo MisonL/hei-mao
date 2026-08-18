@@ -321,12 +321,14 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260818-v5.json`: 冷却到期后的恢复探针仍返回 403；两个新幂等键只在本地健康门禁收到 503，未向上游重复发起请求或提交 Quality 生成
 - `qa/imagegen-channel-recheck-20260818-v6.json`: 冷却后使用新幂等键重试 Quality row 9；上游仍返回 403 `INSUFFICIENT_BALANCE`，服务回到 `probe_pending`，未产生图像或替换资产
 - `qa/imagegen-channel-recheck-20260818-v7.json`: 切换本地 Docker 服务后再次使用全新幂等键重试 Quality row 9；唯一渠道仍为 `probe_pending` 且无有效请求方式，请求在本地健康门禁拒绝，未向上游发送、未产生图像或替换资产
+- `qa/imagegen-channel-recheck-20260818-v8.json`: 真实编排入口使用全新幂等键执行 smoke；服务仍为 `probe_pending`，`images-non-stream/images-sse` 无健康凭证，未选择渠道、未向上游发送、未产生 artifact，Quality 两条 look row 继续阻断
 - `qa/current-local-recheck-20260818-v1.json`: 生图重试后的八角色 v2 结构、方向连续性和 28 项 hatch-pet 回归测试复核；全部本地门禁通过，Quality 比例阻断仍保持
 - `qa/hei-mao-quality/proportion-repair-20260818.json`: 品控官 row 10 八个方向的整行等比归一化、源输出 SHA 和高度对照；不含新生图请求，不能解除比例阻断
 - `qa/hei-mao-quality/proportion-recheck-20260818.json`: 八个角色 look 行的只读 alpha 高度对照；确认 Quality 两个 cardinal 同时偏矮并记录生图服务阻断
 - `qa/hei-mao-quality/chroma-despill-recheck-20260818.json`: 品控官等比修复后的透明度与既有单次去溢继承边界
 - `qa/petdex-live-recheck-20260818-v2.json`: 2026-08-17T18:26:47.414Z manifest、八角色公开资源 SHA/metadata、GitHub/GitLab `a6d7a71` 主线提交对照；六个本地修复图集仍待 PetDex 审核，不含本机环境信息
 - `qa/petdex-live-recheck-20260818-v3.json`: 2026-08-18T00:46:18.062Z manifest 和八角色公开 `petjson`/图集实际下载复核；八个 metadata 均为 v2、1536x2288、RGBA，只有大管家和厨师线上 SHA 与仓库一致，其余六个 owned-slug 更新仍待审核，不含本机环境信息
+- `qa/petdex-live-recheck-20260818-v4.json`: 2026-08-18T06:29:10.591Z manifest 逐角色解析和公开资源复核；八个 metadata/下载图集均为 v2、1536x2288、RGBA，两个图集与仓库一致，六个 owned-slug 图集仍待审核，并记录 manifest 索引版本滞后，不含本机环境信息
 - `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务连接拒绝时的历史安全阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游图像路径被 429 限流的历史阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813-v3.json`: Traveler 使用全新幂等键的历史生成阻断记录；上游返回 429，未产生图像，不含本机环境信息

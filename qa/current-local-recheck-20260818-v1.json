@@ -27,7 +27,7 @@
   "quality_gate": {
     "status": "blocked",
     "reason": "look-row-9 and look-row-10 remain proportionally compressed and require new coherent generation",
-    "generation_evidence": "qa/imagegen-channel-recheck-20260818-v6.json"
+    "generation_evidence": "qa/imagegen-channel-recheck-20260818-v8.json"
   },
   "privacy": {
     "local_paths_recorded": false,
