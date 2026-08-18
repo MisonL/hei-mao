@@ -32,7 +32,7 @@
     "public_contract": "8/8 HTTP 200; metadata v2; WEBP RGBA 1536x2288",
     "sha_matches": 2,
     "owned_slug_updates_pending_review": 6,
-    "evidence": "qa/petdex-live-recheck-20260818-v7.json"
+    "evidence": "qa/petdex-live-recheck-20260819-v1.json"
   },
   "codex_app": {
     "codex_process_visible": false,
