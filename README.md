@@ -175,7 +175,7 @@ Petdex 发布状态：条目已进入公开 manifest，`npx -y petdex@latest ins
 
 `hei-mao-quality` 是黑毛的品控官角色包。两条 coherent look row 已重新生成，结构、透明度、比例和方向语义门禁均通过；三份独立盲测的 cardinal 硬门禁通过，中间方向分歧作为 minor warning 保留。
 
-Petdex 安装：本地仓库安装器可安装已验收的 Quality v2 图集；PetDex 中的同名条目仍可能提供审核前旧资源，线上切换需等待已有 owned-slug 编辑审核完成，不创建重复条目。
+Petdex 安装：本地仓库安装器可安装已验收的 Quality v2 图集；同名条目的 owned-slug 编辑已提交并进入管理员审核，但 PetDex 当前公开资源仍是旧 SHA，线上切换需等待审核完成，不创建重复条目。提交与资源对照见 `qa/petdex-quality-edit-recheck-20260818.json`。
 
 本地安装：
 
@@ -340,6 +340,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-recheck-20260818-v3.json`: 2026-08-18T00:46:18.062Z manifest 和八角色公开 `petjson`/图集实际下载复核；八个 metadata 均为 v2、1536x2288、RGBA，只有大管家和厨师线上 SHA 与仓库一致，其余六个 owned-slug 更新仍待审核，不含本机环境信息
 - `qa/petdex-live-recheck-20260818-v4.json`: 2026-08-18T06:29:10.591Z manifest 逐角色解析和公开资源复核；八个 metadata/下载图集均为 v2、1536x2288、RGBA，两个图集与仓库一致，六个 owned-slug 图集仍待审核，并记录 manifest 索引版本滞后，不含本机环境信息
 - `qa/petdex-live-recheck-20260818-v5.json`: 2026-08-18T08:27:27Z 重新下载八个公开图集并校验 v2、1536x2288、RGBA 与 SHA；Butler/Chef 与仓库一致，其余六个 owned-slug 更新仍待审核，不含本机环境信息
+- `qa/petdex-quality-edit-recheck-20260818.json`: Quality owned-slug 编辑提交成功、公开资源仍为旧 SHA、manifest 索引与实际 metadata 漂移复核；不含本机环境信息
 - `qa/petdex-upstream-status-recheck-20260818.json`: 2026-08-18T08:41:31Z 只读核对 PetDex #603/#596/#654/#662/#667 等已关闭项，以及仍开放的 #689 Hook EOF 阻塞和不改变该语义的 #710 WIP；不含本机环境信息
 - `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务连接拒绝时的历史安全阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游图像路径被 429 限流的历史阻断记录，不含本机环境信息
