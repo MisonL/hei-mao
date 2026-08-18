@@ -1,0 +1,147 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-18T17:49:15Z",
+  "checked_commit": "51288a4",
+  "scope": "fresh eight-role v2 atlas gate, continuity scan, and high-contrast alpha candidate review",
+  "runtime": {
+    "validator": "hatch-pet validate_atlas.py and measure_direction_continuity.py",
+    "python": "hatch-pet-runtime Python 3.13.7 with Pillow 12.3.0",
+    "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py"
+  },
+  "roles": {
+    "hei-mao": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 6,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["000"],
+          "rows": [12],
+          "classification": "intentional_open_negative_space",
+          "evidence": "The gap is between the two ears, remains open to the exterior background, and does not cut through the filled head silhouette."
+        }
+      ]
+    },
+    "hei-mao-quality": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 5,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-butler": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 6,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-chef": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 6,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-delivery": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 6,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["202.5", "225", "247.5"],
+          "rows": [19, 20, 21],
+          "classification": "intentional_open_negative_space",
+          "evidence": "Each candidate is the open gap between the ears and connects to the exterior background; the body, uniform, and delivery pack remain filled and attached."
+        }
+      ]
+    },
+    "hei-mao-foodie": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 9,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["180"],
+          "rows": [17, 18],
+          "classification": "intentional_open_negative_space",
+          "evidence": "The candidate is the open gap between the ears and does not enter the filled head, apron, or handheld food props."
+        }
+      ]
+    },
+    "hei-mao-fortune": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 4,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-traveler": {
+      "atlas_gate": "pass",
+      "dimensions": "1536x2288",
+      "format": "WEBP RGBA",
+      "sprite_version_number": 2,
+      "transparent_rgb_residue_pixels": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "continuity_warnings": 9,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["000", "045", "135", "157.5", "180", "202.5"],
+          "rows": [18, 198, 199, 200, 201],
+          "classification": "intentional_open_negative_space",
+          "evidence": "The upper candidate in 180 is the ear gap. The lower candidates are spaces between separated feet or lower-body parts and remain open to the bottom exterior; no enclosed transparent component appears inside the torso, backpack, or pouch."
+        }
+      ]
+    }
+  },
+  "review_method": {
+    "alpha": "Each flagged cell was inspected over a high-contrast background and as a binary silhouette mask; the flagged span was compared with the neighboring visible rows.",
+    "direction_loop": "Existing current-SHA labeled direction sheets, motion previews, semantic verdicts, and independent blind reviews were retained; no cardinal mismatch, visible reversal, clipping, or identity change was found.",
+    "decision": "No candidate is a filled-silhouette interior hole. No atlas mutation or regeneration is warranted."
+  },
+  "summary": {
+    "roles_checked": 8,
+    "atlas_gate_passed": 8,
+    "alpha_hole_candidates": 11,
+    "alpha_hole_hard_failures": 0,
+    "continuity_warning_policy": "Metric warnings remain review evidence; they are not failures without a visible snap, pop, seam, broken attachment, or semantic reversal.",
+    "result": "local_v2_gate_pass; all alpha-hole candidates are documented open negative space"
+  },
+  "limitations": [
+    "This evidence does not close the separate Codex App full visual acceptance boundary.",
+    "This evidence does not change PetDex external review or publication state."
+  ]
+}

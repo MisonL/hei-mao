@@ -336,6 +336,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260818-v12.json`: 2026-08-18T15:35:22Z 本地 Docker API 切换后的再次真实 smoke；Agent doctor、capabilities、runtime、渠道健康和合同探针通过，编排入口以 `images-non-stream` 返回 1024x1024 WebP，尺寸校验和测试产物删除通过，不含本机环境信息
 - `qa/imagegen-channel-recheck-20260819-v1.json`: 2026-08-18T16:21:05Z API 切换后的当前本地 Docker 复核；Agent capabilities、runtime、合同和渠道健康通过，`images-non-stream` 与 `images-sse` 各自真实 smoke 通过并清理产物；远程部署实例仍因上游认证 403 阻断，不含本机环境信息
 - `qa/imagegen-channel-recheck-20260819-v2.json`: 2026-08-18T17:25:40Z API 切换后的延长本地 Docker 真实 smoke；统一编排 `images-non-stream` 返回 1024x1024 WebP 并清理产物，直接 Agent 路径在 75 秒门限中止，Responses 后端按当前配置禁用；不含本机环境信息
+- `qa/imagegen-channel-recheck-20260819-v3.json`: 2026-08-18T17:49:15Z API 切换后的最新本地 Docker 真实 smoke；编排入口以 `images-non-stream` 返回 1024x1024 WebP，尺寸校验和单个测试 artifact 删除通过；不含本机环境信息
 - `qa/current-local-recheck-20260818-v1.json`: 生图重试后的八角色 v2 结构、方向连续性和 28 项 hatch-pet 回归测试复核；全部本地门禁通过，Quality 比例阻断仍保持
 - `qa/hei-mao-quality/proportion-repair-20260818.json`: 品控官 row 10 八个方向的整行等比归一化、源输出 SHA 和高度对照；不含新生图请求，不能解除比例阻断
 - `qa/hei-mao-quality/proportion-recheck-20260818.json`: 八个角色 look 行的只读 alpha 高度对照；确认 Quality 两个 cardinal 同时偏矮并记录生图服务阻断
@@ -433,6 +434,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-desktop-multidisplay-recheck-20260814-v1.json`: Desktop v0.8.0 宠物窗口跨屏移动时的气泡跟随、间距和位置恢复证据，不含屏幕截图或本机敏感信息
 - `qa/qa-media-completeness-recheck-20260814.json`: 八个角色的标准接触表、根包和大管家标准状态预览、来源 SHA 与公开路径完整性证据
 - `qa/current-v2-alpha-review-20260814.json`: 当前提交八个角色的 v2 门禁、look-continuity alpha-hole 候选高对比度复核和透明连通性结论；未发现封闭主体透明洞
+- `qa/current-v2-alpha-review-20260819.json`: 提交 `51288a4` 的八角色 v2 门禁、连续性重算和 11 个 alpha-hole 候选高对比度复核；候选均为耳间或下半身开放负空间，未发现封闭主体透明洞
 - `qa/current-v2-gate-recheck-20260814-v3.json`: 提交 `ab63934` 上使用各角色实际色键重新执行的八角色 `validate_atlas.py --require-v2` 结果，全部通过且无透明 RGB 残留、错误或警告
 - `qa/current-v2-gate-recheck-20260814-v4.json`: 提交 `b77a134` 上使用精确 hatch-pet Python runtime 重新执行的八角色 `validate_atlas.py --require-v2` 结果，全部通过且无透明 RGB 残留、错误或警告
 - `qa/hatch-pet-runtime-test-recheck-20260814-v1.json`: 提交 `d8f9320` 上使用精确 hatch-pet runtime 运行的 28 项标准测试结果
