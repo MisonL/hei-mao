@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T14:00:31Z",
+  "checked_commit": "167082e",
+  "scope": "post-recovery eight-role v2 atlas, continuity, Quality visual acceptance, installer parity, local directory sync, and public hygiene",
+  "runtime": {
+    "validator": "hatch-pet bundled scripts via Python 3.14.7",
+    "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py",
+    "hatch_pet_tests": {
+      "passed": 28,
+      "failed": 0,
+      "errors": 0,
+      "result": "pass"
+    }
+  },
+  "role_chroma_keys": {
+    "hei-mao": "#00FF00",
+    "hei-mao-quality": "#FF00FF",
+    "hei-mao-butler": "#00FF00",
+    "hei-mao-chef": "#00FFFF",
+    "hei-mao-delivery": "#FF00FF",
+    "hei-mao-foodie": "#FF00FF",
+    "hei-mao-fortune": "#00FFFF",
+    "hei-mao-traveler": "#FF00FF"
+  },
+  "roles": [
+    {"slug":"hei-mao","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":6,"sprite_sha256":"52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c"},
+    {"slug":"hei-mao-quality","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":5,"sprite_sha256":"a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"},
+    {"slug":"hei-mao-butler","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":6,"sprite_sha256":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    {"slug":"hei-mao-chef","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":6,"sprite_sha256":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    {"slug":"hei-mao-delivery","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":6,"sprite_sha256":"6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86"},
+    {"slug":"hei-mao-foodie","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":9,"sprite_sha256":"eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0"},
+    {"slug":"hei-mao-fortune","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":4,"sprite_sha256":"10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9"},
+    {"slug":"hei-mao-traveler","sprite_version_number":2,"atlas":"pass","dimensions":"1536x2288","grid":"8x11","mode":"RGBA","validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0,"continuity":"pass_with_reviewed_warnings","continuity_warnings":9,"sprite_sha256":"d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"}
+  ],
+  "quality_visual_gate": {
+    "status": "pass_with_reviewed_warnings",
+    "row_9_heights_px": [194, 194, 194, 194, 193, 192, 184, 179],
+    "row_10_heights_px": [196, 196, 189, 193, 191, 191, 189, 192],
+    "neutral_height_px": 198,
+    "baseline_bottom_px": 201,
+    "cardinal_hard_gate": "pass",
+    "independent_blind_workers": 3,
+    "evidence": "qa/hei-mao-quality/recovery-v2/"
+  },
+  "qa_artifacts": {
+    "all_eight_have_required_media_and_semantics": true,
+    "all_eight_atlas_validation_ok": true,
+    "all_eight_continuity_reviewed": true,
+    "quality_final_visual_qa": "pass_with_reviewed_warnings"
+  },
+  "installation": {
+    "repository_codex_petdex_sha_parity": "pass",
+    "quality_pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+    "quality_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+    "role_count": 8,
+    "legacy_slugs_absent": ["hei-mao-recommender", "hei-mao-2"]
+  },
+  "installers": {
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "quality_isolated_smoke": "pass",
+    "unknown_slug_rejection": "pass",
+    "repository_codex_petdex_quality_parity": "pass"
+  },
+  "privacy": {
+    "public_exposure_scan": "pass",
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false
+  },
+  "remote": {
+    "status": "pending_push_and_raw_recheck",
+    "reason": "This gate records the local commit before remote publication; remote sources must be rechecked after push."
+  },
+  "result": "local_eight_role_v2_gate_pass; quality_visual_gate_pass_with_reviewed_warnings; remote_publication_pending"
+}
