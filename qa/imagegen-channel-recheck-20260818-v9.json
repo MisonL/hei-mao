@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T08:11:16Z",
+  "scope": "local Docker image-generation health-gated smoke retry before Quality coherent look-row regeneration",
+  "service_base_url": "local_docker_deployment",
+  "preflight": {
+    "agent_capabilities": "pass",
+    "runtime_capabilities": "pass",
+    "configured_request_modes": ["images-non-stream", "images-sse"],
+    "effective_request_modes": [],
+    "channel_health": {
+      "state": "probe_pending",
+      "healthy_credentials": 0,
+      "unhealthy_credentials": 1,
+      "last_failure": {
+        "status": 403,
+        "code": "INSUFFICIENT_BALANCE",
+        "request_mode": "images-non-stream"
+      }
+    }
+  },
+  "retry": {
+    "job": "quality-look-row-generation-smoke",
+    "request_mode": "images-non-stream",
+    "new_idempotency_key": true,
+    "http_status": 503,
+    "status": "rejected_at_local_health_gate",
+    "error_code": "configuration_error",
+    "message": "当前没有支持 images-non-stream 的健康渠道凭证。",
+    "billable": false,
+    "artifact_count": 0,
+    "image_count": 0,
+    "output_written": false,
+    "upstream_request_sent": false,
+    "quality_row_9_submitted": false,
+    "quality_row_10_submitted": false
+  },
+  "generation_policy": {
+    "failed_idempotency_keys_reused": false,
+    "reason": "本次使用全新幂等键；健康门禁拒绝请求，未产生图像或替换 Quality 资产。"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "blocked_on_local_channel_health_gate_after_upstream_403"
+}
