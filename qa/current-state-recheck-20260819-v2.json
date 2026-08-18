@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T18:10:04Z",
+  "checked_commit": "38923ba",
+  "scope": "post-API-switch final local release boundary audit",
+  "repository": {
+    "worktree": "clean_before_this_snapshot",
+    "current_role_count": 8,
+    "roles": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "legacy_slugs_absent_locally": [
+      "hei-mao-recommender",
+      "hei-mao-2"
+    ]
+  },
+  "local_validation": {
+    "atlas_validator": "8/8 pass; 0 errors; 0 warnings; RGBA; transparent RGB residue 0",
+    "atlas_contract": "1536x2288; 8x11; spriteVersionNumber 2",
+    "hatch_pet_tests": "28 passed; 0 failed",
+    "three_directory_sha_parity": "8 roles x 2 files pass in retained current evidence",
+    "installer_checks": "Bash syntax, ShellCheck, PowerShell parse and isolated installs pass",
+    "alpha_review": "11 candidates reviewed as open negative space; 0 enclosed-body holes"
+  },
+  "quality_visual_gate": {
+    "status": "pass_with_reviewed_warnings",
+    "recovery_commit": "167082e",
+    "current_sprite_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+    "row_9_heights_px": [
+      194,
+      194,
+      194,
+      194,
+      193,
+      192,
+      184,
+      179
+    ],
+    "row_10_heights_px": [
+      196,
+      196,
+      189,
+      193,
+      191,
+      191,
+      189,
+      192
+    ],
+    "neutral_height_px": 198,
+    "baseline_bottom_px": 201,
+    "proportion_regression": "resolved_by_coherent_row9_row10_recovery_v2",
+    "evidence": "qa/hei-mao-quality/recovery-v2/"
+  },
+  "image_generation": {
+    "local_service_health": "healthy",
+    "request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "real_smoke": "pass; orchestration returned 1024x1024 WebP and the test artifact was removed",
+    "evidence": "qa/imagegen-channel-recheck-20260819-v3.json"
+  },
+  "remote": {
+    "gitlab_main": "38923ba",
+    "github_main": "38923ba",
+    "remote_consistency": "pass"
+  },
+  "petdex": {
+    "current_roles_public": 8,
+    "public_contract": "8/8 HTTP 200; metadata v2; WEBP RGBA 1536x2288",
+    "owned_slug_updates_pending_review": 6,
+    "historical_duplicate_present": "hei-mao-2",
+    "evidence": "qa/petdex-live-recheck-20260819-v2.json"
+  },
+  "codex_app": {
+    "visual_refresh": "unverified",
+    "animation_loop": "unverified",
+    "multirole_selection": "unverified",
+    "process_control_performed": false
+  },
+  "result": "local_release_and_quality_gates_pass; Codex App visual gate unverified; six PetDex owned-slug updates pending review",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  }
+}

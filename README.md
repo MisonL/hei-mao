@@ -337,9 +337,9 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260819-v1.json`: 2026-08-18T16:21:05Z API 切换后的当前本地 Docker 复核；Agent capabilities、runtime、合同和渠道健康通过，`images-non-stream` 与 `images-sse` 各自真实 smoke 通过并清理产物；远程部署实例仍因上游认证 403 阻断，不含本机环境信息
 - `qa/imagegen-channel-recheck-20260819-v2.json`: 2026-08-18T17:25:40Z API 切换后的延长本地 Docker 真实 smoke；统一编排 `images-non-stream` 返回 1024x1024 WebP 并清理产物，直接 Agent 路径在 75 秒门限中止，Responses 后端按当前配置禁用；不含本机环境信息
 - `qa/imagegen-channel-recheck-20260819-v3.json`: 2026-08-18T17:49:15Z API 切换后的最新本地 Docker 真实 smoke；编排入口以 `images-non-stream` 返回 1024x1024 WebP，尺寸校验和单个测试 artifact 删除通过；不含本机环境信息
-- `qa/current-local-recheck-20260818-v1.json`: 生图重试后的八角色 v2 结构、方向连续性和 28 项 hatch-pet 回归测试复核；全部本地门禁通过，Quality 比例阻断仍保持
-- `qa/hei-mao-quality/proportion-repair-20260818.json`: 品控官 row 10 八个方向的整行等比归一化、源输出 SHA 和高度对照；不含新生图请求，不能解除比例阻断
-- `qa/hei-mao-quality/proportion-recheck-20260818.json`: 八个角色 look 行的只读 alpha 高度对照；确认 Quality 两个 cardinal 同时偏矮并记录生图服务阻断
+- `qa/current-local-recheck-20260818-v1.json`: 生图重试后的八角色 v2 结构、方向连续性和 28 项 hatch-pet 回归测试复核；这是 Quality recovery-v2 之前的历史快照，比例阻断已由 `qa/hei-mao-quality/recovery-v2/` 解决
+- `qa/hei-mao-quality/proportion-repair-20260818.json`: 品控官 row 10 八个方向的历史中间等比归一化记录；最终两条 look row 以 `qa/hei-mao-quality/recovery-v2/` 为准
+- `qa/hei-mao-quality/proportion-recheck-20260818.json`: Quality recovery-v2 之前的历史 alpha 高度对照；曾确认两个 cardinal 偏矮，后续已由 recovery-v2 的完整 row 9/10 重生成解决
 - `qa/hei-mao-quality/chroma-despill-recheck-20260818.json`: 品控官等比修复后的透明度与既有单次去溢继承边界
 - `qa/petdex-live-recheck-20260818-v2.json`: 2026-08-17T18:26:47.414Z manifest、八角色公开资源 SHA/metadata、GitHub/GitLab `a6d7a71` 主线提交对照；六个本地修复图集仍待 PetDex 审核，不含本机环境信息
 - `qa/petdex-live-recheck-20260818-v3.json`: 2026-08-18T00:46:18.062Z manifest 和八角色公开 `petjson`/图集实际下载复核；八个 metadata 均为 v2、1536x2288、RGBA，只有大管家和厨师线上 SHA 与仓库一致，其余六个 owned-slug 更新仍待审核，不含本机环境信息
@@ -350,6 +350,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-recheck-20260819-v1.json`: 2026-08-18T16:37:19Z 刷新官方 manifest、八个公开资源和隔离 CLI 安装；历史快照，实际资源仍为 v2、1536x2288、RGBA，Butler/Chef 与仓库一致，其余六个 owned-slug 更新仍待审核，未知旧 slug 被拒绝，不含本机环境信息
 - `qa/petdex-live-recheck-20260819-v2.json`: 2026-08-18T17:04:59Z 刷新官方 manifest、八个公开资源和隔离 CLI 安装；实际资源仍为 v2、1536x2288、RGBA，Butler/Chef 与仓库一致，其余六个 owned-slug 更新仍待审核，未知旧 slug 被拒绝，不含本机环境信息
 - `qa/current-state-recheck-20260819-v1.json`: 提交 `8565738` 后的历史八角色门禁、三目录 SHA、生图通道、PetDex manifest 和 App 可见性边界快照；本轮最新 API smoke 见 `qa/imagegen-channel-recheck-20260819-v2.json`，最新 PetDex 资源复核见 `qa/petdex-live-recheck-20260819-v2.json`，但 Codex App 视觉验收无窗口证据，六个 PetDex owned-slug 更新仍待审核，不含本机环境信息
+- `qa/current-state-recheck-20260819-v2.json`: 提交 `38923ba` 的当前最终状态；Quality 两条 look row 比例阻断已由 recovery-v2 解决，8/8 本地 v2 门禁和 28 项测试通过，API smoke 通过；Codex App 视觉验收仍未取得窗口证据，六个 PetDex owned-slug 更新仍待审核，不含本机环境信息
 - `qa/petdex-quality-edit-recheck-20260818.json`: Quality owned-slug 编辑提交成功、公开资源仍为旧 SHA、manifest 索引与实际 metadata 漂移复核；不含本机环境信息
 - `qa/petdex-upstream-status-recheck-20260818.json`: 2026-08-18T08:41:31Z 只读核对 PetDex #603/#596/#654/#662/#667 等已关闭项，以及仍开放的 #689 Hook EOF 阻塞和不改变该语义的 #710 WIP；不含本机环境信息
 - `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务连接拒绝时的历史安全阻断记录，不含本机环境信息
