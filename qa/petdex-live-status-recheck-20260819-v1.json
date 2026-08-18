@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T18:32:29Z",
+  "scope": "current PetDex CLI download and local SHA status for all public hei-mao roles",
+  "petdex_cli_version": "1.2.2",
+  "manifest": {
+    "generated_at": "2026-08-18T12:29:32.049Z",
+    "total": 4568,
+    "current_roles_public": 8,
+    "historical_duplicate": "hei-mao-2"
+  },
+  "roles": {
+    "hei-mao": {
+      "status": "owned_slug_update_pending",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    },
+    "hei-mao-quality": {
+      "status": "owned_slug_update_pending",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    },
+    "hei-mao-butler": {
+      "status": "synchronized",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    },
+    "hei-mao-chef": {
+      "status": "synchronized",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    },
+    "hei-mao-delivery": {
+      "status": "owned_slug_update_pending",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    },
+    "hei-mao-foodie": {
+      "status": "owned_slug_update_pending",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    },
+    "hei-mao-fortune": {
+      "status": "owned_slug_update_pending",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    },
+    "hei-mao-traveler": {
+      "status": "owned_slug_update_pending",
+      "remote_dimensions": "1536x2288",
+      "remote_mode": "RGBA",
+      "remote_sprite_version_number": 2
+    }
+  },
+  "summary": {
+    "downloaded_roles": 8,
+    "synchronized_roles": 2,
+    "owned_slug_updates_pending": 6,
+    "duplicate_submission_created": false,
+    "isolated_artifact_cleanup": "pass"
+  },
+  "result": "petdex_public_download_pass; two_roles_synchronized; six_owned_slug_updates_pending",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false
+  }
+}

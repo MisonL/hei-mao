@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T18:32:29Z",
+  "scope": "read-only Codex App visibility probe after existing-app activation request",
+  "applications": {
+    "chatgpt_bundle_present": true,
+    "petdex_bundle_present": true,
+    "chatgpt_process_visible": true,
+    "chatgpt_window_count": 0,
+    "frontmost_application": "terminal"
+  },
+  "activation": {
+    "operation": "request_existing_chatgpt_app_activation",
+    "result": "no_accessible_window",
+    "input_sent": false,
+    "settings_changed": false
+  },
+  "visual_gate": {
+    "refresh": "unverified",
+    "animation_loop": "unverified",
+    "proportion": "unverified",
+    "direction_switching": "unverified",
+    "multirole_selection": "unverified"
+  },
+  "process_control": {
+    "codex_process_stopped": false,
+    "codex_process_restarted": false,
+    "process_ids_recorded": false
+  },
+  "result": "codex_app_visual_gate_unverified_no_window",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  }
+}
