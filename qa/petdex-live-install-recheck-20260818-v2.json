@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T06:26:24Z",
+  "scope": "fresh PetDex CLI isolated install smoke",
+  "cli_version": "1.2.2",
+  "roles": [
+    "hei-mao",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "checks": {
+    "petdex_target_files": 14,
+    "codex_target_files": 14,
+    "petdex_codex_sha_parity": true,
+    "pet_json_ids_match_requested_slugs": true,
+    "quality_rejected_as_blocked": true,
+    "historical_hei_mao_2_rejected": true,
+    "temporary_targets_cleaned": true
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "tokens_recorded": false
+  },
+  "result": "seven_role_isolated_install_pass"
+}
