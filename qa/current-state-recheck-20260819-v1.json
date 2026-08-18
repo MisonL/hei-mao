@@ -10,7 +10,8 @@
   },
   "local_validation": {
     "atlas_validator": "8/8 pass; 0 errors; 0 warnings; RGBA; transparent RGB residue 0",
-    "hatch_pet_tests": "28 passed; 0 failed; 0 errors",
+    "hatch_pet_tests": "28 passed; 0 failed; 0 errors; 37 deprecation warnings",
+    "hatch_pet_test_runtime": "hatch-pet-runtime Python 3.13.7 with temporary pytest/Pillow dependencies",
     "qa_artifact_completeness": "8/8 pass",
     "installer_static_checks": "bash syntax, ShellCheck and PowerShell parse pass",
     "three_directory_sha_parity": "8 roles x 2 files pass"
