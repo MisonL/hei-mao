@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T08:41:31Z",
+  "repository": "crafter-station/petdex",
+  "issues_and_prs": {
+    "603": {"kind":"issue","state":"closed","state_reason":"completed","title":"cross-display pet and activity bubble anchoring"},
+    "596": {"kind":"issue","state":"closed","state_reason":"completed","title":"focus originating terminal"},
+    "611": {"kind":"pull_request","state":"closed","title":"menu-bar residence"},
+    "654": {"kind":"pull_request","state":"closed","title":"CLI petdex edit Bearer route"},
+    "656": {"kind":"pull_request","state":"closed","title":"originating terminal and fullscreen overlays"},
+    "657": {"kind":"issue","state":"closed","state_reason":"completed","title":"per-conversation activity bubbles"},
+    "662": {"kind":"pull_request","state":"closed","title":"cross-display activity bubble anchoring"},
+    "667": {"kind":"pull_request","state":"closed","title":"pet and bubble spacing"},
+    "689": {"kind":"issue","state":"open","title":"Hook waits for EOF when host keeps stdin open","comments":0,"last_failure_scope":"stdin EOF termination"},
+    "710": {"kind":"pull_request","state":"open","title":"WIP native bubble revamp and platform parity","comments":1,"changes_hook_eof_semantics":false}
+  },
+  "open_blockers": [
+    "#689 remains open and has no maintainer response or merged fix; the requested bounded idle/total stdin wait is not upstream-resolved.",
+    "#710 is a WIP native bubble change and explicitly does not claim to resolve the Hook EOF issue."
+  ],
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "request_identifiers_recorded": false
+  },
+  "result": "closed_fixes_confirmed;_hook_eof_issue_689_and_unrelated_wip_710_remain_open"
+}
