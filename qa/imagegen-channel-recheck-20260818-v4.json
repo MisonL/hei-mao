@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T05:54:52Z",
+  "scope": "local Docker image-generation smoke gate before Quality look-row regeneration",
+  "container": {
+    "runtime_capabilities_status": 200,
+    "effective_request_modes": ["images-non-stream", "images-sse"],
+    "billable_requests": 2
+  },
+  "smoke": [
+    {
+      "case": "server-channel-agent-images-json",
+      "request_mode": "images-non-stream",
+      "status": 403,
+      "image_count": 0,
+      "artifact_count": 0,
+      "error": "403 status code (no body)"
+    },
+    {
+      "case": "server-channel-agent-images-sse",
+      "request_mode": "images-sse",
+      "status": 403,
+      "image_count": 0,
+      "artifact_count": 0,
+      "error": "403 status code (no body)"
+    }
+  ],
+  "channel_health_after": {
+    "state": "probe_pending",
+    "healthy_credentials": 0,
+    "unhealthy_credentials": 1,
+    "probe_required": true,
+    "cooldown_applied": true
+  },
+  "generation_policy": {
+    "quality_row_9_submitted": false,
+    "quality_row_10_submitted": false,
+    "failed_idempotency_keys_reused": false,
+    "reason": "both enabled image request modes returned upstream 403; stopped at smoke gate"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "upstream_host_recorded": false,
+    "request_ids_recorded": false
+  },
+  "result": "blocked_on_upstream_403"
+}

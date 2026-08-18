@@ -317,6 +317,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260818-v1.json`: 品控官 row 10 重新生成前置检查；服务通道为 `probe_pending`，最近失败为 `403 INSUFFICIENT_BALANCE`，未提交新请求或安装隔离候选
 - `qa/imagegen-channel-recheck-20260818-v2.json`: 本地 Docker 生图服务的只读 Agent capabilities、契约、runtime 和渠道健康复核；capabilities/契约返回 200/预期 400，runtime 返回 500 `disk I/O error`，渠道为 `probe_pending` 且最近失败为 `403 INSUFFICIENT_BALANCE`，未发起计费请求
 - `qa/imagegen-channel-recheck-20260818-v3.json`: 当前只读生图前置复核；容器健康但 runtime 仍为 500 `disk I/O error`，无健康上游通道，未发起计费请求
+- `qa/imagegen-channel-recheck-20260818-v4.json`: runtime 恢复为 200 后对两个独立 Agent request mode 执行最小真实 smoke；非流式与 SSE 均返回 403 且无图像/artifact，渠道进入 `probe_pending`，Quality 未提交生成请求
+- `qa/imagegen-channel-recheck-20260818-v5.json`: 冷却到期后的恢复探针仍返回 403；两个新幂等键只在本地健康门禁收到 503，未向上游重复发起请求或提交 Quality 生成
 - `qa/hei-mao-quality/proportion-repair-20260818.json`: 品控官 row 10 八个方向的整行等比归一化、源输出 SHA 和高度对照；不含新生图请求，不能解除比例阻断
 - `qa/hei-mao-quality/proportion-recheck-20260818.json`: 八个角色 look 行的只读 alpha 高度对照；确认 Quality 两个 cardinal 同时偏矮并记录生图服务阻断
 - `qa/hei-mao-quality/chroma-despill-recheck-20260818.json`: 品控官等比修复后的透明度与既有单次去溢继承边界

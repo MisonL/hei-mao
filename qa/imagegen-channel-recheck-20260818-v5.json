@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T06:04:16Z",
+  "scope": "local Docker image-generation recovery retry after upstream smoke block",
+  "preflight": {
+    "first_run": "pass",
+    "agent_doctor_contract": "pass",
+    "runtime_capabilities": "pass",
+    "failure_cooldown_ms": 30000,
+    "require_probe_for_recovery": true,
+    "recovery_probe_interval_ms": 60000,
+    "effective_request_modes": [],
+    "pending_probe_count": 2,
+    "last_recovery_probe": {
+      "request_mode": "images-non-stream",
+      "status": 403,
+      "code": "INSUFFICIENT_BALANCE",
+      "recovered": false
+    }
+  },
+  "retry": [
+    {
+      "case": "quality-recovery-json",
+      "request_mode": "images-non-stream",
+      "new_idempotency_key": true,
+      "status": 503,
+      "error_code": "configuration_error",
+      "image_count": 0,
+      "artifact_count": 0,
+      "upstream_request_sent": false
+    },
+    {
+      "case": "quality-recovery-sse",
+      "request_mode": "images-sse",
+      "new_idempotency_key": true,
+      "status": 503,
+      "error_code": "configuration_error",
+      "image_count": 0,
+      "artifact_count": 0,
+      "upstream_request_sent": false
+    }
+  ],
+  "generation_policy": {
+    "quality_row_9_submitted": false,
+    "quality_row_10_submitted": false,
+    "failed_idempotency_keys_reused": false,
+    "reason": "Recovery probe still receives upstream 403; retries stop at the local health gate and no production generation is submitted."
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "upstream_host_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "blocked_on_upstream_403_recovery_probe"
+}
