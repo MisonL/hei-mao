@@ -1,19 +1,26 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-08-18T18:32:29Z",
+  "checked_at": "2026-08-18T18:51:05Z",
   "scope": "read-only Codex App visibility probe after existing-app activation request",
   "applications": {
     "chatgpt_bundle_present": true,
     "petdex_bundle_present": true,
     "chatgpt_process_visible": true,
-    "chatgpt_window_count": 0,
+    "chatgpt_window_count_accessibility": 0,
+    "chatgpt_window_count_window_server": 2,
+    "chatgpt_windows_onscreen": true,
     "frontmost_application": "terminal"
   },
   "activation": {
     "operation": "request_existing_chatgpt_app_activation",
-    "result": "no_accessible_window",
+    "result": "windowserver_visible_but_accessibility_unavailable",
     "input_sent": false,
     "settings_changed": false
+  },
+  "capture": {
+    "attempted": true,
+    "result": "could_not_create_image_from_window",
+    "screenshot_retained": false
   },
   "visual_gate": {
     "refresh": "unverified",
@@ -27,7 +34,7 @@
     "codex_process_restarted": false,
     "process_ids_recorded": false
   },
-  "result": "codex_app_visual_gate_unverified_no_window",
+  "result": "codex_app_windows_visible_but_visual_capture_unavailable",
   "privacy": {
     "credentials_recorded": false,
     "local_paths_recorded": false,

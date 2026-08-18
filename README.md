@@ -26,7 +26,7 @@ npx -y petdex@latest install hei-mao-traveler
 
 2026-08-18（北京时间）复核中 PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-18T12:29:32.049Z`，共 4568 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载，实际 metadata 均为 v2、1536x2288、RGBA。`hei-mao-butler` 和 `hei-mao-chef` 的线上资源与仓库一致；其余六个角色（包括 Quality）的本地修复图集仍未切换到线上，manifest 索引版本与实际 metadata 仍有 v1/v2 漂移。Fortune 与 Traveler 已公开但线上仍是提交审核时的旧图集，本地当前 v2 图集的 owned-slug 编辑仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260819-v2.json`，最新 CLI 下载状态见 `qa/petdex-live-status-recheck-20260819-v1.json`，本地门禁见 `qa/current-v2-gate-recheck-20260818-v5.json`，最新八角色隔离安装见 `qa/petdex-live-install-recheck-20260819-v1.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
 
-本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录。本轮只请求激活已存在的 ChatGPT 应用，未执行设置或宠物操作，也没有停止或重启任何 Codex 进程；当前无可访问窗口的边界见 `qa/codex-app-boundary-recheck-20260819.json`。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；本地复现和版本边界见 `qa/petdex-local-cli-recheck-20260814.json`。
+本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录。本轮只请求激活已存在的 ChatGPT 应用，WindowServer 能看到两个可见窗口，但 Accessibility 和窗口截图接口不可用；未执行设置或宠物操作，也没有停止或重启任何 Codex 进程。当前视觉边界见 `qa/codex-app-boundary-recheck-20260819.json`。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；本地复现和版本边界见 `qa/petdex-local-cli-recheck-20260814.json`。
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -424,7 +424,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-install-recheck-20260819-v1.json`: PetDex CLI `1.2.2` 最新隔离安装八个当前角色到两个临时目标，16+16 个文件存在、metadata id 和双目录 SHA parity 通过，临时目标已清理，不含本机环境信息
 - `qa/codex-app-boundary-recheck-20260818.json`: ChatGPT/Codex App 当前只读进程和窗口探针；进程可见但窗口数为 0，未执行设置或进程控制，不含本机环境信息
 - `qa/codex-app-boundary-recheck-20260818-v2.json`: 2026-08-18T08:37:49Z ChatGPT/Codex App 只读进程探针；窗口查询在安全 8 秒边界超时，未执行设置或进程控制，视觉验收仍未完成，不含本机环境信息
-- `qa/codex-app-boundary-recheck-20260819.json`: 2026-08-18T18:32:29Z 只读请求激活已存在的 ChatGPT 应用后仍无可访问窗口；未发送输入、未改设置、未停止或重启 Codex 进程，视觉验收仍未完成，不含本机环境信息
+- `qa/codex-app-boundary-recheck-20260819.json`: 2026-08-18T18:51:05Z WindowServer 可见两个 ChatGPT 窗口，但 Accessibility 查询和窗口截图均不可用；未发送输入、未改设置、未停止或重启 Codex 进程，视觉验收仍未完成，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v1.json`: Fortune cardinal 两种有效 request mode 的真实失败证据和未产出 artifact 边界，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v2.json`: Fortune cardinal 第五次真实 502 失败、一次未发送的本地预检和只读诊断结果，不含本机环境信息
 - `qa/fortune-cardinal-generation-recheck-20260816-v3.json`: Fortune cardinal 新增三次真实 502 失败和未替换正式图集的脱敏边界，不含本机环境信息
