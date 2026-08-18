@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T06:40:25Z",
+  "scope": "local eight-role v2 structure and hatch-pet regression recheck after image-generation retry",
+  "roles_checked": 8,
+  "atlas_contract": {
+    "dimensions": "1536x2288",
+    "grid": "8x11",
+    "mode": "RGBA",
+    "sprite_version_number": 2,
+    "roles_passed": 8,
+    "errors": 0,
+    "warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "direction_continuity": {
+    "roles_ok": 8,
+    "warning_policy": "existing reviewed warnings remain non-blocking evidence"
+  },
+  "hatch_pet_tests": {
+    "runner": "python -m unittest discover -s tests -q",
+    "passed": 28,
+    "failed": 0,
+    "errors": 0,
+    "notes": "Pillow deprecation notices only"
+  },
+  "quality_gate": {
+    "status": "blocked",
+    "reason": "look-row-9 and look-row-10 remain proportionally compressed and require new coherent generation",
+    "generation_evidence": "qa/imagegen-channel-recheck-20260818-v6.json"
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "request_identifiers_recorded": false
+  },
+  "result": "eight_role_local_structure_pass; Quality coherent look-row regeneration remains externally blocked"
+}
