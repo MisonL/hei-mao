@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T08:27:27Z",
+  "checked_commit": "e31e416",
+  "scope": "fresh PetDex manifest and public asset metadata/SHA recheck",
+  "source": "https://petdex.dev/api/manifest",
+  "cli_version": "1.2.2",
+  "manifest": {
+    "generated_at": "2026-08-18T06:29:10.591Z",
+    "total": 4568,
+    "current_role_count": 8,
+    "current_slugs": ["hei-mao", "hei-mao-quality", "hei-mao-butler", "hei-mao-chef", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"],
+    "historical_duplicate_slugs": ["hei-mao-2"],
+    "missing_historical_slugs": ["hei-mao-recommender"]
+  },
+  "roles": [
+    {"slug":"hei-mao","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c","local_sha256":"52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c","sha_match":false,"status":"remote_asset_pending_owned_slug_update"},
+    {"slug":"hei-mao-quality","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92","local_sha256":"3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696","sha_match":false,"status":"remote_asset_pending_owned_slug_update_and_local_proportion_gate"},
+    {"slug":"hei-mao-butler","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304","local_sha256":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304","sha_match":true,"status":"in_sync"},
+    {"slug":"hei-mao-chef","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957","local_sha256":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957","sha_match":true,"status":"in_sync"},
+    {"slug":"hei-mao-delivery","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a","local_sha256":"6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86","sha_match":false,"status":"remote_asset_pending_owned_slug_update"},
+    {"slug":"hei-mao-foodie","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49","local_sha256":"eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0","sha_match":false,"status":"remote_asset_pending_owned_slug_update"},
+    {"slug":"hei-mao-fortune","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71","local_sha256":"10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9","sha_match":false,"status":"remote_asset_pending_owned_slug_update"},
+    {"slug":"hei-mao-traveler","remote_petjson_sprite_version":2,"remote_dimensions":"1536x2288","remote_mode":"RGBA","remote_sha256":"2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e","local_sha256":"d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25","sha_match":false,"status":"remote_asset_pending_owned_slug_update"}
+  ],
+  "semantic_petjson_parity": {
+    "all_current_roles": true,
+    "remote_metadata_contract": "v2_1536x2288_RGBA"
+  },
+  "index_lag": {
+    "manifest_index_sprite_version_is_stale_for": ["hei-mao", "hei-mao-quality", "hei-mao-butler", "hei-mao-chef", "hei-mao-foodie"],
+    "metadata_and_downloaded_atlas_remain_v2": true
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "tokens_recorded": false
+  },
+  "result": "all_current_slugs_public; two_assets_in_sync; six_owned_slug_sprite_updates_pending_review; manifest_index_lag_observed"
+}
