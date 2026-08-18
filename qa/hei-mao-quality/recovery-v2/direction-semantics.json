@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "atlas": "final/spritesheet-recovery-v2.png",
+  "atlas_sha256": "9c8675e96c366f56c31c7c5d31990547426b39070f2a34a05bb96896db8be42b",
+  "reviewed_by": "parent normal-size visual review plus three independent blind QA workers",
+  "verdict": "pass_with_reviewed_warnings",
+  "hard_cardinal_gate": {
+    "000": "up",
+    "090": "screen-right",
+    "180": "down",
+    "270": "screen-left"
+  },
+  "directions": [
+    {"degree":"000","expected":"up","observed":"up","verdict":"pass","horizontal":"centered snout","vertical":"snout above the eye arcs; clear up pitch","reason":"Cardinal is unmistakable."},
+    {"degree":"022.5","expected":"up-right","observed":"up-right","verdict":"pass","horizontal":"snout begins moving screen-right","vertical":"up pitch remains visible","reason":"First diagonal follows 000."},
+    {"degree":"045","expected":"up-right","observed":"up-right","verdict":"pass","horizontal":"snout projects screen-right","vertical":"up pitch remains visible","reason":"Quadrant is clear."},
+    {"degree":"067.5","expected":"up-right","observed":"up-right","verdict":"pass","horizontal":"snout clearly screen-right","vertical":"head remains above level","reason":"Approaches 090 without reversal."},
+    {"degree":"090","expected":"right","observed":"right","verdict":"pass","horizontal":"unmistakable screen-right profile","vertical":"near-level profile","reason":"Cardinal is unmistakable."},
+    {"degree":"112.5","expected":"down-right","observed":"down-right","verdict":"pass","horizontal":"snout remains screen-right","vertical":"face moves below level","reason":"Down-right transition is visible."},
+    {"degree":"135","expected":"down-right","observed":"down-right","verdict":"pass","horizontal":"snout remains screen-right","vertical":"down pitch strengthens","reason":"Stable diagonal."},
+    {"degree":"157.5","expected":"down-right","observed":"down-right","verdict":"pass","horizontal":"snout remains screen-right","vertical":"approaches down","reason":"No quadrant reversal."},
+    {"degree":"180","expected":"down","observed":"down","verdict":"pass","horizontal":"centered snout","vertical":"snout below the eye arcs; clear down pitch","reason":"Cardinal is unmistakable."},
+    {"degree":"202.5","expected":"down-left","observed":"down-left","verdict":"pass","horizontal":"snout begins moving screen-left","vertical":"down pitch remains clear","reason":"Row 10 continues from 180."},
+    {"degree":"225","expected":"down-left","observed":"down-left","verdict":"pass","horizontal":"snout projects screen-left","vertical":"face remains down-pitched","reason":"Quadrant is clear."},
+    {"degree":"247.5","expected":"down-left","observed":"down-left","verdict":"pass","horizontal":"snout remains screen-left","vertical":"down pitch relaxes","reason":"No visible semantic break."},
+    {"degree":"270","expected":"left","observed":"left","verdict":"pass","horizontal":"unmistakable screen-left profile","vertical":"near-level profile","reason":"Cardinal is unmistakable."},
+    {"degree":"292.5","expected":"up-left","observed":"up-left","verdict":"pass","horizontal":"snout remains screen-left","vertical":"head rises toward up-left","reason":"Return arc is continuous."},
+    {"degree":"315","expected":"up-left","observed":"up-left","verdict":"pass","horizontal":"snout remains screen-left","vertical":"up pitch is visible","reason":"Scale and baseline remain stable."},
+    {"degree":"337.5","expected":"up-left","observed":"up-left","verdict":"pass","horizontal":"snout remains screen-left","vertical":"approaches 000 up","reason":"Loop boundary remains readable."}
+  ],
+  "continuity_review": {
+    "report": "qa/recovery-v2/look-continuity-final.json",
+    "verdict": "reviewed_warning",
+    "warnings": [
+      "157.5->180 has a larger metric delta and center shift",
+      "337.5->000 has a larger metric delta",
+      "No visible snap, scale pop, alpha hole, wrong quadrant, or reversal at normal size."
+    ]
+  },
+  "blind_review": {
+    "sheet": "qa/recovery-v2/direction-blind-pairs.png",
+    "answer_key": "qa/recovery-v2/direction-blind-answer-key.json",
+    "independent_workers_available": 3,
+    "consensus": "pass_with_reviewed_warnings",
+    "method": "strict majority per pair; cardinal directions are hard-gated and intermediate ambiguity is retained as a warning",
+    "reviewed_warnings": [
+      "horizontal-1, horizontal-2, and horizontal-7 contain near-front or same-side classifications in intermediate pairs",
+      "vertical-4 and vertical-7 remain weak on the vertical axis in the blind sheet"
+    ]
+  }
+}

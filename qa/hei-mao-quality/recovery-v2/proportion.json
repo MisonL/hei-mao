@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "role": "hei-mao-quality",
+  "atlas": "final/spritesheet-recovery-v2.png",
+  "atlas_sha256": "9c8675e96c366f56c31c7c5d31990547426b39070f2a34a05bb96896db8be42b",
+  "measurement": "alpha bounding-box height per 192x208 cell",
+  "neutral_height_px": 198,
+  "row_9_heights_px": [194, 194, 194, 194, 193, 192, 184, 179],
+  "row_10_heights_px": [196, 196, 189, 193, 191, 191, 189, 192],
+  "row_9_baseline_bottom_px": [201, 201, 201, 201, 201, 201, 201, 201],
+  "row_10_baseline_bottom_px": [201, 201, 201, 201, 201, 201, 201, 201],
+  "finding": "Both complete look rows now share a stable baseline and are close to the 198px neutral height; no material compressed-row regression remains.",
+  "previous_blocked_heights_px": {
+    "row_9": [169, 169, 169, 169, 168, 167, 162, 159],
+    "row_10": [162, 165, 166, 166, 166, 166, 165, 169]
+  },
+  "reviewed_by": "deterministic alpha measurement plus normal-size visual review",
+  "decision": "proportion_gate_pass"
+}

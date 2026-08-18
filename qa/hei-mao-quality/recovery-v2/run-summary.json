@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "role": "hei-mao-quality",
+  "status": "pass_with_reviewed_warnings",
+  "candidate": {
+    "png": "final/spritesheet-recovery-v2.png",
+    "webp": "final/spritesheet-recovery-v2.webp",
+    "png_sha256": "9c8675e96c366f56c31c7c5d31990547426b39070f2a34a05bb96896db8be42b",
+    "webp_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+    "dimensions": "1536x2288",
+    "grid": "8x11",
+    "mode": "RGBA",
+    "sprite_version_number": 2
+  },
+  "gates": {
+    "assembly": "pass",
+    "proportion": "pass",
+    "source_rows": "pass",
+    "atlas_png": "pass",
+    "atlas_webp": "pass",
+    "transparent_rgb_residue": "pass_zero",
+    "chroma_despill": "pass_single_candidate_pass",
+    "direction_continuity": "pass_with_reviewed_warnings",
+    "direction_semantics": "pass_with_reviewed_warnings",
+    "independent_blind_consensus": "pass_with_reviewed_warnings",
+    "final_visual_qa": "pass_with_reviewed_warnings"
+  },
+  "evidence": {
+    "validation_png": "qa/hei-mao-quality/recovery-v2/validation-final-png.json",
+    "validation_webp": "qa/hei-mao-quality/recovery-v2/validation-final-webp.json",
+    "despill": "qa/hei-mao-quality/recovery-v2/chroma-despill.json",
+    "continuity": "qa/hei-mao-quality/recovery-v2/look-continuity-final.json",
+    "proportion": "qa/hei-mao-quality/recovery-v2/proportion.json",
+    "contact_sheet": "qa/hei-mao-quality/recovery-v2/contact-sheet-final.png",
+    "direction_sheet": "qa/hei-mao-quality/recovery-v2/look-directions.png",
+    "blind_sheet": "qa/hei-mao-quality/recovery-v2/direction-blind-pairs.png",
+    "direction_semantics": "qa/hei-mao-quality/recovery-v2/direction-semantics.json",
+    "source_row_review": "qa/hei-mao-quality/recovery-v2/source-row-review.json"
+  },
+  "reviewed_warnings": [
+    "Intermediate diagonal pairs include a small number of near-front or weak vertical-axis classifications in blind review.",
+    "Continuity metrics flag 112.5->135, 157.5->180, and 337.5->000 as local outliers; normal-size visual review found no snap, scale pop, alpha hole, wrong quadrant, or reversal."
+  ],
+  "decision": "release_local_package_and_update_existing_petdex_owned_slug_with_reviewed_warnings"
+}

@@ -1,30 +1,28 @@
 {
   "schema_version": 2,
-  "ok": false,
-  "status": "blocked_proportion_regression",
-  "visual_qa": "blocked",
-  "spritesheet_sha256": "3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696",
+  "ok": true,
+  "status": "pass_with_reviewed_warnings",
+  "visual_qa": "pass_with_reviewed_warnings",
+  "spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
   "proportion_repair": {
-    "evidence": "qa/hei-mao-quality/proportion-repair-20260818.json",
-    "rows": ["look-row-10"],
-    "method": "deterministic isotropic normalization of the complete look row"
+    "evidence": "qa/hei-mao-quality/recovery-v2/proportion.json",
+    "rows": ["look-row-9", "look-row-10"],
+    "method": "coherent regeneration of both complete look rows followed by deterministic assembly and shared baseline normalization"
   },
-  "reviewed_by": "parent_labeled_visual_review",
-  "hard_failures": [
-    "look-row-9 and look-row-10 are materially shorter than the neutral frame and read as compressed across the complete row"
-  ],
+  "reviewed_by": "parent normal-size visual review plus three independent blind QA workers",
+  "hard_failures": [],
   "gates": {
     "atlas_png_require_v2": "pass",
     "atlas_webp_require_v2": "pass",
     "transparent_rgb_residue": "pass_zero",
-    "chroma_despill": "pass_inherited_single_pass",
+    "chroma_despill": "pass_single_candidate_pass",
     "direction_cardinals": "pass",
-    "direction_blind_validation": "pass_with_existing_minor_reviewed_warnings",
-    "look_continuity": "pass_with_minor_reviewed_warnings",
-    "row_9_scale": "blocked; heights 159-169px against neutral height 198px",
-    "row_10_scale": "blocked; heights 162-169px against neutral height 198px"
+    "direction_blind_validation": "pass_with_reviewed_warnings",
+    "look_continuity": "pass_with_reviewed_warnings",
+    "row_9_scale": "pass_with_reviewed_warnings; heights 179-194px against neutral height 198px",
+    "row_10_scale": "pass_with_reviewed_warnings; heights 189-196px against neutral height 198px"
   },
-  "identity": "黑毛品控官的白色工作服、蓝色手套、放大镜和叶菜在标准动作与 16 个方向中保持一致；row 10 仅做整行等比归一化，不改变姿态语义或道具关系。",
+  "identity": "黑毛品控官的白色工作服、蓝色手套、放大镜和叶菜在标准动作与 16 个方向中保持一致；两条 look row 均以完整连贯行重生成并共享稳定基线。",
   "directions": {
     "cardinal_gates": {"000": "pass", "090": "pass", "180": "pass", "270": "pass"},
     "all_expected_directions_have_verdicts": true,
@@ -33,28 +31,31 @@
   },
   "evidence": {
     "atlas": "pets/hei-mao-quality/spritesheet.webp",
-    "validation": "qa/hei-mao-quality/validation.json",
-    "chroma_despill": "qa/hei-mao-quality/chroma-despill-recheck-20260818.json",
-    "contact_sheet": "qa/hei-mao-quality/contact-sheet-extended.png",
-    "direction_sheet": "qa/hei-mao-quality/look-directions.png",
-    "direction_semantics": "qa/hei-mao-quality/direction-semantics.json",
-    "blind_validation": "qa/hei-mao-quality/direction-blind-validation.json",
+    "validation": "qa/hei-mao-quality/recovery-v2/validation-final-webp.json",
+    "chroma_despill": "qa/hei-mao-quality/recovery-v2/chroma-despill.json",
+    "contact_sheet": "qa/hei-mao-quality/recovery-v2/contact-sheet-final.png",
+    "direction_sheet": "qa/hei-mao-quality/recovery-v2/look-directions.png",
+    "direction_semantics": "qa/hei-mao-quality/recovery-v2/direction-semantics.json",
+    "blind_validation": "qa/hei-mao-quality/recovery-v2/direction-blind-validation.json",
     "blind_verdicts": [
-      "qa/hei-mao-quality/direction-blind-verdicts-a.json",
-      "qa/hei-mao-quality/direction-blind-verdicts-b.json",
-      "qa/hei-mao-quality/direction-blind-verdicts-c.json",
-      "qa/hei-mao-quality/direction-blind-verdicts.json"
+      "qa/hei-mao-quality/recovery-v2/direction-blind-verdicts-1.json",
+      "qa/hei-mao-quality/recovery-v2/direction-blind-verdicts-2.json",
+      "qa/hei-mao-quality/recovery-v2/direction-blind-verdicts-3.json",
+      "qa/hei-mao-quality/recovery-v2/direction-blind-verdicts.json"
     ],
-    "blind_resolution": "qa/hei-mao-quality/blind-review-resolution.json",
-    "continuity": "qa/hei-mao-quality/look-continuity.json",
-    "standard_review": "qa/hei-mao-quality/review.json",
-    "proportion_repair": "qa/hei-mao-quality/proportion-repair-20260818.json",
-    "proportion_recheck": "qa/hei-mao-quality/proportion-recheck-20260818.json",
-    "generation_preflight": "qa/imagegen-channel-recheck-20260818-v8.json"
+    "blind_answer_key": "qa/hei-mao-quality/recovery-v2/direction-blind-answer-key.json",
+    "continuity": "qa/hei-mao-quality/recovery-v2/look-continuity-final.json",
+    "standard_review": "qa/hei-mao-quality/recovery-v2/source-row-review.json",
+    "proportion": "qa/hei-mao-quality/recovery-v2/proportion.json"
   },
   "warnings": [
-    "157.5->180 and 337.5->000 remain reviewed direction-boundary continuity warnings; no visible wrong quadrant, reversal, or alpha hole was introduced.",
-    "The repair is deterministic from the existing atlas; no new billable image-generation request was made while the local channel reported INSUFFICIENT_BALANCE."
+    "Intermediate diagonal blind pairs retain a small number of near-front or weak vertical-axis classifications; all cardinal hard gates pass by strict majority.",
+    "Continuity metrics flag 112.5->135, 157.5->180, and 337.5->000 as local outliers; normal-size visual review found no snap, scale pop, alpha hole, wrong quadrant, or reversal."
   ],
-  "release_decision": "block_pending_coherent_row9_row10_generation"
+  "release_decision": "pass_with_reviewed_warnings",
+  "historical_block": {
+    "status": "blocked_proportion_regression",
+    "spritesheet_sha256": "3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696",
+    "superseded_by": "qa/hei-mao-quality/recovery-v2/"
+  }
 }

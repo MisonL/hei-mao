@@ -1,7 +1,6 @@
 {
   "ok": true,
-  "file": "pets/hei-mao-quality/spritesheet.webp",
-  "format": "WEBP",
+  "format": "PNG",
   "mode": "RGBA",
   "columns": 8,
   "rows": 11,

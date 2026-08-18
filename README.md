@@ -24,7 +24,7 @@ npx -y petdex@latest install hei-mao-fortune
 npx -y petdex@latest install hei-mao-traveler
 ```
 
-2026-08-18（北京时间）复核中 PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-18T06:29:10.591Z`，共 4568 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载，实际 metadata 均为 v2、1536x2288、RGBA。`hei-mao-butler` 和 `hei-mao-chef` 的线上资源与仓库一致；其余六个角色的本地修复图集仍未切换到线上，manifest 索引版本与实际 metadata 仍有 v1/v2 漂移。Fortune 与 Traveler 已公开但线上仍是提交审核时的旧图集，本地当前 v2 图集的 owned-slug 编辑仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260818-v5.json`，本地门禁和远端同步见 `qa/current-v2-gate-recheck-20260818-v4.json`，隔离安装见 `qa/petdex-live-install-recheck-20260818-v2.json`；本地 v2 图集可通过下方角色安装器获取，但 Quality 当前因比例阻断暂不分发。
+2026-08-18（北京时间）复核中 PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-18T06:29:10.591Z`，共 4568 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载，实际 metadata 均为 v2、1536x2288、RGBA。`hei-mao-butler` 和 `hei-mao-chef` 的线上资源与仓库一致；其余六个角色（包括 Quality）的本地修复图集仍未切换到线上，manifest 索引版本与实际 metadata 仍有 v1/v2 漂移。Fortune 与 Traveler 已公开但线上仍是提交审核时的旧图集，本地当前 v2 图集的 owned-slug 编辑仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260818-v5.json`，本地门禁和远端同步见 `qa/current-v2-gate-recheck-20260818-v4.json`，隔离安装见 `qa/petdex-live-install-recheck-20260818-v2.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
 
 本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录，但本轮没有启动应用，也没有停止或重启任何 Codex 进程。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；本地复现和版本边界见 `qa/petdex-local-cli-recheck-20260814.json`。
 
@@ -37,12 +37,12 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
 ### 角色包状态
 
-当前仓库中的角色包如下。每个角色都有独立的 `pet.json`、v2 图集和 QA 证据，不能用其他角色的图集替代；只有没有视觉阻断的角色才会进入安装器白名单。
+当前仓库中的角色包如下。每个角色都有独立的 `pet.json`、v2 图集和 QA 证据，不能用其他角色的图集替代；只有通过视觉门禁的角色才会进入安装器白名单。
 
 | slug              | 角色   | 本地状态               | Petdex 状态                |
 | ----------------- | ------ | ---------------------- | -------------------------- |
 | `hei-mao`         | 黑毛   | 已验证                 | manifest 可见，旧图集编辑仍待审核 |
-| `hei-mao-quality` | 品控官 | 比例阻断，暂不分发 | manifest 可见，线上资源与本地修复均待审核 |
+| `hei-mao-quality` | 品控官 | v2 已验证，可本地安装 | manifest 可见，线上资源仍待 owned-slug 审核 |
 | `hei-mao-butler`  | 大管家 | 已验证                 | manifest index 为 v1，资源一致 |
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest index 为 v1，资源一致 |
 | `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，旧图集编辑仍待审核 |
@@ -50,7 +50,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | manifest 已公开，当前图集编辑待审核 |
 | `hei-mao-traveler` | 旅行家 | v2 已验证，可本地安装 | manifest 已公开，当前图集编辑待审核 |
 
-公开 manifest 当前包含八个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4568；八个角色仍可通过 PetDex CLI 读取公开条目，但本仓库安装器暂时只分发其余七个角色，且安装成功不代表线上资源已经切换到仓库最新图集。当前线上与仓库一致的是 `hei-mao-butler` 和 `hei-mao-chef`；其余六个角色的 owned-slug 编辑仍待审核。最新资源、实际色键门禁和隔离下载见 `qa/petdex-live-recheck-20260818-v5.json`、`qa/current-v2-gate-recheck-20260818-v4.json` 和 `qa/petdex-live-install-recheck-20260818-v2.json`；旧提交和编辑快照仅用于追溯。
+公开 manifest 当前包含八个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4568；八个当前角色均可通过 PetDex CLI 读取公开条目，本仓库安装器也已覆盖八个角色，但安装成功不代表线上资源已经切换到仓库最新图集。当前线上与仓库一致的是 `hei-mao-butler` 和 `hei-mao-chef`；其余六个角色的 owned-slug 编辑仍待审核。最新资源、实际色键门禁和隔离下载见 `qa/petdex-live-recheck-20260818-v5.json`、`qa/current-v2-gate-recheck-20260818-v4.json` 和 `qa/petdex-live-install-recheck-20260818-v2.json`；旧提交和编辑快照仅用于追溯。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -61,9 +61,9 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 
 此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。`qa/current-state-recheck-20260817-v7.json` 代表比例修复前状态；本轮五个角色的比例修复以及 Quality row 10 的整行等比修复以各自 `proportion-repair-*.json`、`final-visual-qa.json` 和 `run-summary.json` 为准。PetDex 最新 manifest、公开资源和隔离下载以 `qa/petdex-live-recheck-20260818-v5.json`、`qa/current-v2-gate-recheck-20260818-v4.json` 和 `qa/petdex-live-install-recheck-20260818-v2.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
 
-本机当前保留八个角色，但 `hei-mao-quality` 的 look row 9/10 存在已确认的整行比例阻断，暂不进入安装器分发白名单；其余七个角色的 v2 结构、透明度和连续性门禁通过。Quality row 10 的确定性等比修复仅将高度调整到 `162-169px`，仍低于中性帧约 `198px`，不能替代两条 coherent look row 的重新生成。仓库、Codex 与 PetDex 的旧 Quality 文件仍保留用于追溯，不得据此宣称当前 Quality 资源已验收。证据见 `qa/hei-mao-quality/final-visual-qa.json`、`qa/hei-mao-quality/run-summary.json`、`qa/hei-mao-quality/proportion-recheck-20260818.json` 和 `qa/current-v2-gate-recheck-20260818-v3.json`；本地生图服务恢复前 goal 保持 active。
+本机当前保留八个角色，八个角色的 v2 结构、透明度和连续性门禁均通过。Quality 的两条 coherent look row 已重新生成并统一到中性帧比例：row 9 为 `179-194px`、row 10 为 `189-196px`，共同基线底部为 `201px`；独立盲测的 cardinal 硬门禁和严格多数验证通过，中间方向 warning 已保留。Quality 最新证据见 `qa/hei-mao-quality/recovery-v2/`；此前阻断期间的文件仍保留在 `qa/hei-mao-quality/`，仅用于历史追溯。
 
-此前本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；当前 `hei-mao-quality` 因比例阻断已从安装器白名单移出，已有本地文件不删除。其余七个角色的 PetDex 在线安装、资源 SHA 和远端分支对照见 `qa/petdex-live-recheck-20260818-v5.json` 和 `qa/petdex-live-install-recheck-20260818-v2.json`，但线上资源仍可能是审核前旧图集。Petdex Desktop `v0.8.0` 的历史签名、窗口和双屏证据仍保留在专项 QA 中；最新 ChatGPT/Codex App 只读探针确认进程存在，但窗口查询在安全超时内未返回，未执行设置或宠物操作，Codex App 的本轮视觉验收仍未完成，见 `qa/codex-app-boundary-recheck-20260818-v2.json`；未停止或重启任何 Codex 进程。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复；开放的 PR #710 也未改变 stdin EOF 语义。
+此前本地安装器隔离验证已通过 Shell 和 PowerShell 的八个角色，并确认未知 slug 不会写入；Quality 已恢复到安装器白名单，新的双目录 SHA 验收以本轮安装证据为准。其余角色的 PetDex 在线安装、资源 SHA 和远端分支对照见 `qa/petdex-live-recheck-20260818-v5.json` 和 `qa/petdex-live-install-recheck-20260818-v2.json`，但线上资源仍可能是审核前旧图集。Petdex Desktop `v0.8.0` 的历史签名、窗口和双屏证据仍保留在专项 QA 中；最新 ChatGPT/Codex App 只读探针确认进程存在，但窗口查询在安全超时内未返回，未执行设置或宠物操作，Codex App 的本轮视觉验收仍未完成，见 `qa/codex-app-boundary-recheck-20260818-v2.json`；未停止或重启任何 Codex 进程。PetDex PR #662（跨屏气泡锚定）和 #667（气泡与宠物间距）已合并；PR #583 已修复大输入排空和 EPIPE，但 #689 的宿主不关闭 stdin、持续等待 EOF 是不同问题，目前仍待上游修复；开放的 PR #710 也未改变 stdin EOF 语义。
 
 ### 角色安装器
 
@@ -173,11 +173,17 @@ Petdex 发布状态：条目已进入公开 manifest，`npx -y petdex@latest ins
 
 ### 品控官角色
 
-`hei-mao-quality` 是黑毛的品控官角色包。结构、透明度和方向语义门禁通过，但 row 9/10 相对中性帧明显偏矮，已被标记为比例阻断；在两条 coherent look row 重新生成并完成视觉 QA 前，不通过仓库安装器分发。
+`hei-mao-quality` 是黑毛的品控官角色包。两条 coherent look row 已重新生成，结构、透明度、比例和方向语义门禁均通过；三份独立盲测的 cardinal 硬门禁通过，中间方向分歧作为 minor warning 保留。
 
-Petdex 安装：PetDex 中仍可见历史 `hei-mao-quality` 条目，但它不代表本仓库当前修复图集已通过比例验收；请等待本地两行重生成和 PetDex owned-slug 编辑审核完成。
+Petdex 安装：本地仓库安装器可安装已验收的 Quality v2 图集；PetDex 中的同名条目仍可能提供审核前旧资源，线上切换需等待已有 owned-slug 编辑审核完成，不创建重复条目。
 
-Quality 当前只保留现有本地文件用于复核，不提供手动安装命令；row 9/10 完成重生成并通过视觉门禁后再恢复安装说明。
+本地安装：
+
+```bash
+HEI_MAO_PET_ID=hei-mao-quality curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-quality bash
+```
+
+Quality 的比例、方向盲测和透明度证据见 `qa/hei-mao-quality/recovery-v2/`；仓库安装成功不等于 PetDex 线上资源已经切换。
 
 ### 旅行家角色
 
@@ -272,7 +278,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/<slug>/look-continuity.json`: 方向连续性测量
 - `pets/hei-mao/`: 根角色包
 - `qa/hei-mao/`: 根角色的独立验证与视觉复核证据
-- `pets/hei-mao-quality/`: 品控官角色包（当前 look row 9/10 比例阻断，不作为可发布包）
+- `pets/hei-mao-quality/`: 品控官角色包（v2 比例与方向门禁通过）
 - `qa/hei-mao-quality/`: 品控官的结构、盲测、比例阻断与视觉复核证据
 - `pets/hei-mao-butler/`: 已验证的大管家角色包
 - `qa/hei-mao-butler/`: 大管家 v2 的独立验证与视觉复核证据
@@ -486,16 +492,17 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 
 `running-left` 为单独生成，不是从 `running-right` 镜像派生，以避免破坏黑毛单肩背带裤的方向特征。
 
-### 品控官 v5 验证结果
+### 品控官 recovery-v2 验证结果
 
-- `pets/hei-mao-quality/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `3a117af73f978216cff925c55abc97aa3f41cd79635efab3cf77a78e445f8696`
+- `pets/hei-mao-quality/spritesheet.webp`: `WEBP` / `RGBA`，SHA-256 为 `a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5`
 - 尺寸 `1536x2288`，单元格 `192x208`，`spriteVersionNumber: 2`
 - quality 图集使用洋红色抠像键 `#FF00FF`；独立复核时运行 `validate_atlas.py --require-v2 --chroma-key '#FF00FF' pets/hei-mao-quality/spritesheet.webp`
 - `qa/hei-mao-quality/validation.json`: `ok: true`，错误 0，透明 RGB 残留 0
-- `qa/hei-mao-quality/chroma-despill-recheck-20260818.json`: `ok: true`，沿用既有单次边缘色键去溢，等比修复后未追加第二次全图去溢
-- `qa/hei-mao-quality/direction-blind-validation.json`: `ok: true`，`000=up`、`180=down`、`270=screen-left` 硬门禁通过
-- `qa/hei-mao-quality/final-visual-qa.json`: `blocked_proportion_regression`；row 9 为 `159-169px`、row 10 为 `162-169px`，均明显低于中性帧约 `198px`
-- 连续性指标在 `157.5 -> 180`、`225 -> 247.5` 与 `337.5 -> 000` 处有已复核的边界警告；正常尺寸下未见身份变化、错误象限、方向反转或透明内部洞
+- `qa/hei-mao-quality/recovery-v2/validation-final-webp.json`: `ok: true`，错误和警告均为 0，透明 RGB 残留为 0
+- `qa/hei-mao-quality/recovery-v2/chroma-despill.json`: `ok: true`，完成单次边缘色键去溢
+- `qa/hei-mao-quality/recovery-v2/direction-blind-validation.json`: `ok: true`，三份独立盲测严格多数通过，`000=up`、`180=down`、`270=screen-left` cardinal 硬门禁通过
+- `qa/hei-mao-quality/recovery-v2/proportion.json`: row 9 为 `179-194px`、row 10 为 `189-196px`，中性帧为 `198px`，共同基线底部为 `201px`
+- `qa/hei-mao-quality/recovery-v2/look-continuity-final.json`: 数值 outlier 作为已复核 minor warning 保留；正常尺寸下未见身份变化、错误象限、方向反转或透明内部洞
 
 ### 大管家 v2 验证结果
 

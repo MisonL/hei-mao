@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "reviewer": "blind_explorer_4",
+  "pairs": [
+    {"pair":"horizontal-1","A":"ambiguous","B":"screen-right","reason":"A 近正面；B 鼻口向右。"},
+    {"pair":"horizontal-2","A":"screen-right","B":"screen-right","reason":"两格鼻口均在头部右侧。"},
+    {"pair":"horizontal-3","A":"screen-right","B":"screen-left","reason":"A 鼻口向右；B 鼻口向左。"},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A 鼻口向左；B 鼻口向右。"},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A 鼻口向右；B 鼻口向左。"},
+    {"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A 鼻口向右；B 鼻口向左。"},
+    {"pair":"horizontal-7","A":"screen-right","B":"ambiguous","reason":"A 鼻口向右；B 近正面。"},
+    {"pair":"vertical-1","A":"down","B":"up","reason":"A 眼鼻下俯；B 眼鼻上仰。"},
+    {"pair":"vertical-2","A":"up","B":"down","reason":"A 眼鼻上仰；B 眼鼻下俯。"},
+    {"pair":"vertical-3","A":"down","B":"up","reason":"A 眼鼻下俯；B 眼鼻上仰。"},
+    {"pair":"vertical-4","A":"ambiguous","B":"ambiguous","reason":"两格上下偏转不明确。"},
+    {"pair":"vertical-5","A":"down","B":"ambiguous","reason":"A 眼鼻下俯；B 上下方向不明确。"},
+    {"pair":"vertical-6","A":"up","B":"down","reason":"A 眼鼻上仰；B 眼鼻下俯。"},
+    {"pair":"vertical-7","A":"ambiguous","B":"ambiguous","reason":"两格上下偏转不明确。"}
+  ]
+}
