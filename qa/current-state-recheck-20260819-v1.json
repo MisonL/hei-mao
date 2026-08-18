@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T16:21:05Z",
+  "checked_commit": "8565738",
+  "scope": "final release boundary audit after fresh PetDex and image-generation checks",
+  "repository": {
+    "worktree": "clean",
+    "current_role_count": 8,
+    "legacy_slugs_absent": ["hei-mao-recommender", "hei-mao-2"]
+  },
+  "local_validation": {
+    "atlas_validator": "8/8 pass; 0 errors; 0 warnings; RGBA; transparent RGB residue 0",
+    "hatch_pet_tests": "28 passed; 0 failed; 0 errors",
+    "qa_artifact_completeness": "8/8 pass",
+    "installer_static_checks": "bash syntax, ShellCheck and PowerShell parse pass",
+    "three_directory_sha_parity": "8 roles x 2 files pass"
+  },
+  "image_generation": {
+    "local_service_health": "healthy",
+    "local_request_modes": ["images-non-stream", "images-sse"],
+    "local_real_smoke": "pass; both configured modes returned one image; smoke artifacts removed",
+    "local_evidence": "qa/imagegen-channel-recheck-20260819-v1.json",
+    "configured_external_instance_smoke": "403 upstream_auth_failed; no artifact",
+    "test_artifact_cleanup": "pass"
+  },
+  "petdex": {
+    "manifest_generated_at": "2026-08-18T12:29:32.049Z",
+    "entry_count": 4568,
+    "current_roles_public": 8,
+    "historical_duplicate_present": "hei-mao-2",
+    "public_contract": "8/8 HTTP 200; metadata v2; WEBP RGBA 1536x2288",
+    "sha_matches": 2,
+    "owned_slug_updates_pending_review": 6,
+    "evidence": "qa/petdex-live-recheck-20260818-v7.json"
+  },
+  "codex_app": {
+    "codex_process_visible": false,
+    "chatgpt_process_visible": true,
+    "chatgpt_window_count": 0,
+    "visual_refresh": "unverified",
+    "animation_loop": "unverified",
+    "multirole_selection": "unverified",
+    "process_control_performed": false
+  },
+  "result": "local_release_checks_pass; Codex App visual gate unverified; six PetDex owned-slug updates pending review",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false
+  }
+}

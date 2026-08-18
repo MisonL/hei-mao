@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T16:21:05Z",
+  "scope": "current local Docker image-generation API after API switch",
+  "service_base_url": "local_docker_deployment",
+  "preflight": {
+    "first_run": "pass",
+    "agent_capabilities": "pass",
+    "runtime_capabilities": "pass",
+    "contract_check": "pass",
+    "channel_health": {
+      "state": "healthy",
+      "healthy_credentials": 1,
+      "unhealthy_credentials": 0,
+      "configured_request_modes": ["images-non-stream", "images-sse"],
+      "effective_request_modes": ["images-non-stream", "images-sse"],
+      "recommended_concurrency": 1,
+      "capacity_per_credential": 1
+    }
+  },
+  "real_smoke": {
+    "status": "pass",
+    "billable": true,
+    "cases": {
+      "images-non-stream": {
+        "status": "pass",
+        "http_status": 200,
+        "image_count": 1,
+        "artifact_cleanup": "pass"
+      },
+      "images-sse": {
+        "status": "pass",
+        "http_status": 200,
+        "image_count": 1,
+        "artifact_cleanup": "pass"
+      }
+    },
+    "project_assets_changed": false
+  },
+  "remote_deployment_smoke": {
+    "status": "blocked",
+    "reason": "upstream_auth_failed; HTTP 403",
+    "artifact_count": 0
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local_service_images_modes_pass; remote_deployment_remains_blocked"
+}
