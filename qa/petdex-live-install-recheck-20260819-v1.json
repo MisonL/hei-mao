@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T18:16:53Z",
+  "scope": "fresh isolated PetDex CLI installation of all current hei-mao roles",
+  "petdex_cli_version": "1.2.2",
+  "isolation": {
+    "home": "temporary_home",
+    "codex_home": "temporary_codex_home",
+    "telemetry": "disabled",
+    "cleanup": "pass"
+  },
+  "roles": {
+    "hei-mao": "pass",
+    "hei-mao-quality": "pass",
+    "hei-mao-butler": "pass",
+    "hei-mao-chef": "pass",
+    "hei-mao-delivery": "pass",
+    "hei-mao-foodie": "pass",
+    "hei-mao-fortune": "pass",
+    "hei-mao-traveler": "pass"
+  },
+  "checks": {
+    "petdex_directory": "8/8 pet.json and spritesheet.webp present",
+    "codex_directory": "8/8 pet.json and spritesheet.webp present",
+    "metadata_ids": "8/8 match requested slug",
+    "dual_directory_sha_parity": "8/8 roles x 2 files pass",
+    "unknown_slug_test": "not_run in this snapshot; retained prior rejection evidence"
+  },
+  "result": "petdex_cli_isolated_install_pass",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "temporary_artifacts_retained": false
+  }
+}
