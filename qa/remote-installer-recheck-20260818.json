@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T08:44:55Z",
+  "checked_commit": "8ba0124",
+  "scope": "GitHub and GitLab raw Bash installer smoke in isolated temporary targets",
+  "sources": {
+    "github": {"script_fetch": "pass", "script_parse": "pass", "allowed_roles": "7/7 pass", "quality_rejection": "pass", "historical_slug_rejection": "pass"},
+    "gitlab": {"script_fetch": "pass", "script_parse": "pass", "allowed_roles": "7/7 pass", "quality_rejection": "pass", "historical_slug_rejection": "pass"}
+  },
+  "asset_checks": {
+    "pet_json_and_spritesheet_match_repository": true,
+    "requested_ids_match_slugs": true,
+    "temporary_targets_removed": true
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "github_and_gitlab_raw_installers_pass; quality_and_historical_slug_rejected_as_expected"
+}

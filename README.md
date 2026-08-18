@@ -301,6 +301,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-local-gate-recheck-20260810.json`: 基于当前提交重新执行的 v2 合同、hatch-pet 测试、安装器允许/拒绝路径、双目录一致性和公开文件卫生复核
 - `qa/installer-isolation-recheck-20260813.json`: Bash 与 PowerShell 隔离安装器的七角色固定 SHA、历史/阻断 slug 拒绝和临时目标写入复核
 - `qa/installer-cross-platform-recheck-20260818-v1.json`: 提交 `4cda613` 下七个可发布角色的 Bash 隔离安装、PowerShell Traveler 安装、Quality/历史 slug 双平台拒绝和临时目录清理复核；不含本机环境信息
+- `qa/remote-installer-recheck-20260818.json`: 提交 `8ba0124` 下 GitHub/GitLab raw Bash 安装器各自 7/7 角色安装、固定 SHA、Quality/历史 slug 拒绝和临时目标清理复核；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260813.json`: 七个当前角色的 v2 atlas、单次 despill、标准动作、方向盲测、连续性和最终视觉 QA 门禁复核
 - `qa/current-v2-gate-recheck-20260814-v2.json`: 当前八个角色按实际色键执行的 v2 atlas 结构门禁，全部通过且无透明 RGB 残留、错误或警告
 - `qa/three-directory-parity-recheck-20260814-v1.json`: 仓库、Codex 和 PetDex 三个本地目录的八角色文件集合、metadata 和 SHA-256 一致性复核
