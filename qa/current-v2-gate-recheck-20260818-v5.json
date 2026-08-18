@@ -73,9 +73,9 @@
   },
   "remote": {
     "status": "pass",
-    "github_main": "fa9b7c3",
-    "gitlab_main": "fa9b7c3",
-    "local_head": "fa9b7c3",
+    "github_main": "b489fe1",
+    "gitlab_main": "b489fe1",
+    "local_head": "b489fe1",
     "sync": "pass",
     "quality_raw_install": "pass",
     "quality_raw_evidence": "qa/remote-quality-install-recheck-20260818.json"
