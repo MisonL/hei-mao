@@ -324,6 +324,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260818-v7.json`: 切换本地 Docker 服务后再次使用全新幂等键重试 Quality row 9；唯一渠道仍为 `probe_pending` 且无有效请求方式，请求在本地健康门禁拒绝，未向上游发送、未产生图像或替换资产
 - `qa/imagegen-channel-recheck-20260818-v8.json`: 真实编排入口使用全新幂等键执行 smoke；服务仍为 `probe_pending`，`images-non-stream/images-sse` 无健康凭证，未选择渠道、未向上游发送、未产生 artifact，Quality 两条 look row 继续阻断
 - `qa/imagegen-channel-recheck-20260818-v9.json`: 2026-08-18T08:11:16Z 使用全新幂等键的本地 Agent 非流式 smoke；返回 503 `configuration_error`，唯一渠道仍为 `probe_pending`，最近上游失败为 403 `INSUFFICIENT_BALANCE`，无计费、无 artifact，Quality 两条 look row 继续阻断
+- `qa/imagegen-channel-recheck-20260818-v10.json`: 2026-08-18T08:31:29Z 只读恢复轮询；Agent/runtime 契约正常但有效请求方式仍为空，唯一渠道 `probe_pending`，最近探针仍为 403 `INSUFFICIENT_BALANCE`，未发送新请求，Quality 两条 look row 继续阻断
 - `qa/current-local-recheck-20260818-v1.json`: 生图重试后的八角色 v2 结构、方向连续性和 28 项 hatch-pet 回归测试复核；全部本地门禁通过，Quality 比例阻断仍保持
 - `qa/hei-mao-quality/proportion-repair-20260818.json`: 品控官 row 10 八个方向的整行等比归一化、源输出 SHA 和高度对照；不含新生图请求，不能解除比例阻断
 - `qa/hei-mao-quality/proportion-recheck-20260818.json`: 八个角色 look 行的只读 alpha 高度对照；确认 Quality 两个 cardinal 同时偏矮并记录生图服务阻断

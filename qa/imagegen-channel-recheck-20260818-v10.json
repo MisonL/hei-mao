@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-18T08:31:29Z",
+  "scope": "read-only local Docker image-generation recovery poll after health-gated smoke",
+  "service_base_url": "local_docker_deployment",
+  "agent_capabilities": "pass",
+  "runtime_capabilities": "pass",
+  "channel_health": {
+    "state": "probe_pending",
+    "healthy_credentials": 0,
+    "unhealthy_credentials": 1,
+    "configured_request_modes": ["images-non-stream", "images-sse"],
+    "effective_request_modes": [],
+    "last_probe": {
+      "status": 403,
+      "code": "INSUFFICIENT_BALANCE",
+      "request_mode": "images-non-stream",
+      "ok": false
+    }
+  },
+  "new_generation_request": false,
+  "artifact_count": 0,
+  "quality_row_9_submitted": false,
+  "quality_row_10_submitted": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "still_blocked_on_upstream_403_insufficient_balance; no_new_request_sent"
+}
