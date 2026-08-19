@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T14:47:03Z",
+  "scope": "post-reload local Docker image-generation channel recheck",
+  "service": {
+    "container_health": "healthy",
+    "container_recreated_for_current_private_configuration": true,
+    "runtime_configuration_matches_private_source": true,
+    "agent_capabilities": "pass",
+    "agent_contract_check": "pass",
+    "runtime_backend": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "effective_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ]
+  },
+  "channel_health": {
+    "channel_count": 1,
+    "healthy_credentials": 0,
+    "unhealthy_credentials": 1,
+    "state": "probe_pending",
+    "probe_required": true,
+    "last_failure_code": "probe_transport_error",
+    "effective_request_modes": []
+  },
+  "upstream_probe": {
+    "billable": false,
+    "dns": "pass",
+    "tls": "failed_before_secure_connection",
+    "models_request": "failed",
+    "status": 599
+  },
+  "real_smoke": {
+    "billable": true,
+    "images_non_stream": {
+      "status": "failed",
+      "http_status": 500,
+      "error_category": "connection_error",
+      "artifact_count": 0
+    },
+    "images_sse": {
+      "status": "failed",
+      "http_status": 500,
+      "error_category": "connection_error",
+      "artifact_count": 0
+    },
+    "new_artifacts_created": false,
+    "artifact_cleanup": "not_needed"
+  },
+  "formal_assets_changed": false,
+  "result": "runtime_configuration_reloaded; upstream_transport_unavailable; generation_remains_blocked",
+  "privacy": {
+    "credentials_recorded": false,
+    "secret_hashes_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  }
+}

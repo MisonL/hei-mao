@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T00:41:17Z",
+  "scope": "live Petdex Desktop window capture and current active-pet visual check",
+  "desktop_version": "0.8.0",
+  "runtime_settings": {
+    "active_pet": "hei-mao-traveler",
+    "scale": 0.7,
+    "bubbles": true,
+    "rotate_pets": false,
+    "waiting_sound": false
+  },
+  "window": {
+    "point_size": "135x146",
+    "capture_size": "270x292",
+    "alpha_mode": "RGBA",
+    "capture_retained": false
+  },
+  "active_pet_visual": {
+    "role": "hei-mao-traveler",
+    "identity_evidence": "Live capture matches the repository traveler contact sheet: brown pig, green vegetable backpack, red vest, leafy produce and red pouch.",
+    "visual_review": "pass",
+    "full_body_visible": true,
+    "clipped_edges": false,
+    "visible_proportion_regression": false,
+    "detached_or_foreign_effects": false
+  },
+  "animation_smoke": {
+    "frames_captured": 6,
+    "interval_ms": 500,
+    "capture_dimensions_consistent": true,
+    "alpha_bbox_samples": [
+      [8, 16, 262, 285],
+      [8, 16, 262, 285],
+      [11, 16, 258, 285],
+      [8, 16, 262, 285],
+      [8, 16, 262, 285],
+      [8, 16, 262, 285]
+    ],
+    "frame_differences_detected": true,
+    "animation_loop": "partial_smoke_pass; frame changes observed, full loop duration not measured"
+  },
+  "bubble": {
+    "agent_source": "codex",
+    "current_bubble_captured": false,
+    "bubble_position_following": "unverified"
+  },
+  "selection": {
+    "current_role_confirmed": true,
+    "multi_role_switching": "unverified",
+    "rotation_mode": "disabled"
+  },
+  "process_control": {
+    "codex_process_stopped": false,
+    "codex_process_restarted": false,
+    "settings_changed": false
+  },
+  "result": "petdex_desktop_traveler_visual_and_animation_smoke_pass; multi_role_and_bubble_following_unverified",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "screenshots_retained": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T14:20:22Z",
+  "scope": "fresh eight-role v2 atlas gate, continuity scan, local parity and regression tests",
+  "runtime": {
+    "validator": "hatch-pet validate_atlas.py and measure_direction_continuity.py",
+    "python": "hatch-pet bundled runtime",
+    "atlas_command": "validate_atlas.py --require-v2 with each role chroma key",
+    "test_command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+    "tests_run": 28,
+    "tests_failed": 0
+  },
+  "roles": {
+    "hei-mao": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c"
+    },
+    "hei-mao-quality": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"
+    },
+    "hei-mao-butler": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"
+    },
+    "hei-mao-chef": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"
+    },
+    "hei-mao-delivery": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86"
+    },
+    "hei-mao-foodie": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0"
+    },
+    "hei-mao-fortune": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9"
+    },
+    "hei-mao-traveler": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "review_required": true,
+      "alpha_hard_failures": 0,
+      "repo_sprite_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"
+    }
+  },
+  "local_parity": {
+    "roles": 8,
+    "codex_and_petdex_sprite_sha_match": 8,
+    "metadata_v2": 8,
+    "atlas_dimensions": "1536x2288",
+    "atlas_format": "WEBP RGBA"
+  },
+  "static_checks": {
+    "bash_syntax": "pass",
+    "powershell_parse": "pass",
+    "git_diff_check": "pass",
+    "github_main_matches_gitlab_main": true
+  },
+  "limitations": [
+    "Codex App full multi-role visual acceptance, bubble following and animation playback are not fully captured in this audit.",
+    "PetDex has six owned-slug asset updates pending review.",
+    "The local image-generation channel is currently probe_pending with no effective request mode."
+  ],
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local_v2_gate_pass; external_and_app_boundaries_remain_open"
+}

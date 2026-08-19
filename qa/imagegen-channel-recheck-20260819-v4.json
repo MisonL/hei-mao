@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T14:16:25Z",
+  "scope": "current local Docker image-generation service after renewed channel diagnosis and one real smoke",
+  "service_base_url": "local_docker_deployment",
+  "preflight": {
+    "container_health": "healthy",
+    "agent_capabilities": "pass",
+    "agent_contract_check": "pass",
+    "agent_doctor": "pass_with_critical_runtime_gap",
+    "channel_health": {
+      "channel_id": "wahuiliyi-gpt-image",
+      "state": "probe_pending",
+      "healthy_credentials": 0,
+      "unhealthy_credentials": 1,
+      "probe_required": true,
+      "last_failure_code": "probe_transport_error",
+      "effective_request_modes": []
+    },
+    "runtime": {
+      "configured_request_modes": ["images-non-stream", "images-sse"],
+      "effective_request_modes": [],
+      "responses_image_backend_enabled": false
+    }
+  },
+  "real_smoke": {
+    "status": "failed",
+    "billable": true,
+    "transport": "server_orchestrated",
+    "route_mode": "orchestrated",
+    "channel_request_mode": "images-non-stream",
+    "error_code": "configuration_error",
+    "retryable": false,
+    "upstream_request_sent": false,
+    "artifact_count": 0,
+    "artifact_cleanup": "not_needed",
+    "dimension_check": "not_run"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local_service_channel_not_healthy; no_artifact_created"
+}
