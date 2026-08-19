@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T19:02:24.300Z",
+  "scope": "post-commit independent eight-role v2 gate, continuity, regression and directory parity recheck",
+  "commit": "9cd8d3d799c3195bdf07c6b6a2e78a6610613f6c",
+  "runtime": {
+    "validator": "hatch-pet bundled scripts",
+    "python": "codex-primary-runtime Python 3.13.7",
+    "atlas_command": "validate_atlas.py --require-v2 with each recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py",
+    "tests_command": "python -m unittest discover -s hatch-pet/tests -p test_*.py -q",
+    "tests_run": 28,
+    "tests_failed": 0,
+    "tests_errors": 0,
+    "bash_syntax": "pass",
+    "powershell_parse": "pass"
+  },
+  "roles": {
+    "hei-mao": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-quality": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-butler": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-chef": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-delivery": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-foodie": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-fortune": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-traveler": {"atlas_gate": "pass", "continuity_ok": true, "transparent_rgb_residue_pixels": 0}
+  },
+  "contract": {"roles_passed": 8, "dimensions": "1536x2288", "grid": "8x11", "format": "WEBP RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0},
+  "directory_parity": {"repository_codex_petdex": "8/8 roles x pet.json and spritesheet.webp", "legacy_slug_residuals": 0},
+  "privacy": {"credentials_recorded": false, "local_paths_recorded": false, "local_network_addresses_recorded": false, "process_identifiers_recorded": false},
+  "result": "post_commit_local_v2_and_regression_gates_pass"
+}
