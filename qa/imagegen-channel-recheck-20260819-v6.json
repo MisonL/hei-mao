@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T15:48:42Z",
+  "scope": "current local Docker image channel readiness after private API configuration reload",
+  "service": {
+    "container_health": "healthy",
+    "capabilities": "pass",
+    "runtime_capabilities": "pass",
+    "agent_contract_check": "pass",
+    "configured_request_modes": ["images-non-stream", "images-sse"],
+    "effective_request_modes": []
+  },
+  "channel_health": {
+    "channel_count": 1,
+    "healthy_credentials": 0,
+    "unhealthy_credentials": 1,
+    "state": "probe_pending",
+    "probe_required": true,
+    "last_failure_code": "probe_transport_error"
+  },
+  "real_smoke": {
+    "status": "not_run",
+    "reason": "no effective request mode remained after the non-billable health gate",
+    "artifact_count": 0,
+    "formal_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "secret_hashes_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "service_contract_pass_channel_blocked_before_generation"
+}

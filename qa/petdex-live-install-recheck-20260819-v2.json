@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T15:48:42Z",
+  "scope": "isolated PetDex CLI download package metadata, format and dual-directory parity",
+  "petdex_cli_version": "1.2.2",
+  "roles": {
+    "hei-mao": {"metadata_id": "hei-mao", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c"},
+    "hei-mao-quality": {"metadata_id": "hei-mao-quality", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43", "spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92"},
+    "hei-mao-butler": {"metadata_id": "hei-mao-butler", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"metadata_id": "hei-mao-chef", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-delivery": {"metadata_id": "hei-mao-delivery", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "spritesheet_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a"},
+    "hei-mao-foodie": {"metadata_id": "hei-mao-foodie", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "spritesheet_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49"},
+    "hei-mao-fortune": {"metadata_id": "hei-mao-fortune", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b", "spritesheet_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71"},
+    "hei-mao-traveler": {"metadata_id": "hei-mao-traveler", "sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "pet_json_sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f", "spritesheet_sha256": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e"}
+  },
+  "checks": {
+    "downloaded_roles": "8/8",
+    "metadata_ids_match_requested_slugs": "8/8",
+    "metadata_v2": "8/8",
+    "dimensions_1536x2288": "8/8",
+    "rgba": "8/8",
+    "petdex_codex_dual_directory_sha_parity": "8/8 roles x 2 files",
+    "temporary_isolation_cleanup": "pass"
+  },
+  "online_sync_boundary": {
+    "repository_sha_match": "2/8",
+    "owned_slug_updates_pending": 6,
+    "duplicate_submission_created": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "isolated_download_and_parity_pass; six_owned_slug_updates_pending"
+}
