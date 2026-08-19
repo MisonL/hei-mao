@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T23:02:32Z",
+  "source_commit": "2eaa399e29f00e77b8b320d3228c4ee823203fa2",
+  "scope": "fresh local image-service, eight-role asset, installer and PetDex recheck",
+  "local_validation": {
+    "atlas_contract": "8/8 pass; 1536x2288; 8x11; RGBA WEBP; spriteVersionNumber=2",
+    "validator_command": "hatch-pet validate_atlas.py --require-v2",
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "continuity": "8/8 ok; existing minor/reviewRequired metric warnings retained",
+    "continuity_warning_counts": {
+      "hei-mao": 6,
+      "hei-mao-quality": 5,
+      "hei-mao-butler": 6,
+      "hei-mao-chef": 6,
+      "hei-mao-delivery": 6,
+      "hei-mao-foodie": 9,
+      "hei-mao-fortune": 4,
+      "hei-mao-traveler": 9
+    },
+    "three_directory_sha_parity": "8/8 roles x pet.json and spritesheet.webp",
+    "metadata_contract": "8/8 ids match role slugs; 8/8 spriteVersionNumber=2",
+    "dimensions_and_format": "8/8 1536x2288 WEBP RGBA",
+    "hatch_pet_tests": "28 passed; 0 failed; 0 errors",
+    "installer_checks": "Bash syntax pass; ShellCheck pass; PowerShell parse pass",
+    "privacy_scan": "pass; no local paths, private addresses, credentials or tokens in checked public files",
+    "formal_assets_modified": false
+  },
+  "image_generation": {
+    "local_docker": "reloaded from the existing private channel configuration; container healthy",
+    "configured_channel": "jisuanyun-gpt-image",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "effective_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "channel_health": "healthy; 1/1 credential and 2/2 request modes healthy",
+    "agent_capabilities": "pass",
+    "agent_doctor": "pass; non-billable contract checks pass",
+    "non_billable_upstream_probe": {
+      "dns": "pass",
+      "tls": "pass; authorized TLS 1.3",
+      "models": "blocked with HTTP 403 INSUFFICIENT_BALANCE"
+    },
+    "billable_smoke": "not run; blocked by upstream balance gate",
+    "artifacts_created": 0,
+    "formal_assets_modified": false
+  },
+  "petdex": {
+    "manifest_generated_at": "2026-08-19T18:22:11.008Z",
+    "manifest_entry_count": 4569,
+    "current_roles_checked": 8,
+    "actual_download_contract": "8/8 metadata v2 and HTTP 200; 8/8 ids match",
+    "metadata_repository_sha_matches": "7/8",
+    "spritesheet_repository_sha_matches": "2/8",
+    "matching_spritesheet_roles": [
+      "hei-mao-butler",
+      "hei-mao-chef"
+    ],
+    "owned_slug_updates_pending_review": 6,
+    "historical_duplicate_present": "hei-mao-2; excluded from current-role comparison; no local package and no duplicate submission created",
+    "issue_689": "open; 0 comments; stdin EOF hook behavior unchanged",
+    "issue_603": "closed",
+    "pr_654": "closed and merged",
+    "pr_710": "open; not merged",
+    "latest_desktop_release": "desktop-v0.8.0",
+    "latest_main_commit_at_check": "e35d0bc86279056937bf490f6322b69adb819ecb"
+  },
+  "codex_app": {
+    "processes_touched": false,
+    "visual_acceptance": "unverified",
+    "multi_role_switching": "unverified",
+    "animation_loop_and_proportion": "unverified in the live App",
+    "bubble_follow": "unverified in the live App"
+  },
+  "repository": {
+    "local_commit": "2eaa399e29f00e77b8b320d3228c4ee823203fa2",
+    "github_main": "2eaa399e29f00e77b8b320d3228c4ee823203fa2",
+    "gitlab_main": "2eaa399e29f00e77b8b320d3228c4ee823203fa2",
+    "tracked_diff": "none",
+    "retained_untracked_user_directory": "qa/hei-mao-quality/recheck-20260819-row10-v68/"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_identifiers_recorded": false
+  },
+  "result": "local eight-role gates pass; upstream image generation is blocked by insufficient balance; six PetDex owned-slug sprite updates and live Codex App acceptance remain open"
+}
