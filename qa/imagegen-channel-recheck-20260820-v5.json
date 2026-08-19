@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T21:07:23Z",
+  "source_commit": "94d5cca0377cac3ee45b709849d87cb3d6d2b23e",
+  "scope": "post-API-change non-billable local Docker image channel recheck",
+  "local_docker": {
+    "container_health": "healthy",
+    "private_api_configuration_loaded": true,
+    "agent_capabilities": "pass",
+    "agent_doctor_contract": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "effective_request_modes": [],
+    "channel_state": "probe_pending",
+    "healthy_credentials": 0,
+    "non_billable_upstream_probe": {
+      "dns": "pass",
+      "tls": "failed_before_secure_connection",
+      "models_status": 599,
+      "request_modes": "not_run_after_tls_failure"
+    },
+    "billable_smoke": "not_run; blocked by channel health gate",
+    "artifacts_created": 0,
+    "formal_assets_modified": false
+  },
+  "contract_boundary": {
+    "client_request_id_limit": "128 characters",
+    "overlong_id_negative_check": "rejected with page_sse_client_request_id_too_long",
+    "idempotency_key_negative_checks": "rejected when absent"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_identifiers_recorded": false
+  },
+  "result": "api_configuration_loaded_but_channel_blocked_before_generation"
+}
