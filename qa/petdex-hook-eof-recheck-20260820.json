@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T19:53:00Z",
+  "scope": "isolated PetDex CLI hook stdin lifecycle recheck",
+  "cli_version": "1.2.2",
+  "test": {
+    "command": "petdex bubble pre codex",
+    "payload": "valid JSON hook payload with tool_name and codex agent_source",
+    "open_stdin_timeout_ms": 1200,
+    "closed_stdin_exit_code": 0,
+    "closed_stdin_elapsed_ms": 118,
+    "open_stdin_result": "did_not_exit_before_timeout",
+    "closed_stdin_result": "exited_normally"
+  },
+  "conclusion": "Hook still waits for stdin EOF after receiving a valid payload; upstream issue #689 remains relevant.",
+  "process_safety": {
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "reproduced_eof_dependency_without_touching_existing_agent_processes"
+}

@@ -25,7 +25,7 @@ npx -y petdex@latest install hei-mao-fortune
 npx -y petdex@latest install hei-mao-traveler
 ```
 
-截至 2026-08-20 复核，PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-19T18:22:11.008Z`，共 4569 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载，实际 metadata 均为 v2、1536x2288、RGBA。`hei-mao-butler` 和 `hei-mao-chef` 的线上资源与仓库一致；其余六个角色的本地修复图集仍未切换到线上，owned-slug 更新仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260820-v1.json`，最新 CLI 版本和隔离下载校验见 `qa/petdex-live-install-recheck-20260819-v2.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
+截至 2026-08-20 复核，PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-19T18:22:11.008Z`，共 4569 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载，实际 metadata 均为 v2、1536x2288、RGBA。`hei-mao-butler` 和 `hei-mao-chef` 的线上资源与仓库一致；其余六个角色的本地修复图集仍未切换到线上，owned-slug 更新仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260820-v2.json`，最新 CLI 版本和隔离下载校验见 `qa/petdex-live-install-recheck-20260819-v2.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
 
 本轮本地 Docker 生图服务已重载你更换的私有 API 配置，容器健康且运行时配置已生效；最新只读健康诊断显示唯一渠道仍为 `probe_pending`、没有有效 request mode。非计费上游探针确认 DNS 正常但 TLS 在建立安全连接前断开，`/models` 返回 599，因此本地真实请求在健康门禁前停止，未创建 artifact。正式部署实例的 Agent 契约和渠道健康已恢复，最近一次最小真实 smoke 则以全新幂等键返回上游 HTTP 403 `upstream_auth_failed`，同样未创建 artifact；当前不能继续生成或替换角色资产，详见 `qa/imagegen-channel-recheck-20260820-v1.json`、`qa/imagegen-channel-recheck-20260820-v2.json` 与最新的 `qa/imagegen-channel-recheck-20260820-v3.json`。这不会改变已经通过本地门禁的正式图集。
 
@@ -49,7 +49,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | slug              | 角色   | 本地状态               | Petdex 状态                |
 | ----------------- | ------ | ---------------------- | -------------------------- |
 | `hei-mao`         | 黑毛   | 已验证                 | manifest 可见，旧图集编辑仍待审核 |
-| `hei-mao-quality` | 品控官 | v2 已验证，可本地安装 | manifest 可见，线上资源仍待 owned-slug 审核 |
+| `hei-mao-quality` | 品控官 | v2 已验证，可本地安装；look row 已统一基线并保留轻微比例 warning | manifest 可见，线上资源仍待 owned-slug 审核 |
 | `hei-mao-butler`  | 大管家 | 已验证                 | manifest index 为 v1，资源一致 |
 | `hei-mao-chef`    | 厨师   | 已验证                 | manifest index 为 v1，资源一致 |
 | `hei-mao-foodie`  | 美食家 | v2 已验证，可本地安装 | manifest 可见，旧图集编辑仍待审核 |
@@ -57,7 +57,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | manifest 已公开，当前图集编辑待审核 |
 | `hei-mao-traveler` | 旅行家 | v2 已验证，可本地安装 | manifest 已公开，当前图集编辑待审核 |
 
-公开 manifest 当前包含八个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4569；八个当前角色均可通过 PetDex CLI 读取公开条目，本仓库安装器也已覆盖八个角色，但安装成功不代表线上资源已经切换到仓库最新图集。当前线上与仓库一致的是 `hei-mao-butler` 和 `hei-mao-chef`；其余六个角色的 owned-slug 编辑仍待审核。最新资源、实际下载和本地门禁见 `qa/petdex-live-recheck-20260820-v1.json`、`qa/current-v2-gate-recheck-20260820-v2.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`；旧提交和编辑快照仅用于追溯。
+公开 manifest 当前包含八个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4569；八个当前角色均可通过 PetDex CLI 读取公开条目，本仓库安装器也已覆盖八个角色，但安装成功不代表线上资源已经切换到仓库最新图集。当前线上与仓库一致的是 `hei-mao-butler` 和 `hei-mao-chef`；其余六个角色的 owned-slug 编辑仍待审核。最新资源、实际下载和本地门禁见 `qa/petdex-live-recheck-20260820-v2.json`、`qa/current-v2-gate-recheck-20260820-v3.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`；旧提交和编辑快照仅用于追溯。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -66,7 +66,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。`qa/current-state-recheck-20260817-v7.json` 代表比例修复前状态；本轮角色比例修复以及 Quality 两条 look row 的连贯重生成以各自 `proportion-*.json`、`final-visual-qa.json` 和 `run-summary.json` 为准。PetDex 最新 manifest、公开资源和隔离下载以 `qa/petdex-live-recheck-20260820-v1.json`、`qa/current-v2-gate-recheck-20260820-v2.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
+此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。`qa/current-state-recheck-20260817-v7.json` 代表比例修复前状态；本轮角色比例修复以及 Quality 两条 look row 的连贯重生成以各自 `proportion-*.json`、`final-visual-qa.json` 和 `run-summary.json` 为准。PetDex 最新 manifest、公开资源和隔离下载以 `qa/petdex-live-recheck-20260820-v2.json`、`qa/current-v2-gate-recheck-20260820-v3.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
 
 本机当前保留八个角色，八个角色的 v2 结构、透明度和连续性门禁均通过。Quality 的两条 coherent look row 已重新生成并统一到中性帧比例：row 9 为 `179-194px`、row 10 为 `189-196px`，共同基线底部为 `201px`；独立盲测的 cardinal 硬门禁和严格多数验证通过，中间方向 warning 已保留。Quality 最新证据见 `qa/hei-mao-quality/recovery-v2/`；此前阻断期间的文件仍保留在 `qa/hei-mao-quality/`，仅用于历史追溯。
 
@@ -355,6 +355,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-v2-gate-recheck-20260819-v2.json`: 2026-08-19T15:48:42Z 重新执行八角色 v2 图集、方向连续性、仓库与双本地目录 parity、28 项 hatch-pet 回归测试和安装器解析；8/8 通过，外部 PetDex 审核、图像渠道和 Codex App 视觉边界仍未闭合；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260820-v2.json`: 2026-08-19T18:15:18Z 使用隔离 Python 3.13.7/Pillow 12.3.0 重新执行八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器解析和三目录 SHA parity；8/8、28/28 通过，外部 PetDex、图像上游和 Codex App 边界仍未闭合；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260820-v3.json`: 2026-08-19T19:02:24Z 在提交 `9cd8d3d` 后独立重跑八角色 v2 合同、连续性、28 项 hatch-pet 测试、Bash/PowerShell 解析和三目录 SHA parity；8/8、28/28 通过，外部 PetDex、图像上游和 Codex App 边界仍未闭合；不含本机环境信息
+- `qa/petdex-hook-eof-recheck-20260820.json`: CLI 1.2.2 隔离 Hook stdin 生命周期复现；有效 payload 在写端保持打开时超时，关闭 stdin 后正常退出；未触碰现有 Codex/ChatGPT 进程，不含本机环境信息
+- `qa/petdex-live-recheck-20260820-v2.json`: 最新 manifest 与八个公开资源的 metadata/图集 SHA 对照；八个 metadata 为 v2，六个 owned-slug 更新仍未切换；不含本机环境信息
 - `qa/current-state-recheck-20260820-v2.json`: 2026-08-19T18:15:18Z 汇总本轮本地门禁、正式服务 403 smoke、PetDex 4569 条目/6 个 owned-slug 待审核和 Codex App 未验证边界；不含本机环境信息
 - `qa/current-local-recheck-20260818-v1.json`: 生图重试后的八角色 v2 结构、方向连续性和 28 项 hatch-pet 回归测试复核；这是 Quality recovery-v2 之前的历史快照，比例阻断已由 `qa/hei-mao-quality/recovery-v2/` 解决
 - `qa/hei-mao-quality/proportion-repair-20260818.json`: 品控官 row 10 八个方向的历史中间等比归一化记录；最终两条 look row 以 `qa/hei-mao-quality/recovery-v2/` 为准
