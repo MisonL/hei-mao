@@ -371,6 +371,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-state-recheck-20260820-v1.json`: 提交 `a94aca0` 后的八角色最终复核；8/8 v2 图集门禁、28 项测试、双平台安装器隔离验证、本机三目录 SHA parity 和双远端一致性通过，11 个 alpha-hole 候选均确认为开放负空间；生图上游 TLS 阻断、Codex App 视觉验收和六个 PetDex owned-slug 更新仍未闭合，不含本机环境信息
 - `qa/petdex-quality-edit-recheck-20260818.json`: Quality owned-slug 编辑提交成功、公开资源仍为旧 SHA、manifest 索引与实际 metadata 漂移复核；不含本机环境信息
 - `qa/petdex-upstream-status-recheck-20260818.json`: 2026-08-18T08:41:31Z 只读核对 PetDex #603/#596/#654/#662/#667 等已关闭项，以及仍开放的 #689 Hook EOF 阻塞和不改变该语义的 #710 WIP；不含本机环境信息
+- `qa/petdex-upstream-status-recheck-20260820-v1.json`: 2026-08-19T17:18:20Z 公开核对 #689、#710 和 PetDex 最近主线提交；#689 仍 open、#710 仍未合并，未发现改变 stdin EOF 语义的上游动作；不含本机环境信息
 - `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务连接拒绝时的历史安全阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游图像路径被 429 限流的历史阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813-v3.json`: Traveler 使用全新幂等键的历史生成阻断记录；上游返回 429，未产生图像，不含本机环境信息

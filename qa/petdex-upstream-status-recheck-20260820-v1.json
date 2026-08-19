@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T17:18:20Z",
+  "scope": "public PetDex upstream issue, pull request and recent main commit recheck",
+  "repository": "crafter-station/petdex",
+  "issues": {
+    "689": {
+      "state": "OPEN",
+      "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住",
+      "updated_at": "2026-08-11T11:05:48Z",
+      "comment_count": 0
+    }
+  },
+  "pull_requests": {
+    "710": {
+      "state": "OPEN",
+      "title": "WIP: Native bubble revamp and platform parity",
+      "updated_at": "2026-08-15T10:44:56Z",
+      "merged_at": null,
+      "commit_count": 2,
+      "review_count": 0,
+      "comment_count": 1,
+      "changes_issue_689_semantics": false
+    }
+  },
+  "recent_main_commits": [
+    {
+      "short_sha": "e35d0bc8",
+      "date": "2026-08-17T21:02:52Z",
+      "subject": "Update build command to disable tracing (#715)"
+    },
+    {
+      "short_sha": "0243af61",
+      "date": "2026-08-14T11:41:27Z",
+      "subject": "feat(desktop): add DeepSeek Harness Web integration (#702)"
+    },
+    {
+      "short_sha": "039cadd1",
+      "date": "2026-08-13T21:58:19Z",
+      "subject": "chore(release): petdex cli 1.2.2, desktop 0.7.0 (#699)"
+    }
+  ],
+  "result": "issue_689_still_open; pr_710_still_open; no_upstream_change_to_stdin_eof_semantics",
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "account_identifiers_recorded": false
+  }
+}
