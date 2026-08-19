@@ -27,7 +27,7 @@ npx -y petdex@latest install hei-mao-traveler
 
 截至 2026-08-20 复核，PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-19T18:22:11.008Z`，共 4569 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载，实际 metadata 均为 v2、1536x2288、RGBA。`hei-mao-butler` 和 `hei-mao-chef` 的线上资源与仓库一致；其余六个角色的本地修复图集仍未切换到线上，owned-slug 更新仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260820-v2.json`，最新 CLI 版本和隔离下载校验见 `qa/petdex-live-install-recheck-20260819-v2.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
 
-本轮本地 Docker 生图服务已重载你更换的私有 API 配置，容器健康且运行时配置已生效；最新只读健康诊断显示唯一渠道仍为 `probe_pending`、没有有效 request mode。非计费上游探针确认 DNS 正常但 TLS 在建立安全连接前断开，`/models` 返回 599，因此本地真实请求在健康门禁前停止，未创建 artifact。正式部署实例的 Agent 契约和渠道健康已恢复，最近一次最小真实 smoke 则以全新幂等键返回上游 HTTP 403 `upstream_auth_failed`，同样未创建 artifact；当前不能继续生成或替换角色资产，详见 `qa/imagegen-channel-recheck-20260820-v1.json`、`qa/imagegen-channel-recheck-20260820-v2.json` 与最新的 `qa/imagegen-channel-recheck-20260820-v3.json`。这不会改变已经通过本地门禁的正式图集。
+本轮本地 Docker 生图服务已重载你更换的私有 API 配置，容器健康且运行时配置已生效；截至 2026-08-19T20:45:48Z 的只读健康诊断显示唯一渠道仍为 `probe_pending`、没有有效 request mode，最近失败为 `probe_transport_error`。本地真实请求继续在健康门禁前停止，未创建 artifact。正式部署实例的 Agent 契约和渠道健康已恢复，最近一次最小真实 smoke 则以全新幂等键返回上游 HTTP 403 `upstream_auth_failed`，同样未创建 artifact；当前不能继续生成或替换角色资产，详见 `qa/imagegen-channel-recheck-20260820-v1.json`、`qa/imagegen-channel-recheck-20260820-v2.json`、`qa/imagegen-channel-recheck-20260820-v3.json` 与最新的 `qa/imagegen-channel-recheck-20260820-v4.json`。这不会改变已经通过本地门禁的正式图集。
 
 2026-08-20 收尾复核中，八个正式角色均重新通过 v2 图集、连续性和透明度门禁，hatch-pet 测试为 `28 passed`，Bash/PowerShell 安装器隔离测试均为 8/8，仓库、本机 Codex 与本机 PetDex 三处目录 SHA 一致；线上 PetDex 资源仍只有 2/8 与仓库一致，另有 6 个 owned-slug 更新待审核。GitHub/GitLab `main` 均指向同一提交。alpha-hole 启发式候选全部确认为与外部背景相连的耳间或脚间负空间，没有主体内部封闭透明洞。最新本地重跑证据见 `qa/current-v2-gate-recheck-20260820-v3.json`，聚合状态见 `qa/current-state-recheck-20260820-v3.json`。Codex App 的完整窗口视觉验收仍未取得新证据，不能据此宣称多角色切换和动画回环已验收。
 
@@ -350,7 +350,8 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/imagegen-channel-recheck-20260819-v7.json`: 2026-08-19T16:15:22Z 私有 API 配置重载后的最新脱敏复核；容器配置与私有来源一致，服务合同通过，但上游 DNS 正常、TLS 在安全连接前断开，`/models` 返回 599，唯一渠道仍为 `probe_pending`，未创建 artifact；不含本机环境信息
 - `qa/imagegen-channel-recheck-20260820-v1.json`: 2026-08-19T17:17:37Z 再次复核新 API；本地 Docker 合同和服务端编排检查通过，但主机与容器访问上游均在 TLS 建连前断开，`/models` 返回 599，未发送计费请求或创建 artifact；不含本机环境信息
 - `qa/imagegen-channel-recheck-20260820-v2.json`: 2026-08-19T18:15:18Z 同时记录本地 Docker TLS 599 与正式部署最小真实 smoke 的上游 403 鉴权阻断；0 个 artifact，未修改正式资产，不含本机环境信息
-- `qa/imagegen-channel-recheck-20260820-v3.json`: 2026-08-19T18:37:51Z API 配置重载后的最新本地 Docker 只读复核；容器、Agent 合同和运行时通过，但唯一渠道仍为 `probe_pending`，TLS 建连前断开且 `/models` 返回 599，未发起计费请求或创建 artifact，不含本机环境信息
+- `qa/imagegen-channel-recheck-20260820-v3.json`: 2026-08-19T18:37:51Z API 配置重载后的本地 Docker 只读复核；容器、Agent 合同和运行时通过，但唯一渠道仍为 `probe_pending`，TLS 建连前断开且 `/models` 返回 599，未发起计费请求或创建 artifact，不含本机环境信息
+- `qa/imagegen-channel-recheck-20260820-v4.json`: 2026-08-19T20:45:48Z 使用官方 Agent doctor 和渠道健康诊断再次复核；容器、Agent 合同、runtime 和 SQLite 状态后端通过，但 `effective_request_modes` 仍为空、渠道仍为 `probe_pending`、最近失败为 `probe_transport_error`，未发起计费请求或创建 artifact，不含本机环境信息
 - `qa/current-v2-gate-recheck-20260819-v1.json`: 2026-08-19T14:20:22Z 八角色 v2 图集、连续性、三目录 SHA、28 项 hatch-pet 回归测试、安装器解析和双远端主线复核；本地门禁通过，PetDex、图像渠道和 Codex App 边界仍单独记录；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260819-v2.json`: 2026-08-19T15:48:42Z 重新执行八角色 v2 图集、方向连续性、仓库与双本地目录 parity、28 项 hatch-pet 回归测试和安装器解析；8/8 通过，外部 PetDex 审核、图像渠道和 Codex App 视觉边界仍未闭合；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260820-v2.json`: 2026-08-19T18:15:18Z 使用隔离 Python 3.13.7/Pillow 12.3.0 重新执行八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器解析和三目录 SHA parity；8/8、28/28 通过，外部 PetDex、图像上游和 Codex App 边界仍未闭合；不含本机环境信息
@@ -381,6 +382,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-quality-edit-recheck-20260818.json`: Quality owned-slug 编辑提交成功、公开资源仍为旧 SHA、manifest 索引与实际 metadata 漂移复核；不含本机环境信息
 - `qa/petdex-upstream-status-recheck-20260818.json`: 2026-08-18T08:41:31Z 只读核对 PetDex #603/#596/#654/#662/#667 等已关闭项，以及仍开放的 #689 Hook EOF 阻塞和不改变该语义的 #710 WIP；不含本机环境信息
 - `qa/petdex-upstream-status-recheck-20260820-v1.json`: 2026-08-19T17:18:20Z 公开核对 #689、#710 和 PetDex 最近主线提交；#689 仍 open、#710 仍未合并，未发现改变 stdin EOF 语义的上游动作；不含本机环境信息
+- `qa/petdex-upstream-status-recheck-20260820-v2.json`: 2026-08-19T20:45:48Z 公开刷新 #689、#603、#710、#654 和最新 release；#689 仍 open 且无评论，#710 仍未合并，#603 已关闭，#654 已合并，最新 Desktop release 仍为 v0.8.0；不含本机环境信息
 - `qa/traveler-generation-blocked-20260813.json`: Traveler 生成前置服务连接拒绝时的历史安全阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813.json`: Traveler 生成服务可达但上游图像路径被 429 限流的历史阻断记录，不含本机环境信息
 - `qa/traveler-generation-recheck-20260813-v3.json`: Traveler 使用全新幂等键的历史生成阻断记录；上游返回 429，未产生图像，不含本机环境信息

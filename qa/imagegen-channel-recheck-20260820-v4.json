@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T20:45:48Z",
+  "scope": "local Docker image-generation channel recheck with non-billable service diagnostics",
+  "service": {
+    "container_health": "healthy",
+    "agent_capabilities": "pass",
+    "agent_contract": "pass",
+    "runtime_capabilities": "pass",
+    "state_backend": "sqlite",
+    "image_storage_mode": "fs",
+    "configured_request_modes": ["images-non-stream", "images-sse"],
+    "effective_request_modes": [],
+    "channel_health_state": "probe_pending",
+    "healthy_credentials": 0,
+    "unhealthy_credentials": 1,
+    "probe_required": true,
+    "last_failure_code": "probe_transport_error",
+    "agent_doctor_result": "pass_with_critical_no_effective_request_modes"
+  },
+  "non_billable_checks": {
+    "channel_health_diagnostics": "pass",
+    "agent_doctor": "pass_with_critical_request_mode_gap",
+    "upstream_image_probe": "not_run_by_service_health_gate"
+  },
+  "asset_safety": {
+    "billable_smoke": "not_run",
+    "artifacts_created": 0,
+    "formal_assets_modified": false,
+    "quality_candidate_replaced": false
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_identifiers_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local_service_contract_pass; upstream_channel_probe_pending; generation_blocked"
+}
