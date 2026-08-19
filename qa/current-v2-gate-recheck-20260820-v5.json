@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T21:17:51Z",
+  "source_commit": "f4341b8b903ad4941a7545af1f2c8dace898464c",
+  "scope": "independent eight-role v2 gate, continuity, regression, installer and directory parity recheck after the transport evidence update",
+  "runtime": {
+    "validator": "hatch-pet validate_atlas.py and measure_direction_continuity.py",
+    "python": "Python 3.14.7 with Pillow 12.2.0",
+    "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py",
+    "tests_command": "python -m unittest discover -s hatch-pet/tests -p test_*.py -q",
+    "tests_run": 28,
+    "tests_failed": 0,
+    "tests_errors": 0,
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass"
+  },
+  "roles": {
+    "hei-mao": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-quality": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 5, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-butler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-chef": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-delivery": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-foodie": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-fortune": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 4, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-traveler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0}
+  },
+  "contract": {
+    "roles_passed": 8,
+    "dimensions": "1536x2288",
+    "grid": "8x11",
+    "format": "WEBP RGBA",
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "directory_parity": {
+    "repository_codex_petdex": "8/8 roles x pet.json and spritesheet.webp",
+    "metadata_contract": "8/8 ids and spriteVersionNumber=2",
+    "legacy_slug_residuals": 0
+  },
+  "remote_heads_at_check": {
+    "github_main": "f4341b8b903ad4941a7545af1f2c8dace898464c",
+    "gitlab_main": "f4341b8b903ad4941a7545af1f2c8dace898464c"
+  },
+  "external_boundaries": {
+    "petdex": "latest recorded public snapshot remains 8/8 v2 downloads; 2/8 remote sprite SHA match repository; 6 owned-slug updates pending review",
+    "image_generation": "latest non-billable probe recorded DNS pass, TLS disconnect before secure connection and models status 599; no billable request or artifact",
+    "codex_app_visual": "unverified; no new complete multi-role visual acceptance evidence"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "eight_role_local_release_gates_pass; external_PetDex_image_channel_and_Codex_App_boundaries_remain_open"
+}

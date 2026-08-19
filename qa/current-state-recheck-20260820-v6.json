@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T21:17:51Z",
+  "source_commit": "f4341b8b903ad4941a7545af1f2c8dace898464c",
+  "scope": "eight-role release state after the independent local gate recheck",
+  "repository": {
+    "current_role_count": 8,
+    "source_commit": "f4341b8b903ad4941a7545af1f2c8dace898464c",
+    "remote_main_consistency_at_check": "GitHub and GitLab both pointed to f4341b8b903ad4941a7545af1f2c8dace898464c",
+    "user_retained_untracked_candidate": true
+  },
+  "local_validation": {
+    "atlas_contract": "8/8 pass; 1536x2288; 8x11; RGBA WEBP; spriteVersionNumber=2",
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "continuity": "8/8 ok with recorded minor/reviewRequired warnings",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "Bash syntax, ShellCheck and PowerShell parse pass",
+    "three_directory_sha_parity": "8 roles x pet.json and spritesheet pass",
+    "legacy_install_residuals": 0
+  },
+  "petdex": {
+    "latest_recorded_snapshot": "2026-08-19T20:55:00Z",
+    "cli_version": "1.2.2",
+    "manifest_entry_count": 4569,
+    "current_roles_public": 8,
+    "actual_download_contract": "8/8 metadata v2; 1536x2288; RGBA WEBP",
+    "repository_sha_matches": 2,
+    "owned_slug_updates_pending_review": 6,
+    "historical_duplicate_present": "hei-mao-2",
+    "duplicate_submission_created": false,
+    "issue_689": "open; no comments",
+    "pr_710": "open; not merged"
+  },
+  "image_generation": {
+    "latest_probe": "container healthy and API configuration loaded; effective_request_modes empty; channel probe_pending; DNS passed but TLS disconnected before secure connection; /models status 599",
+    "formal_service": "latest recorded smoke failed upstream_auth_failed HTTP 403",
+    "artifacts_created": 0,
+    "formal_assets_modified": false,
+    "evidence": "qa/imagegen-channel-recheck-20260820-v5.json"
+  },
+  "codex_app": {
+    "visual_acceptance": "unverified",
+    "evidence": "qa/codex-app-boundary-recheck-20260819.json"
+  },
+  "hooks": {
+    "cli_version": "1.2.2",
+    "stdin_eof_issue": "reproduced in isolated child process; upstream issue #689 remains open",
+    "evidence": "qa/petdex-hook-eof-recheck-20260820.json"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "local_release_gates_pass; PetDex six owned-slug updates pending; image generation channel blocked before generation; Codex App visual gate unverified"
+}
