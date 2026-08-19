@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T18:15:18Z",
+  "scope": "formal image service recovery recheck and minimal smoke",
+  "local_docker": {
+    "container_health": "healthy",
+    "agent_contract": "pass",
+    "channel_state": "probe_pending",
+    "effective_request_modes": [],
+    "non_billable_probe": {
+      "dns": "pass",
+      "tls": "failed_before_secure_connection",
+      "models_status": 599
+    },
+    "result": "generation_blocked_before_real_request"
+  },
+  "formal_service": {
+    "agent_contract": "pass",
+    "channel_state": "healthy",
+    "effective_request_modes": ["images-non-stream"],
+    "non_billable_channel_health": "pass",
+    "minimal_smoke": {
+      "billable": true,
+      "request_mode": "images-non-stream",
+      "status": "failed",
+      "error_code": "upstream_auth_failed",
+      "upstream_status": 403,
+      "artifact_count": 0,
+      "dimension_check": "not_reached",
+      "diagnostics_lookup": "found_failed_request"
+    },
+    "result": "service_route_pass_upstream_auth_blocked"
+  },
+  "formal_assets_modified": false,
+  "quality_candidate": {
+    "path": "qa/hei-mao-quality/recheck-20260819-row10-v68",
+    "v2_contract": "pass",
+    "identity_review": "rejected_red_white_cat_not_black_hair_pig",
+    "continuity_review": "rejected_five_local_outliers",
+    "formal_asset_replaced": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local_upstream_tls_blocked_formal_upstream_auth_blocked_no_asset_change"
+}
