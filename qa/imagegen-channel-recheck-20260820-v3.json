@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T18:37:51Z",
+  "scope": "local Docker image-generation channel recheck after API configuration reload",
+  "local_docker": {
+    "container_health": "healthy",
+    "private_api_configuration_loaded": true,
+    "agent_capabilities": "pass",
+    "agent_doctor": "pass",
+    "agent_contract": "pass",
+    "configured_request_modes": ["images-non-stream", "images-sse"],
+    "effective_request_modes": [],
+    "channel_state": "probe_pending",
+    "healthy_credentials": 0,
+    "non_billable_upstream_probe": {
+      "dns": "pass",
+      "tls": "failed_before_secure_connection",
+      "models_status": 599,
+      "request_modes": "not_run_after_models_preflight_failure"
+    },
+    "billable_smoke": "not_run; blocked by channel health gate",
+    "artifacts_created": 0
+  },
+  "formal_service": {
+    "latest_recorded_result": "upstream_auth_failed",
+    "latest_recorded_status": 403,
+    "latest_recorded_artifact_count": 0,
+    "evidence": "qa/imagegen-channel-recheck-20260820-v2.json"
+  },
+  "formal_assets_modified": false,
+  "quality_candidate_replaced": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local_upstream_tls_blocked_no_asset_change"
+}
