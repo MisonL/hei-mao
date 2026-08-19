@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T22:11:27Z",
+  "scope": "fresh PetDex manifest and public resource recheck for the eight current roles",
+  "manifest": {
+    "generated_at": "2026-08-19T18:22:11.008Z",
+    "entry_count": 4569,
+    "historical_duplicate_slug_present": "hei-mao-2"
+  },
+  "roles": {
+    "hei-mao": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": true, "spritesheet_repository_sha_matches": false},
+    "hei-mao-quality": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": false, "spritesheet_repository_sha_matches": false},
+    "hei-mao-butler": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": true, "spritesheet_repository_sha_matches": true},
+    "hei-mao-chef": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": true, "spritesheet_repository_sha_matches": true},
+    "hei-mao-delivery": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": true, "spritesheet_repository_sha_matches": false},
+    "hei-mao-foodie": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": true, "spritesheet_repository_sha_matches": false},
+    "hei-mao-fortune": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": true, "spritesheet_repository_sha_matches": false},
+    "hei-mao-traveler": {"metadata_v2": true, "metadata_id_matches": true, "metadata_repository_sha_matches": true, "spritesheet_repository_sha_matches": false}
+  },
+  "summary": {
+    "roles_checked": 8,
+    "metadata_v2": "8/8",
+    "metadata_id_matches": "8/8",
+    "metadata_repository_sha_matches": "7/8",
+    "spritesheet_repository_sha_matches": "2/8",
+    "owned_slug_updates_pending_review": 6,
+    "duplicate_submission_created": false,
+    "historical_duplicate_is_current_release": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "request_identifiers_recorded": false
+  },
+  "result": "public_resources_rechecked; six_owned_slug_sprite_updates_still_pending_review"
+}
