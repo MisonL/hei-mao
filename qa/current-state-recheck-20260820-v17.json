@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T08:49:44Z",
+  "source_commit": "a0d3872e8db573777db83d5799bb5b665497dbf8",
+  "asset_gate_commit": "242cd938f39ab4d8cbe6076b7d17cc7b69f41c34",
+  "scope": "fresh eight-role local gates, PetDex public resources, upstream Hook state and release boundaries",
+  "local_release": {
+    "roles": 8,
+    "role_ids": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "atlas_contract": "1536x2288, 8x11, RGBA WEBP, spriteVersionNumber=2",
+    "atlas_gate": "8/8 pass",
+    "continuity": "8/8 ok with reviewed warnings",
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "hatch_pet_tests": "28 passed, 37 deprecation warnings",
+    "installer_checks": {
+      "bash_syntax": "pass",
+      "shellcheck": "pass",
+      "powershell_parse": "pass",
+      "json_and_three_directory_sha_parity": "pass; 8/8 roles",
+      "git_diff_check": "pass"
+    },
+    "public_text_privacy_scan": "pass; no local paths, private addresses, credentials or bearer tokens"
+  },
+  "desktop": {
+    "cli_version": "1.2.2",
+    "desktop_version": "0.8.0",
+    "role_switching": "8/8 PetDex URI selections accepted and restored",
+    "long_duration_loop": "40 samples; 34/39 adjacent intervals changed; no visible crop or proportion jump in fixed-window evidence",
+    "bubble_follow": "pass on both displays; no pet overlap",
+    "full_codex_app_refresh_direction_and_loop_acceptance": "unverified; accessibility window query unavailable and no settings or process mutation attempted"
+  },
+  "petdex": {
+    "manifest_generated_at": "2026-08-20T06:31:51.943Z",
+    "manifest_entries": 4569,
+    "current_roles_public": "8/8",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual spriteVersionNumber=2",
+    "public_sprites_in_sync": "2/8",
+    "sprite_sha": {
+      "hei-mao": {
+        "remote": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c",
+        "repository": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07",
+        "match": false
+      },
+      "hei-mao-quality": {
+        "remote": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92",
+        "repository": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+        "match": false
+      },
+      "hei-mao-butler": {
+        "remote": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+        "repository": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+        "match": true
+      },
+      "hei-mao-chef": {
+        "remote": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+        "repository": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+        "match": true
+      },
+      "hei-mao-delivery": {
+        "remote": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a",
+        "repository": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+        "match": false
+      },
+      "hei-mao-foodie": {
+        "remote": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49",
+        "repository": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+        "match": false
+      },
+      "hei-mao-fortune": {
+        "remote": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71",
+        "repository": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+        "match": false
+      },
+      "hei-mao-traveler": {
+        "remote": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e",
+        "repository": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+        "match": false
+      }
+    },
+    "synchronized_roles": ["hei-mao-butler", "hei-mao-chef"],
+    "owned_slug_updates_pending_review": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2",
+    "historical_recommender_count": 0,
+    "duplicate_submission_created": false
+  },
+  "upstream": {
+    "issue_689": "open",
+    "pr_710": "open draft",
+    "stdin_eof_semantics_changed": false,
+    "latest_release": "desktop-v0.8.0"
+  },
+  "image_generation": {
+    "local_docker_contract_and_smoke": "previously verified",
+    "real_billed_smoke": "not sent; explicit billing and credential authorization not provided",
+    "formal_assets_changed": false
+  },
+  "result": "local release gates pass; full Codex App acceptance, six PetDex owned-slug sprite updates, Hook EOF upstream fix and authorized billed smoke remain open boundaries"
+}
