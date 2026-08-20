@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T04:47:21Z",
+  "source_commit": "856b33d77ba16a5c49ec2eb25368f0f8fec70316",
+  "scope": "fresh eight-role v2 atlas, continuity, transparency, tests, installer and local parity recheck",
+  "runtime": "hatch-pet dedicated runtime Python 3.13.7 with Pillow 12.3.0",
+  "atlas_command": "validate_atlas.py --require-v2 with each role recorded chroma key",
+  "continuity_command": "measure_direction_continuity.py",
+  "roles": {
+    "hei-mao": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-quality": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 5, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-butler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-chef": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-delivery": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-foodie": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-fortune": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 4, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-traveler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0}
+  },
+  "atlas_contract": {
+    "roles_passed": 8,
+    "dimensions": "1536x2288",
+    "format": "WEBP",
+    "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0
+  },
+  "tests": {
+    "hatch_pet": "28 passed",
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "json_parse": "pass",
+    "diff_check": "pass",
+    "three_directory_sha_parity": "8/8 roles"
+  },
+  "formal_assets_modified": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "fresh local v2 and installation gates pass; existing continuity warnings remain documented minor review evidence"
+}

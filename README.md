@@ -29,11 +29,11 @@ npx -y petdex@latest install hei-mao-traveler
 
 本轮继续复核本地 Docker 生图服务后，容器、运行时和 Agent 合同均通过；当前渠道为 `jisuanyun-gpt-image`，进程内健康快照显示 `images-non-stream` 与 `images-sse` 可用。真实上游计费 smoke 本轮未发送，也没有创建 artifact 或替换正式资产；独立上游探针未注入密钥而返回 `401 API_KEY_REQUIRED`，不能据此判断上游可用性。最新脱敏复核见 `qa/imagegen-channel-recheck-20260820-v11.json`；未明确确认余额和授权前不重试计费请求。
 
-2026-08-20 收尾复核中，八个正式角色均重新通过 v2 图集、连续性和透明度门禁，hatch-pet 测试为 `28 passed`，安装器语法、ShellCheck 和 PowerShell 解析均通过，仓库、本机 Codex 与本机 PetDex 三处目录 SHA 一致；线上 PetDex 资源仍只有 2/8 与仓库一致，另有 6 个 owned-slug 更新待审核。正式资产基线仍为 `39a59b2`，当前 QA 证据绑定提交 `cf914b7`，只新增脱敏 QA 证据和状态说明。当前综合状态见 `qa/current-state-recheck-20260820-v13.json`，历史资产门禁仍见 `qa/current-v2-gate-recheck-20260820-v9.json`。Codex App 的完整窗口视觉验收仍未取得新证据，不能据此宣称多角色切换、动画回环和气泡跟随已验收。
+2026-08-20 收尾复核中，八个正式角色均重新通过 v2 图集、连续性和透明度门禁，hatch-pet 测试为 `28 passed`，安装器语法、ShellCheck 和 PowerShell 解析均通过，仓库、本机 Codex 与本机 PetDex 三处目录 SHA 一致；线上 PetDex 资源仍只有 2/8 与仓库一致，另有 6 个 owned-slug 更新待审核。正式资产基线为 `856b33d`，最新脱敏综合证据见 `qa/current-state-recheck-20260820-v14.json` 和 `qa/current-v2-gate-recheck-20260820-v10.json`。PetDex Desktop 的 8/8 角色切换与恢复、40 秒动画采样、气泡显示和跨屏跟随已取得实际证据；完整 Codex App 刷新与方向选择验收仍未完成。
 
-本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录。最新只读多显示器探针确认旅行家角色在第二块显示器完整显示，3 次短采样均有动画变化，未见裁切或明显比例压扁；主显示器看不到它是因为窗口位于另一块显示器。未执行设置、角色切换或拖动，也没有停止或重启任何 Codex 进程。当前视觉边界见 `qa/petdex-desktop-multidisplay-recheck-20260820-v1.json` 和 `qa/codex-app-boundary-recheck-20260819.json`。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；最新隔离复现见 `qa/petdex-hook-eof-recheck-20260820.json`。
+本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录。通过官方 `petdex://<slug>` 入口逐一选择八个已安装角色后，均正确生效并恢复到 `hei-mao-traveler`；40 秒采样中有 34/39 个相邻间隔发生动画变化，未见裁切或明显比例跳变。当前跨屏气泡跟随、间距和原位置恢复均通过实际复核，证据见 `qa/petdex-desktop-live-recheck-20260820-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260820-v2.json`。完整 Codex App 刷新验收仍单独保留为未完成边界。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；最新隔离复现见 `qa/petdex-hook-eof-recheck-20260820-v2.json`。
 
-本轮通过 Petdex Desktop v0.8.0 的实际窗口捕获确认当前活动角色为 `hei-mao-traveler`；8 次短时采样中全身、背包、红色背心和蔬菜道具完整可见，采样间隔内存在动画变化，未见裁切或明显比例压扁。没有执行角色切换、拖动或气泡交互，因此多角色切换、气泡跟随和长时回环仍未验收；证据见 `qa/petdex-desktop-live-recheck-20260820-v2.json`。
+本轮通过 PetDex Desktop v0.8.0 的实际窗口捕获确认当前活动角色为 `hei-mao-traveler`；逐角色切换、恢复、长时动画采样和 Codex Hook 气泡均通过，宠物全身、背包、红色背心和蔬菜道具完整可见，未见裁切或明显比例压扁。跨屏气泡跟随和不重叠也已通过；完整 Codex App 刷新与方向切换仍未验收。证据见 `qa/petdex-desktop-live-recheck-20260820-v3.json`、`qa/petdex-desktop-multidisplay-recheck-20260820-v2.json` 和 `qa/petdex-hook-eof-recheck-20260820-v2.json`。
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 
@@ -366,13 +366,18 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-v2-gate-recheck-20260820-v7.json`: 2026-08-19T23:51:49Z 绑定提交 `39a59b2` 的八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器语法/ShellCheck/PowerShell 解析和三目录 SHA parity；8/8、28/28 通过，PetDex 六个 owned-slug、生图余额和 Codex App 边界仍未闭合；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260820-v8.json`: 2026-08-20T00:40:07Z 绑定正式资产基线 `39a59b2`、QA 提交 `df8c216` 的八角色 fresh v2 合同、连续性、28 项 hatch-pet 测试、安装器语法/ShellCheck/PowerShell 解析和三目录 SHA parity；8/8、28/28 通过，连续性 warning 仅为已审查证据；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260820-v9.json`: 2026-08-20T01:18:28Z 绑定已推送提交 `9543baf` 的 post-sync 八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器与 JSON/diff 检查和三目录 SHA parity；8/8、28/28 通过，连续性 warning 仅为已审查证据；不含本机环境信息
+- `qa/current-v2-gate-recheck-20260820-v10.json`: 2026-08-20T04:47:21Z 绑定当前提交 `856b33d` 的八角色 v2、连续性、透明度、28 项测试、安装器解析和三目录 SHA parity 新鲜复核；8/8、28/28 通过，连续性 warning 仍为已审查 minor 证据；不含本机环境信息
 - `qa/current-head-recheck-20260820-v1.json`: 2026-08-20T02:10:59Z 基于正式资产提交 `9876004` 的八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器检查、三目录 SHA parity、双远端主线和 PetDex 公开资源复核；本地门禁与远端同步通过，六个 owned-slug 更新和 Codex App 视觉验收仍未闭合；不含本机环境信息
 - `qa/petdex-desktop-multidisplay-recheck-20260820-v1.json`: 2026-08-20T02:38:00Z PetDex Desktop v0.8.0 只读多显示器探针；旅行家在第二块显示器完整显示，3 次采样有动画变化，未见裁切或明显比例失衡；多角色切换、气泡跟随和长时回环仍未验收；不含本机环境信息
+- `qa/petdex-desktop-multidisplay-recheck-20260820-v2.json`: 2026-08-20T04:47:21Z PetDex Desktop v0.8.0 跨屏气泡跟随复核；两个显示器均保持宠物与气泡清晰分离，原显示器已恢复；不含本机环境信息
+- `qa/petdex-desktop-live-recheck-20260820-v3.json`: 2026-08-20T04:47:21Z PetDex Desktop v0.8.0 八角色 URI 切换/恢复、40 秒动画采样和 Codex 气泡显示复核；8/8 选择通过，34/39 相邻采样发生变化；不含本机环境信息
 - `qa/current-state-recheck-20260820-v8.json`: 2026-08-19T22:11:27Z 绑定提交 `ad382c7` 的八角色本地门禁、PetDex 资源、图像通道 TLS、#689/#710 和 Codex App 边界汇总；本地门禁通过，外部边界仍未闭合；不含本机环境信息
 - `qa/current-state-recheck-20260820-v10.json`: 2026-08-19T23:51:49Z 绑定提交 `39a59b2` 的八角色本地发布门禁、PetDex 4569 条目/2 个线上图集同步/6 个 owned-slug 待审核、生图渠道健康但上游余额门禁和 Codex App 未验证边界汇总；不含本机环境信息
 - `qa/current-state-recheck-20260820-v11.json`: 2026-08-20T00:40:07Z 绑定提交 `df8c216`、正式资产基线 `39a59b2` 的本地发布、PetDex 公开资源、图像服务合同、上游 issue/PR 和 Codex App 边界汇总；本地 fixture 协议门禁通过，六个 owned-slug、生图余额和 Codex App 视觉验收仍未闭合；不含本机环境信息
 - `qa/current-state-recheck-20260820-v12.json`: 2026-08-20T01:19:32Z 绑定已推送提交 `9543baf` 的本地发布、刷新后的 PetDex manifest、图像服务合同、上游 issue/PR 和 Codex App 边界汇总；本地 fixture 协议门禁通过，六个 owned-slug、真实上游生图和 Codex App 视觉验收仍未闭合；不含本机环境信息
 - `qa/petdex-hook-eof-recheck-20260820.json`: CLI 1.2.2 隔离 Hook stdin 生命周期复现；有效 payload 在写端保持打开时超时，关闭 stdin 后正常退出；未触碰现有 Codex/ChatGPT 进程，不含本机环境信息
+- `qa/petdex-hook-eof-recheck-20260820-v2.json`: CLI 1.2.2 当前版本 Hook EOF 边界复核；关闭 stdin 在 244ms 内正常退出，写端保持打开仍等待 EOF，#689 仍是上游未解决边界；不含本机环境信息
+- `qa/current-state-recheck-20260820-v14.json`: 2026-08-20T04:47:21Z 绑定当前提交的八角色本地门禁、PetDex Desktop 交互、跨屏气泡、Hook EOF、PetDex 线上待审核项和生图/上游边界综合状态；不含本机环境信息
 - `qa/petdex-live-recheck-20260820-v2.json`: 最新 manifest 与八个公开资源的 metadata/图集 SHA 对照；八个 metadata 为 v2，六个 owned-slug 更新仍未切换；不含本机环境信息
 - `qa/petdex-live-recheck-20260820-v3.json`: 2026-08-19T21:30:28Z 重新读取官方 manifest 并下载八个当前角色资源；8/8 metadata 为 v2、1536x2288、RGBA WEBP，仓库图集 SHA 仍仅 2/8 一致，六个 owned-slug 更新仍待审核，历史 `hei-mao-2` 仍存在；不含本机环境信息
 - `qa/petdex-live-recheck-20260820-v4.json`: 2026-08-19T22:11:27Z 严格按八个当前 slug 重新下载 PetDex metadata/图集并做 SHA 对照；8/8 metadata id/v2 通过，2/8 图集与仓库一致，六个 owned-slug 更新仍待审核；不含本机环境信息

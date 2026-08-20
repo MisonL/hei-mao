@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T04:47:21Z",
+  "source_commit": "856b33d77ba16a5c49ec2eb25368f0f8fec70316",
+  "scope": "isolated PetDex CLI hook stdin lifecycle recheck",
+  "cli_version": "1.2.2",
+  "test": {
+    "command": "petdex bubble pre codex",
+    "payload": "minimal valid JSON tool event",
+    "closed_stdin_exit_code": 0,
+    "closed_stdin_elapsed_ms": 244,
+    "open_stdin_timeout_ms": 1200,
+    "open_stdin_result": "did_not_exit_before_timeout",
+    "result": "closed stdin exits normally; open stdin still waits for EOF"
+  },
+  "upstream_boundary": {
+    "issue": "689",
+    "state": "open",
+    "same_semantics_reproduced": true,
+    "desktop_release_fix_present": false
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "issue_689 remains an upstream EOF boundary; normal closed-stdin hook invocation passes without mutating existing agent processes"
+}

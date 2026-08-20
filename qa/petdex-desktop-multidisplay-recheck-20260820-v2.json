@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T04:47:21Z",
+  "source_commit": "856b33d77ba16a5c49ec2eb25368f0f8fec70316",
+  "scope": "PetDex Desktop v0.8.0 current live cross-display bubble anchoring",
+  "desktop_version": "0.8.0",
+  "active_role": "hei-mao-traveler",
+  "operation": "show a minimal Codex bubble, move the pet window between the secondary and primary display, then restore the original display",
+  "secondary_display": {
+    "pet_visible": true,
+    "bubble_visible": true,
+    "bubble_followed_pet": true,
+    "bubble_pet_overlap": false,
+    "relative_gap_px": 6
+  },
+  "primary_display": {
+    "pet_visible": true,
+    "bubble_visible": true,
+    "bubble_followed_pet": true,
+    "bubble_pet_overlap": false,
+    "relative_gap_px": 6
+  },
+  "restore": {
+    "original_display_restored": true,
+    "original_window_relation_restored": true
+  },
+  "safety": {
+    "codex_or_chatgpt_process_mutation": "none",
+    "screenshots_retained": false,
+    "desktop_content_recorded": false,
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false
+  },
+  "result": "pass; the bubble stayed above and clear of the traveler on both displays and the original display was restored"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T04:47:21Z",
+  "source_commit": "856b33d77ba16a5c49ec2eb25368f0f8fec70316",
+  "scope": "PetDex Desktop v0.8.0 live role selection, restoration and animation loop",
+  "cli_version": "1.2.2",
+  "desktop_version": "0.8.0",
+  "process_state": "running",
+  "role_selection": {
+    "route": "petdex://<slug>",
+    "requested_roles": 8,
+    "accepted_roles": 8,
+    "identity_matches": "8/8",
+    "restored_role": "hei-mao-traveler",
+    "selection_result": "pass"
+  },
+  "animation_loop": {
+    "role": "hei-mao-traveler",
+    "sample_count": 40,
+    "sample_interval_ms": 1000,
+    "adjacent_samples": 39,
+    "changed_adjacent_samples": 34,
+    "unchanged_adjacent_samples": 5,
+    "visual_result": "no visible crop, scale jump or proportion distortion in the fixed-window sample",
+    "result": "pass"
+  },
+  "bubble": {
+    "hook_event": "petdex bubble pre codex",
+    "payload": "minimal redacted tool event",
+    "agent_source": "codex",
+    "visible_above_pet": true,
+    "pet_overlap": false,
+    "result": "pass"
+  },
+  "safety": {
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "screenshots_retained": false,
+    "desktop_content_recorded": false
+  },
+  "unverified": {
+    "full_codex_app_refresh_and_direction_acceptance": true
+  },
+  "result": "PetDex Desktop role selection, restoration, bubble display and long animation sample pass; full Codex App visual refresh remains a separate boundary"
+}
