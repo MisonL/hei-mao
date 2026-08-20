@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T02:38:00Z",
+  "scope": "PetDex Desktop v0.8.0 read-only live multi-display visual probe",
+  "desktop_version": "0.8.0",
+  "process_state": "running",
+  "interaction": "read-only; no click, drag, role switch, settings change or process stop",
+  "display_behavior": {
+    "primary_display_pet_visible": false,
+    "secondary_display_pet_visible": true,
+    "window_accessibility": "partial; application exposes a system-dialog window but geometry is not fully accessible",
+    "conclusion": "pet is rendered on the secondary display; primary-display absence is not evidence of a missing asset"
+  },
+  "visual_sample": {
+    "role_observed": "hei-mao-traveler",
+    "body_complete": true,
+    "recognizable_props_complete": true,
+    "cropped": false,
+    "obvious_proportion_distortion": false,
+    "sample_count": 3,
+    "adjacent_sample_pixel_difference": "nonzero",
+    "animation_visible": true
+  },
+  "privacy": {
+    "full_screen_images_retained": false,
+    "internal_window_content_recorded": false,
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false,
+    "local_absolute_paths_recorded": false
+  },
+  "result": "single-role secondary-display visual probe passes; multi-role switching, bubble-follow and long-loop proportion acceptance remain unverified"
+}
