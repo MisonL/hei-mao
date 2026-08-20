@@ -43,8 +43,8 @@
     "result": "pass"
   },
   "remote_sync": {
-    "github_main": "987600486f64f24c55906fe18d12a957f7e65c20",
-    "gitlab_main": "987600486f64f24c55906fe18d12a957f7e65c20",
+    "github_main": "ec1cb8d16f8ad5377d16fd684416fab30ad01b14",
+    "gitlab_main": "ec1cb8d16f8ad5377d16fd684416fab30ad01b14",
     "result": "pass"
   },
   "petdex": {
