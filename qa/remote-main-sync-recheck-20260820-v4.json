@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T07:46:20Z",
+  "scope": "main synchronization and public README reachability after PetDex v9 status refresh",
+  "source_commit": "6ae54de2484a63ec3a767135563c8fbecdf4de87",
+  "branches": {
+    "repository_main": "6ae54de2484a63ec3a767135563c8fbecdf4de87",
+    "github_main": "6ae54de2484a63ec3a767135563c8fbecdf4de87",
+    "gitlab_main": "6ae54de2484a63ec3a767135563c8fbecdf4de87",
+    "github_gitlab_delta": 0,
+    "repository_remote_delta": 0
+  },
+  "public_files": {
+    "github_raw_readme_http_status": 200,
+    "github_raw_readme_contains_petdex_v9_evidence": true,
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "worktree": {
+    "tracked_changes": false,
+    "pre_existing_untracked_path_preserved": true
+  },
+  "result": "main branches and public README verified"
+}
