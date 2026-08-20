@@ -3,6 +3,7 @@
   "checked_at": "2026-08-20T08:49:44Z",
   "source_commit": "a0d3872e8db573777db83d5799bb5b665497dbf8",
   "asset_gate_commit": "242cd938f39ab4d8cbe6076b7d17cc7b69f41c34",
+  "asset_tree_unchanged_after_source_commit": true,
   "scope": "fresh eight-role local gates, PetDex public resources, upstream Hook state and release boundaries",
   "local_release": {
     "roles": 8,
