@@ -25,7 +25,7 @@ npx -y petdex@latest install hei-mao-fortune
 npx -y petdex@latest install hei-mao-traveler
 ```
 
-截至 2026-08-20 复核，PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-20T06:31:51.943Z`，共 4569 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载；manifest 索引中的 spriteVersionNumber 仍可能滞后于实际 metadata。`hei-mao-butler` 和 `hei-mao-chef` 的线上图集与仓库一致；其余六个角色的本地修复图集仍未切换到线上，owned-slug 更新仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260820-v9.json`，最新综合状态见 `qa/current-state-recheck-20260820-v18.json`，最新 CLI 版本和隔离下载校验见 `qa/petdex-live-install-recheck-20260819-v2.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
+截至 2026-08-20 复核，PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-20T06:31:51.943Z`，共 4569 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载；manifest 索引中的 spriteVersionNumber 仍可能滞后于实际 metadata。`hei-mao-butler` 和 `hei-mao-chef` 的线上图集与仓库一致；其余六个角色的本地修复图集仍未切换到线上，owned-slug 更新仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260820-v10.json`，最新综合状态见 `qa/current-state-recheck-20260820-v18.json`，最新 CLI 版本和隔离下载校验见 `qa/petdex-live-install-recheck-20260819-v2.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
 
 本轮继续复核本地 Docker 生图服务后，容器、运行时和 Agent 合同均通过；当前渠道为 `jisuanyun-gpt-image`，进程内健康快照显示 `images-non-stream` 与 `images-sse` 可用。真实上游计费 smoke 本轮未发送，也没有创建 artifact 或替换正式资产；独立上游探针未注入密钥而返回 `401 API_KEY_REQUIRED`，不能据此判断上游可用性。最新脱敏复核见 `qa/imagegen-channel-recheck-20260820-v11.json`；未明确确认余额和授权前不重试计费请求。
 
@@ -57,7 +57,7 @@ Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 | `hei-mao-fortune` | 福气官 | v2 已验证，可本地安装 | manifest 已公开，当前图集编辑待审核 |
 | `hei-mao-traveler` | 旅行家 | v2 已验证，可本地安装 | manifest 已公开，当前图集编辑待审核 |
 
-公开 manifest 当前包含八个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4569；八个当前角色均可通过 PetDex CLI 读取公开条目，本仓库安装器也已覆盖八个角色，但安装成功不代表线上资源已经切换到仓库最新图集。当前线上与仓库一致的是 `hei-mao-butler` 和 `hei-mao-chef`；其余六个角色的 owned-slug 编辑仍待审核。最新资源、实际下载和本地门禁见 `qa/petdex-live-recheck-20260820-v9.json`、`qa/current-state-recheck-20260820-v18.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`；旧提交和编辑快照仅用于追溯。
+公开 manifest 当前包含八个当前角色条目和历史重复条目 `hei-mao-2`，总数为 4569；八个当前角色均可通过 PetDex CLI 读取公开条目，本仓库安装器也已覆盖八个角色，但安装成功不代表线上资源已经切换到仓库最新图集。当前线上与仓库一致的是 `hei-mao-butler` 和 `hei-mao-chef`；其余六个角色的 owned-slug 编辑仍待审核。最新资源、实际下载和本地门禁见 `qa/petdex-live-recheck-20260820-v10.json`、`qa/current-state-recheck-20260820-v18.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`；旧提交和编辑快照仅用于追溯。
 
 Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 的宠物目录：
 

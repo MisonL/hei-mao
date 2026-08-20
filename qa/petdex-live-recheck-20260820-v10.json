@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T09:22:19Z",
+  "scope": "current PetDex manifest, public metadata and sprite SHA refresh",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-20T06:31:51.943Z",
+    "entry_count": 4569,
+    "current_roles_checked": 8,
+    "historical_duplicate": "hei-mao-2",
+    "historical_recommender_count": 0
+  },
+  "roles": {
+    "hei-mao": {"metadata_status": 200, "metadata_id": "hei-mao", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "sprite_sha_match": false},
+    "hei-mao-quality": {"metadata_status": 200, "metadata_id": "hei-mao-quality", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "sprite_sha_match": false},
+    "hei-mao-butler": {"metadata_status": 200, "metadata_id": "hei-mao-butler", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "sprite_sha_match": true},
+    "hei-mao-chef": {"metadata_status": 200, "metadata_id": "hei-mao-chef", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "sprite_sha_match": true},
+    "hei-mao-delivery": {"metadata_status": 200, "metadata_id": "hei-mao-delivery", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 2, "sprite_sha_match": false},
+    "hei-mao-foodie": {"metadata_status": 200, "metadata_id": "hei-mao-foodie", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "sprite_sha_match": false},
+    "hei-mao-fortune": {"metadata_status": 200, "metadata_id": "hei-mao-fortune", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 2, "sprite_sha_match": false},
+    "hei-mao-traveler": {"metadata_status": 200, "metadata_id": "hei-mao-traveler", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 2, "sprite_sha_match": false}
+  },
+  "summary": {
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "public_sprites_in_sync": "2/8",
+    "owned_slug_updates_pending_review": ["hei-mao", "hei-mao-quality", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"],
+    "duplicate_submission_created": false,
+    "manifest_index_can_lag_metadata": true
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "public_resources_downloadable; six owned-slug sprite updates remain pending review"
+}
