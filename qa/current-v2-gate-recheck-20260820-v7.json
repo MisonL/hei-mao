@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T23:51:49Z",
+  "source_commit": "39a59b2587111ca149211a5f816bca3e8b757281",
+  "scope": "current eight-role v2 atlas, continuity, three-directory parity, installer and hatch-pet regression recheck",
+  "roles": {
+    "hei-mao": {"chroma_key": "#00FF00", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "spritesheet_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c"},
+    "hei-mao-quality": {"chroma_key": "#FF00FF", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 5, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07", "spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"},
+    "hei-mao-butler": {"chroma_key": "#00FF00", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"chroma_key": "#00FFFF", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-delivery": {"chroma_key": "#FF00FF", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "spritesheet_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86"},
+    "hei-mao-foodie": {"chroma_key": "#FF00FF", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "spritesheet_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0"},
+    "hei-mao-fortune": {"chroma_key": "#00FFFF", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 4, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b", "spritesheet_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9"},
+    "hei-mao-traveler": {"chroma_key": "#FF00FF", "atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0, "pet_json_sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f", "spritesheet_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"}
+  },
+  "atlas_contract": {"dimensions": "1536x2288", "format": "WEBP", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0},
+  "three_directory_parity": "8/8 roles; pet.json and spritesheet.webp match in repository, Codex and PetDex local directories",
+  "hatch_pet_tests": "28 passed",
+  "installer_checks": {"bash_syntax": "pass", "shellcheck": "pass", "powershell_parse": "pass"},
+  "formal_assets_modified": false,
+  "result": "local eight-role gates pass; continuity warnings are retained review evidence and not hard failures"
+}

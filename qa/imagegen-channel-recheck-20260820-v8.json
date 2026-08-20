@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T23:40:58Z",
+  "scope": "local Docker image service health, non-billable contract and upstream balance recheck after API change",
+  "service": {"container": "healthy", "capabilities": "pass", "runtime": "pass", "state_backend": "sqlite", "recommended_concurrency": 1, "channel_capacity_per_credential": 1},
+  "channel": {"id": "jisuanyun-gpt-image", "state": "healthy", "healthy_request_modes": ["images-non-stream", "images-sse"], "probe_required": false},
+  "agent_doctor": {"ok": true, "billable_smoke": "skipped", "contract_check": "pass"},
+  "upstream_probe": {"dns": "pass", "tls": "pass; TLSv1.3", "models_status": 403, "error_code": "INSUFFICIENT_BALANCE", "billable_image_probe": "blocked by models balance gate"},
+  "artifacts_created": 0,
+  "formal_assets_modified": false,
+  "result": "local service is ready, but upstream balance gate blocks new image generation; no retry or asset replacement performed"
+}

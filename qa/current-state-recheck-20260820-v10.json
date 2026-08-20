@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T23:51:49Z",
+  "source_commit": "39a59b2587111ca149211a5f816bca3e8b757281",
+  "scope": "current eight-role release closure recheck",
+  "local_release": {"roles": 8, "atlas_gate": "8/8 pass", "continuity": "8/8 ok with reviewed minor warnings", "three_directory_sha_parity": "8/8", "hatch_pet_tests": "28 passed", "installer_checks": "bash, shellcheck and PowerShell parse pass"},
+  "petdex": {"manifest_entries": 4569, "current_roles": 8, "approved_roles": 8, "public_metadata": "8/8 HTTP 200, v2, 1536x2288 RGBA", "metadata_repository_sha_matches": "7/8", "public_sprites_in_sync": "2/8", "owned_slug_updates_pending_review": 6, "historical_duplicate": "hei-mao-2", "duplicate_submission_created": false},
+  "image_generation": {"local_docker": "healthy", "effective_request_modes": ["images-non-stream", "images-sse"], "upstream_models_probe": "403 INSUFFICIENT_BALANCE", "billable_smoke": "not sent; blocked by upstream /models HTTP 403 INSUFFICIENT_BALANCE gate", "formal_assets_modified": false},
+  "desktop": {"cli_version": "1.2.2", "desktop_version": "0.8.0", "installed_role_set_parity": "8/8", "live_visual_acceptance": "not reverified in this pass", "multi_role_switching": "unverified", "bubble_follow": "unverified"},
+  "remote_sync": {"github_main": "39a59b2587111ca149211a5f816bca3e8b757281", "gitlab_main": "39a59b2587111ca149211a5f816bca3e8b757281"},
+  "privacy": {"credentials_recorded": false, "local_absolute_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false},
+  "result": "local package and install gates pass; PetDex six-role asset review, upstream image balance and live Codex App visual acceptance remain external blockers"
+}
