@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T10:27:35Z",
+  "source_commit": "75c85d00d7f663d0ea1c7238df62cf9a766f0e35",
+  "scope": "current HEAD eight-role PetDex release audit with fresh local gates, public resources, Hook EOF and upstream state",
+  "local_release": {
+    "roles": ["hei-mao", "hei-mao-quality", "hei-mao-butler", "hei-mao-chef", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"],
+    "atlas_contract": "8/8 pass; 1536x2288; 8x11; RGBA WEBP; spriteVersionNumber=2; validator errors=0; validator warnings=0",
+    "continuity": "8/8 ok with previously reviewed minor warnings",
+    "transparent_rgb_residue_pixels": 0,
+    "hatch_pet_tests": "28 passed; 37 deprecation warnings only",
+    "installer_checks": {"bash_syntax": "pass", "shellcheck": "pass", "powershell_parse": "pass", "json_parse": "pass"},
+    "three_directory_sha_parity": "8/8; repository, ~/.codex/pets and ~/.petdex/pets each have one matching SHA per file",
+    "public_tracked_file_privacy_scan": "pass",
+    "user_untracked_path_preserved": true
+  },
+  "git": {"local_main": "75c85d00d7f663d0ea1c7238df62cf9a766f0e35", "gitlab_main": "75c85d00d7f663d0ea1c7238df62cf9a766f0e35", "github_main": "75c85d00d7f663d0ea1c7238df62cf9a766f0e35"},
+  "petdex": {"cli_version": "1.2.2", "desktop_release": "desktop-v0.8.0", "manifest_generated_at": "2026-08-20T06:31:51.943Z", "manifest_entries": 4569, "current_roles_public": "8/8", "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2", "public_sprite_sha_match": "2/8", "owned_slug_updates_pending_review": ["hei-mao", "hei-mao-quality", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"], "historical_duplicate": "hei-mao-2", "duplicate_submission_created": false, "evidence": "qa/petdex-live-recheck-20260820-v11.json"},
+  "desktop_boundary": {"desktop_role_selection_and_multidisplay_local_validation": "previously pass; see qa/petdex-desktop-live-recheck-20260820-v3.json and qa/petdex-desktop-multidisplay-recheck-20260820-v2.json", "full_codex_app_refresh_role_direction_animation_loop_acceptance": "unverified", "chatgpt_or_codex_process_present": true, "accessibility_window_query": "permission error -1728", "settings_or_process_mutation_attempted": false},
+  "hook_eof": {"closed_stdin_exit_code": 0, "open_stdin_natural_exit_before_timeout": false, "result": "still waits for EOF", "evidence": "qa/petdex-hook-eof-recheck-20260820-v3.json"},
+  "upstream": {"issue_689": "open", "pr_710": "open draft", "evidence": "qa/petdex-upstream-status-recheck-20260820-v6.json"},
+  "image_generation": {"real_billed_smoke": "not sent; billing and credential authorization not provided", "formal_assets_changed": false},
+  "privacy": {"credentials_recorded": false, "local_absolute_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false},
+  "result": "current HEAD local gates and synchronization pass; six PetDex owned-slug reviews, full Codex App acceptance and upstream Hook EOF fix remain open boundaries"
+}

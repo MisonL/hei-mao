@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T10:27:35Z",
+  "checked_commit": "75c85d00d7f663d0ea1c7238df62cf9a766f0e35",
+  "scope": "current HEAD eight-role v2 atlas, continuity, transparency, tests, installer and local parity recheck",
+  "runtime": {
+    "validator": "hatch-pet scripts via isolated uv runtime with Pillow",
+    "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py",
+    "hatch_pet_tests": {"passed": 28, "failed": 0, "errors": 0, "warnings": 37, "result": "pass"}
+  },
+  "role_chroma_keys": {
+    "hei-mao": "#00FF00",
+    "hei-mao-quality": "#FF00FF",
+    "hei-mao-butler": "#00FF00",
+    "hei-mao-chef": "#00FFFF",
+    "hei-mao-delivery": "#FF00FF",
+    "hei-mao-foodie": "#FF00FF",
+    "hei-mao-fortune": "#00FFFF",
+    "hei-mao-traveler": "#FF00FF"
+  },
+  "roles": {
+    "hei-mao": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6, "spritesheet_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c"},
+    "hei-mao-quality": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 5, "spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"},
+    "hei-mao-butler": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6, "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6, "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-delivery": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6, "spritesheet_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86"},
+    "hei-mao-foodie": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 9, "spritesheet_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0"},
+    "hei-mao-fortune": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 4, "spritesheet_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9"},
+    "hei-mao-traveler": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 9, "spritesheet_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"}
+  },
+  "atlas_contract": {"roles_passed": 8, "dimensions": "1536x2288", "cell_dimensions": "192x208", "format": "WEBP", "mode": "RGBA", "columns": 8, "rows": 11, "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "alpha_review": "qa/current-v2-alpha-review-20260820-v2.json", "alpha_review_input_unchanged_since": "242cd938f39ab4d8cbe6076b7d17cc7b69f41c34"},
+  "checks": {
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "json_parse": "pass",
+    "public_tracked_file_privacy_scan": "pass",
+    "three_directory_sha_parity": "8/8 roles; one unique SHA per pet.json and spritesheet.webp across repository, Codex and PetDex directories"
+  },
+  "privacy": {"credentials_recorded": false, "local_absolute_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false},
+  "result": "current HEAD local v2, continuity, transparency, test, installer, parity and privacy gates pass; continuity warnings remain reviewed evidence"
+}

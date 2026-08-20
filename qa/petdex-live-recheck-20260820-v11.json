@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T10:25:45Z",
+  "scope": "fresh PetDex manifest, public metadata and spritesheet download/SHA recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "redirect_target": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "http_status": 200,
+    "generated_at": "2026-08-20T06:31:51.943Z",
+    "sha256": "77f987d3f297dd0a5a199f2f0442c61738cd4a503c28862b9ba20f2a04ec537b",
+    "entry_count": 4569,
+    "current_roles_checked": 8,
+    "historical_duplicate": "hei-mao-2"
+  },
+  "roles": {
+    "hei-mao": {"metadata_status": 200, "metadata_id": "hei-mao", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "metadata_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "public_spritesheet_sha256": "ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c", "repository_spritesheet_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false},
+    "hei-mao-quality": {"metadata_status": 200, "metadata_id": "hei-mao-quality", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "metadata_sha256": "9d4c380a2033c9f883cb005cb1fb2560c5d3b37b925ed3044f5e533bfdab4f43", "public_spritesheet_sha256": "254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92", "repository_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false},
+    "hei-mao-butler": {"metadata_status": 200, "metadata_id": "hei-mao-butler", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "metadata_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "public_spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "repository_spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": true},
+    "hei-mao-chef": {"metadata_status": 200, "metadata_id": "hei-mao-chef", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "metadata_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "public_spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "repository_spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": true},
+    "hei-mao-delivery": {"metadata_status": 200, "metadata_id": "hei-mao-delivery", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 2, "metadata_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "public_spritesheet_sha256": "ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a", "repository_spritesheet_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false},
+    "hei-mao-foodie": {"metadata_status": 200, "metadata_id": "hei-mao-foodie", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 1, "metadata_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "public_spritesheet_sha256": "fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49", "repository_spritesheet_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false},
+    "hei-mao-fortune": {"metadata_status": 200, "metadata_id": "hei-mao-fortune", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 2, "metadata_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b", "public_spritesheet_sha256": "1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71", "repository_spritesheet_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false},
+    "hei-mao-traveler": {"metadata_status": 200, "metadata_id": "hei-mao-traveler", "metadata_sprite_version_number": 2, "manifest_sprite_version_number": 2, "metadata_sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f", "public_spritesheet_sha256": "2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e", "repository_spritesheet_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25", "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false}
+  },
+  "summary": {
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "public_sprites_in_sync": "2/8",
+    "owned_slug_updates_pending_review": ["hei-mao", "hei-mao-quality", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"],
+    "duplicate_submission_created": false,
+    "manifest_index_can_lag_metadata": true
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "public resources downloadable; six owned-slug spritesheet updates remain pending review"
+}
