@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T00:32:15Z",
+  "scope": "fresh local Docker image service contract and channel health recheck",
+  "service": {
+    "container": "healthy",
+    "capabilities": "pass",
+    "runtime": "pass",
+    "state_backend": "sqlite",
+    "recommended_concurrency": 1,
+    "channel_capacity_per_credential": 1
+  },
+  "channel": {
+    "id": "jisuanyun-gpt-image",
+    "state": "healthy",
+    "healthy_request_modes": ["images-non-stream", "images-sse"],
+    "probe_required": false
+  },
+  "agent_doctor": {
+    "ok": true,
+    "contract_check": "pass",
+    "billable_smoke": "skipped by explicit safety gate"
+  },
+  "local_fixture_gate": {
+    "ok": true,
+    "final_gate_satisfied": true,
+    "independent_targets": 6,
+    "request_modes_passed": ["images-non-stream", "images-sse", "responses-non-stream", "responses-sse"]
+  },
+  "upstream_balance": {
+    "latest_actual_evidence": "403 INSUFFICIENT_BALANCE",
+    "new_billable_probe": "not sent",
+    "artifacts_created": 0
+  },
+  "formal_assets_modified": false,
+  "result": "local service and fixture contracts pass; real upstream balance remains the generation blocker"
+}

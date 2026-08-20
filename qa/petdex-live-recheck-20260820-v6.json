@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T00:29:44Z",
+  "scope": "fresh PetDex manifest and public resource download recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "resolved_source": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "http_status": 200,
+    "entry_count": 4569,
+    "generated_at": "2026-08-19T18:22:11.008Z",
+    "current_roles_checked": 8,
+    "historical_duplicate": "hei-mao-2"
+  },
+  "roles": {
+    "hei-mao": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-quality": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": false, "metadata_sha_match": false},
+    "hei-mao-butler": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": true, "metadata_sha_match": true},
+    "hei-mao-chef": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": true, "metadata_sha_match": true},
+    "hei-mao-delivery": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-foodie": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-fortune": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-traveler": {"metadata_status": 200, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "sprite_sha_match": false, "metadata_sha_match": true}
+  },
+  "summary": {
+    "metadata_ids_match": "8/8",
+    "metadata_sha_matches": "7/8",
+    "public_sprites_in_sync": "2/8",
+    "owned_slug_updates_pending_review": 6,
+    "duplicate_submission_created": false
+  },
+  "result": "all current public resources are downloadable and structurally v2; six owned-slug sprite updates remain pending review"
+}
