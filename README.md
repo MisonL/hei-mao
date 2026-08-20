@@ -27,13 +27,13 @@ npx -y petdex@latest install hei-mao-traveler
 
 截至 2026-08-20 复核，PetDex CLI 为 `1.2.2`。最新 manifest 生成时间为 `2026-08-20T00:46:43.668Z`，共 4569 个条目；八个当前黑毛角色均已公开，`hei-mao-2` 仍是历史重复条目。八个公开 `petjson.json` 和图集均可下载，实际 metadata 均为 v2、1536x2288、RGBA WEBP；manifest 索引中的 spriteVersionNumber 仍可能滞后于 metadata。`hei-mao-butler` 和 `hei-mao-chef` 的线上资源与仓库一致；其余六个角色的本地修复图集仍未切换到线上，owned-slug 更新仍待审核，未创建重复条目。manifest 索引版本不能替代实际 metadata 和图集校验。最新 manifest/SHA 见 `qa/petdex-live-recheck-20260820-v7.json`，最新 CLI 版本和隔离下载校验见 `qa/petdex-live-install-recheck-20260819-v2.json`；八个当前角色均可通过下方角色安装器获取，线上切换以 PetDex owned-slug 审核完成为准。
 
-本轮本地 Docker 生图服务已重载你更换的私有 API 配置，容器、运行时和 Agent 合同均健康；当前渠道为 `jisuanyun-gpt-image`，`images-non-stream` 与 `images-sse` 均可用。本地 fixture 已通过六种独立协议门禁；真实上游计费 smoke 本轮未发送，最近已知余额证据仍为 `403 INSUFFICIENT_BALANCE`，因此没有创建 artifact，也没有替换正式资产。最新脱敏复核见 `qa/imagegen-channel-recheck-20260820-v10.json`；余额/授权确认前不要继续重试生成。
+本轮继续复核本地 Docker 生图服务后，容器、运行时和 Agent 合同均通过；当前渠道为 `jisuanyun-gpt-image`，进程内健康快照显示 `images-non-stream` 与 `images-sse` 可用。真实上游计费 smoke 本轮未发送，也没有创建 artifact 或替换正式资产；独立上游探针未注入密钥而返回 `401 API_KEY_REQUIRED`，不能据此判断上游可用性。最新脱敏复核见 `qa/imagegen-channel-recheck-20260820-v11.json`；未明确确认余额和授权前不重试计费请求。
 
-2026-08-20 收尾复核中，八个正式角色均重新通过 v2 图集、连续性和透明度门禁，hatch-pet 测试为 `28 passed`，安装器语法、ShellCheck 和 PowerShell 解析均通过，仓库、本机 Codex 与本机 PetDex 三处目录 SHA 一致；线上 PetDex 资源仍只有 2/8 与仓库一致，另有 6 个 owned-slug 更新待审核。正式资产基线仍为 `39a59b2`，复核基于正式资产提交 `9876004`，当前证据文件已随本轮 QA 提交推送；本轮只新增脱敏 QA 证据和状态说明。最新当前提交复核见 `qa/current-head-recheck-20260820-v1.json`，历史聚合证据仍见 `qa/current-v2-gate-recheck-20260820-v9.json` 与 `qa/current-state-recheck-20260820-v12.json`。Codex App 的完整窗口视觉验收仍未取得新证据，不能据此宣称多角色切换、动画回环和气泡跟随已验收。
+2026-08-20 收尾复核中，八个正式角色均重新通过 v2 图集、连续性和透明度门禁，hatch-pet 测试为 `28 passed`，安装器语法、ShellCheck 和 PowerShell 解析均通过，仓库、本机 Codex 与本机 PetDex 三处目录 SHA 一致；线上 PetDex 资源仍只有 2/8 与仓库一致，另有 6 个 owned-slug 更新待审核。正式资产基线仍为 `39a59b2`，当前 QA 证据绑定提交 `cf914b7`，只新增脱敏 QA 证据和状态说明。当前综合状态见 `qa/current-state-recheck-20260820-v13.json`，历史资产门禁仍见 `qa/current-v2-gate-recheck-20260820-v9.json`。Codex App 的完整窗口视觉验收仍未取得新证据，不能据此宣称多角色切换、动画回环和气泡跟随已验收。
 
 本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录。最新只读多显示器探针确认旅行家角色在第二块显示器完整显示，3 次短采样均有动画变化，未见裁切或明显比例压扁；主显示器看不到它是因为窗口位于另一块显示器。未执行设置、角色切换或拖动，也没有停止或重启任何 Codex 进程。当前视觉边界见 `qa/petdex-desktop-multidisplay-recheck-20260820-v1.json` 和 `qa/codex-app-boundary-recheck-20260819.json`。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；最新隔离复现见 `qa/petdex-hook-eof-recheck-20260820.json`。
 
-本轮通过 Petdex Desktop v0.8.0 的实际窗口捕获确认当前活动角色为 `hei-mao-traveler`；正常尺寸下全身、背包、红色背心和蔬菜道具完整可见，连续 6 帧存在变化且未见裁切或比例压扁。当前 bubble 来源为 `codex`，但本轮未捕获气泡，也未执行多角色切换；证据见 `qa/petdex-desktop-live-recheck-20260819.json`。
+本轮通过 Petdex Desktop v0.8.0 的实际窗口捕获确认当前活动角色为 `hei-mao-traveler`；8 次短时采样中全身、背包、红色背心和蔬菜道具完整可见，采样间隔内存在动画变化，未见裁切或明显比例压扁。没有执行角色切换、拖动或气泡交互，因此多角色切换、气泡跟随和长时回环仍未验收；证据见 `qa/petdex-desktop-live-recheck-20260820-v2.json`。
 
 Petdex CLI 会同时安装到 Petdex Desktop 与 Codex App 的宠物目录：
 

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T03:21:23Z",
+  "scope": "local Docker image service non-billable contract and channel-health recheck after API configuration change",
+  "service": {
+    "container": "healthy",
+    "capabilities": "pass",
+    "contract_check": "pass",
+    "runtime": "pass",
+    "state_backend": "sqlite",
+    "recommended_concurrency": 1,
+    "channel_capacity_per_credential": 1
+  },
+  "channel": {
+    "id": "jisuanyun-gpt-image",
+    "state": "healthy",
+    "healthy_credentials": 1,
+    "unhealthy_credentials": 0,
+    "healthy_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "probe_required": false
+  },
+  "verification": {
+    "billable": false,
+    "real_image_request_sent": false,
+    "formal_assets_modified": false,
+    "local_fixture_gate": "not rerun in this probe; latest recorded fixture gate remains pass",
+    "standalone_upstream_models_probe": "not authenticated; 401 API_KEY_REQUIRED is not an upstream availability verdict"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_content_recorded": false
+  },
+  "result": "local service contract and in-process channel health pass; real billable upstream generation remains intentionally unverified"
+}

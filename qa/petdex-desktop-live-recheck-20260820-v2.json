@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T03:27:47Z",
+  "scope": "PetDex Desktop v0.8.0 read-only active-window and short animation sample",
+  "desktop_version": "0.8.0",
+  "process_state": "running",
+  "interaction": "read-only; no input, role switch, drag, settings change, stop or restart",
+  "active_role": "hei-mao-traveler",
+  "window_sample": {
+    "sample_count": 8,
+    "sample_interval_ms": 350,
+    "body_complete": true,
+    "recognizable_props_complete": true,
+    "cropped": false,
+    "obvious_proportion_distortion": false,
+    "transparent_background": true,
+    "adjacent_samples_with_nonzero_pixel_change": 4,
+    "adjacent_samples_total": 7,
+    "alpha_bounds": "stable within the expected animated silhouette boundary",
+    "conclusion": "short loop sample renders the complete traveler and shows animation changes without a visible scale or crop jump"
+  },
+  "unverified": {
+    "multi_role_switching": true,
+    "bubble_follow": true,
+    "long_duration_loop": true,
+    "codex_app_full_visual_acceptance": true
+  },
+  "privacy": {
+    "screenshots_retained": false,
+    "desktop_content_recorded": false,
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "single-role short animation sample passes; interaction-dependent multi-role and bubble-follow acceptance remains unverified"
+}
