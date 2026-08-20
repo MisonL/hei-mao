@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T02:10:59Z",
+  "scope": "current HEAD eight-role release, local parity, installer and public PetDex recheck",
+  "source_commit": "987600486f64f24c55906fe18d12a957f7e65c20",
+  "runtime": "uv isolated Python with Pillow 12.3.0",
+  "local_v2_gate": {
+    "roles": 8,
+    "atlas": "8/8 pass",
+    "contract": "1536x2288, 8x11, RGBA WEBP, spriteVersionNumber=2",
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "continuity": "8/8 ok with reviewed warnings",
+    "continuity_warning_counts": {
+      "hei-mao": 6,
+      "hei-mao-quality": 5,
+      "hei-mao-butler": 6,
+      "hei-mao-chef": 6,
+      "hei-mao-delivery": 6,
+      "hei-mao-foodie": 9,
+      "hei-mao-fortune": 4,
+      "hei-mao-traveler": 9
+    }
+  },
+  "hatch_pet_tests": {
+    "passed": 28,
+    "failed": 0,
+    "result": "pass",
+    "non_fatal_warnings": 37
+  },
+  "installer_checks": {
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "json_parse": "pass",
+    "diff_check": "pass"
+  },
+  "three_directory_parity": {
+    "roles": "8/8",
+    "files": "pet.json and spritesheet.webp",
+    "locations": "repository, Codex local directory, PetDex local directory",
+    "result": "pass"
+  },
+  "remote_sync": {
+    "github_main": "987600486f64f24c55906fe18d12a957f7e65c20",
+    "gitlab_main": "987600486f64f24c55906fe18d12a957f7e65c20",
+    "result": "pass"
+  },
+  "petdex": {
+    "manifest_generated_at": "2026-08-20T00:46:43.668Z",
+    "manifest_entries": 4569,
+    "current_roles": 8,
+    "metadata_contract": "8/8 HTTP 200, v2, 1536x2288, RGBA WEBP",
+    "public_sprites_in_sync": ["hei-mao-butler", "hei-mao-chef"],
+    "public_sprites_in_sync_count": "2/8",
+    "owned_slug_updates_pending_review": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2",
+    "historical_recommender_count": 0,
+    "duplicate_submission_created": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "local release gates pass; six PetDex owned-slug updates and Codex App live visual acceptance remain external boundaries"
+}
