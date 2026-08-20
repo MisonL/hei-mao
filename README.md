@@ -367,6 +367,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-v2-gate-recheck-20260820-v8.json`: 2026-08-20T00:40:07Z 绑定正式资产基线 `39a59b2`、QA 提交 `df8c216` 的八角色 fresh v2 合同、连续性、28 项 hatch-pet 测试、安装器语法/ShellCheck/PowerShell 解析和三目录 SHA parity；8/8、28/28 通过，连续性 warning 仅为已审查证据；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260820-v9.json`: 2026-08-20T01:18:28Z 绑定已推送提交 `9543baf` 的 post-sync 八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器与 JSON/diff 检查和三目录 SHA parity；8/8、28/28 通过，连续性 warning 仅为已审查证据；不含本机环境信息
 - `qa/current-v2-gate-recheck-20260820-v10.json`: 2026-08-20T04:47:21Z 绑定当前提交 `856b33d` 的八角色 v2、连续性、透明度、28 项测试、安装器解析和三目录 SHA parity 新鲜复核；8/8、28/28 通过，连续性 warning 仍为已审查 minor 证据；不含本机环境信息
+- `qa/remote-main-sync-recheck-20260820-v1.json`: 2026-08-20T05:19:14Z 复核当前提交 `6968f63` 的本地、GitHub 和 GitLab `main` 一致，GitHub raw README 可读取；保留用户原有未跟踪目录，不含本机环境信息
 - `qa/current-head-recheck-20260820-v1.json`: 2026-08-20T02:10:59Z 基于正式资产提交 `9876004` 的八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器检查、三目录 SHA parity、双远端主线和 PetDex 公开资源复核；本地门禁与远端同步通过，六个 owned-slug 更新和 Codex App 视觉验收仍未闭合；不含本机环境信息
 - `qa/petdex-desktop-multidisplay-recheck-20260820-v1.json`: 2026-08-20T02:38:00Z PetDex Desktop v0.8.0 只读多显示器探针；旅行家在第二块显示器完整显示，3 次采样有动画变化，未见裁切或明显比例失衡；多角色切换、气泡跟随和长时回环仍未验收；不含本机环境信息
 - `qa/petdex-desktop-multidisplay-recheck-20260820-v2.json`: 2026-08-20T04:47:21Z PetDex Desktop v0.8.0 跨屏气泡跟随复核；两个显示器均保持宠物与气泡清晰分离，原显示器已恢复；不含本机环境信息
