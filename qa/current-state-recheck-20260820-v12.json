@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T01:19:32Z",
+  "source_commit": "9543baf654ec78a3fea031d28c523fddf7b56ed2",
+  "formal_assets_commit": "39a59b2587111ca149211a5f816bca3e8b757281",
+  "scope": "post-sync local release, refreshed PetDex public resources, image service contract, upstream state and app boundary summary",
+  "local_release": {
+    "roles": 8,
+    "atlas_gate": "8/8 pass",
+    "continuity": "8/8 ok with retained reviewed warnings",
+    "three_directory_sha_parity": "8/8 after root-role installation sync",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "bash, shellcheck, PowerShell parse, JSON and diff checks pass"
+  },
+  "installation_sync": {"roles_synced": 1, "roles_rechecked": 8, "result": "pass"},
+  "petdex": {
+    "manifest_entries": 4569,
+    "manifest_generated_at": "2026-08-20T00:46:43.668Z",
+    "current_roles": 8,
+    "public_metadata": "8/8 HTTP 200, v2, 1536x2288 RGBA WEBP",
+    "metadata_sha_matches": "7/8",
+    "public_sprites_in_sync": "2/8",
+    "owned_slug_updates_pending_review": 6,
+    "historical_duplicate": "hei-mao-2",
+    "duplicate_submission_created": false
+  },
+  "image_generation": {
+    "local_docker_service": "healthy",
+    "channel": "jisuanyun-gpt-image",
+    "effective_request_modes": ["images-non-stream", "images-sse"],
+    "agent_doctor": "pass; billable smoke skipped",
+    "local_fixture_protocol_gate": "pass; six independent targets and four request modes",
+    "latest_prior_upstream_balance_evidence": "403 INSUFFICIENT_BALANCE; not reverified after API change",
+    "formal_assets_modified": false
+  },
+  "upstream": {
+    "issue_689": "open; unchanged",
+    "pr_710": "open draft WIP; unchanged",
+    "latest_release": "desktop-v0.8.0",
+    "latest_main_commit_checked": "e35d0bc8"
+  },
+  "desktop": {
+    "cli_version": "1.2.2",
+    "desktop_version": "0.8.0",
+    "installed_role_set_parity": "8/8",
+    "live_visual_acceptance": "not reverified in this pass",
+    "multi_role_switching": "unverified",
+    "animation_loop_and_proportion": "not reverified in this pass",
+    "bubble_follow": "unverified"
+  },
+  "remote_sync": {
+    "github_main": "9543baf654ec78a3fea031d28c523fddf7b56ed2",
+    "gitlab_main": "9543baf654ec78a3fea031d28c523fddf7b56ed2"
+  },
+  "privacy": {"credentials_recorded": false, "local_absolute_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false},
+  "result": "local release gates and service fixture gates pass; six PetDex owned-slug updates, real upstream generation and Codex App visual acceptance remain external blockers"
+}

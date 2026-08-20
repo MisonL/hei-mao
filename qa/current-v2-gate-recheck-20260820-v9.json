@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T01:18:28Z",
+  "source_commit": "9543baf654ec78a3fea031d28c523fddf7b56ed2",
+  "formal_assets_commit": "39a59b2587111ca149211a5f816bca3e8b757281",
+  "scope": "post-sync eight-role v2 atlas, continuity, local parity, regression and installer recheck",
+  "validator": "hatch-pet Codex primary runtime Python 3.12.13 with Pillow 12.3.0",
+  "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+  "continuity_command": "measure_direction_continuity.py",
+  "roles": {
+    "hei-mao": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-quality": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 5, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-butler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-chef": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-delivery": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-foodie": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-fortune": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 4, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-traveler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0}
+  },
+  "atlas_contract": {
+    "roles_passed": 8,
+    "dimensions": "1536x2288",
+    "format": "WEBP",
+    "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0
+  },
+  "three_directory_parity": "8/8 roles; post-sync pet.json and spritesheet.webp match in repository, Codex and PetDex local directories",
+  "installation_sync": {
+    "source": "repository formal role packages",
+    "targets": ["Codex local directory", "PetDex local directory"],
+    "roles_synced": 1,
+    "roles_rechecked": 8,
+    "result": "pass"
+  },
+  "hatch_pet_tests": "28 passed",
+  "installer_checks": {
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "json_parse": "pass",
+    "diff_check": "pass"
+  },
+  "formal_assets_modified": false,
+  "result": "post-sync local gates pass; retained continuity warnings are review evidence and do not create a new hard failure"
+}

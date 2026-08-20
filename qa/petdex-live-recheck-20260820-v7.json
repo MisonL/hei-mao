@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T01:17:00Z",
+  "scope": "fresh PetDex manifest and public resource download recheck after local release sync",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-20T00:46:43.668Z",
+    "entry_count": 4569,
+    "current_roles_checked": 8,
+    "historical_duplicate": "hei-mao-2",
+    "historical_recommender_count": 0
+  },
+  "roles": {
+    "hei-mao": {"metadata_status": 200, "manifest_sprite_version_number": 1, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-quality": {"metadata_status": 200, "manifest_sprite_version_number": 1, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false, "metadata_sha_match": false},
+    "hei-mao-butler": {"metadata_status": 200, "manifest_sprite_version_number": 1, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": true, "metadata_sha_match": true},
+    "hei-mao-chef": {"metadata_status": 200, "manifest_sprite_version_number": 1, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": true, "metadata_sha_match": true},
+    "hei-mao-delivery": {"metadata_status": 200, "manifest_sprite_version_number": 2, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-foodie": {"metadata_status": 200, "manifest_sprite_version_number": 1, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-fortune": {"metadata_status": 200, "manifest_sprite_version_number": 2, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false, "metadata_sha_match": true},
+    "hei-mao-traveler": {"metadata_status": 200, "manifest_sprite_version_number": 2, "metadata_sprite_version_number": 2, "dimensions": "1536x2288", "mode": "RGBA", "format": "WEBP", "sprite_sha_match": false, "metadata_sha_match": true}
+  },
+  "summary": {
+    "metadata_ids_match": "8/8",
+    "metadata_sprite_contract": "8/8 HTTP 200, v2, 1536x2288, RGBA WEBP",
+    "metadata_sha_matches": "7/8",
+    "public_sprites_in_sync": "2/8",
+    "owned_slug_updates_pending_review": 6,
+    "duplicate_submission_created": false,
+    "manifest_index_can_lag_metadata": true
+  },
+  "result": "all current public resources are downloadable and structurally v2; six owned-slug sprite updates remain pending review"
+}

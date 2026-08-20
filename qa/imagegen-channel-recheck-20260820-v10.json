@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T01:19:32Z",
+  "scope": "post-API-change local Docker image service contract, channel health and fixture final gate recheck",
+  "service": {
+    "container": "healthy",
+    "capabilities": "pass",
+    "runtime": "pass",
+    "state_backend": "sqlite",
+    "recommended_concurrency": 1,
+    "channel_capacity_per_credential": 1
+  },
+  "channel": {
+    "id": "jisuanyun-gpt-image",
+    "state": "healthy",
+    "healthy_request_modes": ["images-non-stream", "images-sse"],
+    "probe_required": false,
+    "healthy_credentials": 1,
+    "unhealthy_credentials": 0
+  },
+  "agent_doctor": {
+    "ok": true,
+    "capabilities": "pass",
+    "contract_check": "pass",
+    "runtime_backend": "pass",
+    "billable_smoke": "skipped by explicit safety gate"
+  },
+  "local_fixture_gate": {
+    "ok": true,
+    "final_gate_satisfied": true,
+    "independent_targets": 6,
+    "request_modes_passed": ["images-non-stream", "images-sse", "responses-non-stream", "responses-sse"]
+  },
+  "real_upstream": {
+    "billable_smoke": "not sent in this pass",
+    "reason": "explicit safety gate; no new billable request or artifact",
+    "latest_prior_evidence": "403 INSUFFICIENT_BALANCE; not reverified after API change"
+  },
+  "formal_assets_modified": false,
+  "result": "local service, Agent contract and six-protocol fixture gate pass; real upstream generation remains unverified"
+}
