@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T12:05:00Z",
+  "source_commit": "90786c6790f718859b11ded2b8a08c368b8808ef",
+  "scope": "post-authorized-image-smoke release state snapshot",
+  "local_release": {
+    "evidence": "qa/current-v2-gate-recheck-20260820-v12.json",
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP",
+    "hatch_pet_tests": "28 passed",
+    "three_directory_sha_parity": "8/8",
+    "formal_assets_modified": false
+  },
+  "git": {
+    "audited_main": "90786c6790f718859b11ded2b8a08c368b8808ef",
+    "asset_and_installer_tree_unchanged": true
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260820-v13.json",
+    "local_contract": "pass",
+    "authorized_real_smoke": "2 routes attempted",
+    "result": "both routes returned upstream 403 INSUFFICIENT_BALANCE",
+    "artifact_count": 0,
+    "formal_assets_changed": false,
+    "channel_after_smoke": "probe_pending",
+    "further_retry": "not sent"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260820-v11.json",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates_pending_review": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ]
+  },
+  "boundaries": {
+    "full_codex_app_refresh_role_direction_animation_loop_acceptance": "unverified",
+    "hook_eof": "open stdin still waits for EOF; issue 689 remains open",
+    "petdex_owned_slug_review": "six updates remain pending review"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "local release gates and formal assets remain unchanged; authorized image generation reached the upstream but remains blocked by insufficient balance; external PetDex review, full Codex App acceptance and Hook EOF fix remain open"
+}

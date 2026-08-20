@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T12:04:00Z",
+  "scope": "authorized local Docker image service smoke and post-failure channel recheck",
+  "service": {
+    "container": "healthy",
+    "capabilities": "pass",
+    "contract_check": "pass",
+    "agent_doctor": "pass",
+    "runtime_before_smoke": "pass",
+    "state_backend": "sqlite",
+    "recommended_concurrency": 1
+  },
+  "smoke": {
+    "authorized": true,
+    "formal_assets_modified": false,
+    "artifact_count": 0,
+    "dimension_check": "not_reached",
+    "attempts": [
+      {
+        "route": "server_orchestrated_job",
+        "request_mode": "images-non-stream",
+        "status": "failed",
+        "error_code": "upstream_auth_failed",
+        "upstream_status": 403,
+        "reason": "INSUFFICIENT_BALANCE"
+      },
+      {
+        "route": "agent_json_diagnostic",
+        "request_mode": "images-sse",
+        "status": "failed",
+        "error_code": "upstream_auth_failed",
+        "upstream_status": 403,
+        "reason": "INSUFFICIENT_BALANCE"
+      }
+    ],
+    "retry_policy": "no retry with failed idempotency keys; no further billable request sent"
+  },
+  "channel_after_smoke": {
+    "state": "probe_pending",
+    "healthy_credentials": 0,
+    "unhealthy_credentials": 1,
+    "effective_request_modes": [],
+    "cooldown_reason": "INSUFFICIENT_BALANCE"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "local service and contracts pass; both authorized smoke routes reached the upstream but were blocked by insufficient balance; no image or formal asset change"
+}

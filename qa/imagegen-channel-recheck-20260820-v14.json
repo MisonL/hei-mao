@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T12:35:26Z",
+  "scope": "post-user-confirmation local and deployed image-channel recheck",
+  "service_checks": {
+    "local_docker": {
+      "capabilities": "pass",
+      "runtime_contract": "pass",
+      "channel_health": "probe_pending",
+      "effective_request_modes": []
+    },
+    "deployed_service": {
+      "capabilities": "pass",
+      "runtime_contract": "pass",
+      "channel_health": "healthy",
+      "effective_request_modes": ["images-non-stream"]
+    }
+  },
+  "authorized_smoke": {
+    "authorized": true,
+    "attempts": [
+      {
+        "service": "local_docker",
+        "route": "server_orchestrated",
+        "status": "rejected_before_upstream",
+        "error_code": "configuration_error",
+        "reason": "no healthy images-non-stream or images-sse channel",
+        "artifact_count": 0
+      },
+      {
+        "service": "deployed_service",
+        "route": "server_orchestrated_job",
+        "status": "failed",
+        "error_code": "upstream_auth_failed",
+        "upstream_status": 403,
+        "retryable": false,
+        "artifact_count": 0
+      },
+      {
+        "service": "deployed_service",
+        "route": "server_orchestrated_job",
+        "status": "failed",
+        "error_code": "upstream_auth_failed",
+        "upstream_status": 403,
+        "retryable": false,
+        "artifact_count": 0
+      }
+    ],
+    "independent_upstream_probe": "skipped_missing_independent_credentials",
+    "formal_assets_modified": false,
+    "retry_policy": "failed terminal operations were not reused; no further billable retry after repeated non-retryable 403"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "result": "service contracts pass, but no valid image was produced; local Docker remains probe_pending and the deployed upstream rejected both authorized smoke requests with 403"
+}
