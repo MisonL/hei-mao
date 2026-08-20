@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T07:11:06Z",
+  "scope": "final main synchronization and public README reachability after current QA evidence commit",
+  "source_commit": "d55dcf7c966bdb8b04bc64d4d6bb2cd420fd953c",
+  "branches": {
+    "repository_main": "d55dcf7c966bdb8b04bc64d4d6bb2cd420fd953c",
+    "github_main": "d55dcf7c966bdb8b04bc64d4d6bb2cd420fd953c",
+    "gitlab_main": "d55dcf7c966bdb8b04bc64d4d6bb2cd420fd953c",
+    "github_gitlab_delta": 0,
+    "repository_remote_delta": 0
+  },
+  "public_files": {
+    "github_raw_readme_http_status": 200,
+    "github_raw_readme_contains_current_v2_evidence": true,
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "worktree": {
+    "tracked_changes": false,
+    "pre_existing_untracked_path_preserved": true
+  },
+  "result": "final main branches and public README verified"
+}

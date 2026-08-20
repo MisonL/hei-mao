@@ -29,7 +29,7 @@ npx -y petdex@latest install hei-mao-traveler
 
 本轮继续复核本地 Docker 生图服务后，容器、运行时和 Agent 合同均通过；当前渠道为 `jisuanyun-gpt-image`，进程内健康快照显示 `images-non-stream` 与 `images-sse` 可用。真实上游计费 smoke 本轮未发送，也没有创建 artifact 或替换正式资产；独立上游探针未注入密钥而返回 `401 API_KEY_REQUIRED`，不能据此判断上游可用性。最新脱敏复核见 `qa/imagegen-channel-recheck-20260820-v11.json`；未明确确认余额和授权前不重试计费请求。
 
-2026-08-20 收尾复核中，八个正式角色均重新通过 v2 图集、连续性和透明度门禁，hatch-pet 测试为 `28 passed`，安装器语法、ShellCheck 和 PowerShell 解析均通过，仓库、本机 Codex 与本机 PetDex 三处目录 SHA 一致；11 个透明空洞候选均确认为与外部相连的合法开放负空间，没有填充主体内部洞。当前发布提交为 `242cd938`，最新脱敏证据见 `qa/current-state-recheck-20260820-v15.json`、`qa/current-v2-gate-recheck-20260820-v11.json` 和 `qa/current-v2-alpha-review-20260820-v2.json`。线上 PetDex 资源仍只有 2/8 与仓库一致，另有 6 个 owned-slug 更新待审核；PetDex Desktop 的 8/8 角色切换与恢复、40 秒动画采样、气泡显示和跨屏跟随已取得实际证据，完整 Codex App 刷新与方向选择验收仍未完成。
+2026-08-20 收尾复核中，八个正式角色均重新通过 v2 图集、连续性和透明度门禁，hatch-pet 测试为 `28 passed`，安装器语法、ShellCheck 和 PowerShell 解析均通过，仓库、本机 Codex 与本机 PetDex 三处目录 SHA 一致；11 个透明空洞候选均确认为与外部相连的合法开放负空间，没有填充主体内部洞。本轮资产复核基线为 `242cd938`，当前发布提交为 `d55dcf7`；最新脱敏证据见 `qa/current-state-recheck-20260820-v15.json`、`qa/current-v2-gate-recheck-20260820-v11.json` 和 `qa/current-v2-alpha-review-20260820-v2.json`。线上 PetDex 资源仍只有 2/8 与仓库一致，另有 6 个 owned-slug 更新待审核；PetDex Desktop 的 8/8 角色切换与恢复、40 秒动画采样、气泡显示和跨屏跟随已取得实际证据，完整 Codex App 刷新与方向选择验收仍未完成。
 
 本机全局 PetDex CLI 已升级并复核为 `1.2.2`；PetDex Desktop 最新公开版本为 `v0.8.0`，官方签名 DMG 已校验并安装到标准 Applications 目录。通过官方 `petdex://<slug>` 入口逐一选择八个已安装角色后，均正确生效并恢复到 `hei-mao-traveler`；40 秒采样中有 34/39 个相邻间隔发生动画变化，未见裁切或明显比例跳变。当前跨屏气泡跟随、间距和原位置恢复均通过实际复核，证据见 `qa/petdex-desktop-live-recheck-20260820-v3.json` 和 `qa/petdex-desktop-multidisplay-recheck-20260820-v2.json`。完整 Codex App 刷新验收仍单独保留为未完成边界。安装与签名证据见 `qa/petdex-desktop-install-recheck-20260814.json`。`petdex bubble` 在 stdin 已收到 payload 但写端保持打开时仍会等待 EOF，#689 仍未修复；最新隔离复现见 `qa/petdex-hook-eof-recheck-20260820-v2.json`。
 
@@ -371,7 +371,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/current-v2-alpha-review-20260820-v2.json`: 2026-08-20T07:02:29Z 绑定提交 `242cd938` 的 11 个 alpha-hole 候选高对比复核；全部是与外部相连的合法开放负空间，封闭主体透明洞 0；不含本机环境信息
 - `qa/remote-main-sync-recheck-20260820-v1.json`: 2026-08-20T05:19:14Z 复核当前提交 `6968f63` 的本地、GitHub 和 GitLab `main` 一致，GitHub raw README 可读取；保留用户原有未跟踪目录，不含本机环境信息
 - `qa/remote-main-sync-recheck-20260820-v2.json`: 2026-08-20T06:11:10Z 复核当前提交 `942359b` 的本地、GitHub 和 GitLab `main` 一致，GitHub raw README 可读取并包含 PetDex v8 证据；保留用户原有未跟踪目录，不含本机环境信息
-- `qa/remote-main-sync-recheck-20260820-v3.json`: 2026-08-20T07:02:29Z 绑定提交 `242cd938` 的本地、GitHub 和 GitLab `main` 一致性、GitHub raw README 可达性和工作树边界复核；保留用户原有未跟踪目录，不含本机环境信息
+- `qa/remote-main-sync-recheck-20260820-v3.json`: 2026-08-20T07:11:06Z 绑定提交 `d55dcf7` 的最终本地、GitHub 和 GitLab `main` 一致性、GitHub raw README 可达性和工作树边界复核；保留用户原有未跟踪目录，不含本机环境信息
 - `qa/current-head-recheck-20260820-v1.json`: 2026-08-20T02:10:59Z 基于正式资产提交 `9876004` 的八角色 v2 合同、连续性、28 项 hatch-pet 测试、安装器检查、三目录 SHA parity、双远端主线和 PetDex 公开资源复核；本地门禁与远端同步通过，六个 owned-slug 更新和 Codex App 视觉验收仍未闭合；不含本机环境信息
 - `qa/petdex-desktop-multidisplay-recheck-20260820-v1.json`: 2026-08-20T02:38:00Z PetDex Desktop v0.8.0 只读多显示器探针；旅行家在第二块显示器完整显示，3 次采样有动画变化，未见裁切或明显比例失衡；多角色切换、气泡跟随和长时回环仍未验收；不含本机环境信息
 - `qa/petdex-desktop-multidisplay-recheck-20260820-v2.json`: 2026-08-20T04:47:21Z PetDex Desktop v0.8.0 跨屏气泡跟随复核；两个显示器均保持宠物与气泡清晰分离，原显示器已恢复；不含本机环境信息
