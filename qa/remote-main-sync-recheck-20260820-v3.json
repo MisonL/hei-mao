@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-08-20T07:21:33Z",
+  "checked_at": "2026-08-20T07:25:03Z",
   "scope": "final main synchronization and public README reachability after current QA evidence commit",
-  "source_commit": "3e953fec082d958959aef0ac137785ea888fe52d",
+  "source_commit": "b77e98e7d5021dfa2e6be87b59270f81bc545fdd",
   "branches": {
-    "repository_main": "3e953fec082d958959aef0ac137785ea888fe52d",
-    "github_main": "3e953fec082d958959aef0ac137785ea888fe52d",
-    "gitlab_main": "3e953fec082d958959aef0ac137785ea888fe52d",
+    "repository_main": "b77e98e7d5021dfa2e6be87b59270f81bc545fdd",
+    "github_main": "b77e98e7d5021dfa2e6be87b59270f81bc545fdd",
+    "gitlab_main": "b77e98e7d5021dfa2e6be87b59270f81bc545fdd",
     "github_gitlab_delta": 0,
     "repository_remote_delta": 0
   },
