@@ -1,0 +1,98 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-08-20T07:02:29Z",
+  "checked_commit": "242cd938f39ab4d8cbe6076b7d17cc7b69f41c34",
+  "scope": "fresh eight-role v2 gate, continuity scan, and high-contrast alpha candidate review",
+  "runtime": {
+    "python": "hatch-pet-runtime Python 3.13.7",
+    "pillow": "12.3.0",
+    "validators": ["validate_atlas.py --require-v2", "measure_direction_continuity.py"]
+  },
+  "roles": {
+    "hei-mao": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["000"],
+          "rows": [12],
+          "classification": "intentional_open_negative_space",
+          "evidence": "The gap is between the ears and remains connected to the exterior background; it does not cut through the filled head silhouette."
+        }
+      ]
+    },
+    "hei-mao-quality": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 5,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-butler": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-chef": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-delivery": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["202.5", "225", "247.5"],
+          "rows": [19, 20, 21],
+          "classification": "intentional_open_negative_space",
+          "evidence": "Each candidate is the open gap between the ears and connects to the exterior background; the body, uniform, and delivery pack remain filled and attached."
+        }
+      ]
+    },
+    "hei-mao-foodie": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 9,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["180"],
+          "rows": [17, 18],
+          "classification": "intentional_open_negative_space",
+          "evidence": "The candidate is the open gap between the ears and does not enter the filled head, apron, or handheld food props."
+        }
+      ]
+    },
+    "hei-mao-fortune": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 4,
+      "alpha_hole_candidates": []
+    },
+    "hei-mao-traveler": {
+      "atlas_gate": "pass",
+      "continuity_warning_count": 9,
+      "alpha_hole_candidates": [
+        {
+          "directions": ["000", "045", "135", "157.5", "180", "202.5"],
+          "rows": [18, 198, 199, 200, 201],
+          "classification": "intentional_open_negative_space",
+          "evidence": "The upper candidate is the ear gap; the lower candidates are spaces between separated feet or lower-body parts and remain open to the bottom exterior, with no enclosed transparent component in the torso, backpack, or pouch."
+        }
+      ]
+    }
+  },
+  "review_method": {
+    "alpha": "Each flagged cell was inspected on a high-contrast background and as a binary silhouette mask; flagged spans connect to the exterior through the neighboring visible rows.",
+    "continuity": "Metric warnings were checked against the normal-size ordered direction loop and retained only when no visible snap, pop, seam, broken attachment, or semantic reversal was present.",
+    "decision": "All 11 alpha-hole candidates are legal open negative space. No filled-silhouette interior hole was found, so no atlas mutation or regeneration is warranted."
+  },
+  "summary": {
+    "roles_checked": 8,
+    "atlas_gate_passed": 8,
+    "alpha_hole_candidates": 11,
+    "alpha_hole_hard_failures": 0,
+    "continuity_policy": "review warnings are evidence, not failures without a visible motion or semantic defect",
+    "result": "local_v2_gate_pass; all alpha-hole candidates are documented open negative space"
+  },
+  "limitations": [
+    "This evidence does not close the separate Codex App full visual acceptance boundary.",
+    "This evidence does not change PetDex external review or publication state."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T07:02:29Z",
+  "source_commit": "242cd938f39ab4d8cbe6076b7d17cc7b69f41c34",
+  "scope": "current eight-role release, fresh local gates, desktop interaction and external boundaries",
+  "local_release": {
+    "roles": 8,
+    "atlas_gate": "8/8 pass",
+    "contract": "1536x2288, 8x11, RGBA WEBP, spriteVersionNumber=2",
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "continuity": "8/8 ok with reviewed warnings",
+    "alpha_hole_review": "11 candidates, all intentional open negative space; 0 hard failures",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "bash syntax, ShellCheck, PowerShell parse, JSON parse and diff check pass",
+    "three_directory_sha_parity": "8/8 roles"
+  },
+  "desktop": {
+    "cli_version": "1.2.2",
+    "desktop_version": "0.8.0",
+    "process_state": "running",
+    "role_switching": "8/8 PetDex URI selections accepted and restored",
+    "long_duration_loop": "40 samples, 34/39 adjacent intervals changed, no visible crop or proportion jump",
+    "bubble_follow": "pass on both displays; no overlap; original display restored",
+    "evidence": [
+      "qa/petdex-desktop-live-recheck-20260820-v3.json",
+      "qa/petdex-desktop-multidisplay-recheck-20260820-v2.json"
+    ],
+    "full_codex_app_refresh_and_direction_acceptance": "unverified"
+  },
+  "hooks": {
+    "closed_stdin": "normal exit",
+    "open_stdin": "still waits for EOF",
+    "issue_689": "open and unchanged",
+    "evidence": "qa/petdex-hook-eof-recheck-20260820-v2.json"
+  },
+  "petdex": {
+    "manifest_generated_at": "2026-08-20T00:46:43.668Z",
+    "manifest_entries": 4569,
+    "current_roles": 8,
+    "public_metadata": "8/8 actual metadata v2, 1536x2288, RGBA WEBP",
+    "public_sprites_in_sync": "2/8",
+    "owned_slug_updates_pending_review": ["hei-mao", "hei-mao-quality", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"],
+    "historical_duplicate": "hei-mao-2",
+    "duplicate_submission_created": false
+  },
+  "image_generation": {
+    "local_docker": "healthy",
+    "channel": "jisuanyun-gpt-image",
+    "contract": "pass",
+    "healthy_request_modes": ["images-non-stream", "images-sse"],
+    "billable_smoke": "not sent",
+    "formal_assets_modified": false,
+    "evidence": "qa/imagegen-channel-recheck-20260820-v11.json"
+  },
+  "upstream": {
+    "issue_689": "open; unchanged",
+    "pr_710": "open draft; unchanged",
+    "latest_release": "desktop-v0.8.0",
+    "stdin_eof_semantics_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "desktop_screenshots_retained": false
+  },
+  "result": "fresh local gates pass; PetDex owned-slug review, Hook EOF upstream fix and full Codex App refresh remain open boundaries"
+}

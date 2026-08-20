@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T07:02:29Z",
+  "source_commit": "242cd938f39ab4d8cbe6076b7d17cc7b69f41c34",
+  "scope": "fresh eight-role v2 atlas, continuity, transparency, test, installer and local parity recheck",
+  "runtime": "hatch-pet dedicated runtime Python 3.13.7 with Pillow 12.3.0",
+  "roles": {
+    "hei-mao": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-quality": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 5, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-butler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-chef": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-delivery": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 6, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-foodie": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-fortune": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 4, "transparent_rgb_residue_pixels": 0},
+    "hei-mao-traveler": {"atlas_gate": "pass", "continuity_ok": true, "continuity_warning_count": 9, "transparent_rgb_residue_pixels": 0}
+  },
+  "atlas_contract": {
+    "roles_passed": 8,
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WEBP",
+    "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "tests": {
+    "hatch_pet": "28 passed, 37 deprecation warnings",
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "json_parse": "pass",
+    "git_diff_check": "pass"
+  },
+  "three_directory_sha_parity": {
+    "roles": "8/8",
+    "files": "pet.json and spritesheet.webp",
+    "locations": "repository, Codex local directory, PetDex local directory",
+    "result": "pass"
+  },
+  "alpha_review": "qa/current-v2-alpha-review-20260820-v2.json",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "fresh local v2 and installation gates pass; continuity warnings are reviewed minor evidence"
+}
