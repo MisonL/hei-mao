@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T10:35:00Z",
+  "scope": "post-sync local, GitLab and GitHub main parity recheck",
+  "source_commit": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+  "branches": {
+    "repository_main": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+    "github_main": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+    "gitlab_main": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+    "github_gitlab_delta": 0,
+    "repository_remote_delta": 0
+  },
+  "change_scope": {"pets_tree_changed_since_previous_audit": false, "installers_changed_since_previous_audit": false, "qa_and_readme_only_sync_commit": true},
+  "worktree": {"tracked_changes": false, "pre_existing_untracked_path_preserved": true},
+  "privacy": {"credentials_recorded": false, "local_absolute_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false},
+  "result": "local, GitHub and GitLab main are identical at the post-sync audit commit"
+}

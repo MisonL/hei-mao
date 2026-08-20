@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T10:35:00Z",
+  "source_commit": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+  "scope": "post-sync release state snapshot; asset and release logic parity checked against the preceding audited commit",
+  "git": {
+    "local_main": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+    "gitlab_main": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+    "github_main": "42e5601d027560a9d7b77a6a6fd705c9ac77a606",
+    "remote_parity": "pass"
+  },
+  "asset_gate": {
+    "audited_commit": "75c85d00d7f663d0ea1c7238df62cf9a766f0e35",
+    "current_commit_asset_tree_unchanged": true,
+    "current_commit_installers_and_release_logic_unchanged": true,
+    "evidence": "qa/current-v2-gate-recheck-20260820-v12.json",
+    "result": "the current commit preserves the audited 8/8 v2 atlas, continuity, transparency, test and parity results"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260820-v11.json",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates_pending_review": ["hei-mao", "hei-mao-quality", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"]
+  },
+  "boundaries": {
+    "full_codex_app_refresh_role_direction_animation_loop_acceptance": "unverified",
+    "hook_eof": "open stdin still waits for EOF; issue 689 remains open",
+    "real_billed_image_smoke": "not sent; billing and credential authorization not provided"
+  },
+  "worktree": {"tracked_changes": false, "pre_existing_untracked_path_preserved": true},
+  "privacy": {"credentials_recorded": false, "local_absolute_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false},
+  "result": "post-sync GitHub/GitLab/local parity passes; audited assets and release logic remain unchanged; required external and Codex App boundaries remain open"
+}
