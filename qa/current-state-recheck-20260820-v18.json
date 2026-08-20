@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T09:22:19Z",
+  "source_commit": "5b286e56d43e8e0bdd818ccd8a2cac3e4de65116",
+  "scope": "fresh local release gates, current PetDex public resources, upstream Hook state and safe Codex App boundary",
+  "local_release": {
+    "roles": 8,
+    "role_ids": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "atlas_contract": "1536x2288, 8x11, RGBA WEBP, spriteVersionNumber=2",
+    "atlas_gate": "8/8 pass; validator errors=0; validator warnings=0",
+    "continuity": "8/8 ok with previously reviewed minor warnings",
+    "transparent_rgb_residue_pixels": 0,
+    "hatch_pet_tests": "28 passed; Pillow deprecation warnings only",
+    "installer_checks": {
+      "bash_syntax": "pass",
+      "shellcheck": "pass",
+      "powershell_parse": "pass",
+      "json_parse": "pass",
+      "git_diff_check": "pass"
+    },
+    "three_directory_sha_parity": "8/8 roles x pet.json and spritesheet.webp across repository, Codex and PetDex local directories",
+    "public_tracked_file_privacy_scan": "pass; no local paths, private network addresses or bearer tokens",
+    "user_untracked_path_preserved": true
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "manifest_generated_at": "2026-08-20T06:31:51.943Z",
+    "manifest_entries": 4569,
+    "current_roles_public": "8/8",
+    "metadata_contract": "8/8 HTTP 200, id matches and actual spriteVersionNumber=2",
+    "public_sprite_sha_match": {
+      "hei-mao": false,
+      "hei-mao-quality": false,
+      "hei-mao-butler": true,
+      "hei-mao-chef": true,
+      "hei-mao-delivery": false,
+      "hei-mao-foodie": false,
+      "hei-mao-fortune": false,
+      "hei-mao-traveler": false
+    },
+    "owned_slug_updates_pending_review": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2",
+    "duplicate_submission_created": false
+  },
+  "upstream": {
+    "issue_689": {
+      "state": "open",
+      "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住"
+    },
+    "pr_710": {
+      "state": "open",
+      "draft": true,
+      "merge_state": "blocked",
+      "title": "WIP: Native bubble revamp and platform parity"
+    }
+  },
+  "hook_eof_recheck": {
+    "closed_stdin": {
+      "exit_code": 0,
+      "elapsed_ms": 314
+    },
+    "open_stdin": {
+      "timeout_protected": true,
+      "natural_exit_before_timeout": false,
+      "result": "still waits for EOF"
+    },
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_stopped_or_restarted": false
+  },
+  "codex_app_boundary": {
+    "chatgpt_process_present": true,
+    "screen_window_owner_seen": "ChatGPT",
+    "accessibility_window_query": "permission error -1728",
+    "full_refresh_role_direction_loop_acceptance": "unverified",
+    "settings_or_process_mutation_attempted": false
+  },
+  "image_generation": {
+    "local_docker_contract_and_smoke": "previously verified",
+    "real_billed_smoke": "not sent; explicit billing and credential authorization not provided",
+    "formal_assets_changed": false
+  },
+  "result": "local release gates pass; PetDex six owned-slug updates, upstream Hook EOF fix and full Codex App acceptance remain open boundaries"
+}
