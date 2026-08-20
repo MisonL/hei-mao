@@ -66,7 +66,7 @@ Petdex CLI 会把成功安装的角色同时写入 Petdex Desktop 与 Codex App 
 ~/.codex/pets/<slug>
 ```
 
-此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。`qa/current-state-recheck-20260817-v7.json` 代表比例修复前状态；本轮角色比例修复以及 Quality 两条 look row 的连贯重生成以各自 `proportion-*.json`、`final-visual-qa.json` 和 `run-summary.json` 为准。当前 PetDex manifest、公开资源和隔离下载以 `qa/petdex-live-recheck-20260820-v9.json`、`qa/current-state-recheck-20260820-v18.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
+此前的 2026-08-10、2026-08-13 和 v2-v35 复核快照仍保留在对应 `qa/` 文件中，仅用于追溯历史漂移，不代表当前线上状态。`qa/current-state-recheck-20260817-v7.json` 代表比例修复前状态；本轮角色比例修复以及 Quality 两条 look row 的连贯重生成以各自 `proportion-*.json`、`final-visual-qa.json` 和 `run-summary.json` 为准。当前 PetDex manifest、公开资源和隔离下载以 `qa/petdex-live-recheck-20260820-v10.json`、`qa/current-state-recheck-20260820-v18.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json` 为准；Desktop、Hook 和 Codex App 的边界仍以专项证据为背景，不能替代新的线上发布结论。
 
 本机当前保留八个角色，八个角色的 v2 结构、透明度和连续性门禁均通过。Quality 的两条 coherent look row 已重新生成并统一到中性帧比例：row 9 为 `179-194px`、row 10 为 `189-196px`，共同基线底部为 `201px`；独立盲测的 cardinal 硬门禁和严格多数验证通过，中间方向 warning 已保留。Quality 最新证据见 `qa/hei-mao-quality/recovery-v2/`；此前阻断期间的文件仍保留在 `qa/hei-mao-quality/`，仅用于历史追溯。
 
@@ -176,7 +176,7 @@ npx -y petdex@latest install hei-mao-delivery
 HEI_MAO_PET_ID=hei-mao-fortune curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-fortune bash
 ```
 
-Petdex 发布状态：条目已进入公开 manifest，`npx -y petdex@latest install hei-mao-fortune` 已在隔离环境成功；本地最新 v2 图集更新已按 owned-slug 规则提交并排入管理员审核，当前线上仍是审核时的旧图集，没有重复 submit。当前资源、编辑队列和安装结果见 `qa/petdex-live-recheck-20260820-v8.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`；此前 `pending`/`409 pet_not_editable` 记录仅用于解释审核边界。
+Petdex 发布状态：条目已进入公开 manifest，`npx -y petdex@latest install hei-mao-fortune` 已在隔离环境成功；本地最新 v2 图集更新已按 owned-slug 规则提交并排入管理员审核，当前线上仍是审核时的旧图集，没有重复 submit。当前资源、编辑队列和安装结果见 `qa/petdex-live-recheck-20260820-v10.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`；此前 `pending`/`409 pet_not_editable` 记录仅用于解释审核边界。
 
 ### 品控官角色
 
@@ -204,7 +204,7 @@ Quality 的比例、方向盲测和透明度证据见 `qa/hei-mao-quality/recove
 HEI_MAO_PET_ID=hei-mao-traveler curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-traveler bash
 ```
 
-Petdex 发布状态：条目已进入公开 manifest，`npx -y petdex@latest install hei-mao-traveler` 已在隔离环境成功；本地最新 v2 图集更新已按 owned-slug 规则提交并排入管理员审核，当前线上仍是审核时的旧图集，没有重复 submit。当前资源、编辑队列和安装结果见 `qa/petdex-live-recheck-20260820-v8.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`。
+Petdex 发布状态：条目已进入公开 manifest，`npx -y petdex@latest install hei-mao-traveler` 已在隔离环境成功；本地最新 v2 图集更新已按 owned-slug 规则提交并排入管理员审核，当前线上仍是审核时的旧图集，没有重复 submit。当前资源、编辑队列和安装结果见 `qa/petdex-live-recheck-20260820-v10.json` 和 `qa/petdex-live-install-recheck-20260819-v2.json`。
 
 ### 一键安装
 
@@ -395,6 +395,7 @@ cp pets/hei-mao/pet.json pets/hei-mao/spritesheet.webp ~/.codex/pets/hei-mao/
 - `qa/petdex-live-recheck-20260820-v7.json`: 2026-08-20T01:17:00Z manifest 刷新至 2026-08-20T00:46:43.668Z 后重新下载八个公开 metadata/图集；8/8 HTTP 200、实际 metadata v2、1536x2288、RGBA WEBP，metadata SHA 7/8 与仓库一致，图集 SHA 2/8 与仓库一致，六个 owned-slug 更新仍待审核；不含本机环境信息
 - `qa/petdex-live-recheck-20260820-v8.json`: 2026-08-20T05:57:59Z 重新读取官方 manifest 并实际下载八个公开图集；8/8 metadata HTTP 200 且实际为 v2，图集 SHA 仍为 2/8 与仓库一致，六个 owned-slug 更新仍待审核；不含本机环境信息
 - `qa/petdex-live-recheck-20260820-v9.json`: 2026-08-20T07:31:00Z 重新读取官方 manifest（生成于 2026-08-20T06:31:51.943Z）并实际下载八个公开图集与 metadata；8/8 metadata id 和实际 spriteVersionNumber=2，图集 SHA 仍为 2/8 与仓库一致，六个 owned-slug 更新仍待审核；不含本机环境信息
+- `qa/petdex-live-recheck-20260820-v10.json`: 2026-08-20T09:22:19Z 刷新官方 manifest、八个公开 metadata 和图集 SHA；8/8 metadata 为 v2，线上图集仍 2/8 与仓库一致，六个 owned-slug 更新仍待审核；不含本机环境信息
 - `qa/remote-main-sync-recheck-20260820-v4.json`: 2026-08-20T07:46:20Z 绑定提交 `6ae54de` 的本地、GitHub 和 GitLab `main` 一致性、GitHub raw README 可达性和工作树边界复核；不含本机环境信息
 - `qa/current-state-recheck-20260820-v4.json`: 2026-08-19T20:55:00Z 绑定复核基线 `922b2cc` 的本地发布门禁、PetDex 4569 条目/6 个 owned-slug 待审核、生图渠道 `probe_pending` 和 Codex App 未验证边界汇总；不含本机环境信息
 - `qa/current-state-recheck-20260820-v5.json`: 2026-08-19T21:07:23Z 绑定提交 `94d5cca` 的八角色本地发布门禁、最新生图 TLS 阻断、PetDex 六个 owned-slug 待审核和 Codex App 未验证边界汇总；不含本机环境信息
