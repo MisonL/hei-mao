@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T08:49:43Z",
+  "scope": "read-only PetDex upstream issue, PR, commit, tag, and release refresh",
+  "issue_689": {
+    "state": "closed",
+    "closed_at": "2026-08-29T22:05:38Z",
+    "comments": 0,
+    "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住"
+  },
+  "merged_pr_752": {
+    "state": "closed",
+    "merged_at": "2026-08-29T22:05:37Z",
+    "merge_commit": "27afee8f8cf0d3edd7817321855eaaa8a15f2790"
+  },
+  "closed_pr_738": {
+    "state": "closed",
+    "merged_at": null,
+    "merge_commit": "9160ed15f13f536fdddea688ff2c53989d038027"
+  },
+  "draft_pr_710": {
+    "state": "open",
+    "draft": true,
+    "merged_at": null,
+    "title": "WIP: Native bubble revamp and platform parity"
+  },
+  "latest_upstream": {
+    "commit": "5323e43624bdd065fc65f3b3aa572404d51ce75d",
+    "commit_message": "fix(built-with): keep hero content visible (#765)",
+    "commit_at": "2026-08-30T08:23:25Z",
+    "changed_scope": "built-with page only; no Hook or pet asset files",
+    "cli_release": "cli-v1.3.0",
+    "cli_release_published_at": "2026-08-30T05:27:13Z",
+    "desktop_release": "desktop-v0.9.1",
+    "desktop_release_published_at": "2026-08-30T06:19:16Z"
+  },
+  "mutation_performed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false
+  },
+  "result": "A fresh read-only refresh confirms that issue 689 remains closed through merged PR 752, PR 710 remains an unrelated open draft, and upstream main advanced only with PR 765's built-with page fix. CLI 1.3.0 and Desktop 0.9.1 remain the latest public releases."
+}

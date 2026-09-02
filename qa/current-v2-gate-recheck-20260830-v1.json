@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T05:40:51Z",
+  "scope": "fresh eight-role v2 atlas, continuity, and repository hygiene recheck",
+  "atlas_gate": {
+    "roles_passed": "8/8",
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WebP",
+    "mode": "RGBA",
+    "rows": 11,
+    "columns": 8,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "roles": [
+    {"slug":"hei-mao","chroma_key":"#00FF00","continuity_warning_count":6,"continuity_alpha_holes":1},
+    {"slug":"hei-mao-quality","chroma_key":"#FF00FF","continuity_warning_count":5,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-butler","chroma_key":"#00FF00","continuity_warning_count":6,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-chef","chroma_key":"#00FFFF","continuity_warning_count":6,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-foodie","chroma_key":"#FF00FF","continuity_warning_count":9,"continuity_alpha_holes":1},
+    {"slug":"hei-mao-delivery","chroma_key":"#FF00FF","continuity_warning_count":6,"continuity_alpha_holes":3},
+    {"slug":"hei-mao-fortune","chroma_key":"#00FFFF","continuity_warning_count":4,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-traveler","chroma_key":"#FF00FF","continuity_warning_count":9,"continuity_alpha_holes":6}
+  ],
+  "continuity": {
+    "roles_checked": "8/8",
+    "validator_errors": 0,
+    "warnings_are_reviewed": true,
+    "alpha_holes_are_reviewed_natural_or_open_negative_space": true,
+    "visible_ratio_or_registration_hard_failure": false
+  },
+  "tests": {
+    "hatch_pet": "28 passed",
+    "python": "3.14.7",
+    "pillow": "12.3.0",
+    "pytest_warnings": "37 deprecation warnings only",
+    "shellcheck": "passed",
+    "bash_parse": "passed",
+    "powershell_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed"
+  },
+  "local_parity": {
+    "repository_codex_pets_petdex_pets": "16/16 files byte-identical",
+    "stale_historical_slug_directories": 0
+  },
+  "privacy": {
+    "public_text_scan_matches": 0,
+    "credentials_or_tokens": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false
+  },
+  "formal_assets_modified": false,
+  "result": "All eight v2 atlases pass fresh validation with the role-specific chroma keys. Continuity metrics retain previously reviewed natural-negative-space and local-outlier warnings only; no visible proportion, clipping, identity, or direction hard failure was found."
+}

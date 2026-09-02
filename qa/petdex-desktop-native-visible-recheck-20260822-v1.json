@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T01:31:00Z",
+  "scope": "read-only PetDex Desktop native window visibility and current-pet visual probe",
+  "desktop_version": "0.8.0",
+  "window": {
+    "original_position": [-1642, 339],
+    "temporary_probe_position": [120, 220],
+    "size": [135, 146],
+    "restored_position": [-1642, 339],
+    "screen_count_during_probe": 1
+  },
+  "visual_probe": {
+    "active_pet": "hei-mao-traveler",
+    "capture": "full-screen capture after temporary move; transparent window itself not directly capturable",
+    "subject_visible": true,
+    "full_body_visible": true,
+    "backpack_visible": true,
+    "props_visible": true,
+    "cropped": false,
+    "squashed_or_stretched": false,
+    "pet_bubble_overlap_seen": false,
+    "evidence_image": "temporary local capture not retained in repository"
+  },
+  "safety": {
+    "ui_input_sent": false,
+    "codex_or_chatgpt_processes_touched": false,
+    "settings_changed": false,
+    "petdex_position_restored": true
+  },
+  "boundary": "This proves the current hei-mao-traveler rendering after moving the PetDex window onto the available display. It does not prove eight-role refresh, per-role selection, four-direction switching, animation loops, or a real two-display scenario."
+}

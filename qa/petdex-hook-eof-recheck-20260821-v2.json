@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T13:12:00Z",
+  "scope": "isolated PetDex CLI Hook stdin lifecycle recheck",
+  "cli_version": "1.2.2",
+  "test": {
+    "command": "petdex bubble pre codex",
+    "payload": "minimal valid JSON tool event",
+    "closed_stdin_exit_code": 0,
+    "closed_stdin_elapsed_ms": 132,
+    "open_stdin_timeout_ms": 1500,
+    "open_stdin_natural_exit_before_timeout": false,
+    "open_stdin_result": "still waits for EOF",
+    "test_child_cleanup": "only isolated test children were terminated after timeout"
+  },
+  "upstream_boundary": {
+    "issue": "689",
+    "state": "open",
+    "same_semantics_reproduced": true,
+    "draft_pr_710_changes_stdin_semantics": false
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false
+  },
+  "privacy": {
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "closed stdin exits normally; open stdin still waits for EOF and remains an upstream issue 689 boundary"
+}

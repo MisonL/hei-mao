@@ -1,0 +1,973 @@
+{
+  "ok": true,
+  "frames_root": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames",
+  "states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20439,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20108,
+          "bbox": [
+            26,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20232,
+          "bbox": [
+            25,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20131,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20119,
+          "bbox": [
+            26,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20179,
+          "bbox": [
+            25,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running-right",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19060,
+          "bbox": [
+            30,
+            15,
+            162,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19896,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19439,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19155,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19194,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19435,
+          "bbox": [
+            25,
+            15,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19206,
+          "bbox": [
+            27,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-right/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19524,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19062,
+          "bbox": [
+            30,
+            15,
+            161,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19934,
+          "bbox": [
+            27,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19439,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19155,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19194,
+          "bbox": [
+            26,
+            15,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20191,
+          "bbox": [
+            20,
+            15,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19062,
+          "bbox": [
+            28,
+            15,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running-left/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19028,
+          "bbox": [
+            31,
+            15,
+            161,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "waving",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waving/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20605,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waving/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20785,
+          "bbox": [
+            20,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waving/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20232,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waving/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20637,
+          "bbox": [
+            22,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "jumping",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/jumping/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22844,
+          "bbox": [
+            20,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/jumping/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21372,
+          "bbox": [
+            16,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/jumping/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21995,
+          "bbox": [
+            14,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/jumping/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19712,
+          "bbox": [
+            20,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/jumping/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23262,
+          "bbox": [
+            16,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "failed",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18669,
+          "bbox": [
+            5,
+            36,
+            187,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18329,
+          "bbox": [
+            5,
+            35,
+            187,
+            173
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16754,
+          "bbox": [
+            5,
+            42,
+            187,
+            165
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14555,
+          "bbox": [
+            5,
+            47,
+            187,
+            160
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14249,
+          "bbox": [
+            5,
+            54,
+            187,
+            154
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13622,
+          "bbox": [
+            8,
+            55,
+            183,
+            153
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14639,
+          "bbox": [
+            10,
+            51,
+            182,
+            157
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/failed/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18406,
+          "bbox": [
+            6,
+            34,
+            186,
+            173
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "waiting",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waiting/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20664,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waiting/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20029,
+          "bbox": [
+            30,
+            5,
+            162,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waiting/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20431,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waiting/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20508,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waiting/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20492,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/waiting/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20463,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20062,
+          "bbox": [
+            28,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20012,
+          "bbox": [
+            28,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19609,
+          "bbox": [
+            31,
+            5,
+            161,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19933,
+          "bbox": [
+            29,
+            5,
+            162,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19804,
+          "bbox": [
+            29,
+            5,
+            162,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/running/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19752,
+          "bbox": [
+            29,
+            5,
+            162,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/review/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19982,
+          "bbox": [
+            24,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/review/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19976,
+          "bbox": [
+            24,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/review/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20199,
+          "bbox": [
+            22,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/review/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19951,
+          "bbox": [
+            24,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/review/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19874,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "./.codex/pet-runs/hei-mao-mhapi-repair-20260901/delivery-v2-th144-final-20260901/frames/review/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20342,
+          "bbox": [
+            22,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    }
+  ]
+}

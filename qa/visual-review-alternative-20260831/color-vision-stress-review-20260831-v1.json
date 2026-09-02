@@ -1,0 +1,3516 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T14:35:49.920854+00:00",
+  "scope": "evidence-only color-vision and low-saturation stress review of all current v2 atlases",
+  "method": {
+    "name": "color-vision simulation and low-saturation display stress",
+    "purpose": "surface loss of foreground/background or internal feature contrast when color information is reduced",
+    "transforms": [
+      "original",
+      "grayscale",
+      "protan",
+      "deutan",
+      "tritan"
+    ],
+    "display_sizes": [
+      [
+        96,
+        104
+      ],
+      [
+        48,
+        52
+      ]
+    ],
+    "background": [
+      112,
+      114,
+      122
+    ],
+    "steps": [
+      "preserve source alpha and geometry while applying deterministic color-vision simulations",
+      "render original, grayscale, protan, deutan, and tritan variants at 96x104 and 48x52",
+      "compare foreground contrast, internal luminance separation, and edge retention against the original",
+      "rank candidates and retain known-blocker controls in a bounded normal-size sheet",
+      "treat all metrics as triage evidence; promote only visible defects under hatch-pet policy"
+    ]
+  },
+  "scope_details": {
+    "roles": 8,
+    "rows": 88,
+    "cells": 584,
+    "candidate_sheet_items": 40,
+    "alpha_threshold": 16
+  },
+  "visual_review": {
+    "status": "pass_with_existing_blockers",
+    "note": "正常尺寸查看 96x104 与 48x52 两张色觉压力候选表，共 40 个候选；灰度、红绿色弱和蓝黄色弱变换未引入新的比例、裁切、轮廓断裂、透明底板或动作语义硬失败，仅重现既有整行动画阻断。",
+    "new_hard_failures": [],
+    "new_warnings": [],
+    "confirmed_existing_blockers": [
+      "hei-mao-delivery/failed: repeated head and pose-family switch",
+      "hei-mao-foodie/waiting: stacked upper contours",
+      "hei-mao-quality/failed: complete-row detached component/action structure issue",
+      "hei-mao-quality/jumping: duplicated head",
+      "hei-mao-quality/running-left: complete-row detached component/action structure issue",
+      "hei-mao-traveler/review: complete-row detached component/action structure issue",
+      "hei-mao-traveler/waiting: complete-row detached component/action structure issue",
+      "hei-mao/jumping: duplicated head"
+    ],
+    "formal_assets_modified": false
+  },
+  "top_candidates": [
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 0,
+      "score": 0.236395,
+      "worst_relative_loss": 0.303408,
+      "mean_relative_loss": 0.064073,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2544422447681427,
+            "internal_luma_std": 0.17392489314079285,
+            "edge_energy": 0.058839306235313416,
+            "strong_edge_fraction": 0.5272687127401192,
+            "visible_fraction": 0.45362580128205127
+          },
+          "grayscale": {
+            "foreground_contrast": 0.25675302743911743,
+            "internal_luma_std": 0.1748018115758896,
+            "edge_energy": 0.059766680002212524,
+            "strong_edge_fraction": 0.5321262971958489,
+            "visible_fraction": 0.45362580128205127
+          },
+          "protan": {
+            "foreground_contrast": 0.19021376967430115,
+            "internal_luma_std": 0.1923907995223999,
+            "edge_energy": 0.06741004437208176,
+            "strong_edge_fraction": 0.599028483108854,
+            "visible_fraction": 0.45362580128205127
+          },
+          "deutan": {
+            "foreground_contrast": 0.18621458113193512,
+            "internal_luma_std": 0.2067660093307495,
+            "edge_energy": 0.0717693492770195,
+            "strong_edge_fraction": 0.6206668138661956,
+            "visible_fraction": 0.45362580128205127
+          },
+          "tritan": {
+            "foreground_contrast": 0.28177008032798767,
+            "internal_luma_std": 0.13857236504554749,
+            "edge_energy": 0.04775083437561989,
+            "strong_edge_fraction": 0.46964009715168914,
+            "visible_fraction": 0.45362580128205127
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.23741474747657776,
+            "internal_luma_std": 0.1552993804216385,
+            "edge_energy": 0.07108679413795471,
+            "strong_edge_fraction": 0.654639175257732,
+            "visible_fraction": 0.46634615384615385
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23959292471408844,
+            "internal_luma_std": 0.15637588500976562,
+            "edge_energy": 0.07192683219909668,
+            "strong_edge_fraction": 0.6623711340206185,
+            "visible_fraction": 0.46634615384615385
+          },
+          "protan": {
+            "foreground_contrast": 0.17074249684810638,
+            "internal_luma_std": 0.17025715112686157,
+            "edge_energy": 0.08079390972852707,
+            "strong_edge_fraction": 0.7199312714776632,
+            "visible_fraction": 0.46634615384615385
+          },
+          "deutan": {
+            "foreground_contrast": 0.16538110375404358,
+            "internal_luma_std": 0.1831369251012802,
+            "edge_energy": 0.08680422604084015,
+            "strong_edge_fraction": 0.7491408934707904,
+            "visible_fraction": 0.46634615384615385
+          },
+          "tritan": {
+            "foreground_contrast": 0.2705671489238739,
+            "internal_luma_std": 0.12662729620933533,
+            "edge_energy": 0.06100796163082123,
+            "strong_edge_fraction": 0.5773195876288659,
+            "visible_fraction": 0.46634615384615385
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 1,
+      "score": 0.222183,
+      "worst_relative_loss": 0.284408,
+      "mean_relative_loss": 0.062175,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2525785267353058,
+            "internal_luma_std": 0.18094393610954285,
+            "edge_energy": 0.049321357160806656,
+            "strong_edge_fraction": 0.5267643142476698,
+            "visible_fraction": 0.37610176282051283
+          },
+          "grayscale": {
+            "foreground_contrast": 0.25469639897346497,
+            "internal_luma_std": 0.18158233165740967,
+            "edge_energy": 0.04995424300432205,
+            "strong_edge_fraction": 0.5323568575233023,
+            "visible_fraction": 0.37610176282051283
+          },
+          "protan": {
+            "foreground_contrast": 0.19362390041351318,
+            "internal_luma_std": 0.1966058909893036,
+            "edge_energy": 0.05465947836637497,
+            "strong_edge_fraction": 0.5611185086551265,
+            "visible_fraction": 0.37610176282051283
+          },
+          "deutan": {
+            "foreground_contrast": 0.18929317593574524,
+            "internal_luma_std": 0.2097787857055664,
+            "edge_energy": 0.057769596576690674,
+            "strong_edge_fraction": 0.5810918774966711,
+            "visible_fraction": 0.37610176282051283
+          },
+          "tritan": {
+            "foreground_contrast": 0.2796040177345276,
+            "internal_luma_std": 0.14248216152191162,
+            "edge_energy": 0.03936019167304039,
+            "strong_edge_fraction": 0.4719041278295606,
+            "visible_fraction": 0.37610176282051283
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.23546329140663147,
+            "internal_luma_std": 0.16201265156269073,
+            "edge_energy": 0.05714127793908119,
+            "strong_edge_fraction": 0.6091476091476091,
+            "visible_fraction": 0.3854166666666667
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23756571114063263,
+            "internal_luma_std": 0.16293536126613617,
+            "edge_energy": 0.05787333846092224,
+            "strong_edge_fraction": 0.6091476091476091,
+            "visible_fraction": 0.3854166666666667
+          },
+          "protan": {
+            "foreground_contrast": 0.17420531809329987,
+            "internal_luma_std": 0.1754210889339447,
+            "edge_energy": 0.06411401182413101,
+            "strong_edge_fraction": 0.6902286902286903,
+            "visible_fraction": 0.3854166666666667
+          },
+          "deutan": {
+            "foreground_contrast": 0.1684955358505249,
+            "internal_luma_std": 0.18745985627174377,
+            "edge_energy": 0.06853068619966507,
+            "strong_edge_fraction": 0.7203742203742204,
+            "visible_fraction": 0.3854166666666667
+          },
+          "tritan": {
+            "foreground_contrast": 0.26968955993652344,
+            "internal_luma_std": 0.13037541508674622,
+            "edge_energy": 0.048871591687202454,
+            "strong_edge_fraction": 0.5467775467775468,
+            "visible_fraction": 0.3854166666666667
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 6,
+      "score": 0.213645,
+      "worst_relative_loss": 0.270096,
+      "mean_relative_loss": 0.068484,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2449258416891098,
+            "internal_luma_std": 0.1749664843082428,
+            "edge_energy": 0.042436130344867706,
+            "strong_edge_fraction": 0.5236102809324567,
+            "visible_fraction": 0.33513621794871795
+          },
+          "grayscale": {
+            "foreground_contrast": 0.24702578783035278,
+            "internal_luma_std": 0.17570148408412933,
+            "edge_energy": 0.043003473430871964,
+            "strong_edge_fraction": 0.5277943813508668,
+            "visible_fraction": 0.33513621794871795
+          },
+          "protan": {
+            "foreground_contrast": 0.18882383406162262,
+            "internal_luma_std": 0.18810711801052094,
+            "edge_energy": 0.04535515233874321,
+            "strong_edge_fraction": 0.5546921697549313,
+            "visible_fraction": 0.33513621794871795
+          },
+          "deutan": {
+            "foreground_contrast": 0.18560893833637238,
+            "internal_luma_std": 0.201546773314476,
+            "edge_energy": 0.04780833050608635,
+            "strong_edge_fraction": 0.5729228930065751,
+            "visible_fraction": 0.33513621794871795
+          },
+          "tritan": {
+            "foreground_contrast": 0.2769385874271393,
+            "internal_luma_std": 0.129696324467659,
+            "edge_energy": 0.03279844671487808,
+            "strong_edge_fraction": 0.44889420203227737,
+            "visible_fraction": 0.33513621794871795
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.22616370022296906,
+            "internal_luma_std": 0.156521275639534,
+            "edge_energy": 0.04844709858298302,
+            "strong_edge_fraction": 0.6206496519721578,
+            "visible_fraction": 0.3453525641025641
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22817079722881317,
+            "internal_luma_std": 0.15742190182209015,
+            "edge_energy": 0.04898541048169136,
+            "strong_edge_fraction": 0.6276102088167054,
+            "visible_fraction": 0.3453525641025641
+          },
+          "protan": {
+            "foreground_contrast": 0.1691797375679016,
+            "internal_luma_std": 0.1684027761220932,
+            "edge_energy": 0.05296170338988304,
+            "strong_edge_fraction": 0.6751740139211136,
+            "visible_fraction": 0.3453525641025641
+          },
+          "deutan": {
+            "foreground_contrast": 0.16507776081562042,
+            "internal_luma_std": 0.18105679750442505,
+            "edge_energy": 0.057015396654605865,
+            "strong_edge_fraction": 0.7053364269141531,
+            "visible_fraction": 0.3453525641025641
+          },
+          "tritan": {
+            "foreground_contrast": 0.26621532440185547,
+            "internal_luma_std": 0.12004349380731583,
+            "edge_energy": 0.040109384804964066,
+            "strong_edge_fraction": 0.5185614849187935,
+            "visible_fraction": 0.3453525641025641
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 6,
+      "score": 0.211295,
+      "worst_relative_loss": 0.275751,
+      "mean_relative_loss": 0.045551,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22070513665676117,
+            "internal_luma_std": 0.14451614022254944,
+            "edge_energy": 0.050806645303964615,
+            "strong_edge_fraction": 0.4357752630534048,
+            "visible_fraction": 0.5045072115384616
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22236841917037964,
+            "internal_luma_std": 0.1446901261806488,
+            "edge_energy": 0.050920769572257996,
+            "strong_edge_fraction": 0.4383561643835616,
+            "visible_fraction": 0.5045072115384616
+          },
+          "protan": {
+            "foreground_contrast": 0.1732366681098938,
+            "internal_luma_std": 0.15757448971271515,
+            "edge_energy": 0.05520068481564522,
+            "strong_edge_fraction": 0.4734961286480048,
+            "visible_fraction": 0.5045072115384616
+          },
+          "deutan": {
+            "foreground_contrast": 0.16571858525276184,
+            "internal_luma_std": 0.1672854721546173,
+            "edge_energy": 0.05721172317862511,
+            "strong_edge_fraction": 0.48560651181258685,
+            "visible_fraction": 0.5045072115384616
+          },
+          "tritan": {
+            "foreground_contrast": 0.24962806701660156,
+            "internal_luma_std": 0.12819939851760864,
+            "edge_energy": 0.04668131470680237,
+            "strong_edge_fraction": 0.4127456819535438,
+            "visible_fraction": 0.5045072115384616
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2096599042415619,
+            "internal_luma_std": 0.12994994223117828,
+            "edge_energy": 0.05718415975570679,
+            "strong_edge_fraction": 0.48984375,
+            "visible_fraction": 0.5128205128205128
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21135929226875305,
+            "internal_luma_std": 0.1301165521144867,
+            "edge_energy": 0.057348787784576416,
+            "strong_edge_fraction": 0.49375,
+            "visible_fraction": 0.5128205128205128
+          },
+          "protan": {
+            "foreground_contrast": 0.15989501774311066,
+            "internal_luma_std": 0.14115265011787415,
+            "edge_energy": 0.06221933290362358,
+            "strong_edge_fraction": 0.56171875,
+            "visible_fraction": 0.5128205128205128
+          },
+          "deutan": {
+            "foreground_contrast": 0.1518460065126419,
+            "internal_luma_std": 0.15054087340831757,
+            "edge_energy": 0.06500087678432465,
+            "strong_edge_fraction": 0.5828125,
+            "visible_fraction": 0.5128205128205128
+          },
+          "tritan": {
+            "foreground_contrast": 0.24029865860939026,
+            "internal_luma_std": 0.1156807690858841,
+            "edge_energy": 0.05294601246714592,
+            "strong_edge_fraction": 0.465625,
+            "visible_fraction": 0.5128205128205128
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 7,
+      "score": 0.211186,
+      "worst_relative_loss": 0.266795,
+      "mean_relative_loss": 0.068193,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2478756308555603,
+            "internal_luma_std": 0.17562717199325562,
+            "edge_energy": 0.045471712946891785,
+            "strong_edge_fraction": 0.5011111111111111,
+            "visible_fraction": 0.3605769230769231
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2500103712081909,
+            "internal_luma_std": 0.1763930767774582,
+            "edge_energy": 0.0460701584815979,
+            "strong_edge_fraction": 0.5044444444444445,
+            "visible_fraction": 0.3605769230769231
+          },
+          "protan": {
+            "foreground_contrast": 0.19245865941047668,
+            "internal_luma_std": 0.18831202387809753,
+            "edge_energy": 0.0488927885890007,
+            "strong_edge_fraction": 0.5463888888888889,
+            "visible_fraction": 0.3605769230769231
+          },
+          "deutan": {
+            "foreground_contrast": 0.18885838985443115,
+            "internal_luma_std": 0.2013988047838211,
+            "edge_energy": 0.05144452303647995,
+            "strong_edge_fraction": 0.5691666666666667,
+            "visible_fraction": 0.3605769230769231
+          },
+          "tritan": {
+            "foreground_contrast": 0.278327614068985,
+            "internal_luma_std": 0.12880825996398926,
+            "edge_energy": 0.034948159009218216,
+            "strong_edge_fraction": 0.4438888888888889,
+            "visible_fraction": 0.3605769230769231
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.23053476214408875,
+            "internal_luma_std": 0.1569145768880844,
+            "edge_energy": 0.051371775567531586,
+            "strong_edge_fraction": 0.6015200868621065,
+            "visible_fraction": 0.36899038461538464
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2326890230178833,
+            "internal_luma_std": 0.15790003538131714,
+            "edge_energy": 0.052078116685152054,
+            "strong_edge_fraction": 0.6091205211726385,
+            "visible_fraction": 0.36899038461538464
+          },
+          "protan": {
+            "foreground_contrast": 0.17273764312267303,
+            "internal_luma_std": 0.16855962574481964,
+            "edge_energy": 0.056088026612997055,
+            "strong_edge_fraction": 0.6796959826275787,
+            "visible_fraction": 0.36899038461538464
+          },
+          "deutan": {
+            "foreground_contrast": 0.16902928054332733,
+            "internal_luma_std": 0.18106326460838318,
+            "edge_energy": 0.06026051193475723,
+            "strong_edge_fraction": 0.7068403908794788,
+            "visible_fraction": 0.36899038461538464
+          },
+          "tritan": {
+            "foreground_contrast": 0.2690463960170746,
+            "internal_luma_std": 0.11819809675216675,
+            "edge_energy": 0.04222727566957474,
+            "strong_edge_fraction": 0.501628664495114,
+            "visible_fraction": 0.36899038461538464
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 2,
+      "score": 0.209506,
+      "worst_relative_loss": 0.267074,
+      "mean_relative_loss": 0.061473,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.25412940979003906,
+            "internal_luma_std": 0.17801836133003235,
+            "edge_energy": 0.04563691094517708,
+            "strong_edge_fraction": 0.5297450424929179,
+            "visible_fraction": 0.3535657051282051
+          },
+          "grayscale": {
+            "foreground_contrast": 0.25634652376174927,
+            "internal_luma_std": 0.1787341982126236,
+            "edge_energy": 0.04630891606211662,
+            "strong_edge_fraction": 0.5337110481586402,
+            "visible_fraction": 0.3535657051282051
+          },
+          "protan": {
+            "foreground_contrast": 0.19773852825164795,
+            "internal_luma_std": 0.19479753077030182,
+            "edge_energy": 0.050186239182949066,
+            "strong_edge_fraction": 0.56657223796034,
+            "visible_fraction": 0.3535657051282051
+          },
+          "deutan": {
+            "foreground_contrast": 0.19363878667354584,
+            "internal_luma_std": 0.20858722925186157,
+            "edge_energy": 0.052928995341062546,
+            "strong_edge_fraction": 0.5827195467422096,
+            "visible_fraction": 0.3535657051282051
+          },
+          "tritan": {
+            "foreground_contrast": 0.28244122862815857,
+            "internal_luma_std": 0.14037251472473145,
+            "edge_energy": 0.0364244244992733,
+            "strong_edge_fraction": 0.4643059490084986,
+            "visible_fraction": 0.3535657051282051
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.23687946796417236,
+            "internal_luma_std": 0.1601259410381317,
+            "edge_energy": 0.05348193272948265,
+            "strong_edge_fraction": 0.6147902869757175,
+            "visible_fraction": 0.3629807692307692
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23907029628753662,
+            "internal_luma_std": 0.1610988974571228,
+            "edge_energy": 0.05413658171892166,
+            "strong_edge_fraction": 0.6247240618101545,
+            "visible_fraction": 0.3629807692307692
+          },
+          "protan": {
+            "foreground_contrast": 0.17860765755176544,
+            "internal_luma_std": 0.17448866367340088,
+            "edge_energy": 0.05964375287294388,
+            "strong_edge_fraction": 0.7097130242825607,
+            "visible_fraction": 0.3629807692307692
+          },
+          "deutan": {
+            "foreground_contrast": 0.17361505329608917,
+            "internal_luma_std": 0.18708516657352448,
+            "edge_energy": 0.06351055204868317,
+            "strong_edge_fraction": 0.7317880794701986,
+            "visible_fraction": 0.3629807692307692
+          },
+          "tritan": {
+            "foreground_contrast": 0.2720532715320587,
+            "internal_luma_std": 0.12942805886268616,
+            "edge_energy": 0.0455198734998703,
+            "strong_edge_fraction": 0.543046357615894,
+            "visible_fraction": 0.3629807692307692
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "review",
+      "row_index": 8,
+      "frame": 1,
+      "score": 0.209183,
+      "worst_relative_loss": 0.274674,
+      "mean_relative_loss": 0.040779,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.23186632990837097,
+            "internal_luma_std": 0.25031816959381104,
+            "edge_energy": 0.08065842092037201,
+            "strong_edge_fraction": 0.5147366419471382,
+            "visible_fraction": 0.5267427884615384
+          },
+          "grayscale": {
+            "foreground_contrast": 0.232855886220932,
+            "internal_luma_std": 0.25086691975593567,
+            "edge_energy": 0.08111508935689926,
+            "strong_edge_fraction": 0.5227229511313938,
+            "visible_fraction": 0.5267427884615384
+          },
+          "protan": {
+            "foreground_contrast": 0.2222491204738617,
+            "internal_luma_std": 0.2609114348888397,
+            "edge_energy": 0.08777548372745514,
+            "strong_edge_fraction": 0.5343221144704317,
+            "visible_fraction": 0.5267427884615384
+          },
+          "deutan": {
+            "foreground_contrast": 0.2240067720413208,
+            "internal_luma_std": 0.26801106333732605,
+            "edge_energy": 0.09060405939817429,
+            "strong_edge_fraction": 0.5386955694999049,
+            "visible_fraction": 0.5267427884615384
+          },
+          "tritan": {
+            "foreground_contrast": 0.2076178789138794,
+            "internal_luma_std": 0.18514256179332733,
+            "edge_energy": 0.06750764697790146,
+            "strong_edge_fraction": 0.4772770488686062,
+            "visible_fraction": 0.5267427884615384
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.20452645421028137,
+            "internal_luma_std": 0.22406531870365143,
+            "edge_energy": 0.08682215958833694,
+            "strong_edge_fraction": 0.6221232368225686,
+            "visible_fraction": 0.5396634615384616
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2058190256357193,
+            "internal_luma_std": 0.22531044483184814,
+            "edge_energy": 0.08762145787477493,
+            "strong_edge_fraction": 0.6288047512991833,
+            "visible_fraction": 0.5396634615384616
+          },
+          "protan": {
+            "foreground_contrast": 0.19456571340560913,
+            "internal_luma_std": 0.2326851338148117,
+            "edge_energy": 0.09824054688215256,
+            "strong_edge_fraction": 0.6525612472160356,
+            "visible_fraction": 0.5396634615384616
+          },
+          "deutan": {
+            "foreground_contrast": 0.19659946858882904,
+            "internal_luma_std": 0.23877161741256714,
+            "edge_energy": 0.10288746654987335,
+            "strong_edge_fraction": 0.6599851521900519,
+            "visible_fraction": 0.5396634615384616
+          },
+          "tritan": {
+            "foreground_contrast": 0.1914696842432022,
+            "internal_luma_std": 0.1625204086303711,
+            "edge_energy": 0.07708699256181717,
+            "strong_edge_fraction": 0.5657015590200446,
+            "visible_fraction": 0.5396634615384616
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 3,
+      "score": 0.208929,
+      "worst_relative_loss": 0.266445,
+      "mean_relative_loss": 0.061032,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2589222490787506,
+            "internal_luma_std": 0.17679663002490997,
+            "edge_energy": 0.04261143505573273,
+            "strong_edge_fraction": 0.5135214579659024,
+            "visible_fraction": 0.3407451923076923
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2610671818256378,
+            "internal_luma_std": 0.17756099998950958,
+            "edge_energy": 0.043233297765254974,
+            "strong_edge_fraction": 0.5188124632569077,
+            "visible_fraction": 0.3407451923076923
+          },
+          "protan": {
+            "foreground_contrast": 0.2031560093164444,
+            "internal_luma_std": 0.19187335669994354,
+            "edge_energy": 0.046428147703409195,
+            "strong_edge_fraction": 0.5546737213403881,
+            "visible_fraction": 0.3407451923076923
+          },
+          "deutan": {
+            "foreground_contrast": 0.19699719548225403,
+            "internal_luma_std": 0.20498742163181305,
+            "edge_energy": 0.04894546791911125,
+            "strong_edge_fraction": 0.5670194003527337,
+            "visible_fraction": 0.3407451923076923
+          },
+          "tritan": {
+            "foreground_contrast": 0.2863447368144989,
+            "internal_luma_std": 0.1387232542037964,
+            "edge_energy": 0.03390217199921608,
+            "strong_edge_fraction": 0.45620223398001175,
+            "visible_fraction": 0.3407451923076923
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.24248644709587097,
+            "internal_luma_std": 0.16011014580726624,
+            "edge_energy": 0.050448961555957794,
+            "strong_edge_fraction": 0.6086956521739131,
+            "visible_fraction": 0.3501602564102564
+          },
+          "grayscale": {
+            "foreground_contrast": 0.24464723467826843,
+            "internal_luma_std": 0.16103753447532654,
+            "edge_energy": 0.0510721318423748,
+            "strong_edge_fraction": 0.6189931350114416,
+            "visible_fraction": 0.3501602564102564
+          },
+          "protan": {
+            "foreground_contrast": 0.1856791377067566,
+            "internal_luma_std": 0.17285098135471344,
+            "edge_energy": 0.05576327070593834,
+            "strong_edge_fraction": 0.6739130434782609,
+            "visible_fraction": 0.3501602564102564
+          },
+          "deutan": {
+            "foreground_contrast": 0.17787718772888184,
+            "internal_luma_std": 0.18482212722301483,
+            "edge_energy": 0.05972900986671448,
+            "strong_edge_fraction": 0.7048054919908466,
+            "visible_fraction": 0.3501602564102564
+          },
+          "tritan": {
+            "foreground_contrast": 0.2763901352882385,
+            "internal_luma_std": 0.12921258807182312,
+            "edge_energy": 0.04300770163536072,
+            "strong_edge_fraction": 0.5320366132723112,
+            "visible_fraction": 0.3501602564102564
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 1,
+      "score": 0.208106,
+      "worst_relative_loss": 0.270362,
+      "mean_relative_loss": 0.048019,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2215319126844406,
+            "internal_luma_std": 0.1486649215221405,
+            "edge_energy": 0.0507027693092823,
+            "strong_edge_fraction": 0.42537458649542714,
+            "visible_fraction": 0.5147235576923077
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2231619656085968,
+            "internal_luma_std": 0.14884385466575623,
+            "edge_energy": 0.05083532631397247,
+            "strong_edge_fraction": 0.425569176882662,
+            "visible_fraction": 0.5147235576923077
+          },
+          "protan": {
+            "foreground_contrast": 0.1750941425561905,
+            "internal_luma_std": 0.15739840269088745,
+            "edge_energy": 0.054789844900369644,
+            "strong_edge_fraction": 0.4660439774275151,
+            "visible_fraction": 0.5147235576923077
+          },
+          "deutan": {
+            "foreground_contrast": 0.1665733903646469,
+            "internal_luma_std": 0.16534686088562012,
+            "edge_energy": 0.056731924414634705,
+            "strong_edge_fraction": 0.4816112084063047,
+            "visible_fraction": 0.5147235576923077
+          },
+          "tritan": {
+            "foreground_contrast": 0.25082507729530334,
+            "internal_luma_std": 0.1297498643398285,
+            "edge_energy": 0.04634251445531845,
+            "strong_edge_fraction": 0.39540766686125706,
+            "visible_fraction": 0.5147235576923077
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.20991940796375275,
+            "internal_luma_std": 0.13578151166439056,
+            "edge_energy": 0.059843759983778,
+            "strong_edge_fraction": 0.5255530129672006,
+            "visible_fraction": 0.5252403846153846
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21153192222118378,
+            "internal_luma_std": 0.13601627945899963,
+            "edge_energy": 0.059961386024951935,
+            "strong_edge_fraction": 0.5270785659801678,
+            "visible_fraction": 0.5252403846153846
+          },
+          "protan": {
+            "foreground_contrast": 0.1621866524219513,
+            "internal_luma_std": 0.14226354658603668,
+            "edge_energy": 0.06505119055509567,
+            "strong_edge_fraction": 0.5865751334858886,
+            "visible_fraction": 0.5252403846153846
+          },
+          "deutan": {
+            "foreground_contrast": 0.15316513180732727,
+            "internal_luma_std": 0.14965711534023285,
+            "edge_energy": 0.06790848821401596,
+            "strong_edge_fraction": 0.601067887109077,
+            "visible_fraction": 0.5252403846153846
+          },
+          "tritan": {
+            "foreground_contrast": 0.2403305619955063,
+            "internal_luma_std": 0.11935790628194809,
+            "edge_energy": 0.05501331761479378,
+            "strong_edge_fraction": 0.475209763539283,
+            "visible_fraction": 0.5252403846153846
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 5,
+      "score": 0.204286,
+      "worst_relative_loss": 0.258703,
+      "mean_relative_loss": 0.064356,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2597220540046692,
+            "internal_luma_std": 0.1748538464307785,
+            "edge_energy": 0.04051007330417633,
+            "strong_edge_fraction": 0.5027405602923264,
+            "visible_fraction": 0.32892628205128205
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2618531286716461,
+            "internal_luma_std": 0.17542332410812378,
+            "edge_energy": 0.04107387363910675,
+            "strong_edge_fraction": 0.5100487210718636,
+            "visible_fraction": 0.32892628205128205
+          },
+          "protan": {
+            "foreground_contrast": 0.20425236225128174,
+            "internal_luma_std": 0.18607372045516968,
+            "edge_energy": 0.04331660643219948,
+            "strong_edge_fraction": 0.5465895249695494,
+            "visible_fraction": 0.32892628205128205
+          },
+          "deutan": {
+            "foreground_contrast": 0.19900357723236084,
+            "internal_luma_std": 0.19862836599349976,
+            "edge_energy": 0.04576309025287628,
+            "strong_edge_fraction": 0.5688185140073082,
+            "visible_fraction": 0.32892628205128205
+          },
+          "tritan": {
+            "foreground_contrast": 0.2879692316055298,
+            "internal_luma_std": 0.13184243440628052,
+            "edge_energy": 0.03155818209052086,
+            "strong_edge_fraction": 0.44275274056029235,
+            "visible_fraction": 0.32892628205128205
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.24201981723308563,
+            "internal_luma_std": 0.15850266814231873,
+            "edge_energy": 0.04700275510549545,
+            "strong_edge_fraction": 0.591715976331361,
+            "visible_fraction": 0.3385416666666667
+          },
+          "grayscale": {
+            "foreground_contrast": 0.24418938159942627,
+            "internal_luma_std": 0.15967190265655518,
+            "edge_energy": 0.0477488674223423,
+            "strong_edge_fraction": 0.6,
+            "visible_fraction": 0.3385416666666667
+          },
+          "protan": {
+            "foreground_contrast": 0.18626265227794647,
+            "internal_luma_std": 0.16809812188148499,
+            "edge_energy": 0.05061926692724228,
+            "strong_edge_fraction": 0.6650887573964497,
+            "visible_fraction": 0.3385416666666667
+          },
+          "deutan": {
+            "foreground_contrast": 0.17940860986709595,
+            "internal_luma_std": 0.1794888824224472,
+            "edge_energy": 0.054310377687215805,
+            "strong_edge_fraction": 0.6816568047337278,
+            "visible_fraction": 0.3385416666666667
+          },
+          "tritan": {
+            "foreground_contrast": 0.2770286500453949,
+            "internal_luma_std": 0.12360808253288269,
+            "edge_energy": 0.039457499980926514,
+            "strong_edge_fraction": 0.49940828402366866,
+            "visible_fraction": 0.3385416666666667
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 3,
+      "score": 0.201161,
+      "worst_relative_loss": 0.262238,
+      "mean_relative_loss": 0.044105,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22110529243946075,
+            "internal_luma_std": 0.14249128103256226,
+            "edge_energy": 0.05133424326777458,
+            "strong_edge_fraction": 0.4253341080766996,
+            "visible_fraction": 0.5171274038461539
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2227812260389328,
+            "internal_luma_std": 0.14270544052124023,
+            "edge_energy": 0.05151882395148277,
+            "strong_edge_fraction": 0.42804570985860935,
+            "visible_fraction": 0.5171274038461539
+          },
+          "protan": {
+            "foreground_contrast": 0.17623646557331085,
+            "internal_luma_std": 0.15653151273727417,
+            "edge_energy": 0.055482473224401474,
+            "strong_edge_fraction": 0.4683323649041255,
+            "visible_fraction": 0.5171274038461539
+          },
+          "deutan": {
+            "foreground_contrast": 0.1688174307346344,
+            "internal_luma_std": 0.1662648618221283,
+            "edge_energy": 0.05752728879451752,
+            "strong_edge_fraction": 0.47511136935889986,
+            "visible_fraction": 0.5171274038461539
+          },
+          "tritan": {
+            "foreground_contrast": 0.25098133087158203,
+            "internal_luma_std": 0.12605807185173035,
+            "edge_energy": 0.04705188050866127,
+            "strong_edge_fraction": 0.4034476079798567,
+            "visible_fraction": 0.5171274038461539
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2093988060951233,
+            "internal_luma_std": 0.12864509224891663,
+            "edge_energy": 0.05915815383195877,
+            "strong_edge_fraction": 0.49052312357846856,
+            "visible_fraction": 0.5284455128205128
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21107083559036255,
+            "internal_luma_std": 0.12889328598976135,
+            "edge_energy": 0.059345848858356476,
+            "strong_edge_fraction": 0.4890068233510235,
+            "visible_fraction": 0.5284455128205128
+          },
+          "protan": {
+            "foreground_contrast": 0.16262803971767426,
+            "internal_luma_std": 0.14059950411319733,
+            "edge_energy": 0.06450098007917404,
+            "strong_edge_fraction": 0.558756633813495,
+            "visible_fraction": 0.5284455128205128
+          },
+          "deutan": {
+            "foreground_contrast": 0.15448646247386932,
+            "internal_luma_std": 0.14987921714782715,
+            "edge_energy": 0.06766626983880997,
+            "strong_edge_fraction": 0.5701288855193328,
+            "visible_fraction": 0.5284455128205128
+          },
+          "tritan": {
+            "foreground_contrast": 0.24103286862373352,
+            "internal_luma_std": 0.115554578602314,
+            "edge_energy": 0.05486610531806946,
+            "strong_edge_fraction": 0.46171341925701287,
+            "visible_fraction": 0.5284455128205128
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 4,
+      "score": 0.199186,
+      "worst_relative_loss": 0.252858,
+      "mean_relative_loss": 0.061173,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.26211071014404297,
+            "internal_luma_std": 0.17056559026241302,
+            "edge_energy": 0.03934864327311516,
+            "strong_edge_fraction": 0.49605582524271846,
+            "visible_fraction": 0.3301282051282051
+          },
+          "grayscale": {
+            "foreground_contrast": 0.26435285806655884,
+            "internal_luma_std": 0.17122773826122284,
+            "edge_energy": 0.03997063264250755,
+            "strong_edge_fraction": 0.5039441747572816,
+            "visible_fraction": 0.3301282051282051
+          },
+          "protan": {
+            "foreground_contrast": 0.20834268629550934,
+            "internal_luma_std": 0.18468256294727325,
+            "edge_energy": 0.042887598276138306,
+            "strong_edge_fraction": 0.5400485436893204,
+            "visible_fraction": 0.3301282051282051
+          },
+          "deutan": {
+            "foreground_contrast": 0.20274320244789124,
+            "internal_luma_std": 0.19808320701122284,
+            "edge_energy": 0.045410528779029846,
+            "strong_edge_fraction": 0.5628033980582524,
+            "visible_fraction": 0.3301282051282051
+          },
+          "tritan": {
+            "foreground_contrast": 0.290929913520813,
+            "internal_luma_std": 0.13119055330753326,
+            "edge_energy": 0.03129948675632477,
+            "strong_edge_fraction": 0.4344660194174757,
+            "visible_fraction": 0.3301282051282051
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.24590769410133362,
+            "internal_luma_std": 0.1560237854719162,
+            "edge_energy": 0.047016773372888565,
+            "strong_edge_fraction": 0.5941176470588235,
+            "visible_fraction": 0.3405448717948718
+          },
+          "grayscale": {
+            "foreground_contrast": 0.24810393154621124,
+            "internal_luma_std": 0.15700308978557587,
+            "edge_energy": 0.04767843708395958,
+            "strong_edge_fraction": 0.6,
+            "visible_fraction": 0.3405448717948718
+          },
+          "protan": {
+            "foreground_contrast": 0.19061100482940674,
+            "internal_luma_std": 0.16744662821292877,
+            "edge_energy": 0.051471855491399765,
+            "strong_edge_fraction": 0.6576470588235294,
+            "visible_fraction": 0.3405448717948718
+          },
+          "deutan": {
+            "foreground_contrast": 0.1837279349565506,
+            "internal_luma_std": 0.1794852316379547,
+            "edge_energy": 0.055098775774240494,
+            "strong_edge_fraction": 0.6870588235294117,
+            "visible_fraction": 0.3405448717948718
+          },
+          "tritan": {
+            "foreground_contrast": 0.2799832224845886,
+            "internal_luma_std": 0.12429241836071014,
+            "edge_energy": 0.040029916912317276,
+            "strong_edge_fraction": 0.5129411764705882,
+            "visible_fraction": 0.3405448717948718
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "row_index": 6,
+      "frame": 4,
+      "score": 0.198225,
+      "worst_relative_loss": 0.257057,
+      "mean_relative_loss": 0.046942,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.21337579190731049,
+            "internal_luma_std": 0.23207132518291473,
+            "edge_energy": 0.10388027876615524,
+            "strong_edge_fraction": 0.6277955271565495,
+            "visible_fraction": 0.5643028846153846
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21456129848957062,
+            "internal_luma_std": 0.23293359577655792,
+            "edge_energy": 0.10451044142246246,
+            "strong_edge_fraction": 0.631700390486333,
+            "visible_fraction": 0.5643028846153846
+          },
+          "protan": {
+            "foreground_contrast": 0.19515693187713623,
+            "internal_luma_std": 0.23574426770210266,
+            "edge_energy": 0.10856758058071136,
+            "strong_edge_fraction": 0.6382676606318779,
+            "visible_fraction": 0.5643028846153846
+          },
+          "deutan": {
+            "foreground_contrast": 0.19129373133182526,
+            "internal_luma_std": 0.23954904079437256,
+            "edge_energy": 0.1105685755610466,
+            "strong_edge_fraction": 0.6396876109336174,
+            "visible_fraction": 0.5643028846153846
+          },
+          "tritan": {
+            "foreground_contrast": 0.1991741806268692,
+            "internal_luma_std": 0.17518778145313263,
+            "edge_energy": 0.0849551185965538,
+            "strong_edge_fraction": 0.580937167199148,
+            "visible_fraction": 0.5643028846153846
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.18137575685977936,
+            "internal_luma_std": 0.19785794615745544,
+            "edge_energy": 0.09749212861061096,
+            "strong_edge_fraction": 0.6530187369882027,
+            "visible_fraction": 0.577323717948718
+          },
+          "grayscale": {
+            "foreground_contrast": 0.18260999023914337,
+            "internal_luma_std": 0.1989855170249939,
+            "edge_energy": 0.09828092902898788,
+            "strong_edge_fraction": 0.6551006245662734,
+            "visible_fraction": 0.577323717948718
+          },
+          "protan": {
+            "foreground_contrast": 0.16233418881893158,
+            "internal_luma_std": 0.20049452781677246,
+            "edge_energy": 0.10658563673496246,
+            "strong_edge_fraction": 0.6800832755031229,
+            "visible_fraction": 0.577323717948718
+          },
+          "deutan": {
+            "foreground_contrast": 0.15781676769256592,
+            "internal_luma_std": 0.20372675359249115,
+            "edge_energy": 0.11043862998485565,
+            "strong_edge_fraction": 0.6884108258154059,
+            "visible_fraction": 0.577323717948718
+          },
+          "tritan": {
+            "foreground_contrast": 0.17926940321922302,
+            "internal_luma_std": 0.14699719846248627,
+            "edge_energy": 0.08288354426622391,
+            "strong_edge_fraction": 0.5933379597501734,
+            "visible_fraction": 0.577323717948718
+          }
+        }
+      },
+      "known_blocker": "stacked upper contours"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "review",
+      "row_index": 8,
+      "frame": 2,
+      "score": 0.197636,
+      "worst_relative_loss": 0.259099,
+      "mean_relative_loss": 0.039587,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.23676113784313202,
+            "internal_luma_std": 0.25286978483200073,
+            "edge_energy": 0.08811139315366745,
+            "strong_edge_fraction": 0.5161012571034957,
+            "visible_fraction": 0.5816306089743589
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23778851330280304,
+            "internal_luma_std": 0.25345349311828613,
+            "edge_energy": 0.08867982774972916,
+            "strong_edge_fraction": 0.5214396418116067,
+            "visible_fraction": 0.5816306089743589
+          },
+          "protan": {
+            "foreground_contrast": 0.22512724995613098,
+            "internal_luma_std": 0.26276201009750366,
+            "edge_energy": 0.09771686047315598,
+            "strong_edge_fraction": 0.5422765627690718,
+            "visible_fraction": 0.5816306089743589
+          },
+          "deutan": {
+            "foreground_contrast": 0.2285304218530655,
+            "internal_luma_std": 0.2701931595802307,
+            "edge_energy": 0.10140126198530197,
+            "strong_edge_fraction": 0.5470983296022043,
+            "visible_fraction": 0.5816306089743589
+          },
+          "tritan": {
+            "foreground_contrast": 0.21255134046077728,
+            "internal_luma_std": 0.19032396376132965,
+            "edge_energy": 0.0739801824092865,
+            "strong_edge_fraction": 0.4818322713965903,
+            "visible_fraction": 0.5816306089743589
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2105776071548462,
+            "internal_luma_std": 0.22787418961524963,
+            "edge_energy": 0.09555210918188095,
+            "strong_edge_fraction": 0.6240753194351042,
+            "visible_fraction": 0.5957532051282052
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21192501485347748,
+            "internal_luma_std": 0.22911322116851807,
+            "edge_energy": 0.09643346816301346,
+            "strong_edge_fraction": 0.6227303295225286,
+            "visible_fraction": 0.5957532051282052
+          },
+          "protan": {
+            "foreground_contrast": 0.19795489311218262,
+            "internal_luma_std": 0.23519842326641083,
+            "edge_energy": 0.10945270955562592,
+            "strong_edge_fraction": 0.652320107599193,
+            "visible_fraction": 0.5957532051282052
+          },
+          "deutan": {
+            "foreground_contrast": 0.20081329345703125,
+            "internal_luma_std": 0.24149328470230103,
+            "edge_energy": 0.11551239341497421,
+            "strong_edge_fraction": 0.6637525218560861,
+            "visible_fraction": 0.5957532051282052
+          },
+          "tritan": {
+            "foreground_contrast": 0.19722945988178253,
+            "internal_luma_std": 0.1688322126865387,
+            "edge_energy": 0.08474989235401154,
+            "strong_edge_fraction": 0.5850706119704102,
+            "visible_fraction": 0.5957532051282052
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "review",
+      "row_index": 8,
+      "frame": 2,
+      "score": 0.197146,
+      "worst_relative_loss": 0.256243,
+      "mean_relative_loss": 0.045181,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.20863458514213562,
+            "internal_luma_std": 0.16067226231098175,
+            "edge_energy": 0.0577070489525795,
+            "strong_edge_fraction": 0.41263372389200204,
+            "visible_fraction": 0.58984375
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21011275053024292,
+            "internal_luma_std": 0.16094855964183807,
+            "edge_energy": 0.0578468032181263,
+            "strong_edge_fraction": 0.41484122941076584,
+            "visible_fraction": 0.58984375
+          },
+          "protan": {
+            "foreground_contrast": 0.16712182760238647,
+            "internal_luma_std": 0.16278822720050812,
+            "edge_energy": 0.06242065876722336,
+            "strong_edge_fraction": 0.4550857530989981,
+            "visible_fraction": 0.58984375
+          },
+          "deutan": {
+            "foreground_contrast": 0.15942910313606262,
+            "internal_luma_std": 0.16789263486862183,
+            "edge_energy": 0.0647556409239769,
+            "strong_edge_fraction": 0.47036848361351674,
+            "visible_fraction": 0.58984375
+          },
+          "tritan": {
+            "foreground_contrast": 0.23472340404987335,
+            "internal_luma_std": 0.14030712842941284,
+            "edge_energy": 0.052561867982149124,
+            "strong_edge_fraction": 0.39055866870436406,
+            "visible_fraction": 0.58984375
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.19850115478038788,
+            "internal_luma_std": 0.14941655099391937,
+            "edge_energy": 0.07208564877510071,
+            "strong_edge_fraction": 0.5426666666666666,
+            "visible_fraction": 0.6009615384615384
+          },
+          "grayscale": {
+            "foreground_contrast": 0.19997362792491913,
+            "internal_luma_std": 0.14970065653324127,
+            "edge_energy": 0.07233035564422607,
+            "strong_edge_fraction": 0.548,
+            "visible_fraction": 0.6009615384615384
+          },
+          "protan": {
+            "foreground_contrast": 0.155581995844841,
+            "internal_luma_std": 0.14919303357601166,
+            "edge_energy": 0.07594769448041916,
+            "strong_edge_fraction": 0.584,
+            "visible_fraction": 0.6009615384615384
+          },
+          "deutan": {
+            "foreground_contrast": 0.1476365327835083,
+            "internal_luma_std": 0.153495192527771,
+            "edge_energy": 0.07877222448587418,
+            "strong_edge_fraction": 0.608,
+            "visible_fraction": 0.6009615384615384
+          },
+          "tritan": {
+            "foreground_contrast": 0.22607795894145966,
+            "internal_luma_std": 0.1312158703804016,
+            "edge_energy": 0.06671208888292313,
+            "strong_edge_fraction": 0.504,
+            "visible_fraction": 0.6009615384615384
+          }
+        }
+      },
+      "known_blocker": "complete-row detached component/action structure issue"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "row_index": 6,
+      "frame": 5,
+      "score": 0.19589,
+      "worst_relative_loss": 0.254122,
+      "mean_relative_loss": 0.046149,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2244834452867508,
+            "internal_luma_std": 0.24541279673576355,
+            "edge_energy": 0.1196252703666687,
+            "strong_edge_fraction": 0.6345718901453958,
+            "visible_fraction": 0.6199919871794872
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22564853727817535,
+            "internal_luma_std": 0.2462526112794876,
+            "edge_energy": 0.12032083421945572,
+            "strong_edge_fraction": 0.6376413570274636,
+            "visible_fraction": 0.6199919871794872
+          },
+          "protan": {
+            "foreground_contrast": 0.21055005490779877,
+            "internal_luma_std": 0.25156858563423157,
+            "edge_energy": 0.12430115044116974,
+            "strong_edge_fraction": 0.6424878836833603,
+            "visible_fraction": 0.6199919871794872
+          },
+          "deutan": {
+            "foreground_contrast": 0.20857509970664978,
+            "internal_luma_std": 0.2561517059803009,
+            "edge_energy": 0.12618803977966309,
+            "strong_edge_fraction": 0.6458804523424879,
+            "visible_fraction": 0.6199919871794872
+          },
+          "tritan": {
+            "foreground_contrast": 0.20369185507297516,
+            "internal_luma_std": 0.185500830411911,
+            "edge_energy": 0.09802651405334473,
+            "strong_edge_fraction": 0.6066235864297254,
+            "visible_fraction": 0.6199919871794872
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.19313417375087738,
+            "internal_luma_std": 0.20910362899303436,
+            "edge_energy": 0.11699260771274567,
+            "strong_edge_fraction": 0.7046894803548795,
+            "visible_fraction": 0.6322115384615384
+          },
+          "grayscale": {
+            "foreground_contrast": 0.19463233649730682,
+            "internal_luma_std": 0.21061107516288757,
+            "edge_energy": 0.11810707300901413,
+            "strong_edge_fraction": 0.7091254752851711,
+            "visible_fraction": 0.6322115384615384
+          },
+          "protan": {
+            "foreground_contrast": 0.17635288834571838,
+            "internal_luma_std": 0.21499304473400116,
+            "edge_energy": 0.12729337811470032,
+            "strong_edge_fraction": 0.7363751584283904,
+            "visible_fraction": 0.6322115384615384
+          },
+          "deutan": {
+            "foreground_contrast": 0.172682523727417,
+            "internal_luma_std": 0.21900498867034912,
+            "edge_energy": 0.13129356503486633,
+            "strong_edge_fraction": 0.7452471482889734,
+            "visible_fraction": 0.6322115384615384
+          },
+          "tritan": {
+            "foreground_contrast": 0.18572983145713806,
+            "internal_luma_std": 0.15596577525138855,
+            "edge_energy": 0.09589383751153946,
+            "strong_edge_fraction": 0.6223067173637515,
+            "visible_fraction": 0.6322115384615384
+          }
+        }
+      },
+      "known_blocker": "stacked upper contours"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "look-row-10",
+      "row_index": 10,
+      "frame": 0,
+      "score": 0.194082,
+      "worst_relative_loss": 0.253271,
+      "mean_relative_loss": 0.041884,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2482958436012268,
+            "internal_luma_std": 0.20079593360424042,
+            "edge_energy": 0.0811115950345993,
+            "strong_edge_fraction": 0.4970501474926254,
+            "visible_fraction": 0.6111778846153846
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2499518245458603,
+            "internal_luma_std": 0.20126163959503174,
+            "edge_energy": 0.08153809607028961,
+            "strong_edge_fraction": 0.5014749262536873,
+            "visible_fraction": 0.6111778846153846
+          },
+          "protan": {
+            "foreground_contrast": 0.1998874992132187,
+            "internal_luma_std": 0.20201429724693298,
+            "edge_energy": 0.0862947553396225,
+            "strong_edge_fraction": 0.5368731563421829,
+            "visible_fraction": 0.6111778846153846
+          },
+          "deutan": {
+            "foreground_contrast": 0.192195326089859,
+            "internal_luma_std": 0.20742832124233246,
+            "edge_energy": 0.08868043124675751,
+            "strong_edge_fraction": 0.5458865945591609,
+            "visible_fraction": 0.6111778846153846
+          },
+          "tritan": {
+            "foreground_contrast": 0.2698334753513336,
+            "internal_luma_std": 0.18204361200332642,
+            "edge_energy": 0.07477669417858124,
+            "strong_edge_fraction": 0.47377908882333664,
+            "visible_fraction": 0.6111778846153846
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2294725924730301,
+            "internal_luma_std": 0.17986397445201874,
+            "edge_energy": 0.09123717248439789,
+            "strong_edge_fraction": 0.5829596412556054,
+            "visible_fraction": 0.6254006410256411
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23121942579746246,
+            "internal_luma_std": 0.180499866604805,
+            "edge_energy": 0.09176237881183624,
+            "strong_edge_fraction": 0.5893657911595132,
+            "visible_fraction": 0.6254006410256411
+          },
+          "protan": {
+            "foreground_contrast": 0.17919272184371948,
+            "internal_luma_std": 0.17870855331420898,
+            "edge_energy": 0.09643905609846115,
+            "strong_edge_fraction": 0.6399743754003844,
+            "visible_fraction": 0.6254006410256411
+          },
+          "deutan": {
+            "foreground_contrast": 0.17135389149188995,
+            "internal_luma_std": 0.18347042798995972,
+            "edge_energy": 0.09961526840925217,
+            "strong_edge_fraction": 0.6617552850736708,
+            "visible_fraction": 0.6254006410256411
+          },
+          "tritan": {
+            "foreground_contrast": 0.252323180437088,
+            "internal_luma_std": 0.16332019865512848,
+            "edge_energy": 0.08396202325820923,
+            "strong_edge_fraction": 0.5534913516976298,
+            "visible_fraction": 0.6254006410256411
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "running",
+      "row_index": 7,
+      "frame": 4,
+      "score": 0.193246,
+      "worst_relative_loss": 0.251741,
+      "mean_relative_loss": 0.042829,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.21586574614048004,
+            "internal_luma_std": 0.15538334846496582,
+            "edge_energy": 0.05370074883103371,
+            "strong_edge_fraction": 0.4696816061650781,
+            "visible_fraction": 0.49389022435897434
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21742329001426697,
+            "internal_luma_std": 0.15555919706821442,
+            "edge_energy": 0.05380468815565109,
+            "strong_edge_fraction": 0.4694788075441087,
+            "visible_fraction": 0.49389022435897434
+          },
+          "protan": {
+            "foreground_contrast": 0.1725786328315735,
+            "internal_luma_std": 0.1651073545217514,
+            "edge_energy": 0.05786710977554321,
+            "strong_edge_fraction": 0.507807746907321,
+            "visible_fraction": 0.49389022435897434
+          },
+          "deutan": {
+            "foreground_contrast": 0.16697143018245697,
+            "internal_luma_std": 0.1736748367547989,
+            "edge_energy": 0.059904154390096664,
+            "strong_edge_fraction": 0.5201784627864531,
+            "visible_fraction": 0.49389022435897434
+          },
+          "tritan": {
+            "foreground_contrast": 0.24529039859771729,
+            "internal_luma_std": 0.13922028243541718,
+            "edge_energy": 0.048924803733825684,
+            "strong_edge_fraction": 0.4394646116406408,
+            "visible_fraction": 0.49389022435897434
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.201200470328331,
+            "internal_luma_std": 0.1400950849056244,
+            "edge_energy": 0.06334717571735382,
+            "strong_edge_fraction": 0.5595895816890292,
+            "visible_fraction": 0.5076121794871795
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20276738703250885,
+            "internal_luma_std": 0.14035943150520325,
+            "edge_energy": 0.0635744035243988,
+            "strong_edge_fraction": 0.5627466456195738,
+            "visible_fraction": 0.5076121794871795
+          },
+          "protan": {
+            "foreground_contrast": 0.1566428542137146,
+            "internal_luma_std": 0.14726762473583221,
+            "edge_energy": 0.06786690652370453,
+            "strong_edge_fraction": 0.595895816890292,
+            "visible_fraction": 0.5076121794871795
+          },
+          "deutan": {
+            "foreground_contrast": 0.15055005252361298,
+            "internal_luma_std": 0.15512453019618988,
+            "edge_energy": 0.07047818601131439,
+            "strong_edge_fraction": 0.6108918705603789,
+            "visible_fraction": 0.5076121794871795
+          },
+          "tritan": {
+            "foreground_contrast": 0.23272697627544403,
+            "internal_luma_std": 0.1272570937871933,
+            "edge_energy": 0.05881413444876671,
+            "strong_edge_fraction": 0.531965272296764,
+            "visible_fraction": 0.5076121794871795
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "row_index": 6,
+      "frame": 1,
+      "score": 0.192148,
+      "worst_relative_loss": 0.249593,
+      "mean_relative_loss": 0.044431,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.21504870057106018,
+            "internal_luma_std": 0.23572538793087006,
+            "edge_energy": 0.1054956391453743,
+            "strong_edge_fraction": 0.6342517558076716,
+            "visible_fraction": 0.5561899038461539
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2162207067012787,
+            "internal_luma_std": 0.23657850921154022,
+            "edge_energy": 0.10613217949867249,
+            "strong_edge_fraction": 0.6400144066270484,
+            "visible_fraction": 0.5561899038461539
+          },
+          "protan": {
+            "foreground_contrast": 0.19885291159152985,
+            "internal_luma_std": 0.24055035412311554,
+            "edge_energy": 0.11020245403051376,
+            "strong_edge_fraction": 0.6499189627228525,
+            "visible_fraction": 0.5561899038461539
+          },
+          "deutan": {
+            "foreground_contrast": 0.19551250338554382,
+            "internal_luma_std": 0.24442480504512787,
+            "edge_energy": 0.1120716780424118,
+            "strong_edge_fraction": 0.6486583828561138,
+            "visible_fraction": 0.5561899038461539
+          },
+          "tritan": {
+            "foreground_contrast": 0.2001420259475708,
+            "internal_luma_std": 0.17953220009803772,
+            "edge_energy": 0.08630503714084625,
+            "strong_edge_fraction": 0.5933729515577165,
+            "visible_fraction": 0.5561899038461539
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.18533079326152802,
+            "internal_luma_std": 0.20149320363998413,
+            "edge_energy": 0.10227080434560776,
+            "strong_edge_fraction": 0.6697312588401697,
+            "visible_fraction": 0.5665064102564102
+          },
+          "grayscale": {
+            "foreground_contrast": 0.18656575679779053,
+            "internal_luma_std": 0.20267242193222046,
+            "edge_energy": 0.10304973274469376,
+            "strong_edge_fraction": 0.6732673267326733,
+            "visible_fraction": 0.5665064102564102
+          },
+          "protan": {
+            "foreground_contrast": 0.16789774596691132,
+            "internal_luma_std": 0.20534995198249817,
+            "edge_energy": 0.11105901747941971,
+            "strong_edge_fraction": 0.7015558698727016,
+            "visible_fraction": 0.5665064102564102
+          },
+          "deutan": {
+            "foreground_contrast": 0.16341760754585266,
+            "internal_luma_std": 0.20885270833969116,
+            "edge_energy": 0.11491987854242325,
+            "strong_edge_fraction": 0.7079207920792079,
+            "visible_fraction": 0.5665064102564102
+          },
+          "tritan": {
+            "foreground_contrast": 0.18176023662090302,
+            "internal_luma_std": 0.15120190382003784,
+            "edge_energy": 0.08696526288986206,
+            "strong_edge_fraction": 0.6223479490806223,
+            "visible_fraction": 0.5665064102564102
+          }
+        }
+      },
+      "known_blocker": "stacked upper contours"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "review",
+      "row_index": 8,
+      "frame": 3,
+      "score": 0.191704,
+      "worst_relative_loss": 0.251202,
+      "mean_relative_loss": 0.038708,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.23275934159755707,
+            "internal_luma_std": 0.2533004581928253,
+            "edge_energy": 0.09056862443685532,
+            "strong_edge_fraction": 0.5227074995649904,
+            "visible_fraction": 0.5756209935897436
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23368752002716064,
+            "internal_luma_std": 0.2538488507270813,
+            "edge_energy": 0.09109639376401901,
+            "strong_edge_fraction": 0.529493648860275,
+            "visible_fraction": 0.5756209935897436
+          },
+          "protan": {
+            "foreground_contrast": 0.22309444844722748,
+            "internal_luma_std": 0.26234710216522217,
+            "edge_energy": 0.09856284409761429,
+            "strong_edge_fraction": 0.5474160431529493,
+            "visible_fraction": 0.5756209935897436
+          },
+          "deutan": {
+            "foreground_contrast": 0.22452953457832336,
+            "internal_luma_std": 0.2687729299068451,
+            "edge_energy": 0.10156397521495819,
+            "strong_edge_fraction": 0.5481120584652862,
+            "visible_fraction": 0.5756209935897436
+          },
+          "tritan": {
+            "foreground_contrast": 0.20665448904037476,
+            "internal_luma_std": 0.19287799298763275,
+            "edge_energy": 0.07637816667556763,
+            "strong_edge_fraction": 0.48112058465286234,
+            "visible_fraction": 0.5756209935897436
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2046554982662201,
+            "internal_luma_std": 0.22654904425144196,
+            "edge_energy": 0.09481122344732285,
+            "strong_edge_fraction": 0.623721881390593,
+            "visible_fraction": 0.5877403846153846
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20587462186813354,
+            "internal_luma_std": 0.22784966230392456,
+            "edge_energy": 0.095729760825634,
+            "strong_edge_fraction": 0.6271301976823449,
+            "visible_fraction": 0.5877403846153846
+          },
+          "protan": {
+            "foreground_contrast": 0.19489435851573944,
+            "internal_luma_std": 0.2334151268005371,
+            "edge_energy": 0.1074090301990509,
+            "strong_edge_fraction": 0.65439672801636,
+            "visible_fraction": 0.5877403846153846
+          },
+          "deutan": {
+            "foreground_contrast": 0.19591566920280457,
+            "internal_luma_std": 0.23883117735385895,
+            "edge_energy": 0.11256960779428482,
+            "strong_edge_fraction": 0.6612133605998637,
+            "visible_fraction": 0.5877403846153846
+          },
+          "tritan": {
+            "foreground_contrast": 0.1903938204050064,
+            "internal_luma_std": 0.16963940858840942,
+            "edge_energy": 0.0855228528380394,
+            "strong_edge_fraction": 0.5828220858895705,
+            "visible_fraction": 0.5877403846153846
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 5,
+      "score": 0.19076,
+      "worst_relative_loss": 0.249379,
+      "mean_relative_loss": 0.040025,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22303444147109985,
+            "internal_luma_std": 0.15492427349090576,
+            "edge_energy": 0.057058241218328476,
+            "strong_edge_fraction": 0.45819592628516004,
+            "visible_fraction": 0.5163261217948718
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22469815611839294,
+            "internal_luma_std": 0.15516842901706696,
+            "edge_energy": 0.057244639843702316,
+            "strong_edge_fraction": 0.4620756547041707,
+            "visible_fraction": 0.5163261217948718
+          },
+          "protan": {
+            "foreground_contrast": 0.17814499139785767,
+            "internal_luma_std": 0.1714092344045639,
+            "edge_energy": 0.06155386194586754,
+            "strong_edge_fraction": 0.5004849660523764,
+            "visible_fraction": 0.5163261217948718
+          },
+          "deutan": {
+            "foreground_contrast": 0.1728586107492447,
+            "internal_luma_std": 0.1821383833885193,
+            "edge_energy": 0.06364090740680695,
+            "strong_edge_fraction": 0.5115421920465567,
+            "visible_fraction": 0.5163261217948718
+          },
+          "tritan": {
+            "foreground_contrast": 0.2516360580921173,
+            "internal_luma_std": 0.145435631275177,
+            "edge_energy": 0.05324146896600723,
+            "strong_edge_fraction": 0.43181377303588747,
+            "visible_fraction": 0.5163261217948718
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.21028296649456024,
+            "internal_luma_std": 0.1380065679550171,
+            "edge_energy": 0.06374839693307877,
+            "strong_edge_fraction": 0.5273141122913505,
+            "visible_fraction": 0.5280448717948718
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21199922263622284,
+            "internal_luma_std": 0.13838689029216766,
+            "edge_energy": 0.06392120569944382,
+            "strong_edge_fraction": 0.5311077389984825,
+            "visible_fraction": 0.5280448717948718
+          },
+          "protan": {
+            "foreground_contrast": 0.1631159633398056,
+            "internal_luma_std": 0.15318161249160767,
+            "edge_energy": 0.06910398602485657,
+            "strong_edge_fraction": 0.5796661608497724,
+            "visible_fraction": 0.5280448717948718
+          },
+          "deutan": {
+            "foreground_contrast": 0.15784278512001038,
+            "internal_luma_std": 0.16370868682861328,
+            "edge_energy": 0.07229830324649811,
+            "strong_edge_fraction": 0.6047040971168437,
+            "visible_fraction": 0.5280448717948718
+          },
+          "tritan": {
+            "foreground_contrast": 0.24017030000686646,
+            "internal_luma_std": 0.13103391230106354,
+            "edge_energy": 0.060490500181913376,
+            "strong_edge_fraction": 0.4779969650986343,
+            "visible_fraction": 0.5280448717948718
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 0,
+      "score": 0.189328,
+      "worst_relative_loss": 0.24656,
+      "mean_relative_loss": 0.042159,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2199987769126892,
+            "internal_luma_std": 0.16530896723270416,
+            "edge_energy": 0.06235482543706894,
+            "strong_edge_fraction": 0.4831271091113611,
+            "visible_fraction": 0.5342548076923077
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22158730030059814,
+            "internal_luma_std": 0.16561777889728546,
+            "edge_energy": 0.06260735541582108,
+            "strong_edge_fraction": 0.4851893513310836,
+            "visible_fraction": 0.5342548076923077
+          },
+          "protan": {
+            "foreground_contrast": 0.17776058614253998,
+            "internal_luma_std": 0.17436915636062622,
+            "edge_energy": 0.06674056500196457,
+            "strong_edge_fraction": 0.5155605549306337,
+            "visible_fraction": 0.5342548076923077
+          },
+          "deutan": {
+            "foreground_contrast": 0.17240680754184723,
+            "internal_luma_std": 0.18271790444850922,
+            "edge_energy": 0.06884201616048813,
+            "strong_edge_fraction": 0.5266216722909637,
+            "visible_fraction": 0.5342548076923077
+          },
+          "tritan": {
+            "foreground_contrast": 0.24632541835308075,
+            "internal_luma_std": 0.14785277843475342,
+            "edge_energy": 0.057542622089385986,
+            "strong_edge_fraction": 0.45725534308211474,
+            "visible_fraction": 0.5342548076923077
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.20652930438518524,
+            "internal_luma_std": 0.1471938192844391,
+            "edge_energy": 0.07029423862695694,
+            "strong_edge_fraction": 0.553019145802651,
+            "visible_fraction": 0.5440705128205128
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20809410512447357,
+            "internal_luma_std": 0.14745400846004486,
+            "edge_energy": 0.07052314281463623,
+            "strong_edge_fraction": 0.5559646539027983,
+            "visible_fraction": 0.5440705128205128
+          },
+          "protan": {
+            "foreground_contrast": 0.16161486506462097,
+            "internal_luma_std": 0.1544240266084671,
+            "edge_energy": 0.07486315071582794,
+            "strong_edge_fraction": 0.6089837997054491,
+            "visible_fraction": 0.5440705128205128
+          },
+          "deutan": {
+            "foreground_contrast": 0.1556074619293213,
+            "internal_luma_std": 0.1625145822763443,
+            "edge_energy": 0.07771407812833786,
+            "strong_edge_fraction": 0.6428571428571429,
+            "visible_fraction": 0.5440705128205128
+          },
+          "tritan": {
+            "foreground_contrast": 0.23411795496940613,
+            "internal_luma_std": 0.1317860335111618,
+            "edge_energy": 0.06505873054265976,
+            "strong_edge_fraction": 0.5191458026509573,
+            "visible_fraction": 0.5440705128205128
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-9",
+      "row_index": 9,
+      "frame": 5,
+      "score": 0.189319,
+      "worst_relative_loss": 0.243787,
+      "mean_relative_loss": 0.049259,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2648524343967438,
+            "internal_luma_std": 0.1548646241426468,
+            "edge_energy": 0.05276188999414444,
+            "strong_edge_fraction": 0.48299622138252946,
+            "visible_fraction": 0.4506209935897436
+          },
+          "grayscale": {
+            "foreground_contrast": 0.26702412962913513,
+            "internal_luma_std": 0.15547272562980652,
+            "edge_energy": 0.05343544855713844,
+            "strong_edge_fraction": 0.4854412091575906,
+            "visible_fraction": 0.4506209935897436
+          },
+          "protan": {
+            "foreground_contrast": 0.216084823012352,
+            "internal_luma_std": 0.17926768958568573,
+            "edge_energy": 0.05908554419875145,
+            "strong_edge_fraction": 0.5387863969771061,
+            "visible_fraction": 0.4506209935897436
+          },
+          "deutan": {
+            "foreground_contrast": 0.20903655886650085,
+            "internal_luma_std": 0.19426850974559784,
+            "edge_energy": 0.06206441670656204,
+            "strong_edge_fraction": 0.5483440764614359,
+            "visible_fraction": 0.4506209935897436
+          },
+          "tritan": {
+            "foreground_contrast": 0.29248154163360596,
+            "internal_luma_std": 0.13195426762104034,
+            "edge_energy": 0.04442770034074783,
+            "strong_edge_fraction": 0.43187374972216047,
+            "visible_fraction": 0.4506209935897436
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2494814693927765,
+            "internal_luma_std": 0.1394250988960266,
+            "edge_energy": 0.06095775216817856,
+            "strong_edge_fraction": 0.5613126079447323,
+            "visible_fraction": 0.4639423076923077
+          },
+          "grayscale": {
+            "foreground_contrast": 0.25152039527893066,
+            "internal_luma_std": 0.14028388261795044,
+            "edge_energy": 0.06161235272884369,
+            "strong_edge_fraction": 0.5647668393782384,
+            "visible_fraction": 0.4639423076923077
+          },
+          "protan": {
+            "foreground_contrast": 0.197603240609169,
+            "internal_luma_std": 0.1606605499982834,
+            "edge_energy": 0.06881995499134064,
+            "strong_edge_fraction": 0.6312607944732297,
+            "visible_fraction": 0.4639423076923077
+          },
+          "deutan": {
+            "foreground_contrast": 0.18866103887557983,
+            "internal_luma_std": 0.17439787089824677,
+            "edge_energy": 0.07343881577253342,
+            "strong_edge_fraction": 0.6606217616580311,
+            "visible_fraction": 0.4639423076923077
+          },
+          "tritan": {
+            "foreground_contrast": 0.2815747559070587,
+            "internal_luma_std": 0.1233106330037117,
+            "edge_energy": 0.05481164902448654,
+            "strong_edge_fraction": 0.5043177892918825,
+            "visible_fraction": 0.4639423076923077
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "waiting",
+      "row_index": 6,
+      "frame": 5,
+      "score": 0.189241,
+      "worst_relative_loss": 0.248604,
+      "mean_relative_loss": 0.036594,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.23713478446006775,
+            "internal_luma_std": 0.15184251964092255,
+            "edge_energy": 0.05160549655556679,
+            "strong_edge_fraction": 0.40483271375464686,
+            "visible_fraction": 0.5388621794871795
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2388230264186859,
+            "internal_luma_std": 0.152015820145607,
+            "edge_energy": 0.05174335464835167,
+            "strong_edge_fraction": 0.408364312267658,
+            "visible_fraction": 0.5388621794871795
+          },
+          "protan": {
+            "foreground_contrast": 0.19207146763801575,
+            "internal_luma_std": 0.16520437598228455,
+            "edge_energy": 0.057316191494464874,
+            "strong_edge_fraction": 0.450185873605948,
+            "visible_fraction": 0.5388621794871795
+          },
+          "deutan": {
+            "foreground_contrast": 0.18365827202796936,
+            "internal_luma_std": 0.17472408711910248,
+            "edge_energy": 0.05989035591483116,
+            "strong_edge_fraction": 0.4671003717472119,
+            "visible_fraction": 0.5388621794871795
+          },
+          "tritan": {
+            "foreground_contrast": 0.2653157114982605,
+            "internal_luma_std": 0.1428963541984558,
+            "edge_energy": 0.04862983152270317,
+            "strong_edge_fraction": 0.38159851301115244,
+            "visible_fraction": 0.5388621794871795
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.22440031170845032,
+            "internal_luma_std": 0.14048804342746735,
+            "edge_energy": 0.06330250948667526,
+            "strong_edge_fraction": 0.5021645021645021,
+            "visible_fraction": 0.5552884615384616
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2261033058166504,
+            "internal_luma_std": 0.14087919890880585,
+            "edge_energy": 0.06347595155239105,
+            "strong_edge_fraction": 0.5021645021645021,
+            "visible_fraction": 0.5552884615384616
+          },
+          "protan": {
+            "foreground_contrast": 0.1776524931192398,
+            "internal_luma_std": 0.1505984663963318,
+            "edge_energy": 0.07016104459762573,
+            "strong_edge_fraction": 0.5707070707070707,
+            "visible_fraction": 0.5552884615384616
+          },
+          "deutan": {
+            "foreground_contrast": 0.16861356794834137,
+            "internal_luma_std": 0.15907864272594452,
+            "edge_energy": 0.07369111478328705,
+            "strong_edge_fraction": 0.5966810966810967,
+            "visible_fraction": 0.5552884615384616
+          },
+          "tritan": {
+            "foreground_contrast": 0.25273236632347107,
+            "internal_luma_std": 0.13376830518245697,
+            "edge_energy": 0.061173342168331146,
+            "strong_edge_fraction": 0.4805194805194805,
+            "visible_fraction": 0.5552884615384616
+          }
+        }
+      },
+      "known_blocker": "complete-row detached component/action structure issue"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "review",
+      "row_index": 8,
+      "frame": 5,
+      "score": 0.188795,
+      "worst_relative_loss": 0.246028,
+      "mean_relative_loss": 0.041622,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22541585564613342,
+            "internal_luma_std": 0.1695302426815033,
+            "edge_energy": 0.061115365475416183,
+            "strong_edge_fraction": 0.4338088918380889,
+            "visible_fraction": 0.6037660256410257
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2270316779613495,
+            "internal_luma_std": 0.16983996331691742,
+            "edge_energy": 0.06129129230976105,
+            "strong_edge_fraction": 0.43530192435301923,
+            "visible_fraction": 0.6037660256410257
+          },
+          "protan": {
+            "foreground_contrast": 0.1801503449678421,
+            "internal_luma_std": 0.1759926974773407,
+            "edge_energy": 0.06635558605194092,
+            "strong_edge_fraction": 0.477936297279363,
+            "visible_fraction": 0.6037660256410257
+          },
+          "deutan": {
+            "foreground_contrast": 0.17461319267749786,
+            "internal_luma_std": 0.18383477628231049,
+            "edge_energy": 0.06879343092441559,
+            "strong_edge_fraction": 0.49220305242203055,
+            "visible_fraction": 0.6037660256410257
+          },
+          "tritan": {
+            "foreground_contrast": 0.24806047976016998,
+            "internal_luma_std": 0.14944076538085938,
+            "edge_energy": 0.0561617948114872,
+            "strong_edge_fraction": 0.41274054412740546,
+            "visible_fraction": 0.6037660256410257
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.21479034423828125,
+            "internal_luma_std": 0.15758371353149414,
+            "edge_energy": 0.07635512202978134,
+            "strong_edge_fraction": 0.5238718116415958,
+            "visible_fraction": 0.6125801282051282
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21633075177669525,
+            "internal_luma_std": 0.157884418964386,
+            "edge_energy": 0.07663019746541977,
+            "strong_edge_fraction": 0.5304120340091563,
+            "visible_fraction": 0.6125801282051282
+          },
+          "protan": {
+            "foreground_contrast": 0.16767731308937073,
+            "internal_luma_std": 0.16217774152755737,
+            "edge_energy": 0.08192563056945801,
+            "strong_edge_fraction": 0.5938521909744932,
+            "visible_fraction": 0.6125801282051282
+          },
+          "deutan": {
+            "foreground_contrast": 0.16194581985473633,
+            "internal_luma_std": 0.16950272023677826,
+            "edge_energy": 0.08514853566884995,
+            "strong_edge_fraction": 0.6121648136036625,
+            "visible_fraction": 0.6125801282051282
+          },
+          "tritan": {
+            "foreground_contrast": 0.23881523311138153,
+            "internal_luma_std": 0.13919804990291595,
+            "edge_energy": 0.07125382870435715,
+            "strong_edge_fraction": 0.5192936559843034,
+            "visible_fraction": 0.6125801282051282
+          }
+        }
+      },
+      "known_blocker": "complete-row detached component/action structure issue"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "running",
+      "row_index": 7,
+      "frame": 3,
+      "score": 0.187907,
+      "worst_relative_loss": 0.243449,
+      "mean_relative_loss": 0.045085,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.21486639976501465,
+            "internal_luma_std": 0.18084293603897095,
+            "edge_energy": 0.06335866451263428,
+            "strong_edge_fraction": 0.486984008925251,
+            "visible_fraction": 0.5386618589743589
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2163059562444687,
+            "internal_luma_std": 0.18118487298488617,
+            "edge_energy": 0.0635107159614563,
+            "strong_edge_fraction": 0.491074748977315,
+            "visible_fraction": 0.5386618589743589
+          },
+          "protan": {
+            "foreground_contrast": 0.17264601588249207,
+            "internal_luma_std": 0.18050289154052734,
+            "edge_energy": 0.0674610510468483,
+            "strong_edge_fraction": 0.5243584975827446,
+            "visible_fraction": 0.5386618589743589
+          },
+          "deutan": {
+            "foreground_contrast": 0.1685478687286377,
+            "internal_luma_std": 0.18622861802577972,
+            "edge_energy": 0.0694907158613205,
+            "strong_edge_fraction": 0.5371885459278543,
+            "visible_fraction": 0.5386618589743589
+          },
+          "tritan": {
+            "foreground_contrast": 0.23731094598770142,
+            "internal_luma_std": 0.1576048880815506,
+            "edge_energy": 0.05767467990517616,
+            "strong_edge_fraction": 0.45853477129044257,
+            "visible_fraction": 0.5386618589743589
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.199905663728714,
+            "internal_luma_std": 0.16368329524993896,
+            "edge_energy": 0.0734272375702858,
+            "strong_edge_fraction": 0.5524781341107872,
+            "visible_fraction": 0.5496794871794872
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20124275982379913,
+            "internal_luma_std": 0.16407375037670135,
+            "edge_energy": 0.07359572499990463,
+            "strong_edge_fraction": 0.5524781341107872,
+            "visible_fraction": 0.5496794871794872
+          },
+          "protan": {
+            "foreground_contrast": 0.15563681721687317,
+            "internal_luma_std": 0.16091841459274292,
+            "edge_energy": 0.07707921415567398,
+            "strong_edge_fraction": 0.6027696793002916,
+            "visible_fraction": 0.5496794871794872
+          },
+          "deutan": {
+            "foreground_contrast": 0.15123891830444336,
+            "internal_luma_std": 0.16615669429302216,
+            "edge_energy": 0.07968277484178543,
+            "strong_edge_fraction": 0.6268221574344023,
+            "visible_fraction": 0.5496794871794872
+          },
+          "tritan": {
+            "foreground_contrast": 0.2244078367948532,
+            "internal_luma_std": 0.14275577664375305,
+            "edge_energy": 0.06741926819086075,
+            "strong_edge_fraction": 0.5189504373177842,
+            "visible_fraction": 0.5496794871794872
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "review",
+      "row_index": 8,
+      "frame": 4,
+      "score": 0.187881,
+      "worst_relative_loss": 0.246332,
+      "mean_relative_loss": 0.037578,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.23364141583442688,
+            "internal_luma_std": 0.2546447515487671,
+            "edge_energy": 0.08932686597108841,
+            "strong_edge_fraction": 0.5384070796460177,
+            "visible_fraction": 0.5659054487179487
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23459476232528687,
+            "internal_luma_std": 0.2552160620689392,
+            "edge_energy": 0.08995427936315536,
+            "strong_edge_fraction": 0.544424778761062,
+            "visible_fraction": 0.5659054487179487
+          },
+          "protan": {
+            "foreground_contrast": 0.22485385835170746,
+            "internal_luma_std": 0.26384198665618896,
+            "edge_energy": 0.09705497324466705,
+            "strong_edge_fraction": 0.5536283185840708,
+            "visible_fraction": 0.5659054487179487
+          },
+          "deutan": {
+            "foreground_contrast": 0.22657239437103271,
+            "internal_luma_std": 0.2702706754207611,
+            "edge_energy": 0.09991446882486343,
+            "strong_edge_fraction": 0.555929203539823,
+            "visible_fraction": 0.5659054487179487
+          },
+          "tritan": {
+            "foreground_contrast": 0.20844826102256775,
+            "internal_luma_std": 0.19469745457172394,
+            "edge_energy": 0.07501566410064697,
+            "strong_edge_fraction": 0.4902654867256637,
+            "visible_fraction": 0.5659054487179487
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.20475684106349945,
+            "internal_luma_std": 0.22752104699611664,
+            "edge_energy": 0.09547527879476547,
+            "strong_edge_fraction": 0.613998613998614,
+            "visible_fraction": 0.578125
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20605680346488953,
+            "internal_luma_std": 0.22890226542949677,
+            "edge_energy": 0.09640181809663773,
+            "strong_edge_fraction": 0.6202356202356203,
+            "visible_fraction": 0.578125
+          },
+          "protan": {
+            "foreground_contrast": 0.19699726998806,
+            "internal_luma_std": 0.23487679660320282,
+            "edge_energy": 0.10769454389810562,
+            "strong_edge_fraction": 0.6507276507276507,
+            "visible_fraction": 0.578125
+          },
+          "deutan": {
+            "foreground_contrast": 0.19840779900550842,
+            "internal_luma_std": 0.24040736258029938,
+            "edge_energy": 0.11274705082178116,
+            "strong_edge_fraction": 0.6618156618156619,
+            "visible_fraction": 0.578125
+          },
+          "tritan": {
+            "foreground_contrast": 0.19208656251430511,
+            "internal_luma_std": 0.17147529125213623,
+            "edge_energy": 0.08557616174221039,
+            "strong_edge_fraction": 0.5765765765765766,
+            "visible_fraction": 0.578125
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "look-row-9",
+      "row_index": 9,
+      "frame": 7,
+      "score": 0.187827,
+      "worst_relative_loss": 0.243987,
+      "mean_relative_loss": 0.043417,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.221811443567276,
+            "internal_luma_std": 0.19343338906764984,
+            "edge_energy": 0.06563755869865417,
+            "strong_edge_fraction": 0.5075210001953506,
+            "visible_fraction": 0.5127203525641025
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2232387512922287,
+            "internal_luma_std": 0.19380424916744232,
+            "edge_energy": 0.06588729470968246,
+            "strong_edge_fraction": 0.5116233639382692,
+            "visible_fraction": 0.5127203525641025
+          },
+          "protan": {
+            "foreground_contrast": 0.17884714901447296,
+            "internal_luma_std": 0.1893647164106369,
+            "edge_energy": 0.06890618056058884,
+            "strong_edge_fraction": 0.5428794686462199,
+            "visible_fraction": 0.5127203525641025
+          },
+          "deutan": {
+            "foreground_contrast": 0.17248839139938354,
+            "internal_luma_std": 0.19316689670085907,
+            "edge_energy": 0.07062921673059464,
+            "strong_edge_fraction": 0.5587028716546201,
+            "visible_fraction": 0.5127203525641025
+          },
+          "tritan": {
+            "foreground_contrast": 0.24048154056072235,
+            "internal_luma_std": 0.1746932566165924,
+            "edge_energy": 0.06122614070773125,
+            "strong_edge_fraction": 0.484469622973237,
+            "visible_fraction": 0.5127203525641025
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.20461103320121765,
+            "internal_luma_std": 0.17516033351421356,
+            "edge_energy": 0.07592740654945374,
+            "strong_edge_fraction": 0.5984790874524715,
+            "visible_fraction": 0.5268429487179487
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20611973106861115,
+            "internal_luma_std": 0.17556330561637878,
+            "edge_energy": 0.07617457211017609,
+            "strong_edge_fraction": 0.6022813688212928,
+            "visible_fraction": 0.5268429487179487
+          },
+          "protan": {
+            "foreground_contrast": 0.16127490997314453,
+            "internal_luma_std": 0.16858156025409698,
+            "edge_energy": 0.07784846425056458,
+            "strong_edge_fraction": 0.6448669201520912,
+            "visible_fraction": 0.5268429487179487
+          },
+          "deutan": {
+            "foreground_contrast": 0.15468859672546387,
+            "internal_luma_std": 0.17176119983196259,
+            "edge_energy": 0.07972259819507599,
+            "strong_edge_fraction": 0.6638783269961978,
+            "visible_fraction": 0.5268429487179487
+          },
+          "tritan": {
+            "foreground_contrast": 0.22470004856586456,
+            "internal_luma_std": 0.15835870802402496,
+            "edge_energy": 0.07009878009557724,
+            "strong_edge_fraction": 0.5650190114068441,
+            "visible_fraction": 0.5268429487179487
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 7,
+      "score": 0.187549,
+      "worst_relative_loss": 0.24565,
+      "mean_relative_loss": 0.038148,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22150595486164093,
+            "internal_luma_std": 0.1463223546743393,
+            "edge_energy": 0.0513477623462677,
+            "strong_edge_fraction": 0.4561128526645768,
+            "visible_fraction": 0.5112179487179487
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22318445146083832,
+            "internal_luma_std": 0.14656132459640503,
+            "edge_energy": 0.05150595307350159,
+            "strong_edge_fraction": 0.4606191222570533,
+            "visible_fraction": 0.5112179487179487
+          },
+          "protan": {
+            "foreground_contrast": 0.17943719029426575,
+            "internal_luma_std": 0.16111156344413757,
+            "edge_energy": 0.05618646740913391,
+            "strong_edge_fraction": 0.5025470219435737,
+            "visible_fraction": 0.5112179487179487
+          },
+          "deutan": {
+            "foreground_contrast": 0.1713842749595642,
+            "internal_luma_std": 0.1701543629169464,
+            "edge_energy": 0.05841611325740814,
+            "strong_edge_fraction": 0.5109717868338558,
+            "visible_fraction": 0.5112179487179487
+          },
+          "tritan": {
+            "foreground_contrast": 0.251311331987381,
+            "internal_luma_std": 0.13518565893173218,
+            "edge_energy": 0.047932375222444534,
+            "strong_edge_fraction": 0.431230407523511,
+            "visible_fraction": 0.5112179487179487
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.21230798959732056,
+            "internal_luma_std": 0.13328269124031067,
+            "edge_energy": 0.05861086770892143,
+            "strong_edge_fraction": 0.5150346954510409,
+            "visible_fraction": 0.5196314102564102
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2140219658613205,
+            "internal_luma_std": 0.1336270570755005,
+            "edge_energy": 0.05884667858481407,
+            "strong_edge_fraction": 0.5173477255204317,
+            "visible_fraction": 0.5196314102564102
+          },
+          "protan": {
+            "foreground_contrast": 0.16863678395748138,
+            "internal_luma_std": 0.14614129066467285,
+            "edge_energy": 0.06628643721342087,
+            "strong_edge_fraction": 0.5936777178103315,
+            "visible_fraction": 0.5196314102564102
+          },
+          "deutan": {
+            "foreground_contrast": 0.1601545810699463,
+            "internal_luma_std": 0.15468324720859528,
+            "edge_energy": 0.07005325704813004,
+            "strong_edge_fraction": 0.6245181187355435,
+            "visible_fraction": 0.5196314102564102
+          },
+          "tritan": {
+            "foreground_contrast": 0.24310702085494995,
+            "internal_luma_std": 0.12392742186784744,
+            "edge_energy": 0.055687107145786285,
+            "strong_edge_fraction": 0.49653045489591363,
+            "visible_fraction": 0.5196314102564102
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "idle",
+      "row_index": 0,
+      "frame": 1,
+      "score": 0.186644,
+      "worst_relative_loss": 0.240923,
+      "mean_relative_loss": 0.04707,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2326853722333908,
+            "internal_luma_std": 0.14779530465602875,
+            "edge_energy": 0.0592297688126564,
+            "strong_edge_fraction": 0.5217214778725132,
+            "visible_fraction": 0.4933894230769231
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2347732037305832,
+            "internal_luma_std": 0.14845684170722961,
+            "edge_energy": 0.05982411280274391,
+            "strong_edge_fraction": 0.5243605359317906,
+            "visible_fraction": 0.4933894230769231
+          },
+          "protan": {
+            "foreground_contrast": 0.19053694605827332,
+            "internal_luma_std": 0.16936101019382477,
+            "edge_energy": 0.06594572216272354,
+            "strong_edge_fraction": 0.5621193666260658,
+            "visible_fraction": 0.4933894230769231
+          },
+          "deutan": {
+            "foreground_contrast": 0.18565934896469116,
+            "internal_luma_std": 0.18334154784679413,
+            "edge_energy": 0.06917744874954224,
+            "strong_edge_fraction": 0.5728786033292732,
+            "visible_fraction": 0.4933894230769231
+          },
+          "tritan": {
+            "foreground_contrast": 0.26402443647384644,
+            "internal_luma_std": 0.12452727556228638,
+            "edge_energy": 0.0506766252219677,
+            "strong_edge_fraction": 0.4756394640682095,
+            "visible_fraction": 0.4933894230769231
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.21936197578907013,
+            "internal_luma_std": 0.13020196557044983,
+            "edge_energy": 0.06846372038125992,
+            "strong_edge_fraction": 0.6175298804780877,
+            "visible_fraction": 0.5028044871794872
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22152899205684662,
+            "internal_luma_std": 0.13108651340007782,
+            "edge_energy": 0.06915697455406189,
+            "strong_edge_fraction": 0.6262948207171315,
+            "visible_fraction": 0.5028044871794872
+          },
+          "protan": {
+            "foreground_contrast": 0.17292359471321106,
+            "internal_luma_std": 0.14938871562480927,
+            "edge_energy": 0.07703914493322372,
+            "strong_edge_fraction": 0.6565737051792828,
+            "visible_fraction": 0.5028044871794872
+          },
+          "deutan": {
+            "foreground_contrast": 0.1665126234292984,
+            "internal_luma_std": 0.16255715489387512,
+            "edge_energy": 0.08159415423870087,
+            "strong_edge_fraction": 0.6764940239043825,
+            "visible_fraction": 0.5028044871794872
+          },
+          "tritan": {
+            "foreground_contrast": 0.2558276951313019,
+            "internal_luma_std": 0.11250760406255722,
+            "edge_energy": 0.06335439532995224,
+            "strong_edge_fraction": 0.5745019920318725,
+            "visible_fraction": 0.5028044871794872
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "look-row-9",
+      "row_index": 9,
+      "frame": 6,
+      "score": 0.186104,
+      "worst_relative_loss": 0.241732,
+      "mean_relative_loss": 0.043061,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22480516135692596,
+            "internal_luma_std": 0.19842615723609924,
+            "edge_energy": 0.06918535381555557,
+            "strong_edge_fraction": 0.5185185185185185,
+            "visible_fraction": 0.5219350961538461
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22625337541103363,
+            "internal_luma_std": 0.19876697659492493,
+            "edge_energy": 0.0694078579545021,
+            "strong_edge_fraction": 0.5210132412204951,
+            "visible_fraction": 0.5219350961538461
+          },
+          "protan": {
+            "foreground_contrast": 0.18115738034248352,
+            "internal_luma_std": 0.1943056434392929,
+            "edge_energy": 0.0725729912519455,
+            "strong_edge_fraction": 0.5540203415851084,
+            "visible_fraction": 0.5219350961538461
+          },
+          "deutan": {
+            "foreground_contrast": 0.17579196393489838,
+            "internal_luma_std": 0.19834165275096893,
+            "edge_energy": 0.07432504743337631,
+            "strong_edge_fraction": 0.5649587411245443,
+            "visible_fraction": 0.5219350961538461
+          },
+          "tritan": {
+            "foreground_contrast": 0.24322627484798431,
+            "internal_luma_std": 0.17889419198036194,
+            "edge_energy": 0.06412278115749359,
+            "strong_edge_fraction": 0.49971214738054115,
+            "visible_fraction": 0.5219350961538461
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.20772986114025116,
+            "internal_luma_std": 0.1780773103237152,
+            "edge_energy": 0.07926276326179504,
+            "strong_edge_fraction": 0.6088588588588588,
+            "visible_fraction": 0.5336538461538461
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20925481617450714,
+            "internal_luma_std": 0.17873360216617584,
+            "edge_energy": 0.07968015223741531,
+            "strong_edge_fraction": 0.6118618618618619,
+            "visible_fraction": 0.5336538461538461
+          },
+          "protan": {
+            "foreground_contrast": 0.16315872967243195,
+            "internal_luma_std": 0.17169736325740814,
+            "edge_energy": 0.08141455799341202,
+            "strong_edge_fraction": 0.6539039039039038,
+            "visible_fraction": 0.5336538461538461
+          },
+          "deutan": {
+            "foreground_contrast": 0.15751494467258453,
+            "internal_luma_std": 0.17514052987098694,
+            "edge_energy": 0.08339620381593704,
+            "strong_edge_fraction": 0.6666666666666666,
+            "visible_fraction": 0.5336538461538461
+          },
+          "tritan": {
+            "foreground_contrast": 0.2276092916727066,
+            "internal_luma_std": 0.16093726456165314,
+            "edge_energy": 0.0728212296962738,
+            "strong_edge_fraction": 0.5780780780780781,
+            "visible_fraction": 0.5336538461538461
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "review",
+      "row_index": 8,
+      "frame": 5,
+      "score": 0.185911,
+      "worst_relative_loss": 0.244199,
+      "mean_relative_loss": 0.036028,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.23020455241203308,
+            "internal_luma_std": 0.2519681751728058,
+            "edge_energy": 0.08142314106225967,
+            "strong_edge_fraction": 0.5250385208012327,
+            "visible_fraction": 0.5200320512820513
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23126333951950073,
+            "internal_luma_std": 0.2527164816856384,
+            "edge_energy": 0.08200639486312866,
+            "strong_edge_fraction": 0.5319722650231125,
+            "visible_fraction": 0.5200320512820513
+          },
+          "protan": {
+            "foreground_contrast": 0.22232893109321594,
+            "internal_luma_std": 0.2614334523677826,
+            "edge_energy": 0.08958560973405838,
+            "strong_edge_fraction": 0.5500770416024653,
+            "visible_fraction": 0.5200320512820513
+          },
+          "deutan": {
+            "foreground_contrast": 0.22439295053482056,
+            "internal_luma_std": 0.2680458426475525,
+            "edge_energy": 0.0926823616027832,
+            "strong_edge_fraction": 0.5548921417565486,
+            "visible_fraction": 0.5200320512820513
+          },
+          "tritan": {
+            "foreground_contrast": 0.20744185149669647,
+            "internal_luma_std": 0.193706676363945,
+            "edge_energy": 0.06886962801218033,
+            "strong_edge_fraction": 0.48748073959938365,
+            "visible_fraction": 0.5200320512820513
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.20119740068912506,
+            "internal_luma_std": 0.22518208622932434,
+            "edge_energy": 0.08746794611215591,
+            "strong_edge_fraction": 0.6328828828828829,
+            "visible_fraction": 0.5336538461538461
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20241354405879974,
+            "internal_luma_std": 0.22648148238658905,
+            "edge_energy": 0.08840948343276978,
+            "strong_edge_fraction": 0.6336336336336337,
+            "visible_fraction": 0.5336538461538461
+          },
+          "protan": {
+            "foreground_contrast": 0.19182497262954712,
+            "internal_luma_std": 0.23217299580574036,
+            "edge_energy": 0.09940144419670105,
+            "strong_edge_fraction": 0.6719219219219219,
+            "visible_fraction": 0.5336538461538461
+          },
+          "deutan": {
+            "foreground_contrast": 0.19334246218204498,
+            "internal_luma_std": 0.2376539558172226,
+            "edge_energy": 0.10435721278190613,
+            "strong_edge_fraction": 0.6854354354354354,
+            "visible_fraction": 0.5336538461538461
+          },
+          "tritan": {
+            "foreground_contrast": 0.19055622816085815,
+            "internal_luma_std": 0.17019279301166534,
+            "edge_energy": 0.07910485565662384,
+            "strong_edge_fraction": 0.5953453453453453,
+            "visible_fraction": 0.5336538461538461
+          }
+        }
+      },
+      "known_blocker": null
+    },
+    {
+      "role": "hei-mao",
+      "row": "jumping",
+      "row_index": 4,
+      "frame": 2,
+      "score": 0.034291,
+      "worst_relative_loss": 0.045926,
+      "mean_relative_loss": 0.004372,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.15044298768043518,
+            "internal_luma_std": 0.1920361965894699,
+            "edge_energy": 0.05632024258375168,
+            "strong_edge_fraction": 0.49446749654218536,
+            "visible_fraction": 0.4344951923076923
+          },
+          "grayscale": {
+            "foreground_contrast": 0.1518697887659073,
+            "internal_luma_std": 0.19242854416370392,
+            "edge_energy": 0.05658477544784546,
+            "strong_edge_fraction": 0.49815583218072845,
+            "visible_fraction": 0.4344951923076923
+          },
+          "protan": {
+            "foreground_contrast": 0.15924912691116333,
+            "internal_luma_std": 0.21266131103038788,
+            "edge_energy": 0.058063533157110214,
+            "strong_edge_fraction": 0.4863992623328723,
+            "visible_fraction": 0.4344951923076923
+          },
+          "deutan": {
+            "foreground_contrast": 0.17792698740959167,
+            "internal_luma_std": 0.22793042659759521,
+            "edge_energy": 0.0591849647462368,
+            "strong_edge_fraction": 0.47325956662056246,
+            "visible_fraction": 0.4344951923076923
+          },
+          "tritan": {
+            "foreground_contrast": 0.15703170001506805,
+            "internal_luma_std": 0.19557635486125946,
+            "edge_energy": 0.05700913071632385,
+            "strong_edge_fraction": 0.495850622406639,
+            "visible_fraction": 0.4344951923076923
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.13659760355949402,
+            "internal_luma_std": 0.16971617937088013,
+            "edge_energy": 0.0662875548005104,
+            "strong_edge_fraction": 0.6016042780748663,
+            "visible_fraction": 0.4495192307692308
+          },
+          "grayscale": {
+            "foreground_contrast": 0.13812871277332306,
+            "internal_luma_std": 0.17032264173030853,
+            "edge_energy": 0.06671718508005142,
+            "strong_edge_fraction": 0.606951871657754,
+            "visible_fraction": 0.4495192307692308
+          },
+          "protan": {
+            "foreground_contrast": 0.1424405872821808,
+            "internal_luma_std": 0.19054080545902252,
+            "edge_energy": 0.06954841315746307,
+            "strong_edge_fraction": 0.5873440285204992,
+            "visible_fraction": 0.4495192307692308
+          },
+          "deutan": {
+            "foreground_contrast": 0.1585102081298828,
+            "internal_luma_std": 0.20613114535808563,
+            "edge_energy": 0.07190138846635818,
+            "strong_edge_fraction": 0.5739750445632799,
+            "visible_fraction": 0.4495192307692308
+          },
+          "tritan": {
+            "foreground_contrast": 0.14086881279945374,
+            "internal_luma_std": 0.17314475774765015,
+            "edge_energy": 0.06555435061454773,
+            "strong_edge_fraction": 0.6024955436720143,
+            "visible_fraction": 0.4495192307692308
+          }
+        }
+      },
+      "known_blocker": "duplicated head"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "row_index": 4,
+      "frame": 2,
+      "score": 0.04172,
+      "worst_relative_loss": 0.055288,
+      "mean_relative_loss": 0.006832,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.19673055410385132,
+            "internal_luma_std": 0.25396302342414856,
+            "edge_energy": 0.07808016240596771,
+            "strong_edge_fraction": 0.5991611743559018,
+            "visible_fraction": 0.5015024038461539
+          },
+          "grayscale": {
+            "foreground_contrast": 0.19721850752830505,
+            "internal_luma_std": 0.25445806980133057,
+            "edge_energy": 0.0783667042851448,
+            "strong_edge_fraction": 0.6019572598362293,
+            "visible_fraction": 0.5015024038461539
+          },
+          "protan": {
+            "foreground_contrast": 0.1941995620727539,
+            "internal_luma_std": 0.2526628375053406,
+            "edge_energy": 0.07729638367891312,
+            "strong_edge_fraction": 0.5983622927900939,
+            "visible_fraction": 0.5015024038461539
+          },
+          "deutan": {
+            "foreground_contrast": 0.20148290693759918,
+            "internal_luma_std": 0.2557375133037567,
+            "edge_energy": 0.0774407759308815,
+            "strong_edge_fraction": 0.5933692830037947,
+            "visible_fraction": 0.5015024038461539
+          },
+          "tritan": {
+            "foreground_contrast": 0.21540595591068268,
+            "internal_luma_std": 0.268501877784729,
+            "edge_energy": 0.07376326620578766,
+            "strong_edge_fraction": 0.5743958458158578,
+            "visible_fraction": 0.5015024038461539
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.1764174848794937,
+            "internal_luma_std": 0.23199966549873352,
+            "edge_energy": 0.09285000711679459,
+            "strong_edge_fraction": 0.7047031611410949,
+            "visible_fraction": 0.5196314102564102
+          },
+          "grayscale": {
+            "foreground_contrast": 0.1768096536397934,
+            "internal_luma_std": 0.23244552314281464,
+            "edge_energy": 0.09321849793195724,
+            "strong_edge_fraction": 0.7085582112567463,
+            "visible_fraction": 0.5196314102564102
+          },
+          "protan": {
+            "foreground_contrast": 0.1749386340379715,
+            "internal_luma_std": 0.2311469167470932,
+            "edge_energy": 0.0936526283621788,
+            "strong_edge_fraction": 0.7116422513492675,
+            "visible_fraction": 0.5196314102564102
+          },
+          "deutan": {
+            "foreground_contrast": 0.1819537878036499,
+            "internal_luma_std": 0.23428288102149963,
+            "edge_energy": 0.09459840506315231,
+            "strong_edge_fraction": 0.7116422513492675,
+            "visible_fraction": 0.5196314102564102
+          },
+          "tritan": {
+            "foreground_contrast": 0.1960657387971878,
+            "internal_luma_std": 0.24825391173362732,
+            "edge_energy": 0.09017375111579895,
+            "strong_edge_fraction": 0.6808018504240555,
+            "visible_fraction": 0.5196314102564102
+          }
+        }
+      },
+      "known_blocker": "duplicated head"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "row_index": 6,
+      "frame": 2,
+      "score": 0.177113,
+      "worst_relative_loss": 0.228859,
+      "mean_relative_loss": 0.044053,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22582221031188965,
+            "internal_luma_std": 0.2491915374994278,
+            "edge_energy": 0.1237621158361435,
+            "strong_edge_fraction": 0.6188691034051859,
+            "visible_fraction": 0.6412259615384616
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22712518274784088,
+            "internal_luma_std": 0.25011810660362244,
+            "edge_energy": 0.12451370805501938,
+            "strong_edge_fraction": 0.6237113402061856,
+            "visible_fraction": 0.6412259615384616
+          },
+          "protan": {
+            "foreground_contrast": 0.20876391232013702,
+            "internal_luma_std": 0.25301748514175415,
+            "edge_energy": 0.12750820815563202,
+            "strong_edge_fraction": 0.6262105592002499,
+            "visible_fraction": 0.6412259615384616
+          },
+          "deutan": {
+            "foreground_contrast": 0.205414280295372,
+            "internal_luma_std": 0.25679025053977966,
+            "edge_energy": 0.12902803719043732,
+            "strong_edge_fraction": 0.6249609497032177,
+            "visible_fraction": 0.6412259615384616
+          },
+          "tritan": {
+            "foreground_contrast": 0.20910786092281342,
+            "internal_luma_std": 0.1938297152519226,
+            "edge_energy": 0.10199911892414093,
+            "strong_edge_fraction": 0.5849734457981881,
+            "visible_fraction": 0.6412259615384616
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.19341135025024414,
+            "internal_luma_std": 0.21087747812271118,
+            "edge_energy": 0.11872121691703796,
+            "strong_edge_fraction": 0.6715506715506715,
+            "visible_fraction": 0.65625
+          },
+          "grayscale": {
+            "foreground_contrast": 0.1949630230665207,
+            "internal_luma_std": 0.21232400834560394,
+            "edge_energy": 0.1198158711194992,
+            "strong_edge_fraction": 0.6782661782661783,
+            "visible_fraction": 0.65625
+          },
+          "protan": {
+            "foreground_contrast": 0.1738082617521286,
+            "internal_luma_std": 0.21478770673274994,
+            "edge_energy": 0.12714840471744537,
+            "strong_edge_fraction": 0.6965811965811965,
+            "visible_fraction": 0.65625
+          },
+          "deutan": {
+            "foreground_contrast": 0.16940388083457947,
+            "internal_luma_std": 0.21834109723567963,
+            "edge_energy": 0.13058774173259735,
+            "strong_edge_fraction": 0.7075702075702076,
+            "visible_fraction": 0.65625
+          },
+          "tritan": {
+            "foreground_contrast": 0.18949389457702637,
+            "internal_luma_std": 0.1626163125038147,
+            "edge_energy": 0.09954994171857834,
+            "strong_edge_fraction": 0.6172161172161172,
+            "visible_fraction": 0.65625
+          }
+        }
+      },
+      "known_blocker": "stacked upper contours"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 2,
+      "score": 0.030067,
+      "worst_relative_loss": 0.038789,
+      "mean_relative_loss": 0.007642,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.14257624745368958,
+            "internal_luma_std": 0.20153409242630005,
+            "edge_energy": 0.08523251116275787,
+            "strong_edge_fraction": 0.6594121606461746,
+            "visible_fraction": 0.44641426282051283
+          },
+          "grayscale": {
+            "foreground_contrast": 0.1433887630701065,
+            "internal_luma_std": 0.20217636227607727,
+            "edge_energy": 0.08566771447658539,
+            "strong_edge_fraction": 0.6605339914740858,
+            "visible_fraction": 0.44641426282051283
+          },
+          "protan": {
+            "foreground_contrast": 0.17238284647464752,
+            "internal_luma_std": 0.21711085736751556,
+            "edge_energy": 0.08291660249233246,
+            "strong_edge_fraction": 0.6443796275521652,
+            "visible_fraction": 0.44641426282051283
+          },
+          "deutan": {
+            "foreground_contrast": 0.1930645853281021,
+            "internal_luma_std": 0.2320052534341812,
+            "edge_energy": 0.08270658552646637,
+            "strong_edge_fraction": 0.6338344177698003,
+            "visible_fraction": 0.44641426282051283
+          },
+          "tritan": {
+            "foreground_contrast": 0.15499098598957062,
+            "internal_luma_std": 0.20143532752990723,
+            "edge_energy": 0.08246272057294846,
+            "strong_edge_fraction": 0.6486425846982276,
+            "visible_fraction": 0.44641426282051283
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.10885491967201233,
+            "internal_luma_std": 0.15848442912101746,
+            "edge_energy": 0.06913219392299652,
+            "strong_edge_fraction": 0.632263660017346,
+            "visible_fraction": 0.4619391025641026
+          },
+          "grayscale": {
+            "foreground_contrast": 0.10949130356311798,
+            "internal_luma_std": 0.15893658995628357,
+            "edge_energy": 0.06944634020328522,
+            "strong_edge_fraction": 0.6287944492627927,
+            "visible_fraction": 0.4619391025641026
+          },
+          "protan": {
+            "foreground_contrast": 0.14066484570503235,
+            "internal_luma_std": 0.17862394452095032,
+            "edge_energy": 0.07205980271100998,
+            "strong_edge_fraction": 0.6149176062445794,
+            "visible_fraction": 0.4619391025641026
+          },
+          "deutan": {
+            "foreground_contrast": 0.16071313619613647,
+            "internal_luma_std": 0.19588333368301392,
+            "edge_energy": 0.07543833553791046,
+            "strong_edge_fraction": 0.6149176062445794,
+            "visible_fraction": 0.4619391025641026
+          },
+          "tritan": {
+            "foreground_contrast": 0.12494347989559174,
+            "internal_luma_std": 0.1614992320537567,
+            "edge_energy": 0.0696994736790657,
+            "strong_edge_fraction": 0.6218560277536861,
+            "visible_fraction": 0.4619391025641026
+          }
+        }
+      },
+      "known_blocker": "repeated head and pose-family switch"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "running-left",
+      "row_index": 2,
+      "frame": 0,
+      "score": 0.012647,
+      "worst_relative_loss": 0.016169,
+      "mean_relative_loss": 0.003589,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22332321107387543,
+            "internal_luma_std": 0.2766073942184448,
+            "edge_energy": 0.07483290135860443,
+            "strong_edge_fraction": 0.574065196548418,
+            "visible_fraction": 0.41786858974358976
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22387395799160004,
+            "internal_luma_std": 0.2771366536617279,
+            "edge_energy": 0.07507739216089249,
+            "strong_edge_fraction": 0.576941514860978,
+            "visible_fraction": 0.41786858974358976
+          },
+          "protan": {
+            "foreground_contrast": 0.2198706567287445,
+            "internal_luma_std": 0.27384284138679504,
+            "edge_energy": 0.07509716600179672,
+            "strong_edge_fraction": 0.5752636625119847,
+            "visible_fraction": 0.41786858974358976
+          },
+          "deutan": {
+            "foreground_contrast": 0.22725076973438263,
+            "internal_luma_std": 0.274507999420166,
+            "edge_energy": 0.07529221475124359,
+            "strong_edge_fraction": 0.5709491850431447,
+            "visible_fraction": 0.41786858974358976
+          },
+          "tritan": {
+            "foreground_contrast": 0.2370632141828537,
+            "internal_luma_std": 0.28503304719924927,
+            "edge_energy": 0.0739191323518753,
+            "strong_edge_fraction": 0.5711888782358581,
+            "visible_fraction": 0.41786858974358976
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.19486398994922638,
+            "internal_luma_std": 0.24631614983081818,
+            "edge_energy": 0.08055809885263443,
+            "strong_edge_fraction": 0.6514181152790485,
+            "visible_fraction": 0.437900641025641
+          },
+          "grayscale": {
+            "foreground_contrast": 0.19532306492328644,
+            "internal_luma_std": 0.2468235343694687,
+            "edge_energy": 0.0808442160487175,
+            "strong_edge_fraction": 0.6559926806953339,
+            "visible_fraction": 0.437900641025641
+          },
+          "protan": {
+            "foreground_contrast": 0.1917131394147873,
+            "internal_luma_std": 0.24350036680698395,
+            "edge_energy": 0.08209026604890823,
+            "strong_edge_fraction": 0.6541628545288197,
+            "visible_fraction": 0.437900641025641
+          },
+          "deutan": {
+            "foreground_contrast": 0.19833046197891235,
+            "internal_luma_std": 0.24412228167057037,
+            "edge_energy": 0.08304206281900406,
+            "strong_edge_fraction": 0.6651418115279049,
+            "visible_fraction": 0.437900641025641
+          },
+          "tritan": {
+            "foreground_contrast": 0.20780357718467712,
+            "internal_luma_std": 0.25529178977012634,
+            "edge_energy": 0.07986437529325485,
+            "strong_edge_fraction": 0.6422689844464776,
+            "visible_fraction": 0.437900641025641
+          }
+        }
+      },
+      "known_blocker": "complete-row detached component/action structure issue"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "failed",
+      "row_index": 5,
+      "frame": 0,
+      "score": 0.042321,
+      "worst_relative_loss": 0.05455,
+      "mean_relative_loss": 0.010874,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.23473615944385529,
+            "internal_luma_std": 0.28338801860809326,
+            "edge_energy": 0.06862282752990723,
+            "strong_edge_fraction": 0.545604525100165,
+            "visible_fraction": 0.42497996794871795
+          },
+          "grayscale": {
+            "foreground_contrast": 0.23537549376487732,
+            "internal_luma_std": 0.2839575707912445,
+            "edge_energy": 0.06891575455665588,
+            "strong_edge_fraction": 0.548432712703276,
+            "visible_fraction": 0.42497996794871795
+          },
+          "protan": {
+            "foreground_contrast": 0.22252343595027924,
+            "internal_luma_std": 0.27555471658706665,
+            "edge_energy": 0.0691089779138565,
+            "strong_edge_fraction": 0.5555031817110535,
+            "visible_fraction": 0.42497996794871795
+          },
+          "deutan": {
+            "foreground_contrast": 0.22686579823493958,
+            "internal_luma_std": 0.27439355850219727,
+            "edge_energy": 0.06938890367746353,
+            "strong_edge_fraction": 0.5545604525100165,
+            "visible_fraction": 0.42497996794871795
+          },
+          "tritan": {
+            "foreground_contrast": 0.25223156809806824,
+            "internal_luma_std": 0.29527518153190613,
+            "edge_energy": 0.06779123842716217,
+            "strong_edge_fraction": 0.5385340560923875,
+            "visible_fraction": 0.42497996794871795
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.21225492656230927,
+            "internal_luma_std": 0.2562636733055115,
+            "edge_energy": 0.07483869791030884,
+            "strong_edge_fraction": 0.6717902350813744,
+            "visible_fraction": 0.44310897435897434
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21291802823543549,
+            "internal_luma_std": 0.2568550705909729,
+            "edge_energy": 0.07514850795269012,
+            "strong_edge_fraction": 0.6735985533453888,
+            "visible_fraction": 0.44310897435897434
+          },
+          "protan": {
+            "foreground_contrast": 0.20067647099494934,
+            "internal_luma_std": 0.24818043410778046,
+            "edge_energy": 0.07583601772785187,
+            "strong_edge_fraction": 0.6735985533453888,
+            "visible_fraction": 0.44310897435897434
+          },
+          "deutan": {
+            "foreground_contrast": 0.204318568110466,
+            "internal_luma_std": 0.24678480625152588,
+            "edge_energy": 0.07643716037273407,
+            "strong_edge_fraction": 0.674502712477396,
+            "visible_fraction": 0.44310897435897434
+          },
+          "tritan": {
+            "foreground_contrast": 0.2290227860212326,
+            "internal_luma_std": 0.2690317928791046,
+            "edge_energy": 0.0749773383140564,
+            "strong_edge_fraction": 0.6600361663652803,
+            "visible_fraction": 0.44310897435897434
+          }
+        }
+      },
+      "known_blocker": "complete-row detached component/action structure issue"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "waiting",
+      "row_index": 6,
+      "frame": 0,
+      "score": 0.172055,
+      "worst_relative_loss": 0.223912,
+      "mean_relative_loss": 0.038709,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.2190576195716858,
+            "internal_luma_std": 0.15837699174880981,
+            "edge_energy": 0.06301120668649673,
+            "strong_edge_fraction": 0.44326955354145686,
+            "visible_fraction": 0.5967548076923077
+          },
+          "grayscale": {
+            "foreground_contrast": 0.2206297516822815,
+            "internal_luma_std": 0.15859556198120117,
+            "edge_energy": 0.06320545077323914,
+            "strong_edge_fraction": 0.446122860020141,
+            "visible_fraction": 0.5967548076923077
+          },
+          "protan": {
+            "foreground_contrast": 0.1778172254562378,
+            "internal_luma_std": 0.1716248244047165,
+            "edge_energy": 0.06734401732683182,
+            "strong_edge_fraction": 0.47079556898288016,
+            "visible_fraction": 0.5967548076923077
+          },
+          "deutan": {
+            "foreground_contrast": 0.17547821998596191,
+            "internal_luma_std": 0.18231092393398285,
+            "edge_energy": 0.06957449018955231,
+            "strong_edge_fraction": 0.4780127559583753,
+            "visible_fraction": 0.5967548076923077
+          },
+          "tritan": {
+            "foreground_contrast": 0.2444353550672531,
+            "internal_luma_std": 0.14376848936080933,
+            "edge_energy": 0.05792386829853058,
+            "strong_edge_fraction": 0.4174219536757301,
+            "visible_fraction": 0.5967548076923077
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2062664031982422,
+            "internal_luma_std": 0.14362864196300507,
+            "edge_energy": 0.0750930979847908,
+            "strong_edge_fraction": 0.526072607260726,
+            "visible_fraction": 0.6069711538461539
+          },
+          "grayscale": {
+            "foreground_contrast": 0.20787417888641357,
+            "internal_luma_std": 0.14396031200885773,
+            "edge_energy": 0.0753747895359993,
+            "strong_edge_fraction": 0.532013201320132,
+            "visible_fraction": 0.6069711538461539
+          },
+          "protan": {
+            "foreground_contrast": 0.16298902034759521,
+            "internal_luma_std": 0.15547120571136475,
+            "edge_energy": 0.07909929007291794,
+            "strong_edge_fraction": 0.5735973597359736,
+            "visible_fraction": 0.6069711538461539
+          },
+          "deutan": {
+            "foreground_contrast": 0.1600809097290039,
+            "internal_luma_std": 0.1658063381910324,
+            "edge_energy": 0.08212248980998993,
+            "strong_edge_fraction": 0.5933993399339934,
+            "visible_fraction": 0.6069711538461539
+          },
+          "tritan": {
+            "foreground_contrast": 0.23383095860481262,
+            "internal_luma_std": 0.13117831945419312,
+            "edge_energy": 0.07004866003990173,
+            "strong_edge_fraction": 0.5089108910891089,
+            "visible_fraction": 0.6069711538461539
+          }
+        }
+      },
+      "known_blocker": "complete-row detached component/action structure issue"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "review",
+      "row_index": 8,
+      "frame": 0,
+      "score": 0.158862,
+      "worst_relative_loss": 0.205405,
+      "mean_relative_loss": 0.03918,
+      "metrics": {
+        "96x104": {
+          "original": {
+            "foreground_contrast": 0.22412064671516418,
+            "internal_luma_std": 0.18039096891880035,
+            "edge_energy": 0.07204603403806686,
+            "strong_edge_fraction": 0.4535206917850525,
+            "visible_fraction": 0.6486378205128205
+          },
+          "grayscale": {
+            "foreground_contrast": 0.22559566795825958,
+            "internal_luma_std": 0.18065552413463593,
+            "edge_energy": 0.07222729921340942,
+            "strong_edge_fraction": 0.45753551575046325,
+            "visible_fraction": 0.6486378205128205
+          },
+          "protan": {
+            "foreground_contrast": 0.18619222939014435,
+            "internal_luma_std": 0.18708264827728271,
+            "edge_energy": 0.07719259709119797,
+            "strong_edge_fraction": 0.49305126621371215,
+            "visible_fraction": 0.6486378205128205
+          },
+          "deutan": {
+            "foreground_contrast": 0.18348026275634766,
+            "internal_luma_std": 0.1949252039194107,
+            "edge_energy": 0.07966230809688568,
+            "strong_edge_fraction": 0.5077208153180975,
+            "visible_fraction": 0.6486378205128205
+          },
+          "tritan": {
+            "foreground_contrast": 0.2455810010433197,
+            "internal_luma_std": 0.15952008962631226,
+            "edge_energy": 0.06578517705202103,
+            "strong_edge_fraction": 0.42958616429894997,
+            "visible_fraction": 0.6486378205128205
+          }
+        },
+        "48x52": {
+          "original": {
+            "foreground_contrast": 0.2106335312128067,
+            "internal_luma_std": 0.16621151566505432,
+            "edge_energy": 0.08839965611696243,
+            "strong_edge_fraction": 0.5478208232445521,
+            "visible_fraction": 0.6618589743589743
+          },
+          "grayscale": {
+            "foreground_contrast": 0.21204382181167603,
+            "internal_luma_std": 0.16639302670955658,
+            "edge_energy": 0.08853176236152649,
+            "strong_edge_fraction": 0.5484261501210653,
+            "visible_fraction": 0.6618589743589743
+          },
+          "protan": {
+            "foreground_contrast": 0.1700865477323532,
+            "internal_luma_std": 0.17091554403305054,
+            "edge_energy": 0.09306438267230988,
+            "strong_edge_fraction": 0.5956416464891041,
+            "visible_fraction": 0.6618589743589743
+          },
+          "deutan": {
+            "foreground_contrast": 0.16736826300621033,
+            "internal_luma_std": 0.17818978428840637,
+            "edge_energy": 0.09588690847158432,
+            "strong_edge_fraction": 0.6119854721549637,
+            "visible_fraction": 0.6618589743589743
+          },
+          "tritan": {
+            "foreground_contrast": 0.23347611725330353,
+            "internal_luma_std": 0.14724408090114594,
+            "edge_energy": 0.08108416944742203,
+            "strong_edge_fraction": 0.5187651331719129,
+            "visible_fraction": 0.6618589743589743
+          }
+        }
+      },
+      "known_blocker": "complete-row detached component/action structure issue"
+    }
+  ],
+  "artifacts": [
+    "color-vision-stress-review-20260831-v1.json",
+    "color-vision-stress-candidates-v1.jpg",
+    "color-vision-stress-candidates-48x52-v1.jpg",
+    "color_vision_stress_review.py"
+  ],
+  "limitations": [
+    "The simulation is an accessibility-oriented display stress test, not a clinical color-vision model.",
+    "Color loss can be intentional for a role or prop; metrics do not infer semantic importance of an unlabeled component.",
+    "This is offline asset evidence and cannot prove Codex App window layering, multi-screen placement, bubble tracking, or GPU composition.",
+    "The authoritative alpha/despill and v2 atlas validators remain the release gates for transparency and structure."
+  ]
+}

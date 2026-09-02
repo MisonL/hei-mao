@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T02:31:28Z",
+  "scope": "read-only PetDex Desktop and Codex App window boundary recheck",
+  "desktop": {
+    "version": "0.8.0",
+    "petdex_window_visible": true,
+    "native_window_visible": true,
+    "captured_pet_state": "hei-mao-traveler",
+    "captured_pet_complete": true,
+    "captured_bubble_visible": true,
+    "input_sent": false,
+    "role_switch_attempted": false,
+    "cross_display_move_attempted": false
+  },
+  "codex_app": {
+    "version": "26.818.41509",
+    "settings_list_evidence": "qa/codex-app-list-recheck-20260824-v1.json",
+    "full_refresh": "unverified",
+    "per_role_selection_and_restoration": "unverified",
+    "four_direction_switching": "unverified",
+    "animation_loop": "unverified",
+    "cross_display_bubble_following": "unverified"
+  },
+  "process_safety": {
+    "codex_stopped": false,
+    "chatgpt_stopped": false,
+    "petdex_stopped": false,
+    "processes_restarted": false,
+    "existing_processes_touched": false
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "window_coordinates": false
+  },
+  "result": "PetDex Desktop is visible and its current traveler sprite and bubble can be captured. This does not replace the required Codex App full-refresh, per-role, four-direction, animation-loop, and cross-display acceptance; those remain unverified because no UI input was sent."
+}

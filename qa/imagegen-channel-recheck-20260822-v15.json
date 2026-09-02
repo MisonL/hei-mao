@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T22:21:33Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker image channel recovery with custom-model generation and fixed-size gate",
+  "service_checks": {
+    "container_health": "healthy",
+    "model_directory_probe": "HTTP 200",
+    "custom_model_listed": true,
+    "custom_model": "gpt-image-2-1k",
+    "agent_orchestration_contract": "pass",
+    "request_mode": "images-non-stream",
+    "transport": "server_orchestrated_job_polling"
+  },
+  "billable_smoke": {
+    "request_count": 2,
+    "source_reference_request": {
+      "status": "generated_and_accepted_as_source_reference",
+      "model": "gpt-image-2-1k",
+      "requested_size": "auto",
+      "actual_dimensions": "1024x1536",
+      "format": "webp",
+      "visual_check": "whole-body mascot visible with natural proportions, open eyes, complete clothing and vegetable prop; no crop or flattening"
+    },
+    "fixed_size_request": {
+      "status": "generated_but_rejected_by_dimension_gate",
+      "model": "gpt-image-2-1k",
+      "requested_size": "1024x1024",
+      "actual_dimensions": "1254x1254",
+      "format": "webp",
+      "error_code": "dimension_check_failed",
+      "formal_asset_eligible": false
+    }
+  },
+  "artifact_cleanup": {
+    "source_reference": {
+      "metadata_before_delete": 200,
+      "content_before_delete": 200,
+      "delete": 200,
+      "metadata_after_delete": 404,
+      "content_after_delete": 404
+    },
+    "fixed_size_request": {
+      "metadata_before_delete": 200,
+      "content_before_delete": 200,
+      "delete": 200,
+      "metadata_after_delete": 404,
+      "content_after_delete": 404
+    },
+    "local_temporary_files_retained": false
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The recovered local Docker service lists and executes the requested custom model. A size-auto result is usable as a visual source reference, but the provider still returns 1254x1254 for a 1024x1024 request, so the fixed-size PetDex asset gate remains closed. No formal pet atlas was changed."
+}

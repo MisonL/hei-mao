@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T03:53:16Z",
+  "scope": "real local image-generation repair attempt using an explicit non-streaming route",
+  "request": {
+    "operation": "generate",
+    "row": "hei-mao/jumping",
+    "expected_dimensions": "1536x512",
+    "quality": "high",
+    "format": "webp",
+    "billable": true,
+    "idempotency_key": "hei-mao-jumping-repair-20260831-a2",
+    "request_id": "ef9357f0-7878-4159-8951-38bad98cfec4"
+  },
+  "routing": {
+    "transport": "agent_json",
+    "endpoint": "/api/agent/images/generate",
+    "selected_channel_id": "meinianda-image",
+    "upstream_host": "meinianda.top",
+    "selected_channel_request_mode": "images-non-stream",
+    "fallback_applied": false
+  },
+  "result": {
+    "ok": false,
+    "error_code": "upstream_unavailable",
+    "error_class": "unknown_transport",
+    "message": "Connection error.",
+    "upstream_status": null,
+    "artifact_count": 0,
+    "dimension_check_failed": false,
+    "retryable": true,
+    "next_action": "retry_after_wait"
+  },
+  "agent_diagnostics": {
+    "checked": true,
+    "found": true,
+    "status": "failed",
+    "selected_channel_request_mode": "images-non-stream",
+    "selected_channel_id": "meinianda-image",
+    "upstream_host": "meinianda.top",
+    "transport_error_kind": "unknown_transport"
+  },
+  "formal_assets_modified": false,
+  "interpretation": "The explicit non-streaming comparison failed at the same upstream connection boundary as the SSE attempt. This rules out a single streaming-path defect for this repair window; no image or formal atlas replacement was accepted."
+}

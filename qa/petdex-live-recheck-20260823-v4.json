@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T23:02:21Z",
+  "scope": "fresh read-only PetDex manifest and current-role resource parity recheck",
+  "manifest": {
+    "http_status": 200,
+    "generated_at": "2026-08-22T18:17:35.766Z",
+    "entry_count": 4579,
+    "current_slugs_present": "8/8"
+  },
+  "resource_validation": {
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "metadata_id_matches_slug": "8/8",
+    "metadata_v2": "8/8",
+    "spritesheet_contract": "8/8 image/webp",
+    "public_sprite_sha_match": "8/8",
+    "mutation_performed": false
+  },
+  "index_observations": {
+    "manifest_index_is_not_authoritative_for_version": true,
+    "note": "The manifest index still exposes pending and version-lagging fields for several entries; actual metadata, resources and SHA parity were checked independently."
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "decision": "All eight current PetDex public resources were re-read and compared with the repository without remote mutation."
+}

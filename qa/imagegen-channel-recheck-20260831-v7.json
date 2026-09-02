@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T03:44:57Z",
+  "scope": "read-only local Docker image-generation channel capability and health check for hei-mao repairs",
+  "service": {
+    "base_url": "http://127.0.0.1:4783",
+    "container": "gpt-image-playground-customer",
+    "container_state": "healthy",
+    "network_binding": "loopback-only"
+  },
+  "probes": [
+    {
+      "endpoint": "/api/agent/capabilities",
+      "http_status": 200,
+      "auth_required": false,
+      "result": "reachable"
+    },
+    {
+      "endpoint": "/api/runtime-capabilities",
+      "http_status": 200,
+      "default_model": "gpt-image-2",
+      "channel_count": 1,
+      "healthy_channel_count": 1,
+      "result": "router reports healthy; last failure remains recorded"
+    },
+    {
+      "endpoint": "/api/agent/diagnostics/channel-health",
+      "http_status": 200,
+      "billable": false,
+      "channel_state": "healthy",
+      "probe_required": false,
+      "result": "reachable and healthy snapshot"
+    },
+    {
+      "endpoint": "/api/agent/models?probe=true",
+      "http_status": 401,
+      "result": "active upstream model probe requires AGENT_API_TOKEN or APP_PASSWORD; no credential was read or supplied"
+    }
+  ],
+  "latest_recorded_generation_failure": {
+    "operation": "generate",
+    "request_mode": "images-non-stream",
+    "model": "gpt-image-2",
+    "upstream_status": 503,
+    "error_class": "model_not_found_or_no_available_channel",
+    "source": "previous real smoke evidence"
+  },
+  "generation_attempted_in_this_check": false,
+  "formal_assets_modified": false,
+  "result": "Local service routing is reachable and self-reports healthy, but consumable image generation is not proven because the authenticated model probe was unavailable and the latest real smoke recorded an upstream 503. The four complete-row repairs remain pending an accepted generation result."
+}

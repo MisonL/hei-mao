@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent blind temporal-triplet reviewer channel check; evidence only",
+  "input": "qa/visual-review-alternative-20260831/blind-temporal-triplet-sheet-v1.png",
+  "method": {
+    "name": "Claude read-only image review probe",
+    "intent": "验证独立模型通道能否在只读模式读取匿名时序盲测图",
+    "privacy_boundary": "未提供答案键、仓库上下文、角色/动作/帧号或本机进程信息"
+  },
+  "result": {
+    "status": "unavailable",
+    "reason": "Claude CLI 返回 Not logged in；未读取图片，也未产生视觉 verdict",
+    "visual_verdict": null,
+    "treated_as_pass": false
+  },
+  "formal_assets_modified": false,
+  "limitations": [
+    "本次通道探针没有产生任何资产质量结论",
+    "不应在未认证或无图像能力的通道上重复请求以推断通过"
+  ]
+}

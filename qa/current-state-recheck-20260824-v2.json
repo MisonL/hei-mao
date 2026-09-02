@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T02:40:19Z",
+  "scope": "fresh eight-role PetDex release and runtime-boundary audit",
+  "local_assets": {
+    "roles": "8/8",
+    "atlas_contract": "8/8 v2, 1536x2288, 8x11, RGBA WebP",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "bash, ShellCheck, PowerShell parse, JSON and diff checks passed",
+    "three_directory_sha_parity": "8/8 roles and 16/16 files match across repository, Codex and PetDex directories",
+    "formal_petdex_assets_changed": false
+  },
+  "petdex_public_resources": {
+    "manifest": "2026-08-24T00:49:55.888Z; 4579 entries; 8/8 current slugs",
+    "live_asset_recheck": "8/8 metadata HTTP 200 and matching IDs/spriteVersionNumber=2; 8/8 spritesheet HTTP 200, RGBA WebP, 1536x2288; public SHA matches repository 8/8",
+    "owned_slug_resolution": "8/8 approved through the official read-only CLI resolution path",
+    "historical_hei_mao_2": "recorded only; no deletion, replacement or mutation",
+    "mutation_boundary": "no edit, presign, upload or submit request"
+  },
+  "hooks": {
+    "local_wrapper": "five configured Codex events pass with closed and open stdin, 10/10 bounded natural exits",
+    "upstream_issue_689": "open; native runner still waits for EOF",
+    "upstream_pr_710": "open draft; not an EOF fix",
+    "existing_processes_touched": false
+  },
+  "desktop_boundary": {
+    "petdex_desktop": "v0.8.0 visible; traveler sprite and bubble captured read-only",
+    "codex_app_settings_list": "all eight current roles visible in the user-provided settings evidence",
+    "full_codex_app_runtime": "unverified: refresh, per-role selection/restoration, four directions, animation loop, cross-display bubble following",
+    "ui_input_sent": false
+  },
+  "image_generation": {
+    "service": "local Docker GPT Image Playground",
+    "authorization_boundary": "no new paid or external generation request in this audit"
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "process_identifiers": false,
+    "window_coordinates": false
+  },
+  "decision": "Local assets, public PetDex resources, installation checks, local Hook mitigation and privacy gates pass. Full Codex App runtime acceptance remains unverified, and upstream issue 689 remains unresolved."
+}

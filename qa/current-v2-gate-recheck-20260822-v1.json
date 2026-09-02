@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T16:27:07Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "fresh eight-role v2 atlas and continuity recheck after local image-service smoke",
+  "runtime": {
+    "validator": "hatch-pet dedicated runtime Python 3.13.7 with Pillow 12.3.0",
+    "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py",
+    "hatch_pet_tests": {
+      "command": "python -m unittest discover -s hatch-pet/tests -p test_*.py -q",
+      "passed": 28,
+      "failed": 0,
+      "errors": 0,
+      "result": "pass"
+    }
+  },
+  "role_chroma_keys": {
+    "hei-mao": "#00FF00",
+    "hei-mao-quality": "#FF00FF",
+    "hei-mao-butler": "#00FF00",
+    "hei-mao-chef": "#00FFFF",
+    "hei-mao-delivery": "#FF00FF",
+    "hei-mao-foodie": "#FF00FF",
+    "hei-mao-fortune": "#00FFFF",
+    "hei-mao-traveler": "#FF00FF"
+  },
+  "roles": {
+    "hei-mao": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6},
+    "hei-mao-quality": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 5},
+    "hei-mao-butler": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6},
+    "hei-mao-chef": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6},
+    "hei-mao-delivery": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 6},
+    "hei-mao-foodie": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 9},
+    "hei-mao-fortune": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 4},
+    "hei-mao-traveler": {"atlas": "pass", "dimensions": "1536x2288", "grid": "8x11", "mode": "RGBA", "sprite_version_number": 2, "validator_errors": 0, "validator_warnings": 0, "transparent_rgb_residue_pixels": 0, "continuity": "ok_with_reviewed_warnings", "continuity_warnings": 9}
+  },
+  "atlas_contract": {
+    "roles_passed": 8,
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WEBP",
+    "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "checks": {
+    "deterministic_atlas_validation": "8/8 pass",
+    "direction_continuity": "8/8 no errors; reviewed warnings retained",
+    "hatch_pet_tests": "28/28 pass",
+    "installer_and_privacy_checks": "unchanged from qa/current-v2-gate-recheck-20260821-v1.json; no formal assets or installer files changed"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "fresh deterministic v2 and continuity gates pass for all eight roles; continuity warnings remain reviewed evidence"
+}

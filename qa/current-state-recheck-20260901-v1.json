@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01",
+  "scope": "current hei-mao closeout snapshot after mhapi image-channel recovery, row repair review, local synchronization, and installer regression checks",
+  "verified": {
+    "current_pet_contract": "8/8 v2 atlases pass with the actual #FF00FF generation key: 1536x2288, 8x11, WebP RGBA, spriteVersionNumber=2, zero transparent RGB residue",
+    "visual_repair_review": "8 affected complete rows reviewed at normal display size; no new hard failure, crop, detached component, identity drift, or visible squashing found",
+    "direction_continuity": "8/8 reports ok=true; existing local outlier and intentional negative-space warnings retained as minor review items",
+    "three_directory_parity": "repository, ~/.codex/pets, and ~/.petdex/pets are byte-identical for all 16 pet.json/spritesheet pairs",
+    "installer_checks": "Bash and PowerShell supported-slug installs 8/8 pass; unknown slug rejected; bash -n, ShellCheck, and PowerShell AST parse pass",
+    "image_generation": "one authorized real smoke succeeded through mhapi-image at mhapi.net using images-non-stream and returned a dimension-checked 1024x1024 WebP"
+  },
+  "remaining_boundaries": {
+    "codex_app_live_ui": "not_verified_user_boundary",
+    "petdex_online_manifest_refresh": "not_refreshed_in_this_continuation",
+    "git_index_lock": "pre-existing lock retained; no lock/process cleanup performed"
+  },
+  "release_readiness": "local package and installers are ready for user-side Codex App refresh/playback acceptance; online PetDex and live App behavior remain separate external boundaries"
+}

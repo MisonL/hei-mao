@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental rendering and structural visual recheck of the eight current v2 atlases",
+  "methods": [
+    {
+      "name": "multi-background rendered-size inspection",
+      "sizes": [
+        "48x52",
+        "64x69",
+        "96x104"
+      ],
+      "backgrounds": [
+        "dark",
+        "light",
+        "saturated-red"
+      ],
+      "result": "No new opaque background, alpha-hole, edge-loss, or proportion hard failure was promoted; the four previously confirmed rows remain visibly abnormal."
+    },
+    {
+      "name": "locally motion-compensated upper/lower residual review",
+      "result": "Lower-body registration plus a bounded local translation search produced no additional hard-failure candidate. Residuals were treated as evidence only, so ordinary gestures and identity-preserving head motion were not rejected automatically."
+    },
+    {
+      "name": "non-adjacent normalized-crop similarity graph",
+      "candidate_pairs": 9,
+      "result": "Nine high-similarity non-adjacent pairs were surfaced for review; they correspond to ordinary repeated idle/review poses or expected pose reuse and do not add a confirmed hard failure."
+    },
+    {
+      "name": "rendered loop-seam and playback-cadence comparison",
+      "result": "Loop-seam changes remain state-specific gesture or direction returns; no new visible snap, reversal, or inert row was confirmed beyond the four known hard failures."
+    },
+    {
+      "name": "high-contrast alpha/edge proof sheets",
+      "result": "The edge and silhouette overlays independently reproduce the two jumping duplicate heads, the foodie waiting stacked heads, and the delivery failed pose-family switch; butler and chef idle edge changes remain ordinary blink motion."
+    }
+  ],
+  "rows_checked": 88,
+  "frames_checked": 584,
+  "deterministic_v2_revalidation": {
+    "roles": "8/8",
+    "dimensions": "1536x2288",
+    "format": "WebP",
+    "mode": "RGBA",
+    "errors": 0,
+    "warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "confirmed_hard_failures": [
+    {
+      "role": "hei-mao",
+      "row": "jumping",
+      "evidence": "duplicated upper head in frame 2",
+      "required_action": "regenerate_complete_row"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "evidence": "duplicated upper head in frame 2",
+      "required_action": "regenerate_complete_row"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "evidence": "stacked head and ear contours across the row",
+      "required_action": "regenerate_complete_row"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "evidence": "duplicated head in frames 0-3 and pose-family switch at frame 4",
+      "required_action": "regenerate_complete_row"
+    }
+  ],
+  "formal_assets_modified": false,
+  "generation": {
+    "status": "blocked",
+    "reason": "The available image channel returned a local or private-network result URL for the repair attempts; no consumable replacement image was accepted."
+  },
+  "result": "Supplemental visual methods add no new hard failure. Release remains blocked until the four complete rows are regenerated and all visual and deterministic gates are rerun."
+}

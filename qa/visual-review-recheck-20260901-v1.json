@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01",
+  "scope": "normal-size visual review of current standard and 16-direction contact sheets after the eight complete row repairs",
+  "roles_reviewed": 8,
+  "non_empty_frames_reviewed": 584,
+  "affected_rows_reviewed": 8,
+  "checks": ["whole-body silhouette", "frame-to-frame scale", "baseline and negative space", "cropping and neighboring-cell overlap", "state-specific motion semantics", "direction continuity"],
+  "result": "pass_with_reviewed_minor_warnings",
+  "new_hard_failures": 0,
+  "notes": "The repaired rows show visible state changes and no new squashing, crop, detached-component, or identity-drift defect at normal pet display size. Existing direction outlier and intentional negative-space warnings remain documented separately.",
+  "codex_app_live_playback": "not_verified_user_boundary"
+}

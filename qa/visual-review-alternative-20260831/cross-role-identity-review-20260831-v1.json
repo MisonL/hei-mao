@@ -1,0 +1,678 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T13:00:44.594187+00:00",
+  "scope": "supplemental cross-role identity and core-proportion review; evidence only",
+  "method": {
+    "name": "lower-anchor aligned core identity signature",
+    "steps": [
+      "align every cell to its lower-body anchor and shared bottom baseline",
+      "extract upper 46% head mask, upper/lower area ratio, head width profile, and fixed-scale face/upper-body alpha/RGB signature",
+      "compare eight idle references against a cross-role neutral cohort while retaining outfit and prop differences",
+      "rank within-role frame deviations from that role's idle core and render bounded normal-size candidate panels",
+      "promote no failure from metrics alone; require normal-size visual confirmation under hatch-pet policy"
+    ],
+    "why_complementary": "This isolates shared black-cat identity and absolute head/upper-body scale, which whole-silhouette and temporal residual checks can hide behind costume or prop motion."
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "frames": 584,
+    "neutral_references": 8,
+    "alpha_threshold": 16,
+    "candidate_panels": 24
+  },
+  "neutral_role_records": [
+    {
+      "role": "hei-mao",
+      "frame": 0,
+      "cross_role_distance": 0.236455,
+      "scalar_z": {
+        "head_area_ratio": 0.1276,
+        "upper_lower_area_ratio": 0.1937,
+        "head_aspect": 0.543,
+        "head_center_x": 0.0074
+      },
+      "score": 0.245172,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.438114,
+        "upper_lower_area_ratio": 1.263397,
+        "head_width": 106,
+        "head_height": 91,
+        "head_aspect": 1.164835,
+        "head_center_x": 95.565,
+        "upper_area": 10562,
+        "lower_area": 8360
+      }
+    },
+    {
+      "role": "hei-mao-quality",
+      "frame": 0,
+      "cross_role_distance": 0.408046,
+      "scalar_z": {
+        "head_area_ratio": 2.5708,
+        "upper_lower_area_ratio": 3.7604,
+        "head_aspect": 0.705,
+        "head_center_x": 1.0114
+      },
+      "score": 0.488522,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.473337,
+        "upper_lower_area_ratio": 1.772984,
+        "head_width": 152,
+        "head_height": 89,
+        "head_aspect": 1.707865,
+        "head_center_x": 91.431,
+        "upper_area": 11918,
+        "lower_area": 6722
+      }
+    },
+    {
+      "role": "hei-mao-butler",
+      "frame": 0,
+      "cross_role_distance": 0.255594,
+      "scalar_z": {
+        "head_area_ratio": 0.2526,
+        "upper_lower_area_ratio": 0.0868,
+        "head_aspect": 0.644,
+        "head_center_x": 0.002
+      },
+      "score": 0.265448,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.439916,
+        "upper_lower_area_ratio": 1.277169,
+        "head_width": 102,
+        "head_height": 91,
+        "head_aspect": 1.120879,
+        "head_center_x": 95.527,
+        "upper_area": 10142,
+        "lower_area": 7941
+      }
+    },
+    {
+      "role": "hei-mao-chef",
+      "frame": 0,
+      "cross_role_distance": 0.453287,
+      "scalar_z": {
+        "head_area_ratio": 0.1276,
+        "upper_lower_area_ratio": 0.7323,
+        "head_aspect": 0.8713,
+        "head_center_x": 0.002
+      },
+      "score": 0.470619,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.434434,
+        "upper_lower_area_ratio": 1.193979,
+        "head_width": 93,
+        "head_height": 91,
+        "head_aspect": 1.021978,
+        "head_center_x": 95.543,
+        "upper_area": 8408,
+        "lower_area": 7042
+      }
+    },
+    {
+      "role": "hei-mao-foodie",
+      "frame": 0,
+      "cross_role_distance": 0.384488,
+      "scalar_z": {
+        "head_area_ratio": 0.5298,
+        "upper_lower_area_ratio": 1.8719,
+        "head_aspect": 1.2248,
+        "head_center_x": 1.1858
+      },
+      "score": 0.432612,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.443912,
+        "upper_lower_area_ratio": 1.529598,
+        "head_width": 176,
+        "head_height": 91,
+        "head_aspect": 1.934066,
+        "head_center_x": 90.723,
+        "upper_area": 14522,
+        "lower_area": 9494
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "frame": 0,
+      "cross_role_distance": 0.342849,
+      "scalar_z": {
+        "head_area_ratio": 2.0095,
+        "upper_lower_area_ratio": 0.6166,
+        "head_aspect": 0.1894,
+        "head_center_x": 2.0326
+      },
+      "score": 0.39133,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.407303,
+        "upper_lower_area_ratio": 1.208892,
+        "head_width": 120,
+        "head_height": 91,
+        "head_aspect": 1.318681,
+        "head_center_x": 87.287,
+        "upper_area": 10822,
+        "lower_area": 8952
+      }
+    },
+    {
+      "role": "hei-mao-fortune",
+      "frame": 0,
+      "cross_role_distance": 0.339425,
+      "scalar_z": {
+        "head_area_ratio": 0.8192,
+        "upper_lower_area_ratio": 0.7774,
+        "head_aspect": 0.1894,
+        "head_center_x": 0.3376
+      },
+      "score": 0.36066,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.424464,
+        "upper_lower_area_ratio": 1.388543,
+        "head_width": 135,
+        "head_height": 91,
+        "head_aspect": 1.483516,
+        "head_center_x": 96.905,
+        "upper_area": 11829,
+        "lower_area": 8519
+      }
+    },
+    {
+      "role": "hei-mao-traveler",
+      "frame": 0,
+      "cross_role_distance": 0.492295,
+      "scalar_z": {
+        "head_area_ratio": 1.1539,
+        "upper_lower_area_ratio": 0.0868,
+        "head_aspect": 1.2695,
+        "head_center_x": 2.4289
+      },
+      "score": 0.541685,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.419639,
+        "upper_lower_area_ratio": 1.299553,
+        "head_width": 168,
+        "head_height": 86,
+        "head_aspect": 1.953488,
+        "head_center_x": 105.391,
+        "upper_area": 13657,
+        "lower_area": 10509
+      }
+    }
+  ],
+  "top_candidates": [
+    {
+      "role": "hei-mao",
+      "row": "review",
+      "frame": 3,
+      "score": 8.269245,
+      "identity_distance": 0.541897,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.434538,
+        "upper_lower_area_ratio": 1.222734,
+        "head_width": 111,
+        "head_height": 91,
+        "head_aspect": 1.21978,
+        "head_center_x": 110.483,
+        "upper_area": 9563,
+        "lower_area": 7821
+      }
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "review",
+      "frame": 5,
+      "score": 11.827451,
+      "identity_distance": 0.510145,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.467138,
+        "upper_lower_area_ratio": 1.711819,
+        "head_width": 147,
+        "head_height": 91,
+        "head_aspect": 1.615385,
+        "head_center_x": 92.08,
+        "upper_area": 10805,
+        "lower_area": 6312
+      }
+    },
+    {
+      "role": "hei-mao-butler",
+      "row": "jumping",
+      "frame": 2,
+      "score": 8.374527,
+      "identity_distance": 0.407036,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.543211,
+        "upper_lower_area_ratio": 1.899267,
+        "head_width": 145,
+        "head_height": 91,
+        "head_aspect": 1.593407,
+        "head_center_x": 95.516,
+        "upper_area": 11916,
+        "lower_area": 6274
+      }
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "failed",
+      "frame": 3,
+      "score": 5.354965,
+      "identity_distance": 0.392623,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.406932,
+        "upper_lower_area_ratio": 1.128321,
+        "head_width": 110,
+        "head_height": 91,
+        "head_aspect": 1.208791,
+        "head_center_x": 94.025,
+        "upper_area": 10279,
+        "lower_area": 9110
+      }
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "look-row-10",
+      "frame": 0,
+      "score": 5.840985,
+      "identity_distance": 0.348431,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.45109,
+        "upper_lower_area_ratio": 1.53599,
+        "head_width": 161,
+        "head_height": 86,
+        "head_aspect": 1.872093,
+        "head_center_x": 93.166,
+        "upper_area": 12526,
+        "lower_area": 8155
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "running-right",
+      "frame": 0,
+      "score": 13.735255,
+      "identity_distance": 0.408144,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.428936,
+        "upper_lower_area_ratio": 1.229754,
+        "head_width": 107,
+        "head_height": 86,
+        "head_aspect": 1.244186,
+        "head_center_x": 94.315,
+        "upper_area": 10159,
+        "lower_area": 8261
+      }
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "frame": 0,
+      "score": 5.998039,
+      "identity_distance": 0.333305,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.446832,
+        "upper_lower_area_ratio": 1.472053,
+        "head_width": 123,
+        "head_height": 91,
+        "head_aspect": 1.351648,
+        "head_center_x": 96.118,
+        "upper_area": 10640,
+        "lower_area": 7228
+      }
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "running",
+      "frame": 4,
+      "score": 6.767915,
+      "identity_distance": 0.476839,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.433529,
+        "upper_lower_area_ratio": 1.44396,
+        "head_width": 132,
+        "head_height": 84,
+        "head_aspect": 1.571429,
+        "head_center_x": 90.834,
+        "upper_area": 11595,
+        "lower_area": 8030
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "review",
+      "frame": 5,
+      "score": 9.889782,
+      "identity_distance": 0.303725,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.416768,
+        "upper_lower_area_ratio": 1.360798,
+        "head_width": 136,
+        "head_height": 91,
+        "head_aspect": 1.494505,
+        "head_center_x": 79.435,
+        "upper_area": 11330,
+        "lower_area": 8326
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "jumping",
+      "frame": 4,
+      "score": 9.371951,
+      "identity_distance": 0.233859,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.390154,
+        "upper_lower_area_ratio": 1.108458,
+        "head_width": 133,
+        "head_height": 91,
+        "head_aspect": 1.461538,
+        "head_center_x": 87.783,
+        "upper_area": 11886,
+        "lower_area": 10723
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "waiting",
+      "frame": 5,
+      "score": 9.238461,
+      "identity_distance": 0.282894,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.409964,
+        "upper_lower_area_ratio": 1.317518,
+        "head_width": 129,
+        "head_height": 91,
+        "head_aspect": 1.417582,
+        "head_center_x": 81.554,
+        "upper_area": 11274,
+        "lower_area": 8557
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "review",
+      "frame": 2,
+      "score": 8.960306,
+      "identity_distance": 0.288775,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.413326,
+        "upper_lower_area_ratio": 1.353876,
+        "head_width": 137,
+        "head_height": 91,
+        "head_aspect": 1.505495,
+        "head_center_x": 80.431,
+        "upper_area": 11248,
+        "lower_area": 8308
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "jumping",
+      "frame": 0,
+      "score": 8.379842,
+      "identity_distance": 0.247436,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.398039,
+        "upper_lower_area_ratio": 1.160253,
+        "head_width": 131,
+        "head_height": 91,
+        "head_aspect": 1.43956,
+        "head_center_x": 87.274,
+        "upper_area": 11939,
+        "lower_area": 10290
+      }
+    },
+    {
+      "role": "hei-mao-butler",
+      "row": "idle",
+      "frame": 1,
+      "score": 7.092173,
+      "identity_distance": 0.086093,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.441571,
+        "upper_lower_area_ratio": 1.286633,
+        "head_width": 103,
+        "head_height": 91,
+        "head_aspect": 1.131868,
+        "head_center_x": 95.814,
+        "upper_area": 10203,
+        "lower_area": 7930
+      }
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "look-row-9",
+      "frame": 0,
+      "score": 6.684136,
+      "identity_distance": 0.367787,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.46353,
+        "upper_lower_area_ratio": 1.859046,
+        "head_width": 152,
+        "head_height": 89,
+        "head_aspect": 1.707865,
+        "head_center_x": 97.055,
+        "upper_area": 11580,
+        "lower_area": 6229
+      }
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "waiting",
+      "frame": 1,
+      "score": 5.798605,
+      "identity_distance": 0.211327,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.414676,
+        "upper_lower_area_ratio": 1.266573,
+        "head_width": 121,
+        "head_height": 91,
+        "head_aspect": 1.32967,
+        "head_center_x": 83.482,
+        "upper_area": 10852,
+        "lower_area": 8568
+      }
+    },
+    {
+      "role": "hei-mao-butler",
+      "row": "jumping",
+      "frame": 3,
+      "score": 5.756172,
+      "identity_distance": 0.198744,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.482976,
+        "upper_lower_area_ratio": 1.796996,
+        "head_width": 97,
+        "head_height": 91,
+        "head_aspect": 1.065934,
+        "head_center_x": 96.491,
+        "upper_area": 10171,
+        "lower_area": 5660
+      }
+    },
+    {
+      "role": "hei-mao-butler",
+      "row": "review",
+      "frame": 4,
+      "score": 5.22397,
+      "identity_distance": 0.381283,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.461619,
+        "upper_lower_area_ratio": 1.45918,
+        "head_width": 99,
+        "head_height": 91,
+        "head_aspect": 1.087912,
+        "head_center_x": 97.473,
+        "upper_area": 9044,
+        "lower_area": 6198
+      }
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "review",
+      "frame": 5,
+      "score": 5.078458,
+      "identity_distance": 0.434938,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.405342,
+        "upper_lower_area_ratio": 1.330867,
+        "head_width": 138,
+        "head_height": 91,
+        "head_aspect": 1.516484,
+        "head_center_x": 94.418,
+        "upper_area": 11693,
+        "lower_area": 8786
+      }
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "running",
+      "frame": 1,
+      "score": 4.909485,
+      "identity_distance": 0.39048,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.450911,
+        "upper_lower_area_ratio": 1.443758,
+        "head_width": 93,
+        "head_height": 91,
+        "head_aspect": 1.021978,
+        "head_center_x": 87.189,
+        "upper_area": 8882,
+        "lower_area": 6152
+      }
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "look-row-10",
+      "frame": 6,
+      "score": 4.853735,
+      "identity_distance": 0.502257,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.455282,
+        "upper_lower_area_ratio": 1.748034,
+        "head_width": 129,
+        "head_height": 87,
+        "head_aspect": 1.482759,
+        "head_center_x": 89.514,
+        "upper_area": 10448,
+        "lower_area": 5977
+      }
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-9",
+      "frame": 0,
+      "score": 4.628299,
+      "identity_distance": 0.243085,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.428134,
+        "upper_lower_area_ratio": 1.41187,
+        "head_width": 128,
+        "head_height": 90,
+        "head_aspect": 1.422222,
+        "head_center_x": 96.777,
+        "upper_area": 11086,
+        "lower_area": 7852
+      }
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "jumping",
+      "frame": 1,
+      "score": 4.619279,
+      "identity_distance": 0.500526,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.469455,
+        "upper_lower_area_ratio": 1.611758,
+        "head_width": 158,
+        "head_height": 75,
+        "head_aspect": 2.106667,
+        "head_center_x": 101.92,
+        "upper_area": 11213,
+        "lower_area": 6957
+      }
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "look-row-10",
+      "frame": 0,
+      "score": 4.606867,
+      "identity_distance": 0.397645,
+      "known_blocker": null,
+      "core": {
+        "nonempty": true,
+        "head_area_ratio": 0.449737,
+        "upper_lower_area_ratio": 1.501748,
+        "head_width": 166,
+        "head_height": 86,
+        "head_aspect": 1.930233,
+        "head_center_x": 98.289,
+        "upper_area": 14606,
+        "lower_area": 9726
+      }
+    }
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "known_blockers_in_candidates": 0,
+    "formal_assets_modified": false,
+    "manual_review_required": true
+  },
+  "artifacts": [
+    "cross-role-identity-review-20260831-v1.json",
+    "cross-role-identity-candidates-v1.jpg"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "command": "uv run --no-project --with pytest --with pillow --with numpy --with opencv-python-headless pytest -q <hatch-pet>/tests",
+  "exit_code": 0,
+  "result": "passed",
+  "tests": 28,
+  "passed": 28,
+  "warnings": 37,
+  "warning_class": "Pillow getdata deprecation warnings in existing despill script; no test failure",
+  "formal_assets_modified": false
+}

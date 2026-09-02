@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "read-only local Docker image service capability and channel-health refresh",
+  "container": {
+    "name": "gpt-image-playground-customer",
+    "status": "up (healthy)",
+    "published_port": "127.0.0.1:4783"
+  },
+  "models_endpoint": {
+    "path": "/api/agent/models",
+    "http_status": 200,
+    "ok": true,
+    "default_model": "gpt-image-2",
+    "declared_model_count": 13,
+    "declared_models": [
+      "gpt-image-2",
+      "gpt-image-1",
+      "gpt-image-1-mini",
+      "gpt-image-1.5",
+      "gpt-image-2-1k",
+      "gemini-3.1-flash-image",
+      "gemini-3-pro-image-preview",
+      "grok-imagine-image-quality",
+      "gemini-3.1-flash-image-preview",
+      "nai-diffusion-5-full",
+      "nai-diffusion-4-5-full",
+      "grok-imagine-image",
+      "gemini-3-pro-image"
+    ],
+    "probe_requested": false
+  },
+  "channel_health_endpoint": {
+    "path": "/api/agent/diagnostics/channel-health",
+    "http_status": 200,
+    "ok": true,
+    "billable": false,
+    "channels": [
+      {
+        "channel_id": "meinianda-image",
+        "state": "healthy",
+        "healthy_credential_count": 1,
+        "last_failure": {
+          "at": 1788181758309,
+          "scope": "channel",
+          "request_mode": "images-non-stream"
+        }
+      }
+    ]
+  },
+  "generation_status": {
+    "latest_real_generation_evidence": "qa/imagegen-channel-recheck-20260831-v16.json",
+    "latest_real_smoke": "HTTP 502 Connection error with zero image/artifact output",
+    "new_billable_generation_attempted": false
+  },
+  "interpretation": "本地服务协议与模型声明可访问，渠道状态接口返回 healthy；但最近真实生图仍是上游 Connection error，healthy 不等于已完成真实生图验收。",
+  "formal_assets_modified": false
+}

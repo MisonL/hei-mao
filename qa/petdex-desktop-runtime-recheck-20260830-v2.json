@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T07:22:58Z",
+  "scope": "low-risk PetDex Desktop 0.9.1 runtime role-switch recheck",
+  "desktop_release": "0.9.1",
+  "role_switch": {
+    "route": "petdex://<slug>",
+    "roles_checked": ["hei-mao", "hei-mao-quality", "hei-mao-butler", "hei-mao-chef", "hei-mao-foodie", "hei-mao-delivery", "hei-mao-fortune", "hei-mao-traveler"],
+    "roles_passed": "8/8",
+    "restored_role": "hei-mao-traveler"
+  },
+  "runtime_health": {
+    "health": "passed",
+    "init_status": "passed",
+    "state_endpoint": "passed",
+    "bubble_endpoint": "passed",
+    "bubble_agent_source": "codex",
+    "animation_state_observed": "running-left"
+  },
+  "visual_boundary": {
+    "window_pixel_capture": "not re-captured",
+    "full_codex_app_refresh": "not exercised",
+    "four_direction_visual_switching": "not exercised",
+    "standard_animation_visual_loop": "not exercised",
+    "multi_pet_display": "not exercised",
+    "cross_display_bubble_follow": "not exercised"
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_stopped": false,
+    "existing_codex_or_chatgpt_restarted": false,
+    "existing_petdex_process_stopped": false,
+    "window_moved": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "bubble_payload_text_recorded": false
+  },
+  "result": "PetDex Desktop 0.9.1 accepted all eight official role URIs and restored hei-mao-traveler. Health, init status, state, bubble source, and an animation state were observable; Codex App pixel-level visual checks remain user-operated."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T21:25:35Z",
+  "scope": "fresh read-only PetDex manifest and public asset parity refresh",
+  "manifest": {
+    "generated_at": "2026-08-30T20:20:37.125Z",
+    "total": 4672,
+    "current_slugs_present": 8,
+    "historical_hei_mao_slug_present": "hei-mao-2",
+    "index_sprite_version_lag": {
+      "v1_index_entries": [
+        "hei-mao",
+        "hei-mao-quality",
+        "hei-mao-butler",
+        "hei-mao-chef",
+        "hei-mao-foodie"
+      ],
+      "count": 5,
+      "interpretation": "manifest index fields lag the actual metadata and are not authoritative for the downloaded asset version"
+    }
+  },
+  "current_roles": {
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "actual_metadata_sprite_version_2": "8/8",
+    "actual_spritesheet_contract": "8/8 1536x2288 WebP RGBA",
+    "metadata_byte_parity_with_repository": "8/8",
+    "spritesheet_sha256_parity_with_repository": "8/8",
+    "roles": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ]
+  },
+  "remote_sha256": {
+    "hei-mao": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+    "hei-mao-quality": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+    "hei-mao-butler": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+    "hei-mao-chef": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+    "hei-mao-foodie": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+    "hei-mao-delivery": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+    "hei-mao-fortune": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+    "hei-mao-traveler": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"
+  },
+  "mutation": {
+    "performed": false,
+    "operations": ["manifest read", "metadata download", "spritesheet download", "SHA comparison"]
+  },
+  "result": "All eight current public resources remain byte-identical to the repository; the five lagging manifest index version fields are recorded as an external metadata inconsistency only."
+}

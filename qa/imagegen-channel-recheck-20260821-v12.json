@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T14:04:26Z",
+  "scope": "authorized local and deployed image-channel smoke with request-level reconciliation after backend success observation",
+  "service_checks": {
+    "local_docker": {
+      "container_health": "pass",
+      "agent_contract": "pass",
+      "channel_health_snapshot": "healthy_with_recent_failure",
+      "configured_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "attempt": {
+        "route": "server_orchestrated_job_polling",
+        "model": "gpt-image-2",
+        "selected_request_mode": "images-non-stream",
+        "status": "failed_upstream_unavailable",
+        "upstream_status": 503,
+        "error_code": "upstream_unavailable",
+        "artifact_count": 0,
+        "formal_assets_changed": false
+      },
+      "request_reconciliation": {
+        "agent_state_found": true,
+        "agent_state_status": "failed",
+        "agent_state_artifact_count": 0,
+        "agent_state_error_code": "upstream_unavailable",
+        "agent_state_upstream_status": 503,
+        "page_request_log_match_count": 0,
+        "correlated_with_backend_success_observation": false,
+        "retryable_field_disagreement": true,
+        "decision": "do_not_retry_same_operation; wait for upstream model/channel correction"
+      }
+    },
+    "deployed_service": {
+      "agent_contract": "pass",
+      "channel_health_snapshot": "healthy_with_recent_failure",
+      "configured_request_modes": [
+        "images-non-stream"
+      ],
+      "attempt": {
+        "route": "server_orchestrated_job_polling",
+        "model": "gpt-image-2",
+        "selected_request_mode": "images-non-stream",
+        "status": "failed_upstream_auth",
+        "upstream_status": 403,
+        "error_code": "upstream_auth_failed",
+        "artifact_count": 0,
+        "formal_assets_changed": false
+      },
+      "request_reconciliation": {
+        "agent_state_found": true,
+        "agent_state_status": "failed",
+        "agent_state_artifact_count": 0,
+        "agent_state_error_code": "upstream_auth_failed",
+        "agent_state_upstream_status": 403,
+        "page_request_log_match_count": 0,
+        "correlated_with_backend_success_observation": false
+      }
+    },
+    "backend_success_observation": {
+      "observed": true,
+      "scope": "other_successful_consumption_records",
+      "local_request_or_artifact_correlation": false,
+      "decision": "not_evidence_of_current_local_success"
+    }
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "keep_formal_quality_assets_unchanged; service contracts are healthy but neither tested route produced an artifact, so image generation is not currently verified as usable"
+}

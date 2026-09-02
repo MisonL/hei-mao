@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T23:50:16Z",
+  "scope": "read-only Codex App native window and screen capture boundary recheck",
+  "window_query": {
+    "screen_recording_permission": "granted",
+    "chatgpt_window_discovered": true,
+    "window_query": "WindowServer-only"
+  },
+  "capture": {
+    "window_capture_attempted": true,
+    "window_capture_result": "failed_to_create_image",
+    "failure_surface": "macOS screencapture window capture",
+    "display_capture_attempted": false
+  },
+  "visual_gate": {
+    "refresh": "unverified",
+    "role_selection": "unverified",
+    "four_direction_switching": "unverified",
+    "animation_loop": "unverified",
+    "multirole_selection": "unverified",
+    "multidisplay": "unverified"
+  },
+  "process_safety": {
+    "codex_or_chatgpt_process_mutation": "none",
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "input_sent": false,
+    "settings_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "desktop_content_recorded": false
+  },
+  "result": "Window discovery succeeded but native capture still failed; full Codex App pet refresh and visual acceptance remain unverified."
+}

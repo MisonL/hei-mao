@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "repository and two local pet stores",
+  "stores": [
+    "repo/pets",
+    "codex_home/pets",
+    "petdex_home/pets"
+  ],
+  "files_per_slug": [
+    "pet.json",
+    "spritesheet.webp"
+  ],
+  "slug_count": 8,
+  "all_ok": true,
+  "records": [
+    {
+      "slug": "hei-mao",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+              "bytes": 391
+            },
+            "codex_home": {
+              "sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+              "bytes": 391
+            },
+            "petdex_home": {
+              "sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802",
+              "bytes": 391
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+              "bytes": 2358230
+            },
+            "codex_home": {
+              "sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+              "bytes": 2358230
+            },
+            "petdex_home": {
+              "sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+              "bytes": 2358230
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-butler",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+              "bytes": 387
+            },
+            "codex_home": {
+              "sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+              "bytes": 387
+            },
+            "petdex_home": {
+              "sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4",
+              "bytes": 387
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+              "bytes": 2095284
+            },
+            "codex_home": {
+              "sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+              "bytes": 2095284
+            },
+            "petdex_home": {
+              "sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+              "bytes": 2095284
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-chef",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+              "bytes": 264
+            },
+            "codex_home": {
+              "sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+              "bytes": 264
+            },
+            "petdex_home": {
+              "sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a",
+              "bytes": 264
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+              "bytes": 1995120
+            },
+            "codex_home": {
+              "sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+              "bytes": 1995120
+            },
+            "petdex_home": {
+              "sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+              "bytes": 1995120
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+              "bytes": 284
+            },
+            "codex_home": {
+              "sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+              "bytes": 284
+            },
+            "petdex_home": {
+              "sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2",
+              "bytes": 284
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+              "bytes": 2783192
+            },
+            "codex_home": {
+              "sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+              "bytes": 2783192
+            },
+            "petdex_home": {
+              "sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+              "bytes": 2783192
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+              "bytes": 272
+            },
+            "codex_home": {
+              "sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+              "bytes": 272
+            },
+            "petdex_home": {
+              "sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c",
+              "bytes": 272
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+              "bytes": 3046302
+            },
+            "codex_home": {
+              "sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+              "bytes": 3046302
+            },
+            "petdex_home": {
+              "sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+              "bytes": 3046302
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-fortune",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+              "bytes": 265
+            },
+            "codex_home": {
+              "sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+              "bytes": 265
+            },
+            "petdex_home": {
+              "sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b",
+              "bytes": 265
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+              "bytes": 3287666
+            },
+            "codex_home": {
+              "sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+              "bytes": 3287666
+            },
+            "petdex_home": {
+              "sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+              "bytes": 3287666
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-quality",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+              "bytes": 388
+            },
+            "codex_home": {
+              "sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+              "bytes": 388
+            },
+            "petdex_home": {
+              "sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07",
+              "bytes": 388
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+              "bytes": 2445114
+            },
+            "codex_home": {
+              "sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+              "bytes": 2445114
+            },
+            "petdex_home": {
+              "sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+              "bytes": 2445114
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-traveler",
+      "files": {
+        "pet.json": {
+          "entries": {
+            "repo": {
+              "sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f",
+              "bytes": 278
+            },
+            "codex_home": {
+              "sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f",
+              "bytes": 278
+            },
+            "petdex_home": {
+              "sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f",
+              "bytes": 278
+            }
+          },
+          "byte_identical": true
+        },
+        "spritesheet.webp": {
+          "entries": {
+            "repo": {
+              "sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+              "bytes": 3363998
+            },
+            "codex_home": {
+              "sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+              "bytes": 3363998
+            },
+            "petdex_home": {
+              "sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+              "bytes": 3363998
+            }
+          },
+          "byte_identical": true
+        }
+      },
+      "ok": true
+    }
+  ],
+  "formal_assets_modified": false
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T05:38:46Z",
+  "scope": "read-only PetDex upstream Hook issue, related draft PR, and latest release status",
+  "issue_689": {
+    "state": "open",
+    "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住",
+    "upstream_fix_claimed": false
+  },
+  "draft_pr_710": {
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "title": "WIP: Native bubble revamp and platform parity",
+    "changes_issue_689_eof_semantics": false
+  },
+  "latest_release": {
+    "tag": "desktop-v0.8.0",
+    "name": "petdex-desktop v0.8.0"
+  },
+  "mutation_performed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "The upstream EOF issue remains open, draft PR 710 remains unmerged and does not change the EOF behavior, and the latest public release remains desktop-v0.8.0. The local wrapper is a mitigation; no upstream fix is claimed."
+}

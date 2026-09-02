@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01",
+  "scope": "fresh PetDex CLI download comparison after submitting sprite updates for locally repaired roles",
+  "cli_version": "1.3.0",
+  "manifest_count": 4674,
+  "current_slugs": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "metadata": {
+    "all_current_slugs_downloaded": true,
+    "all_sprite_version_numbers": 2,
+    "all_dimensions": "1536x2288"
+  },
+  "records": [
+    {
+      "slug": "hei-mao",
+      "local_sprite_sha256": "1f39e5ac561b27cc4b8cee46b2b4d63bca005a91cf64e63c7f340e534dd5702b",
+      "downloaded_sprite_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+      "metadata_matches_local": true,
+      "sprite_matches_local": false,
+      "remote_state": "old_pending_review"
+    },
+    {
+      "slug": "hei-mao-quality",
+      "local_sprite_sha256": "3d65d0494cd1c68c7d522031ac5628733f7f3a040728c22254002617c9f49ab0",
+      "downloaded_sprite_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+      "metadata_matches_local": true,
+      "sprite_matches_local": false,
+      "remote_state": "old_pending_review"
+    },
+    {
+      "slug": "hei-mao-butler",
+      "local_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "downloaded_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "metadata_matches_local": true,
+      "sprite_matches_local": true,
+      "remote_state": "current"
+    },
+    {
+      "slug": "hei-mao-chef",
+      "local_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "downloaded_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "metadata_matches_local": true,
+      "sprite_matches_local": true,
+      "remote_state": "current"
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "local_sprite_sha256": "2f434ce057fb08907846ae9e4fd38ebe6ed86bef0fd6f5465ac53487289e75c1",
+      "downloaded_sprite_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+      "metadata_matches_local": true,
+      "sprite_matches_local": false,
+      "remote_state": "old_pending_review"
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "local_sprite_sha256": "13016e533c70f65f9e4eb046a36bced865881f61e81870c55da7e75a83f17eb1",
+      "downloaded_sprite_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+      "metadata_matches_local": true,
+      "sprite_matches_local": false,
+      "remote_state": "old_pending_review"
+    },
+    {
+      "slug": "hei-mao-fortune",
+      "local_sprite_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+      "downloaded_sprite_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+      "metadata_matches_local": true,
+      "sprite_matches_local": true,
+      "remote_state": "current"
+    },
+    {
+      "slug": "hei-mao-traveler",
+      "local_sprite_sha256": "bab07c70334d00064468d7f82767064c67834db4da342ea16eb1bcc4b5ba5e45",
+      "downloaded_sprite_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+      "metadata_matches_local": true,
+      "sprite_matches_local": false,
+      "remote_state": "old_pending_review"
+    }
+  ],
+  "sprite_update_submissions": {
+    "submitted": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-traveler"
+    ],
+    "result": "queued_for_admin_review",
+    "duplicate_entries_created": false,
+    "credential_value_recorded": false,
+    "local_path_recorded": false
+  },
+  "conclusion": "Local repaired sprites are validated and five corresponding PetDex sprite edits are awaiting upstream review; until approval, fresh online installs of those five slugs intentionally remain on the previous sprite bytes."
+}

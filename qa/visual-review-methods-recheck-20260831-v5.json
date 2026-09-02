@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "cross-method candidate consensus with temporal neighbors and alpha silhouette",
+    "implementation": "qa/visual-review-alternative-20260831/cross_method_consensus_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/cross-method-consensus-candidates-v1.jpg",
+    "evidence": "qa/visual-review-alternative-20260831/cross-method-consensus-review-20260831-v1.json",
+    "purpose": "将比例、拓扑、光流、显示尺寸、DPR、帧序和 CSS 采样等独立方法指向的同一角色/动作/帧交叉取交集，再同时查看 PREV/CURRENT/NEXT 和当前帧的二值 alpha 轮廓，降低单一指标误报",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "candidate_tuples": 148,
+      "consensus_tuples_method_count_ge_2": 43,
+      "focused_sheet_tuples": 36,
+      "known_blocker_tuples": 9
+    },
+    "status": "completed; no new hard failure promoted"
+  },
+  "why_complementary": [
+    "不把任一方法的高分直接当成缺陷，要求至少两个独立方法先交叉指向",
+    "把彩色帧、时间邻居和颜色无关的 alpha 轮廓放在同一张复核表中，能区分材质变化与真实比例/轮廓异常",
+    "既覆盖正常动作候选，也强制保留四个已知完整行动画阻断，便于检查方法对已知缺陷的敏感度"
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "confirmed_existing_hard_failures": 4,
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; complete-row regeneration remains required for the four existing blockers"
+  },
+  "limitations": [
+    "交叉共识仍是资产层和浏览器预演证据，不能证明 Codex App 窗口层级、多屏位置、气泡跟随或 GPU 合成",
+    "方法数量不是严重程度；正常手势、非对称道具和方向回环也可能被多个指标同时标记，最终仍由正常尺寸视觉与 hatch-pet 规则裁决",
+    "当前四个硬失败尚未因生图上游 503 得到完整行动画重生和终验"
+  ]
+}

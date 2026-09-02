@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T03:26:05Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker custom-model matching portrait source-reference smoke after channel recovery",
+  "non_billable_contract": {
+    "capabilities": "pass",
+    "runtime": "pass",
+    "channel_health": "healthy",
+    "post_smoke_agent_doctor": "pass",
+    "orchestration": "server_owned_job_polling",
+    "effective_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ]
+  },
+  "smoke": {
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1536",
+    "actual_dimensions": "1024x1536",
+    "format": "webp",
+    "dimension_check": "pass",
+    "route_mode": "server_orchestrated_job_polling",
+    "channel_request_mode": "images-non-stream",
+    "visual_review": "full-body reference visible without crop or squash",
+    "formal_asset_eligible": false,
+    "formal_asset_decision": "source-reference smoke only; no eight-role atlas replacement"
+  },
+  "cleanup": {
+    "metadata_before_delete": 200,
+    "content_before_delete": 200,
+    "delete": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_retained": false
+  },
+  "fixed_size_boundary": {
+    "matching_portrait_size": "resolved for 1024x1536",
+    "square_size": "1024x1024 still returns 1254x1254 and remains rejected",
+    "status": "portrait_source_reference_usable_square_contract_unresolved"
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The recovered custom-model channel completed one authorized 1024x1536 source-reference smoke with matching dimensions and passed post-request health checks. The temporary artifact was deleted and both artifact endpoints returned 404. The portrait result is usable as a hatch-pet source reference; the fixed 1024x1024 provider mismatch remains unresolved, and no formal pet asset changed."
+}

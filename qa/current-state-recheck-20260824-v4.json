@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T05:00:00Z",
+  "scope": "fresh local Hook hardening and eight-role release boundary audit",
+  "local_assets": {
+    "roles": "8/8",
+    "v2_contract": "8/8; 1536x2288; 8x11; RGBA WebP; latest deterministic gate passed",
+    "hatch_pet_tests": "28 passed in the preceding fresh gate",
+    "three_directory_sha_parity": "8/8 roles and 16/16 files match",
+    "formal_assets_changed": false
+  },
+  "petdex_public_resources": {
+    "actual_metadata_and_spritesheets": "8/8 HTTP 200; metadata v2; 1536x2288 WebP RGBA",
+    "public_sha_match": "8/8",
+    "owned_slug_readonly": "8/8 approved",
+    "mutation_performed": false,
+    "historical_entry": "hei-mao-2 remains a historical public record; no deletion or replacement was attempted"
+  },
+  "hooks": {
+    "local_wrapper": "10/10 event/lifecycle matrix passed; chunked forwarding verified; unresponsive isolated runner exited within 1308ms",
+    "issue_689": "open; upstream native EOF behavior unresolved",
+    "pr_710": "open draft; not an EOF fix"
+  },
+  "codex_app_runtime": {
+    "settings_list": "all eight current roles visible in user-provided evidence",
+    "full_runtime": "unverified: refresh, per-role selection/restoration, four-direction switching, animation loop, multi-role selection and cross-display bubble following",
+    "ui_input_sent": false
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "process_identifiers": false
+  },
+  "decision": "Local Hook timeout and payload forwarding behavior is hardened and verified. Local assets, installers, public resources, and privacy gates remain passing. The upstream EOF issue, manifest index lag, historical public record, and full Codex App runtime acceptance remain external or user-side boundaries."
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T09:32:35Z",
+  "scope": "upstream PetDex atlas-auditor rule recheck for eight current published hei-mao roles",
+  "repository_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "upstream": {
+    "commit": "5323e43624bdd065fc65f3b3aa572404d51ce75d",
+    "atlas_auditor_pr": 757,
+    "atlas_auditor_merge_commit": "f69cfa1",
+    "upstream_auditor_tests": "21 passed"
+  },
+  "public_resources": {
+    "manifest_generated_at": "2026-08-30T02:48:30.134Z",
+    "roles_downloaded": "8/8",
+    "metadata_contract_v2": "8/8",
+    "metadata_and_spritesheet_sha_parity_with_repository": "8/8",
+    "mutation_performed": false
+  },
+  "audit": {
+    "rules": [
+      "empty frame detection",
+      "transparent edge bounds and clipping",
+      "sprite geometry and flattened proportion detection",
+      "frame-to-frame continuity",
+      "state-row proportion consistency"
+    ],
+    "repository_and_public_results_match": true,
+    "roles_without_machine_flags": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "chef": {
+      "machine_flag": "frame-continuity",
+      "row": "failed",
+      "transition": "frame 2 to frame 3",
+      "measurement": "width changes from 91px to 136px while height and center remain effectively stable",
+      "manual_review": "The seated failure pose widens naturally at normal pet size. It has no visible flattened proportion, clipping, identity drift, or registration jump.",
+      "existing_independent_visual_qa": "pass_with_reviewed_warnings",
+      "resolution": "accept_minor_warning"
+    },
+    "empty_frames": 0,
+    "edge_touches": 0,
+    "geometry_outliers": 0,
+    "proportion_outliers": 0,
+    "row_proportion_outliers": 0,
+    "hard_failures": 0
+  },
+  "formal_assets_modified": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false
+  },
+  "result": "All eight current published roles pass the upstream atlas auditor's structural, clipping, geometry, and proportion checks. The only machine continuity finding is Chef's intended seated failed-pose transition and remains an explicitly reviewed minor warning, not a regeneration trigger."
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T18:30:12Z",
+  "scope": "local Docker image-generation service custom-model real smoke at 1024x1024",
+  "service": {
+    "service_reachable": true,
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "output_format": "webp",
+    "agent_request_mode": "images-non-stream",
+    "endpoint": "/api/agent/image-requests"
+  },
+  "request": {
+    "status": "pass",
+    "route_mode": "server_orchestrated_job_polling",
+    "actual_dimensions": "1024x1024",
+    "dimension_check": "pass",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "visual_check": "centered full-body black pig mascot reference; complete silhouette; no crop or squash observed"
+  },
+  "cleanup": {
+    "artifact_delete": "HTTP 200",
+    "metadata_after_delete": "HTTP 404",
+    "content_after_delete": "HTTP 404",
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "result": "The local Docker service accepts the custom model through the server-orchestrated images-non-stream path and returns a dimension-matching 1024x1024 WebP. The temporary artifact was deleted and both supported reads returned 404 afterward."
+}

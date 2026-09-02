@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T07:29:17Z",
+  "scope": "fresh local Docker image-generation smoke after remote contract verification",
+  "service": {
+    "source": "user_provided_local_service",
+    "container_health": "healthy",
+    "capabilities": "passed",
+    "runtime": {
+      "orchestration_endpoint": "/api/agent/image-requests",
+      "default_model": "gpt-image-2",
+      "effective_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "recommended_concurrency": 1
+    },
+    "auth": "verified"
+  },
+  "request": {
+    "purpose": "single billable 1024x1024 channel smoke",
+    "quality": "low",
+    "route": "server_orchestrated job polling",
+    "selected_channel_request_mode": "images-sse"
+  },
+  "result": {
+    "ok": false,
+    "error_code": "upstream_unavailable",
+    "error_message": "Connection error.",
+    "retryable": false,
+    "artifact_count": 0,
+    "dimension_check_failed": false,
+    "selected_channel_id": "meinianda-image",
+    "upstream_host": "meinianda.top",
+    "transport_error_kind": "unknown_transport",
+    "fallback_applied": false,
+    "next_action": "diagnose_then_retry later with a new idempotency key"
+  },
+  "formal_assets_modified": false,
+  "interpretation": "Remote capabilities, runtime capacity, orchestration and authentication were reachable, but the fresh billable request failed before an image was returned at the configured upstream connection boundary. No row regeneration was started.",
+  "privacy": {
+    "request_ids": "omitted",
+    "idempotency_keys": "omitted",
+    "credentials": "omitted",
+    "local_paths": "omitted"
+  }
+}

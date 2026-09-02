@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T15:30:12Z",
+  "scope": "authorized custom-model Agent orchestration smoke after image service recovery",
+  "service_checks": {
+    "local_container": {
+      "health": "healthy",
+      "agent_contract": "pass",
+      "channel_health": "healthy",
+      "healthy_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ]
+    },
+    "agent_orchestration": {
+      "status": "succeeded",
+      "model": "gpt-image-2-1k",
+      "route": "server_orchestrated_job_polling",
+      "selected_request_mode": "images-non-stream",
+      "artifact_count": 2,
+      "artifact_format": "WebP",
+      "artifact_dimensions": "1254x1254",
+      "server_elapsed_ms": 216338,
+      "temporary_artifacts_deleted": true,
+      "artifact_delete_verification": "delete returned 200; subsequent metadata lookup returned 404"
+    },
+    "model_mapping": {
+      "agent_default_model": "gpt-image-2",
+      "custom_model_requested": "gpt-image-2-1k",
+      "custom_model_supported": true,
+      "dimension_policy": "provider returned 1254x1254 for size=auto; fixed 1024x1024 is not asserted by this smoke"
+    },
+    "formal_assets_changed": false
+  },
+  "decision": "custom-model generation through the Agent orchestration path is verified usable; keep formal pet assets unchanged until a generation request satisfies the required asset dimensions and visual QA",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false,
+    "temporary_artifact_retained": false
+  }
+}

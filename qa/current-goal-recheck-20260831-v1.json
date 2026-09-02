@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T09:09:59Z",
+  "scope": "current goal evidence snapshot for .",
+  "verified": {
+    "formal_pet_contract": "8/8 pass: spriteVersionNumber=2, 1536x2288, 8x11, WebP RGBA, no validator errors or transparent RGB residue",
+    "direction_continuity": "8/8 reports ok=true; warnings match prior reviewed warning sets",
+    "direction_semantics": "8/8 have 16 entries and zero fail verdicts",
+    "direction_blind_validation": "8/8 ok=true; intermediate warnings retained, no cardinal hard failure",
+    "hatch_pet_baseline": "28 passed, 37 Pillow deprecation warnings",
+    "three_directory_parity": "8/8 pet.json and spritesheet.webp byte-identical across repository, ~/.codex/pets and ~/.petdex/pets",
+    "installer_checks": "Bash syntax and ShellCheck pass; PowerShell AST pass; fixed SHA checks 8/8; Bash unknown slug rejection pass",
+    "petdex_versions": "CLI 1.3.0 equals npm latest; Desktop 0.9.1 installed",
+    "petdex_public_resources": "8/8 metadata and spritesheets HTTP 200, actual v2 and 1536x2288 WebP RGBA, metadata and spritesheet SHA parity 8/8",
+    "supplemental_visual_review": "temporal component lineage covered 584 transitions and promoted no new hard failure"
+  },
+  "external_or_user_boundaries": {
+    "image_generation": {
+      "status": "blocked_at_upstream",
+      "evidence": "qa/imagegen-channel-recheck-20260831-v11.json",
+      "detail": "fresh images-sse and images-non-stream smoke requests both failed with upstream_unavailable/Connection error at meinianda.top; no artifact"
+    },
+    "codex_app_pixel_and_multidisplay": {
+      "status": "not_verified",
+      "evidence": "qa/codex-app-boundary-recheck-20260830-v1.json",
+      "detail": "refresh, per-role UI selection, full animation playback, multi-pet layering, cross-display bubble following and pixel-level transparency remain user-operated boundaries"
+    }
+  },
+  "release_blockers": [
+    "hei-mao/jumping",
+    "hei-mao-quality/jumping",
+    "hei-mao-foodie/waiting",
+    "hei-mao-delivery/failed",
+    "hei-mao-quality/running-left",
+    "hei-mao-quality/failed",
+    "hei-mao-traveler/waiting",
+    "hei-mao-traveler/review"
+  ],
+  "git": {
+    "branch": "main",
+    "head": "679b093",
+    "remote_alignment": "origin/main and github/main point to HEAD",
+    "formal_pet_diff": "none",
+    "preexisting_tracked_dirty_files_preserved": [
+      "README.md",
+      "qa/current-state-recheck-20260820-v23.json",
+      "qa/hei-mao-fortune/direction-semantics.json"
+    ],
+    "new_evidence_is_uncommitted": true
+  },
+  "release_readiness": "blocked_until_imagegen_recovers_and_the_eight_complete_rows_are_regenerated_and_revalidated; Codex App UI boundaries still require user-side acceptance"
+}

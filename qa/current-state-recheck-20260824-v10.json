@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T09:28:08Z",
+  "scope": "fresh comprehensive local release, PetDex, upstream Hook, installer, and Codex App boundary snapshot",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "local_assets": {
+    "roles": "8/8",
+    "v2_contract": "8/8; 1536x2288; 8x11; RGBA WebP; validate_atlas --require-v2 passed with each role chroma key",
+    "hatch_pet_tests": "28 passed; Pillow deprecation warnings only",
+    "atlas_visual_format_probe": "8/8 WEBP 1536x2288 srgba",
+    "three_directory_sha_parity": "8/8 roles and 16/16 files match",
+    "formal_assets_changed": false
+  },
+  "installers": {
+    "evidence": "qa/installer-cross-platform-recheck-20260824-v1.json",
+    "bash_local": "8/8",
+    "bash_remote": "8/8",
+    "powershell_local": "8/8",
+    "unknown_slug_rejected": "bash and PowerShell",
+    "temporary_targets_removed": true
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260824-v6.json",
+    "local_wrapper": "native runner matrix 10/10, 131115-byte chunked forwarding matrix 10/10, timeout and spawn-error exit semantics verified",
+    "issue_689": "open; upstream native EOF behavior unresolved",
+    "pr_710": "open draft; not an EOF fix"
+  },
+  "petdex": {
+    "cli_version": "1.2.2",
+    "desktop_version": "0.8.0",
+    "evidence": "qa/petdex-live-recheck-20260824-v3.json",
+    "manifest_generated_at": "2026-08-24T06:40:21.316Z",
+    "manifest_total": 4579,
+    "actual_metadata_and_spritesheets": "8/8 HTTP 200; metadata v2; 1536x2288 WebP RGBA",
+    "public_sha_match": "8/8 metadata and 8/8 spritesheets",
+    "index_sprite_version_lag": "5/8 current manifest index fields still v1; actual metadata is authoritative",
+    "mutation_performed": false
+  },
+  "codex_app_runtime": {
+    "settings_list": "all eight current roles visible in user-provided evidence; hei-mao-butler selected",
+    "full_runtime": "unverified: refresh, per-role selection/restoration, four-direction switching, animation loop, multi-role selection, and cross-display bubble following",
+    "ui_input_sent": false,
+    "desktop_boundary_evidence": "qa/petdex-desktop-window-boundary-recheck-20260824-v1.json"
+  },
+  "cross_platform": {
+    "installer_evidence": "qa/installer-cross-platform-recheck-20260824-v1.json",
+    "hook_configuration_boundary": "macOS wrapper is a local mitigation and must not be copied verbatim to Windows or Linux"
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "process_identifiers": false,
+    "running_processes_stopped_or_restarted": false
+  },
+  "decision": "Local assets, atlas gates, tests, directory parity, installers, public PetDex resources, and privacy boundaries remain passing. The upstream EOF defect, manifest index lag, historical public record, and full Codex App runtime acceptance remain explicit external or user-side boundaries."
+}

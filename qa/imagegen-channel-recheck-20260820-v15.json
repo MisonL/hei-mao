@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T13:28:09Z",
+  "scope": "post-confirmation pig-identity row-9 generation recheck",
+  "service_checks": {
+    "local_docker": {
+      "container_health": "pass",
+      "channel_health": "probe_pending",
+      "effective_request_modes": [],
+      "request_contract": "pass"
+    },
+    "deployed_service": {
+      "channel_health": "healthy_for_routing",
+      "effective_request_modes": ["images-non-stream"],
+      "request_contract": "pass"
+    }
+  },
+  "reference_policy": {
+    "role": "hei-mao-quality",
+    "accepted_identity": "brown pig quality inspector",
+    "rejected_identity": "red-white cat candidate",
+    "formal_assets_overwritten": false
+  },
+  "new_attempts": [
+    {
+      "service": "local_docker",
+      "route": "server_orchestrated",
+      "status": "rejected_before_upstream",
+      "error_code": "configuration_error",
+      "artifact_count": 0,
+      "retryable": false
+    },
+    {
+      "service": "deployed_service",
+      "route": "page_sse",
+      "status": "rejected_before_request_state",
+      "error_code": "page_sse_request_rejected",
+      "http_status": 403,
+      "billable": false,
+      "artifact_count": 0,
+      "retryable": false
+    },
+    {
+      "service": "deployed_service",
+      "route": "agent_json_edit",
+      "status": "failed_at_upstream",
+      "error_code": "upstream_auth_failed",
+      "http_status": 403,
+      "billable": true,
+      "artifact_count": 0,
+      "retryable": false
+    }
+  ],
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "block_quality_row_repair_until_a_real_image_artifact_is_produced_by_a_valid_channel",
+  "formal_assets_modified": false
+}

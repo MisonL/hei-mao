@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T10:09:48Z",
+  "scope": "authorized local Docker image-channel smoke after channel reconfiguration",
+  "service_checks": {
+    "local_docker": {
+      "container_health": "pass",
+      "agent_contract": "pass",
+      "channel_id": "meinianda-image",
+      "configured_request_modes": ["images-non-stream", "images-sse"],
+      "request_mode_priority": ["images-non-stream", "images-sse"],
+      "attempt": {
+        "name": "orchestration_gpt_image_2_generate",
+        "route": "server_orchestrated_job_polling",
+        "model": "gpt-image-2",
+        "selected_request_mode": "images-non-stream",
+        "status": "failed_upstream_unavailable",
+        "upstream_status": 503,
+        "error_code": "upstream_unavailable",
+        "retryable": false,
+        "artifact_count": 0,
+        "fallback_applied": false,
+        "cooldown_applied": true
+      },
+      "post_request_channel_health": "healthy_snapshot_with_last_model_not_found_failure",
+      "responses_paths": "not_enabled"
+    },
+    "external_observation_boundary": "A user-provided backend screenshot shows other successful gpt-image-2 consumption records, but it contains no local Agent request or artifact correlation; it is not evidence that this local request succeeded."
+  },
+  "quality_row_9": {"role": "hei-mao-quality", "candidate_generated": false, "formal_assets_modified": false, "formal_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"},
+  "privacy": {"credentials_recorded": false, "local_absolute_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false, "request_ids_recorded": false, "idempotency_keys_recorded": false, "prompts_recorded": false},
+  "decision": "keep_formal_assets_unchanged; local Docker requests still fail at the configured gpt-image-2 channel and no artifact was produced"
+}

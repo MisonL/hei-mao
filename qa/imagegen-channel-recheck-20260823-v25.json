@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T02:32:10Z",
+  "scope": "fresh local Docker image-generation smoke through the project Agent entrypoint",
+  "service": {
+    "reachable": true,
+    "container_health": "healthy",
+    "model": "gpt-image-2-1k",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "selected_priority": "images-sse first"
+  },
+  "request": {
+    "entrypoint": "/api/agent/image-requests",
+    "transport": "agent_job_polling",
+    "route_mode": "server_orchestrated_job",
+    "requested_dimensions": "1024x1024",
+    "requested_image_count": 1,
+    "returned_images": 1,
+    "output_format": "webp",
+    "actual_dimensions": "1024x1024",
+    "dimension_check": "pass",
+    "download_check": "HTTP 200; image/webp decodes successfully",
+    "selected_channel_request_mode": "images-sse",
+    "fallback_applied": false,
+    "visual_check": "complete centered full-body pig mascot; natural proportions; feet and body fully visible; no crop or squash observed",
+    "formal_assets_changed": false
+  },
+  "cleanup": {
+    "artifact_delete_http": 200,
+    "metadata_after_delete_http": 404,
+    "content_after_delete_http": 404,
+    "local_temporary_files_cleaned": true
+  },
+  "observed_boundary": {
+    "images_non_stream": "not selected in this smoke; prior prompt-audit 503 remains a retryable upstream boundary",
+    "client_silent_fallback": false,
+    "formal_petdex_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service is usable through the default project Agent orchestration path. A fresh 1024x1024 WebP was downloaded and passed the strict dimension and visual checks; the temporary artifact was deleted and both follow-up artifact endpoints returned 404. No formal PetDex asset changed."
+}

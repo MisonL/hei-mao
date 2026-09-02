@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "fresh current-state v2 atlas and direction-continuity recheck for all eight formal pets",
+  "command": "hatch-pet validate_atlas.py --require-v2 with each role's recorded chroma key; measure_direction_continuity.py",
+  "atlas_gate": {
+    "roles_passed": "8/8",
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WebP",
+    "mode": "RGBA",
+    "rows": 11,
+    "columns": 8,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "role_chroma_keys": {
+      "hei-mao": "#00FF00",
+      "hei-mao-quality": "#FF00FF",
+      "hei-mao-butler": "#00FF00",
+      "hei-mao-chef": "#00FFFF",
+      "hei-mao-foodie": "#FF00FF",
+      "hei-mao-delivery": "#FF00FF",
+      "hei-mao-fortune": "#00FFFF",
+      "hei-mao-traveler": "#FF00FF"
+    }
+  },
+  "continuity": {
+    "roles_checked": "8/8",
+    "all_reports_ok": true,
+    "warning_counts": {
+      "hei-mao": 6,
+      "hei-mao-quality": 5,
+      "hei-mao-butler": 6,
+      "hei-mao-chef": 6,
+      "hei-mao-foodie": 9,
+      "hei-mao-delivery": 6,
+      "hei-mao-fortune": 4,
+      "hei-mao-traveler": 9
+    },
+    "alpha_hole_counts": {
+      "hei-mao": 1,
+      "hei-mao-quality": 0,
+      "hei-mao-butler": 0,
+      "hei-mao-chef": 0,
+      "hei-mao-foodie": 1,
+      "hei-mao-delivery": 3,
+      "hei-mao-fortune": 0,
+      "hei-mao-traveler": 6
+    },
+    "interpretation": "Warnings and alpha-hole candidates remain the previously reviewed natural negative-space or local-outlier cases; they are not promoted to hard failures by continuity metrics alone."
+  },
+  "tests": {
+    "hatch_pet_baseline": "28 passed, 37 Pillow deprecation warnings only",
+    "shellcheck": "passed",
+    "bash_syntax": "passed",
+    "powershell_parse": "passed",
+    "unknown_slug_rejection": "passed for Bash and PowerShell",
+    "installer_fixed_sha": "passed for 8 roles in both installers"
+  },
+  "local_parity": {
+    "repository_codex_pets_petdex_pets": "16/16 files byte-identical",
+    "stale_historical_slug_directories": 0
+  },
+  "visual_blockers": {
+    "complete_row_regeneration_required": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "source": "visual-review-methods-recheck-20260831-v6/v7 and scanline-segment-review-20260831-v1",
+    "reason": "visual QA confirmed duplicated or stacked contours and detached body/prop fragments; no individual-cell patch is allowed"
+  },
+  "formal_assets_modified": false,
+  "release_status": "blocked_until_image_generation_channel_returns_usable_row_artifacts"
+}

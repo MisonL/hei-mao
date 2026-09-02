@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T18:33:21Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex state after custom-model image service recovery smoke",
+  "local_release": {
+    "roles": 8,
+    "baseline": "unchanged; v2, animation and installer gates remain covered by prior QA",
+    "formal_assets_modified": false
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v4.json",
+    "service_status": "usable",
+    "custom_model": "gpt-image-2-1k",
+    "fixed_size_smoke": "1024x1024 WebP pass through server orchestration and images-non-stream",
+    "cleanup": "artifact delete passed; metadata and content returned 404"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260823-v1.json",
+    "current_roles_online_and_sha_matching": "8/8",
+    "duplicate_submission_created": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v1.json",
+    "local_wrapper": "bounded open-stdin mitigation passes for 5/5 events",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "still unverified",
+    "window_boundary": "PetDex native window is not exposed as an AppleScript window; after reopening the app, the current display reports a 122x132 window at an on-screen origin near 204,162",
+    "capture_boundary": "transparent-window screenshot capture remains unavailable in the current tool session",
+    "process_safety": "only the PetDex app was reloaded; no Codex or ChatGPT process was stopped or restarted"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The image-generation channel is usable at the requested 1024x1024 size and the eight current PetDex resources remain unchanged and SHA-matched. Full Codex App visual acceptance remains blocked by the native window/display boundary; the upstream Hook EOF behavior remains an explicit unresolved boundary."
+}

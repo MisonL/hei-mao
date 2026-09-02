@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T14:36:46Z",
+  "scope": "local Docker image-generation service real source-reference smoke",
+  "service_checks": {
+    "first_run": "pass",
+    "agent_doctor": "pass",
+    "agent_contract": "pass",
+    "orchestration": "server_owned_job_polling",
+    "channel_request_mode": "images-non-stream",
+    "post_request_channel_health": "pass"
+  },
+  "smoke": {
+    "authorized_real_smoke": true,
+    "custom_model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1024x1024",
+    "format": "webp",
+    "visual_check": "full-body source reference, centered, natural proportions, no crop or squash observed",
+    "strict_dimension_check": "pass",
+    "formal_asset_eligible": false,
+    "formal_asset_decision": "source-reference validation only; no eight-role atlas replacement"
+  },
+  "cleanup": {
+    "artifact_delete": "pass",
+    "artifact_metadata_after_cleanup": 404,
+    "artifact_content_after_cleanup": 404,
+    "local_temporary_file_after_cleanup": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The local Docker service accepts the custom model through the server-owned orchestration path and returns a matching 1024x1024 WebP. Contract, strict dimension, visual source-reference, post-request health, and cleanup checks pass. The service is usable for controlled hatch-pet source-reference work; formal PetDex assets were not changed."
+}

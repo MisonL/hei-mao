@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T04:07:15Z",
+  "scope": "fresh read-only PetDex upstream status check",
+  "issue_689": {
+    "state": "open",
+    "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住",
+    "comments": 0,
+    "updated_at": "2026-08-11T11:05:48Z",
+    "fix_merged": false
+  },
+  "pr_710": {
+    "state": "open",
+    "draft": true,
+    "title": "WIP: Native bubble revamp and platform parity",
+    "merged": false,
+    "fixes_issue_689": false,
+    "updated_at": "2026-08-15T10:44:56Z"
+  },
+  "latest_release_boundary": "No change to the Hook EOF issue was found in this read-only check.",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "Issue 689 remains open and draft PR 710 remains unmerged and unrelated to the EOF fix."
+}

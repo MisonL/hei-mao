@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T01:55:03.921Z",
+  "scope": "fresh eight-role PetDex release audit",
+  "local_assets": {
+    "roles": "8/8",
+    "atlas_contract": "8/8 v2, 1536x2288, 8x11, RGBA WebP",
+    "three_directory_sha_parity": "8/8 roles and 16/16 files match across repository, Codex and PetDex directories",
+    "formal_petdex_assets_changed": false
+  },
+  "petdex_public_resources": {
+    "manifest": "qa/petdex-live-recheck-20260824-v1.json",
+    "current_roles": "8/8",
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "metadata_v2": "8/8",
+    "spritesheet_contract": "8/8 1536x2288 WebP",
+    "public_sprite_sha_match": "8/8",
+    "historical_hei_mao_2": "recorded only; no mutation"
+  },
+  "hooks": {
+    "local_wrapper": "five events pass with closed and open stdin, 10/10 natural exits",
+    "upstream_issue_689": "open; native runner still waits for EOF",
+    "upstream_pr_710": "open draft; unrelated to EOF fix",
+    "existing_processes_touched": false
+  },
+  "codex_app_visual_acceptance": {
+    "status": "unverified",
+    "verified": ["Pets settings list visibly contains all eight current roles"],
+    "unverified": [
+      "full refresh result",
+      "per-role selection and restoration",
+      "four-direction switching",
+      "animation loop behavior",
+      "cross-display bubble following"
+    ],
+    "boundary": "desktop control service was unavailable and no UI input was sent"
+  },
+  "image_generation": {
+    "service": "local Docker GPT Image Playground",
+    "authorization_boundary": "no new paid or external generation request in this audit"
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "process_identifiers": false
+  },
+  "decision": "Static assets, public resources, local Hook mitigation and privacy gates pass. Full Codex App runtime acceptance remains open, and upstream issue 689 remains unresolved."
+}

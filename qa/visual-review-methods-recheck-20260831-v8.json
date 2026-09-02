@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "supplemental independent visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "multi-threshold temporal component lineage and attachment review",
+    "implementation": "qa/visual-review-alternative-20260831/temporal_component_lineage_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/temporal-component-lineage-candidates-v1.jpg",
+    "evidence": "qa/visual-review-alternative-20260831/temporal-component-lineage-review-20260831-v1.json",
+    "manual_review": "qa/visual-review-alternative-20260831/temporal-component-lineage-manual-review-20260831-v1.json",
+    "purpose": "跨循环相邻帧跟踪 Alpha 连通组件，识别单帧出生/消失、分裂/合并、远离主体的 detached component，并用多种 Alpha 阈值区分抗锯齿噪声与持久结构事件",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "cells": 584,
+      "transitions_including_loop": 584,
+      "alpha_thresholds": [16, 64, 128, 192],
+      "candidate_sheet_items": 40
+    },
+    "status": "completed; candidate sheet inspected at normal display size; no additional hard failure promoted"
+  },
+  "why_complementary": [
+    "它检查的是组件在时间轴上的谱系和附着关系，而不是单帧组件数量，因此能发现瞬时出生/消失、分裂/合并和 detached component",
+    "下半身锚点补偿后再匹配组件，减少整体平移对谱系判断的干扰；16/64/128/192 阈值的交叉持久性可过滤边缘抗锯齿噪声",
+    "候选图同时给出 PREV/CURRENT、组件框和事件摘要，便于把合法摆臂或道具遮挡与真正的断裂、重复轮廓区分开"
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "high_signal_candidates_for_followup": [
+      "hei-mao-quality/running-left frame 5->6: multi-threshold component births and matched detached movement",
+      "hei-mao-traveler/review frame 1->2: multi-threshold births with far-detached area",
+      "hei-mao-chef/running-left frame 1->2: small multi-threshold detached component",
+      "hei-mao-quality/idle frame 3->4: small component birth/death pair",
+      "hei-mao-traveler/idle: low-area component churn"
+    ],
+    "confirmed_existing_hard_failures": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+      "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+    ],
+    "still_open_from_combined_qa": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; high-signal candidates remain subject to normal-size semantic review, and the eight combined-QA hard-blocked rows still require complete-row regeneration"
+  },
+  "limitations": [
+    "连通组件没有语义标签，正常摆臂、泪滴、蔬菜或遮挡变化可能产生合法出生/消失",
+    "bbox 匹配不建模真实关节运动和遮挡顺序，不能替代接触表、预览 GIF 或人工方向/动作语义复核",
+    "这是资产级复核，不能证明 Codex App 窗口层级、多屏气泡跟随、透明合成或 GPU 行为",
+    "候选评分不是发布门禁；仅有可见的材质、比例、轮廓、组件或语义缺陷才能提升为硬失败"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T01:27:00Z",
+  "scope": "read-only native window and PetDex desktop capture boundary",
+  "window_probe": {
+    "window_server_detected_chatgpt_window": true,
+    "chatgpt_window_capture": "pass",
+    "petdex_window_server_detected": true,
+    "petdex_window_bounds": "offscreen negative-x historical second-display position",
+    "petdex_window_capture": "failed_transparent_window",
+    "screen_count": 1,
+    "secondary_display_capture": "unavailable; system reports only display 1",
+    "negative_coordinate_capture": "unavailable; rectangle does not intersect any display"
+  },
+  "computer_use": {
+    "service_startup": "not_available_in_current_tool_session",
+    "app_state_or_input_available": false
+  },
+  "safety": {
+    "ui_input_sent": false,
+    "settings_changed": false,
+    "codex_or_chatgpt_processes_stopped": false,
+    "processes_restarted": false
+  },
+  "result": "A native ChatGPT window can now be captured, but PetDex is positioned on an unavailable historical second-display coordinate and its transparent window capture still fails. Full Codex App pet refresh, selection, direction and animation acceptance remains unverified."
+}

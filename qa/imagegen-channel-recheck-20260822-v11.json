@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T20:45:51.743Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker custom-model real smoke through the default orchestration endpoint with dimension gate",
+  "service_checks": {
+    "base_url_source": "user_provided_local_docker",
+    "first_run": "pass",
+    "agent_doctor": "pass",
+    "container_health": "healthy",
+    "agent_contract": "pass",
+    "request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "custom_model_request_validation": "accepted_by_orchestration"
+  },
+  "custom_model_smoke": {
+    "status": "generated_but_failed_dimension_check",
+    "requested_model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1254x1254",
+    "actual_format": "WEBP",
+    "artifact_count": 1,
+    "transport": "agent_job_polling",
+    "channel_request_mode": "images-non-stream",
+    "custom_model_request": "accepted_and_generated",
+    "fixed_size_acceptance": "failed_provider_returned_1254x1254",
+    "formal_assets_changed": false
+  },
+  "artifact_cleanup": {
+    "metadata_before_delete_status": 200,
+    "content_before_delete_status": 200,
+    "delete_status": 200,
+    "metadata_after_delete_status": 404,
+    "content_after_delete_status": 404,
+    "temporary_artifact_retained": false
+  },
+  "deployed_service_boundary": {
+    "tested_in_this_recheck": false,
+    "formal_assets_changed": false,
+    "note": "This recheck targeted the local Docker service only; no deployed-service conclusion is claimed."
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false,
+    "temporary_artifact_retained": false
+  },
+  "decision": "The local Docker orchestration accepts and executes the requested custom model. The provider returns 1254x1254 for a 1024x1024 request, so the fixed-size PetDex asset gate remains closed. The temporary artifact was deleted and both follow-up endpoints returned 404. No formal pet atlas was changed."
+}

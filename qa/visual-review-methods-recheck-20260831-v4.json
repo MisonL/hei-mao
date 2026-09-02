@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "blind previous-current-next triplet review",
+    "implementation": "qa/visual-review-alternative-20260831/blind_temporal_triplet_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/blind-temporal-triplet-sheet-v1.png",
+    "answer_key": "qa/visual-review-alternative-20260831/blind-temporal-triplet-answer-key-v1.json",
+    "evidence": "qa/visual-review-alternative-20260831/blind-temporal-triplet-review-20260831-v1.json",
+    "channel_probes": [
+      "qa/visual-review-alternative-20260831/blind-temporal-triplet-omp-review-20260831-v1.json",
+      "qa/visual-review-alternative-20260831/blind-temporal-triplet-claude-review-20260831-v1.json"
+    ],
+    "parent_review": "qa/visual-review-alternative-20260831/blind-temporal-triplet-parent-review-20260831-v1.json",
+    "purpose": "让独立复核者在不知道角色、动作、帧号或指标分数的情况下，判断当前帧相对前后帧是否出现比例跳变、重复轮廓、身份漂移、断裂或动作不连续",
+    "coverage": {
+      "roles": 8,
+      "animation_rows": 11,
+      "triplets": 40,
+      "frames_shown": 120,
+      "known_control_triplets": 9,
+      "cell_size": "192x208"
+    },
+    "status": "prepared_pending_independent_reviewer_verdict; OMP attachment unavailable; Claude not authenticated",
+    "formal_assets_modified": false
+  },
+  "why_complementary": [
+    "不依赖骨架、比例、光流或颜色异常分数，直接测试人眼对时序连续性的判断",
+    "答案键与盲测图分离，可检查已知控制缺陷是否能被发现，同时避免标签诱导",
+    "保留 PREV/CURRENT/NEXT 的真实循环邻居，覆盖循环首尾而不是只看静态单帧"
+  ],
+  "existing_hard_failures_unchanged": [
+    "hei-mao/jumping frame 2 duplicated head",
+    "hei-mao-quality/jumping frame 2 duplicated head",
+    "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+    "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+  ],
+  "limitations": [
+    "盲测仍是资产层证据，不能证明 Codex App 窗口层级、多屏位置、气泡跟随或平台合成器行为",
+    "匿名复核者看不到动作语义，异常姿势仍需结合答案键和带标签的正常尺寸回看",
+    "当前未把盲测表判定为通过；四个已知整行动画缺陷仍需生图恢复后重新走完整 QA"
+  ]
+}

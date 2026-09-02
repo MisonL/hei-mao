@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T06:05:28+08:00",
+  "scope": "current local, visual QA, image service, PetDex, upstream, Hook, and Codex App boundary state",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "local_release": {
+    "cli": "1.3.0",
+    "desktop": "0.9.1",
+    "v2_gate_evidence": "qa/v2-contract-recheck-20260831-v1.json",
+    "baseline_evidence": "qa/hatch-pet-baseline-recheck-20260831.json",
+    "installer_evidence": "qa/installer-validation-recheck-20260831-v1.json",
+    "parity_evidence": "qa/three-directory-parity-recheck-20260831-v3.json",
+    "formal_assets_modified": false
+  },
+  "visual_qa": {
+    "coverage": "8 roles, 88 rows, 584 frames",
+    "deterministic_v2": "8/8 pass; 1536x2288 RGBA WebP; no errors, warnings, or transparent RGB residue",
+    "supplemental_methods": [
+      "qa/visual-review-methods-recheck-20260831-v2.json",
+      "qa/visual-review-alternative-20260831/visual-review-alternative-20260831-v5.json",
+      "qa/visual-review-alternative-20260831/visual-review-alternative-20260831-v6.json"
+    ],
+    "confirmed_hard_failures": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed"
+    ],
+    "new_hard_failures": 0,
+    "release_ready": false,
+    "repair_policy": "regenerate each affected complete row; do not patch isolated cells or use procedural compositing"
+  },
+  "image_generation": {
+    "latest_evidence": "qa/imagegen-channel-recheck-20260831-v3.json",
+    "contract": "pass",
+    "latest_real_smoke": "images-sse returned upstream 503; no artifact",
+    "repair_generation_ready": false
+  },
+  "petdex": {
+    "manifest_evidence": "qa/petdex-live-recheck-20260831-v1.json",
+    "upstream_evidence": "qa/petdex-upstream-status-recheck-20260831-v1.json",
+    "manifest_total": 4672,
+    "manifest_generated_at": "2026-08-30T20:20:37.125Z",
+    "current_slugs_present": "8/8",
+    "public_metadata_and_spritesheet_parity": "8/8",
+    "index_version_lag": "5/8 current entries index as v1; actual metadata is v2",
+    "historical_slug": "hei-mao-2 remains historical only",
+    "latest_upstream_commit": "5323e43624bdd065fc65f3b3aa572404d51ce75d"
+  },
+  "hooks": {
+    "lifecycle_evidence": "qa/petdex-local-hook-wrapper-recheck-20260830-v2.json",
+    "trusted_hash_evidence": "qa/petdex-hook-trusted-hash-recheck-20260830-v1.json",
+    "upstream_evidence": "qa/petdex-upstream-status-recheck-20260831-v1.json",
+    "events_checked": 5,
+    "closed_and_open_stdin_cases": "20/20 native and wrapper cases",
+    "trusted_hash_matches": "5/5",
+    "bounded": true
+  },
+  "codex_app_boundary": {
+    "evidence": "qa/codex-app-boundary-recheck-20260830-v1.json",
+    "full_refresh": "user-operated",
+    "eight_role_restore": "user-operated",
+    "four_direction_visual_switching": "user-operated",
+    "animation_loop_visual_qa": "user-operated",
+    "multi_pet_display": "user-operated",
+    "cross_display_bubble_follow": "user-operated",
+    "pixel_level_ratio_crop_transparency_check": "user-operated"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "Local deterministic gates, installation parity, Hook lifecycle checks, PetDex public resource parity, and supplemental raster review are recorded. The four complete-row visual failures and the unavailable upstream image channel keep the package below visual release readiness; Codex App runtime acceptance remains a user-operated boundary and is not claimed as automated pass."
+}

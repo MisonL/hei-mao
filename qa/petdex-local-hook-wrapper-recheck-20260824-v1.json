@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T04:22:50Z",
+  "scope": "isolated local PetDex Codex Hook wrapper stdin lifecycle recheck",
+  "events": [
+    "user-prompt",
+    "pre",
+    "post",
+    "notification",
+    "stop"
+  ],
+  "isolated_tests": {
+    "closed_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "open_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "total_passed": "10/10",
+    "maximum_elapsed_ms": 280,
+    "target": "isolated test child; no existing application process was used"
+  },
+  "upstream_boundary": {
+    "issue_689": "open; native runner EOF behavior remains unresolved in the existing baseline",
+    "draft_pr_710": "open draft; not an EOF fix",
+    "upstream_fix_claimed": false
+  },
+  "process_safety": {
+    "existing_codex_chatgpt_or_petdex_processes_touched": false,
+    "processes_stopped": false,
+    "processes_restarted": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "The local bounded wrapper exits for all five configured events with both stdin lifecycles. This is local mitigation evidence and does not claim an upstream fix."
+}

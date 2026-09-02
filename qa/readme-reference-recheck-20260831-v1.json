@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T11:30:00Z",
+  "scope": "README local QA-reference existence and privacy-boundary recheck",
+  "result": {
+    "qa_references_found": 587,
+    "missing_concrete_references": 0,
+    "template_placeholders_ignored": 15,
+    "template_placeholder_pattern": "qa/<slug>/...",
+    "privacy_scan": "pass"
+  },
+  "interpretation": "README 中所有具体 qa/ 路径均存在；仅有角色包说明中的通用 <slug> 模板占位符，不属于缺失文件。",
+  "formal_assets_modified": false
+}

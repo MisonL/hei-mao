@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T14:18:00Z",
+  "scope": "local PetDex Codex Hook persistence and EOF mitigation",
+  "upstream_boundary": {
+    "startup_behavior": "normal PetDex startup refreshes ~/.petdex/bin/petdex-hook to the signed native runner",
+    "issue": 689,
+    "native_runner_semantics": "still waits for EOF after a complete payload",
+    "upstream_fix_claimed": false
+  },
+  "local_install": {
+    "codex_hooks_feature": true,
+    "codex_hook_events": [
+      "UserPromptSubmit",
+      "PreToolUse",
+      "PostToolUse",
+      "PermissionRequest",
+      "Stop"
+    ],
+    "hook_commands": "all five events invoke ~/.petdex/bin/petdex-hook-wrapper.mjs first; a harmless ~/.petdex/bin/petdex-hook marker remains for PetDex ownership detection",
+    "bounded_wrapper": "~/.petdex/bin/petdex-hook-wrapper.mjs",
+    "native_runner": "~/.petdex/bin/petdex-hook-native",
+    "native_app_modified": false,
+    "existing_codex_notify_preserved": true,
+    "existing_codex_config_content_preserved": true
+  },
+  "isolated_tests": {
+    "wrapper_closed_stdin": {
+      "natural_exit": true,
+      "exit_code": 0,
+      "elapsed_ms_under": 500
+    },
+    "wrapper_open_stdin": {
+      "natural_exit": true,
+      "exit_code": 0,
+      "elapsed_ms_under": 500
+    },
+    "all_five_hook_commands_open_stdin": {
+      "natural_exit": true,
+      "events": [
+        "UserPromptSubmit",
+        "PreToolUse",
+        "PostToolUse",
+        "PermissionRequest",
+        "Stop"
+      ],
+      "timeouts": 0
+    },
+    "all_five_hook_commands_closed_stdin": {
+      "natural_exit": true,
+      "events": [
+        "UserPromptSubmit",
+        "PreToolUse",
+        "PostToolUse",
+        "PermissionRequest",
+        "Stop"
+      ],
+      "timeouts": 0
+    },
+    "config_json": "valid",
+    "petdex_owner_marker": "present in every managed command"
+  },
+  "persistence_boundary": {
+    "normal_app_start": "direct wrapper commands remain unchanged; only the unused stable symlink target is refreshed",
+    "settings_reinstall": "PetDex may rewrite commands to its canonical native-runner command; reapply the local wrapper override after using Settings to reinstall Codex hooks",
+    "automatic_reapply_performed": false
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "only_isolated_test_children_used": true
+  },
+  "privacy": {
+    "absolute_local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "credentials_recorded": false
+  },
+  "result": "The local Codex Hook configuration now calls the bounded wrapper directly and exits for both closed and open stdin in isolated tests. The signed PetDex app and native runner were not modified. Upstream issue 689 remains unresolved; a PetDex Settings reinstall can overwrite the local wrapper commands and is an explicit remaining boundary."
+}

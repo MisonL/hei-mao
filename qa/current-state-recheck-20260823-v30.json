@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T07:03:40Z",
+  "scope": "fresh local usability and upstream boundary state after image-generation and Hook rechecks",
+  "local_assets": {
+    "roles": "8/8",
+    "atlas_contract": "8/8 v2, 1536x2288, 8x11, RGBA WebP",
+    "three_directory_sha_parity": "8/8 roles and 16/16 files match across repository, Codex and PetDex directories",
+    "formal_petdex_assets_changed": false
+  },
+  "image_generation": {
+    "service": "local Docker GPT Image Playground",
+    "container": "healthy",
+    "default_model": "gpt-image-2-1k",
+    "requested_size": "1536x2288",
+    "real_smoke": "pass; strict dimension check returned 1536x2288 WebP",
+    "temporary_artifact_cleanup": "pass; metadata/content returned 404 after deletion"
+  },
+  "hooks": {
+    "local_wrapper": "five events pass with closed and open stdin, 10/10 natural exits",
+    "upstream_issue_689": "open; native runner still waits for EOF",
+    "upstream_pr_710": "open draft; unrelated to EOF fix",
+    "existing_processes_touched": false
+  },
+  "code_verification": {
+    "image_service_tests": "19 passed",
+    "agent_and_stream_tests": "103 passed; one PostgreSQL suite skipped because its test database variable is absent",
+    "prettier": "pass",
+    "eslint": "pass",
+    "typescript": "pass",
+    "production_build": "pass",
+    "active_local_container_rebuilt": true
+  },
+  "codex_app_visual_acceptance": {
+    "status": "unverified",
+    "reason": "live display capture boundary remains unavailable",
+    "processes_stopped_or_restarted": false
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "process_identifiers": false
+  },
+  "decision": "The local image-generation service and Hook wrapper are usable under their verified boundaries. Full real Codex App visual acceptance and the upstream native EOF fix remain explicitly open."
+}

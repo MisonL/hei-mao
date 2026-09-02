@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T21:48:25Z",
+  "scope": "fresh PetDex manifest redirect-follow and eight public role resource recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "redirect_followed": true,
+    "http_status": 200,
+    "generated_at": "2026-08-21T18:25:08.433Z",
+    "entry_count": 4568,
+    "current_slugs_present": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2 remains record-only"
+  },
+  "resource_validation": {
+    "metadata_http_200": "8/8",
+    "metadata_id_matches": "8/8",
+    "actual_metadata_sprite_version_number": "8/8 v2",
+    "spritesheet_contract": "8/8 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/6 submitted and queued for admin review; not live",
+    "duplicate_submission_created": false,
+    "online_switch_confirmed": false
+  },
+  "roles": {
+    "hei-mao": {"public_spritesheet_sha256":"ee9394b4f794943dd0d364fe2fdd7a4cc1c82dda5765cdbf656357417341997c","repository_spritesheet_sha256":"52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c","sprite_sha_match":false},
+    "hei-mao-quality": {"public_spritesheet_sha256":"254402bcebc7eba068f39cc8c2c5f8f511bc5d120c49db7ffb13c9855c4fcb92","repository_spritesheet_sha256":"a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5","sprite_sha_match":false},
+    "hei-mao-butler": {"public_spritesheet_sha256":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304","repository_spritesheet_sha256":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304","sprite_sha_match":true},
+    "hei-mao-chef": {"public_spritesheet_sha256":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957","repository_spritesheet_sha256":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957","sprite_sha_match":true},
+    "hei-mao-delivery": {"public_spritesheet_sha256":"ac742c253567d84d71541941853c4e536a77bb1686349512d14ab86e5f91aa0a","repository_spritesheet_sha256":"6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86","sprite_sha_match":false},
+    "hei-mao-foodie": {"public_spritesheet_sha256":"fd2173bc21c5ca563cadfb1935bb037f08812559fd3d6717c1add7a40d79dc49","repository_spritesheet_sha256":"eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0","sprite_sha_match":false},
+    "hei-mao-fortune": {"public_spritesheet_sha256":"1a4c4238f1f7acd8228b376ac56320acb32753b7d75455896fdcbbf916833a71","repository_spritesheet_sha256":"10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9","sprite_sha_match":false},
+    "hei-mao-traveler": {"public_spritesheet_sha256":"2dd6053468d97134f08ea49b6071eec301a413a61757fed1e084a993917f883e","repository_spritesheet_sha256":"d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25","sprite_sha_match":false}
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The redirected public resource contract passes for 8/8 current roles and actual metadata is v2 for all eight. Public spritesheet content remains synchronized with the repository for 2/8; six owned-slug updates remain pending review."
+}

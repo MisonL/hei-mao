@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T13:48:21Z",
+  "scope": "row 9 and row 10 pig-shaped quality-role repair service recheck",
+  "local_docker": {
+    "base_url": "local_container",
+    "container_state": "healthy",
+    "configured_channel": "wahuiliyi-gpt-image",
+    "effective_request_modes": [],
+    "channel_health": "probe_pending",
+    "last_failure_code": "probe_transport_error",
+    "generation_attempt": {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v5-local-smoke",
+      "status": "rejected",
+      "error_code": "configuration_error",
+      "artifact_count": 0
+    }
+  },
+  "remote_visual_journal": {
+    "base_url": "https://misonl-visual-journal.hf.space",
+    "configured_channel": "jisuanyun-gpt-image",
+    "effective_request_modes": ["images-non-stream"],
+    "channel_health": "healthy",
+    "agent_edit": {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v5-remote-agent",
+      "status": "rejected",
+      "error_code": "unauthorized",
+      "http_status": 401,
+      "artifact_count": 0
+    },
+    "page_sse": {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v7-remote-page",
+      "status": "rejected",
+      "error_code": "page_sse_request_rejected",
+      "http_status": 403,
+      "artifact_count": 0
+    },
+    "browser_page_state": "access_code_required"
+  },
+  "formal_asset": {
+    "role": "hei-mao-quality",
+    "spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+    "assets_modified": false,
+    "repair_decision": "blocked_until_client_access_and_real_image_artifact_are_available"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "request_payloads_recorded": false
+  }
+}

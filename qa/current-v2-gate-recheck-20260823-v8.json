@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T00:20:45Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "fresh eight-role v2 atlas and direction continuity recheck using each role's recorded chroma key",
+  "role_chroma_keys": {
+    "hei-mao": "#00FF00",
+    "hei-mao-quality": "#FF00FF",
+    "hei-mao-butler": "#00FF00",
+    "hei-mao-chef": "#00FFFF",
+    "hei-mao-delivery": "#FF00FF",
+    "hei-mao-foodie": "#FF00FF",
+    "hei-mao-fortune": "#00FFFF",
+    "hei-mao-traveler": "#FF00FF"
+  },
+  "roles": {
+    "hei-mao": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": 1,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
+    },
+    "hei-mao-quality": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 5,
+      "alpha_hole_candidates": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07"
+    },
+    "hei-mao-butler": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4"
+    },
+    "hei-mao-chef": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a"
+    },
+    "hei-mao-delivery": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 6,
+      "alpha_hole_candidates": 3,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2"
+    },
+    "hei-mao-foodie": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 9,
+      "alpha_hole_candidates": 1,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c"
+    },
+    "hei-mao-fortune": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 4,
+      "alpha_hole_candidates": 0,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b"
+    },
+    "hei-mao-traveler": {
+      "atlas_gate": "pass",
+      "continuity_ok": true,
+      "continuity_review_required": true,
+      "continuity_warning_count": 9,
+      "alpha_hole_candidates": 6,
+      "validator_errors": 0,
+      "validator_warnings": 0,
+      "transparent_rgb_residue_pixels": 0,
+      "pet_json_sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f"
+    }
+  },
+  "atlas_contract": {
+    "roles_passed": "8/8",
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WEBP",
+    "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "continuity_review": {
+    "roles_passed": "8/8",
+    "metric_warnings": "reviewed minor warnings retained",
+    "alpha_hole_candidates": 11,
+    "alpha_hole_disposition": "existing QA confirms all candidates are legal open negative space, not enclosed holes"
+  },
+  "other_baseline_evidence": {
+    "v2_gate_baseline": "qa/current-v2-gate-recheck-20260823-v7.json",
+    "hatch_pet_tests": "28 passed in a fresh exact-runtime rerun after this atlas check; Pillow deprecation warnings only",
+    "three_directory_sha_parity": "qa/three-directory-parity-recheck-20260823-v1.json",
+    "formal_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "All eight current roles passed a fresh validate_atlas.py --require-v2 run with their recorded chroma keys. Direction continuity metrics remain acceptable with the previously reviewed minor warnings and legal open negative-space candidates. No formal asset was modified."
+}

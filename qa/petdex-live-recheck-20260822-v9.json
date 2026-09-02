@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T23:47:01Z",
+  "scope": "fresh public PetDex manifest and eight current role resource recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "redirect_followed": true,
+    "http_status": 200,
+    "generated_at": "2026-08-21T18:25:08.433Z",
+    "entry_count": 4568,
+    "current_slugs_present": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2 remains record-only"
+  },
+  "resource_validation": {
+    "metadata_http_200": "8/8",
+    "metadata_id_matches": "8/8",
+    "actual_metadata_sprite_version_number": "8/8 v2",
+    "spritesheet_contract": "8/8 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/6 previously submitted through the official edit route; public resources still show the previous sprite SHA",
+    "duplicate_submission_created": false,
+    "online_switch_confirmed": false
+  },
+  "sha_match_roles": ["hei-mao-butler", "hei-mao-chef"],
+  "pending_roles": ["hei-mao", "hei-mao-quality", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"],
+  "owned_slug_readonly_evidence": "qa/petdex-owned-slug-readonly-recheck-20260822-v1.json",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "All eight public resources remain downloadable and satisfy the v2 image contract, but only two public spritesheets match the repository. The six already-submitted owned-slug updates remain pending review; no mutation was repeated."
+}

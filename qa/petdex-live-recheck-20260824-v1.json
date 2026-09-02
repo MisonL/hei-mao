@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T01:55:03.921Z",
+  "scope": "fresh read-only PetDex manifest and current-role public asset parity recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-24T00:49:55.888Z",
+    "total": 4579,
+    "current_slugs_present": "8/8",
+    "index_entries_with_sprite_version_1": 5
+  },
+  "roles": [
+    {
+      "slug": "hei-mao",
+      "index_sprite_version": 1,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 2358230,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+      "repository_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+      "sha_match": true
+    },
+    {
+      "slug": "hei-mao-quality",
+      "index_sprite_version": 1,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao-quality",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 2445114,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+      "repository_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+      "sha_match": true
+    },
+    {
+      "slug": "hei-mao-butler",
+      "index_sprite_version": 1,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao-butler",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 2095284,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "repository_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "sha_match": true
+    },
+    {
+      "slug": "hei-mao-chef",
+      "index_sprite_version": 1,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao-chef",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 1995120,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "repository_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "sha_match": true
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "index_sprite_version": 2,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao-delivery",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 2783192,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+      "repository_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+      "sha_match": true
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "index_sprite_version": 1,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao-foodie",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 3046302,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+      "repository_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+      "sha_match": true
+    },
+    {
+      "slug": "hei-mao-fortune",
+      "index_sprite_version": 2,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao-fortune",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 3287666,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+      "repository_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+      "sha_match": true
+    },
+    {
+      "slug": "hei-mao-traveler",
+      "index_sprite_version": 2,
+      "metadata_http": 200,
+      "spritesheet_http": 200,
+      "metadata_id": "hei-mao-traveler",
+      "metadata_sprite_version": 2,
+      "format": "image/webp",
+      "bytes": 3363998,
+      "dimensions": {"width": 1536, "height": 2288},
+      "public_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+      "repository_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25",
+      "sha_match": true
+    }
+  ],
+  "history": {
+    "slug": "hei-mao-2",
+    "record_present": true,
+    "action": "recorded_only; no deletion, replacement or mutation attempted"
+  },
+  "mutation_performed": false,
+  "privacy": {
+    "credentials": false,
+    "user_identity": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false,
+    "artifact_ids": false
+  },
+  "result": "All eight current manifest entries were re-read through their public asset URLs; actual metadata is v2, spritesheets are 1536x2288 WebP, and downloaded SHA values match the repository."
+}

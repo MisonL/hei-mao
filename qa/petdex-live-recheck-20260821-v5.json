@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T14:04:26Z",
+  "scope": "fresh PetDex manifest refresh after owned-slug edit submissions",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-21T12:30:23.084Z",
+    "entry_count": 4568,
+    "current_slugs_present": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2 remains record-only"
+  },
+  "resource_validation": {
+    "latest_full_download_evidence": "qa/petdex-live-recheck-20260821-v4.json",
+    "manifest_generation_unchanged_since_latest_full_download": true,
+    "metadata_and_sprite_contract": "carried forward from latest full download: 8/8 metadata HTTP 200 and actual spriteVersionNumber=2; 8/8 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/6 submitted through official edit route and queued for admin review; not yet visible in public resources",
+    "duplicate_submission_created": false,
+    "online_switch_confirmed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "manifest remains current at 4568 entries; public sprite resources remain partially stale pending administrator review"
+}

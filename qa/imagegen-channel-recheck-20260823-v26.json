@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T03:13:30Z",
+  "scope": "fresh local Docker image-generation smoke through the project Agent entrypoint",
+  "service": {
+    "reachable": true,
+    "container_health": "healthy",
+    "configured_model": "gpt-image-2-1k",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "selected_priority": "images-sse first",
+    "channel_health": "healthy"
+  },
+  "requests": {
+    "entrypoint": "/api/agent/image-requests",
+    "transport": "agent_job_polling",
+    "route_mode": "server_orchestrated_job",
+    "requested_image_count": 1,
+    "requested_dimensions": "1024x1024",
+    "output_format": "webp",
+    "explicit_model_request": {
+      "model": "gpt-image-2-1k",
+      "returned_images": 1,
+      "actual_dimensions": "1024x1024",
+      "selected_channel_request_mode": "images-sse",
+      "fallback_applied": false,
+      "download_check": "HTTP 200; image/webp decodes successfully",
+      "dimension_check": "pass",
+      "visual_check": "complete centered full-body pig mascot; natural proportions; no crop or squash observed"
+    },
+    "client_default_request": {
+      "model_omitted_from_command": true,
+      "resolved_model": "gpt-image-2-1k",
+      "returned_images": 1,
+      "actual_dimensions": "1024x1024",
+      "selected_channel_request_mode": "images-sse",
+      "fallback_applied": false,
+      "download_check": "HTTP 200; image/webp decodes successfully",
+      "dimension_check": "pass",
+      "visual_check": "complete centered full-body pig mascot; natural proportions; no crop or squash observed"
+    }
+  },
+  "cleanup": {
+    "explicit_request_artifact_delete_http": 200,
+    "explicit_request_metadata_after_delete_http": 404,
+    "explicit_request_content_after_delete_http": 404,
+    "client_default_artifact_delete_http": 200,
+    "client_default_metadata_after_delete_http": 404,
+    "client_default_content_after_delete_http": 404,
+    "local_temporary_files_cleaned": true
+  },
+  "observed_boundary": {
+    "images_non_stream": "not selected in this fresh smoke; earlier prompt-audit 503 remains a retryable upstream boundary",
+    "capabilities_advertised_default_model": "gpt-image-2",
+    "working_client_default_model": "gpt-image-2-1k",
+    "client_model_resolution": "the project Agent client resolves the omitted model to the configured working model",
+    "client_silent_fallback": false,
+    "formal_petdex_assets_changed": false,
+    "image_service_source_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service is usable through the default project Agent orchestration path. Both an explicit gpt-image-2-1k request and a command that omitted the model returned one complete 1024x1024 WebP through images-sse; strict dimensions, visual completeness, and artifact cleanup passed."
+}

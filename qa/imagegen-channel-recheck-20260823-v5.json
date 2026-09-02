@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T19:32:14.943Z",
+  "scope": "fresh local Docker image-generation smoke for the current custom model and fixed-size reference workflow",
+  "service": {
+    "reachable": true,
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "requested_dimensions": "1024x1024",
+    "output_format": "webp"
+  },
+  "request": {
+    "status": "pass",
+    "endpoint": "/api/agent/image-requests",
+    "transport": "agent_job_polling",
+    "route_mode": "server_orchestrated_job",
+    "actual_dimensions": "1024x1024",
+    "dimension_check": "pass",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "visual_check": "complete centered full-body original pig mascot reference; natural proportions; no crop or squash observed"
+  },
+  "cleanup": {
+    "artifact_delete": "HTTP 200",
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "result": "The current local Docker image-generation service is usable for a fresh 1024x1024 reference request through server orchestration. The temporary result was downloaded, dimension-checked, visually inspected, deleted, and confirmed unavailable afterward. No formal PetDex asset was changed."
+}

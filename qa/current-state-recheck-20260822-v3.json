@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T17:15:39Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release state after local custom-model recovery smoke",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 exit cleanly with reviewed minor warnings",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "Bash, ShellCheck, PowerShell parse, JSON and diff checks pass",
+    "three_directory_sha_parity": "8/8 pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260822-v1.json"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260822-v2.json",
+    "manifest": "HTTP 200, generated 2026-08-21T12:30:23.084Z, 4568 entries, eight current slugs present",
+    "metadata_and_image_contract": "8/8 HTTP 200, matching ids, actual spriteVersionNumber=2, 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/6 submitted and queued for admin review; not live",
+    "historical_duplicate": "hei-mao-2 remains record-only; no deletion or replacement attempted"
+  },
+  "hooks": {
+    "eof_behavior": "open stdin waits for EOF; closed stdin exits normally",
+    "evidence": "qa/petdex-hook-eof-recheck-20260822-v3.json",
+    "upstream_status_evidence": "qa/petdex-upstream-status-recheck-20260821-v2.json"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified due native capture boundary",
+    "evidence": "qa/codex-app-boundary-recheck-20260821-v1.json"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260822-v3.json",
+    "local_custom_model": "gpt-image-2-1k is listed by the local Docker model probe and accepted by the Agent path; both a 1024x1024 request and an auto-size request returned 1254x1254 WebP, and both temporary artifacts were deleted and verified absent",
+    "fixed_size_gate": "not passed because provider-controlled output is 1254x1254",
+    "deployed_service": "not tested in this recheck",
+    "formal_assets_changed": false
+  },
+  "result": "local package gates pass; local custom-model generation is reachable and produces a consumable WebP, but the provider-controlled 1254x1254 output does not satisfy the fixed 1024x1024 gate, six PetDex owned-slug edits are queued but not live, Hook EOF remains unresolved upstream, and full Codex App acceptance is unverified",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "additional visual-review method after the cross-role identity and temporal reviews",
+  "method": {
+    "name": "multi-background edge and alpha compositing stress",
+    "purpose": "detect transparent-edge color contamination, hidden opaque backing panels, and display-size silhouette changes that may be missed on a single neutral background",
+    "inputs": [
+      "dark background",
+      "light background",
+      "magenta background",
+      "cyan background",
+      "96x104 and 48x52 display renders"
+    ],
+    "selection": "alpha-aware edge and palette metrics rank candidates only; normal-size visual review is authoritative",
+    "artifacts": [
+      "qa/visual-review-alternative-20260831/background_stress_review.py",
+      "qa/visual-review-alternative-20260831/background-stress-review-20260831-v1.json",
+      "qa/visual-review-alternative-20260831/background-stress-candidates-v1.jpg",
+      "qa/visual-review-alternative-20260831/background-stress-manual-review-20260831-v1.json"
+    ]
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "cells": 584,
+    "candidate_panels": 32,
+    "formal_assets_modified": false
+  },
+  "result": {
+    "manual_verdict": "pass_with_existing_blockers",
+    "new_hard_failures": [],
+    "new_warnings": [],
+    "opaque_background_panels": "not_observed",
+    "visible_chroma_halo": "not_observed",
+    "display_size_silhouette_break": "not_observed",
+    "component_attachment_break": "not_observed",
+    "existing_blockers_unchanged": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ]
+  },
+  "limitations": [
+    "This is offline raster compositing evidence, not a live Codex App capture.",
+    "The method does not prove multi-monitor placement, bubble tracking, or platform-specific compositor behavior.",
+    "The authoritative despill report and v2 atlas validator remain the release gates for chroma and structural correctness."
+  ]
+}

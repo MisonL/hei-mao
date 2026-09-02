@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T19:07:00Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "fresh local eight-role v2 atlas, regression, installer, privacy and parity recheck after image-service smoke",
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "atlas_contract": {
+    "roles_passed": "8/8",
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WEBP",
+    "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "chroma_keys_used": "recorded per-role keys; no default key substituted"
+  },
+  "checks": {
+    "deterministic_atlas_validation": "8/8 pass",
+    "hatch_pet_tests": "28 passed, 37 dependency deprecation warnings only",
+    "installer_isolation": "8/8 isolated roles pass; unknown slug rejected; no installer source changed",
+    "three_directory_sha_parity": "16/16 files pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "json_parse": "pass",
+    "public_privacy_scan": "pass",
+    "git_diff_check": "pass",
+    "formal_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "Fresh local v2 atlas, regression, parity, parser and public-file checks pass for all eight roles; no formal asset or user process was modified."
+}

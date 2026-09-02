@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T11:02:00Z",
+  "scope": "read-only ChatGPT/Codex App window and screen-capture boundary probe",
+  "applications": {
+    "chatgpt_bundle_present": true,
+    "chatgpt_window_server_visible": true,
+    "chatgpt_window_count_window_server": 1,
+    "window_owner_observed": "ChatGPT",
+    "petdex_window_observed": false
+  },
+  "capture": {
+    "window_capture_attempted": true,
+    "window_capture_result": "capture_failed",
+    "display_capture_attempted": true,
+    "display_capture_result": "capture_failed",
+    "screen_recording_preflight": true,
+    "accessibility_window_query": "window_server_only; no app input sent"
+  },
+  "visual_gate": {
+    "refresh": "unverified",
+    "role_selection": "unverified",
+    "four_direction_switching": "unverified",
+    "animation_loop": "unverified",
+    "multirole_selection": "unverified",
+    "multidisplay": "unverified"
+  },
+  "process_safety": {
+    "codex_or_chatgpt_process_mutation": "none",
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "input_sent": false,
+    "settings_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "desktop_content_recorded": false
+  },
+  "result": "ChatGPT window is visible to WindowServer, but native capture failed; full Codex App pet refresh and visual acceptance remain unverified"
+}

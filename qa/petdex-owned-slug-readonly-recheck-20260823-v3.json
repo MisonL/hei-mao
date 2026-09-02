@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T06:04:55Z",
+  "scope": "official PetDex owned-slug read-only resolution through the installed CLI authorization path",
+  "cli": {
+    "version": "1.2.2",
+    "source_rule": "petdex edit resolves GET /api/pets/<slug> before any mutation"
+  },
+  "endpoint": {
+    "method": "GET",
+    "path_template": "/api/pets/<slug>",
+    "request_count": 8,
+    "http_200": "8/8",
+    "id_present": "8/8",
+    "status_approved": "8/8",
+    "display_name_present": "8/8"
+  },
+  "mutation_boundary": {
+    "edit_called": false,
+    "edit_presign_called": false,
+    "upload_called": false,
+    "submit_called": false,
+    "duplicate_created": false,
+    "probe_stopped_before_edit": true
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false,
+    "database_ids_recorded": false
+  },
+  "decision": "All eight current black-hair slugs resolve as approved through the official read-only endpoint using the installed CLI authorization path. The probe stopped before any edit, presign, upload or submit request."
+}

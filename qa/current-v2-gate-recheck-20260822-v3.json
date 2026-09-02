@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T21:48:25Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "fresh eight-role v2 atlas, continuity, regression, installer, parity and privacy recheck",
+  "runtime": {
+    "validator": "hatch-pet dedicated runtime Python 3.13.7 with Pillow 12.3.0",
+    "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py",
+    "hatch_pet_tests": {"command":"python -m unittest discover -s hatch-pet/tests -p test_*.py -q","passed":28,"failed":0,"errors":0,"result":"pass"}
+  },
+  "roles": {
+    "hei-mao": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":6,"alpha_hole_candidates":1},
+    "hei-mao-quality": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":5,"alpha_hole_candidates":0},
+    "hei-mao-butler": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":6,"alpha_hole_candidates":0},
+    "hei-mao-chef": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":6,"alpha_hole_candidates":0},
+    "hei-mao-delivery": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":6,"alpha_hole_candidates":3},
+    "hei-mao-foodie": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":9,"alpha_hole_candidates":1},
+    "hei-mao-fortune": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":4,"alpha_hole_candidates":0},
+    "hei-mao-traveler": {"atlas":"pass","continuity":"ok_with_reviewed_warnings","continuity_warnings":9,"alpha_hole_candidates":6}
+  },
+  "atlas_contract": {"roles_passed":8,"dimensions":"1536x2288","cell_dimensions":"192x208","format":"WEBP","mode":"RGBA","columns":8,"rows":11,"sprite_version_number":2,"validator_errors":0,"validator_warnings":0,"transparent_rgb_residue_pixels":0},
+  "checks": {
+    "deterministic_atlas_validation":"8/8 pass",
+    "direction_continuity":"8/8 no errors; 11 reviewed open-negative-space candidates remain documented",
+    "hatch_pet_tests":"28/28 pass",
+    "installer_checks":{"bash_syntax":"pass","shellcheck":"pass","powershell_parse":"pass"},
+    "three_directory_sha_parity":"8/8 roles; 16/16 pet.json and spritesheet.webp files match",
+    "json_validation":"pass",
+    "diff_check":"pass",
+    "privacy_scan":"pass; no local paths, private network addresses, credentials or process identifiers found in public text/config files"
+  },
+  "formal_assets_modified": false,
+  "result": "Fresh deterministic v2, continuity, regression, installer, parity and privacy checks pass for all eight roles; reviewed continuity warnings remain evidence, not hard failures."
+}

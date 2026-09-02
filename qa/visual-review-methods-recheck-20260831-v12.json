@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "cross-role identity and core-proportion visual recheck for all current v2 atlases",
+  "method": {
+    "name": "lower-anchor aligned core identity signature",
+    "purpose": "separate shared black-cat head/face and absolute upper-body scale from role-specific clothing and prop motion",
+    "steps": [
+      "align every frame to its lower-body anchor and shared bottom baseline",
+      "extract upper head mask, head/upper-body area ratios, vertical width profiles, and fixed-scale alpha/RGB features",
+      "compare all eight idle references against a cross-role neutral cohort",
+      "rank within-role frame deviations from that role's idle core and inspect a bounded normal-size candidate sheet",
+      "promote no issue from metrics alone; require visual confirmation under hatch-pet acceptance policy"
+    ]
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "frames": 584,
+    "neutral_references": 8,
+    "candidate_panels": 24,
+    "alpha_threshold": 16
+  },
+  "result": {
+    "manual_verdict": "pass_with_existing_blockers",
+    "new_hard_failures": [],
+    "new_warnings": [],
+    "formal_assets_modified": false,
+    "known_blockers": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "release_effect": "does not clear any existing blocker and does not make the current package visually release-ready"
+  },
+  "artifacts": [
+    "qa/visual-review-alternative-20260831/cross_role_identity_review.py",
+    "qa/visual-review-alternative-20260831/cross-role-identity-review-20260831-v1.json",
+    "qa/visual-review-alternative-20260831/cross-role-identity-candidates-v1.jpg",
+    "qa/visual-review-alternative-20260831/cross-role-identity-manual-review-20260831-v1.json"
+  ]
+}

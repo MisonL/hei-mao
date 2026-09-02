@@ -1,0 +1,819 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T03:39:28.697043+00:00",
+  "scope": "supplemental non-generative skeleton, topology, and temporal-residual review of all current v2 atlases; evidence only",
+  "method": {
+    "name": "downsampled alpha topology and skeleton residual review",
+    "steps": [
+      "threshold each 192x208 cell at alpha >= 16 and reduce to 96x104",
+      "measure connected components, enclosed holes, Euler characteristic, bounding-box fill, and skeleton occupancy",
+      "thin the reduced silhouette with Zhang-Suen and count endpoints and branchpoints",
+      "compare topology features within each row and calculate circular second-order temporal residuals",
+      "render yellow skeletons and red junction markers for the highest-ranked normal-size candidates",
+      "treat all outliers as review evidence; promote no hard failure without visual confirmation"
+    ],
+    "why_complementary": "Topology and skeleton changes can expose duplicated contours, unexpected internal seams, collapsed limbs, or pose-family switches even when bounding boxes and raw pixel residuals remain plausible.",
+    "analysis_size": [
+      96,
+      104
+    ]
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "frames": 592,
+    "circular_frame_transitions": 592,
+    "empty_used_cells": 112
+  },
+  "candidate_counts": {
+    "scored_frames": 592,
+    "visual_sheet_frames": 28,
+    "topology_or_skeleton_outliers": 71,
+    "known_blocker_candidates": 0,
+    "known_blocker_controls": 9
+  },
+  "top_candidates": [
+    {
+      "role": "hei-mao",
+      "row": "idle",
+      "frame": 0,
+      "score": 24.0,
+      "reasons": [
+        "skeleton_pixels_z=6.1",
+        "branchpoints_z=8.9",
+        "upper_skeleton_fraction_z=7.8",
+        "lower_skeleton_fraction_z=7.8"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 177,
+        "endpoints": 6,
+        "branchpoints": 45,
+        "skeleton_fraction": 0.03644224830142063,
+        "bbox_fill": 0.7142647058823529,
+        "upper_skeleton_fraction": 0.2598870056497175,
+        "lower_skeleton_fraction": 0.7401129943502824
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.6694
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "failed",
+      "frame": 3,
+      "score": 24.0,
+      "reasons": [
+        "skeleton_pixels_z=4.3",
+        "branchpoints_z=9.6",
+        "bbox_fill_z=10.3"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 189,
+        "endpoints": 5,
+        "branchpoints": 75,
+        "skeleton_fraction": 0.038422443586094736,
+        "bbox_fill": 0.7233823529411765,
+        "upper_skeleton_fraction": 0.5026455026455027,
+        "lower_skeleton_fraction": 0.4973544973544973
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.7355
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "idle",
+      "frame": 3,
+      "score": 24.0,
+      "reasons": [
+        "skeleton_pixels_z=8.1",
+        "branchpoints_z=5.7",
+        "upper_skeleton_fraction_z=8.4",
+        "lower_skeleton_fraction_z=8.4",
+        "temporal_topology_residual=3.35"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 245,
+        "endpoints": 4,
+        "branchpoints": 79,
+        "skeleton_fraction": 0.04040903842982022,
+        "bbox_fill": 0.6812359550561797,
+        "upper_skeleton_fraction": 0.35918367346938773,
+        "lower_skeleton_fraction": 0.6408163265306123
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 3.3516
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "jumping",
+      "frame": 3,
+      "score": 23.8409,
+      "reasons": [
+        "skeleton_pixels_z=5.1",
+        "branchpoints_z=5.3",
+        "upper_skeleton_fraction_z=8.3",
+        "lower_skeleton_fraction_z=8.3",
+        "temporal_topology_residual=3.23"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 223,
+        "endpoints": 3,
+        "branchpoints": 74,
+        "skeleton_fraction": 0.038931564245810055,
+        "bbox_fill": 0.6509090909090909,
+        "upper_skeleton_fraction": 0.31390134529147984,
+        "lower_skeleton_fraction": 0.6860986547085202
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 3.2261
+    },
+    {
+      "role": "hei-mao",
+      "row": "idle",
+      "frame": 6,
+      "score": 23.7566,
+      "reasons": [
+        "skeleton_pixels_z=5.8",
+        "branchpoints_z=8.0",
+        "upper_skeleton_fraction_z=7.9",
+        "lower_skeleton_fraction_z=7.9"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 178,
+        "endpoints": 6,
+        "branchpoints": 48,
+        "skeleton_fraction": 0.03683774834437086,
+        "bbox_fill": 0.7105882352941176,
+        "upper_skeleton_fraction": 0.25842696629213485,
+        "lower_skeleton_fraction": 0.7415730337078652
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.4769
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "idle",
+      "frame": 4,
+      "score": 23.2155,
+      "reasons": [
+        "branchpoints_z=10.7",
+        "upper_skeleton_fraction_z=4.7",
+        "lower_skeleton_fraction_z=4.7"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 88,
+        "endpoints": 3,
+        "branchpoints": 22,
+        "skeleton_fraction": 0.022426095820591234,
+        "bbox_fill": 0.7546153846153846,
+        "upper_skeleton_fraction": 0.375,
+        "lower_skeleton_fraction": 0.625
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.6839
+    },
+    {
+      "role": "hei-mao",
+      "row": "running",
+      "frame": 3,
+      "score": 20.1975,
+      "reasons": [
+        "upper_skeleton_fraction_z=10.6",
+        "lower_skeleton_fraction_z=10.6",
+        "temporal_topology_residual=3.13"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 145,
+        "endpoints": 5,
+        "branchpoints": 43,
+        "skeleton_fraction": 0.03125673636559603,
+        "bbox_fill": 0.786271186440678,
+        "upper_skeleton_fraction": 0.35172413793103446,
+        "lower_skeleton_fraction": 0.6482758620689655
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 3.1311
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "review",
+      "frame": 3,
+      "score": 16.7969,
+      "reasons": [
+        "branchpoints_z=7.2"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 183,
+        "endpoints": 5,
+        "branchpoints": 47,
+        "skeleton_fraction": 0.03722538649308381,
+        "bbox_fill": 0.6827777777777778,
+        "upper_skeleton_fraction": 0.22950819672131148,
+        "lower_skeleton_fraction": 0.7704918032786885
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.8975
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "running-left",
+      "frame": 6,
+      "score": 15.4822,
+      "reasons": [
+        "skeleton_pixels_z=6.1",
+        "upper_skeleton_fraction_z=4.8",
+        "lower_skeleton_fraction_z=4.8"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 167,
+        "endpoints": 5,
+        "branchpoints": 74,
+        "skeleton_fraction": 0.03900046707146193,
+        "bbox_fill": 0.6587692307692308,
+        "upper_skeleton_fraction": 0.16167664670658682,
+        "lower_skeleton_fraction": 0.8383233532934131
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.4334
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "review",
+      "frame": 1,
+      "score": 15.2081,
+      "reasons": [
+        "combined-skeleton-topology-distance"
+      ],
+      "metrics": {
+        "components": 3,
+        "holes": 0,
+        "euler": 3,
+        "skeleton_pixels": 214,
+        "endpoints": 9,
+        "branchpoints": 58,
+        "skeleton_fraction": 0.033801927025746324,
+        "bbox_fill": 0.7399485741000468,
+        "upper_skeleton_fraction": 0.17289719626168223,
+        "lower_skeleton_fraction": 0.8271028037383178
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.4956
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "waiting",
+      "frame": 5,
+      "score": 15.1463,
+      "reasons": [
+        "upper_skeleton_fraction_z=4.6",
+        "lower_skeleton_fraction_z=4.6"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 146,
+        "endpoints": 4,
+        "branchpoints": 29,
+        "skeleton_fraction": 0.028808208366219414,
+        "bbox_fill": 0.7138028169014085,
+        "upper_skeleton_fraction": 0.273972602739726,
+        "lower_skeleton_fraction": 0.726027397260274
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.0489
+    },
+    {
+      "role": "hei-mao",
+      "row": "running-left",
+      "frame": 4,
+      "score": 14.2404,
+      "reasons": [
+        "upper_skeleton_fraction_z=5.5",
+        "lower_skeleton_fraction_z=5.5"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 127,
+        "endpoints": 4,
+        "branchpoints": 38,
+        "skeleton_fraction": 0.033081531648866895,
+        "bbox_fill": 0.6855357142857142,
+        "upper_skeleton_fraction": 0.1889763779527559,
+        "lower_skeleton_fraction": 0.8110236220472441
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.9236
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "jumping",
+      "frame": 1,
+      "score": 14.1422,
+      "reasons": [
+        "branchpoints_z=4.5"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 237,
+        "endpoints": 4,
+        "branchpoints": 80,
+        "skeleton_fraction": 0.04002026342451875,
+        "bbox_fill": 0.670516304347826,
+        "upper_skeleton_fraction": 0.5232067510548524,
+        "lower_skeleton_fraction": 0.4767932489451477
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.7461
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "running",
+      "frame": 3,
+      "score": 13.7206,
+      "reasons": [
+        "branchpoints_z=5.5"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 143,
+        "endpoints": 4,
+        "branchpoints": 41,
+        "skeleton_fraction": 0.029041429731925264,
+        "bbox_fill": 0.7349253731343284,
+        "upper_skeleton_fraction": 0.5104895104895105,
+        "lower_skeleton_fraction": 0.48951048951048953
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.5574
+    },
+    {
+      "role": "hei-mao",
+      "row": "running-left",
+      "frame": 3,
+      "score": 13.716,
+      "reasons": [
+        "upper_skeleton_fraction_z=7.6",
+        "lower_skeleton_fraction_z=7.6"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 194,
+        "endpoints": 3,
+        "branchpoints": 92,
+        "skeleton_fraction": 0.05143160127253447,
+        "bbox_fill": 0.6286666666666667,
+        "upper_skeleton_fraction": 0.41237113402061853,
+        "lower_skeleton_fraction": 0.5876288659793815
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.9192
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "look-row-10",
+      "frame": 0,
+      "score": 13.6205,
+      "reasons": [
+        "skeleton_pixels_z=6.0",
+        "branchpoints_z=5.1"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 223,
+        "endpoints": 6,
+        "branchpoints": 119,
+        "skeleton_fraction": 0.036171938361719384,
+        "bbox_fill": 0.7374401913875598,
+        "upper_skeleton_fraction": 0.242152466367713,
+        "lower_skeleton_fraction": 0.757847533632287
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.5009
+    },
+    {
+      "role": "hei-mao",
+      "row": "waiting",
+      "frame": 5,
+      "score": 13.131,
+      "reasons": [
+        "skeleton_pixels_z=6.1",
+        "bbox_fill_z=4.4"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 182,
+        "endpoints": 5,
+        "branchpoints": 62,
+        "skeleton_fraction": 0.039816232771822356,
+        "bbox_fill": 0.7372580645161291,
+        "upper_skeleton_fraction": 0.4010989010989011,
+        "lower_skeleton_fraction": 0.5989010989010989
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.4507
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "running",
+      "frame": 5,
+      "score": 13.0631,
+      "reasons": [
+        "branchpoints_z=8.1"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 269,
+        "endpoints": 5,
+        "branchpoints": 98,
+        "skeleton_fraction": 0.04712683952347582,
+        "bbox_fill": 0.6795238095238095,
+        "upper_skeleton_fraction": 0.44981412639405205,
+        "lower_skeleton_fraction": 0.550185873605948
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.1289
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "frame": 4,
+      "score": 12.9333,
+      "reasons": [
+        "upper_skeleton_fraction_z=6.3",
+        "lower_skeleton_fraction_z=6.3"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 157,
+        "endpoints": 5,
+        "branchpoints": 37,
+        "skeleton_fraction": 0.03582021446497832,
+        "bbox_fill": 0.6689560439560439,
+        "upper_skeleton_fraction": 0.12101910828025478,
+        "lower_skeleton_fraction": 0.8789808917197452
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.6297
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "running-left",
+      "frame": 6,
+      "score": 12.8969,
+      "reasons": [
+        "combined-skeleton-topology-distance"
+      ],
+      "metrics": {
+        "components": 4,
+        "holes": 0,
+        "euler": 4,
+        "skeleton_pixels": 172,
+        "endpoints": 10,
+        "branchpoints": 42,
+        "skeleton_fraction": 0.043933588761174966,
+        "bbox_fill": 0.5931818181818181,
+        "upper_skeleton_fraction": 0.36046511627906974,
+        "lower_skeleton_fraction": 0.6395348837209303
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.4887
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "waiting",
+      "frame": 0,
+      "score": 12.8898,
+      "reasons": [
+        "combined-skeleton-topology-distance"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 1,
+        "euler": 0,
+        "skeleton_pixels": 324,
+        "endpoints": 5,
+        "branchpoints": 146,
+        "skeleton_fraction": 0.06057206954570948,
+        "bbox_fill": 0.607840909090909,
+        "upper_skeleton_fraction": 0.36419753086419754,
+        "lower_skeleton_fraction": 0.6358024691358025
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.8217
+    },
+    {
+      "role": "hei-mao",
+      "row": "running-left",
+      "frame": 1,
+      "score": 12.8107,
+      "reasons": [
+        "upper_skeleton_fraction_z=6.3",
+        "lower_skeleton_fraction_z=6.3"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 130,
+        "endpoints": 4,
+        "branchpoints": 37,
+        "skeleton_fraction": 0.033282130056323606,
+        "bbox_fill": 0.651,
+        "upper_skeleton_fraction": 0.17692307692307693,
+        "lower_skeleton_fraction": 0.823076923076923
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.0608
+    },
+    {
+      "role": "hei-mao-butler",
+      "row": "look-row-10",
+      "frame": 4,
+      "score": 12.5872,
+      "reasons": [
+        "skeleton_pixels_z=4.9",
+        "upper_skeleton_fraction_z=4.9",
+        "lower_skeleton_fraction_z=4.9"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 105,
+        "endpoints": 3,
+        "branchpoints": 15,
+        "skeleton_fraction": 0.03560528992878942,
+        "bbox_fill": 0.6839053803339518,
+        "upper_skeleton_fraction": 0.45714285714285713,
+        "lower_skeleton_fraction": 0.5428571428571428
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.8091
+    },
+    {
+      "role": "hei-mao",
+      "row": "failed",
+      "frame": 7,
+      "score": 12.057,
+      "reasons": [
+        "skeleton_pixels_z=10.8"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 182,
+        "endpoints": 4,
+        "branchpoints": 71,
+        "skeleton_fraction": 0.04403580933946286,
+        "bbox_fill": 0.7653703703703704,
+        "upper_skeleton_fraction": 0.37362637362637363,
+        "lower_skeleton_fraction": 0.6263736263736264
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 2.0031
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "failed",
+      "frame": 0,
+      "score": 11.822,
+      "reasons": [
+        "combined-skeleton-topology-distance"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 1,
+        "euler": 0,
+        "skeleton_pixels": 258,
+        "endpoints": 3,
+        "branchpoints": 111,
+        "skeleton_fraction": 0.060549166862238914,
+        "bbox_fill": 0.736942234520927,
+        "upper_skeleton_fraction": 0.44573643410852715,
+        "lower_skeleton_fraction": 0.5542635658914729
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.8839
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "frame": 0,
+      "score": 11.7359,
+      "reasons": [
+        "skeleton_pixels_z=6.8"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 182,
+        "endpoints": 6,
+        "branchpoints": 57,
+        "skeleton_fraction": 0.03995609220636663,
+        "bbox_fill": 0.6798507462686567,
+        "upper_skeleton_fraction": 0.35714285714285715,
+        "lower_skeleton_fraction": 0.6428571428571429
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.2618
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "review",
+      "frame": 0,
+      "score": 11.7193,
+      "reasons": [
+        "upper_skeleton_fraction_z=5.8",
+        "lower_skeleton_fraction_z=5.8"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 242,
+        "endpoints": 7,
+        "branchpoints": 101,
+        "skeleton_fraction": 0.043175735950044605,
+        "bbox_fill": 0.6517441860465116,
+        "upper_skeleton_fraction": 0.3760330578512397,
+        "lower_skeleton_fraction": 0.6239669421487604
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.6278
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "review",
+      "frame": 5,
+      "score": 11.6707,
+      "reasons": [
+        "skeleton_pixels_z=4.2"
+      ],
+      "metrics": {
+        "components": 1,
+        "holes": 0,
+        "euler": 1,
+        "skeleton_pixels": 262,
+        "endpoints": 5,
+        "branchpoints": 93,
+        "skeleton_fraction": 0.05250501002004008,
+        "bbox_fill": 0.6743243243243243,
+        "upper_skeleton_fraction": 0.4541984732824427,
+        "lower_skeleton_fraction": 0.5458015267175572
+      },
+      "analysis_size": [
+        96,
+        104
+      ],
+      "temporal_topology_residual": 1.4318
+    }
+  ],
+  "known_blocker_candidates": [],
+  "visual_review": {
+    "status": "pass_with_four_existing_blockers",
+    "new_hard_failures": [],
+    "confirmed_existing_blockers": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+      "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+    ],
+    "note": "Skeleton/topology candidate sheet reviewed at normal display size; no new hard failure beyond the four existing blockers."
+  },
+  "formal_assets_modified": false,
+  "artifacts": [
+    "topology-skeleton-candidates-v1.jpg",
+    "topology-skeleton-review-20260831-v1.json"
+  ],
+  "limitations": [
+    "The topology is measured on a 96x104 reduced alpha mask, so very thin appendages can merge or disappear and require visual confirmation.",
+    "Skeleton branch counts are sensitive to antialiasing and intentional gestures; they never auto-fail a row.",
+    "This is an asset-only review and does not replace live Codex App, browser GPU, multi-screen, or bubble-tracking validation."
+  ]
+}

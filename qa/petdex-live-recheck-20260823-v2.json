@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T19:11:00Z",
+  "scope": "fresh read-only PetDex manifest and current-role resource parity recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-22T18:17:35.766Z",
+    "entry_count": 4579,
+    "current_slugs_present": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "index_boundary": "Several current entries still expose pending asset URLs or index spriteVersionNumber=1; actual resources were downloaded and checked below."
+  },
+  "resource_validation": {
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "metadata_id_matches_slug": "8/8",
+    "metadata_v2": "8/8",
+    "spritesheet_contract": "8/8 1536x2288 image/webp",
+    "public_sprite_sha_match": "8/8",
+    "duplicate_submission_created": false,
+    "mutation_performed": false
+  },
+  "index_observations": {
+    "pending_asset_urls": "6/8",
+    "index_sprite_version_2": "3/8",
+    "actual_metadata_sprite_version_2": "8/8"
+  },
+  "roles": {
+    "hei-mao": {"sprite_sha_match": true, "pending_asset_url": true},
+    "hei-mao-quality": {"sprite_sha_match": true, "pending_asset_url": true},
+    "hei-mao-butler": {"sprite_sha_match": true, "pending_asset_url": false},
+    "hei-mao-chef": {"sprite_sha_match": true, "pending_asset_url": false},
+    "hei-mao-delivery": {"sprite_sha_match": true, "pending_asset_url": true},
+    "hei-mao-foodie": {"sprite_sha_match": true, "pending_asset_url": true},
+    "hei-mao-fortune": {"sprite_sha_match": true, "pending_asset_url": true},
+    "hei-mao-traveler": {"sprite_sha_match": true, "pending_asset_url": true}
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "decision": "All eight current PetDex resources remain publicly downloadable and their actual metadata, dimensions and spritesheet SHA match the repository. The manifest index still exposes pending/version-lagging fields for several entries, so approval status is not inferred from the index."
+}

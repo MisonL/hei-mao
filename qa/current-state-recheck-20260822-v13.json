@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T20:45:51.743Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release state after the latest local custom-model request",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 exit cleanly with 11 reviewed open-negative-space candidates and no hard errors",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "Bash, ShellCheck and PowerShell parse pass",
+    "three_directory_sha_parity": "8/8 roles; 16/16 files pass",
+    "json_diff_privacy_checks": "pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260822-v2.json"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260822-v5.json",
+    "manifest": "HTTP 200, generated 2026-08-21T18:25:08.433Z, 4568 entries, eight current slugs present",
+    "metadata_and_image_contract": "8/8 HTTP 200, matching ids, actual metadata v2, 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/6 submitted and queued for admin review; not live",
+    "historical_duplicate": "hei-mao-2 remains record-only; no deletion or replacement attempted"
+  },
+  "hooks": {
+    "eof_behavior": "open stdin waits for EOF; closed stdin exits normally",
+    "evidence": "qa/petdex-hook-eof-recheck-20260822-v4.json",
+    "upstream_status_evidence": "qa/petdex-upstream-status-recheck-20260822-v1.json"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified due native capture boundary",
+    "evidence": "qa/codex-app-boundary-recheck-20260821-v1.json"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260822-v11.json",
+    "model_directory": "custom model was accepted by the live local orchestration request",
+    "local_custom_model": "gpt-image-2-1k generated a consumable WebP through the local Docker channel; the fresh 1024x1024 request returned 1254x1254",
+    "fixed_size_acceptance": "not passed because provider-controlled output is 1254x1254",
+    "artifact_cleanup": "temporary artifact deleted; metadata and content both returned 404",
+    "deployed_service": "not tested in this recheck",
+    "formal_assets_changed": false
+  },
+  "result": "local package gates pass; PetDex public contracts pass but only 2/8 public spritesheets match and six owned-slug edits remain queued; custom-model generation is reachable and succeeds through the local Docker channel but the fixed 1024x1024 size gate still fails; Hook EOF remains unresolved upstream and full Codex App acceptance is unverified",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  }
+}

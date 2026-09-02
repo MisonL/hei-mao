@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T01:06:49Z",
+  "scope": "fresh authorized local Docker generation recheck with the custom model",
+  "service": {
+    "reachable": true,
+    "model": "gpt-image-2-1k",
+    "generation": {
+      "request_mode": "images-non-stream",
+      "route": "server_orchestrated_job_polling",
+      "requested_dimensions": "1024x1024",
+      "requested_image_count": 1,
+      "returned_images": 2,
+      "actual_dimensions": [
+        "1024x1024",
+        "1024x1024"
+      ],
+      "output_format": "webp",
+      "download_http": [
+        200,
+        200
+      ],
+      "dimension_check": "pass",
+      "visual_check": "both outputs are readable complete centered full-body original mascot images with natural upright proportions, visible feet, and no crop or squash",
+      "image_count_contract": "request n=1 returned two complete images; no client-side truncation was applied"
+    }
+  },
+  "cleanup": {
+    "artifact_delete_http": [
+      200,
+      200
+    ],
+    "metadata_after_delete": [
+      404,
+      404
+    ],
+    "content_after_delete": [
+      404,
+      404
+    ],
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service is usable for a fresh 1024x1024 custom-model request and returned two readable WebP outputs with strict dimensions and visual checks passing. The upstream returned two images despite n=1; this is an observed count-contract boundary, not a client truncation failure. Both temporary artifacts were deleted and confirmed unavailable. No formal PetDex asset was changed."
+}

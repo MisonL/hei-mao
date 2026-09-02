@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T03:45:50Z",
+  "scope": "authorized Quality row-9 image-channel recovery recheck",
+  "service_checks": {
+    "local_docker": {
+      "base_url": "local Docker service",
+      "container_health": "pass",
+      "agent_contract": "pass",
+      "channel": "lzjapi-image",
+      "channel_health": "healthy",
+      "configured_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "row_9_edit": {
+        "transport": "agent_json",
+        "request_mode": "images-non-stream",
+        "status": "rejected_after_upstream",
+        "error_code": "validation_error",
+        "upstream_status": 400,
+        "artifact_count": 0
+      },
+      "doctor_real_smoke": {
+        "orchestration_generate_1k": "failed_upstream_unavailable_502_cross_origin_artifact_url",
+        "agent_generate_1k": "failed_configuration_error_after_channel_cooldown",
+        "agent_edit_1k": "failed_validation_error_400_in_images_sse_fallback",
+        "page_sse_edit_2k": "failed_configuration_error_after_channel_cooldown",
+        "responses_paths": "not_enabled"
+      }
+    },
+    "deployed_service": {
+      "base_url": "https://misonl-visual-journal.hf.space",
+      "channel": "jisuanyun-gpt-image",
+      "channel_health": "healthy",
+      "row_9_edit": {
+        "transport": "agent_json",
+        "request_mode": "images-non-stream",
+        "status": "rejected_after_upstream",
+        "error_code": "upstream_auth_failed",
+        "upstream_status": 403,
+        "artifact_count": 0
+      }
+    }
+  },
+  "quality_row_9": {
+    "role": "hei-mao-quality",
+    "candidate_generated": false,
+    "formal_assets_modified": false,
+    "formal_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "keep_formal_quality_assets_unchanged_until_a_valid_authenticated_channel_returns_a_real_candidate_artifact"
+}

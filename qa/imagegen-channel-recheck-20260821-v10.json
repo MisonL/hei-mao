@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T11:58:32Z",
+  "scope": "authorized local Docker image-channel smoke and request-level reconciliation after user-reported backend success records",
+  "service_checks": {
+    "local_docker": {
+      "container_health": "pass",
+      "agent_contract": "pass",
+      "channel_health_snapshot": "healthy",
+      "channel_id": "meinianda-image",
+      "configured_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "attempt": {
+        "name": "fresh_orchestration_gpt_image_2_generate",
+        "route": "server_orchestrated_job_polling",
+        "model": "gpt-image-2",
+        "selected_request_mode": "images-non-stream",
+        "status": "failed_upstream_unavailable",
+        "upstream_status": 503,
+        "error_code": "upstream_unavailable",
+        "error_message_class": "no_available_channel_for_model",
+        "artifact_count": 0,
+        "formal_assets_changed": false
+      },
+      "request_reconciliation": {
+        "agent_state_found": true,
+        "agent_state_status": "failed",
+        "agent_state_artifact_count": 0,
+        "agent_state_error_code": "upstream_unavailable",
+        "agent_state_upstream_status": 503,
+        "page_request_log_match_count": 0,
+        "local_request_correlated_with_backend_success_log": false
+      }
+    },
+    "external_observation_boundary": "The user-provided backend screenshot shows successful gpt-image-2 consumption records, but it contains no local Agent request, request state, or artifact correlation. It is evidence that the account had other successful records, not evidence that this local request succeeded."
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "keep_formal_quality_assets_unchanged; local Docker and Agent contracts are healthy, but the fresh reconciled request returned upstream 503 with no artifact. Do not treat unrelated backend success records as local success."
+}

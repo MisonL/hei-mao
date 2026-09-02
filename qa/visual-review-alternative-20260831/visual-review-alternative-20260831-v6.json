@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "supplemental non-generative visual recheck using temporal kinematics, frame-order ghosting, and downsampled alpha topology across all current v2 atlases",
+  "method": {
+    "name": "temporal kinematic residual and edge-ghost review",
+    "steps": [
+      "segment each 192x208 cell at alpha >= 16",
+      "measure area, centroid, bounding-box width/height, bottom baseline, and downsampled alpha component count",
+      "compute first/second-order interpolation residuals and local baseline/shape changes across every row",
+      "register adjacent masks with the measured centroid/baseline delta plus a bounded local search, then compute silhouette IoU",
+      "render previous/current/next alpha edges as cyan/white/magenta ghosts over the current sprite for normal-size review",
+      "treat all metric outliers as candidates only; promote a hard failure only after visual inspection and existing hatch-pet policy"
+    ],
+    "why_complementary": "This targets temporal jerk, single-frame scale/baseline pops, pose-family switches, and frame-order reversals that can survive per-frame atlas validators and static contact sheets."
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "frames": 584,
+    "transitions": 496,
+    "empty_used_cells": 0
+  },
+  "candidate_counts": {
+    "visual_sheet_candidates": 28,
+    "review_candidate_frames": 179,
+    "scored_frames": 584
+  },
+  "visual_review": {
+    "normal_size_overlay_review": "pass_with_four_existing_blockers",
+    "new_candidate_promotions": 0,
+    "confirmed_existing_blockers": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting stacked upper contours",
+      "hei-mao-delivery/failed repeated head and pose-family switch"
+    ]
+  },
+  "top_row_candidates": [
+    {
+      "role": "hei-mao-fortune",
+      "row": "idle",
+      "max_frame_score": 27.6343,
+      "height_range": [
+        198,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "look-row-10",
+      "max_frame_score": 24.5618,
+      "height_range": [
+        195,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "look-row-9",
+      "max_frame_score": 24.4025,
+      "height_range": [
+        170,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "max_frame_score": 22.877,
+      "height_range": [
+        164,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao",
+      "row": "look-row-9",
+      "max_frame_score": 20.3744,
+      "height_range": [
+        172,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "look-row-9",
+      "max_frame_score": 20.3518,
+      "height_range": [
+        158,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "max_frame_score": 19.7528,
+      "height_range": [
+        165,
+        194
+      ],
+      "bottom_range": [
+        199,
+        201
+      ],
+      "component_values": [
+        1,
+        3
+      ]
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "waiting",
+      "max_frame_score": 19.6771,
+      "height_range": [
+        198,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "failed",
+      "max_frame_score": 19.2,
+      "height_range": [
+        198,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-fortune",
+      "row": "waving",
+      "max_frame_score": 18.3031,
+      "height_range": [
+        190,
+        198
+      ],
+      "bottom_range": [
+        198,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-butler",
+      "row": "waiting",
+      "max_frame_score": 18.0264,
+      "height_range": [
+        198,
+        198
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "jumping",
+      "max_frame_score": 17.657,
+      "height_range": [
+        189,
+        198
+      ],
+      "bottom_range": [
+        197,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "failed",
+      "max_frame_score": 17.3761,
+      "height_range": [
+        160,
+        166
+      ],
+      "bottom_range": [
+        198,
+        200
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "look-row-9",
+      "max_frame_score": 16.8529,
+      "height_range": [
+        179,
+        194
+      ],
+      "bottom_range": [
+        200,
+        200
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao",
+      "row": "jumping",
+      "max_frame_score": 16.8374,
+      "height_range": [
+        166,
+        194
+      ],
+      "bottom_range": [
+        199,
+        201
+      ],
+      "component_values": [
+        1
+      ]
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "look-row-10",
+      "max_frame_score": 16.5744,
+      "height_range": [
+        182,
+        192
+      ],
+      "bottom_range": [
+        202,
+        202
+      ],
+      "component_values": [
+        1
+      ]
+    }
+  ],
+  "known_failures_reproduced": [
+    {
+      "role": "hei-mao",
+      "row": "jumping",
+      "frame": 2,
+      "score": 16.8374,
+      "height_range": [
+        166,
+        194
+      ],
+      "area_range": [
+        13626,
+        18548
+      ],
+      "evidence": "targeted candidate remains an upper-contour/temporal outlier; visual overlay was reviewed with previous/current/next edge ghosts"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "frame": 4,
+      "score": 5.4094,
+      "height_range": [
+        164,
+        198
+      ],
+      "area_range": [
+        16956,
+        23182
+      ],
+      "evidence": "targeted candidate remains an upper-contour/temporal outlier; visual overlay was reviewed with previous/current/next edge ghosts"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "frame": 5,
+      "score": 2.2904,
+      "height_range": [
+        164,
+        198
+      ],
+      "area_range": [
+        16956,
+        23182
+      ],
+      "evidence": "targeted candidate remains an upper-contour/temporal outlier; visual overlay was reviewed with previous/current/next edge ghosts"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "frame": 2,
+      "score": 3.0491,
+      "height_range": [
+        168,
+        182
+      ],
+      "area_range": [
+        21908,
+        25494
+      ],
+      "evidence": "targeted candidate remains an upper-contour/temporal outlier; visual overlay was reviewed with previous/current/next edge ghosts"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "frame": 3,
+      "score": 3.4787,
+      "height_range": [
+        168,
+        182
+      ],
+      "area_range": [
+        21908,
+        25494
+      ],
+      "evidence": "targeted candidate remains an upper-contour/temporal outlier; visual overlay was reviewed with previous/current/next edge ghosts"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "frame": 2,
+      "score": 19.7528,
+      "height_range": [
+        165,
+        194
+      ],
+      "area_range": [
+        14290,
+        19696
+      ],
+      "evidence": "targeted candidate remains an upper-contour/temporal outlier; visual overlay was reviewed with previous/current/next edge ghosts"
+    }
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "confirmed_existing_hard_failures": 4,
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; complete-row regeneration remains required for the four already confirmed failures"
+  },
+  "limitations": [
+    "This is a raster/alpha review and not live Codex App window capture.",
+    "The downsampled component count is a candidate signal and may vary with thin props or open negative space.",
+    "The local registration search is intentionally bounded; it does not replace optical-flow or human playback review.",
+    "Metric outliers in gesture, running, and look-direction rows remain review evidence rather than automatic regeneration triggers."
+  ],
+  "artifacts": [
+    "temporal-kinematic-topology-sheet.jpg",
+    "visual-review-alternative-20260831-v6.json"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T16:50:51.182Z",
+  "scope": "fresh read-only PetDex manifest and current-role resource parity recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-22T12:22:03.779Z",
+    "entry_count": 4578,
+    "current_slugs_present": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2 remains record-only"
+  },
+  "resource_validation": {
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "metadata_v2": "8/8",
+    "spritesheet_contract": "8/8 1536x2288 image/webp",
+    "public_sprite_sha_match": "8/8",
+    "duplicate_submission_created": false,
+    "online_switch_confirmed": true
+  },
+  "roles": {
+    "hei-mao": {"sprite_sha_match": true},
+    "hei-mao-quality": {"sprite_sha_match": true},
+    "hei-mao-butler": {"sprite_sha_match": true},
+    "hei-mao-chef": {"sprite_sha_match": true},
+    "hei-mao-delivery": {"sprite_sha_match": true},
+    "hei-mao-foodie": {"sprite_sha_match": true},
+    "hei-mao-fortune": {"sprite_sha_match": true},
+    "hei-mao-traveler": {"sprite_sha_match": true}
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false
+  },
+  "decision": "All eight current PetDex resources remain publicly downloadable, satisfy the v2 image contract, and match the repository spritesheet SHA. No mutation was performed. Historical hei-mao-2 remains record-only."
+}

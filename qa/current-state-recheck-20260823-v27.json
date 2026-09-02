@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T05:16:51Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex state after fresh Hook EOF wrapper and public upstream status recheck",
+  "decision": "Eight-role local assets, public PetDex resources and local installation parity remain verified. The local Hook wrapper exits under both stdin lifecycles, while the upstream native EOF behavior remains unresolved. Full Codex App visual acceptance remains unverified.",
+  "local_atlas_recheck": {
+    "evidence": "qa/current-v2-gate-recheck-20260823-v8.json",
+    "roles": "8/8",
+    "dimensions": "1536x2288",
+    "grid": "8x11 cells of 192x208",
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "formal_assets_modified": false
+  },
+  "petdex": {
+    "manifest_evidence": "qa/petdex-live-recheck-20260823-v6.json",
+    "owned_slug_evidence": "qa/petdex-owned-slug-readonly-recheck-20260823-v2.json",
+    "current_slugs_present": "8/8",
+    "owned_status_approved": "8/8",
+    "actual_metadata_v2": "8/8",
+    "actual_spritesheet_contract": "8/8 image/webp 1536x2288 RGBA",
+    "public_sprite_sha_match": "8/8",
+    "historical_hei_mao_2": "recorded only; metadata id mismatch retained without mutation",
+    "mutation_performed": false
+  },
+  "hooks": {
+    "local_evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v2.json",
+    "upstream_evidence": "qa/petdex-upstream-status-recheck-20260823-v9.json",
+    "closed_stdin": "5/5 events natural exit with code 0",
+    "open_stdin": "5/5 events natural exit within 423-445ms",
+    "native_runner_eof_boundary": "still waits for EOF after a complete payload",
+    "issue_689": "open",
+    "pr_710": "open draft, not merged, does not claim to resolve #689",
+    "upstream_fix_claimed": false,
+    "existing_processes_touched": false
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v26.json",
+    "service_status": "usable through local Docker default orchestration",
+    "configured_model": "gpt-image-2-1k",
+    "formal_assets_changed": false
+  },
+  "desktop_boundary": {
+    "desktop_version": "0.8.0",
+    "partial_desktop_role_switch_and_multidisplay_evidence": true,
+    "codex_app_full_visual_acceptance": "unverified",
+    "unverified_cases": [
+      "full eight-role refresh in the real Codex App",
+      "per-role restore and multi-role selection in the real Codex App",
+      "four-direction switching and animation loop acceptance in the real Codex App"
+    ],
+    "process_safety": "no Codex, ChatGPT or PetDex process was stopped, restarted or signaled"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "user_identity_recorded": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T08:32:16Z",
+  "scope": "Codex hook trust hash algorithm and local configuration recheck",
+  "codex": {
+    "cli_version": "0.149.1",
+    "algorithm_source_commit": "28327355b861ab6cc76b01c7248663eb1be440cf",
+    "algorithm": "normalized hook identity to canonical JSON then SHA-256",
+    "raw_command_sha_is_authoritative": false
+  },
+  "configuration": {
+    "hooks_enabled": true,
+    "events_checked": 5,
+    "trusted_hash_matches": "5/5",
+    "trust_status": "trusted",
+    "configuration_mutated": false
+  },
+  "events": [
+    "user_prompt_submit",
+    "pre_tool_use",
+    "post_tool_use",
+    "permission_request",
+    "stop"
+  ],
+  "process_safety": {
+    "existing_codex_chatgpt_or_petdex_processes_touched": false,
+    "processes_stopped": false,
+    "processes_restarted": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "hook_command_text_recorded": false
+  },
+  "result": "All five local trusted_hash entries match the current Codex normalized hook identity algorithm. The apparent mismatch from comparing raw command text hashes is not a configuration defect; no local hook configuration change is required."
+}

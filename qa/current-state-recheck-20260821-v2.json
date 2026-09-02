@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T04:30:22Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "post-image-service-recovery and PetDex live recheck snapshot",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP",
+    "hatch_pet_tests": "28 passed",
+    "three_directory_sha_parity": "8/8",
+    "formal_assets_modified": false
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260821-v2.json",
+    "local_docker": "health and contract checks pass, but row-9 edit attempts return upstream 400 validation_error and 1k generate returns upstream 502 cross-origin artifact URL",
+    "deployed_service": "health check passes, but Quality row-9 edit returns upstream 403 authentication error",
+    "result": "no image or artifact",
+    "formal_assets_changed": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260821-v1.json",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates_pending_review": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2 remains record-only; metadata id is hei-mao"
+  },
+  "boundaries": {
+    "full_codex_app_refresh_role_direction_animation_loop_acceptance": "unverified",
+    "hook_eof": "open stdin still waits for EOF; issue 689 remains open",
+    "petdex_owned_slug_review": "six updates remain pending review"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "local release gates and formal assets remain unchanged; PetDex metadata is current but six public sprite SHA updates remain pending review, and image generation produced no artifact"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T12:15:00Z",
+  "scope": "current local visual QA, upstream PetDex status, and release-boundary state",
+  "source_commit": "679b093",
+  "previous_snapshot": "qa/current-state-recheck-20260831-v7.json",
+  "result": "The state-intent review remains clear of new hard failures. The eight complete-row blockers and image-generation upstream connection failure remain; PetDex upstream status is refreshed and unchanged; Codex App runtime validation still requires user action.",
+  "deterministic_v2": {
+    "pets": 8,
+    "passed": 8,
+    "dimensions": "1536x2288",
+    "format": "RGBA WebP",
+    "errors": 0,
+    "warnings": 0,
+    "transparent_rgb_residue": 0,
+    "evidence": "qa/v2-contract-recheck-20260831-v1.json"
+  },
+  "visual_qa": {
+    "coverage": "8 roles, 88 rows, 584 used animation frames",
+    "latest_method": "qa/visual-review-alternative-20260831/state-semantics-review-20260831-v1.json",
+    "latest_manual_review": "qa/visual-review-alternative-20260831/state-semantics-manual-review-20260831-v1.json",
+    "state_intent_status": "pass_with_eight_existing_blockers_and_minor_warnings",
+    "new_hard_failures": 0,
+    "confirmed_hard_failures": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "release_ready": false,
+    "repair_policy": "regenerate each affected complete row; do not patch isolated cells or use procedural compositing"
+  },
+  "image_generation": {
+    "latest_evidence": "qa/imagegen-channel-recheck-20260831-v14.json",
+    "contract": "pass",
+    "latest_real_smoke": "page JSON and Agent JSON server-channel routes returned upstream connection error; no artifact",
+    "repair_generation_ready": false
+  },
+  "petdex": {
+    "latest_readonly_evidence": "qa/petdex-live-recheck-20260831-v2.json",
+    "upstream_status_evidence": "qa/petdex-upstream-status-recheck-20260831-v2.json",
+    "cli_version": "1.3.0",
+    "desktop_version": "0.9.1",
+    "gallery_count": 4672,
+    "current_slugs_present": 8,
+    "historical_hei_mao_slug_present": true,
+    "hook_689": "closed via merged PR #752",
+    "bubble_revamp_710": "open",
+    "main_head": "5323e43624bd",
+    "mutation_performed": false
+  },
+  "documentation": {
+    "readme_reference_evidence": "qa/readme-reference-recheck-20260831-v2.json",
+    "concrete_qa_references_missing": 0,
+    "privacy_scan": "pass"
+  },
+  "runtime_boundary": {
+    "status": "user_action_required",
+    "unverified": [
+      "full Codex App refresh",
+      "eight-role selection and restore",
+      "four-direction switching",
+      "standard animation playback",
+      "multiple pets",
+      "cross-screen bubble following",
+      "actual app-size clipping, transparency, and proportion"
+    ]
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "answer_key_exposed_to_reviewer": false
+  },
+  "formal_assets_modified": false
+}

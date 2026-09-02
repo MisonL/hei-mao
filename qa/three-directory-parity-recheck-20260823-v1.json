@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T22:30:00Z",
+  "scope": "fresh byte-level parity check for the eight current roles",
+  "roots": ["repository", "codex_pets", "petdex_pets"],
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "files_per_role": ["pet.json", "spritesheet.webp"],
+  "repository_codex_pets_petdex_pets": "byte_identical_for_all_16_files",
+  "all_file_sets_match": true,
+  "all_sha_match": true,
+  "historical_snapshot_discrepancy": "Older parity snapshots contain pre-v2 hashes and do not describe the current directories.",
+  "privacy": {
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "credentials_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "The repository and both local installation roots are synchronized for every current role. No files were modified."
+}

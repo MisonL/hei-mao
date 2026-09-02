@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T15:49:17Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release state after approved-reference image edit recheck",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; 1536x2288; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 pass with reviewed warnings and no errors",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "8/8 isolated roles pass; unknown slug rejected; ShellCheck and PowerShell parse pass",
+    "three_directory_sha_parity": "8/8 roles; 16/16 files pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260822-v6.json"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260822-v13.json",
+    "metadata_and_image_contract": "8/8 HTTP 200, matching ids, actual metadata v2, 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "8/8",
+    "owned_slug_updates": "6/6 previously submitted updates are live",
+    "historical_duplicate": "hei-mao-2 remains record-only",
+    "duplicate_submission_created": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260822-v3.json",
+    "local_wrapper": "bounded normal path and bounded missing-runner fallback pass isolated open/closed stdin tests",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260822-v29.json",
+    "prior_prompt_boundary_evidence": "qa/imagegen-channel-recheck-20260822-v28.json",
+    "custom_model": "gpt-image-2-1k",
+    "service_status": "usable at 1024x1024 through server-owned orchestration and page SSE edit",
+    "brand_workflow": "approved character image reference plus neutral preservation instructions passed; direct brand/IP text remains safety-audit constrained",
+    "temporary_output_cleanup": "prior Agent artifacts and current page image returned 404 after deletion; local temporary files absent",
+    "formal_assets_changed": false
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified because the transparent PetDex window remains on an unavailable historical second-display coordinate",
+    "evidence": "qa/codex-app-boundary-recheck-20260822-v3.json"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The local image-generation service can support the approved PetDex character workflow through image-reference editing at 1024x1024, with a documented upstream text safety boundary. All eight current PetDex resources and local v2 packages remain consistent. Full Codex App visual acceptance remains an explicit unverified boundary."
+}

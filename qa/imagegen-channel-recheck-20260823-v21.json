@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T00:55:01Z",
+  "scope": "fresh authorized local Docker generation and edit smoke using the custom model",
+  "service": {
+    "reachable": true,
+    "model": "gpt-image-2-1k",
+    "generation": {
+      "request_mode": "images-non-stream",
+      "route": "server_orchestrated_job_polling",
+      "requested_dimensions": "1024x1024",
+      "requested_image_count": 1,
+      "returned_images": 1,
+      "actual_dimensions": "1024x1024",
+      "output_format": "webp",
+      "download_http": 200,
+      "dimension_check": "pass",
+      "visual_check": "one complete centered full-body original mascot output with natural upright proportions, both feet visible, generous chroma-key margin, and no crop or squash observed"
+    },
+    "edit": {
+      "request_mode": "images-sse",
+      "route": "page_sse",
+      "requested_dimensions": "1024x1024",
+      "returned_images": 1,
+      "actual_dimensions": "1024x1024",
+      "output_format": "webp",
+      "download_http": 200,
+      "dimension_check": "pass",
+      "visual_check": "complete full-body mascot output with visible footwear and no crop or squash observed",
+      "delete_http": 200,
+      "content_after_delete": 404
+    }
+  },
+  "contract_observation": {
+    "single_image_contract_observed": true,
+    "prior_multi_image_observation_reproduced": false,
+    "root_cause_of_prior_multi_image_observation": "unconfirmed; no client-side truncation was applied"
+  },
+  "cleanup": {
+    "generation_artifact_delete_http": 200,
+    "generation_metadata_after_delete": 404,
+    "generation_content_after_delete": 404,
+    "edit_page_image_delete_http": 200,
+    "edit_content_after_delete": 404,
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service is usable through both the server-orchestrated generation path and the page SSE edit path for a fresh 1024x1024 custom-model request. Both returned one readable WebP with strict dimensions and visual checks passing. Generation and edit artifacts were deleted and confirmed unavailable. No formal PetDex asset was changed."
+}

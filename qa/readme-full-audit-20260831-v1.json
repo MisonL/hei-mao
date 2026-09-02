@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "full README link, path, privacy, and naming audit",
+  "bytes": 195589,
+  "line_count": 1029,
+  "link_count": 5,
+  "relative_reference_count": 4,
+  "missing_relative_references": [],
+  "privacy_marker_count": 0,
+  "privacy_markers": [],
+  "forbidden_private_markers_absent": true,
+  "result": "pass",
+  "formal_assets_modified": false
+}

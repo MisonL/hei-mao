@@ -1,0 +1,944 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T02:38:11.719Z",
+  "scope": "asset-only Chromium CSS compositor replay; evidence only",
+  "method": {
+    "name": "native browser CSS background-position and DPR replay",
+    "renderer_assumptions": [
+      "192x208 clipped sprite element",
+      "1536x2288 atlas background with width-proportional scaling",
+      "image-rendering: pixelated",
+      "fractional background-position phases",
+      "Chromium deviceScaleFactor 1, 1.5, and 2"
+    ],
+    "purpose": "detect browser-specific neighbouring-cell sampling, clipping, phase rounding, and display-scale distortion that Pillow-only rehearsal cannot prove",
+    "interpretation": "screenshots and geometry are candidate evidence; no metric is an automatic asset failure"
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "frames": 584,
+    "variants": [
+      {
+        "id": "dpr1-scale1-phase0",
+        "dpr": 1,
+        "scale": 1,
+        "phase": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "dpr1-scale1-phase05",
+        "dpr": 1,
+        "scale": 1,
+        "phase": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "id": "dpr15-scale1-phase0",
+        "dpr": 1.5,
+        "scale": 1,
+        "phase": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "dpr15-scale1-phase05",
+        "dpr": 1.5,
+        "scale": 1,
+        "phase": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "id": "dpr2-scale075-phase0",
+        "dpr": 2,
+        "scale": 0.75,
+        "phase": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "dpr2-scale125-phase05",
+        "dpr": 2,
+        "scale": 1.25,
+        "phase": [
+          0.5,
+          0.5
+        ]
+      }
+    ],
+    "candidate_frames": 16
+  },
+  "result": {
+    "formal_assets_modified": false,
+    "new_hard_failures": [],
+    "release_effect": "supplemental evidence only; requires normal-size review and does not replace live Codex App playback",
+    "confirmed_existing_hard_failures": 4
+  },
+  "visual_review": {
+    "status": "pass_with_four_existing_blockers",
+    "new_hard_failures": [],
+    "confirmed_existing_blockers": [
+      "hei-mao/jumping/frame-2 duplicated head",
+      "hei-mao-quality/jumping/frame-2 duplicated head",
+      "hei-mao-foodie/waiting/frames-2..3 stacked upper contours",
+      "hei-mao-delivery/failed/frames-0..4 repeated head and pose-family switch"
+    ],
+    "reviewed_artifacts": [
+      "browser-css-compositor-candidates-v1.png",
+      "browser-css-compositor-full-v1.png",
+      "browser-css-compositor-variants-summary-v1.jpg"
+    ],
+    "note": "Candidate sheet, full sheet and a compact summary of all six Chromium variants were reviewed at normal display size; no new browser-compositor hard failure was found."
+  },
+  "artifacts": [
+    "browser-css-compositor-candidates-v1.png",
+    "browser-css-compositor-dpr1-scale1-phase0.png",
+    "browser-css-compositor-dpr1-scale1-phase05.png",
+    "browser-css-compositor-dpr15-scale1-phase0.png",
+    "browser-css-compositor-dpr15-scale1-phase05.png",
+    "browser-css-compositor-dpr2-scale075-phase0.png",
+    "browser-css-compositor-dpr2-scale125-phase05.png",
+    "browser-css-compositor-full-v1.png",
+    "browser-css-compositor-review-20260831-v1.json",
+    "browser-css-compositor-variants-summary-v1.jpg"
+  ],
+  "geometry_samples": [
+    {
+      "variant": "dpr1-scale1-phase0",
+      "dpr": 1,
+      "scale": 1,
+      "phase": [
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 0,
+          "x": 141,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 1,
+          "x": 340,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 2,
+          "x": 539,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 3,
+          "x": 738,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 4,
+          "x": 937,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 5,
+          "x": 1136,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 0,
+          "x": 141,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 1,
+          "x": 340,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 2,
+          "x": 539,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 3,
+          "x": 738,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 4,
+          "x": 937,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 5,
+          "x": 1136,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        }
+      ]
+    },
+    {
+      "variant": "dpr1-scale1-phase05",
+      "dpr": 1,
+      "scale": 1,
+      "phase": [
+        0.5,
+        0.5
+      ],
+      "samples": [
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 0,
+          "x": 141,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 1,
+          "x": 340,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 2,
+          "x": 539,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 3,
+          "x": 738,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 4,
+          "x": 937,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 5,
+          "x": 1136,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 0,
+          "x": 141,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 1,
+          "x": 340,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 2,
+          "x": 539,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 3,
+          "x": 738,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 4,
+          "x": 937,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 5,
+          "x": 1136,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        }
+      ]
+    },
+    {
+      "variant": "dpr15-scale1-phase0",
+      "dpr": 1.5,
+      "scale": 1,
+      "phase": [
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 0,
+          "x": 141,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 1,
+          "x": 340,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 2,
+          "x": 539,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 3,
+          "x": 738,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 4,
+          "x": 937,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 5,
+          "x": 1136,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 0,
+          "x": 141,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 1,
+          "x": 340,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 2,
+          "x": 539,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 3,
+          "x": 738,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 4,
+          "x": 937,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 5,
+          "x": 1136,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        }
+      ]
+    },
+    {
+      "variant": "dpr15-scale1-phase05",
+      "dpr": 1.5,
+      "scale": 1,
+      "phase": [
+        0.5,
+        0.5
+      ],
+      "samples": [
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 0,
+          "x": 141,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 1,
+          "x": 340,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 2,
+          "x": 539,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 3,
+          "x": 738,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 4,
+          "x": 937,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 5,
+          "x": 1136,
+          "y": 50,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 0,
+          "x": 141,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 1,
+          "x": 340,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 2,
+          "x": 539,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 3,
+          "x": 738,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 4,
+          "x": 937,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 5,
+          "x": 1136,
+          "y": 264,
+          "width": 196,
+          "height": 212
+        }
+      ]
+    },
+    {
+      "variant": "dpr2-scale075-phase0",
+      "dpr": 2,
+      "scale": 0.75,
+      "phase": [
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 0,
+          "x": 141,
+          "y": 50,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 1,
+          "x": 292,
+          "y": 50,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 2,
+          "x": 443,
+          "y": 50,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 3,
+          "x": 594,
+          "y": 50,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 4,
+          "x": 745,
+          "y": 50,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 5,
+          "x": 896,
+          "y": 50,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 0,
+          "x": 141,
+          "y": 212,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 1,
+          "x": 292,
+          "y": 212,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 2,
+          "x": 443,
+          "y": 212,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 3,
+          "x": 594,
+          "y": 212,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 4,
+          "x": 745,
+          "y": 212,
+          "width": 148,
+          "height": 160
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 5,
+          "x": 896,
+          "y": 212,
+          "width": 148,
+          "height": 160
+        }
+      ]
+    },
+    {
+      "variant": "dpr2-scale125-phase05",
+      "dpr": 2,
+      "scale": 1.25,
+      "phase": [
+        0.5,
+        0.5
+      ],
+      "samples": [
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 0,
+          "x": 141,
+          "y": 50,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 1,
+          "x": 388,
+          "y": 50,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 2,
+          "x": 635,
+          "y": 50,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 3,
+          "x": 882,
+          "y": 50,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 4,
+          "x": 1129,
+          "y": 50,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "idle",
+          "frame": 5,
+          "x": 1376,
+          "y": 50,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 0,
+          "x": 141,
+          "y": 316,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 1,
+          "x": 388,
+          "y": 316,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 2,
+          "x": 635,
+          "y": 316,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 3,
+          "x": 882,
+          "y": 316,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 4,
+          "x": 1129,
+          "y": 316,
+          "width": 244,
+          "height": 264
+        },
+        {
+          "role": "hei-mao",
+          "row": "running-right",
+          "frame": 5,
+          "x": 1376,
+          "y": 316,
+          "width": 244,
+          "height": 264
+        }
+      ]
+    }
+  ],
+  "candidate_geometry": [
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 21,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 126,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 243,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 348,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 465,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 570,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 687,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 792,
+      "y": 37,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 21,
+      "y": 187,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 126,
+      "y": 187,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 243,
+      "y": 187,
+      "width": 100,
+      "height": 108
+    },
+    {
+      "role": null,
+      "row": null,
+      "frame": null,
+      "x": 348,
+      "y": 187,
+      "width": 100,
+      "height": 108
+    }
+  ],
+  "limitations": [
+    "This is a headless Chromium capture, not a live Codex App or GPU capture on macOS, Windows, or Linux.",
+    "The exact PetDex CSS declaration may evolve; renderer assumptions are recorded above.",
+    "Browser screenshots expose visual candidates but do not by themselves prove window z-order, bubble tracking, or cross-screen behavior."
+  ]
+}

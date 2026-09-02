@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T15:49:17Z",
+  "scope": "local Docker image-generation service approved-reference edit recheck",
+  "service_checks": {
+    "first_run": "pass",
+    "agent_doctor": "pass",
+    "agent_contract": "pass",
+    "channel_health": "pass",
+    "orchestration": "server_owned_job_polling",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "custom_model": "gpt-image-2-1k"
+  },
+  "prior_prompt_boundary_evidence": "qa/imagegen-channel-recheck-20260822-v28.json",
+  "approved_reference_edit": {
+    "status": "pass",
+    "transport": "page_sse",
+    "endpoint": "/api/images",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1024x1024",
+    "format": "webp",
+    "source_reference": "approved local character atlas supplied as image input",
+    "text_prompt_policy": "neutral preservation instructions; no brand or existing-IP name in prompt",
+    "strict_dimension_check": "pass",
+    "visual_check": "full-body character, identity and clothing retained, transparent-background intent retained, no crop or squash observed",
+    "formal_asset_modified": false
+  },
+  "prompt_boundary": {
+    "brand_or_ip_specific_text_prompt": "rejected by upstream prompt safety audit with HTTP 403",
+    "neutral_original_mascot_prompt": "pass",
+    "client_behavior": "does not silently rewrite prompts",
+    "recommended_workflow": "supply approved character art as an image reference and use neutral preservation instructions"
+  },
+  "cleanup": {
+    "prior_agent_artifacts_deleted": 3,
+    "prior_agent_artifact_metadata_after_cleanup": 404,
+    "prior_agent_artifact_content_after_cleanup": 404,
+    "page_image_delete": "pass",
+    "page_image_after_cleanup": 404,
+    "local_temporary_files_after_cleanup": false,
+    "formal_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "result": "Brand-aware image work is usable through the approved-reference edit path: the uploaded approved character art supplies identity while neutral instructions preserve it. Direct brand or existing-IP wording remains subject to upstream prompt safety review. The edit returned a complete 1024x1024 WebP, all temporary output was deleted, and formal PetDex assets were unchanged."
+}

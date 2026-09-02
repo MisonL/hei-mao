@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-08-31",
+  "reviewer": "parent",
+  "source_sheet": "cross-role-identity-candidates-v1.jpg",
+  "display_context": "24 candidate panels viewed at normal pet size; each panel shows current frame, the same role's idle reference, and a feature-difference heat strip",
+  "review_scope": {
+    "roles": 8,
+    "candidate_panels": 24,
+    "normal_size_review": true,
+    "formal_assets_modified": false
+  },
+  "observations": [
+    "All eight neutral role references retain a recognizable shared black-cat core; costume, hat, backpack, basket, and handheld props account for the expected cross-role differences.",
+    "The high-scoring hei-mao review, hei-mao-quality review, hei-mao-butler jumping, hei-mao-chef failed, hei-mao-delivery, hei-mao-traveler running, and look-direction candidates show intentional head, prop, or posture changes rather than a new identity break or vertical squash.",
+    "hei-mao-butler idle[1] is nearly identical to its idle reference and does not indicate a stuck or malformed frame.",
+    "The delivery and traveler candidates have larger feature residuals because their asymmetrical equipment moves through the fixed upper-body window; normal-size viewing shows the equipment remains attached and the cat identity is preserved.",
+    "No candidate shows a new duplicated head, accidental transparent interior hole, cropped body, detached component, or wrong-role identity beyond the eight already tracked complete-row blockers."
+  ],
+  "result": {
+    "verdict": "pass_with_existing_blockers",
+    "new_hard_failures": [],
+    "new_warnings": [],
+    "known_blockers_preserved": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "release_effect": "supplemental evidence only; the eight complete-row regeneration blockers remain open"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T00:46:03Z",
+  "scope": "read-only native Codex App visual acceptance boundary recheck",
+  "window_probe": {"window_server_detected_chatgpt_window": true, "window_specific_capture": "failed", "full_screen_capture": "failed"},
+  "computer_use": {"service_startup": "failed", "app_state_or_input_available": false},
+  "actions": {"input_sent": false, "settings_changed": false, "pets_changed": false, "processes_stopped": false, "processes_restarted": false},
+  "acceptance": {"full_refresh": "unverified", "role_selection": "unverified", "direction_switching": "unverified", "animation_loop": "unverified", "multirole_selection": "unverified", "multidisplay_scenario": "unverified"},
+  "privacy": {"local_paths_recorded": false, "private_network_addresses_recorded": false, "process_identifiers_recorded": false, "screenshots_retained": false},
+  "result": "The ChatGPT window is discoverable by WindowServer, but native and full-screen capture are unavailable and the Computer Use service could not start. No UI mutation was attempted; full Codex App acceptance remains unverified."
+}

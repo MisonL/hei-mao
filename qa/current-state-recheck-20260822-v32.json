@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T11:38:36Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release state after fixed-size image-channel smoke",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; 1536x2288; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 pass with reviewed warnings and no errors",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "8/8 isolated roles pass; unknown slug rejected; ShellCheck and PowerShell parse pass",
+    "three_directory_sha_parity": "8/8 roles; 16/16 files pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260822-v6.json"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260822-v13.json",
+    "manifest": "HTTP 200, generated 2026-08-22T06:25:49.026Z, 4578 entries, eight current slugs present",
+    "metadata_and_image_contract": "8/8 HTTP 200, matching ids, actual metadata v2, 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "8/8",
+    "owned_slug_updates": "6/6 previously submitted updates are now live",
+    "historical_duplicate": "hei-mao-2 remains record-only",
+    "duplicate_submission_created": false
+  },
+  "desktop": {
+    "desktop_version": "0.8.0",
+    "role_switches": "8/8 official petdex://<slug> switches passed",
+    "restored_active_pet": "hei-mao-traveler",
+    "visual_probe": "hei-mao-traveler full body, backpack and props visible without crop or squash",
+    "evidence": "qa/petdex-desktop-role-switch-recheck-20260822-v1.json",
+    "evidence_visual": "qa/petdex-desktop-native-visible-recheck-20260822-v1.json"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260822-v23.json",
+    "custom_model": "gpt-image-2-1k",
+    "fixed_size_smoke": "1024x1024 request returned matching 1024x1024 WebP and passed the strict dimension check",
+    "route": "server_orchestrated_job_polling via images-non-stream",
+    "channel_health_after_smoke": "healthy",
+    "artifact_cleanup": "temporary artifact deleted and metadata/content returned 404",
+    "formal_assets_changed": false
+  },
+  "hooks": {
+    "cli_version": "1.2.2",
+    "eof_behavior": "open stdin waits for EOF; closed stdin exits normally",
+    "evidence": "qa/petdex-hook-eof-recheck-20260822-v8.json",
+    "upstream_status_evidence": "qa/petdex-upstream-status-recheck-20260822-v7.json"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified because PetDex is on an unavailable historical second-display coordinate and transparent-window capture fails",
+    "evidence": "qa/codex-app-boundary-recheck-20260822-v3.json"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The local image-generation service is usable for controlled custom-model work and passed a matching 1024x1024 smoke with cleanup. All eight current PetDex public sprites now match the repository and the six pending owned-slug updates are live. Hook EOF remains an upstream-open issue, and full Codex App visual acceptance remains unverified."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T11:55:00Z",
+  "scope": "normal-size manual review of the state-intent candidate sheet",
+  "sheet": "qa/visual-review-alternative-20260831/state-semantics-candidates-v1.jpg",
+  "reviewed_items": 36,
+  "reviewer": "parent",
+  "visual_review": {
+    "status": "pass_with_eight_existing_blockers_and_minor_warnings",
+    "new_hard_failures": [],
+    "confirmed_existing_blockers": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+      "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch",
+      "hei-mao-quality/running-left complete-row detached component/action structure issue",
+      "hei-mao-quality/failed complete-row detached component/action structure issue",
+      "hei-mao-traveler/waiting complete-row detached component/action structure issue",
+      "hei-mao-traveler/review complete-row detached component/action structure issue"
+    ],
+    "accepted_warnings": [
+      {
+        "scope": "hei-mao-delivery/review frames 1 and 4",
+        "note": "帧间变化较小，但手部和面部仍有可见的 review 语义；未见静止塌缩、比例跳变或身份漂移。"
+      },
+      {
+        "scope": "hei-mao/ running and waiting; hei-mao-quality/running; hei-mao-fortune/running and running-left; hei-mao-delivery/running; hei-mao-butler/running-left and waiting; hei-mao/failed; hei-mao-fortune/waving",
+        "note": "运动量或上半身占比偏低，属于细微动作提示；正常显示尺寸仍能看到手部、头部、脚步或道具变化，因此保留为 warning，不提升为硬失败。"
+      },
+      {
+        "scope": "look-row-9 and look-row-10 metric outliers",
+        "note": "候选主要由相邻方向的预期姿态变化产生；方向语义继续以 cardinal、盲测和有标签回环证据为准。"
+      }
+    ],
+    "decision": "本方法没有新增需要整行重生的硬失败；八个既有阻断仍须在生图服务恢复后按完整行修复。"
+  },
+  "limitations": [
+    "这是主代理的正常尺寸查看，不是独立盲审；不能替代第三方视觉审查。",
+    "状态意图由运动和外观提示共同表达，指标不能单独判定语义。",
+    "本轮没有修改正式 pets 图集，也没有进行 Codex App 或 GPU 实机播放。"
+  ]
+}

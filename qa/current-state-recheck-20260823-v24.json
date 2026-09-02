@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T02:10:26Z",
+  "scope": "current eight-role PetDex state after fresh local image-generation smoke",
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v24.json",
+    "service_status": "usable_through_default_server_orchestration",
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "returned_dimensions": "1024x1024",
+    "selected_route": "images-sse",
+    "strict_dimension_gate": "pass",
+    "temporary_artifact_cleanup": "pass",
+    "formal_assets_changed": false,
+    "observed_boundary": "The previous images-non-stream route returned a retryable prompt-audit 503; the configured SSE priority route succeeded without silent fallback."
+  },
+  "local_atlas_recheck": {
+    "evidence": "qa/current-v2-gate-recheck-20260823-v8.json",
+    "roles": "8/8",
+    "dimensions": "1536x2288",
+    "grid": "8x11 cells of 192x208",
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "formal_assets_modified": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260823-v6.json",
+    "current_slugs_present": "8/8",
+    "actual_metadata_v2": "8/8",
+    "actual_spritesheet_contract": "8/8 image/webp 1536x2288 RGBA",
+    "public_sprite_sha_match": "8/8",
+    "mutation_performed": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v1.json",
+    "upstream_evidence": "qa/petdex-upstream-status-recheck-20260823-v9.json",
+    "local_wrapper": "5/5 events pass with closed stdin and 5/5 pass with open stdin",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open",
+    "existing_processes_touched": false
+  },
+  "desktop_boundary": {
+    "desktop_version": "0.8.0",
+    "codex_app_full_visual_acceptance": "unverified",
+    "process_safety": "no Codex or ChatGPT process was stopped, restarted, or signaled"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The local image-generation route is usable through default orchestration after the private images-sse priority adjustment. Eight formal PetDex packages and current public resources remain unchanged and verified by the cited evidence. Full Codex App visual acceptance and the upstream native runner EOF fix remain unverified boundaries."
+}

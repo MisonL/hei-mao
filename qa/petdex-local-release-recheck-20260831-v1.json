@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "read-only PetDex CLI/Desktop local and upstream release comparison",
+  "local": {
+    "cli_version": "1.3.0",
+    "cli_command": "petdex --version",
+    "desktop_bundle_identifier": "dev.petdex.desktop-native",
+    "desktop_version": "0.9.1",
+    "desktop_metadata_source": "Contents/Info.plist"
+  },
+  "upstream": {
+    "repository": "crafter-station/petdex",
+    "cli_latest_tag": "cli-v1.3.0",
+    "desktop_latest_tag": "desktop-v0.9.1",
+    "main_sha": "5323e43624bdd065fc65f3b3aa572404d51ce75d",
+    "latest_main_subject": "fix(built-with): keep hero content visible (#765)"
+  },
+  "result": "Local CLI and Desktop match the latest public release versions observed from the upstream repository.",
+  "mutation": {
+    "performed": false
+  }
+}

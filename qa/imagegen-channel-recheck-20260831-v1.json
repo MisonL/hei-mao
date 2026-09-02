@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "脱敏记录四个硬失败动作行的生图渠道复核",
+  "service": {
+    "capabilities": "ok",
+    "contract_check": "ok",
+    "runtime": "ok",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1,
+    "page_sse_auth_ready": true,
+    "responses_backend_enabled": false
+  },
+  "attempts": [
+    {
+      "route": "page_sse",
+      "model": "gpt-image-2-1k",
+      "result": "failed",
+      "http_status": 503,
+      "error_code": "page_sse_failed",
+      "message_class": "model_not_found",
+      "artifact_count": 0
+    },
+    {
+      "route": "page_sse",
+      "model": "gpt-image-2",
+      "result": "failed",
+      "http_status": 502,
+      "error_code": "page_sse_failed",
+      "message_class": "result_url_local_or_private_network_blocked",
+      "artifact_count": 0
+    },
+    {
+      "route": "agent_json",
+      "request_mode": "images-sse",
+      "model": "gpt-image-2",
+      "result": "failed",
+      "http_status": 502,
+      "error_code": "upstream_unavailable",
+      "message_class": "result_url_local_or_private_network_blocked",
+      "diagnostics_found": true,
+      "artifact_count": 0
+    },
+    {
+      "route": "agent_json",
+      "request_mode": "images-non-stream",
+      "model": "gpt-image-2",
+      "result": "failed",
+      "http_status": 502,
+      "error_code": "upstream_unavailable",
+      "message_class": "result_url_local_or_private_network_blocked",
+      "diagnostics_found": true,
+      "artifact_count": 0
+    }
+  ],
+  "model_probe": {
+    "result": "failed",
+    "http_status": 401,
+    "artifact_count": 0
+  },
+  "formal_assets_modified": false,
+  "next_action": "上游或服务端需要返回内联图片、同源可消费产物 URL，或修正结果 URL 安全允许列表；同时确认渠道实际可用模型后，才能重生完整动作行。不得复用已终态失败幂等键。",
+  "release_effect": "四个完整动作行仍是发布阻断；本次未改变正式资产或安装目录。"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T06:58:40Z",
+  "scope": "local Docker image-generation smoke after bounded aspect-ratio normalization fix",
+  "service": {
+    "kind": "local Docker GPT Image Playground",
+    "health": "healthy",
+    "default_model": "gpt-image-2-1k",
+    "entrypoint": "/api/agent/image-requests",
+    "transport": "server_orchestrated",
+    "channel_request_mode": "images-sse",
+    "recommended_concurrency": 1
+  },
+  "normalization_fix": {
+    "source": "visual-journal image service",
+    "behavior": "accept only small upstream integer-rounding aspect drift and normalize with aspect-preserving contain padding",
+    "guardrails": "maximum eight-pixel drift and one-percent relative drift; larger mismatches remain rejected",
+    "stretching_or_cropping": false,
+    "regression_test": "pass"
+  },
+  "request": {
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1536x2288",
+    "actual_dimensions": "1536x2288",
+    "output_format": "webp",
+    "dimension_check": "pass",
+    "billable_request_sent": true
+  },
+  "cleanup": {
+    "artifact_delete_status": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "formal_petdex_assets_changed": false
+  },
+  "verification": {
+    "targeted_image_service_tests": "19 passed",
+    "prettier": "pass",
+    "eslint": "pass",
+    "typescript": "pass",
+    "production_build": "pass",
+    "isolated_container_contract": "pass",
+    "active_local_container_rebuilt": true,
+    "active_local_container_health": "healthy",
+    "temporary_container_removed": true,
+    "temporary_image_removed": true
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "prompts": false
+  },
+  "result": "The local Docker service now accepts the PetDex atlas dimensions in a real request. Upstream integer-rounded output is normalized to 1536x2288 without stretching or cropping, while materially different aspect ratios remain rejected."
+}

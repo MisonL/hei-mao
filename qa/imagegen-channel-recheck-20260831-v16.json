@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T12:55:00Z",
+  "scope": "fresh bounded real smoke with an alternate upstream image model through the local Docker Agent JSON server-channel route",
+  "service": {
+    "container_health": "healthy",
+    "runtime_capabilities": "available",
+    "request_mode": "images-non-stream",
+    "model_override": "gemini-3.1-flash-image",
+    "new_idempotency_run": true,
+    "billable_smoke": true
+  },
+  "preflight": {
+    "upstream_models_endpoint": "HTTP 200 JSON",
+    "listed_model_count": 9,
+    "gpt_image_2_listed": true,
+    "alternate_model_listed": true
+  },
+  "result": {
+    "ok": false,
+    "status": 502,
+    "elapsed_ms": 2634,
+    "upstream_host": "meinianda.top",
+    "image_count": 0,
+    "artifact_count": 0,
+    "error": "Connection error.",
+    "repair_generation_ready": false
+  },
+  "interpretation": "上游模型列表可读取，但将请求模型切换为已列出的替代图像模型后，生成接口仍在同一上游连接阶段返回 502；问题不是单一 gpt-image-2 模型选择，本机服务和路由均未产生 artifact。",
+  "formal_assets_modified": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_id_recorded": false,
+    "local_paths_recorded": false
+  }
+}

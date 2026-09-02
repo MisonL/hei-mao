@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T06:58:46Z",
+  "scope": "fresh real image-generation smoke for the local Docker image agent",
+  "skill_entrypoint": "visual-journal-image-agent/scripts/generate-image.mjs",
+  "service": {
+    "source": "user_provided_local_service",
+    "container_health": "healthy",
+    "capabilities": "passed",
+    "channel_health": {
+      "channel_count": 1,
+      "channel_id": "meinianda-image",
+      "credential_count": 1,
+      "healthy_credentials": 1,
+      "healthy_request_modes": ["images-non-stream", "images-sse"]
+    }
+  },
+  "requests": [
+    {
+      "transport": "agent_job_polling",
+      "request_mode": "images-sse",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "error_message": "Connection error.",
+      "retryable": true,
+      "artifact_count": 0,
+      "route": "images-api -> images-sse",
+      "upstream_host_reported_by_service": "meinianda.top"
+    },
+    {
+      "transport": "agent_json",
+      "request_mode": "images-non-stream",
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "error_message": "Connection error.",
+      "retryable": true,
+      "artifact_count": 0,
+      "route": "agent_json -> images-non-stream",
+      "upstream_host_reported_by_service": "meinianda.top"
+    }
+  ],
+  "diagnostics": {
+    "both_requests_have_structured_agent_diagnostics": true,
+    "both_requests_recorded_without_artifacts": true,
+    "local_contract_orchestration": "passed",
+    "upstream_reachability": "failed",
+    "new_idempotency_key_per_request": true,
+    "post_failure_channel_health_snapshot": {
+      "state": "healthy",
+      "last_failure_mode": "images-non-stream",
+      "interpretation": "health endpoint is an in-process configuration/credential snapshot and does not prove a fresh upstream request will succeed"
+    }
+  },
+  "result": {
+    "real_smoke": "failed_upstream_unavailable",
+    "local_service_health": "healthy",
+    "can_start_pet_row_regeneration": false,
+    "formal_assets_modified": false,
+    "next_action": "wait for upstream channel recovery, then rerun with a new idempotency key"
+  },
+  "privacy": {
+    "request_ids": "omitted",
+    "idempotency_keys": "omitted",
+    "credentials": "omitted",
+    "local_paths": "omitted"
+  }
+}

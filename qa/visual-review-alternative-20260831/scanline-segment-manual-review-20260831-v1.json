@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "normal-size and enlarged visual confirmation of full-resolution scanline/disconnected-component candidates",
+  "method": {
+    "name": "scanline run-length plus full-resolution disconnected-component review",
+    "evidence": "scanline-segment-review-20260831-v1.json",
+    "visual_checks": [
+      "reviewed the generated PREV/CURRENT/NEXT and SCANLINES sheet at normal cell size",
+      "enlarged high-area candidates 4x or 5x on a neutral/dark background",
+      "rechecked alpha thresholds 16, 64, 128, 192, and 224 to separate opaque fragments from edge antialiasing",
+      "compared each fragment with its neighboring frames and the expected attached prop or body part"
+    ],
+    "promotion_rule": "a disconnected colored component with visible body/prop semantics is a hard visual defect; any repair must regenerate the complete containing row"
+  },
+  "confirmed_new_hard_failures": [
+    {
+      "role": "hei-mao-quality",
+      "row": "running-left",
+      "frames": [2, 5, 6],
+      "evidence": [
+        "f2 has a detached white shoe/leg fragment at the lower-left",
+        "f5 has a detached leafy-green prop fragment at the right",
+        "f6 has a detached shoe/leg fragment at the lower-left plus additional detached fragments"
+      ],
+      "action": "regenerate the complete running-left row"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "failed",
+      "frames": [3, 5],
+      "evidence": [
+        "f3 has a detached leafy-green fragment on the left",
+        "f5 has a detached leafy-green fragment on the left"
+      ],
+      "action": "regenerate the complete failed row"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "waiting",
+      "frames": [1, 2, 3, 4],
+      "evidence": [
+        "left-side backpack/leaf fragments are visibly separated from the body in the waiting loop",
+        "f2 and f4 contain large detached colored components that persist at alpha threshold 224"
+      ],
+      "action": "regenerate the complete waiting row"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "review",
+      "frames": [1, 2, 3, 4],
+      "evidence": [
+        "left/right backpack, vegetable, or bag fragments are visibly separated from the body",
+        "f2 and f4 contain large detached colored components that persist at alpha threshold 224"
+      ],
+      "action": "regenerate the complete review row"
+    }
+  ],
+  "additional_visible_fragment_candidates": [
+    {
+      "role": "hei-mao-quality",
+      "row": "idle",
+      "frames": [4],
+      "severity": "minor",
+      "evidence": "a narrow detached gray/white strip is visible beside the head",
+      "action": "include the complete idle row in the next quality regeneration or explicitly reapprove every frame after repair"
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "running-left",
+      "frames": [2],
+      "severity": "minor",
+      "evidence": "a detached white/pink fragment is visible to the left of the body",
+      "action": "regenerate the complete running-left row"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "idle",
+      "frames": [1, 2, 4],
+      "severity": "minor",
+      "evidence": "small detached backpack/prop strips are visible at the left or right edge of the silhouette",
+      "action": "include the complete idle row in the next Traveler regeneration"
+    }
+  ],
+  "known_blockers_reconfirmed": [
+    "hei-mao/jumping frame 2 duplicated head",
+    "hei-mao-quality/jumping frame 2 duplicated head",
+    "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+    "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+  ],
+  "history_recheck": {
+    "quality_rows": {
+      "commits_compared": ["167082e", "a6d7a71", "HEAD"],
+      "result": "the detached fragments in quality idle/running-left/jumping/failed are present in the committed atlas history; no previously validated clean row was found"
+    },
+    "traveler_rows": {
+      "commits_compared": ["25145b7", "a6d7a71", "HEAD"],
+      "result": "waiting and review detached prop fragments predate the normalization commit and persist in HEAD; reverting normalization would not provide a clean source"
+    },
+    "action": "do not roll back or splice historical single frames; regenerate each affected complete row when the real image channel recovers"
+  },
+  "result": {
+    "new_hard_failure_rows": [
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "rows_with_additional_minor_candidates": [
+      "hei-mao-quality/idle",
+      "hei-mao-chef/running-left",
+      "hei-mao-traveler/idle"
+    ],
+    "formal_assets_modified": false,
+    "release_effect": "the current package remains blocked; the four original blockers plus four new hard-failure rows require complete-row regeneration before visual release"
+  },
+  "limitations": [
+    "A disconnected component can be intentional only when the character design explicitly allows a detached effect; these candidates are colored body/prop fragments and do not meet that exception.",
+    "This evidence does not prove live Codex App window z-order, multi-screen placement, or bubble tracking.",
+    "The report does not replace regeneration and post-generation validation of the affected rows."
+  ],
+  "artifacts": [
+    "scanline-segment-review-20260831-v1.json",
+    "scanline-segment-candidates-v1.jpg",
+    "scanline_segment_review.py",
+    "scanline-segment-manual-review-20260831-v1.json"
+  ]
+}

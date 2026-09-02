@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T22:32:48Z",
+  "scope": "fresh real local Docker image-channel smoke before four complete-row repairs",
+  "service": {
+    "source": "user-authorized local Docker service",
+    "container_health": "healthy",
+    "capabilities": "pass",
+    "runtime_contract": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ]
+  },
+  "smoke_requests": [
+    {
+      "idempotency_key": "hei-mao-v7-smoke-20260831-01",
+      "request_mode": "images-sse",
+      "size": "1024x1024",
+      "result": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 503,
+      "artifact_count": 0,
+      "fallback_applied": false
+    },
+    {
+      "idempotency_key": "hei-mao-v7-smoke-20260831-02",
+      "request_mode": "images-non-stream",
+      "size": "1024x1024",
+      "result": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 503,
+      "artifact_count": 0,
+      "fallback_applied": false
+    }
+  ],
+  "diagnostics": {
+    "both_failed_keys_found": true,
+    "channel_health_snapshot": "healthy_with_last_failure_model_not_found",
+    "interpretation": "The local service and routing contract are healthy, but the configured upstream model/channel is not currently usable; exact upstream model listing was not available from the probe without service-side probe authentication.",
+    "formal_assets_modified": false
+  },
+  "result": "Generation remains blocked. Do not reuse either terminal failure key; wait for upstream model/channel recovery, then use a new key before attempting repairs."
+}

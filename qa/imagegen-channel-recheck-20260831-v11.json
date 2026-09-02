@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T08:29:39Z",
+  "scope": "two fresh local Docker image-generation smoke requests after read-only channel-health diagnosis",
+  "service": {
+    "base_url_source": "explicit_local_service",
+    "container_health": "reachable",
+    "channel_health": "healthy",
+    "channel_id": "meinianda-image",
+    "upstream_host": "meinianda.top",
+    "declared_request_modes": ["images-non-stream", "images-sse"]
+  },
+  "checks": [
+    {
+      "request_mode": "images-sse",
+      "size": "1024x1024",
+      "quality": "low",
+      "result": "failed",
+      "error_code": "upstream_unavailable",
+      "error_message": "Connection error.",
+      "artifact_count": 0,
+      "fallback_applied": false,
+      "server_elapsed_ms": 608,
+      "diagnostic_retryable": true,
+      "cooldown_seconds": 15
+    },
+    {
+      "request_mode": "images-non-stream",
+      "size": "1024x1024",
+      "quality": "low",
+      "result": "failed",
+      "error_code": "upstream_unavailable",
+      "error_message": "Connection error.",
+      "artifact_count": 0,
+      "fallback_applied": false,
+      "server_elapsed_ms": 390,
+      "diagnostic_retryable": true,
+      "cooldown_seconds": 15
+    }
+  ],
+  "conclusion": {
+    "local_orchestration": "reachable",
+    "both_configured_request_modes_tested": true,
+    "upstream_connection": "unavailable_for_both_modes",
+    "prompt_or_dimension_failure": false,
+    "formal_assets_modified": false,
+    "next_action": "不要继续重试或启动正式行重生；待上游恢复后使用新的幂等键重新 smoke，再按完整行重生"
+  },
+  "privacy": {
+    "request_ids": "omitted",
+    "idempotency_keys": "omitted",
+    "credentials": "omitted",
+    "local_paths": "omitted"
+  }
+}

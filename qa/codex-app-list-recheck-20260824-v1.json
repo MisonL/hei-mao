@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24",
+  "scope": "user-provided Codex App Pets settings screenshot",
+  "source": "user-provided screenshot",
+  "view": "Codex App Settings > Pets",
+  "visible_current_roles": [
+    "hei-mao",
+    "hei-mao-chef",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-traveler",
+    "hei-mao-fortune",
+    "hei-mao-foodie",
+    "hei-mao-delivery"
+  ],
+  "current_role_count": 8,
+  "selected_role": "hei-mao-butler",
+  "observations": {
+    "all_current_roles_visible": true,
+    "role_thumbnails_visible": true,
+    "descriptions_visible": true,
+    "text_or_encoding_error": false,
+    "list_level_crop_or_overlap": false
+  },
+  "unverified": [
+    "full refresh result",
+    "per-role selection and restoration",
+    "four-direction switching",
+    "animation loop behavior",
+    "cross-display bubble following"
+  ],
+  "result": "The Codex App Pets settings list visibly contains all eight current Hei Mao roles and shows Hei Mao Butler selected; runtime animation and display behavior remain unverified."
+}

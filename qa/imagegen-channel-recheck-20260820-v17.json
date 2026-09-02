@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T14:43:15Z",
+  "scope": "authorized Quality row-9 generation attempts after local channel recovery check",
+  "reference_policy": {
+    "role": "hei-mao-quality",
+    "accepted_identity": "brown pig quality inspector",
+    "formal_assets_overwritten": false
+  },
+  "service_checks": {
+    "local_docker": {
+      "container_health": "pass",
+      "agent_contract": "pass",
+      "effective_request_modes": [],
+      "channel_health": "probe_pending"
+    },
+    "deployed_service": {
+      "agent_contract": "pass",
+      "effective_request_modes": ["images-non-stream"],
+      "channel_health_before_final_attempt": "healthy",
+      "selected_channel_request_mode": "images-non-stream"
+    }
+  },
+  "attempts": [
+    {
+      "service": "local_docker",
+      "transport": "page_sse",
+      "status": "rejected_before_upstream",
+      "error_code": "page_sse_failed",
+      "http_status": 503,
+      "billable": true,
+      "artifact_count": 0,
+      "retryable": false
+    },
+    {
+      "service": "local_docker",
+      "transport": "agent_json",
+      "status": "rejected_before_upstream",
+      "error_code": "no_healthy_request_mode",
+      "http_status": 503,
+      "billable": true,
+      "artifact_count": 0,
+      "retryable": false
+    },
+    {
+      "service": "deployed_service",
+      "transport": "agent_json",
+      "status": "failed_at_upstream",
+      "error_code": "upstream_unavailable",
+      "http_status": 502,
+      "billable": true,
+      "request_id_present": true,
+      "artifact_count": 0,
+      "retryable": true
+    },
+    {
+      "service": "deployed_service",
+      "transport": "agent_json",
+      "status": "failed_at_upstream",
+      "error_code": "upstream_unavailable",
+      "http_status": 502,
+      "billable": true,
+      "request_id_present": true,
+      "artifact_count": 0,
+      "retryable": true
+    },
+    {
+      "service": "deployed_service",
+      "transport": "agent_json",
+      "status": "failed_at_upstream",
+      "error_code": "upstream_auth_failed",
+      "http_status": 403,
+      "billable": true,
+      "request_id_present": true,
+      "artifact_count": 0,
+      "retryable": false
+    }
+  ],
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "upstream_hosts_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "block_quality_row_repair_until_a_real_image_artifact_is_produced_by_a_valid_channel",
+  "formal_assets_modified": false
+}

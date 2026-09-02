@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T17:23:29Z",
+  "scope": "local Docker image-generation service real generate and edit smoke at 1024x1024",
+  "service": {
+    "service_reachable": true,
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "output_format": "webp",
+    "agent_request_mode": "images-non-stream",
+    "page_edit_mode": "images-sse"
+  },
+  "generate": {
+    "client": "visual-journal-image-agent/scripts/generate-image.mjs",
+    "endpoint": "/api/agent/image-requests",
+    "route_mode": "job",
+    "status": "pass",
+    "actual_dimensions": "1024x1024",
+    "dimension_check": "pass",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "visual_check": "centered full-body pig mascot reference; complete silhouette; no crop or squash observed",
+    "cleanup": "artifact delete HTTP 200; metadata and content returned HTTP 404; local temporary file removed"
+  },
+  "edit": {
+    "client": "visual-journal-image-agent/scripts/edit-image.mjs",
+    "endpoint": "/api/images",
+    "transport": "page_sse",
+    "status": "pass",
+    "actual_dimensions": "1024x1024",
+    "dimension_check": "pass",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "visual_check": "same complete mascot identity and clothing; requested blink variation visible; no crop or squash observed",
+    "cleanup": "page image-delete returned HTTP 200; deleted image URL returned HTTP 404; generated file absent from service storage"
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "result": "The local Docker service is usable at the requested 1024x1024 size through both the server-orchestrated generate path and the page SSE edit path. Both temporary results were downloaded, dimension-checked, visually inspected, deleted through their supported cleanup paths, and confirmed unavailable afterward. No formal PetDex asset was changed."
+}

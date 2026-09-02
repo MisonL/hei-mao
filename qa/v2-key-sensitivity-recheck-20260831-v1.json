@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "reconcile conflicting v2 validator results by comparing the recorded per-pet chroma keys with an intentionally uniform key",
+  "correct_key_source": "qa/v2-contract-recheck-20260831-v1.json",
+  "correct_key_result": {
+    "pets": 8,
+    "passed": 8,
+    "failed": 0,
+    "keys": {
+      "hei-mao": "#00FF00",
+      "hei-mao-quality": "#FF00FF",
+      "hei-mao-butler": "#00FF00",
+      "hei-mao-chef": "#00FFFF",
+      "hei-mao-foodie": "#FF00FF",
+      "hei-mao-delivery": "#FF00FF",
+      "hei-mao-fortune": "#00FFFF",
+      "hei-mao-traveler": "#FF00FF"
+    }
+  },
+  "uniform_key_control": {
+    "command": "validate_atlas.py --require-v2 --chroma-key #00FF00",
+    "intent": "reproduce the earlier inconsistent batch result; this is a parameter-sensitivity control, not the release verdict",
+    "pets": 8,
+    "passed": 3,
+    "failed": 5,
+    "pass_slugs": ["hei-mao", "hei-mao-butler", "hei-mao-chef"],
+    "failures": {
+      "hei-mao-quality": 57,
+      "hei-mao-foodie": 55,
+      "hei-mao-delivery": 30,
+      "hei-mao-fortune": 6,
+      "hei-mao-traveler": 1
+    },
+    "evidence_files": [
+      "hei-mao-validation-00ff00-20260831.json",
+      "hei-mao-quality-validation-00ff00-20260831.json",
+      "hei-mao-butler-validation-00ff00-20260831.json",
+      "hei-mao-chef-validation-00ff00-20260831.json",
+      "hei-mao-foodie-validation-00ff00-20260831.json",
+      "hei-mao-delivery-validation-00ff00-20260831.json",
+      "hei-mao-fortune-validation-00ff00-20260831.json",
+      "hei-mao-traveler-validation-00ff00-20260831.json"
+    ]
+  },
+  "conclusion": "3/8 versus 8/8 was caused by using #00FF00 for every pet. The five failing atlases use magenta or cyan chroma keys and are not asset regressions. The release verdict remains the per-pet-key 8/8 result.",
+  "formal_assets_modified": false,
+  "limitations": [
+    "The temporary control files are local evidence and are not authoritative release artifacts.",
+    "This check resolves only the validator-parameter discrepancy; it does not clear the four independent visual animation blockers."
+  ]
+}

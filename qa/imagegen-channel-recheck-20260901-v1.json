@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01T10:02:36Z",
+  "scope": "one authorized real smoke through the configured private image-agent service",
+  "channel_id": "mhapi-image",
+  "upstream_host": "mhapi.net",
+  "default_model": "gpt-image-2",
+  "request_mode": "images-non-stream",
+  "transport": "agent_job_polling",
+  "billable": true,
+  "request_status": "succeeded",
+  "artifact_count": 1,
+  "artifact_format": "WEBP",
+  "artifact_dimensions": "1024x1024",
+  "dimension_check": "passed",
+  "elapsed_ms": 73812,
+  "credential_value_recorded": false,
+  "private_endpoint_recorded": false
+}

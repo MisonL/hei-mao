@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "isolated installer runtime rejection smoke for an unsupported slug",
+  "bash": {
+    "command": "HEI_MAO_NO_ANIMATION=1 NO_COLOR=1 bash install.sh definitely-unknown",
+    "exit_code": 1,
+    "rejected": true
+  },
+  "powershell": {
+    "command": "pwsh -NoLogo -NoProfile -NonInteractive -File install.ps1 -PetId definitely-unknown",
+    "exit_code": 1,
+    "rejected": true
+  },
+  "isolation": "The smoke exits during pet-id validation before target creation; no repository or user pet directory was used.",
+  "temporary_output_cleanup": "removed",
+  "formal_assets_modified": false
+}

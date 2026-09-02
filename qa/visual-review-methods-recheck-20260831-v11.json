@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental small-display and contrast-pressure visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "multi-size squint and contrast stress review",
+    "implementation": "qa/visual-review-alternative-20260831/squint_contrast_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/squint-contrast-candidates-v1.jpg",
+    "evidence": "qa/visual-review-alternative-20260831/squint-contrast-review-20260831-v1.json",
+    "purpose": "在 24x26、32x35、48x52 显示尺寸下，将每帧叠加深色、浅色和高饱和背景，并用灰度 alpha 轮廓和轻度模糊检查主体可读性、局部压扁、边缘闪烁与对比度骤降",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "frames": 584,
+      "candidate_sheet_items": 32
+    },
+    "status": "completed; all selected candidates were inspected at normal display size"
+  },
+  "result": {
+    "new_hard_failures": [],
+    "confirmed_existing_blockers": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; the eight complete-row regeneration blockers remain open"
+  },
+  "limitations": [
+    "这是感知压力测试，不是 Codex App 的真实 GPU、窗口层级或多屏验收",
+    "低对比度可能来自角色本身的合法深色材质，必须结合正常尺寸和动作语义判断",
+    "指标候选不能替代完整动作行重生和 hatch-pet 全部门禁"
+  ]
+}

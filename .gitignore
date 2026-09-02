@@ -1,6 +1,8 @@
 .DS_Store
 *.tmp
 *.log
+__pycache__/
+*.pyc
 
 # Local QA scratch output. Published evidence belongs in qa/ with relative paths.
 qa/current/

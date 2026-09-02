@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T11:20:00Z",
+  "scope": "fresh real smoke of the local Docker image-generation service through the Agent JSON server-channel route",
+  "service": {
+    "container": "gpt-image-playground-customer",
+    "health_probe": "healthy",
+    "runtime_capabilities": "available",
+    "configured_channel": "meinianda-image",
+    "request_mode": "images-non-stream",
+    "model": "gpt-image-2"
+  },
+  "request": {
+    "case": "server-channel-agent-images-json",
+    "size": "1024x1024",
+    "quality": "low",
+    "new_idempotency_run": true,
+    "temporary_artifact_cleanup": "handled by smoke script"
+  },
+  "result": {
+    "ok": false,
+    "status": 502,
+    "elapsed_ms": 2140,
+    "upstream_host": "meinianda.top",
+    "image_count": 0,
+    "artifact_count": 0,
+    "error": "Connection error.",
+    "repair_generation_ready": false
+  },
+  "interpretation": "Agent JSON 路由与页面 JSON 路由均能到达本机服务，但新的真实请求都在 meinianda.top 上游连接阶段失败；本轮没有产出可用于完整动作行重生的图像。",
+  "formal_assets_modified": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_id_recorded": false
+  }
+}

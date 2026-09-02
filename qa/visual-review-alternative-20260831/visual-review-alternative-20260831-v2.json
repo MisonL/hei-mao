@@ -1,0 +1,1158 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent visual robustness review using alternate render/compositing/temporal methods; no formal asset modification",
+  "methods": [
+    {
+      "name": "multi-decoder WebP/alpha parity",
+      "decoders": [
+        "Pillow",
+        "libwebp dwebp",
+        "ImageMagick"
+      ],
+      "purpose": "detect decoder-specific alpha, dimension, or row decode drift",
+      "result": "see decoder_parity"
+    },
+    {
+      "name": "DPR and interpolation stress",
+      "scales": [
+        "0.75x",
+        "1.0x",
+        "1.25x",
+        "2.0x"
+      ],
+      "resampling": [
+        "Lanczos"
+      ],
+      "backgrounds": [
+        "checker",
+        "saturated-stripes",
+        "black-white-gradient"
+      ],
+      "purpose": "detect aspect-ratio distortion, boundary clipping, and edge instability outside the source atlas"
+    },
+    {
+      "name": "color-vision and luminance stress",
+      "transforms": [
+        "normal",
+        "grayscale",
+        "protanopia approximation",
+        "deuteranopia approximation",
+        "tritanopia approximation"
+      ],
+      "display_size": "48x52 equivalent",
+      "purpose": "check pose/silhouette readability when color cues are reduced"
+    },
+    {
+      "name": "compositing/occlusion rehearsal",
+      "purpose": "render representative cells against adversarial backgrounds and bubble-like high-contrast fields to expose hidden RGB, edge bleed, or visually merged silhouettes",
+      "note": "asset-only rehearsal; not a claim about live Codex App z-order",
+      "result": "Adversarial checker/stripe/gradient composite sheet plus a bubble-and-neighbor layering rehearsal; no alpha bbox instability or detached-pixel candidate was promoted. Live Codex App z-order and cross-screen tracking remain separate."
+    },
+    {
+      "name": "temporal anchor and scale trajectory",
+      "purpose": "plot lower-body anchor, bbox height, adjacent duplicate candidates, and abrupt registration/scale candidates over every non-empty frame"
+    }
+  ],
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "frames_checked": 592,
+  "decoder_parity": {
+    "hei-mao": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    },
+    "hei-mao-quality": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    },
+    "hei-mao-butler": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    },
+    "hei-mao-chef": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    },
+    "hei-mao-foodie": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    },
+    "hei-mao-delivery": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    },
+    "hei-mao-fortune": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    },
+    "hei-mao-traveler": {
+      "dimensions": {
+        "pillow": [
+          1536,
+          2288
+        ],
+        "dwebp": [
+          1536,
+          2288
+        ],
+        "imagemagick": [
+          1536,
+          2288
+        ]
+      },
+      "alpha_diff_pixels": {
+        "pillow_vs_dwebp": 0,
+        "pillow_vs_imagemagick": 0
+      },
+      "rgba_mean_abs": {
+        "pillow_vs_dwebp": 0.0,
+        "pillow_vs_imagemagick": 0.0
+      },
+      "status": "pass"
+    }
+  },
+  "trajectory": {
+    "hei-mao": {
+      "candidate_count": 0,
+      "candidates": []
+    },
+    "hei-mao-quality": {
+      "candidate_count": 0,
+      "candidates": []
+    },
+    "hei-mao-butler": {
+      "candidate_count": 0,
+      "candidates": []
+    },
+    "hei-mao-chef": {
+      "candidate_count": 0,
+      "candidates": []
+    },
+    "hei-mao-foodie": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "row": "failed",
+          "kind": "anchor_jump_candidate",
+          "from_frame": 2,
+          "to_frame": 3,
+          "value_px": 10.01,
+          "row_median_step_px": 3.0
+        }
+      ]
+    },
+    "hei-mao-delivery": {
+      "candidate_count": 0,
+      "candidates": []
+    },
+    "hei-mao-fortune": {
+      "candidate_count": 0,
+      "candidates": []
+    },
+    "hei-mao-traveler": {
+      "candidate_count": 0,
+      "candidates": []
+    }
+  },
+  "artifacts": {
+    "adversarial_render_sheet": "qa/visual-review-alternative-20260831/adversarial-render-sheet.jpg",
+    "color_vision_stress_sheet": "qa/visual-review-alternative-20260831/color-vision-stress-sheet.jpg",
+    "temporal_anchor_trajectory_sheet": "qa/visual-review-alternative-20260831/temporal-anchor-trajectory-sheet.jpg"
+  },
+  "interpretation": {
+    "hard_failures_promoted": [],
+    "reviewed_candidates": [
+      {
+        "role": "hei-mao-foodie",
+        "row": "failed",
+        "transition": "frame 2 -> frame 3",
+        "classification": "minor_warning_accepted",
+        "reason": "The 10px lower-body anchor change coincides with the deliberate transition from tearful upright pose to head-down failure pose; contact-sheet review shows no clipping, detached component, or identity switch."
+      }
+    ],
+    "known_failures_expected": [
+      "hei-mao/jumping frame 2 duplicate head",
+      "hei-mao-quality/jumping frame 2 duplicate head",
+      "hei-mao-foodie/waiting stacked head contours",
+      "hei-mao-delivery/failed duplicated head and pose-family switch"
+    ],
+    "release_effect": "This alternate review does not close the four known complete-row regeneration blockers; it adds independent evidence for decoder/render robustness and candidate temporal outliers."
+  },
+  "color_vision_metrics": {
+    "hei-mao": {
+      "idle:normal": {
+        "edge_pixels": 524,
+        "visible_pixels": 1230,
+        "edge_to_visible": 0.426
+      },
+      "idle:gray": {
+        "edge_pixels": 512,
+        "visible_pixels": 1230,
+        "edge_to_visible": 0.4163
+      },
+      "idle:protan": {
+        "edge_pixels": 540,
+        "visible_pixels": 1230,
+        "edge_to_visible": 0.439
+      },
+      "idle:deutan": {
+        "edge_pixels": 519,
+        "visible_pixels": 1230,
+        "edge_to_visible": 0.422
+      },
+      "idle:tritan": {
+        "edge_pixels": 520,
+        "visible_pixels": 1230,
+        "edge_to_visible": 0.4228
+      },
+      "jumping:normal": {
+        "edge_pixels": 536,
+        "visible_pixels": 1119,
+        "edge_to_visible": 0.479
+      },
+      "jumping:gray": {
+        "edge_pixels": 513,
+        "visible_pixels": 1119,
+        "edge_to_visible": 0.4584
+      },
+      "jumping:protan": {
+        "edge_pixels": 521,
+        "visible_pixels": 1119,
+        "edge_to_visible": 0.4656
+      },
+      "jumping:deutan": {
+        "edge_pixels": 515,
+        "visible_pixels": 1119,
+        "edge_to_visible": 0.4602
+      },
+      "jumping:tritan": {
+        "edge_pixels": 537,
+        "visible_pixels": 1119,
+        "edge_to_visible": 0.4799
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 524,
+        "visible_pixels": 1177,
+        "edge_to_visible": 0.4452
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 493,
+        "visible_pixels": 1177,
+        "edge_to_visible": 0.4189
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 509,
+        "visible_pixels": 1177,
+        "edge_to_visible": 0.4325
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 498,
+        "visible_pixels": 1177,
+        "edge_to_visible": 0.4231
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 535,
+        "visible_pixels": 1177,
+        "edge_to_visible": 0.4545
+      }
+    },
+    "hei-mao-quality": {
+      "idle:normal": {
+        "edge_pixels": 625,
+        "visible_pixels": 1235,
+        "edge_to_visible": 0.5061
+      },
+      "idle:gray": {
+        "edge_pixels": 624,
+        "visible_pixels": 1235,
+        "edge_to_visible": 0.5053
+      },
+      "idle:protan": {
+        "edge_pixels": 616,
+        "visible_pixels": 1235,
+        "edge_to_visible": 0.4988
+      },
+      "idle:deutan": {
+        "edge_pixels": 603,
+        "visible_pixels": 1235,
+        "edge_to_visible": 0.4883
+      },
+      "idle:tritan": {
+        "edge_pixels": 624,
+        "visible_pixels": 1235,
+        "edge_to_visible": 0.5053
+      },
+      "jumping:normal": {
+        "edge_pixels": 660,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.5108
+      },
+      "jumping:gray": {
+        "edge_pixels": 660,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.5108
+      },
+      "jumping:protan": {
+        "edge_pixels": 658,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.5093
+      },
+      "jumping:deutan": {
+        "edge_pixels": 655,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.507
+      },
+      "jumping:tritan": {
+        "edge_pixels": 637,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.493
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 449,
+        "visible_pixels": 905,
+        "edge_to_visible": 0.4961
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 441,
+        "visible_pixels": 905,
+        "edge_to_visible": 0.4873
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 463,
+        "visible_pixels": 905,
+        "edge_to_visible": 0.5116
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 460,
+        "visible_pixels": 905,
+        "edge_to_visible": 0.5083
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 444,
+        "visible_pixels": 905,
+        "edge_to_visible": 0.4906
+      }
+    },
+    "hei-mao-butler": {
+      "idle:normal": {
+        "edge_pixels": 452,
+        "visible_pixels": 1191,
+        "edge_to_visible": 0.3795
+      },
+      "idle:gray": {
+        "edge_pixels": 446,
+        "visible_pixels": 1191,
+        "edge_to_visible": 0.3745
+      },
+      "idle:protan": {
+        "edge_pixels": 454,
+        "visible_pixels": 1191,
+        "edge_to_visible": 0.3812
+      },
+      "idle:deutan": {
+        "edge_pixels": 470,
+        "visible_pixels": 1191,
+        "edge_to_visible": 0.3946
+      },
+      "idle:tritan": {
+        "edge_pixels": 435,
+        "visible_pixels": 1191,
+        "edge_to_visible": 0.3652
+      },
+      "jumping:normal": {
+        "edge_pixels": 516,
+        "visible_pixels": 1183,
+        "edge_to_visible": 0.4362
+      },
+      "jumping:gray": {
+        "edge_pixels": 509,
+        "visible_pixels": 1183,
+        "edge_to_visible": 0.4303
+      },
+      "jumping:protan": {
+        "edge_pixels": 494,
+        "visible_pixels": 1183,
+        "edge_to_visible": 0.4176
+      },
+      "jumping:deutan": {
+        "edge_pixels": 492,
+        "visible_pixels": 1183,
+        "edge_to_visible": 0.4159
+      },
+      "jumping:tritan": {
+        "edge_pixels": 489,
+        "visible_pixels": 1183,
+        "edge_to_visible": 0.4134
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 325,
+        "visible_pixels": 795,
+        "edge_to_visible": 0.4088
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 337,
+        "visible_pixels": 795,
+        "edge_to_visible": 0.4239
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 340,
+        "visible_pixels": 795,
+        "edge_to_visible": 0.4277
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 353,
+        "visible_pixels": 795,
+        "edge_to_visible": 0.444
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 345,
+        "visible_pixels": 795,
+        "edge_to_visible": 0.434
+      }
+    },
+    "hei-mao-chef": {
+      "idle:normal": {
+        "edge_pixels": 427,
+        "visible_pixels": 1014,
+        "edge_to_visible": 0.4211
+      },
+      "idle:gray": {
+        "edge_pixels": 412,
+        "visible_pixels": 1014,
+        "edge_to_visible": 0.4063
+      },
+      "idle:protan": {
+        "edge_pixels": 432,
+        "visible_pixels": 1014,
+        "edge_to_visible": 0.426
+      },
+      "idle:deutan": {
+        "edge_pixels": 439,
+        "visible_pixels": 1014,
+        "edge_to_visible": 0.4329
+      },
+      "idle:tritan": {
+        "edge_pixels": 416,
+        "visible_pixels": 1014,
+        "edge_to_visible": 0.4103
+      },
+      "jumping:normal": {
+        "edge_pixels": 457,
+        "visible_pixels": 979,
+        "edge_to_visible": 0.4668
+      },
+      "jumping:gray": {
+        "edge_pixels": 442,
+        "visible_pixels": 979,
+        "edge_to_visible": 0.4515
+      },
+      "jumping:protan": {
+        "edge_pixels": 460,
+        "visible_pixels": 979,
+        "edge_to_visible": 0.4699
+      },
+      "jumping:deutan": {
+        "edge_pixels": 477,
+        "visible_pixels": 979,
+        "edge_to_visible": 0.4872
+      },
+      "jumping:tritan": {
+        "edge_pixels": 461,
+        "visible_pixels": 979,
+        "edge_to_visible": 0.4709
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 418,
+        "visible_pixels": 862,
+        "edge_to_visible": 0.4849
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 408,
+        "visible_pixels": 862,
+        "edge_to_visible": 0.4733
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 413,
+        "visible_pixels": 862,
+        "edge_to_visible": 0.4791
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 420,
+        "visible_pixels": 862,
+        "edge_to_visible": 0.4872
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 400,
+        "visible_pixels": 862,
+        "edge_to_visible": 0.464
+      }
+    },
+    "hei-mao-foodie": {
+      "idle:normal": {
+        "edge_pixels": 614,
+        "visible_pixels": 1551,
+        "edge_to_visible": 0.3959
+      },
+      "idle:gray": {
+        "edge_pixels": 590,
+        "visible_pixels": 1551,
+        "edge_to_visible": 0.3804
+      },
+      "idle:protan": {
+        "edge_pixels": 608,
+        "visible_pixels": 1551,
+        "edge_to_visible": 0.392
+      },
+      "idle:deutan": {
+        "edge_pixels": 603,
+        "visible_pixels": 1551,
+        "edge_to_visible": 0.3888
+      },
+      "idle:tritan": {
+        "edge_pixels": 597,
+        "visible_pixels": 1551,
+        "edge_to_visible": 0.3849
+      },
+      "jumping:normal": {
+        "edge_pixels": 587,
+        "visible_pixels": 1528,
+        "edge_to_visible": 0.3842
+      },
+      "jumping:gray": {
+        "edge_pixels": 566,
+        "visible_pixels": 1528,
+        "edge_to_visible": 0.3704
+      },
+      "jumping:protan": {
+        "edge_pixels": 601,
+        "visible_pixels": 1528,
+        "edge_to_visible": 0.3933
+      },
+      "jumping:deutan": {
+        "edge_pixels": 598,
+        "visible_pixels": 1528,
+        "edge_to_visible": 0.3914
+      },
+      "jumping:tritan": {
+        "edge_pixels": 589,
+        "visible_pixels": 1528,
+        "edge_to_visible": 0.3855
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 541,
+        "visible_pixels": 1124,
+        "edge_to_visible": 0.4813
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 544,
+        "visible_pixels": 1124,
+        "edge_to_visible": 0.484
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 545,
+        "visible_pixels": 1124,
+        "edge_to_visible": 0.4849
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 541,
+        "visible_pixels": 1124,
+        "edge_to_visible": 0.4813
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 517,
+        "visible_pixels": 1124,
+        "edge_to_visible": 0.46
+      }
+    },
+    "hei-mao-delivery": {
+      "idle:normal": {
+        "edge_pixels": 608,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.4706
+      },
+      "idle:gray": {
+        "edge_pixels": 600,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.4644
+      },
+      "idle:protan": {
+        "edge_pixels": 567,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.4389
+      },
+      "idle:deutan": {
+        "edge_pixels": 561,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.4342
+      },
+      "idle:tritan": {
+        "edge_pixels": 621,
+        "visible_pixels": 1292,
+        "edge_to_visible": 0.4807
+      },
+      "jumping:normal": {
+        "edge_pixels": 645,
+        "visible_pixels": 1385,
+        "edge_to_visible": 0.4657
+      },
+      "jumping:gray": {
+        "edge_pixels": 632,
+        "visible_pixels": 1385,
+        "edge_to_visible": 0.4563
+      },
+      "jumping:protan": {
+        "edge_pixels": 620,
+        "visible_pixels": 1385,
+        "edge_to_visible": 0.4477
+      },
+      "jumping:deutan": {
+        "edge_pixels": 611,
+        "visible_pixels": 1385,
+        "edge_to_visible": 0.4412
+      },
+      "jumping:tritan": {
+        "edge_pixels": 653,
+        "visible_pixels": 1385,
+        "edge_to_visible": 0.4715
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 508,
+        "visible_pixels": 1102,
+        "edge_to_visible": 0.461
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 504,
+        "visible_pixels": 1102,
+        "edge_to_visible": 0.4574
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 467,
+        "visible_pixels": 1102,
+        "edge_to_visible": 0.4238
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 480,
+        "visible_pixels": 1102,
+        "edge_to_visible": 0.4356
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 510,
+        "visible_pixels": 1102,
+        "edge_to_visible": 0.4628
+      }
+    },
+    "hei-mao-fortune": {
+      "idle:normal": {
+        "edge_pixels": 667,
+        "visible_pixels": 1323,
+        "edge_to_visible": 0.5042
+      },
+      "idle:gray": {
+        "edge_pixels": 653,
+        "visible_pixels": 1323,
+        "edge_to_visible": 0.4936
+      },
+      "idle:protan": {
+        "edge_pixels": 653,
+        "visible_pixels": 1323,
+        "edge_to_visible": 0.4936
+      },
+      "idle:deutan": {
+        "edge_pixels": 654,
+        "visible_pixels": 1323,
+        "edge_to_visible": 0.4943
+      },
+      "idle:tritan": {
+        "edge_pixels": 626,
+        "visible_pixels": 1323,
+        "edge_to_visible": 0.4732
+      },
+      "jumping:normal": {
+        "edge_pixels": 619,
+        "visible_pixels": 1266,
+        "edge_to_visible": 0.4889
+      },
+      "jumping:gray": {
+        "edge_pixels": 598,
+        "visible_pixels": 1266,
+        "edge_to_visible": 0.4724
+      },
+      "jumping:protan": {
+        "edge_pixels": 621,
+        "visible_pixels": 1266,
+        "edge_to_visible": 0.4905
+      },
+      "jumping:deutan": {
+        "edge_pixels": 625,
+        "visible_pixels": 1266,
+        "edge_to_visible": 0.4937
+      },
+      "jumping:tritan": {
+        "edge_pixels": 583,
+        "visible_pixels": 1266,
+        "edge_to_visible": 0.4605
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 555,
+        "visible_pixels": 1179,
+        "edge_to_visible": 0.4707
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 532,
+        "visible_pixels": 1179,
+        "edge_to_visible": 0.4512
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 562,
+        "visible_pixels": 1179,
+        "edge_to_visible": 0.4767
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 552,
+        "visible_pixels": 1179,
+        "edge_to_visible": 0.4682
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 546,
+        "visible_pixels": 1179,
+        "edge_to_visible": 0.4631
+      }
+    },
+    "hei-mao-traveler": {
+      "idle:normal": {
+        "edge_pixels": 761,
+        "visible_pixels": 1556,
+        "edge_to_visible": 0.4891
+      },
+      "idle:gray": {
+        "edge_pixels": 742,
+        "visible_pixels": 1556,
+        "edge_to_visible": 0.4769
+      },
+      "idle:protan": {
+        "edge_pixels": 757,
+        "visible_pixels": 1556,
+        "edge_to_visible": 0.4865
+      },
+      "idle:deutan": {
+        "edge_pixels": 762,
+        "visible_pixels": 1556,
+        "edge_to_visible": 0.4897
+      },
+      "idle:tritan": {
+        "edge_pixels": 741,
+        "visible_pixels": 1556,
+        "edge_to_visible": 0.4762
+      },
+      "jumping:normal": {
+        "edge_pixels": 610,
+        "visible_pixels": 1252,
+        "edge_to_visible": 0.4872
+      },
+      "jumping:gray": {
+        "edge_pixels": 598,
+        "visible_pixels": 1252,
+        "edge_to_visible": 0.4776
+      },
+      "jumping:protan": {
+        "edge_pixels": 597,
+        "visible_pixels": 1252,
+        "edge_to_visible": 0.4768
+      },
+      "jumping:deutan": {
+        "edge_pixels": 605,
+        "visible_pixels": 1252,
+        "edge_to_visible": 0.4832
+      },
+      "jumping:tritan": {
+        "edge_pixels": 607,
+        "visible_pixels": 1252,
+        "edge_to_visible": 0.4848
+      },
+      "look-row-9:normal": {
+        "edge_pixels": 624,
+        "visible_pixels": 1188,
+        "edge_to_visible": 0.5253
+      },
+      "look-row-9:gray": {
+        "edge_pixels": 605,
+        "visible_pixels": 1188,
+        "edge_to_visible": 0.5093
+      },
+      "look-row-9:protan": {
+        "edge_pixels": 632,
+        "visible_pixels": 1188,
+        "edge_to_visible": 0.532
+      },
+      "look-row-9:deutan": {
+        "edge_pixels": 626,
+        "visible_pixels": 1188,
+        "edge_to_visible": 0.5269
+      },
+      "look-row-9:tritan": {
+        "edge_pixels": 619,
+        "visible_pixels": 1188,
+        "edge_to_visible": 0.521
+      }
+    }
+  },
+  "render_stress": {
+    "hei-mao": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 198,
+      "max_aspect_ratio_relative_deviation": 0.05138,
+      "cross_background_bbox_variants": 0
+    },
+    "hei-mao-quality": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 99,
+      "max_aspect_ratio_relative_deviation": 0.056,
+      "cross_background_bbox_variants": 0
+    },
+    "hei-mao-butler": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 222,
+      "max_aspect_ratio_relative_deviation": 0.04574,
+      "cross_background_bbox_variants": 0
+    },
+    "hei-mao-chef": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 222,
+      "max_aspect_ratio_relative_deviation": 0.0437,
+      "cross_background_bbox_variants": 0
+    },
+    "hei-mao-foodie": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 207,
+      "max_aspect_ratio_relative_deviation": 0.02548,
+      "cross_background_bbox_variants": 0
+    },
+    "hei-mao-delivery": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 222,
+      "max_aspect_ratio_relative_deviation": 0.02256,
+      "cross_background_bbox_variants": 0
+    },
+    "hei-mao-fortune": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 222,
+      "max_aspect_ratio_relative_deviation": 0.0375,
+      "cross_background_bbox_variants": 0
+    },
+    "hei-mao-traveler": {
+      "tested_renders": 888,
+      "clipped_bbox_count": 0,
+      "near_edge_bbox_count": 96,
+      "max_aspect_ratio_relative_deviation": 0.04029,
+      "cross_background_bbox_variants": 0
+    }
+  },
+  "bubble_overlap_rehearsal": {
+    "scene_size": [
+      680,
+      360
+    ],
+    "roles": {
+      "hei-mao": {
+        "pet_direct_bbox": [
+          28,
+          5,
+          164,
+          203
+        ],
+        "scaled_bbox": [
+          21,
+          2,
+          139,
+          172
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      },
+      "hei-mao-quality": {
+        "pet_direct_bbox": [
+          21,
+          5,
+          175,
+          203
+        ],
+        "scaled_bbox": [
+          17,
+          5,
+          148,
+          170
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      },
+      "hei-mao-butler": {
+        "pet_direct_bbox": [
+          36,
+          5,
+          156,
+          203
+        ],
+        "scaled_bbox": [
+          29,
+          2,
+          131,
+          172
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      },
+      "hei-mao-chef": {
+        "pet_direct_bbox": [
+          44,
+          5,
+          148,
+          203
+        ],
+        "scaled_bbox": [
+          34,
+          2,
+          126,
+          172
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      },
+      "hei-mao-foodie": {
+        "pet_direct_bbox": [
+          7,
+          5,
+          185,
+          203
+        ],
+        "scaled_bbox": [
+          5,
+          2,
+          155,
+          172
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      },
+      "hei-mao-delivery": {
+        "pet_direct_bbox": [
+          24,
+          5,
+          167,
+          203
+        ],
+        "scaled_bbox": [
+          19,
+          2,
+          140,
+          172
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      },
+      "hei-mao-fortune": {
+        "pet_direct_bbox": [
+          19,
+          5,
+          173,
+          203
+        ],
+        "scaled_bbox": [
+          14,
+          2,
+          145,
+          172
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      },
+      "hei-mao-traveler": {
+        "pet_direct_bbox": [
+          8,
+          11,
+          184,
+          203
+        ],
+        "scaled_bbox": [
+          5,
+          9,
+          156,
+          170
+        ],
+        "neighbor_and_bubble_layers": "pass",
+        "manual_live_app_boundary": "not_tested"
+      }
+    },
+    "artifact": "qa/visual-review-alternative-20260831/bubble-overlap-rehearsal-sheet.jpg",
+    "live_app_verification": "not_substituted"
+  },
+  "render_stress_summary": {
+    "total_renders": 7104,
+    "clipped_bbox_count": 0,
+    "near_edge_bbox_count": 1488,
+    "max_aspect_ratio_relative_deviation": 0.056,
+    "interpretation": "near-edge counts are review-only because the source silhouettes intentionally use most of the 192x208 cell; no rendered bbox crossed the canvas and the small-scale ratio deviation is integer/resampling quantization, not non-uniform scaling"
+  }
+}

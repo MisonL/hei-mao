@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T22:39:23Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker image channel recovery, custom-model support and non-billable contract recheck",
+  "service_checks": {
+    "container_health": "healthy",
+    "agent_capabilities_contract": "pass",
+    "runtime_capabilities_contract": "pass",
+    "orchestration": "server_owned",
+    "effective_request_modes": ["images-non-stream", "images-sse"],
+    "recommended_concurrency": 1,
+    "custom_model": "gpt-image-2-1k",
+    "model_directory_probe": {
+      "endpoint": "/api/agent/models?probe=true",
+      "http_status": 200,
+      "probe_status": "ok",
+      "custom_models": [
+        "gemini-3.1-flash-image",
+        "gpt-image-2-1k",
+        "grok-imagine-image",
+        "grok-imagine-image-quality",
+        "nai-diffusion-4-5-full"
+      ]
+    },
+    "custom_model_request_construction": "accepted",
+    "responses_image_backend": "declared_but_not_enabled"
+  },
+  "non_billable_remote_check": {
+    "capabilities_read": true,
+    "runtime_read": true,
+    "billable_request_sent": false,
+    "local_request_size": "1024x1536",
+    "dimension_check_configuration": "enabled"
+  },
+  "prior_real_smoke_authority": {
+    "evidence": "qa/imagegen-channel-recheck-20260822-v15.json",
+    "source_reference": "gpt-image-2-1k produced a 1024x1536 WebP and passed source-reference visual inspection",
+    "fixed_size": "a 1024x1024 request produced 1254x1254 and was rejected by the dimension gate",
+    "artifact_cleanup": "both temporary artifacts were deleted and metadata/content returned 404",
+    "formal_assets_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The recovered local service accepts the custom-model request path and passes non-billable Agent capability/runtime checks. The latest real smoke remains usable only as a source reference because fixed-size output is still not compliant; no formal pet atlas was changed and no new billable request was sent."
+}

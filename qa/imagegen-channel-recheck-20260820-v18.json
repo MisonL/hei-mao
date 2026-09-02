@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-20T15:15:00Z",
+  "scope": "post-user-confirmation Quality row-9 generation channel recheck",
+  "service_checks": {
+    "local_docker": {
+      "container_health": "pass",
+      "agent_contract": "pass",
+      "effective_request_modes": [],
+      "channel_health": "probe_pending",
+      "request": {
+        "transport": "agent_json",
+        "status": "rejected_before_upstream",
+        "error_code": "configuration_error",
+        "http_status": 503,
+        "billable": true,
+        "artifact_count": 0
+      }
+    },
+    "deployed_service": {
+      "channel_health_diagnostic": "healthy",
+      "agent_auth": "rejected",
+      "agent_request": {
+        "transport": "agent_json",
+        "status": "rejected_before_upstream",
+        "error_code": "unauthorized",
+        "http_status": 401,
+        "billable": true,
+        "artifact_count": 0
+      },
+      "page_request": {
+        "transport": "page_sse",
+        "status": "rejected_before_upstream",
+        "error_code": "page_sse_request_rejected",
+        "http_status": 403,
+        "billable": false,
+        "artifact_count": 0
+      }
+    }
+  },
+  "quality_row_9": {
+    "role": "hei-mao-quality",
+    "candidate_generated": false,
+    "formal_assets_modified": false,
+    "formal_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "keep_formal_quality_assets_unchanged_until_a_valid_authenticated_channel_returns_a_real_candidate_artifact"
+}

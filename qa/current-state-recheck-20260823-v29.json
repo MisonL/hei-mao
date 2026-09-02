@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T06:58:40Z",
+  "scope": "fresh local usability state after image-generation dimension normalization fix",
+  "image_generation": {
+    "service": "local Docker GPT Image Playground",
+    "container": "healthy",
+    "default_model": "gpt-image-2-1k",
+    "requested_size": "1536x2288",
+    "real_smoke": "pass; strict dimension check returned 1536x2288 WebP",
+    "rounding_drift_handling": "bounded aspect-preserving contain normalization",
+    "temporary_artifact_cleanup": "pass; metadata/content returned 404 after deletion",
+    "formal_petdex_assets_changed": false
+  },
+  "code_verification": {
+    "image_service_tests": "19 passed",
+    "prettier": "pass",
+    "eslint": "pass",
+    "typescript": "pass",
+    "production_build": "pass",
+    "isolated_container_contract": "pass"
+  },
+  "existing_boundaries": {
+    "petdex_assets_and_sha_parity": "unchanged from v28",
+    "hooks": "unchanged from v28",
+    "codex_app_visual_acceptance": "still unverified because live display capture boundary is unavailable"
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "process_identifiers": false
+  },
+  "decision": "The local image-generation service is usable for the approved 1536x2288 PetDex atlas workflow. Full real Codex App visual acceptance remains explicitly unverified and is unrelated to this service fix."
+}

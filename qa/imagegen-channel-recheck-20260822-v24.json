@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T12:12:08Z",
+  "scope": "local Docker image-generation service real source-reference smoke",
+  "service_checks": {
+    "agent_capabilities": "pass",
+    "agent_doctor": "pass",
+    "runtime_capabilities": "pass",
+    "channel_request_mode": "images-non-stream",
+    "orchestration": "server_owned_job_polling",
+    "post_request_health": "pass"
+  },
+  "smoke": {
+    "authorized_real_smoke": true,
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1024x1024",
+    "format": "webp",
+    "mode": "RGBA",
+    "dimension_check": "pass",
+    "visual_check": "full-body reference, no crop or squash observed",
+    "formal_asset_eligible": false,
+    "formal_asset_decision": "source-reference validation only; no eight-role atlas replacement"
+  },
+  "cleanup": {
+    "metadata_before_delete": 200,
+    "delete": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_retained": false
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The local Docker service completed a real controlled source-reference request through the default Agent orchestration path and returned a matching 1024x1024 RGBA WebP. The dimension gate, post-request health check, and artifact cleanup passed. The service is usable for subsequent hatch-pet source-reference work; formal PetDex assets were not changed."
+}

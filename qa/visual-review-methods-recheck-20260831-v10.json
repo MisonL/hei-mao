@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "silhouette thickness-field and local-width review",
+    "implementation": "qa/visual-review-alternative-20260831/thickness_field_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/thickness-field-candidates-v1.jpg",
+    "evidence": "qa/visual-review-alternative-20260831/thickness-field-review-20260831-v1.json",
+    "purpose": "用完整分辨率和 48x52 显示尺寸的 alpha 距离场，比较每帧头部、躯干和四肢的局部厚度，识别外接框正常但主体局部被压扁、变薄或收窄的情况",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "frames": 584,
+      "display_size": "48x52",
+      "candidate_sheet_items": 32
+    },
+    "status": "completed; candidate sheet inspected at normal display size; no additional hard failure promoted"
+  },
+  "why_complementary": [
+    "距离场直接衡量轮廓内部的局部厚度，不依赖单一 bbox 或整行平均宽度，因此可补充发现局部压扁、细颈和主体变薄",
+    "同时在 192x208 原始轮廓和 48x52 小尺寸轮廓上取样，区分仅存在于高分辨率的细节变化与实际显示端可见的厚度损失",
+    "候选图并列展示原帧、二值轮廓、厚度热力图和行中值轮廓；已知阻断作为控制样本保留，数值离群不自动升级为发布失败"
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "confirmed_existing_hard_failures": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+      "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+    ],
+    "still_open_from_combined_qa": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; the eight complete-row regeneration blockers remain open"
+  },
+  "limitations": [
+    "距离场和厚度曲线没有语义部位标签，合法的四肢、服饰或道具变化仍需正常尺寸视觉确认",
+    "行中值比较可能漏掉整行共同的压缩问题，因此不能替代角色 idle 包络和跨状态比例复核",
+    "这是资产级复核，不能证明 Codex App 窗口层级、多屏定位、气泡跟随或 GPU 合成",
+    "厚度热力图和二值轮廓是审查辅助图，不会写入正式精灵图"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T07:03:40Z",
+  "scope": "fresh isolated local PetDex Codex Hook wrapper stdin lifecycle recheck",
+  "wrapper_contract": {
+    "events": [
+      "UserPromptSubmit",
+      "PreToolUse",
+      "PostToolUse",
+      "PermissionRequest",
+      "Stop"
+    ],
+    "configured_idle_timeout_ms": 250,
+    "configured_total_timeout_ms": 1500,
+    "isolated_test_idle_timeout_ms": 100,
+    "isolated_test_total_timeout_ms": 1000,
+    "native_runner": "unchanged signed PetDex runner"
+  },
+  "isolated_tests": {
+    "closed_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "open_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "maximum_elapsed_ms": 220
+  },
+  "upstream_boundary": {
+    "issue": "689",
+    "state": "open",
+    "native_runner_eof_semantics": "still waits for EOF after a complete payload",
+    "local_wrapper_mitigation": "pass; open-stdin calls exit within the bounded wrapper window",
+    "upstream_fix_claimed": false,
+    "draft_pr_710": "open draft; unrelated desktop bubble revamp and not an EOF fix"
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_or_petdex_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "only_isolated_test_children_used": true
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false
+  },
+  "result": "The local bounded wrapper prevents the known open-stdin hang for all five configured Codex Hook events. The upstream native runner and issue 689 remain unresolved."
+}

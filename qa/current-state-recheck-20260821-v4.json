@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T11:10:37Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release acceptance state with latest read-only app boundary",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "pending fresh validator run; prior gate 8/8 pass, v2 8x11 RGBA WEBP",
+    "hatch_pet_tests": "pending fresh test run; prior gate 28 passed",
+    "three_directory_sha_parity": "8/8 pass",
+    "formal_assets_modified": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260821-v3.json",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "image_contract": "8/8 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates_pending_review": ["hei-mao", "hei-mao-quality", "hei-mao-delivery", "hei-mao-foodie", "hei-mao-fortune", "hei-mao-traveler"],
+    "historical_duplicate": "hei-mao-2 remains record-only; no deletion or replacement attempted"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260821-v8.json",
+    "local_docker": "contract and channel health checks pass, but the latest authorized gpt-image-2 orchestration smoke reached the upstream and returned 503 with zero artifacts",
+    "external_observation": "user-provided backend screenshot shows other successful gpt-image-2 records without local request/artifact correlation",
+    "request_reconciliation": "Agent state confirms the local request is failed with zero artifacts; immediate response and stored state disagree on retryable classification",
+    "result": "no image or artifact",
+    "formal_assets_changed": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-hook-eof-recheck-20260821-v1.json",
+    "open_stdin": "waits for EOF",
+    "closed_stdin": "exits normally",
+    "upstream_issue": "689 remains open",
+    "upstream_draft_pr": "710 remains open and draft"
+  },
+  "codex_app": {
+    "evidence": "qa/codex-app-boundary-recheck-20260821-v1.json",
+    "window_server_window_visible": true,
+    "native_capture": "failed",
+    "full_refresh_role_direction_animation_multidisplay_acceptance": "unverified",
+    "process_mutation": "none"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "online SHA synchronization, full Codex App acceptance, Hook EOF upstream fix and successful local image generation remain open; local asset and install gates require the fresh validator/test run before final closeout"
+}

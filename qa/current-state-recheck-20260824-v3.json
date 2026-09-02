@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T04:22:50Z",
+  "scope": "fresh eight-role PetDex release and runtime-boundary audit",
+  "local_assets": {
+    "roles": "8/8",
+    "v2_contract": "8/8; 1536x2288; 8x11; RGBA WebP; validator errors and warnings 0",
+    "hatch_pet_tests": "28 passed",
+    "installer_and_privacy_checks": "Bash, ShellCheck, PowerShell parse, JSON, diff and public-file privacy checks passed",
+    "three_directory_sha_parity": "8/8 roles and 16/16 files match",
+    "formal_assets_changed": false
+  },
+  "petdex_public_resources": {
+    "manifest": "4579 entries; 8/8 current slugs; historical hei-mao-2 recorded only",
+    "actual_metadata_and_spritesheets": "8/8 HTTP 200; metadata v2; 1536x2288 WebP RGBA",
+    "public_sha_match": "8/8",
+    "owned_slug_readonly": "8/8 approved",
+    "mutation_performed": false
+  },
+  "hooks": {
+    "local_wrapper": "5 events x closed/open stdin = 10/10 natural exits; maximum isolated elapsed time 280ms",
+    "issue_689": "open; upstream native EOF behavior unresolved",
+    "pr_710": "open draft; not an EOF fix",
+    "existing_processes_touched": false
+  },
+  "codex_app_runtime": {
+    "settings_list": "all eight current roles visible in user-provided evidence",
+    "full_runtime": "unverified: refresh, per-role selection/restoration, four-direction switching, animation loop, multi-role selection and cross-display bubble following",
+    "ui_input_sent": false
+  },
+  "image_generation": {
+    "service": "local Docker GPT Image Playground",
+    "new_generation_requested": false
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "process_identifiers": false
+  },
+  "decision": "Local assets, public PetDex resources, owned-slug read-only resolution, installation checks, Hook wrapper mitigation and privacy gates pass. The upstream EOF issue and full Codex App runtime acceptance remain unverified or unresolved."
+}

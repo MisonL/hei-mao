@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "fresh read-only upstream PetDex main, release, hook issue/PR, and bubble issue status",
+  "main": {
+    "head": "5323e43624bdd065fc65f3b3aa572404d51ce75d",
+    "latest_subject": "fix(built-with): keep hero content visible (#765)",
+    "committed_at": "2026-08-30T08:23:25Z"
+  },
+  "issues_and_prs": {
+    "689": {
+      "state": "closed",
+      "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住"
+    },
+    "752": {
+      "state": "closed",
+      "merged_at": "2026-08-29T22:05:37Z",
+      "title": "fix(hooks): bound input draining and preserve single-server ownership"
+    },
+    "710": {
+      "state": "open",
+      "title": "WIP: Native bubble revamp and platform parity"
+    }
+  },
+  "releases": {
+    "cli": "cli-v1.3.0",
+    "desktop": "desktop-v0.9.1"
+  },
+  "mutation": {
+    "performed": false
+  },
+  "result": "No new hook fix beyond merged PR #752 was observed; the native bubble parity issue #710 remains open."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "local Bash and PowerShell installer syntax, supported slug installs, and unknown slug rejection",
+  "bash": {
+    "syntax": {
+      "command": "bash -n install.sh",
+      "exit_code": 0
+    },
+    "shellcheck": {
+      "command": "shellcheck --shell=bash --severity=warning install.sh",
+      "exit_code": 0,
+      "diagnostics": 0
+    },
+    "supported_slugs_installed": 8,
+    "unknown_slug_rejected": true
+  },
+  "powershell": {
+    "parse": {
+      "command": "System.Management.Automation.Language.Parser::ParseFile install.ps1",
+      "exit_code": 0
+    },
+    "supported_slugs_installed": 8,
+    "unknown_slug_rejected": true
+  },
+  "isolation": "All installs targeted a temporary directory outside the user pet directories; temporary output was removed after verification.",
+  "formal_assets_modified": false
+}

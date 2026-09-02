@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "current eight-pet QA coverage audit",
+  "roles": [
+    {
+      "slug": "hei-mao",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 10
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 6
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 1
+      },
+      "historical_final_visual_qa": {
+        "ok": true,
+        "visual_qa": "pass_with_reviewed_warnings",
+        "warnings": 4
+      }
+    },
+    {
+      "slug": "hei-mao-quality",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 11
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 5
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0
+      },
+      "historical_final_visual_qa": {
+        "ok": true,
+        "visual_qa": "pass_with_reviewed_warnings",
+        "warnings": 2
+      }
+    },
+    {
+      "slug": "hei-mao-butler",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 6
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 6
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0
+      },
+      "historical_final_visual_qa": {
+        "ok": false,
+        "visual_qa": "pass_with_reviewed_warnings",
+        "warnings": 3
+      }
+    },
+    {
+      "slug": "hei-mao-chef",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 6
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0
+      },
+      "historical_final_visual_qa": {
+        "ok": false,
+        "visual_qa": "pass_with_reviewed_warnings",
+        "warnings": 5
+      }
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 4
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 9
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0
+      },
+      "historical_final_visual_qa": {
+        "ok": true,
+        "visual_qa": "pass",
+        "warnings": 4
+      }
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 9
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 6
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0
+      },
+      "historical_final_visual_qa": {
+        "ok": true,
+        "visual_qa": "pass_with_reviewed_warnings",
+        "warnings": 6
+      }
+    },
+    {
+      "slug": "hei-mao-fortune",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 11
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 4
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0
+      },
+      "historical_final_visual_qa": {
+        "ok": true,
+        "visual_qa": "pass_with_reviewed_warnings",
+        "warnings": 3
+      }
+    },
+    {
+      "slug": "hei-mao-traveler",
+      "pet_contract": {
+        "id_matches": true,
+        "spriteVersionNumber": 2
+      },
+      "v2_validator": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "dimensions": [
+          1536,
+          2288
+        ],
+        "format": "WEBP",
+        "mode": "RGBA",
+        "transparent_rgb_residue_pixels": 0
+      },
+      "direction_semantics": {
+        "entries": 16,
+        "required_fields_ok": true,
+        "fails": 0
+      },
+      "blind_validation": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 3
+      },
+      "continuity": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 9
+      },
+      "review_json": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 9
+      },
+      "historical_final_visual_qa": {
+        "ok": true,
+        "visual_qa": "pass_with_reviewed_warnings",
+        "warnings": 5
+      }
+    }
+  ],
+  "coverage_summary": {
+    "roles": 8,
+    "v2_contract_pass": 8,
+    "direction_semantics_16_with_required_fields": 8,
+    "blind_validation_ok": 8,
+    "continuity_ok": 8,
+    "review_json_without_errors": 8,
+    "historical_final_visual_qa_records": 6
+  },
+  "current_supplemental_visual_blockers": [
+    "hei-mao/jumping frame 2 duplicate head",
+    "hei-mao-quality/jumping frame 2 duplicate head",
+    "hei-mao-foodie/waiting stacked head/ear contours",
+    "hei-mao-delivery/failed duplicated head frames 0-3 and pose-family switch at frame 4"
+  ],
+  "release_status": "blocked_by_four_complete_row_regenerations",
+  "formal_assets_modified": false
+}

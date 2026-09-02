@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T23:01:17Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker custom-model real smoke after channel recovery",
+  "service_checks": {
+    "container_health": "healthy",
+    "model_directory_probe": "HTTP 200",
+    "custom_model_listed": true,
+    "custom_model": "gpt-image-2-1k",
+    "agent_orchestration_contract": "pass",
+    "request_mode": "images-non-stream",
+    "transport": "agent_json"
+  },
+  "billable_smoke": {
+    "request_count": 1,
+    "status": "generated",
+    "model": "gpt-image-2-1k",
+    "requested_size": "1024x1536",
+    "actual_dimensions": "1024x1536",
+    "format": "webp",
+    "image_count": 1,
+    "route": "/api/agent/images/generate",
+    "selected_channel_request_mode": "images-non-stream",
+    "custom_model_contract": "accepted_and_executed",
+    "elapsed_ms": 42208,
+    "formal_asset_eligible": false
+  },
+  "artifact_cleanup": {
+    "metadata_before_delete": 200,
+    "content_before_delete": 200,
+    "delete": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_retained": false
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The recovered local Docker channel lists and executes the requested custom model and returns a size-compliant 1024x1536 WebP. This confirms custom-model generation is usable for a source-reference smoke; no formal pet atlas was changed. The earlier 1024x1024 provider-size mismatch remains a separate fixed-size gate boundary."
+}

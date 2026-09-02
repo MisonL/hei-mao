@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "cycle recurrence matrix with five-frame onion skin",
+    "implementation": "qa/visual-review-alternative-20260831/cycle_recurrence_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/cycle-recurrence-candidates-v1.jpg",
+    "non_blocker_sheet": "qa/visual-review-alternative-20260831/cycle-recurrence-nonblock-candidates-v1.jpg",
+    "evidence": "qa/visual-review-alternative-20260831/cycle-recurrence-review-20260831-v1.json",
+    "purpose": "按每行动作的下半身锚点和基线归一化后，比较全行非相邻帧的 alpha/亮度/边缘/颜色描述子，并用五帧洋葱皮和完整循环缩略带检查意外重复、相位反转、双头或多分叉轨迹",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "frames": 584,
+      "cyclic_transitions": 584,
+      "candidate_sheet_frames": 24
+    },
+    "status": "completed; both candidate sheets inspected at normal display size; no additional hard failure promoted"
+  },
+  "why_complementary": [
+    "它以整行动作的循环复现矩阵为对象，不只比较相邻帧，因此能捕捉非相邻意外重复、动作相位倒置和姿态族回跳",
+    "五帧洋葱皮同时显示前后各两帧的归一化轮廓，便于区分合法的四肢/道具摆动与重复头、堆叠轮廓或多分叉轨迹",
+    "完整循环缩略带保留帧序上下文；候选评分只用于筛选，硬失败仍由正常尺寸语义复核和 hatch-pet 规则决定"
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "confirmed_existing_hard_failures": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+      "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+    ],
+    "still_open_from_combined_qa": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; all eight complete-row regeneration blockers remain open"
+  },
+  "limitations": [
+    "描述子和复现矩阵没有语义标签，合法的跳跃回落、道具摆动或相似卡顿姿势可能产生候选",
+    "锚点归一化不能替代真实浏览器/GPU 合成和 Codex App 实机播放，也不能证明窗口层级、多屏位置或气泡跟随",
+    "图中粉色/彩色洋葱皮是审查辅助叠加，不是正式精灵像素；正式图集未被修改",
+    "八个阻断行仍必须在生图服务可用后按完整行重生，并重新执行全部确定性与视觉门禁"
+  ]
+}

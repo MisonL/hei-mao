@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "alpha scanline segmentation and full-resolution disconnected-component review",
+    "implementation": "qa/visual-review-alternative-20260831/scanline_segment_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/scanline-segment-candidates-v1.jpg",
+    "evidence": "qa/visual-review-alternative-20260831/scanline-segment-review-20260831-v1.json",
+    "manual_review": "qa/visual-review-alternative-20260831/scanline-segment-manual-review-20260831-v1.json",
+    "purpose": "用完整分辨率的逐行连续区间和断开组件识别堆叠/重复轮廓、内部透明断带以及低分辨率拓扑下可能被合并或丢失的鞋、叶菜、背包和袋子碎片",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "frames": 584,
+      "circular_frame_transitions": 584,
+      "candidate_sheet_items": 39
+    },
+    "status": "completed; four new hard-failure rows confirmed"
+  },
+  "why_complementary": [
+    "扫描线把轮廓拆成横向连续区间，能显示局部上下堆叠和内部断带，而不是只比较整体 bbox 或低分辨率 skeleton",
+    "完整分辨率的并查组件不会因缩小而把细鞋、叶菜或背包碎片吞掉，且能区分有实体颜色的断开部件与半透明边缘",
+    "人工复核同时使用正常 192x208 尺寸、4x/5x 高对比放大和 alpha 16-224 阈值稳定性，避免把单一指标误报当成缺陷"
+  ],
+  "result": {
+    "new_hard_failure_rows": [
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "additional_minor_candidate_rows": [
+      "hei-mao-quality/idle",
+      "hei-mao-chef/running-left",
+      "hei-mao-traveler/idle"
+    ],
+    "known_hard_failures_reconfirmed": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+      "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+    ],
+    "formal_assets_modified": false,
+    "release_effect": "current package remains blocked; eight complete action rows require regeneration and full post-generation QA"
+  },
+  "limitations": [
+    "断开组件是否为设计允许的 detached effect 仍需结合角色语义判断；本轮确认的组件均为鞋、叶菜、背包或袋子等实体部件",
+    "该方法不能证明 Codex App 窗口层级、多屏位置、气泡跟随或平台 GPU 合成",
+    "生图修复和最终三目录同步尚未执行，不能以本报告替代发布验收"
+  ]
+}

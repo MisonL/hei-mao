@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T23:28:23Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker custom-model fixed-size smoke after model recovery",
+  "service_checks": {
+    "container_health": "healthy",
+    "model_probe": "HTTP 200",
+    "custom_models_listed": [
+      "gemini-3.1-flash-image",
+      "gpt-image-2-1k",
+      "grok-imagine-image",
+      "grok-imagine-image-quality",
+      "nai-diffusion-4-5-full"
+    ],
+    "requested_model_listed": true,
+    "requested_model": "gpt-image-2-1k",
+    "agent_request_construction": "pass",
+    "request_mode": "images-non-stream"
+  },
+  "fixed_size_smoke": {
+    "request_count": 1,
+    "status": "generated_but_dimension_check_failed",
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1254x1254",
+    "format": "webp",
+    "image_count": 1,
+    "dimension_check": "failed_non_retryable",
+    "route_mode": "server_orchestrated_job_polling",
+    "channel_request_mode": "images-non-stream",
+    "formal_asset_eligible": false
+  },
+  "artifact_cleanup": {
+    "metadata_before_delete": 200,
+    "content_before_delete": 200,
+    "delete": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_retained": false
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The recovered local Docker service lists and executes the requested custom model. The new fixed-size smoke still returns 1254x1254 for a 1024x1024 request, so the fixed-size pet-atlas gate remains closed. The temporary artifact was deleted and verified absent; no formal pet asset was changed."
+}

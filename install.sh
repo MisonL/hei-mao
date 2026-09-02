@@ -108,12 +108,12 @@ configure_pet() {
   case "$requested_pet_id" in
     hei-mao)
       PET_JSON_SHA256="dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802"
-      SPRITESHEET_SHA256="52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c"
+      SPRITESHEET_SHA256="1f39e5ac561b27cc4b8cee46b2b4d63bca005a91cf64e63c7f340e534dd5702b"
       PET_SUBDIR="pets/$requested_pet_id"
       ;;
     hei-mao-quality)
       PET_JSON_SHA256="c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07"
-      SPRITESHEET_SHA256="a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"
+      SPRITESHEET_SHA256="3d65d0494cd1c68c7d522031ac5628733f7f3a040728c22254002617c9f49ab0"
       PET_SUBDIR="pets/$requested_pet_id"
       ;;
     hei-mao-butler)
@@ -128,12 +128,12 @@ configure_pet() {
       ;;
     hei-mao-foodie)
       PET_JSON_SHA256="0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c"
-      SPRITESHEET_SHA256="eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0"
+      SPRITESHEET_SHA256="2f434ce057fb08907846ae9e4fd38ebe6ed86bef0fd6f5465ac53487289e75c1"
       PET_SUBDIR="pets/$requested_pet_id"
       ;;
     hei-mao-delivery)
       PET_JSON_SHA256="16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2"
-      SPRITESHEET_SHA256="6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86"
+      SPRITESHEET_SHA256="13016e533c70f65f9e4eb046a36bced865881f61e81870c55da7e75a83f17eb1"
       PET_SUBDIR="pets/$requested_pet_id"
       ;;
     hei-mao-fortune)
@@ -143,7 +143,7 @@ configure_pet() {
       ;;
     hei-mao-traveler)
       PET_JSON_SHA256="82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f"
-      SPRITESHEET_SHA256="d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"
+      SPRITESHEET_SHA256="bab07c70334d00064468d7f82767064c67834db4da342ea16eb1bcc4b5ba5e45"
       PET_SUBDIR="pets/$requested_pet_id"
       ;;
     *)

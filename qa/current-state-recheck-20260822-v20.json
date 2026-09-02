@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T23:01:17Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release state after successful custom-model smoke",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 exit cleanly with reviewed open-negative-space warnings and no hard errors",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "Bash, ShellCheck and PowerShell parse pass",
+    "three_directory_sha_parity": "8/8 roles; 16/16 files pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260822-v3.json"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260822-v8.json",
+    "owned_slug_readonly_evidence": "qa/petdex-owned-slug-readonly-recheck-20260822-v1.json",
+    "manifest": "HTTP 200 after redirect, generated 2026-08-21T18:25:08.433Z, 4568 entries, eight current slugs present",
+    "metadata_and_image_contract": "8/8 HTTP 200, matching ids, actual metadata v2, 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_resolution": "8/8 official GET /api/pets/<slug> calls returned HTTP 200, id present and status approved; no mutation was called",
+    "owned_slug_updates": "6/6 previously submitted through the official edit route; still not live",
+    "historical_duplicate": "hei-mao-2 remains record-only; no deletion or replacement attempted"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260822-v17.json",
+    "local_service": "healthy; live model probe and Agent orchestration contract pass",
+    "custom_model": "gpt-image-2-1k is listed and executes through the images-non-stream Agent JSON path",
+    "real_smoke": "one billable request returned a 1024x1536 WebP matching the requested dimensions",
+    "artifact_cleanup": "temporary artifact deleted; metadata and content returned 404",
+    "fixed_size_boundary": "a prior explicit 1024x1024 request returned 1254x1254 and failed the fixed-size gate",
+    "new_billable_requests": 1,
+    "formal_assets_changed": false
+  },
+  "hooks": {
+    "cli_version": "1.2.2",
+    "eof_behavior": "open stdin waits for EOF; closed stdin exits normally",
+    "evidence": "qa/petdex-hook-eof-recheck-20260822-v5.json",
+    "upstream_status_evidence": "qa/petdex-upstream-status-recheck-20260822-v3.json"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified due native capture boundary",
+    "evidence": "qa/codex-app-boundary-recheck-20260821-v1.json"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "Local package gates and the recovered custom-model channel pass the tested contracts. The successful smoke is suitable as a source-reference capability check, but the prior fixed-size mismatch remains documented; PetDex still has six owned-slug sprite updates pending and full Codex App visual acceptance remains unverified."
+}

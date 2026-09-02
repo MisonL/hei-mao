@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T00:23:40Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "fresh eight-role v2 atlas, continuity, installer and regression recheck",
+  "runtime": {
+    "validator": "hatch-pet dedicated runtime Python 3.12.13 with Pillow",
+    "atlas_command": "validate_atlas.py --require-v2 with each role's recorded chroma key",
+    "continuity_command": "measure_direction_continuity.py",
+    "hatch_pet_tests": {
+      "command": "python -m unittest discover -s tests -p test_*.py -q",
+      "passed": 28,
+      "failed": 0,
+      "errors": 0,
+      "result": "pass"
+    }
+  },
+  "roles": {
+    "hei-mao": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"},
+    "hei-mao-quality": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"},
+    "hei-mao-butler": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"},
+    "hei-mao-chef": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"},
+    "hei-mao-delivery": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"},
+    "hei-mao-foodie": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"},
+    "hei-mao-fortune": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"},
+    "hei-mao-traveler": {"atlas":"pass","continuity":"ok_with_reviewed_warnings"}
+  },
+  "atlas_contract": {
+    "roles_passed": 8,
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WEBP",
+    "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "checks": {
+    "deterministic_atlas_validation": "8/8 pass",
+    "direction_continuity": "8/8 no errors; reviewed warnings retained",
+    "hatch_pet_tests": "28/28 pass",
+    "installer_isolation": "8/8 roles pass; unknown slug rejected without write",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "git_diff_check": "pass",
+    "formal_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "Fresh deterministic v2, continuity, installer and regression checks pass for all eight roles; reviewed continuity warnings remain evidence and no formal asset changed."
+}

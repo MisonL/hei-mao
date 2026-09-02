@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T23:09:00Z",
+  "scope": "official PetDex owned-slug read-only resolution",
+  "cli": {
+    "version": "1.2.2",
+    "source_rule": "petdex edit resolves GET /api/pets/<slug> before any mutation"
+  },
+  "endpoint": {
+    "method": "GET",
+    "path_template": "/api/pets/<slug>",
+    "request_count": 8,
+    "http_200": "8/8",
+    "id_present": "8/8",
+    "status_approved": "8/8",
+    "display_name_present": "8/8"
+  },
+  "mutation_boundary": {
+    "edit_called": false,
+    "edit_presign_called": false,
+    "upload_called": false,
+    "submit_called": false,
+    "duplicate_created": false
+  },
+  "public_resource_boundary": {
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_sprite_updates_live": false,
+    "interpretation": "Read-only record resolution does not mean the previously submitted sprite edits have passed review or replaced the public spritesheets."
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "access_tokens_recorded": false,
+    "pet_record_ids_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false
+  },
+  "decision": "All eight official owned-slug records can be resolved by the signed-in CLI account without mutation. The six previously submitted sprite updates remain pending review and are not live."
+}

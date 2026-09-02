@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T21:34:54Z",
+  "scope": "real minimal image-generation smoke for the four blocked full-row repairs",
+  "service_contract": {
+    "capabilities": "pass",
+    "runtime": "pass",
+    "configured_request_modes": ["images-non-stream", "images-sse"],
+    "recommended_concurrency": 1
+  },
+  "real_smoke": [
+    {
+      "request_mode": "images-sse",
+      "billable": true,
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 503,
+      "artifact_count": 0,
+      "fallback_applied": false,
+      "diagnostics_found": true
+    },
+    {
+      "request_mode": "images-non-stream",
+      "billable": true,
+      "status": "failed",
+      "error_code": "upstream_unavailable",
+      "upstream_status": 503,
+      "artifact_count": 0,
+      "fallback_applied": false,
+      "diagnostics_found": true
+    }
+  ],
+  "cleanup": {
+    "artifacts_created": 0,
+    "temporary_files_created": 0,
+    "formal_assets_modified": false
+  },
+  "result": "Both configured real generation paths reached the service and returned an explicit upstream 503. The local Agent contract and routing are healthy, but no consumable replacement image exists; the four complete-row repairs remain blocked.",
+  "next_action": "Do not retry billable generation until the upstream channel recovers; keep existing rows and rerun the same two smoke modes with new idempotency keys before any repair generation."
+}

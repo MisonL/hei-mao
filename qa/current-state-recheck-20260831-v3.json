@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T07:10:21+08:00",
+  "scope": "current local, visual QA, image service, PetDex, Hook and Codex App boundary state",
+  "source_commit": "679b093 (formal asset baseline; working tree contains uncommitted README/QA evidence)",
+  "result": "The fresh real image smoke reached the local Docker service but ended as an upstream 503 after request diagnosis, with no artifact. Deterministic local gates and supplemental visual review remain recorded; four complete-row visual failures still block release, and Codex App runtime acceptance remains user-operated.",
+  "local_release": {
+    "deterministic_v2": "8/8 pass; 1536x2288 RGBA WebP; no errors, warnings, or transparent RGB residue",
+    "hatch_pet_baseline": "28 passed",
+    "three_directory_parity": "16/16 files byte-identical",
+    "installer_and_privacy": "Bash/PowerShell isolation, fixed SHA, unknown slug rejection, syntax, JSON, diff and privacy gates pass"
+  },
+  "visual_qa": {
+    "coverage": "8 roles, 88 rows, 592 non-empty frames",
+    "supplemental_methods": [
+      "qa/visual-review-methods-recheck-20260831-v2.json",
+      "qa/visual-review-alternative-20260831/visual-review-alternative-20260831-v6.json",
+      "qa/visual-review-alternative-20260831/supplemental-invariant-review-20260831-v6.json",
+      "qa/visual-review-alternative-20260831/display-alpha-lobe-review-20260831-v4.json"
+    ],
+    "confirmed_hard_failures": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed"
+    ],
+    "new_hard_failures": 0,
+    "release_ready": false,
+    "repair_policy": "regenerate each affected complete row; do not patch isolated cells or use procedural compositing"
+  },
+  "image_generation": {
+    "latest_evidence": "qa/imagegen-channel-recheck-20260831-v5.json",
+    "contract": "pass",
+    "latest_real_smoke": "images-non-stream request ended upstream 503 after post-timeout diagnosis; no artifact",
+    "channel_diagnostic": "healthy snapshot with latest model_not_found failure",
+    "repair_generation_ready": false
+  },
+  "petdex": {
+    "latest_evidence": "qa/petdex-live-recheck-20260831-v1.json",
+    "public_resource_parity": "8/8 metadata and spritesheet SHA match repository",
+    "manifest": "4672 entries; 5/8 current index version fields lag actual v2 metadata"
+  },
+  "hooks": {
+    "lifecycle_evidence": "qa/petdex-local-hook-wrapper-recheck-20260830-v2.json",
+    "trusted_hash_evidence": "qa/petdex-hook-trusted-hash-recheck-20260830-v1.json",
+    "bounded": true
+  },
+  "codex_app_boundary": {
+    "status": "user_action_required",
+    "unverified": [
+      "full refresh",
+      "eight-role selection and restore",
+      "four-direction switching",
+      "standard animation playback",
+      "multiple pets",
+      "cross-screen bubble following",
+      "runtime clipping, transparency and proportion at actual app display size"
+    ]
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  }
+}

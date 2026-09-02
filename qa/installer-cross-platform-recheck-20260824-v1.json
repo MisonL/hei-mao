@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T09:28:08Z",
+  "scope": "fresh isolated Bash and PowerShell installer smoke with temporary targets",
+  "checked_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "bash": {
+    "syntax": "pass",
+    "local_checkout_roles": "8/8 installed",
+    "remote_raw_roles": "8/8 installed",
+    "asset_copy_and_sha_parity": "pass",
+    "unknown_hei_mao_2_rejection": "pass"
+  },
+  "powershell": {
+    "runtime": "PowerShell Core",
+    "syntax": "pass",
+    "local_checkout_roles": "8/8 installed",
+    "asset_copy_and_sha_parity": "pass",
+    "unknown_hei_mao_2_rejection": "pass"
+  },
+  "cleanup": {
+    "temporary_targets_removed": true,
+    "repository_or_user_pet_directories_modified": false,
+    "running_codex_processes_modified": false
+  },
+  "platform_boundary": "The shell and PowerShell paths share the package contract and SHA checks; the macOS Hook wrapper configuration is not copied into Windows or Linux Hook configuration.",
+  "privacy": {
+    "local_paths_recorded": false,
+    "private_network_addresses": false,
+    "credentials": false,
+    "process_identifiers": false
+  },
+  "result": "Both installers pass all eight current roles in isolated temporary targets, reject the historical slug, preserve fixed asset hashes, and leave the repository, user pet directories, and running processes untouched."
+}

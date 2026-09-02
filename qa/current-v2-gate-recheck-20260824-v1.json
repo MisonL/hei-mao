@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T04:22:50Z",
+  "scope": "fresh local eight-role v2 contract and repository hygiene recheck",
+  "atlas_gate": {
+    "roles_passed": "8/8",
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WebP",
+    "mode": "RGBA",
+    "rows": 11,
+    "columns": 8,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "tests": {
+    "hatch_pet": "28 passed",
+    "shellcheck": "passed",
+    "bash_parse": "passed",
+    "powershell_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed"
+  },
+  "local_parity": {
+    "repository_codex_pets_petdex_pets": "8/8 roles and 16/16 files byte-identical"
+  },
+  "continuity": {
+    "status": "accepted baseline from qa/current-v2-gate-recheck-20260823-v8.json",
+    "roles_passed": "8/8",
+    "reviewed_minor_warnings": true
+  },
+  "privacy": {
+    "forbidden_local_paths_or_addresses": false,
+    "credentials_or_tokens": false
+  },
+  "formal_assets_modified": false,
+  "result": "All fresh deterministic local gates pass; previously reviewed continuity warnings remain explicitly retained as non-blocking evidence."
+}

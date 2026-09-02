@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T15:36:12Z",
+  "scope": "local Docker image-generation service custom-model and prompt-boundary recheck",
+  "service_checks": {
+    "first_run": "pass",
+    "agent_doctor": "pass",
+    "agent_contract": "pass",
+    "channel_health": "pass",
+    "orchestration": "server_owned_job_polling",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "custom_model": "gpt-image-2-1k"
+  },
+  "requests": {
+    "brand_or_ip_specific_prompt": {
+      "authorized_real_smoke": true,
+      "status": "rejected",
+      "error_code": "upstream_auth_failed",
+      "upstream_status": 403,
+      "classification": "upstream_prompt_safety_audit_rejection",
+      "artifact_created": false,
+      "local_service_failure": false
+    },
+    "generic_mascot_prompt": {
+      "status": "pass",
+      "transport": "agent_job_polling",
+      "channel_request_mode": "images-non-stream",
+      "requested_dimensions": "1024x1024",
+      "actual_dimensions": "1024x1024",
+      "format": "webp",
+      "strict_dimension_check": "pass",
+      "visual_check": "full-body centered mascot, natural proportions, no crop or squash observed"
+    },
+    "original_pig_mascot_prompt": {
+      "status": "pass",
+      "transport": "agent_job_polling",
+      "channel_request_mode": "images-non-stream",
+      "requested_dimensions": "1024x1024",
+      "actual_dimensions": "1024x1024",
+      "format": "webp",
+      "strict_dimension_check": "pass",
+      "visual_check": "full-body pig-inspired mascot, natural proportions, no crop or squash observed"
+    },
+    "page_sse_edit": {
+      "status": "pass",
+      "requested_dimensions": "1024x1024",
+      "actual_dimensions": "1024x1024",
+      "format": "webp",
+      "visual_check": "complete 8x11 character reference sheet, no crop or squash observed"
+    }
+  },
+  "usability": {
+    "service_usable": true,
+    "recommended_prompt_boundary": "Use neutral original-mascot wording for initial generation; provide approved character art as a separate reference or edit input when brand-specific identity is required.",
+    "silent_prompt_rewriting": false,
+    "formal_asset_decision": "source-reference validation only; no eight-role atlas replacement"
+  },
+  "cleanup": {
+    "successful_agent_artifacts_deleted": 3,
+    "successful_page_images_deleted": 1,
+    "metadata_after_cleanup": 404,
+    "content_after_cleanup": 404,
+    "local_temporary_files_after_cleanup": false,
+    "formal_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "result": "The local Docker image-generation service and custom model are usable at 1024x1024. A brand or existing-IP-specific prompt can be rejected by the upstream safety audit, while neutral original mascot prompts and the page edit path complete successfully. The client does not silently rewrite prompts; use the documented prompt boundary and separate approved references when needed. All temporary artifacts were deleted and formal PetDex assets were unchanged."
+}

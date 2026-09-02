@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "alpha-boundary Hausdorff residual and multi-part trajectory review of all current v2 atlases",
+  "method": {
+    "name": "multi-part anchor trajectory with bounded lower-body translation compensation",
+    "steps": [
+      "segment each 192x208 cell from alpha",
+      "register adjacent frames by a bounded integer translation around the lower-body anchor",
+      "compare upper and lower contour distance separately",
+      "measure mask IoU, area ratio, and row-level outlier candidates",
+      "visually compare candidates against the rendered proof sheets before promotion"
+    ],
+    "purpose": "separate expected limb/prop motion from duplicated heads, pose-family switches, squash/stretch, or baseline jumps"
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "frames": 584,
+    "transitions": 496,
+    "empty_used_cells": 0
+  },
+  "known_failures_reproduced": [
+    {
+      "role": "hei-mao",
+      "row": "jumping",
+      "evidence": "upper contour mismatch remains high across the lift/peak transitions; rendered frame 2 shows the duplicated head"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "evidence": "upper contour mismatch and low adjacent IoU remain high; rendered frame 2 shows the duplicated head"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "evidence": "the lower-body registration search jumps by roughly 13-15 px on the stacked-head transitions; the row proof sheet shows the repeated upper contour"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "evidence": "the 3->4 and 6->7 transitions have a large upper/lower contour residual and the rendered row switches pose family after repeated head frames"
+    }
+  ],
+  "review_only_candidates": [
+    {
+      "role": "hei-mao-quality",
+      "row": "running-left",
+      "reason": "large lower-contour residual is explained by the astronaut tools and greenery moving with the gait; no identity or attachment break in the color overlay"
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "review",
+      "reason": "upper contour change is the intended head/eye review gesture; no scale pop or baseline jump in the rendered loop"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "jumping",
+      "reason": "large residual is expected from the jump pose and backpack/tool movement; no new duplicated part beyond the known failed row"
+    }
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "confirmed_existing_hard_failures": 4,
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; the four complete-row regeneration blockers remain open"
+  },
+  "limitations": [
+    "This is a raster and compositing review, not live Codex App window capture.",
+    "Contour residuals are review candidates; gestures, props, and look-direction arcs can legitimately increase them.",
+    "The four blocked rows still require complete-row regeneration and the normal hatch-pet visual and deterministic gates afterward."
+  ],
+  "artifacts": [
+    "visual-review-alternative-20260831-v5.json",
+    "row-ensemble-color-overlay-top.jpg",
+    "structural-topology-candidates.jpg",
+    "adversarial-render-sheet.jpg"
+  ]
+}

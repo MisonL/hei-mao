@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T05:15:09Z",
+  "scope": "public read-only GitHub status check for PetDex Hook EOF issue and related draft PR",
+  "issue_689": {
+    "number": 689,
+    "title": "Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住",
+    "state": "open",
+    "updated_at": "2026-08-11T11:05:48Z",
+    "html_url": "https://github.com/crafter-station/petdex/issues/689",
+    "reported_boundary": "The native and CLI runners can continue waiting for EOF after a complete payload when the host keeps stdin open.",
+    "upstream_fix_claimed": false
+  },
+  "pr_710": {
+    "number": 710,
+    "title": "WIP: Native bubble revamp and platform parity",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "updated_at": "2026-08-15T10:44:56Z",
+    "html_url": "https://github.com/crafter-station/petdex/pull/710",
+    "declared_dependency": "#708",
+    "declared_scope": "Native bubble presentation and platform parity; it does not claim to resolve #689.",
+    "upstream_fix_claimed": false
+  },
+  "comments": {
+    "issue_689": 0,
+    "pr_710": 0
+  },
+  "decision": "The upstream EOF behavior remains unresolved. The local bounded wrapper is a mitigation only and must not be described as an upstream fix.",
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false
+  }
+}

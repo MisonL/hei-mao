@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T05:40:51Z",
+  "scope": "fresh isolated Bash and PowerShell installer contract recheck",
+  "bash": {
+    "roles_passed": "8/8",
+    "unknown_slug_rejected": true,
+    "fixed_sha_verified": true,
+    "isolated_target": true
+  },
+  "powershell": {
+    "roles_passed": "8/8",
+    "unknown_slug_rejected": true,
+    "fixed_sha_verified": true,
+    "isolated_target": true
+  },
+  "syntax": {
+    "bash_parse": "passed",
+    "shellcheck": "passed",
+    "powershell_parse": "passed"
+  },
+  "cleanup": {
+    "repository_assets_modified": false,
+    "user_pet_directories_modified": false,
+    "running_processes_touched": false
+  },
+  "platform_boundary": {
+    "installer_role_packages_are_platform_neutral": true,
+    "hook_configuration_requires_platform_desktop_settings": true
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false
+  },
+  "result": "Both installers pass all eight current roles in isolated targets, reject unknown slugs, preserve fixed asset hashes, and leave project and user assets unchanged."
+}

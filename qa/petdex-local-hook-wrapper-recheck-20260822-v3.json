@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T14:40:00Z",
+  "scope": "local PetDex Codex Hook persistence, EOF mitigation, and missing-runner fallback",
+  "local_install": {
+    "cli_version": "1.2.2",
+    "codex_hook_events": [
+      "UserPromptSubmit",
+      "PreToolUse",
+      "PostToolUse",
+      "PermissionRequest",
+      "Stop"
+    ],
+    "wrapper_commands": "all five events invoke the bounded wrapper directly",
+    "owner_marker": "retained in every managed command",
+    "native_runner": "signed PetDex native runner unchanged",
+    "codex_config": "valid JSON; existing notify and unrelated content preserved"
+  },
+  "isolated_tests": {
+    "all_five_events_closed_stdin": "5/5 natural exit, code 0",
+    "all_five_events_open_stdin": "5/5 natural exit before 500ms",
+    "missing_runner_closed_stdin": "natural exit, code 127",
+    "missing_runner_open_stdin": "natural exit at bounded total timeout, code 127",
+    "missing_runner_stdin_behavior": "stdin remains drained until EOF or bounded timeout",
+    "timeouts": 0
+  },
+  "upstream_boundary": {
+    "issue": "689",
+    "native_runner_eof_semantics": "still waits for EOF after a complete payload",
+    "upstream_fix_claimed": false,
+    "settings_reinstall_boundary": "PetDex Settings reinstall may overwrite the local wrapper commands"
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "only_isolated_test_children_used": true
+  },
+  "privacy": {
+    "absolute_local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "credentials_recorded": false
+  },
+  "result": "The local wrapper now bounds both the normal native-runner path and the missing-runner fallback. Closed and open stdin no longer leave the isolated Hook invocation waiting indefinitely; the signed PetDex app and native runner were not modified."
+}

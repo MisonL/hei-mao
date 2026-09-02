@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T06:43:35Z",
+  "scope": "low-risk PetDex Desktop runtime recheck without process interruption",
+  "desktop_release": "0.9.0",
+  "role_switch": {
+    "route": "petdex://<slug>",
+    "roles_checked": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-foodie",
+      "hei-mao-delivery",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "roles_passed": "8/8",
+    "restored_role": "hei-mao-traveler"
+  },
+  "runtime_observation": {
+    "pet_window_on_second_display": true,
+    "pet_window_aspect_ratio_matches_cell": true,
+    "animation_states_observed": [
+      "running-left",
+      "idle",
+      "running-right"
+    ],
+    "animation_counter_changed": true,
+    "bubble_enabled": true,
+    "bubble_agent_source": "codex",
+    "bubble_payload_text_recorded": false,
+    "pixel_capture": "unavailable; isolated ScreenCaptureKit helper hit a macOS graphics-context assertion without affecting user processes",
+    "local_runtime_health": "passed",
+    "local_runtime_init_status": "needsInit=false",
+    "local_runtime_state_endpoint": "passed",
+    "local_runtime_bubble_endpoint": "passed"
+  },
+  "safety_boundary": {
+    "processes_stopped": false,
+    "processes_restarted": false,
+    "codex_or_chatgpt_input_sent": false,
+    "window_moved": false,
+    "full_codex_app_refresh": "not exercised",
+    "four_direction_visual_switching": "not exercised",
+    "multi_pet_display": "not exercised",
+    "cross_display_bubble_follow": "not exercised"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "user_prompt_text_recorded": false
+  },
+  "result": "PetDex Desktop role switching passed for all eight roles and restored the traveler role. The running pet window remained on the second display with cell-matching aspect ratio; animation state and Codex bubble source were observable. Full Codex App visual acceptance remains user-operated."
+}

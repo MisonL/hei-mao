@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-19T13:48:21Z",
+  "scope": "pig-shaped quality role look-row repair after image-service change",
+  "formal_asset": {
+    "role": "hei-mao-quality",
+    "spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+    "row_9_reference_sha256": "8f5f0e36893bb4f4c081ea0a9a07174ea122c9a0cf4d338a00899e73dbba44f2",
+    "row_10_reference_sha256": "2c3bcb178d3d6794ea297d68c4e3b7ef72153d4a056f1482a58863acf81bdea2"
+  },
+  "attempts": [
+    {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v3-remote",
+      "service": "remote_visual_journal",
+      "transport": "page_sse",
+      "billable": false,
+      "status": "rejected",
+      "error_code": "page_sse_request_rejected",
+      "http_status": 403,
+      "artifact_count": 0,
+      "diagnostics": "page authentication rejected the request before upstream execution"
+    },
+    {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v4-agent",
+      "service": "remote_visual_journal",
+      "transport": "agent_json",
+      "billable": true,
+      "status": "failed",
+      "error_code": "upstream_auth_failed",
+      "upstream_status": 403,
+      "request_mode": "images-non-stream",
+      "artifact_count": 0,
+      "diagnostics": "upstream credential rejected; terminal non-retryable failure"
+    },
+    {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v5-local-smoke",
+      "service": "local_docker_visual_journal",
+      "transport": "server_orchestrated",
+      "billable": true,
+      "status": "rejected",
+      "error_code": "configuration_error",
+      "http_status": 200,
+      "artifact_count": 0,
+      "channel": "wahuiliyi-gpt-image",
+      "diagnostics": "local runtime had no healthy request mode; no upstream execution"
+    },
+    {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v5-remote-agent",
+      "service": "remote_visual_journal",
+      "transport": "agent_json",
+      "billable": true,
+      "status": "rejected",
+      "error_code": "unauthorized",
+      "http_status": 401,
+      "artifact_count": 0,
+      "channel": "jisuanyun-gpt-image",
+      "diagnostics": "remote Agent bearer token was rejected before request state creation"
+    },
+    {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v6-remote-page",
+      "service": "remote_visual_journal",
+      "transport": "page_sse",
+      "billable": false,
+      "status": "rejected_before_request",
+      "error_code": "page_sse_auth_required",
+      "http_status": null,
+      "artifact_count": 0,
+      "diagnostics": "local script was launched outside the Visual Journal root and did not load its private page password hash"
+    },
+    {
+      "idempotency_key": "hei-mao-quality-look-row9-pig-repair-20260819-v7-remote-page",
+      "service": "remote_visual_journal",
+      "transport": "page_sse",
+      "billable": false,
+      "status": "rejected",
+      "error_code": "page_sse_request_rejected",
+      "http_status": 403,
+      "artifact_count": 0,
+      "diagnostics": "page request was rejected before upstream execution; diagnostics lookup found no request state"
+    }
+  ],
+  "existing_candidates": {
+    "old_pig_look_rows": "rejected_identity_is_red_white_cat",
+    "formal_pig_look_rows": "retained_as_current_formal_baseline",
+    "new_pig_candidate": "not_generated"
+  },
+  "decision": "block_row_repair_until_a_real_image_channel_returns_a_pig_identity_candidate",
+  "formal_assets_modified": false
+}

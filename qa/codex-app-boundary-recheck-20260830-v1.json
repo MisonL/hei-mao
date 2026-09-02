@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T07:46:56Z",
+  "scope": "read-only Codex App and PetDex native window boundary recheck",
+  "window_discovery": {
+    "accessibility_visible_apps": "enumerated",
+    "petdex_window_metadata": "discoverable",
+    "chatgpt_window_metadata": "discoverable",
+    "window_content_capture": "not_available"
+  },
+  "capture_attempts": {
+    "single_window_screencapture": "failed: transparent high-level window image unavailable",
+    "single_window_screencapturekit": "failed: window filter could not initialize in the non-GUI probe"
+  },
+  "ui_acceptance": {
+    "full_refresh": "not_exercised",
+    "eight_role_restore": "not_exercised",
+    "four_direction_visual_switching": "not_exercised",
+    "standard_animation_visual_loop": "not_exercised",
+    "multi_pet_display": "not_exercised",
+    "cross_display_bubble_follow": "not_exercised",
+    "pixel_level_ratio_crop_transparency_check": "not_exercised"
+  },
+  "process_safety": {
+    "ui_input_sent": false,
+    "windows_moved": false,
+    "existing_codex_or_chatgpt_stopped": false,
+    "existing_petdex_stopped": false,
+    "existing_processes_restarted": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "window_coordinates_recorded": false,
+    "process_identifiers_recorded": false,
+    "screen_pixels_recorded": false
+  },
+  "result": "The native PetDex window is discoverable as metadata, but a safe single-window pixel capture is unavailable in the current probe. Codex App refresh, role restore, direction, animation, multi-pet, and cross-display bubble behavior remain user-operated acceptance boundaries and are not claimed as passed."
+}

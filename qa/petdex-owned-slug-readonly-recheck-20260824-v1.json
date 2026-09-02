@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T04:22:50Z",
+  "scope": "official PetDex owned-slug read-only resolution",
+  "cli_version": "1.2.2",
+  "endpoint": {
+    "method": "GET",
+    "path_template": "/api/pets/<slug>",
+    "requests": 8,
+    "http_200": "8/8",
+    "id_match": "8/8",
+    "status_approved": "8/8",
+    "display_name_present": "8/8"
+  },
+  "mutation_boundary": {
+    "edit_called": false,
+    "edit_presign_called": false,
+    "upload_called": false,
+    "submit_called": false,
+    "duplicate_created": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "All eight current slugs resolve as approved through the authenticated read-only endpoint; the probe stopped before every mutation route."
+}

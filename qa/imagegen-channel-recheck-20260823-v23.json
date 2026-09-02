@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T01:53:00Z",
+  "scope": "local Docker image-generation recovery after a retryable non-stream audit failure",
+  "service": {
+    "reachable": true,
+    "container_health": "healthy",
+    "model": "gpt-image-2-1k",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "configured_priority": [
+      "images-sse",
+      "images-non-stream"
+    ]
+  },
+  "initial_failure": {
+    "route": "images-non-stream",
+    "status": 503,
+    "code": "prompt_guard_unavailable",
+    "retryable": true,
+    "artifact_count": 0
+  },
+  "recovery_smoke": {
+    "route": "images-sse",
+    "request_mode": "agent_json_with_internal_upstream_sse",
+    "requested_dimensions": "1024x1024",
+    "requested_image_count": 1,
+    "returned_images": 1,
+    "output_format": "webp",
+    "actual_dimensions": [
+      "1024x1024"
+    ],
+    "dimension_check": "pass",
+    "visual_check": "pass",
+    "default_server_orchestration": "pass",
+    "selected_priority_route": "images-sse"
+  },
+  "cleanup": {
+    "artifact_delete_http": 200,
+    "metadata_after_delete_http": 404,
+    "content_after_delete_http": 404,
+    "formal_assets_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local service is usable through the default server-orchestrated entry after prioritizing the independently successful images-sse mode. The non-stream audit failure remains a retryable upstream boundary; no safety check was bypassed. The temporary artifact was deleted and confirmed unavailable."
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T00:46:03Z",
+  "scope": "read-only GitHub status recheck for Hook issue, draft PR and release",
+  "repository": "crafter-station/petdex",
+  "issue_689": {"state":"OPEN","title":"Hook 在宿主未关闭 stdin 时持续等待，可能导致会话卡住","comment_count":0,"updated_at":"2026-08-11T11:05:48Z"},
+  "pull_710": {"state":"OPEN","draft":true,"merged":false,"mergeable_state":"dirty","comment_count":1,"review_comment_count":0,"title":"WIP: Native bubble revamp and platform parity","updated_at":"2026-08-15T10:44:56Z"},
+  "latest_commit": {"sha_prefix":"c7fbe8a9c9c4","message":"ci(desktop): retry fast cuse drag (#727)","date":"2026-08-21T17:14:59Z"},
+  "latest_release": {"tag":"desktop-v0.8.0","published_at":"2026-08-14T05:19:51Z"},
+  "result": "Issue 689 remains unresolved and draft PR 710 is not merged; no checked upstream action changes stdin EOF semantics.",
+  "privacy": {"local_paths_recorded":false,"local_network_addresses_recorded":false,"credentials_recorded":false,"account_identifiers_recorded":false}
+}

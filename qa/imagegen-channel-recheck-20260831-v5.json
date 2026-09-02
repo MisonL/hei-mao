@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T07:10:21+08:00",
+  "scope": "fresh real local Docker image smoke and post-timeout request diagnosis",
+  "service": {
+    "container_health": "healthy",
+    "capabilities": "pass",
+    "runtime_contract": "pass",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1
+  },
+  "smoke_request": {
+    "idempotency_key": "hei-mao-v7-smoke-20260831-03",
+    "request_mode": "images-non-stream",
+    "size": "1024x1024",
+    "result": "failed",
+    "initial_client_observation": "request_in_progress after the 60 second client timeout",
+    "final_diagnosis": "upstream_unavailable",
+    "upstream_status": 503,
+    "channel_request_mode": "images-non-stream",
+    "selected_channel_id_present": true,
+    "artifact_count": 0,
+    "fallback_applied": false,
+    "retryable": true
+  },
+  "diagnosis": {
+    "method": "diagnose-request by the same idempotency key",
+    "terminal_state": "failed",
+    "error_class": "model_not_found / no available channel",
+    "channel_health_snapshot": "healthy with latest recorded model_not_found failure",
+    "request_state_backend": "sqlite",
+    "formal_assets_modified": false
+  },
+  "result": "The request was not successful and produced no artifact. The local service, Agent contract and routing were healthy, but the configured upstream image channel was unavailable. The failed key is terminal and must not be reused; a later retry requires a new idempotency key after recovery."
+}

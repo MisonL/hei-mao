@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T00:14:02Z",
+  "scope": "fresh authorized local Docker image-generation request using the requested fixed size and custom model",
+  "service": {
+    "reachable": true,
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "route": "server_orchestrated_job_polling",
+    "requested_dimensions": "1024x1024",
+    "requested_image_count": 1,
+    "returned_images": 1,
+    "actual_dimensions": "1024x1024",
+    "output_format": "webp",
+    "download_http": 200,
+    "dimension_check": "pass",
+    "visual_check": "one complete centered full-body mascot output with natural upright proportions, both feet visible, generous chroma-key margin, and no crop or squash observed"
+  },
+  "contract_observation": {
+    "single_image_contract_observed": true,
+    "prior_multi_image_observation_reproduced": false,
+    "root_cause_of_prior_multi_image_observation": "unconfirmed; no client-side truncation was applied"
+  },
+  "cleanup": {
+    "artifact_delete_http": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service accepted the custom model, fixed 1024x1024 size, and n=1 through the server-orchestrated images-non-stream path. It returned one readable 1024x1024 WebP, passed strict dimension and visual checks, and the temporary artifact was deleted and confirmed unavailable. The earlier two-image observation was not reproduced; its root cause remains unconfirmed. No formal PetDex asset was changed."
+}

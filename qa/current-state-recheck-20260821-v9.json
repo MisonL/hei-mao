@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T14:04:26Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release acceptance state after fresh manifest and dual image-channel request reconciliation",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 exit cleanly with reviewed minor warnings",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "Bash, ShellCheck, PowerShell parse, JSON and diff checks pass",
+    "three_directory_sha_parity": "8/8 pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260821-v1.json"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260821-v5.json",
+    "manifest": "HTTP 200, generated 2026-08-21T12:30:23.084Z, 4568 entries, eight current slugs present",
+    "metadata_and_image_contract": "latest full resource download remains 8/8 HTTP 200, id/v2, 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/6 submitted and queued for admin review; not live",
+    "historical_duplicate": "hei-mao-2 remains record-only; no deletion or replacement attempted"
+  },
+  "hooks": {
+    "eof_behavior": "open stdin waits for EOF; closed stdin exits normally",
+    "evidence": "qa/petdex-hook-eof-recheck-20260821-v2.json",
+    "upstream_status_evidence": "qa/petdex-upstream-status-recheck-20260821-v2.json"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified due native capture boundary",
+    "evidence": "qa/codex-app-boundary-recheck-20260821-v1.json"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260821-v12.json",
+    "local_result": "gpt-image-2 orchestration smoke returned 503 upstream_unavailable with zero artifacts",
+    "deployed_result": "gpt-image-2 orchestration smoke returned 403 upstream_auth_failed with zero artifacts",
+    "backend_success_observation": "other successful records were not correlated with either tested request",
+    "formal_assets_changed": false
+  },
+  "result": "local package gates pass; image generation is not currently verified as usable, six PetDex owned-slug edits are queued but not live, Hook EOF remains unresolved upstream, and full Codex App acceptance is unverified",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  }
+}

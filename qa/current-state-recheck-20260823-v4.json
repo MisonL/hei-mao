@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T17:23:29Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex state after real local image generate/edit recheck",
+  "local_release": {
+    "roles": 8,
+    "baseline": "unchanged; v2 and installer gates remain covered by qa/current-v2-gate-recheck-20260822-v6.json",
+    "formal_assets_modified": false
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v3.json",
+    "service_status": "usable",
+    "generate": "1024x1024 WebP pass through server orchestration and images-non-stream",
+    "edit": "1024x1024 WebP pass through page SSE images-sse",
+    "cleanup": "generate artifact and page edit file deleted; all checked URLs returned 404",
+    "formal_assets_changed": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260823-v1.json",
+    "current_roles_online_and_sha_matching": "8/8",
+    "duplicate_submission_created": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v1.json",
+    "local_wrapper": "bounded open-stdin mitigation passes for 5/5 events",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open",
+    "existing_processes_touched": false
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified because the transparent PetDex window remains on an unavailable historical second-display coordinate",
+    "evidence": "qa/codex-app-boundary-recheck-20260822-v3.json"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The local Docker image service is usable for both generation and editing at 1024x1024, all eight current PetDex resources still match the repository, and no formal asset or existing user process was modified. Full Codex App visual acceptance and the upstream native EOF fix remain explicit open boundaries."
+}

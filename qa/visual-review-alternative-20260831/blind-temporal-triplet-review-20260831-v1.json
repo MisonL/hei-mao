@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T04:17:41.586143+00:00",
+  "scope": "anonymous normal-size temporal-triplet visual review; evidence only",
+  "method": {
+    "name": "blind previous-current-next triplet review",
+    "purpose": "test whether an independent reviewer can see proportion pops, duplicated contours, identity drift, or continuity breaks without metric labels or row semantics",
+    "presentation": "three 192x208 panels per triplet on a fixed mid-gray background; only anonymous id and PREV/CURRENT/NEXT labels are visible",
+    "selection": "known control samples plus ranked candidates from orthogonal raster methods and deterministic stratified coverage",
+    "interpretation": "reviewer verdicts are evidence; no candidate or control is an automatic package failure"
+  },
+  "coverage": {
+    "roles": 8,
+    "triplets": 40,
+    "frames_shown": 120,
+    "known_controls": 9,
+    "normal_cell_size": [
+      192,
+      208
+    ],
+    "random_seed": 20260831
+  },
+  "artifacts": [
+    "blind-temporal-triplet-sheet-v1.png",
+    "blind-temporal-triplet-answer-key-v1.json",
+    "blind-temporal-triplet-review-20260831-v1.json"
+  ],
+  "review_status": "pending_independent_review",
+  "formal_assets_modified": false,
+  "limitations": [
+    "The sheet is still asset-only and cannot prove live Codex App z-order, multi-screen placement, bubble tracking, or platform compositor behavior.",
+    "A blind reviewer can identify visible continuity defects but cannot know whether an unusual pose is intentional without the hidden provenance and labeled row context.",
+    "Known controls validate sensitivity; passing controls does not prove that every unshown frame is defect-free."
+  ]
+}

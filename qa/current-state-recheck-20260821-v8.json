@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T13:12:00Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release acceptance state after owned-slug edit submissions",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 exit cleanly with reviewed minor warnings",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "Bash, ShellCheck, PowerShell parse, JSON and diff checks pass",
+    "three_directory_sha_parity": "8/8 pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260821-v1.json"
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260821-v4.json",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "image_contract": "8/8 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/6 submitted through official edit route and queued for admin review",
+    "historical_duplicate": "hei-mao-2 remains record-only; no deletion or replacement attempted",
+    "duplicate_submission_created": false
+  },
+  "hooks": {
+    "eof_behavior": "open stdin waits for EOF; closed stdin exits normally",
+    "evidence": "qa/petdex-hook-eof-recheck-20260821-v2.json",
+    "upstream_status_evidence": "qa/petdex-upstream-status-recheck-20260821-v2.json"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified due native capture boundary",
+    "evidence": "qa/codex-app-boundary-recheck-20260821-v1.json"
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260821-v11.json",
+    "result": "latest local gpt-image-2 smoke failed upstream with 503 and zero artifacts; no formal asset change"
+  },
+  "result": "local package gates pass; six PetDex owned-slug edits are queued but not live, Hook EOF remains unresolved upstream, full Codex App acceptance is unverified, and image generation has no successful local artifact",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T12:43:00Z",
+  "scope": "current goal evidence snapshot after direct v2 validator rerun, cross-role identity review, and fresh image-generation smoke",
+  "verified": {
+    "formal_pet_contract": "8/8 direct validate_atlas.py --require-v2 runs pass: spriteVersionNumber=2 metadata, 1536x2288, 8x11, WebP RGBA, zero validator errors and warnings",
+    "direction_continuity": "8/8 current continuity reports are ok; only previously reviewed warning sets remain",
+    "direction_semantics": "8/8 current reports contain 16 entries and zero fail verdicts",
+    "direction_blind_validation": "8/8 current reports ok=true; no cardinal hard failure",
+    "hatch_pet_baseline": "uv run ... pytest -q <hatch-pet>/tests: 28 passed, 37 existing Pillow deprecation warnings",
+    "installer_checks": "install.sh bash -n and ShellCheck pass; install.ps1 PowerShell AST parse pass",
+    "supplemental_visual_review": "cross-role core identity and proportion review covered 584 frames and 24 normal-size candidates; no new hard failure",
+    "three_directory_parity": "repository, ~/.codex/pets, and ~/.petdex/pets remain byte-identical for all 8 pet.json/spritesheet pairs",
+    "formal_pet_diff": "no files under pets/ modified during this continuation",
+    "readme_and_privacy": "new QA references exist; new evidence JSON/script have no private addresses, credentials, local paths, or process identifiers"
+  },
+  "external_or_user_boundaries": {
+    "image_generation": {
+      "status": "blocked_at_upstream",
+      "evidence": "qa/imagegen-channel-recheck-20260831-v16.json",
+      "detail": "fresh Agent JSON server-channel images-non-stream smoke with a listed alternate model returned HTTP 502 Connection error; the upstream models endpoint was HTTP 200 with 9 models, but image_count=0 and artifact_count=0"
+    },
+    "codex_app_pixel_and_multidisplay": {
+      "status": "not_verified",
+      "evidence": "qa/codex-app-boundary-recheck-20260830-v1.json",
+      "detail": "refresh, per-role UI selection, full animation playback, multi-pet layering, cross-display bubble following and pixel-level transparency remain user-operated boundaries"
+    }
+  },
+  "release_blockers": [
+    "hei-mao/jumping",
+    "hei-mao-quality/jumping",
+    "hei-mao-foodie/waiting",
+    "hei-mao-delivery/failed",
+    "hei-mao-quality/running-left",
+    "hei-mao-quality/failed",
+    "hei-mao-traveler/waiting",
+    "hei-mao-traveler/review"
+  ],
+  "git": {
+    "branch": "main",
+    "head": "679b093",
+    "formal_pet_diff": "none",
+    "preexisting_tracked_dirty_files_preserved": [
+      "README.md",
+      "qa/current-state-recheck-20260820-v23.json",
+      "qa/hei-mao-fortune/direction-semantics.json"
+    ],
+    "new_evidence_is_uncommitted": true,
+    "stale_index_lock": "present and intentionally not removed"
+  },
+  "release_readiness": "blocked until the upstream image-generation channel recovers, the eight complete rows are regenerated and revalidated, and Codex App UI boundaries receive user-side acceptance"
+}

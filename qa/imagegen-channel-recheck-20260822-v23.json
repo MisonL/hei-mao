@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T11:36:02Z",
+  "scope": "local Docker image-generation service authorized fixed-size smoke",
+  "service_checks": {
+    "agent_capabilities": "pass",
+    "runtime_capabilities": "pass",
+    "channel_health_before_smoke": "healthy",
+    "channel_health_after_smoke": "healthy",
+    "channel_model_probe": "pass",
+    "channel_request_mode": "images-non-stream",
+    "agent_doctor_after_smoke": "pass"
+  },
+  "smoke": {
+    "authorized_real_smoke": true,
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1024x1024",
+    "format": "webp",
+    "dimension_check": "pass",
+    "route": "server_orchestrated_job_polling",
+    "formal_asset_eligible": false,
+    "formal_asset_decision": "validation smoke only; no eight-role atlas replacement"
+  },
+  "cleanup": {
+    "metadata_before_delete": 200,
+    "content_before_delete": 200,
+    "delete": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_retained": false
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The local Docker service accepted gpt-image-2-1k and returned a matching 1024x1024 WebP through the server-owned orchestration path. The strict dimension gate and post-request health check passed, and the temporary artifact was deleted with both artifact endpoints returning 404. The service is usable for controlled image-generation work; formal pet assets were not changed."
+}

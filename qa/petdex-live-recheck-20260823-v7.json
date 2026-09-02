@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T06:03:13Z",
+  "scope": "fresh read-only PetDex manifest, current-role resource and repository sprite parity recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-23T00:51:54.165Z",
+    "entry_count": 4579,
+    "current_slugs_present": "8/8",
+    "index_version_lagging_entries": "6/8 current entries expose index v1 while actual metadata is v2"
+  },
+  "resource_validation": {
+    "current_roles": "8/8",
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "metadata_id_matches_slug": "8/8",
+    "metadata_v2": "8/8",
+    "spritesheet_contract": "8/8 image/webp, 1536x2288",
+    "public_sprite_sha_match": "8/8",
+    "sha256": {
+      "hei-mao": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c",
+      "hei-mao-quality": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5",
+      "hei-mao-butler": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304",
+      "hei-mao-chef": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957",
+      "hei-mao-delivery": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86",
+      "hei-mao-foodie": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0",
+      "hei-mao-fortune": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9",
+      "hei-mao-traveler": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"
+    },
+    "mutation_performed": false
+  },
+  "historical_slug": {
+    "hei-mao-2": {
+      "record_present": true,
+      "metadata_http_200": true,
+      "metadata_id": "hei-mao",
+      "metadata_id_matches_slug": false,
+      "metadata_v2": true,
+      "spritesheet_contract": "image/webp, 1536x2288",
+      "action": "recorded_only; no deletion, replacement or mutation attempted"
+    }
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false,
+    "artifact_ids": false
+  },
+  "decision": "All eight current PetDex public resources were freshly re-read and match the repository spritesheet bytes and v2 contract. The historical hei-mao-2 record remains a separate inconsistent legacy entry and was not mutated."
+}

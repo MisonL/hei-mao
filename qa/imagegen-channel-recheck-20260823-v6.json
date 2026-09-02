@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T19:54:00Z",
+  "scope": "fresh local Docker image-generation smoke with a strict full-body padding check",
+  "service": {
+    "reachable": true,
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "requested_dimensions": "1024x1024",
+    "output_format": "webp"
+  },
+  "request": {
+    "status": "pass",
+    "endpoint": "/api/agent/image-requests",
+    "transport": "agent_job_polling",
+    "route_mode": "server_orchestrated_job",
+    "actual_dimensions": "1024x1024",
+    "dimension_check": "pass",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "visual_check": "complete centered full-body original pig mascot with both shoe soles visible and generous green chroma-key margin; no crop or squash observed",
+    "alpha_note": "The source intentionally uses a flat chroma-key background, so alpha is not expected before local removal."
+  },
+  "cleanup": {
+    "artifact_delete": "HTTP 200",
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service produced a usable padded 1024x1024 WebP through server orchestration. The temporary result was downloaded, dimension-checked, visually inspected, deleted, and confirmed unavailable afterward. No formal PetDex asset was changed."
+}

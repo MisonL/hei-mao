@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "normal-size manual review of the multi-background compositing stress candidates",
+  "input": "background-stress-candidates-v1.jpg",
+  "review_dimensions": {
+    "backgrounds": ["dark", "light", "magenta", "cyan"],
+    "display_sizes": ["96x104", "48x52"],
+    "candidate_panels": 32
+  },
+  "manual_verdict": "pass_with_existing_blockers",
+  "findings": {
+    "new_hard_failures": [],
+    "new_warnings": [],
+    "opaque_background_panels": "not_observed",
+    "background_dependent_edge_shift": "not_observed",
+    "visible_chroma_halo": "not_observed",
+    "display_size_silhouette_break": "not_observed",
+    "component_attachment_break": "not_observed",
+    "formal_assets_modified": false
+  },
+  "review_notes": [
+    "The same sprite silhouette remains stable on dark, light, magenta, and cyan backgrounds.",
+    "Semi-transparent anti-aliased edges blend with the background without exposing a rectangular or opaque backing panel.",
+    "The alpha-mask panels show one connected primary silhouette for every reviewed candidate; thin props remain attached at the displayed size.",
+    "No candidate warrants regeneration from this method alone; existing complete-row blockers remain unchanged and are not cleared by this review."
+  ],
+  "known_blockers_unchanged": [
+    "hei-mao/jumping",
+    "hei-mao-quality/jumping",
+    "hei-mao-foodie/waiting",
+    "hei-mao-delivery/failed",
+    "hei-mao-quality/running-left",
+    "hei-mao-quality/failed",
+    "hei-mao-traveler/waiting",
+    "hei-mao-traveler/review"
+  ],
+  "limitations": [
+    "This is an offline raster compositing review, not a live Codex App capture.",
+    "Background spread is evaluated after accounting for source alpha; it is a candidate signal, not a chroma replacement for the authoritative despill report.",
+    "The review does not prove multi-monitor placement, bubble tracking, or platform-specific compositor behavior."
+  ],
+  "artifacts": [
+    "background_stress_review.py",
+    "background-stress-review-20260831-v1.json",
+    "background-stress-candidates-v1.jpg",
+    "background-stress-manual-review-20260831-v1.json"
+  ]
+}

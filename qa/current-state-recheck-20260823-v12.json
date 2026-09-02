@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T22:12:36Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex state after a fresh usable image-generation request",
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v12.json",
+    "service_status": "usable",
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "dimensions": "1024x1024",
+    "output_format": "webp",
+    "artifact_cleanup": "pass; metadata and content returned 404 after deletion",
+    "formal_assets_changed": false
+  },
+  "local_release": {
+    "roles": 8,
+    "baseline": "v2 atlas and installer gates remain covered by qa/current-v2-gate-recheck-20260823-v7.json",
+    "formal_assets_modified": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260823-v3.json",
+    "owned_slug_evidence": "qa/petdex-owned-slug-readonly-recheck-20260823-v2.json",
+    "current_slugs_present": "8/8",
+    "actual_metadata_v2": "8/8",
+    "actual_spritesheet_contract": "8/8 image/webp",
+    "public_sprite_sha_match": "8/8",
+    "mutation_performed": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v1.json",
+    "local_wrapper": "5/5 events pass with closed stdin and 5/5 pass with open stdin",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open",
+    "existing_processes_touched": false
+  },
+  "desktop_boundary": {
+    "desktop_version": "0.8.0",
+    "codex_app_full_visual_acceptance": "unverified; the Codex App pet settings and animation surface remains outside the current capture boundary",
+    "process_safety": "no Codex or ChatGPT process was stopped, restarted, or signaled"
+  },
+  "petdex_owned_slug_refresh": {
+    "status": "pass",
+    "attempted": true,
+    "request_count": 8,
+    "http_statuses": "8/8 HTTP 200",
+    "ids_present": "8/8",
+    "status_approved": "8/8",
+    "display_names_present": "8/8",
+    "mutation_performed": false,
+    "reason": "The official CLI session was refreshed through its read-only path, then all eight owned slugs were queried with GET. No edit, presign, upload, or submit request was made."
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The requested local Docker image-generation path is usable with the requested 1024x1024 size and custom model. All eight owned slugs resolve as approved in a fresh read-only check, formal assets remain unchanged, and full Codex App visual acceptance remains unverified."
+}

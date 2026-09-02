@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T07:18:41Z",
+  "scope": "local Docker image-generation smoke after dynamic bounded aspect-ratio normalization",
+  "service": {
+    "kind": "local Docker GPT Image Playground",
+    "health": "healthy",
+    "default_model": "gpt-image-2-1k",
+    "entrypoint": "/api/agent/image-requests",
+    "transport": "server_orchestrated",
+    "channel_request_mode": "images-sse",
+    "selected_channel": "meinianda-image"
+  },
+  "normalization_fix": {
+    "source": "visual-journal image service",
+    "behavior": "accept only bounded upstream aspect-ratio drift and normalize with aspect-preserving contain padding",
+    "guardrails": "pixel drift is capped at max(8, one-percent of the requested short edge), while relative drift remains capped at one-percent; larger mismatches remain rejected",
+    "stretching_or_cropping": false,
+    "regression_tests": "21 passed"
+  },
+  "request": {
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1536x2288",
+    "upstream_dimensions_before_normalization": "1024x1536",
+    "actual_dimensions": "1536x2288",
+    "output_format": "webp",
+    "dimension_check": "pass",
+    "visual_check": "pass",
+    "billable_request_sent": true
+  },
+  "cleanup": {
+    "artifact_delete_status": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "formal_petdex_assets_changed": false
+  },
+  "verification": {
+    "route_and_stream_regressions": "50 passed",
+    "prettier": "pass",
+    "eslint": "pass",
+    "typescript": "pass",
+    "production_build": "pass",
+    "active_local_container_rebuilt": true,
+    "active_local_container_health": "healthy",
+    "temporary_files_removed": true
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "prompts": false
+  },
+  "result": "The local Docker service accepts the PetDex atlas dimensions in a real request. The upstream 1024x1536 portrait result is normalized to 1536x2288 without stretching or cropping, while materially different aspect ratios remain rejected."
+}

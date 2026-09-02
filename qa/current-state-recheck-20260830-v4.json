@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T08:53:25Z",
+  "scope": "current local, PetDex, upstream, Hook trust, and Codex App boundary state after live refresh",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "local_release": {
+    "cli": "1.3.0",
+    "desktop": "0.9.1",
+    "desktop_release_evidence": "qa/petdex-desktop-release-recheck-20260830-v2.json",
+    "desktop_runtime_evidence": "qa/petdex-desktop-runtime-recheck-20260830-v2.json",
+    "v2_gate_evidence": "qa/current-v2-gate-recheck-20260830-v2.json",
+    "installer_evidence": "qa/installer-cross-platform-recheck-20260830-v2.json",
+    "parity_evidence": "qa/three-directory-parity-recheck-20260830-v2.json",
+    "formal_assets_modified": false
+  },
+  "petdex": {
+    "manifest_evidence": "qa/petdex-live-recheck-20260830-v3.json",
+    "upstream_evidence": "qa/petdex-upstream-status-recheck-20260830-v4.json",
+    "manifest_total": 4669,
+    "current_slugs_present": "8/8",
+    "public_metadata_and_spritesheet_parity": "8/8",
+    "index_version_lag": "5/8 current entries index as v1; actual metadata is v2",
+    "latest_upstream_commit": "5323e43624bdd065fc65f3b3aa572404d51ce75d"
+  },
+  "hooks": {
+    "lifecycle_evidence": "qa/petdex-local-hook-wrapper-recheck-20260830-v2.json",
+    "trusted_hash_evidence": "qa/petdex-hook-trusted-hash-recheck-20260830-v1.json",
+    "upstream_evidence": "qa/petdex-upstream-status-recheck-20260830-v4.json",
+    "events_checked": 5,
+    "closed_and_open_stdin_cases": "20/20 native and wrapper cases",
+    "chunked_payload_sha_match": true,
+    "trusted_hash_matches": "5/5",
+    "bounded": true
+  },
+  "codex_app_boundary": {
+    "evidence": "qa/codex-app-boundary-recheck-20260830-v1.json",
+    "full_refresh": "user-operated",
+    "eight_role_restore": "user-operated",
+    "four_direction_visual_switching": "user-operated",
+    "animation_loop_visual_qa": "user-operated",
+    "multi_pet_display": "user-operated",
+    "cross_display_bubble_follow": "user-operated",
+    "pixel_level_ratio_crop_transparency_check": "user-operated"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "Fresh read-only refresh confirms eight public PetDex resources remain byte-identical to the repository, upstream main is 5323e43 through PR 765, CLI 1.3.0 and Desktop 0.9.1 remain current, and all five local Hook trusted hashes match Codex's official normalized identity algorithm. Codex App pixel-level visual acceptance remains a user-operated boundary and is not claimed as automated pass."
+}

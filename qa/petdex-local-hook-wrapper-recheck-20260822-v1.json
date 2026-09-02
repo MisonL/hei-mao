@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T13:38:44Z",
+  "scope": "local PetDex Codex Hook EOF mitigation",
+  "upstream_boundary": {
+    "issue": 689,
+    "state": "open",
+    "native_runner_semantics": "still waits for EOF after a complete payload",
+    "upstream_fix_claimed": false
+  },
+  "local_install": {
+    "codex_hooks_feature": true,
+    "codex_hook_events": [
+      "UserPromptSubmit",
+      "PreToolUse",
+      "PostToolUse",
+      "PermissionRequest",
+      "Stop"
+    ],
+    "hook_entry": "~/.petdex/bin/petdex-hook",
+    "bounded_wrapper": "~/.petdex/bin/petdex-hook-wrapper.mjs",
+    "native_fallback": "~/.petdex/bin/petdex-hook-native",
+    "native_app_modified": false,
+    "existing_codex_notify_preserved": true,
+    "existing_codex_config_content_preserved": true
+  },
+  "isolated_tests": {
+    "native_closed_stdin": {
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "native_open_stdin": {
+      "natural_exit_before_timeout": false,
+      "timeout_ms": 1200,
+      "isolated_child_signal": "SIGTERM"
+    },
+    "wrapper_closed_stdin": {
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "wrapper_open_complete_json": {
+      "natural_exit": true,
+      "exit_code": 0,
+      "elapsed_ms_under": 500
+    },
+    "wrapper_fragmented_utf8": {
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "wrapper_oversized_input": {
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "wrapper_empty_open_input": {
+      "natural_exit": true,
+      "bounded_by_total_timeout": true
+    }
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "only_isolated_test_children_terminated": true
+  },
+  "privacy": {
+    "absolute_local_paths_recorded": false,
+    "local_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "credentials_recorded": false
+  },
+  "result": "Local Codex Hook calls now have a bounded EOF-safe wrapper; upstream CLI/native runners and issue 689 remain unresolved."
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "normal-size review of the 96x104 and 48x52 color-vision stress candidate sheets",
+  "input": {
+    "method_report": "color-vision-stress-review-20260831-v1.json",
+    "candidate_sheets": [
+      "color-vision-stress-candidates-v1.jpg",
+      "color-vision-stress-candidates-48x52-v1.jpg"
+    ],
+    "candidate_count_per_sheet": 40,
+    "transforms": [
+      "original",
+      "grayscale",
+      "protan",
+      "deutan",
+      "tritan",
+      "alpha silhouette"
+    ]
+  },
+  "review_dimensions": [
+    "body silhouette remains readable after color information is reduced",
+    "face and primary prop remain distinguishable at small display size",
+    "color loss does not expose a background panel or change alpha geometry",
+    "known blocker controls remain recognizable and are not reclassified as new defects"
+  ],
+  "findings": {
+    "new_hard_failures": [],
+    "new_warnings": [],
+    "foreground_or_edge_contrast_failure": "not_observed",
+    "small_display_identity_loss": "not_observed",
+    "alpha_geometry_change": "not_observed",
+    "known_blockers_reconfirmed": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ]
+  },
+  "verdict": "pass_with_existing_blockers",
+  "formal_assets_modified": false,
+  "limitations": [
+    "This is an offline accessibility-oriented display stress review, not a clinical color-vision assessment.",
+    "It does not prove Codex App window layering, multi-screen placement, bubble tracking, or GPU composition.",
+    "It does not clear the complete-row regeneration blockers or replace the hatch-pet deterministic gates."
+  ]
+}

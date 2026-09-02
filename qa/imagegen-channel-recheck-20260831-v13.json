@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T11:12:00Z",
+  "scope": "fresh real smoke of the local Docker image-generation service through the server-channel images-non-stream route",
+  "service": {
+    "container": "gpt-image-playground-customer",
+    "health_probe": "healthy",
+    "runtime_capabilities": "available",
+    "configured_channel": "meinianda-image",
+    "request_mode": "images-non-stream",
+    "model": "gpt-image-2"
+  },
+  "request": {
+    "case": "server-channel-images-json",
+    "size": "1024x1024",
+    "quality": "low",
+    "new_idempotency_run": true,
+    "temporary_artifact_cleanup": "handled by smoke script"
+  },
+  "result": {
+    "ok": false,
+    "status": 500,
+    "elapsed_ms": 3807,
+    "upstream_host": "meinianda.top",
+    "image_count": 0,
+    "error": "Connection error.",
+    "artifact_count": 0,
+    "repair_generation_ready": false
+  },
+  "interpretation": "容器健康和路由配置均可读，但新的真实请求仍在上游连接阶段失败；本轮没有产出可用于完整动作行重生的图像。",
+  "formal_assets_modified": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_id_recorded": false
+  }
+}

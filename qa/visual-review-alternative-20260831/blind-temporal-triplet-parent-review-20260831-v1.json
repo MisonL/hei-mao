@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "parent normal-size visual inspection of the anonymous temporal-triplet sheet; evidence only",
+  "reviewer": "parent",
+  "input": "qa/visual-review-alternative-20260831/blind-temporal-triplet-sheet-v1.png",
+  "verdict": "warning",
+  "new_hard_failures": [],
+  "known_control_hits": [
+    {
+      "ids": ["T01", "T02"],
+      "finding": "duplicated upper head"
+    },
+    {
+      "ids": ["T03", "T04"],
+      "finding": "stacked upper contours"
+    },
+    {
+      "ids": ["T05", "T06", "T07", "T08", "T09"],
+      "finding": "repeated head and pose-family switch"
+    }
+  ],
+  "review_note": "在正常 192x208 显示尺寸下，盲测表清晰重现四类既有整行动画缺陷；T10-T40 未见新增的明显比例跳变、身份漂移、断裂或连续性硬失败。该结论是主代理人工回看，不等同于独立审查器通过。",
+  "independent_channel_status": {
+    "omp": "unavailable: attached image was not accessible",
+    "claude": "unavailable: CLI not authenticated"
+  },
+  "formal_assets_modified": false,
+  "limitations": [
+    "未形成三方独立盲测共识，因此不把本文件标记为最终视觉 QA 通过",
+    "匿名表不能替代带标签的动作语义复核，也不能证明实时 App 窗口、多屏或气泡行为"
+  ]
+}

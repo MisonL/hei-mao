@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T02:01:00Z",
+  "scope": "fresh read-only PetDex manifest and current-role resource parity recheck",
+  "manifest": {
+    "http_status": 200,
+    "redirect_followed": true,
+    "generated_at": "2026-08-23T00:51:54.165Z",
+    "entry_count": 4579,
+    "current_slugs_present": "8/8"
+  },
+  "resource_validation": {
+    "current_roles": "8/8",
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "metadata_id_matches_slug": "8/8",
+    "metadata_v2": "8/8",
+    "spritesheet_contract": "8/8 image/webp, 1536x2288, RGBA",
+    "public_sprite_sha_match": "8/8",
+    "mutation_performed": false
+  },
+  "index_observations": {
+    "manifest_index_is_not_authoritative_for_version": true,
+    "manifest_sprite_version_lagging_entries": "6/8 current entries expose index v1 while actual metadata is v2",
+    "note": "Actual metadata, image dimensions, format and downloaded SHA were checked independently of manifest index version fields."
+  },
+  "historical_slug": {
+    "hei-mao-2": {
+      "record_present": true,
+      "metadata_http_200": true,
+      "metadata_id": "hei-mao",
+      "metadata_id_matches_slug": false,
+      "metadata_v2": true,
+      "spritesheet_contract": "image/webp, 1536x2288, RGBA",
+      "local_package_available": false,
+      "action": "recorded_only; no deletion, replacement or mutation attempted"
+    }
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "decision": "All eight current PetDex public resources were freshly re-read from the current manifest and match the repository spritesheet bytes and v2 contract. The historical hei-mao-2 record remains a separate inconsistent legacy entry and was not mutated."
+}

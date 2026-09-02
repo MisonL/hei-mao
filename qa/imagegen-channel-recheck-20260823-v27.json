@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T05:50:25Z",
+  "scope": "local Docker image-generation client planning for the approved 1536x2288 PetDex atlas size",
+  "service": {
+    "kind": "local Docker GPT Image Playground",
+    "health": "healthy",
+    "remote_contract": "capabilities and runtime checks passed",
+    "default_model": "gpt-image-2-1k",
+    "request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "recommended_concurrency": 1
+  },
+  "requests": {
+    "entrypoint": "/api/agent/image-requests",
+    "transport": "server_orchestrated",
+    "requested_dimensions": "1536x2288",
+    "output_format": "webp",
+    "omitted_model": {
+      "resolved_model": "gpt-image-2-1k",
+      "size_plan": "accepted",
+      "dimension_check_plan": "enabled",
+      "billable_request_sent": false
+    },
+    "explicit_model": {
+      "model": "gpt-image-2-1k",
+      "size_plan": "accepted",
+      "dimension_check_plan": "enabled",
+      "billable_request_sent": false
+    }
+  },
+  "client_change": {
+    "repository": "visual-journal",
+    "source_commit": "338828254467e9445b1fd799c148e57bcdfc58b4",
+    "behavior": "non-billable --check-remote plans now adopt the server-declared default model when the user omits --model",
+    "explicit_model_preserved": true,
+    "regression_test": "can combine generate dry-run planning with non-billable remote checks",
+    "installed_skill_sync": "pass; installed generate-image.mjs matches the validated repository file byte-for-byte",
+    "installed_skill_syntax": "pass"
+  },
+  "verification": {
+    "targeted_test": "pass",
+    "prettier_check": "pass",
+    "git_diff_check": "pass",
+    "formal_petdex_assets_changed": false,
+    "temporary_artifacts_created": false
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false,
+    "prompts": false
+  },
+  "result": "The local image-generation client can plan the approved 1536x2288 size without billing, and its displayed default model now matches the healthy Docker service. A real image request was intentionally not sent in this check."
+}

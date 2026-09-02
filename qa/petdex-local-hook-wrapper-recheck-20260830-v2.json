@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T08:08:45Z",
+  "scope": "fresh isolated PetDex Codex Hook lifecycle and forwarding recheck against Desktop 0.9.1",
+  "desktop": {
+    "installed_bundle_version": "0.9.1",
+    "native_runner_version": "0.9.1",
+    "hook_events": ["user-prompt", "pre", "post", "notification", "stop"]
+  },
+  "wrapper_contract": {
+    "idle_input_close_ms": 250,
+    "total_deadline_ms": 1200,
+    "kill_grace_ms": 200,
+    "host_hook_timeout_seconds": 2,
+    "stdin_cap_bytes": 65536,
+    "missing_runner_exit_code": 127,
+    "deadline_exit_code": 124
+  },
+  "lifecycle_matrix": {
+    "native_closed_stdin": {"events_passed": "5/5", "max_elapsed_ms": 33, "all_bounded_under_host_deadline": true},
+    "native_open_stdin": {"events_passed": "5/5", "max_elapsed_ms": 328, "all_bounded_under_host_deadline": true},
+    "wrapper_closed_stdin": {"events_passed": "5/5", "max_elapsed_ms": 145, "all_bounded_under_host_deadline": true},
+    "wrapper_open_stdin": {"events_passed": "5/5", "max_elapsed_ms": 381, "all_bounded_under_host_deadline": true}
+  },
+  "chunked_payload": {
+    "payload_bytes": 131042,
+    "forwarded_bytes": 131042,
+    "sha256_match": true,
+    "exit_code": 0
+  },
+  "failure_paths": {
+    "missing_runner": {"exit_code": 127, "explicit_stderr": true, "bounded": true},
+    "unresponsive_runner": {"exit_code": 124, "forced_kill_required": true, "bounded": true}
+  },
+  "configuration": {
+    "hooks_enabled": true,
+    "events_configured": 5,
+    "commands_use_local_wrapper": true,
+    "known_eof_prone_native_fallback": false,
+    "wrapper_missing_behavior": "explicit non-zero exit 127"
+  },
+  "process_safety": {
+    "existing_codex_chatgpt_or_petdex_processes_touched": false,
+    "processes_stopped": false,
+    "processes_restarted": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "payload_text_recorded": false
+  },
+  "result": "Desktop 0.9.1 native runner and the local wrapper terminate all five Hook events with closed or open stdin under the two-second host deadline. A 131042-byte chunked payload is byte-identical after forwarding; missing and unresponsive runners fail explicitly with 127 and 124. No existing user process was touched."
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T19:07:36.453Z",
+  "scope": "fresh PetDex manifest and eight public role resource recheck",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-21T18:25:08.433Z",
+    "entry_count": 4568,
+    "current_slugs_present": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2 remains record-only"
+  },
+  "resource_validation": {
+    "metadata_http_200": "8/8",
+    "metadata_id_matches": "8/8",
+    "actual_metadata_sprite_version_number": "8/8 v2",
+    "spritesheet_contract": "8/8 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates": "6/8 current public resources still differ from repository spritesheet SHA",
+    "duplicate_submission_created": false,
+    "online_switch_confirmed": false
+  },
+  "decision": "The public resource contract passes for all eight current roles; public spritesheet content remains synchronized with the repository for only 2/8 roles. The remaining 6 owned-slug updates are not live.",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  }
+}

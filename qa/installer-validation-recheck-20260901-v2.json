@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01",
+  "scope": "Bash and PowerShell installer syntax, eight supported slugs, fixed SHA checks, and unknown slug rejection",
+  "bash": {
+    "syntax": {"command": "bash -n install.sh", "exit_code": 0},
+    "shellcheck": {"command": "shellcheck -S warning install.sh", "exit_code": 0, "diagnostics": 0},
+    "supported_slugs_installed": 8,
+    "unknown_slug_rejected": true
+  },
+  "powershell": {
+    "parse": {"command": "System.Management.Automation.Language.Parser::ParseFile install.ps1", "exit_code": 0},
+    "supported_slugs_installed": 8,
+    "unknown_slug_rejected": true
+  },
+  "asset_integrity": "all supported installs matched the current repository pet.json and spritesheet.webp bytes, including the corrected delivery SHA",
+  "isolation": "all installs targeted temporary directories; test directories were removed after verification"
+}

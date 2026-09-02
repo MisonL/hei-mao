@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T03:39:28+00:00",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases, extending the prior raster, render, temporal, and topology methods",
+  "prior_evidence": [
+    "qa/visual-review-methods-recheck-20260831-v2.json",
+    "qa/visual-review-alternative-20260831/visual-review-alternative-20260831-v6.json"
+  ],
+  "new_method": {
+    "name": "downsampled alpha topology and skeleton residual review",
+    "implementation": "qa/visual-review-alternative-20260831/topology_skeleton_review.py",
+    "evidence": "qa/visual-review-alternative-20260831/topology-skeleton-review-20260831-v1.json",
+    "candidate_sheet": "qa/visual-review-alternative-20260831/topology-skeleton-candidates-v1.jpg",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "nonempty_frames": 592,
+      "intentionally_unused_cells": 112,
+      "circular_frame_transitions": 592,
+      "analysis_size": "96x104"
+    },
+    "checks": [
+      "connected components, enclosed holes, and Euler characteristic",
+      "Zhang-Suen skeleton endpoint and branchpoint counts",
+      "convexity and upper/lower skeleton occupancy",
+      "circular second-order topology residuals across each animation row",
+      "normal-size high-contrast skeleton and junction overlay review"
+    ],
+    "result": "No new hard failure was promoted. The explicit control samples reproduce the four already confirmed row-level defects; the remaining topology outliers are ordinary prop, costume, or pose variation."
+  },
+  "confirmed_hard_failures": [
+    {
+      "role": "hei-mao",
+      "row": "jumping",
+      "evidence": "frame 2 duplicated upper head",
+      "required_action": "regenerate_complete_row"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "evidence": "frame 2 duplicated upper head",
+      "required_action": "regenerate_complete_row"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "evidence": "frames 2-3 stacked upper contours",
+      "required_action": "regenerate_complete_row"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "evidence": "frames 0-4 repeated head and pose-family switch",
+      "required_action": "regenerate_complete_row"
+    }
+  ],
+  "new_hard_failures": [],
+  "formal_assets_modified": false,
+  "generation": {
+    "status": "blocked",
+    "reason": "The four complete-row repairs still require an accepted image-generation result; no formal asset was replaced in this visual-only pass."
+  },
+  "limitations": [
+    "Skeleton and topology metrics are evidence-only and sensitive to downsampling and thin appendages.",
+    "Normal-size asset sheets cannot verify live Codex App window z-order, multi-screen placement, or bubble tracking.",
+    "The current run intentionally does not issue a billable generation request."
+  ]
+}

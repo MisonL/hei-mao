@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T21:09:48Z",
+  "scope": "fresh real local Docker image-generation request with the requested fixed size",
+  "service": {
+    "reachable": true,
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "requested_dimensions": "1024x1024",
+    "output_format": "webp",
+    "endpoint": "/api/agent/image-requests",
+    "route": "server_orchestrated_job"
+  },
+  "request": {
+    "status": "pass",
+    "actual_dimensions": "1024x1024",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "dimension_check": "pass",
+    "visual_check": "complete centered full-body dark-brown pig mascot with both feet visible, natural upright proportions and generous green chroma-key margin; no crop or squash observed"
+  },
+  "cleanup": {
+    "artifact_delete": "HTTP 200",
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service completed a real fixed-size request through server orchestration. The WebP was downloaded, dimension-checked, visually inspected, deleted, and confirmed unavailable afterward. No formal PetDex asset was changed."
+}

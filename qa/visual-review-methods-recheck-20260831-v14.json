@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "additional visual-review method after the multi-background and cross-role reviews",
+  "method": {
+    "name": "color-vision simulation and low-saturation display stress",
+    "purpose": "detect loss of foreground/background or internal feature contrast when color information is reduced, without changing alpha or geometry",
+    "inputs": [
+      "original rendering",
+      "grayscale rendering",
+      "protan color-vision simulation",
+      "deutan color-vision simulation",
+      "tritan color-vision simulation",
+      "96x104 and 48x52 display renders"
+    ],
+    "selection": "contrast-loss metrics rank candidates only; normal-size visual review is authoritative",
+    "artifacts": [
+      "qa/visual-review-alternative-20260831/color_vision_stress_review.py",
+      "qa/visual-review-alternative-20260831/color-vision-stress-review-20260831-v1.json",
+      "qa/visual-review-alternative-20260831/color-vision-stress-candidates-v1.jpg",
+      "qa/visual-review-alternative-20260831/color-vision-stress-candidates-48x52-v1.jpg"
+    ]
+  },
+  "coverage": {
+    "roles": 8,
+    "rows": 88,
+    "cells": 584,
+    "candidate_panels_per_sheet": 40,
+    "candidate_sheets": 2,
+    "formal_assets_modified": false
+  },
+  "result": {
+    "manual_verdict": "pass_with_existing_blockers",
+    "new_hard_failures": [],
+    "new_warnings": [],
+    "foreground_or_edge_contrast_failure": "not_observed",
+    "small_display_identity_loss": "not_observed",
+    "existing_blockers_unchanged": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ]
+  },
+  "limitations": [
+    "The simulations are accessibility-oriented display approximations, not clinical color-vision models.",
+    "A color change can be intentional for a role or prop; the method cannot infer semantic importance from an unlabeled component.",
+    "This is offline asset evidence and cannot prove Codex App window layering, multi-screen placement, bubble tracking, or GPU composition.",
+    "The authoritative alpha/despill and v2 atlas validators remain the release gates for transparency and structure."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T16:44:00Z",
+  "scope": "isolated local PetDex Codex Hook wrapper stdin lifecycle recheck",
+  "wrapper_contract": {
+    "events": [
+      "UserPromptSubmit",
+      "PreToolUse",
+      "PostToolUse",
+      "PermissionRequest",
+      "Stop"
+    ],
+    "idle_timeout_ms": 250,
+    "total_timeout_ms": 1500,
+    "native_runner": "unchanged signed PetDex runner"
+  },
+  "isolated_tests": {
+    "wrapper_closed_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0,
+      "elapsed_ms_range": "100-133"
+    },
+    "wrapper_open_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0,
+      "elapsed_ms_range": "337-352"
+    },
+    "direct_native_runner_closed_stdin": {
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "direct_native_runner_open_stdin": {
+      "natural_exit_before_timeout": false,
+      "forced_signal": "SIGTERM",
+      "timeout_ms": 1600
+    }
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_or_petdex_processes_touched": false,
+    "processes_restarted": false,
+    "processes_stopped": false,
+    "only_isolated_test_children_used": true
+  },
+  "upstream_boundary": {
+    "issue": "689",
+    "native_runner_eof_semantics": "still waits for EOF after a complete payload",
+    "local_wrapper_mitigation": "pass; open-stdin calls exit within the bounded wrapper window",
+    "upstream_fix_claimed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "The local bounded wrapper prevents the known open-stdin hang for all five configured Codex Hook events. The upstream native runner remains unchanged and its EOF wait is still an upstream boundary."
+}

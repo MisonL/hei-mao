@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T05:40:51Z",
+  "scope": "fresh read-only PetDex manifest and public asset parity recheck",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-30T02:48:30.134Z",
+    "total": 4669,
+    "current_slugs_present": "8/8",
+    "historical_hei_mao_2_present": true,
+    "index_sprite_version_lag": "5/8 current entries index as v1; actual metadata is authoritative"
+  },
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "public_resources": {
+    "metadata_http_200": "8/8",
+    "metadata_id_match": "8/8",
+    "metadata_sprite_version_2": "8/8",
+    "metadata_byte_match": "8/8",
+    "spritesheet_http_200": "8/8",
+    "spritesheet_contract": "8/8 1536x2288 WebP RGBA",
+    "spritesheet_byte_match": "8/8",
+    "zip_url_present": "8/8",
+    "mutation_performed": false
+  },
+  "sha256": {
+    "hei-mao": {"metadata":"dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802","spritesheet":"52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07c"},
+    "hei-mao-quality": {"metadata":"c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07","spritesheet":"a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"},
+    "hei-mao-butler": {"metadata":"903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4","spritesheet":"1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304"},
+    "hei-mao-chef": {"metadata":"d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a","spritesheet":"32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957"},
+    "hei-mao-foodie": {"metadata":"0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c","spritesheet":"eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0"},
+    "hei-mao-delivery": {"metadata":"16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2","spritesheet":"6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86"},
+    "hei-mao-fortune": {"metadata":"ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b","spritesheet":"10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9"},
+    "hei-mao-traveler": {"metadata":"82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f","spritesheet":"d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25"}
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_ids_recorded": false
+  },
+  "result": "All eight current public PetDex metadata files and spritesheets remain v2, match the repository byte-for-byte, and require no mutation. Manifest index version fields remain lagging evidence for five entries."
+}

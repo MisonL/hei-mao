@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T12:30:32Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex release acceptance state after fresh local image-channel request reconciliation",
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260821-v11.json",
+    "local_docker": "container, Agent contract and channel health checks pass, but the fresh authorized gpt-image-2 orchestration smoke returned upstream 503 with zero artifacts",
+    "external_observation": "user-provided backend screenshot shows other successful gpt-image-2 records without local request or artifact correlation",
+    "request_reconciliation": "Agent state confirms the fresh local request is failed with zero artifacts",
+    "result": "no image or artifact",
+    "formal_assets_changed": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260821-v3.json",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "image_contract": "8/8 1536x2288 RGBA WEBP",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates_pending_review": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ],
+    "historical_duplicate": "hei-mao-2 remains record-only; no deletion or replacement attempted"
+  },
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP; zero validator errors/warnings and transparent RGB residue",
+    "continuity": "8/8 exit cleanly with reviewed minor warnings",
+    "hatch_pet_tests": "28 passed",
+    "installer_checks": "Bash, ShellCheck, PowerShell parse, JSON and diff checks pass",
+    "three_directory_sha_parity": "8/8 pass",
+    "formal_assets_modified": false,
+    "evidence": "qa/current-v2-gate-recheck-20260821-v1.json"
+  },
+  "hooks": {
+    "eof_behavior": "open stdin waits for EOF; closed stdin exits normally",
+    "evidence": "qa/petdex-hook-eof-recheck-20260821-v1.json"
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified due native capture boundary",
+    "evidence": "qa/codex-app-boundary-recheck-20260821-v1.json"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "fresh local asset and install gates pass; the fresh local image request still fails upstream with no artifact, six PetDex owned-slug updates remain under review, full Codex App visual acceptance remains unverified, and the upstream Hook EOF issue remains open"
+}

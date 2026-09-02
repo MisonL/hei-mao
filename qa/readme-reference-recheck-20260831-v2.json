@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T12:05:00Z",
+  "scope": "incremental README reference and privacy recheck after state-intent visual QA evidence was added",
+  "checked_paths": [
+    "qa/current-state-recheck-20260831-v7.json",
+    "qa/visual-review-alternative-20260831/state-semantics-review-20260831-v1.json",
+    "qa/visual-review-alternative-20260831/state-semantics-manual-review-20260831-v1.json",
+    "qa/visual-review-alternative-20260831/state-semantics-candidates-v1.jpg",
+    "qa/visual-review-alternative-20260831/state_semantics_review.py"
+  ],
+  "result": {
+    "checked_paths_missing": 0,
+    "privacy_scan": "pass",
+    "formal_assets_modified": false
+  },
+  "interpretation": "本轮新增的 README 具体引用均存在，新增证据文件未包含本机路径、私网地址、凭证或进程标识。"
+}

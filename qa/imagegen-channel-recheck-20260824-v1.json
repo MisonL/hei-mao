@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T00:40:24Z",
+  "scope": "local Docker image-generation smoke after current service recovery",
+  "service": {
+    "kind": "local Docker GPT Image Playground",
+    "health": "healthy",
+    "default_model": "gpt-image-2-1k",
+    "entrypoint": "/api/agent/image-requests",
+    "transport": "server_orchestrated",
+    "channel_request_mode": "images-non-stream",
+    "selected_channel": "meinianda-image"
+  },
+  "request": {
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1536x2288",
+    "n": 1,
+    "artifact_count": 1,
+    "http_status": 200,
+    "route_result": "artifact_created_and_returned"
+  },
+  "cleanup": {
+    "artifact_delete_status": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "formal_petdex_assets_changed": false
+  },
+  "verification": {
+    "non_billable_capabilities": "pass",
+    "non_billable_contract_check": "pass",
+    "non_billable_runtime_check": "pass",
+    "channel_health": "healthy",
+    "models_probe": "pass",
+    "prior_dimension_visual_contract": "covered_by_imagegen-channel-recheck-20260823-v29",
+    "temporary_files_removed": true
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "request_ids": false,
+    "prompts": false
+  },
+  "result": "The current local Docker service accepts a 1536x2288 request with the configured image model through the server-owned Agent orchestration route and returns one temporary artifact. Artifact cleanup is confirmed; the prior v29 record remains the dimension and visual contract evidence. Custom model declarations and the /models probe pass, while a separate billable custom-model generation was not repeated."
+}

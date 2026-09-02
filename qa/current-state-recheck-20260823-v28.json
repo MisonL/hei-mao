@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T05:43:41Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "fresh local usability and release-gate recheck after restoring the local image-generation channel",
+  "local_assets": {
+    "roles": "8/8",
+    "atlas_contract": "8/8 v2, 1536x2288, 8x11, RGBA WebP",
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "direction_continuity": "8/8 ok; previously reviewed minor metric warnings retained",
+    "hatch_pet_tests": "28 passed; dependency deprecation warnings only",
+    "three_directory_sha_parity": "8/8 roles and 16/16 files match across repository, Codex and PetDex directories"
+  },
+  "installers": {
+    "bash_syntax": "pass",
+    "shellcheck": "pass",
+    "powershell_parse": "pass",
+    "isolated_bash_install": "8/8 pass",
+    "isolated_powershell_install": "8/8 pass",
+    "unsupported_slug_rejection": "bash and PowerShell pass",
+    "temporary_targets_removed": true
+  },
+  "image_generation": {
+    "service": "local Docker GPT Image Playground",
+    "container": "healthy",
+    "default_model": "gpt-image-2-1k",
+    "remote_contract": "capabilities and runtime pass",
+    "requested_size_contract": "1536x2288 accepted by non-billable client planning",
+    "real_smoke": "existing fresh 1024x1024 WebP smoke passed through server orchestration; temporary artifacts were deleted",
+    "formal_petdex_assets_changed": false
+  },
+  "hooks": {
+    "local_wrapper": "five events exit under closed and open stdin isolated tests",
+    "upstream_issue_689": "open; native runner still waits for EOF",
+    "upstream_pr_710": "open draft; not a claimed fix for issue 689",
+    "existing_processes_touched": false
+  },
+  "codex_app_visual_acceptance": {
+    "status": "unverified",
+    "reason": "current display is asleep and live window capture is unavailable",
+    "partial_petdex_desktop_evidence": true,
+    "required_user_action": "wake the display and allow screen recording if a fresh real Codex App visual pass is required",
+    "processes_stopped_or_restarted": false
+  },
+  "privacy": {
+    "credentials": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false
+  },
+  "decision": "The local package, installers, hooks mitigation and image-generation service are usable and pass their automated gates. Full real Codex App visual acceptance remains explicitly unverified because the display capture boundary is unavailable."
+}

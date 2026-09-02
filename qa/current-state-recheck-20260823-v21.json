@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T00:55:01Z",
+  "scope": "current eight-role PetDex state after the latest local generation and edit recheck",
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v21.json",
+    "service_status": "usable_for_single_image_1024x1024_generation_and_edit_requests",
+    "model": "gpt-image-2-1k",
+    "generation_route": "server_orchestrated_job_polling",
+    "edit_route": "page_sse",
+    "generation_dimensions": "1024x1024",
+    "edit_dimensions": "1024x1024",
+    "generation_dimension_check": "pass",
+    "edit_dimension_check": "pass",
+    "artifact_cleanup": "pass; generation metadata/content and edit content returned 404 after deletion",
+    "prior_multi_image_observation": "not reproduced in this run; root cause remains unconfirmed",
+    "formal_assets_changed": false
+  },
+  "local_atlas_recheck": {
+    "evidence": "qa/current-v2-gate-recheck-20260823-v8.json",
+    "accurate_chroma_key_recheck": "8/8 pass",
+    "dimensions": "1536x2288",
+    "grid": "8x11 cells of 192x208",
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "formal_assets_modified": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260823-v5.json",
+    "owned_slug_evidence": "qa/petdex-owned-slug-readonly-recheck-20260823-v2.json",
+    "current_slugs_present": "8/8",
+    "actual_metadata_v2": "8/8",
+    "actual_spritesheet_contract": "8/8 image/webp 1536x2288 RGBA",
+    "public_sprite_sha_match": "8/8",
+    "mutation_performed": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v1.json",
+    "upstream_evidence": "qa/petdex-upstream-status-recheck-20260823-v9.json",
+    "local_wrapper": "5/5 events pass with closed stdin and 5/5 pass with open stdin",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open",
+    "existing_processes_touched": false
+  },
+  "desktop_boundary": {
+    "desktop_version": "0.8.0",
+    "codex_app_full_visual_acceptance": "unverified; native screenshot and window-tree probes did not expose a stable Codex App pet-settings capture in this run",
+    "process_safety": "no Codex or ChatGPT process was stopped, restarted, or signaled"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The local Docker image-generation service is usable for both fresh single-image generation and page SSE edit requests at 1024x1024 with the custom model, and the eight formal PetDex packages and public resources remain unchanged and pass the accurate-key atlas baseline. Full Codex App visual acceptance and the upstream native runner EOF fix remain separate unverified boundaries."
+}

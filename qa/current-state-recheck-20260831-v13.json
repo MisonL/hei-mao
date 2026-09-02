@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "continuation snapshot after the color-vision visual review",
+  "baseline": "qa/current-state-recheck-20260831-v12.json",
+  "new_verification": {
+    "method": "color-vision simulation and low-saturation display stress",
+    "coverage": "8 roles, 88 rows, 584 cells, 40 candidates reviewed at both 96x104 and 48x52",
+    "result": "no new hard failure or warning; the existing eight complete-row blockers remain unchanged",
+    "evidence": [
+      "qa/visual-review-methods-recheck-20260831-v14.json",
+      "qa/visual-review-alternative-20260831/color-vision-stress-review-20260831-v1.json",
+      "qa/visual-review-alternative-20260831/color-vision-stress-manual-review-20260831-v1.json",
+      "qa/visual-review-alternative-20260831/color-vision-stress-candidates-v1.jpg",
+      "qa/visual-review-alternative-20260831/color-vision-stress-candidates-48x52-v1.jpg"
+    ]
+  },
+  "unchanged_release_blockers": [
+    "hei-mao/jumping",
+    "hei-mao-quality/jumping",
+    "hei-mao-foodie/waiting",
+    "hei-mao-delivery/failed",
+    "hei-mao-quality/running-left",
+    "hei-mao-quality/failed",
+    "hei-mao-traveler/waiting",
+    "hei-mao-traveler/review"
+  ],
+  "boundaries": {
+    "formal_assets_modified": false,
+    "image_generation": "real upstream generation remains unavailable; no repair row was generated",
+    "codex_app_ui": "refresh, playback, multi-pet, multi-screen, and bubble tracking still require user-side App acceptance",
+    "git": "existing dirty worktree and index lock preserved; new evidence remains uncommitted"
+  },
+  "release_readiness": "blocked_until_complete_row_regeneration_and_codex_app_acceptance"
+}

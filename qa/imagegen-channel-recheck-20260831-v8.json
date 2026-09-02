@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T03:51:48Z",
+  "scope": "real local image-generation repair attempt for hei-mao jumping row",
+  "request": {
+    "operation": "generate",
+    "row": "hei-mao/jumping",
+    "expected_dimensions": "1536x512",
+    "quality": "high",
+    "format": "webp",
+    "billable": true,
+    "idempotency_key": "hei-mao-jumping-repair-20260831-a1",
+    "request_id": "23abdc03-1da5-4350-b733-3374fa3a46d6"
+  },
+  "routing": {
+    "transport": "agent_job_polling",
+    "endpoint": "/api/agent/jobs/{request_id}/result",
+    "selected_channel_id": "meinianda-image",
+    "upstream_host": "meinianda.top",
+    "selected_channel_request_mode": "images-sse",
+    "fallback_channel_request_mode": "images-non-stream",
+    "fallback_applied": false
+  },
+  "result": {
+    "ok": false,
+    "error_code": "upstream_unavailable",
+    "error_class": "unknown_transport",
+    "message": "Connection error.",
+    "upstream_status": null,
+    "artifact_count": 0,
+    "dimension_check_failed": false,
+    "retryable": false,
+    "next_action": "diagnose_then_new_idempotency_key"
+  },
+  "formal_assets_modified": false,
+  "interpretation": "The local Agent contract, routing, authentication, and job polling were reached. The configured upstream connection failed before a consumable image was returned; this is not evidence of a prompt, atlas, or dimension defect."
+}

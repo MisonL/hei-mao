@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T04:22:50Z",
+  "scope": "fresh read-only PetDex manifest and public asset parity recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-24T00:49:55.888Z",
+    "total": 4579,
+    "current_slugs_present": "8/8",
+    "historical_hei_mao_2_present": true,
+    "index_sprite_version_lag": "5/8 current entries still index as v1; actual metadata is authoritative"
+  },
+  "roles": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-delivery",
+    "hei-mao-foodie",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "public_resources": {
+    "metadata_http_200": "8/8",
+    "metadata_id_match": "8/8",
+    "metadata_sprite_version_2": "8/8",
+    "spritesheet_http_200": "8/8",
+    "spritesheet_contract": "8/8 1536x2288 WebP RGBA",
+    "repository_sha_match": "8/8",
+    "mutation_performed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false
+  },
+  "result": "All eight current public PetDex resources remain v2, match the repository spritesheets byte-for-byte, and require no mutation. Historical hei-mao-2 remains record-only."
+}

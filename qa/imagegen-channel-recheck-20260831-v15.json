@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T12:43:00Z",
+  "scope": "fresh bounded real smoke through the local Docker Agent JSON server-channel route",
+  "service": {
+    "container_health": "healthy",
+    "runtime_capabilities": "available",
+    "request_mode": "images-non-stream",
+    "model": "gpt-image-2",
+    "new_idempotency_run": true,
+    "billable_smoke": true
+  },
+  "result": {
+    "ok": false,
+    "status": 502,
+    "elapsed_ms": 629,
+    "upstream_host": "meinianda.top",
+    "image_count": 0,
+    "artifact_count": 0,
+    "error": "Connection error.",
+    "repair_generation_ready": false
+  },
+  "interpretation": "本机 Docker 服务、Agent JSON 路由和结构化错误处理均可达；真实请求仍在上游连接阶段失败，没有可用于完整动作行重生的图像。",
+  "formal_assets_modified": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_id_recorded": false,
+    "local_paths_recorded": false
+  }
+}

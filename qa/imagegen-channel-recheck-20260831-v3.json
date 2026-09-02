@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T22:05:28Z",
+  "scope": "bounded post-health image-generation smoke before repairing the four blocked full rows",
+  "service_contract": {
+    "capabilities": "pass",
+    "runtime": "pass",
+    "channel_health_snapshot": "healthy process state; latest request still returned 503",
+    "configured_request_modes": ["images-non-stream", "images-sse"],
+    "recommended_concurrency": 1,
+    "default_model": "gpt-image-2-1k"
+  },
+  "real_smoke": {
+    "request_mode": "images-sse",
+    "billable": true,
+    "status": "failed",
+    "error_code": "upstream_unavailable",
+    "upstream_status": 503,
+    "retryable": true,
+    "fallback_applied": false,
+    "artifact_count": 0,
+    "diagnostics_found": true
+  },
+  "cleanup": {
+    "artifacts_created": 0,
+    "temporary_files_created": 0,
+    "formal_assets_modified": false
+  },
+  "result": "The local Agent capabilities, runtime, and in-process channel snapshot are healthy, but the new real request still reached the configured channel and returned an explicit upstream 503. No consumable image or formal asset was produced.",
+  "next_action": "Do not repeat billable generation until the upstream channel recovers; use a new idempotency key for the next smoke, then regenerate each affected row as a complete coherent row and rerun all hatch-pet gates."
+}

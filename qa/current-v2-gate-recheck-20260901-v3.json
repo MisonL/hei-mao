@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01T10:20:00Z",
+  "scope": "direct v2 atlas gate rerun for the eight current hei-mao packages after the mhapi repair rows were assembled",
+  "validator": {
+    "command": "validate_atlas.py --require-v2 --chroma-key #FF00FF",
+    "chroma_key": "#FF00FF",
+    "chroma_key_reason": "matches the generation and single-pass despill key used by the current atlas pipeline; #00FF00 is not the key for these packages and can flag green props",
+    "all_ok": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "records": [
+    {"slug": "hei-mao", "sha256": "1f39e5ac561b27cc4b8cee46b2b4d63bca005a91cf64e63c7f340e534dd5702b", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-quality", "sha256": "3d65d0494cd1c68c7d522031ac5628733f7f3a040728c22254002617c9f49ab0", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-butler", "sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-chef", "sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-foodie", "sha256": "2f434ce057fb08907846ae9e4fd38ebe6ed86bef0fd6f5465ac53487289e75c1", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-delivery", "sha256": "13016e533c70f65f9e4eb046a36bced865881f61e81870c55da7e75a83f17eb1", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-fortune", "sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-traveler", "sha256": "bab07c70334d00064468d7f82767064c67834db4da342ea16eb1bcc4b5ba5e45", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true}
+  ],
+  "continuity": {
+    "all_ok": true,
+    "warning_policy": "existing local outlier and intentional negative-space warnings are retained for review; no new hard failure was found"
+  },
+  "affected_rows": {
+    "count": 8,
+    "rows": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed",
+      "hei-mao-quality/running-left",
+      "hei-mao-quality/failed",
+      "hei-mao-traveler/waiting",
+      "hei-mao-traveler/review"
+    ],
+    "visual_review": "pass_with_reviewed_minor_warnings"
+  }
+}

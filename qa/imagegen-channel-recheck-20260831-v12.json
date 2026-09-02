@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T10:07:13Z",
+  "scope": "one fresh billable 1K smoke request before starting complete-row regeneration",
+  "service": {
+    "base_url_source": "user_provided_local_service",
+    "container_health": "reachable",
+    "channel_health_snapshot": "healthy",
+    "channel_id": "meinianda-image",
+    "request_mode_selected": "images-non-stream"
+  },
+  "request": {
+    "size": "1024x1024",
+    "quality": "low",
+    "transport": "agent_json",
+    "backend": "images-api",
+    "new_idempotency_key": true,
+    "billable": true
+  },
+  "result": {
+    "status": "failed",
+    "error_code": "upstream_unavailable",
+    "error_message": "Connection error.",
+    "artifact_count": 0,
+    "dimension_check": "not_applicable",
+    "fallback_applied": false,
+    "diagnostics_found": true,
+    "upstream_host": "meinianda.top"
+  },
+  "conclusion": {
+    "local_agent_contract": "passed",
+    "local_channel_router": "reachable_and_configured",
+    "upstream_connection": "unavailable",
+    "formal_assets_modified": false,
+    "can_start_complete_row_regeneration": false,
+    "next_action": "等待上游恢复后用新的幂等键重新 smoke；不要复用本次失败键或继续盲目重试"
+  },
+  "privacy": {
+    "request_id": "omitted",
+    "idempotency_key": "omitted",
+    "credentials": "omitted",
+    "local_paths": "omitted"
+  }
+}

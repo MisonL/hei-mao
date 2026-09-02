@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "fresh pet.json metadata contract audit for eight formal pets",
+  "required_fields": [
+    "description",
+    "displayName",
+    "id",
+    "spriteVersionNumber",
+    "spritesheetPath"
+  ],
+  "records": [
+    {
+      "slug": "hei-mao",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-quality",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-butler",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-chef",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-foodie",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-delivery",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-fortune",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    },
+    {
+      "slug": "hei-mao-traveler",
+      "checks": {
+        "id_matches": true,
+        "display_name_nonempty": true,
+        "description_nonempty": true,
+        "sprite_version_2": true,
+        "spritesheet_path_relative": true,
+        "required_fields": true
+      },
+      "fields": [
+        "description",
+        "displayName",
+        "id",
+        "spriteVersionNumber",
+        "spritesheetPath"
+      ],
+      "ok": true
+    }
+  ],
+  "all_ok": true,
+  "formal_assets_modified": false
+}

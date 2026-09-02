@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases",
+  "new_method": {
+    "name": "lower-anchor aligned stroboscopic residual and alpha-union review",
+    "implementation": "qa/visual-review-alternative-20260831/stroboscopic_residual_review.py",
+    "sheet": "qa/visual-review-alternative-20260831/stroboscopic-residual-candidates-v1.jpg",
+    "evidence": "qa/visual-review-alternative-20260831/stroboscopic-residual-review-20260831-v1.json",
+    "purpose": "在相邻帧按下半身锚点对齐后，用正常显示尺寸的 PREV/CURRENT/DIFFx4/ALPHA-UNION 对照，隔离整体位移并检查内部材质、面部、道具重绘和轮廓突变",
+    "coverage": {
+      "roles": 8,
+      "rows": 88,
+      "frames": 584,
+      "transitions_including_loop": 584,
+      "candidate_sheet_items": 24
+    },
+    "status": "completed; no additional hard failure promoted"
+  },
+  "why_complementary": [
+    "它先消除下半身锚点的整体平移，再观察内部颜色和轮廓残差，不依赖单帧 bbox 或低分辨率骨架",
+    "DIFFx4 与 ALPHA-UNION 并列展示，可区分材质/颜色变化和真实轮廓、组件变化",
+    "包含每行的循环闭合转场，并把已知硬失败作为敏感性控制，避免把高分候选误判为新缺陷"
+  ],
+  "result": {
+    "new_hard_failures": [],
+    "confirmed_existing_hard_failures": [
+      "hei-mao/jumping frame 2 duplicated head",
+      "hei-mao-quality/jumping frame 2 duplicated head",
+      "hei-mao-foodie/waiting frames 2-3 stacked upper contours",
+      "hei-mao-delivery/failed frames 0-4 repeated head and pose-family switch"
+    ],
+    "formal_assets_modified": false,
+    "release_effect": "supplemental evidence only; complete-row regeneration remains required for the four existing blockers and the four scanline-confirmed rows"
+  },
+  "limitations": [
+    "平移对齐不能建模关节运动、遮挡顺序或自然道具摆动，残差只能作为候选证据",
+    "本方法未覆盖扫描线方法发现的微小 detached component，因此不能替代完整分辨率组件检查",
+    "该方法是资产级复核，不能证明 Codex App 窗口层级、多屏位置、气泡跟随或 GPU 合成",
+    "修复仍需按 hatch-pet 规则重生完整行，并重新执行确定性和视觉验收"
+  ]
+}

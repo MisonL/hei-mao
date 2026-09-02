@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T05:40:51Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "comprehensive hei-mao closeout state after latest PetDex release and upstream Hook fix",
+  "local_assets": {
+    "roles": "8/8",
+    "v2_atlas_gate": "passed",
+    "continuity": "reviewed warnings only",
+    "three_directory_parity": "16/16 files",
+    "formal_assets_modified": false
+  },
+  "installers": {
+    "bash": "8/8 roles; unknown slug rejected",
+    "powershell": "8/8 roles; unknown slug rejected",
+    "shellcheck_and_parsers": "passed"
+  },
+  "petdex": {
+    "cli": "1.3.0",
+    "desktop": "0.9.0",
+    "manifest_generated_at": "2026-08-30T02:48:30.134Z",
+    "manifest_total": 4669,
+    "public_resources": "8/8 HTTP 200, v2, 1536x2288 WebP RGBA, SHA parity",
+    "index_version_lag": "5/8 entries still index as v1; actual metadata is v2"
+  },
+  "hooks": {
+    "local_wrapper": "bounded and byte-verified",
+    "native_open_stdin": "passes on desktop-v0.9.0",
+    "issue_689": "closed via merged PR 752",
+    "draft_pr_710": "still open draft"
+  },
+  "codex_app_runtime": {
+    "desktop_local_boundary": "existing partial evidence remains valid",
+    "full_refresh_per_role_direction_animation_and_cross_display_acceptance": "requires user UI operation; not claimed here",
+    "process_safety": "no Codex, ChatGPT, or PetDex process stopped or restarted"
+  },
+  "image_generation": {
+    "local_docker": "previously verified available",
+    "formal_pet_assets_changed": false
+  },
+  "privacy": {
+    "public_text_scan_matches": 0,
+    "credentials_or_tokens": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false
+  },
+  "evidence": {
+    "v2_gate": "qa/current-v2-gate-recheck-20260830-v1.json",
+    "installers": "qa/installer-cross-platform-recheck-20260830-v1.json",
+    "parity": "qa/three-directory-parity-recheck-20260830-v1.json",
+    "petdex_live": "qa/petdex-live-recheck-20260830-v1.json",
+    "desktop_release": "qa/petdex-desktop-release-recheck-20260830-v1.json",
+    "hooks": "qa/petdex-local-hook-wrapper-recheck-20260830-v1.json",
+    "upstream": "qa/petdex-upstream-status-recheck-20260830-v1.json"
+  },
+  "decision": "local_and_public_asset_gates_pass; remaining full Codex App UI acceptance is explicitly user-operated and unverified"
+}

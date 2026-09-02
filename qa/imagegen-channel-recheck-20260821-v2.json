@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T04:25:07Z",
+  "scope": "authorized image-channel recovery recheck for Quality row-9",
+  "service_checks": {
+    "local_docker": {
+      "service": "local Docker service",
+      "container_health": "pass",
+      "agent_contract": "pass",
+      "channel": "lzjapi-image",
+      "channel_health_snapshot": "healthy",
+      "configured_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "attempts": [
+        {
+          "name": "row_9_agent_json_multireference",
+          "transport": "agent_json",
+          "request_mode": "images-non-stream",
+          "status": "rejected_after_upstream",
+          "error_code": "validation_error",
+          "upstream_status": 400,
+          "artifact_count": 0
+        },
+        {
+          "name": "row_9_page_sse_multireference",
+          "transport": "page_sse",
+          "status": "rejected_before_upstream",
+          "error_code": "page_sse_request_rejected",
+          "status_code": 400,
+          "artifact_count": 0
+        },
+        {
+          "name": "row_9_agent_json_single_reference",
+          "transport": "agent_json",
+          "request_mode": "images-non-stream",
+          "status": "rejected_after_upstream",
+          "error_code": "validation_error",
+          "upstream_status": 400,
+          "artifact_count": 0
+        },
+        {
+          "name": "generate_1k_smoke",
+          "transport": "agent_job_polling",
+          "request_mode": "images-non-stream",
+          "status": "rejected_after_upstream",
+          "error_code": "upstream_unavailable",
+          "upstream_status": 502,
+          "artifact_count": 0,
+          "diagnostic": "cross_origin_artifact_url"
+        }
+      ],
+      "responses_paths": "not_enabled"
+    },
+    "deployed_service": {
+      "base_url": "https://misonl-visual-journal.hf.space",
+      "channel": "jisuanyun-gpt-image",
+      "channel_health": "healthy",
+      "row_9_edit": {
+        "transport": "agent_json",
+        "request_mode": "images-non-stream",
+        "status": "rejected_after_upstream",
+        "error_code": "upstream_auth_failed",
+        "upstream_status": 403,
+        "artifact_count": 0
+      }
+    }
+  },
+  "quality_row_9": {
+    "role": "hei-mao-quality",
+    "candidate_generated": false,
+    "formal_assets_modified": false,
+    "formal_spritesheet_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "keep_formal_quality_assets_unchanged; no valid image artifact was returned by the recovered channel"
+}

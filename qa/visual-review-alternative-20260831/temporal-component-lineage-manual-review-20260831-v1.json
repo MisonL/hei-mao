@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "sheet": "qa/visual-review-alternative-20260831/temporal-component-lineage-candidates-v1.jpg",
+  "review_mode": "parent normal-size visual inspection of the bounded candidate sheet, cross-referenced with the combined QA record",
+  "decision": "no additional hard failure promoted",
+  "candidates": [
+    {
+      "role": "hei-mao-quality",
+      "row": "running-left",
+      "transition": "5->6",
+      "decision": "already-blocked-by-combined-qa",
+      "reason": "multi-threshold component births and movement agree with the previously confirmed full-row defect; do not patch an individual frame"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "review",
+      "transition": "1->2",
+      "decision": "already-blocked-by-combined-qa",
+      "reason": "persistent far-detached component is consistent with the previously confirmed full-row defect; complete-row regeneration remains required"
+    },
+    {
+      "role": "hei-mao-chef",
+      "row": "running-left",
+      "transition": "1->2",
+      "decision": "retain-minor-candidate",
+      "reason": "small detached component persists across thresholds, but normal-size sheet review does not show a clear identity or silhouette break"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "idle",
+      "transition": "3->4",
+      "decision": "retain-minor-candidate",
+      "reason": "small component birth/death pair; no visible hard defect at normal display size"
+    },
+    {
+      "role": "hei-mao-traveler",
+      "row": "idle",
+      "transition": "2->3",
+      "decision": "retain-minor-candidate",
+      "reason": "low-area component churn; likely thin attached prop or anti-aliased edge, with no visible hard defect in the ordered loop"
+    }
+  ],
+  "limitations": [
+    "本文件只记录候选筛选，不替代完整行重生后的独立最终视觉 QA",
+    "需要结合角色语义判断 detached component 是否为合法道具、肢体或负空间",
+    "Codex App 的窗口层级、多屏气泡跟随和 GPU 合成仍未由该资产级方法覆盖"
+  ]
+}

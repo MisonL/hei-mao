@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T23:42:04Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker custom-model fixed-size source-reference smoke after service recovery",
+  "non_billable_contract": {
+    "capabilities": "pass",
+    "runtime": "pass",
+    "channel_health": "healthy",
+    "orchestration": "server_owned_job_polling",
+    "effective_request_modes": ["images-non-stream", "images-sse"],
+    "billable_request_sent": false
+  },
+  "smoke": {
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1536",
+    "actual_dimensions": "1024x1536",
+    "format": "webp",
+    "dimension_check": "pass",
+    "route_mode": "server_orchestrated_job_polling",
+    "channel_request_mode": "images-non-stream",
+    "formal_asset_eligible": false
+  },
+  "cleanup": {
+    "metadata_before_delete": 200,
+    "content_before_delete": 200,
+    "delete": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_retained": false
+  },
+  "fixed_size_boundary": {
+    "requested_dimensions": "1024x1024",
+    "latest_known_actual_dimensions": "1254x1254",
+    "status": "unresolved_non_retryable_dimension_gate",
+    "evidence": "qa/imagegen-channel-recheck-20260822-v18.json"
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The recovered custom-model channel passed a matching 1024x1536 source-reference smoke and was cleaned up. The fixed 1024x1024 contract remains unresolved, so no formal pet asset was changed."
+}

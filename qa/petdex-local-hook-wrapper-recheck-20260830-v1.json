@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T05:40:51Z",
+  "scope": "fresh isolated PetDex Codex Hook lifecycle and forwarding recheck",
+  "wrapper_contract": {
+    "idle_input_close_ms": 250,
+    "total_deadline_ms": 1200,
+    "kill_grace_ms": 200,
+    "host_hook_timeout_seconds": 2,
+    "chunked_payload_bytes": 131072,
+    "chunked_payload_sha_match": true,
+    "timeout_exit_code": 124,
+    "spawn_error_exit_code": 127
+  },
+  "events": [
+    "user-prompt",
+    "pre",
+    "post",
+    "notification",
+    "stop"
+  ],
+  "lifecycle_matrix": {
+    "closed_stdin": {
+      "events_passed": "5/5",
+      "max_elapsed_ms": 134,
+      "exit_code": 0
+    },
+    "open_stdin": {
+      "events_passed": "5/5",
+      "max_elapsed_ms": 369,
+      "exit_code": 0
+    },
+    "chunked_payload": {
+      "events_passed": "5/5",
+      "max_elapsed_ms": 147,
+      "exit_code": 0,
+      "forwarded_bytes_verified": true
+    },
+    "missing_runner": {
+      "exit_code": 127,
+      "stderr_is_explicit": true
+    },
+    "sigterm_ignoring_isolated_runner": {
+      "exit_code": 124,
+      "forced_kill_required": true,
+      "bounded_exit": true
+    }
+  },
+  "native_runner": {
+    "desktop_release": "desktop-v0.9.0",
+    "direct_open_stdin_targets_checked": 2,
+    "direct_open_stdin_exit_code": 0,
+    "direct_open_stdin_max_elapsed_ms": 326
+  },
+  "hook_configuration": {
+    "events_configured": 5,
+    "commands_use_local_wrapper": true,
+    "known_eof_prone_native_fallback": false,
+    "missing_wrapper_behavior": "explicit non-zero exit 127"
+  },
+  "path_resolution": {
+    "application_bundle_name": "Petdex.app",
+    "native_link_count": 2,
+    "native_links_resolve": true,
+    "native_links_executable": true,
+    "case_sensitive_path_risk_reproduced": false
+  },
+  "upstream_boundary": {
+    "issue_689": "closed; fix delivered by merged PR 752",
+    "draft_pr_710": "open draft; not an EOF regression fix",
+    "local_wrapper_is_still_bounded": true
+  },
+  "process_safety": {
+    "existing_codex_chatgpt_or_petdex_processes_touched": false,
+    "processes_stopped": false,
+    "processes_restarted": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "The current local wrapper and desktop-v0.9.0 native runner both terminate boundedly with all five events. Chunked forwarding is byte-verified, missing and non-responsive runners return explicit 127/124, and no existing user process was touched."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T19:48:04Z",
+  "scope": "local Docker custom-model real smoke with live model probe and dimension gate",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "service_checks": {
+    "local_container": {
+      "health": "healthy",
+      "agent_contract": "pass",
+      "channel_health": "healthy",
+      "request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ],
+      "model_directory_probe": "pass",
+      "custom_model_listed": true,
+      "custom_model_channel_probe": "pass"
+    },
+    "custom_model_smoke": {
+      "status": "generated_but_failed_dimension_check",
+      "requested_model": "gpt-image-2-1k",
+      "requested_dimensions": "1024x1024",
+      "actual_dimensions": "1254x1254",
+      "actual_format": "WEBP",
+      "artifact_count": 1,
+      "transport": "agent_job_polling",
+      "channel_request_mode": "images-non-stream",
+      "custom_model_request": "accepted_and_generated",
+      "fixed_size_acceptance": "failed_provider_returned_1254x1254",
+      "formal_assets_changed": false
+    },
+    "artifact_cleanup": {
+      "delete_status": 200,
+      "metadata_after_delete_status": 404,
+      "content_after_delete_status": 404,
+      "temporary_artifact_retained": false
+    },
+    "deployed_service_boundary": {
+      "tested_in_this_recheck": false,
+      "formal_assets_changed": false,
+      "note": "This recheck targeted the local Docker service only; no deployed-service conclusion is claimed."
+    }
+  },
+  "decision": "The local Docker service lists and executes the requested custom model. The provider returns 1254x1254 for a 1024x1024 request, so the fixed-size PetDex asset gate remains closed. No formal pet atlas was changed.",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false,
+    "temporary_artifact_retained": false
+  }
+}

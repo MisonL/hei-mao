@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T00:55:01Z",
+  "scope": "fresh read-only PetDex manifest and current-role resource parity recheck following the documented redirect",
+  "manifest": {
+    "http_status": 200,
+    "redirect_followed": true,
+    "generated_at": "2026-08-22T18:17:35.766Z",
+    "entry_count": 4579,
+    "current_slugs_present": "8/8"
+  },
+  "resource_validation": {
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "metadata_id_matches_slug": "8/8",
+    "metadata_v2": "8/8",
+    "spritesheet_contract": "8/8 image/webp, 1536x2288, RGBA",
+    "public_sprite_sha_match": "8/8",
+    "mutation_performed": false
+  },
+  "index_observations": {
+    "manifest_index_is_not_authoritative_for_version": true,
+    "pending_or_version_lagging_index_entries": "6/8 current entries",
+    "note": "The manifest index still exposes pending and version-lagging fields for several entries; actual metadata, resource dimensions, format and SHA parity were checked independently."
+  },
+  "historical_slug": {
+    "hei-mao-2": "record remains present in the public manifest; no deletion or replacement mutation was attempted"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "user_identity_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "decision": "All eight current PetDex public resources were freshly re-read after following the documented redirect. Their actual metadata is v2 and their downloaded spritesheet bytes, dimensions and format match the repository baseline. No remote mutation was performed."
+}

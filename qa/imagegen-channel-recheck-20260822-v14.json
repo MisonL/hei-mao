@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T21:48:25Z",
+  "scope": "recovered local Docker custom-model capability and non-billable contract recheck",
+  "service_checks": {
+    "base_url_source": "user_provided_local_docker",
+    "agent_capabilities": "HTTP 200",
+    "channel_health": "healthy",
+    "effective_request_modes": ["images-non-stream", "images-sse"],
+    "orchestration_endpoint": "/api/agent/image-requests",
+    "runtime_recommended_concurrency": 1,
+    "custom_model_requested_in_dry_run": "gpt-image-2-1k",
+    "custom_model_field_constructed_by_local_contract": true
+  },
+  "billable_boundary": {
+    "new_real_request_sent": false,
+    "reason": "The previous fresh real smoke already proved generation and artifact cleanup; this recheck avoided an additional billable request.",
+    "prior_real_smoke_evidence": "qa/imagegen-channel-recheck-20260822-v13.json",
+    "prior_actual_dimensions": "1254x1254",
+    "fixed_size_gate": "remains failed for a 1024x1024 request"
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "temporary_artifact_retained": false
+  },
+  "decision": "The recovered local Docker channel is healthy and the local request contract accepts construction of a custom-model intent. The prior real smoke is the authoritative evidence that the server accepted and executed that model: it produced a consumable WebP but not the requested fixed dimensions, so no formal pet asset may be replaced."
+}

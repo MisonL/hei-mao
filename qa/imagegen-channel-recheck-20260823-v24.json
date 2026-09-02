@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-23T02:07:12Z",
+  "scope": "local Docker image-generation recovery smoke after route-priority adjustment",
+  "service": {
+    "reachable": true,
+    "container_health": "healthy",
+    "model": "gpt-image-2-1k",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "configured_priority": [
+      "images-sse",
+      "images-non-stream"
+    ]
+  },
+  "request": {
+    "entrypoint": "/api/agent/image-requests",
+    "route_mode": "job",
+    "selected_channel_request_mode": "images-sse",
+    "requested_dimensions": "1024x1024",
+    "requested_image_count": 1,
+    "returned_images": 1,
+    "output_format": "webp",
+    "actual_dimensions": [
+      "1024x1024"
+    ],
+    "dimension_check": "pass",
+    "visual_check": "not_repeated_in_this_smoke; prior approved visual evidence remains cited by v23",
+    "fallback_applied": false
+  },
+  "cleanup": {
+    "artifact_delete_http": 200,
+    "metadata_after_delete_http": 404,
+    "content_after_delete_http": 404,
+    "formal_assets_changed": false,
+    "local_temporary_files_cleaned": true
+  },
+  "observed_boundary": {
+    "non_stream_route": "previous prompt-audit 503 remains retryable",
+    "safety_check_bypassed": false,
+    "client_silent_fallback": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker service completed a fresh billable 1024x1024 WebP smoke through the default server-orchestrated entry, selected images-sse without fallback, passed the strict dimension gate, and was fully cleaned up. The non-stream audit failure remains a retryable upstream boundary; no formal PetDex asset changed."
+}

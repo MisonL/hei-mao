@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T16:20:30Z",
+  "scope": "local Docker image-generation service Agent orchestration and page SSE smoke recheck",
+  "service_checks": {
+    "first_run": "pass",
+    "agent_doctor": "pass",
+    "agent_contract": "pass",
+    "channel_health": "pass",
+    "custom_model": "gpt-image-2-1k",
+    "configured_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ],
+    "requested_dimensions": "1024x1024"
+  },
+  "agent_orchestration": {
+    "status": "pass",
+    "endpoint": "/api/agent/image-requests",
+    "request_mode": "images-non-stream",
+    "output_format": "webp",
+    "actual_dimensions": "1024x1024",
+    "strict_dimension_check": "pass",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "visual_check": "complete centered mascot, natural proportions, no crop or squash observed"
+  },
+  "page_sse": {
+    "status": "pass",
+    "endpoint": "/api/images",
+    "request_mode": "images-sse",
+    "output_format": "webp",
+    "actual_dimensions": "1024x1024",
+    "strict_dimension_check": "pass",
+    "completed_event_count": 1,
+    "done_received": true,
+    "content_download": "HTTP 200 before cleanup; WebP decodes as 1024x1024",
+    "visual_check": "complete centered mascot, natural proportions, no crop or squash observed"
+  },
+  "cleanup": {
+    "agent_artifact_delete": "pass",
+    "page_image_delete": "pass",
+    "post_cleanup_agent_content": 404,
+    "post_cleanup_page_content": 404,
+    "local_temporary_files_after_cleanup": false,
+    "formal_petdex_assets_modified": false
+  },
+  "diagnosis": {
+    "historical_enoent": "The only ENOENT observed in this recheck was the expected 404 lookup after the smoke image had been explicitly deleted; no generation-stage read failure was reproduced.",
+    "source_change": "none",
+    "source_change_reason": "Both supported client paths completed and returned readable output; changing storage code without a reproduced generation defect would be unjustified."
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "result": "The local Docker image-generation service is usable at 1024x1024 through both server-owned Agent orchestration and the page SSE path. The generated smoke outputs were downloaded, dimension-checked, visually inspected, and deleted without modifying formal PetDex assets."
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T16:37:59Z",
+  "scope": "local Docker image-generation service 1024x1024 real smoke and artifact cleanup",
+  "service_checks": {
+    "service_reachable": true,
+    "agent_orchestration": "pass",
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "requested_dimensions": "1024x1024",
+    "output_format": "webp"
+  },
+  "real_smoke": {
+    "status": "pass",
+    "transport": "agent_job_polling",
+    "endpoint": "/api/agent/image-requests",
+    "channel_request_mode": "images-non-stream",
+    "actual_dimensions": "1024x1024",
+    "dimension_check": "pass",
+    "content_download": "HTTP 200; WebP decodes as 1024x1024",
+    "visual_check": "centered full-body mascot reference; natural proportions; no crop or squash observed",
+    "fallback_applied": false
+  },
+  "cleanup": {
+    "artifact_delete": "HTTP 200",
+    "post_cleanup_content": 404,
+    "local_temporary_file": "removed",
+    "formal_petdex_assets_modified": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false
+  },
+  "result": "The local Docker service can generate a readable 1024x1024 WebP through the server-owned Agent orchestration path. The temporary result was dimension-checked, visually inspected, deleted, and confirmed unavailable afterward. No formal pet asset was changed."
+}

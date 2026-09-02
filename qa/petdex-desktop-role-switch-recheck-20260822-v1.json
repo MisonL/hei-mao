@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T01:54:14Z",
+  "scope": "read-only PetDex Desktop official URI role-switch recheck",
+  "desktop_version": "0.8.0",
+  "roles": {
+    "hei-mao": "pass",
+    "hei-mao-quality": "pass",
+    "hei-mao-butler": "pass",
+    "hei-mao-chef": "pass",
+    "hei-mao-delivery": "pass",
+    "hei-mao-foodie": "pass",
+    "hei-mao-fortune": "pass",
+    "hei-mao-traveler": "pass"
+  },
+  "switch_method": "open petdex://<slug> and read desktop-native-settings.json active_pet",
+  "restored_state": {
+    "active_pet": "hei-mao-traveler",
+    "window_position": [-1642, 339]
+  },
+  "safety": {
+    "codex_or_chatgpt_processes_touched": false,
+    "ui_input_sent_to_codex_or_chatgpt": false,
+    "desktop_settings_changed": false,
+    "duplicate_petdex_submission": false
+  },
+  "boundary": "All eight PetDex Desktop URI role switches resolved to the requested active pet and the prior active role and window position were restored. This does not prove Codex App full refresh, per-role selection, four-direction switching, animation loops, or a real two-display scenario."
+}

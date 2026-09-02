@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T16:06:40Z",
+  "scope": "local Docker custom-model fixed-size smoke after service recovery",
+  "service_checks": {
+    "local_container": {
+      "health": "healthy",
+      "agent_contract": "pass",
+      "model_directory_probe": "pass",
+      "custom_models": [
+        "gemini-3.1-flash-image",
+        "gpt-image-2-1k",
+        "grok-imagine-image",
+        "grok-imagine-image-quality",
+        "nai-diffusion-4-5-full"
+      ],
+      "healthy_request_modes": [
+        "images-non-stream",
+        "images-sse"
+      ]
+    },
+    "custom_model_fixed_size_smoke": {
+      "status": "generated_but_failed_dimension_check",
+      "requested_model": "gpt-image-2-1k",
+      "requested_dimensions": "1024x1024",
+      "actual_dimensions": "1254x1254",
+      "request_mode": "images-non-stream",
+      "artifact_count": 1,
+      "dimension_check": "failed_as_expected_for_mismatch",
+      "formal_assets_changed": false
+    },
+    "artifact_cleanup": {
+      "explicit_delete_probe": "404_already_absent",
+      "post_cleanup_metadata_lookup": "404",
+      "temporary_artifact_retained": false
+    },
+    "deployed_service_boundary": {
+      "custom_model_request": "rejected_by_agent_model_validation",
+      "accepted_agent_models": [
+        "gpt-image-1",
+        "gpt-image-1-mini",
+        "gpt-image-1.5",
+        "gpt-image-2"
+      ],
+      "artifact_count": 0,
+      "formal_assets_changed": false
+    }
+  },
+  "decision": "local Docker supports the configured custom upstream model and returns a consumable image, but the provider ignores the requested 1024x1024 size and returns 1254x1254; keep formal pet assets unchanged until a size-compliant generation is available. The deployed service still needs the newer model-mapping image before it can accept the custom model.",
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false,
+    "temporary_artifact_retained": false
+  }
+}

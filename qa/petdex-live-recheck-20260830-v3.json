@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T08:52:32Z",
+  "scope": "fresh read-only PetDex manifest and public asset parity recheck",
+  "manifest": {
+    "source": "https://petdex.dev/api/manifest",
+    "http_status": 200,
+    "generated_at": "2026-08-30T02:48:30.134Z",
+    "total": 4669,
+    "current_slugs_present": "8/8",
+    "historical_hei_mao_2_present": true,
+    "index_sprite_version_lag": "5/8 current entries index as v1; actual metadata is authoritative"
+  },
+  "public_resources": {
+    "metadata_http_200": "8/8",
+    "metadata_id_match": "8/8",
+    "metadata_sprite_version_2": "8/8",
+    "metadata_byte_match": "8/8",
+    "spritesheet_http_200": "8/8",
+    "spritesheet_content_type_image_webp": "8/8",
+    "spritesheet_byte_match": "8/8",
+    "zip_url_present": "8/8",
+    "mutation_performed": false
+  },
+  "manifest_index_versions": {
+    "hei-mao": 1,
+    "hei-mao-quality": 1,
+    "hei-mao-butler": 1,
+    "hei-mao-chef": 1,
+    "hei-mao-foodie": 1,
+    "hei-mao-delivery": 2,
+    "hei-mao-fortune": 2,
+    "hei-mao-traveler": 2
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "request_ids_recorded": false
+  },
+  "result": "A fresh read-only request confirms all eight current public PetDex metadata files and WebP spritesheets remain v2 and byte-identical to the repository. The manifest remains generated at 2026-08-30T02:48:30.134Z with five lagging v1 index fields; actual metadata remains authoritative and no mutation was performed."
+}

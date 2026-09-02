@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "read-only local PetDex hook wrapper runtime boundary smoke",
+  "configuration": {
+    "hook_events": ["UserPromptSubmit", "PreToolUse", "PostToolUse", "PermissionRequest", "Stop"],
+    "host_timeout_seconds": 2,
+    "wrapper_default_total_timeout_ms": 1200,
+    "wrapper_default_idle_timeout_ms": 250,
+    "wrapper_path": "~/.petdex/bin/petdex-hook-wrapper.mjs"
+  },
+  "tests": [
+    {
+      "case": "incomplete stdin without EOF",
+      "isolated_native_runner": "/usr/bin/true",
+      "input": "partial JSON, stdin intentionally kept open",
+      "exit_code": 124,
+      "elapsed_seconds": 0.72,
+      "result": "bounded_exit"
+    },
+    {
+      "case": "missing native runner without EOF",
+      "isolated_native_runner": "missing path",
+      "input": "partial JSON, stdin intentionally kept open",
+      "exit_code": 127,
+      "elapsed_seconds": 0.77,
+      "result": "bounded_rejection"
+    },
+    {
+      "case": "complete JSON with isolated runner",
+      "isolated_native_runner": "/usr/bin/true",
+      "input": "complete JSON",
+      "exit_code": 0,
+      "result": "completed"
+    }
+  ],
+  "process_safety": {
+    "user_codex_chatgpt_petdex_processes_touched": false,
+    "residual_petdex_native_process_after_probe": false
+  },
+  "limitations": [
+    "The native desktop renderer and actual Codex App bubble delivery were not exercised by the isolated runner tests.",
+    "This does not prove cross-platform behavior on Windows or Linux."
+  ],
+  "formal_assets_modified": false
+}

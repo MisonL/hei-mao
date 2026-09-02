@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T22:40:37Z",
+  "scope": "fresh real local Docker image-generation request using the requested fixed size and custom model",
+  "service": {
+    "reachable": true,
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "route": "server_orchestrated_job_polling",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1024x1024",
+    "output_format": "webp",
+    "download_http": 200,
+    "dimension_check": "pass",
+    "visual_check": "complete centered full-body mascot with all paws visible, natural upright proportions and generous green chroma-key margin; no crop or squash observed",
+    "elapsed_ms": 32574
+  },
+  "cleanup": {
+    "artifact_delete_http": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_removed": true
+  },
+  "formal_assets": {
+    "modified": false,
+    "current_pet_packages_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "artifact_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "result": "The local Docker image-generation service accepted the custom model and fixed size through the server-orchestrated client, returned a readable 1024x1024 WebP, and passed download, dimension and visual checks. The temporary result was deleted and both metadata and content returned 404. No formal PetDex asset was changed."
+}

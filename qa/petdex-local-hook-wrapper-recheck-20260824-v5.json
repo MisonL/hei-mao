@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T06:02:11Z",
+  "scope": "final isolated local PetDex Codex Hook wrapper forwarding, lifecycle, configuration, and termination recheck",
+  "wrapper_contract": {
+    "payload_forwarding": "complete and chunked JSON payloads are forwarded without truncation",
+    "idle_input_close": "native stdin closes after a bounded quiet interval",
+    "total_deadline_ms": 1200,
+    "termination_fallback": "SIGTERM followed by SIGKILL after a 200ms grace period",
+    "timeout_exit_code": 124,
+    "spawn_error_exit_code": 127,
+    "host_hook_timeout_seconds": 2
+  },
+  "events": [
+    "user-prompt",
+    "pre",
+    "post",
+    "notification",
+    "stop"
+  ],
+  "native_runner_matrix": {
+    "closed_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "open_stdin": {
+      "events_passed": 5,
+      "natural_exit": true,
+      "exit_code": 0
+    },
+    "total_passed": "10/10",
+    "maximum_elapsed_ms": 466
+  },
+  "chunked_forwarding_matrix": {
+    "closed_stdin": {
+      "events_passed": 5,
+      "payload_integrity": true,
+      "exit_code": 0
+    },
+    "open_stdin": {
+      "events_passed": 5,
+      "payload_integrity": true,
+      "exit_code": 0
+    },
+    "total_passed": "10/10",
+    "maximum_elapsed_ms": 404
+  },
+  "termination_matrix": {
+    "sigterm_ignoring_isolated_runner": {
+      "isolated_runner": true,
+      "forced_kill_required": true,
+      "exit_code": 124,
+      "bounded_exit": true
+    },
+    "non_executable_runner": {
+      "isolated_runner": true,
+      "exit_code": 127,
+      "bounded_exit": true
+    }
+  },
+  "hook_configuration": {
+    "events_configured": 5,
+    "shell_parse": true,
+    "missing_wrapper_behavior": "each event returns explicit 127 instead of silently succeeding",
+    "known_eof_prone_native_fallback": false
+  },
+  "upstream_boundary": {
+    "issue_689": "open; upstream native EOF behavior remains unresolved",
+    "draft_pr_710": "open draft; unrelated to the EOF fix",
+    "upstream_fix_claimed": false
+  },
+  "process_safety": {
+    "existing_codex_chatgpt_or_petdex_processes_touched": false,
+    "processes_stopped": false,
+    "processes_restarted": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "The final local wrapper forwards complete and chunked payloads, closes native stdin after bounded inactivity, preserves successful native exits, returns 127 for spawn/configuration failures, and reports deadline termination as 124 after SIGTERM/SIGKILL fallback. Hook configuration fails explicitly when the wrapper is absent and never falls back to the known EOF-prone native runner. This is local mitigation evidence and does not claim an upstream fix."
+}

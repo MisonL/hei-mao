@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T14:49:16Z",
+  "scope": "authorized image-channel model-mapping recheck after backend success observation",
+  "service_checks": {
+    "local_agent": {
+      "contract": "pass",
+      "requested_model": "gpt-image-2",
+      "route": "server_orchestrated_job_polling",
+      "status": "failed_before_consumable_artifact",
+      "upstream_status": 503,
+      "error_code": "upstream_unavailable",
+      "failure_reason": "the configured channel has no available upstream model named gpt-image-2",
+      "artifact_count": 0,
+      "formal_assets_changed": false
+    },
+    "upstream_direct_probe": {
+      "status": "success",
+      "model": "gpt-image-2-1k",
+      "request_mode": "images-non-stream",
+      "http_status": 200,
+      "model_catalog_status": 200,
+      "model_catalog_count": 5,
+      "consumable_inline_image": true,
+      "artifact_dimensions": "1254x1254",
+      "temporary_artifact_cleaned": true,
+      "formal_assets_changed": false
+    },
+    "model_mapping": {
+      "live_channel_models": [
+        "gemini-3.1-flash-image",
+        "gpt-image-2-1k",
+        "grok-imagine-image",
+        "grok-imagine-image-quality",
+        "nai-diffusion-4-5-full"
+      ],
+      "agent_contract_models": [
+        "gpt-image-1",
+        "gpt-image-1-mini",
+        "gpt-image-1.5",
+        "gpt-image-2"
+      ],
+      "decision": "upstream channel is usable through the actual custom model, but the Agent contract does not accept that configured model; service model mapping must be corrected before using the Agent as the project generation path"
+    }
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "idempotency_keys_recorded": false,
+    "prompts_recorded": false,
+    "temporary_artifact_retained": false
+  },
+  "decision": "do_not_replace_formal_pet_assets; direct upstream generation is verified, while the supported Agent generation path remains blocked by model-name validation/mapping"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T07:17:26Z",
+  "scope": "PetDex CLI and Desktop release upgrade and runtime verification",
+  "cli": {
+    "npm_package": "petdex",
+    "latest_version": "1.3.0",
+    "local_version_after_upgrade": "1.3.0"
+  },
+  "desktop": {
+    "latest_release_tag": "desktop-v0.9.1",
+    "latest_release_published_at": "2026-08-30T06:19:16Z",
+    "release_asset": "Petdex-x64.dmg",
+    "release_asset_sha256": "a9d86b7f87f7c1ab27c27a4b398376be47a7fb3d07cc1d1b9fcf0bbdc5fba58b",
+    "installed_bundle_version": "0.9.1",
+    "codesign": "passed",
+    "notarization_assessment": "passed"
+  },
+  "hook_runtime": {
+    "events_checked": ["user-prompt", "pre", "post", "notification", "stop"],
+    "closed_stdin_cases": "5/5",
+    "open_stdin_cases": "5/5",
+    "elapsed_ms_range": "120-396",
+    "all_cases_bounded": true,
+    "native_runner_version": "0.9.1"
+  },
+  "runtime_health": {
+    "health": "passed",
+    "init_status": "passed",
+    "active_pet": "hei-mao-traveler"
+  },
+  "process_safety": {
+    "existing_codex_or_chatgpt_stopped": false,
+    "existing_codex_or_chatgpt_restarted": false,
+    "existing_petdex_process_stopped": false,
+    "bundle_replaced_while_petdex_was_not_running": true
+  },
+  "cleanup": {
+    "dmg_mount_detached": true,
+    "temporary_download_and_previous_bundle_removed": true
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "PetDex CLI 1.3.0 and the signed, notarized Desktop 0.9.1 release are installed. The five configured Codex hook events terminate boundedly with both stdin lifecycles, and runtime health checks pass without interrupting existing user sessions."
+}

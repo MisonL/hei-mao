@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "billable": false,
+  "service_base_url": "https://misonl-visual-journal.hf.space",
+  "service_base_url_source": "user_provided",
+  "interactive_confirmation_required": false,
+  "page_request_query_count": 0,
+  "page_request_found_count": 0,
+  "page_request_count": 0,
+  "agent_request_count": 1,
+  "request_count": 0,
+  "requests": [],
+  "agent_requests": [
+    {
+      "lookup": {
+        "type": "idempotency_key",
+        "value": "hei-mao-quality-look-row9-pig-repair-20260819-v5-remote-agent"
+      },
+      "found": false,
+      "diagnostics": null
+    }
+  ],
+  "agent_lookup": {
+    "type": "idempotency_key",
+    "value": "hei-mao-quality-look-row9-pig-repair-20260819-v5-remote-agent"
+  },
+  "agent_found": false,
+  "agent_diagnostics": null
+}

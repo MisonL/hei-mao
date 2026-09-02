@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-21T03:45:50Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "post-image-service-recovery task snapshot",
+  "local_release": {
+    "roles": 8,
+    "atlas_contract": "8/8 pass; v2 8x11 RGBA WEBP",
+    "hatch_pet_tests": "28 passed",
+    "three_directory_sha_parity": "8/8",
+    "formal_assets_modified": false
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260821-v1.json",
+    "local_docker": "healthy channel observed, but real generation/edit smoke failed with upstream 400/502 errors and no artifact",
+    "deployed_service": "healthy channel observed, but Quality row-9 edit failed with upstream 403 authentication error and no artifact",
+    "result": "no image or artifact",
+    "formal_assets_changed": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260820-v12.json",
+    "metadata_contract": "8/8 HTTP 200, id matches, actual metadata spriteVersionNumber=2",
+    "public_sprite_sha_match": "2/8",
+    "owned_slug_updates_pending_review": [
+      "hei-mao",
+      "hei-mao-quality",
+      "hei-mao-delivery",
+      "hei-mao-foodie",
+      "hei-mao-fortune",
+      "hei-mao-traveler"
+    ]
+  },
+  "boundaries": {
+    "full_codex_app_refresh_role_direction_animation_loop_acceptance": "unverified",
+    "hook_eof": "open stdin still waits for EOF; issue 689 remains open",
+    "petdex_owned_slug_review": "six updates remain pending review"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "result": "local release gates and formal assets remain unchanged; image generation is still blocked by upstream channel failures"
+}

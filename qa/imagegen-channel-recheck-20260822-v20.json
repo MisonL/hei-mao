@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T00:06:15Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "local Docker custom-model fixed-size smoke after service recovery",
+  "non_billable_contract": {
+    "capabilities": "pass",
+    "runtime": "pass",
+    "channel_health": "healthy",
+    "orchestration": "server_owned_job_polling",
+    "effective_request_modes": [
+      "images-non-stream",
+      "images-sse"
+    ]
+  },
+  "smoke": {
+    "model": "gpt-image-2-1k",
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1254x1254",
+    "format": "webp",
+    "dimension_check": "failed_non_retryable",
+    "route_mode": "server_orchestrated_job_polling",
+    "channel_request_mode": "images-non-stream",
+    "formal_asset_eligible": false
+  },
+  "cleanup": {
+    "metadata_before_delete": 200,
+    "content_before_delete": 200,
+    "delete": 200,
+    "metadata_after_delete": 404,
+    "content_after_delete": 404,
+    "local_temporary_files_retained": false
+  },
+  "fixed_size_boundary": {
+    "requested_dimensions": "1024x1024",
+    "actual_dimensions": "1254x1254",
+    "status": "unresolved_non_retryable_dimension_gate",
+    "next_action": "Do not use this channel output for formal 8x11 pet atlases until the provider returns the requested dimensions."
+  },
+  "formal_assets_changed": false,
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "request_ids_recorded": false,
+    "prompts_recorded": false
+  },
+  "decision": "The recovered custom-model channel accepted and completed the fixed-size request, but returned 1254x1254 for the requested 1024x1024 image. The dimension gate correctly rejected it; the temporary artifact was deleted and no formal pet asset changed."
+}

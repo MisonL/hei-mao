@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T21:38:32Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex state after the latest fixed-size image-generation smoke",
+  "local_release": {
+    "roles": 8,
+    "baseline": "v2 atlas and installer gates remain covered by qa/current-v2-gate-recheck-20260823-v7.json",
+    "formal_assets_modified": false
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v10.json",
+    "service_status": "usable",
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "dimensions": "1024x1024",
+    "output_format": "webp",
+    "artifact_cleanup": "pass; metadata and content returned 404 after deletion",
+    "formal_assets_changed": false
+  },
+  "petdex": {
+    "evidence": "qa/petdex-live-recheck-20260823-v3.json",
+    "manifest_entries": 4579,
+    "current_slugs_present": "8/8",
+    "metadata_http_200": "8/8",
+    "spritesheet_http_200": "8/8",
+    "actual_metadata_v2": "8/8",
+    "actual_spritesheet_contract": "8/8 image/webp",
+    "public_sprite_sha_match": "8/8",
+    "index_sprite_version_2": "3/8",
+    "duplicate_submission_created": false,
+    "index_boundary": "Manifest index pending/version fields do not replace actual resource or owned-slug status checks."
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v1.json",
+    "local_wrapper": "5/5 events pass with closed stdin and 5/5 pass with open stdin",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open",
+    "existing_processes_touched": false
+  },
+  "upstream": {
+    "evidence": "qa/petdex-upstream-status-recheck-20260823-v8.json",
+    "issue_689": "open",
+    "pull_710": "draft and not merged",
+    "latest_release": "desktop-v0.8.0"
+  },
+  "desktop_boundary": {
+    "desktop_version": "0.8.0",
+    "official_uri_role_switches": "8/8 previously passed",
+    "codex_app_full_visual_acceptance": "unverified; the Codex App pet settings/animation surface is not exposed by the current native accessibility/capture boundary",
+    "process_safety": "no Codex or ChatGPT process was stopped, restarted, or signaled"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The requested fixed-size local Docker image-generation path is usable and its temporary artifact was cleaned up. All eight current PetDex public resources remain reachable and SHA-matched, and the bounded local Hook wrapper remains usable. Full Codex App visual acceptance and the upstream native Hook EOF fix remain unresolved."
+}

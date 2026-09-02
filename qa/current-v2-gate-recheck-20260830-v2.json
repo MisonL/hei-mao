@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T08:08:45Z",
+  "scope": "fresh eight-role v2 atlas, continuity, installer, parity, and repository hygiene recheck",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "atlas_gate": {
+    "roles_passed": "8/8",
+    "dimensions": "1536x2288",
+    "cell_dimensions": "192x208",
+    "format": "WebP",
+    "mode": "RGBA",
+    "rows": 11,
+    "columns": 8,
+    "sprite_version_number": 2,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "roles": [
+    {"slug":"hei-mao","continuity_warning_count":6,"continuity_alpha_holes":1},
+    {"slug":"hei-mao-quality","continuity_warning_count":5,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-butler","continuity_warning_count":6,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-chef","continuity_warning_count":6,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-foodie","continuity_warning_count":9,"continuity_alpha_holes":1},
+    {"slug":"hei-mao-delivery","continuity_warning_count":6,"continuity_alpha_holes":3},
+    {"slug":"hei-mao-fortune","continuity_warning_count":4,"continuity_alpha_holes":0},
+    {"slug":"hei-mao-traveler","continuity_warning_count":9,"continuity_alpha_holes":6}
+  ],
+  "continuity": {
+    "roles_checked": "8/8",
+    "validator_errors": 0,
+    "warnings_are_reviewed": true,
+    "alpha_holes_are_reviewed_natural_or_open_negative_space": true,
+    "visible_ratio_or_registration_hard_failure": false
+  },
+  "tests": {
+    "hatch_pet": "28 passed",
+    "python": "3.13.7",
+    "pillow": "12.3.0",
+    "pytest_warnings": "37 deprecation warnings only",
+    "shellcheck": "passed",
+    "bash_parse": "passed",
+    "powershell_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed"
+  },
+  "installer": {
+    "bash_roles": "8/8",
+    "powershell_roles": "8/8",
+    "fixed_sha_bash": "8/8",
+    "fixed_sha_powershell": "8/8",
+    "unknown_slug_rejected_without_target": true
+  },
+  "local_parity": {
+    "repository_codex_pets_petdex_pets": "16/16 files byte-identical",
+    "stale_historical_slug_directories": 0
+  },
+  "privacy": {
+    "public_text_scan_matches": 0,
+    "credentials_or_tokens": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false
+  },
+  "formal_assets_modified": false,
+  "result": "All eight v2 atlases pass fresh structural validation with their role-specific chroma keys. Existing continuity warnings remain reviewed natural-negative-space or local-outlier findings; no visible proportion, clipping, identity, or direction hard failure was introduced."
+}

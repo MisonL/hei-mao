@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-22T16:46:06Z",
+  "source_commit": "679b09322ea5d71b075bc51ee6c9eaa2c95b1329",
+  "scope": "current eight-role PetDex state after local image-generation and Hook wrapper rechecks",
+  "local_release": {
+    "roles": 8,
+    "baseline": "unchanged; v2 and installer gates remain covered by qa/current-v2-gate-recheck-20260822-v6.json",
+    "formal_assets_modified": false
+  },
+  "image_generation": {
+    "evidence": "qa/imagegen-channel-recheck-20260823-v2.json",
+    "service_status": "usable",
+    "model": "gpt-image-2-1k",
+    "request_mode": "images-non-stream",
+    "dimensions": "1024x1024",
+    "output_format": "webp",
+    "artifact_cleanup": "pass; post-cleanup content returned 404",
+    "formal_assets_changed": false
+  },
+  "hooks": {
+    "evidence": "qa/petdex-local-hook-wrapper-recheck-20260823-v1.json",
+    "local_wrapper": "5/5 events pass with closed stdin and 5/5 pass with open stdin",
+    "upstream_eof_boundary": "native runner still waits for EOF; issue 689 remains open",
+    "existing_processes_touched": false
+  },
+  "codex_app": {
+    "full_visual_acceptance": "unverified because the transparent PetDex window remains on an unavailable historical second-display coordinate",
+    "evidence": "qa/codex-app-boundary-recheck-20260822-v3.json"
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false
+  },
+  "decision": "The local image-generation service is usable for a 1024x1024 smoke request, and the local Hook wrapper bounds the known open-stdin hang. Full Codex App visual acceptance remains an explicit unverified boundary; the upstream native EOF issue remains open."
+}

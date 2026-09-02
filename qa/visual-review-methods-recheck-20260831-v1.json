@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "independent supplemental visual recheck of the eight current v2 atlases",
+  "methods": [
+    "lower-body-registered blink and edge-difference review",
+    "16x18, 24x26, 32x35, and 48x52 tiny-display topology stress test",
+    "96x104 dark/red playback motion-energy profile",
+    "cross-role idle identity comparison"
+  ],
+  "frames_checked": 584,
+  "tiny_display": {
+    "sizes": ["16x18", "24x26", "32x35", "48x52"],
+    "topology_candidates": 0,
+    "proportion_candidates": 0
+  },
+  "playback_profile": {
+    "candidate_count": 1,
+    "reviewed_natural_transition": "hei-mao-delivery/waiting frame 0 to frame 1"
+  },
+  "confirmed_hard_failures": [
+    {
+      "role": "hei-mao",
+      "row": "jumping",
+      "evidence": "duplicated upper head in frame 2"
+    },
+    {
+      "role": "hei-mao-quality",
+      "row": "jumping",
+      "evidence": "duplicated upper head in frame 2"
+    },
+    {
+      "role": "hei-mao-foodie",
+      "row": "waiting",
+      "evidence": "stacked head and ear contours across the row"
+    },
+    {
+      "role": "hei-mao-delivery",
+      "row": "failed",
+      "evidence": "duplicated head in frames 0-3 and pose-family switch at frame 4"
+    }
+  ],
+  "deterministic_v2_revalidation": {
+    "roles": "8/8",
+    "dimensions": "1536x2288",
+    "format": "WebP",
+    "mode": "RGBA",
+    "errors": 0,
+    "warnings": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "three_directory_parity": "16/16 files byte-identical",
+  "generation": {
+    "status": "blocked",
+    "reason": "SSE, non-stream, and Agent JSON attempts were rejected because the upstream image result URL resolved to a local or private-network address",
+    "formal_assets_modified": false
+  },
+  "result": "Not release-ready until the four complete animation rows are regenerated and all visual and deterministic gates are rerun."
+}

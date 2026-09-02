@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31",
+  "scope": "fresh read-only PetDex CLI gallery and local Desktop release check",
+  "cli": {
+    "command": "petdex --version",
+    "version": "1.3.0",
+    "gallery_command": "petdex list",
+    "gallery_count": 4674
+  },
+  "current_slugs": [
+    "hei-mao",
+    "hei-mao-quality",
+    "hei-mao-butler",
+    "hei-mao-chef",
+    "hei-mao-foodie",
+    "hei-mao-delivery",
+    "hei-mao-fortune",
+    "hei-mao-traveler"
+  ],
+  "historical_slugs_observed": ["hei-mao-2"],
+  "desktop": {
+    "bundle_identifier": "dev.petdex.desktop-native",
+    "version": "0.9.1",
+    "latest_public_tag_observed": "desktop-v0.9.1"
+  },
+  "mutation": {
+    "performed": false,
+    "processes_touched": false
+  },
+  "result": "All eight current Hei Mao role slugs and the historical hei-mao-2 slug are present; local CLI and Desktop versions match the latest public release tags observed in this check."
+}

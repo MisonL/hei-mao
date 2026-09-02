@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T05:11:57Z",
+  "scope": "current local visual QA and release-boundary state after alternative blind review and validator-key reconciliation",
+  "source_commit": "679b093",
+  "result": "The uniform #00FF00 validator discrepancy was caused by using the wrong chroma key for five pets. Per-pet-key deterministic validation remains 8/8. Anonymous temporal-triplet review reproduces the four known complete-row visual blockers and adds no new hard failure. Release remains blocked until those rows are regenerated and the Codex App runtime boundary is user-verified.",
+  "deterministic_v2": {
+    "pets": 8,
+    "passed": 8,
+    "dimensions": "1536x2288",
+    "format": "RGBA WebP",
+    "errors": 0,
+    "warnings": 0,
+    "transparent_rgb_residue": 0,
+    "key_reconciliation": "qa/v2-key-sensitivity-recheck-20260831-v1.json"
+  },
+  "visual_qa": {
+    "coverage": "8 roles, 88 rows, 592 non-empty frames",
+    "alternative_methods": [
+      "qa/visual-review-methods-recheck-20260831-v2.json",
+      "qa/visual-review-methods-recheck-20260831-v4.json",
+      "qa/visual-review-alternative-20260831/visual-review-alternative-20260831-v6.json",
+      "qa/visual-review-alternative-20260831/topology-skeleton-review-20260831-v1.json",
+      "qa/visual-review-alternative-20260831/blind-temporal-triplet-parent-review-20260831-v1.json"
+    ],
+    "confirmed_hard_failures": [
+      "hei-mao/jumping",
+      "hei-mao-quality/jumping",
+      "hei-mao-foodie/waiting",
+      "hei-mao-delivery/failed"
+    ],
+    "new_hard_failures": 0,
+    "blind_triplet_status": "warning: known controls reproduced; independent image-capable reviewer unavailable",
+    "release_ready": false,
+    "repair_policy": "regenerate each affected complete row; do not patch isolated cells or use procedural compositing"
+  },
+  "image_generation": {
+    "latest_evidence": "qa/imagegen-channel-recheck-20260831-v5.json",
+    "contract": "pass",
+    "latest_real_smoke": "upstream 503 after post-timeout diagnosis; no artifact",
+    "repair_generation_ready": false
+  },
+  "runtime_boundary": {
+    "status": "user_action_required",
+    "unverified": [
+      "full Codex App refresh",
+      "eight-role selection and restore",
+      "four-direction switching",
+      "standard animation playback",
+      "multiple pets",
+      "cross-screen bubble following",
+      "actual app-size clipping, transparency, and proportion"
+    ]
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "private_network_addresses_recorded": false,
+    "process_identifiers_recorded": false,
+    "answer_key_exposed_to_reviewer": false
+  },
+  "formal_assets_modified": false
+}

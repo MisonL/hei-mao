@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T05:40:51Z",
+  "scope": "fresh repository, Codex, and PetDex package parity recheck",
+  "roles": 8,
+  "files_per_role": 2,
+  "files_checked": 16,
+  "byte_identical_files": 16,
+  "stale_historical_slug_directories": 0,
+  "mutation_performed": false,
+  "privacy": {
+    "local_absolute_paths_recorded": false,
+    "private_network_addresses_recorded": false,
+    "credentials_recorded": false
+  },
+  "result": "All eight roles and both package files per role are byte-identical across the repository, ~/.codex/pets, and ~/.petdex/pets."
+}
