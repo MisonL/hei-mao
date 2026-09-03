@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-04T01:00:32+08:00",
+  "scope": "PetDex owner edit resubmission for the five repaired sprite packages",
+  "method": "petdex edit <slug> --sprite <local spritesheet> --meta <local pet.json>",
+  "roles": [
+    {"slug": "hei-mao", "status": "queued_for_admin_review"},
+    {"slug": "hei-mao-quality", "status": "queued_for_admin_review"},
+    {"slug": "hei-mao-foodie", "status": "queued_for_admin_review"},
+    {"slug": "hei-mao-delivery", "status": "queued_for_admin_review"},
+    {"slug": "hei-mao-traveler", "status": "queued_for_admin_review", "retry": "first upload attempt failed with a network fetch error; the single retry was queued"}
+  ],
+  "result": "all five edits were accepted into the administrator review queue",
+  "public_recheck": {
+    "manifest_total": 4674,
+    "current_slug_count": 8,
+    "historical_duplicate_present": false,
+    "public_sprite_bytes_updated_before_review": false,
+    "note": "Immediately after queueing, public downloads still served the pre-review sprite bytes; this is expected until administrator approval and asset propagation."
+  },
+  "safety": {
+    "used_submit_force": false,
+    "duplicate_slug_created": false,
+    "zip_asset_changed": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false
+  }
+}
