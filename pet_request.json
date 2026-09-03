@@ -119,5 +119,5 @@
   "brand_brief": "",
   "brand_sources": [],
   "pet_safe_style": "Pet-safe sprite: compact full-body mascot, readable in a 192x208 cell, clear silhouette, simple face, stable palette/materials, and crisp edges for chroma-key extraction.",
-  "primary_generation_skill": "$gpt-image-playground-agent"
+  "primary_generation_skill": "$visual-journal-image-agent"
 }
