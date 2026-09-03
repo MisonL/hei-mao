@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03T01:58:31Z",
+  "scope": "installer validation after refreshing five changed spritesheet SHA constants",
+  "bash": {
+    "syntax": {"command": "bash -n install.sh", "exit_code": 0},
+    "shellcheck": {"command": "shellcheck -S warning install.sh", "exit_code": 0, "diagnostics": 0},
+    "supported_slugs_installed": 8,
+    "unknown_slug_rejected": true
+  },
+  "powershell": {
+    "parse": {"command": "System.Management.Automation.Language.Parser::ParseFile install.ps1", "exit_code": 0},
+    "supported_slugs_installed": 8,
+    "unknown_slug_rejected": true
+  },
+  "asset_integrity": "All supported installs matched the current repository pet.json and spritesheet.webp bytes; the five repaired sprite hashes are now used by both installers.",
+  "isolation": "All installs targeted temporary directories; no user pet store or running application was changed."
+}

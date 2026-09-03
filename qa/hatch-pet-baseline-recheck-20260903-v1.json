@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03T01:58:31Z",
+  "scope": "hatch-pet bundled baseline tests",
+  "command": "uv run --no-project --with pytest --with pillow --with numpy --with opencv-python-headless pytest -q <hatch-pet>/tests",
+  "result": "passed",
+  "tests_passed": 28,
+  "tests_failed": 0,
+  "warnings": 37,
+  "warning_class": "Pillow Image.getdata deprecation warnings; no assertion failures",
+  "formal_assets_modified": false
+}

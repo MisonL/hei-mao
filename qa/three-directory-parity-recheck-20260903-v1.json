@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03T01:58:31Z",
+  "scope": "byte-level parity for repository, Codex pet store, and PetDex pet store after the latest local asset synchronization",
+  "stores": ["repo", "codex_home", "petdex_home"],
+  "files_per_slug": ["pet.json", "spritesheet.webp"],
+  "slug_count": 8,
+  "all_ok": true,
+  "records": [
+    {"slug": "hei-mao", "pet_json_sha256": "dafa673543839e1742fd78b766549877c249286930b3a9ae47903b9c6f2e5802", "spritesheet_sha256": "a8b47ab119b74d8022818353588605ebb34d5aeb27840d2384c3ac015dc90255", "byte_identical": true},
+    {"slug": "hei-mao-quality", "pet_json_sha256": "c7539a98ae2767ab70c69e31c588f7e977e440307dc8bca791fff3bc8350eb07", "spritesheet_sha256": "a74c7e3ef8ed5b23f94c7f926494291d061494d3d0ba718041349bb27eca09f2", "byte_identical": true},
+    {"slug": "hei-mao-butler", "pet_json_sha256": "903f3c673f510048fb3daf498976d0a99e958edc6ee969c2790b8555be89daf4", "spritesheet_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "byte_identical": true},
+    {"slug": "hei-mao-chef", "pet_json_sha256": "d210cb46a995d378de755b3eb40815c3a114476bc25120bd184677b0ec5dd43a", "spritesheet_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "byte_identical": true},
+    {"slug": "hei-mao-foodie", "pet_json_sha256": "0857baacd1dbb5912ceb03a5fc4cadf121923f6d04190b9356f7588f82410a6c", "spritesheet_sha256": "3eccffe95a7ea7d419a43ff325ac4324b67d82f0a7e1be7a3d2b7cdca8fce6c9", "byte_identical": true},
+    {"slug": "hei-mao-delivery", "pet_json_sha256": "16e5e9aaf0033e4676b7a298f55562607382a1a1d1fbe7ecf4377ffcd86c46a2", "spritesheet_sha256": "6abe515e3b51357f2dbb44fbed46339fdf1234eb2ab8edd53cde9f553acdd5a4", "byte_identical": true},
+    {"slug": "hei-mao-fortune", "pet_json_sha256": "ffb7a16aef119367c4113e2cd480e40b9b67da414e81bc59cdeeaf15bd5feb4b", "spritesheet_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9", "byte_identical": true},
+    {"slug": "hei-mao-traveler", "pet_json_sha256": "82c962a71d92334a26c2fdaa042fc130aba3d6c58b2f46b62b73bff945e4f62f", "spritesheet_sha256": "23f33c14634987575aede96567cd58a281f85ed5670bf200fb9b40586cbf519a", "byte_identical": true}
+  ]
+}

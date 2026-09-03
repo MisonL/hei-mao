@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03T10:15:33Z",
+  "scope": "fresh read-only PetDex propagation and public asset recheck after owner removal of the historical duplicate",
+  "owner_profile": {
+    "profile_url": "https://petdex.dev/u/misonl",
+    "visible_pet_count": 8,
+    "historical_slug_present": false,
+    "current_slug_present": true,
+    "evidence": "The owner profile was checked alongside the database-backed search; no historical slug was observed."
+  },
+  "db_backed_search": {
+    "endpoint": "https://petdex.dev/api/pets/search?q=%E9%BB%91%E6%AF%9B",
+    "query": "黑毛",
+    "total": 9,
+    "historical_slug_present": false,
+    "current_hei_mao_slugs": [
+      "hei-mao",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-quality",
+      "hei-mao-fortune",
+      "hei-mao-delivery",
+      "hei-mao-traveler",
+      "hei-mao-foodie"
+    ]
+  },
+  "static_manifest": {
+    "v1_url": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "v2_url": "https://assets.petdex.dev/manifests/petdex-v2.json",
+    "v1_generated_at": "2026-09-03T02:21:11.360Z",
+    "v2_generated_at": "2026-09-03T02:21:11.326Z",
+    "total": 4674,
+    "historical_slug_present": false,
+    "current_slug_count": 8,
+    "index_sprite_version_numbers": {
+      "v1": ["hei-mao", "hei-mao-quality", "hei-mao-butler", "hei-mao-chef", "hei-mao-foodie"],
+      "v2": ["hei-mao-delivery", "hei-mao-fortune", "hei-mao-traveler"]
+    },
+    "index_note": "For the five v1-indexed entries, the downloaded petjson and spritesheet still validate as v2; the manifest index field is stale metadata."
+  },
+  "cli": {
+    "version": "1.3.0",
+    "gallery_count": 4674,
+    "current_slug_count": 8,
+    "list_contains_historical_slug": false
+  },
+  "public_assets": {
+    "all_current_metadata_http_200": true,
+    "all_current_atlas_http_200": true,
+    "all_current_atlas_v2_validation": true,
+    "atlas_contract": "8/8 actual downloads validate as 1536x2288, 8x11, RGBA WebP, spriteVersionNumber=2, zero errors/warnings and zero transparent RGB residue with #FF00FF",
+    "sprite_sha_matches_repository": {
+      "matched": ["hei-mao-butler", "hei-mao-chef", "hei-mao-fortune"],
+      "old_or_pending": ["hei-mao", "hei-mao-quality", "hei-mao-foodie", "hei-mao-delivery", "hei-mao-traveler"]
+    },
+    "records": [
+      {"slug": "hei-mao", "manifest_index_version": 1, "online_sprite_sha256": "52dae8bb17ecf40d2b31cb80a1afbfa366bdfa3949c328faaf58717e0d66c07", "repository_sprite_sha256": "a8b47ab119b74d8022818353588605ebb34d5aeb27840d2384c3ac015dc90255", "sha_match": false, "metadata_spriteVersionNumber": 2},
+      {"slug": "hei-mao-quality", "manifest_index_version": 1, "online_sprite_sha256": "a36359a5219dd7f88d32bf48e0cccdc53d39cf1235b6e9edff540628c6451ec5", "repository_sprite_sha256": "a74c7e3ef8ed5b23f94c7f926494291d061494d3d0ba718041349bb27eca09f2", "sha_match": false, "metadata_spriteVersionNumber": 2},
+      {"slug": "hei-mao-butler", "manifest_index_version": 1, "online_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "repository_sprite_sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "sha_match": true, "metadata_spriteVersionNumber": 2},
+      {"slug": "hei-mao-chef", "manifest_index_version": 1, "online_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "repository_sprite_sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "sha_match": true, "metadata_spriteVersionNumber": 2},
+      {"slug": "hei-mao-foodie", "manifest_index_version": 1, "online_sprite_sha256": "eba3849e27fdebb6f1df4f5cacc39328f2b6c7e97f5e11fb15b3ebff11b2d3b0", "repository_sprite_sha256": "3eccffe95a7ea7d419a43ff325ac4324b67d82f0a7e1be7a3d2b7cdca8fce6c9", "sha_match": false, "metadata_spriteVersionNumber": 2},
+      {"slug": "hei-mao-delivery", "manifest_index_version": 2, "online_sprite_sha256": "6b3ceef6f74aa92d503eed294ee04b7dd65c53504ce31aa5a8e30c0ff252fe86", "repository_sprite_sha256": "6abe515e3b51357f2dbb44fbed46339fdf1234eb2ab8edd53cde9f553acdd5a4", "sha_match": false, "metadata_spriteVersionNumber": 2},
+      {"slug": "hei-mao-fortune", "manifest_index_version": 2, "online_sprite_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9", "repository_sprite_sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9", "sha_match": true, "metadata_spriteVersionNumber": 2},
+      {"slug": "hei-mao-traveler", "manifest_index_version": 2, "online_sprite_sha256": "d1f13ed88ff625f9698ca58f45d0870b017c55b7c052f1736b31b67c6a002b25", "repository_sprite_sha256": "23f33c14634987575aede96567cd58a281f85ed5670bf200fb9b40586cbf519a", "sha_match": false, "metadata_spriteVersionNumber": 2}
+    ],
+    "sha_match_count": 3,
+    "sha_total": 8,
+    "note": "The five repaired sprite updates remain pending on the public asset URLs; no new edit or submit was performed."
+  },
+  "detail_pages": {
+    "historical_http_status": 404,
+    "current_http_status": 200
+  },
+  "mutation": {
+    "performed_in_this_check": false,
+    "owner_removal_before_check": true,
+    "duplicate_submission_created": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false
+  },
+  "decision": "The historical duplicate has fully propagated out of the public manifest, CLI list, search results, and detail route. Keep the repository and local stores at the eight current slugs. Treat the five unmatched public sprite hashes as pending upstream asset propagation, not as a reason to resubmit or edit again."
+}

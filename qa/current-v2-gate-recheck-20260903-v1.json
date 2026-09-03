@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03T01:58:31Z",
+  "scope": "fresh deterministic v2 atlas gate for the eight current hei-mao packages after the latest proportion repairs",
+  "validator": {
+    "command": "validate_atlas.py --require-v2 --chroma-key #FF00FF",
+    "chroma_key": "#FF00FF",
+    "all_ok": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "records": [
+    {"slug": "hei-mao", "sha256": "a8b47ab119b74d8022818353588605ebb34d5aeb27840d2384c3ac015dc90255", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-quality", "sha256": "a74c7e3ef8ed5b23f94c7f926494291d061494d3d0ba718041349bb27eca09f2", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-butler", "sha256": "1e59bcd0024b4f381e740655e2457df490773e7038ea3f77f073f3ac5ca46304", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-chef", "sha256": "32a4df73b3ecc58c0f1488025a841fb7be7c93127d3f0134f22d6c799580d957", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-foodie", "sha256": "3eccffe95a7ea7d419a43ff325ac4324b67d82f0a7e1be7a3d2b7cdca8fce6c9", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-delivery", "sha256": "6abe515e3b51357f2dbb44fbed46339fdf1234eb2ab8edd53cde9f553acdd5a4", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-fortune", "sha256": "10056a01a1a85bd350f83e59e8e746540b873add65e8e360439f80a61cf197d9", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true},
+    {"slug": "hei-mao-traveler", "sha256": "23f33c14634987575aede96567cd58a281f85ed5670bf200fb9b40586cbf519a", "width": 1536, "height": 2288, "columns": 8, "rows": 11, "spriteVersionNumber": 2, "format": "WEBP", "mode": "RGBA", "ok": true}
+  ],
+  "continuity": {
+    "status": "carried_forward",
+    "evidence": "qa/visual-review-recheck-20260901-v1.json and qa/current-v2-gate-recheck-20260901-v3.json",
+    "note": "This run refreshes deterministic dimensions, alpha, chroma, v2 contract, and asset hashes; it does not claim a new independent visual playback review. Existing reviewed minor warnings remain unchanged."
+  },
+  "installer_sha_refresh": {
+    "updated_files": ["install.sh", "install.ps1"],
+    "reason": "Five proportion-repaired spritesheets had changed bytes while installer constants still referenced their pre-repair hashes.",
+    "supported_sprite_hashes_match_repository": true
+  }
+}

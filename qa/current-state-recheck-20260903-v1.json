@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-03",
-  "scope": "hei-mao closeout after owner removal of the historical duplicate PetDex record",
+  "checked_at": "2026-09-03T10:15:33Z",
+  "scope": "hei-mao closeout after owner removal of the historical duplicate PetDex record and installer hash refresh",
   "verified": {
     "current_pet_contract": "8/8 repository atlases pass validate_atlas.py --require-v2 with #FF00FF: 1536x2288, 8x11, WebP RGBA, spriteVersionNumber=2, zero transparent RGB residue",
     "three_directory_parity": "repository, ~/.codex/pets, and ~/.petdex/pets are byte-identical for all 16 pet.json/spritesheet pairs",
-    "installer_checks": "Bash syntax, ShellCheck, PowerShell AST parse, eight supported-slug installs, fixed SHA checks, and unknown-slug rejection pass",
+    "installer_checks": "Bash syntax, ShellCheck, PowerShell AST parse, eight supported-slug installs, current fixed SHA checks, and unknown-slug rejection pass; five stale sprite constants were corrected in install.sh and install.ps1",
     "hatch_pet_baseline": "uv run --with pytest --with pillow pytest -q hatch-pet/tests: 28 passed; 37 existing Pillow deprecation warnings",
     "visual_repair_review": "The eight repaired complete rows remain accepted with no new hard failure; existing minor direction/negative-space warnings remain documented",
-    "owner_duplicate_removal": "Profile count is 8 and database-backed search no longer returns hei-mao-2; current hei-mao remains present"
+    "owner_duplicate_removal": "Profile count is 8; database-backed search, static manifest, CLI list, and detail route no longer return hei-mao-2; current hei-mao remains present",
+    "online_asset_recheck": "8/8 public current metadata and atlases validate as v2; Butler, Chef, and Fortune sprite SHA match the repository, while five repaired sprite updates remain pending upstream"
   },
   "remaining_boundaries": {
-    "static_manifest": "PetDex v1/v2 static manifests were generated before deletion and still list hei-mao-2; petdex list may show the stale entry until regeneration/cache expiry",
-    "historical_detail_page": "The cached/static /pets/hei-mao-2 route and old immutable assets remain reachable during propagation; this does not restore the deleted owner record",
+    "public_sprite_updates": "The five repaired sprite updates for hei-mao, hei-mao-quality, hei-mao-foodie, hei-mao-delivery, and hei-mao-traveler remain on queued/pending public asset URLs; actual metadata and atlases are still valid v2",
     "codex_app_live_ui": "Full App refresh, animation playback, multi-pet layering, and cross-display bubble following remain user-operated visual boundaries"
   },
   "mutation": {
@@ -31,9 +31,12 @@
     "branch": "main",
     "preexisting_user_dirty_file_preserved": "pet_request.json",
     "new_evidence_files": [
-      "qa/petdex-live-recheck-20260903-v1.json",
-      "qa/current-state-recheck-20260903-v1.json"
+      "qa/petdex-live-recheck-20260903-v2.json",
+      "qa/current-v2-gate-recheck-20260903-v1.json",
+      "qa/installer-validation-recheck-20260903-v1.json",
+      "qa/three-directory-parity-recheck-20260903-v1.json",
+      "qa/hatch-pet-baseline-recheck-20260903-v1.json"
     ]
   },
-  "release_readiness": "Local eight-role package remains ready. PetDex catalog deduplication is pending static manifest/page-cache propagation, and Codex App visual acceptance remains a user-side boundary."
+  "release_readiness": "Local eight-role package and both installers are ready after the SHA refresh. PetDex catalog deduplication has propagated; five repaired public sprite updates remain pending upstream asset propagation, and Codex App visual acceptance remains a user-side boundary."
 }
