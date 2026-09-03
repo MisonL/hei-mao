@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03",
+  "scope": "post-owner-removal read-only propagation check for the historical hei-mao-2 record",
+  "owner_profile": {
+    "profile_url": "https://petdex.dev/u/misonl",
+    "visible_pet_count": 8,
+    "historical_slug_present": false,
+    "current_slug_present": true
+  },
+  "db_backed_search": {
+    "endpoint": "https://petdex.dev/api/pets/search",
+    "query": "黑毛",
+    "total": 9,
+    "historical_slug_present": false,
+    "current_hei_mao_slugs": [
+      "hei-mao",
+      "hei-mao-butler",
+      "hei-mao-chef",
+      "hei-mao-quality",
+      "hei-mao-fortune",
+      "hei-mao-delivery",
+      "hei-mao-traveler",
+      "hei-mao-foodie"
+    ]
+  },
+  "static_manifest": {
+    "v1_url": "https://assets.petdex.dev/manifests/petdex-v1.json",
+    "v2_url": "https://assets.petdex.dev/manifests/petdex-v2.json",
+    "generated_at": "2026-09-02T20:20:44.149Z",
+    "total": 4675,
+    "historical_slug_present": true,
+    "note": "The static manifest was generated before the owner removal and has not propagated the deletion yet."
+  },
+  "cli": {
+    "version": "1.3.0",
+    "list_contains_historical_slug": true,
+    "note": "CLI list reads the stale static manifest; do not install or resubmit hei-mao-2."
+  },
+  "detail_pages": {
+    "historical_http_status": 200,
+    "current_http_status": 200,
+    "note": "The historical detail route remains reachable while static/ISR propagation is pending; this is not evidence of a live owner record."
+  },
+  "mutation": {
+    "performed_in_this_check": false,
+    "owner_removal_before_check": true,
+    "duplicate_submission_created": false
+  },
+  "privacy": {
+    "credentials_recorded": false,
+    "local_absolute_paths": false,
+    "private_network_addresses": false,
+    "process_identifiers": false,
+    "request_ids": false
+  },
+  "decision": "The user-owned duplicate has been removed from the profile and database-backed search. Wait for PetDex static manifest and page-cache propagation before treating the public catalog as fully deduplicated; keep the repository and local stores at the eight current slugs."
+}
