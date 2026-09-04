@@ -23,19 +23,35 @@
   </tr>
 </table>
 
-## 快速安装
+## 安装与使用
 
-### PetDex
+### 推荐：通过 PetDex 安装
 
-安装 [PetDex CLI](https://petdex.dev/) 后，使用已有角色 slug 安装：
+[PetDex](https://petdex.dev/) 是首选方式：它会获取已审核的宠物包并写入 PetDex 与 Codex 的标准目录，不需要全局安装 CLI，也不需要手动复制文件。复制一条命令，将 `<slug>` 换成[角色表](#角色)中的值：
 
 ```bash
-npx -y petdex@latest install <slug>
+npx -y petdex@latest install hei-mao
 ```
 
-可用 slug 和角色名称见下表。不要使用历史 slug `hei-mao-2`，也不要使用 `submit --force` 创建重复条目。
+将命令中的 `hei-mao` 换成[角色表](#角色)中的其他 slug，即可安装对应角色；也可以在同一条命令末尾并列多个 slug。
 
-### 安装器
+安装完成后，在 Codex App 中打开“设置 -> 外观 -> 宠物”，点击“刷新（Refresh）”，再选择对应角色。安装命令不会自动切换当前选中的宠物；列表没有立即更新时，重启 Codex App 后再刷新即可。一次命令也可以在末尾并列多个 slug。
+
+不要使用历史 slug `hei-mao-2`，也不要使用 `submit --force` 创建重复条目。
+
+### Codex App 原生安装（不使用 PetDex CLI）
+
+如果已经下载本仓库或收到一个宠物包，可直接使用 Codex App 支持的目录结构，无需运行命令：
+
+1. 在本仓库的 `pets/<slug>/` 中找到目标角色，只复制 `pet.json` 和 `spritesheet.webp`。
+2. 将这两个文件放入 `~/.codex/pets/<slug>/`。macOS 可在 Finder 中使用“前往文件夹”；Windows 对应路径为 `%USERPROFILE%\.codex\pets\<slug>\`。
+3. 打开 Codex App，进入“设置 -> 外观 -> 宠物”，点击“刷新（Refresh）”并选择该角色。
+
+此方式不会自动切换当前宠物，也不要把整个 `pets/` 父目录当作单个宠物导入。
+
+### 可选：项目安装脚本
+
+脚本适合不使用 PetDex、但希望自动下载并校验 SHA 的用户。每个平台只需运行一条命令，默认安装根角色 `hei-mao`：
 
 macOS / Linux：
 
@@ -49,22 +65,7 @@ Windows PowerShell：
 irm https://raw.githubusercontent.com/MisonL/hei-mao/main/install.ps1 | iex
 ```
 
-不传参数时安装根角色 `hei-mao`。通过 `HEI_MAO_PET_ID` 选择其他已验证角色；安装器会校验固定 SHA，并拒绝未知 slug。例如：
-
-```bash
-HEI_MAO_PET_ID=hei-mao-chef curl -fsSL https://raw.githubusercontent.com/MisonL/hei-mao/main/install.sh | HEI_MAO_PET_ID=hei-mao-chef bash
-```
-
-安装器默认写入 `~/.codex/pets/<slug>`。需要 PetDex Desktop 时，请使用 `petdex install <slug>`，不要手动复制到未知目录。
-
-### 手动安装
-
-只复制目标角色目录中的两个文件，然后在 Codex App 的“设置 -> 外观 -> 宠物”中刷新并选择角色：
-
-```text
-pets/<slug>/pet.json
-pets/<slug>/spritesheet.webp
-```
+脚本会写入 `~/.codex/pets/<slug>/`，完成后仍需在 Codex App 中点击“刷新（Refresh）”并选择角色。其他角色优先使用上面的 PetDex 命令或原生目录方式。
 
 ## 创建并发布自己的宠物
 
@@ -74,24 +75,22 @@ PetDex 官方[创建指南](https://petdex.dev/zh/create)推荐使用 ChatGPT �
 2. 在聊天框输入 `/pet`，描述宠物的主体、性格、配色和动作。描述越具体，生成结果越稳定。
 3. 重启应用，在“设置 -> 外观 -> 宠物”中选择生成的自定义宠物，先确认动画和比例正常。
 4. 找到 `~/.codex/pets/<slug>`，确认目录根部包含 `pet.json` 与 `spritesheet.webp`（也支持 `.png`）。PetDex 接受经典 `8x9`（`1536x1872`）和 v2 `8x11`（`1536x2288`）图集；本项目采用 v2。
-5. 登录后按 [PetDex 中文文档](https://petdex.dev/zh/docs) 的发布说明提交：
+5. 发布时优先登录 [PetDex 中文文档](https://petdex.dev/zh/docs) 所述的提交入口，直接拖入该目录或 ZIP，填写名称、描述和许可证后提交审核。提交前请确认你拥有素材版权或有权发布对应同人作品，并避免重复使用已有 slug。
+
+   如果更习惯终端，可复制下面这一行；登录会打开浏览器，完成后自动提交：
 
    ```bash
-   npx -y petdex@latest login
-   npx -y petdex@latest submit ~/.codex/pets/<slug>
+   npx -y petdex@latest login && npx -y petdex@latest submit ~/.codex/pets/<slug>
    ```
-
-   也可以将该目录或 ZIP 上传到 PetDex 当前的提交入口。填写名称、描述和许可证后提交审核；提交前请确认你拥有素材版权或有权发布对应同人作品，并避免重复使用已有 slug。
 
 ### 生图服务建议
 
 制作角色草图、透明参考图和多轮编辑时，推荐使用我们维护的[图像手记 / Visual Journal](https://github.com/MisonL/visual-journal)。它支持本地 Docker 部署、OpenAI 兼容图片接口、文生图、图生图、遮罩编辑和批量任务。运行前需要 Node.js `>=22.15.0` 与 Docker Desktop 或 Docker Engine，基本启动方式如下：
 
+首次使用时复制下面一行即可完成拉取、检查和本地 Docker 启动：
+
 ```bash
-git clone https://github.com/MisonL/visual-journal.git
-cd visual-journal
-npm run first-run
-npm run deploy:local
+git clone https://github.com/MisonL/visual-journal.git && cd visual-journal && npm run first-run && npm run deploy:local
 ```
 
 打开 `http://localhost:4783`，在“API 设置”中配置自己的兼容接口和密钥。Visual Journal 用于生成和整理参考素材，并不会替代 Hatch Pet 的图集生成或 PetDex 的格式校验；最终仍需确认 `pet.json`、精灵图尺寸、透明背景和各动作比例，再提交到 PetDex。
