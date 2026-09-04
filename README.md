@@ -4,6 +4,25 @@
 
 “黑毛”是[钱大妈官网公开发布的品牌 IP 角色](https://www.qdama.cn/brandIP)。本项目由钱大妈员工基于公开品牌形象制作，用于本地 Codex App 个性化展示，不代表钱大妈官方软件产品或技术支持承诺。
 
+## 角色预览
+
+以下为八个角色的 `idle` 动画预览；完整动作和方向复核图见对应的 `qa/<slug>/` 目录。
+
+<table>
+  <tr>
+    <td align="center">黑毛<br><img src="qa/hei-mao/previews/idle.gif" alt="黑毛" width="128"></td>
+    <td align="center">品控官<br><img src="qa/hei-mao-quality/previews/idle.gif" alt="黑毛·品控官" width="128"></td>
+    <td align="center">大管家<br><img src="qa/hei-mao-butler/previews/idle.gif" alt="黑毛·大管家" width="128"></td>
+    <td align="center">厨师<br><img src="qa/hei-mao-chef/previews/idle.gif" alt="黑毛·厨师" width="128"></td>
+  </tr>
+  <tr>
+    <td align="center">美食家<br><img src="qa/hei-mao-foodie/previews/idle.gif" alt="黑毛·美食家" width="128"></td>
+    <td align="center">配送员<br><img src="qa/hei-mao-delivery/previews/idle.gif" alt="黑毛·配送员" width="128"></td>
+    <td align="center">福气官<br><img src="qa/hei-mao-fortune/previews/idle.gif" alt="黑毛·福气官" width="128"></td>
+    <td align="center">旅行家<br><img src="qa/hei-mao-traveler/previews/idle.gif" alt="黑毛·旅行家" width="128"></td>
+  </tr>
+</table>
+
 ## 快速安装
 
 ### PetDex
