@@ -4,27 +4,6 @@
 
 “黑毛”是[钱大妈官网公开发布的品牌 IP 角色](https://www.qdama.cn/brandIP)。本项目由钱大妈员工基于公开品牌形象制作，用于本地 Codex App 个性化展示，不代表钱大妈官方软件产品或技术支持承诺。
 
-## 预览
-
-![黑毛全部动作总览](qa/hei-mao/contact-sheet.png)
-
-以下为当前发布集中的八个角色预览。动画预览取各角色已验证的 `idle` 循环；完整动作和方向复核图见对应的 `qa/<slug>/` 目录。
-
-<table>
-  <tr>
-    <td align="center">黑毛<br><img src="qa/hei-mao/previews/idle.gif" alt="黑毛" width="144"></td>
-    <td align="center">品控官<br><img src="qa/hei-mao-quality/previews/idle.gif" alt="黑毛·品控官" width="144"></td>
-    <td align="center">大管家<br><img src="qa/hei-mao-butler/previews/idle.gif" alt="黑毛·大管家" width="144"></td>
-    <td align="center">厨师<br><img src="qa/hei-mao-chef/previews/idle.gif" alt="黑毛·厨师" width="144"></td>
-  </tr>
-  <tr>
-    <td align="center">美食家<br><img src="qa/hei-mao-foodie/previews/idle.gif" alt="黑毛·美食家" width="144"></td>
-    <td align="center">配送员<br><img src="qa/hei-mao-delivery/previews/idle.gif" alt="黑毛·配送员" width="144"></td>
-    <td align="center">福气官<br><img src="qa/hei-mao-fortune/previews/idle.gif" alt="黑毛·福气官" width="144"></td>
-    <td align="center">旅行家<br><img src="qa/hei-mao-traveler/previews/idle.gif" alt="黑毛·旅行家" width="144"></td>
-  </tr>
-</table>
-
 ## 快速安装
 
 ### PetDex
@@ -67,6 +46,36 @@ HEI_MAO_PET_ID=hei-mao-chef curl -fsSL https://raw.githubusercontent.com/MisonL/
 pets/<slug>/pet.json
 pets/<slug>/spritesheet.webp
 ```
+
+## 创建并发布自己的宠物
+
+PetDex 官方[创建指南](https://petdex.dev/zh/create)推荐使用 ChatGPT 桌面应用内置的 Hatch Pet 技能：
+
+1. 打开 ChatGPT 桌面应用，在顶部 `Skills` 中安装 `Hatch Pet`。
+2. 在聊天框输入 `/pet`，描述宠物的主体、性格、配色和动作。描述越具体，生成结果越稳定。
+3. 重启应用，在“设置 -> 外观 -> 宠物”中选择生成的自定义宠物，先确认动画和比例正常。
+4. 找到 `~/.codex/pets/<slug>`，确认目录根部包含 `pet.json` 与 `spritesheet.webp`（也支持 `.png`）。PetDex 接受经典 `8x9`（`1536x1872`）和 v2 `8x11`（`1536x2288`）图集；本项目采用 v2。
+5. 登录后按 [PetDex 中文文档](https://petdex.dev/zh/docs) 的发布说明提交：
+
+   ```bash
+   npx -y petdex@latest login
+   npx -y petdex@latest submit ~/.codex/pets/<slug>
+   ```
+
+   也可以将该目录或 ZIP 上传到 PetDex 当前的提交入口。填写名称、描述和许可证后提交审核；提交前请确认你拥有素材版权或有权发布对应同人作品，并避免重复使用已有 slug。
+
+### 生图服务建议
+
+制作角色草图、透明参考图和多轮编辑时，推荐使用我们维护的[图像手记 / Visual Journal](https://github.com/MisonL/visual-journal)。它支持本地 Docker 部署、OpenAI 兼容图片接口、文生图、图生图、遮罩编辑和批量任务。运行前需要 Node.js `>=22.15.0` 与 Docker Desktop 或 Docker Engine，基本启动方式如下：
+
+```bash
+git clone https://github.com/MisonL/visual-journal.git
+cd visual-journal
+npm run first-run
+npm run deploy:local
+```
+
+打开 `http://localhost:4783`，在“API 设置”中配置自己的兼容接口和密钥。Visual Journal 用于生成和整理参考素材，并不会替代 Hatch Pet 的图集生成或 PetDex 的格式校验；最终仍需确认 `pet.json`、精灵图尺寸、透明背景和各动作比例，再提交到 PetDex。
 
 ## 角色
 
